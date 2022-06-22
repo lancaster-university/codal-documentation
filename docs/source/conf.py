@@ -53,7 +53,8 @@ exhale_args = {
     # TIP: if using the sphinx-bootstrap-theme, you need
     # "treeViewIsBootstrap": True,
     "exhaleExecutesDoxygen": True,
-    "exhaleDoxygenStdin":    "INPUT = ../../libraries/codal-microbit-v2 ../../libraries/codal-core"
+    "exhaleDoxygenStdin":    "INPUT = ../../libraries/codal-microbit-v2 ../../libraries/codal-core",
+    "verboseBuild": True
 }
 
 # Tell sphinx what the primary language being documented is.
