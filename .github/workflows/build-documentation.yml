@@ -38,6 +38,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y doxygen make
       - name: Build Documentation
+        working-directory: docs
         run: |
-          cd docs
           make html
+      - name: Deploy to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          branch: gh-pages
+          folder: docs/build/html
