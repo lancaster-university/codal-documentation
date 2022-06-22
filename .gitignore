@@ -9,7 +9,6 @@
 *.pyc
 *~
 build
-docs
 buildcache.json
 codal.json
 libraries
