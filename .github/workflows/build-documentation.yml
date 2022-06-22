@@ -11,8 +11,8 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        gcc: ['latest']
-        cmake: ['3.21.3']
+        gcc: ['7-2017-q4']
+        cmake: ['3.23.1']
       fail-fast: true
     runs-on: ${{ matrix.os }}
     name: ${{ matrix.os }}, gcc ${{ matrix.gcc }}, cmake ${{ matrix.cmake || 'latest'}}
