@@ -35,8 +35,8 @@ jobs:
       - name: Install Missing Python and System Packages
         run: |
           python -m pip install sphinx breathe exhale sphinx_book_theme
-          apt update
-          apt install doxygen make
+          sudo apt-get update
+          sudo apt-get install -y doxygen make
       - name: Build Documentation
         run: |
           cd docs
