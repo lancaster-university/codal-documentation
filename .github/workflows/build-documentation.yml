@@ -30,12 +30,6 @@ jobs:
         uses: jwlawson/actions-setup-cmake@v1
         with:
           cmake-version: ${{ matrix.cmake }}
-      - name: Check Versions
-        run: |
-          arm-none-eabi-gcc --version
-          cmake --version
-          ninja --version
-          python --version
       - name: Build using build.py
         run: python build.py
       - name: Install Missing Python and System Packages
