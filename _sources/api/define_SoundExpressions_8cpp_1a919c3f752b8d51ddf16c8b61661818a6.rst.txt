@@ -1,0 +1,14 @@
+.. _exhale_define_SoundExpressions_8cpp_1a919c3f752b8d51ddf16c8b61661818a6:
+
+Define CLAMP
+============
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_SoundExpressions.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CLAMP
+   :project: CODAL

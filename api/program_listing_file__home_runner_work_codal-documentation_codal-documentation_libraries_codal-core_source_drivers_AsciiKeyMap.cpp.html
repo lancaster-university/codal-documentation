@@ -1,0 +1,839 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Program Listing for File AsciiKeyMap.cpp &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL for the Micro:bit v2
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/the-basics.html">
+     The Basics - CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Program Listing for File AsciiKeyMap.cpp</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="program-listing-for-file-asciikeymap-cpp">
+<span id="program-listing-file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-asciikeymap-cpp"></span><h1>Program Listing for File AsciiKeyMap.cpp<a class="headerlink" href="#program-listing-for-file-asciikeymap-cpp" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_AsciiKeyMap.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-asciikeymap-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/source/drivers/AsciiKeyMap.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;AsciiKeyMap.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;USB_HID_Keys.h&quot;</span><span class="cp"></span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">codal</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">//define all Key sequences to be used</span>
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_backspace</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_BACKSPACE</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_tab</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_TAB</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_newline</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_ENTER</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_space</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_SPACE</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_exclamation_point</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_1</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_quote</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_1</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_pound</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_3</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_dollar</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_4</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_percent</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_5</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_amp</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_7</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_apostrophe</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_APOSTROPHE</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_left_paren</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_9</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_right_paren</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_0</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_ast</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_8</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_plus</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_EQUAL</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_comma</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_COMMA</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_minus</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MINUS</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_dot</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_DOT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_slash</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_SLASH</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_0</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_0</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_1</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_1</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_2</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_2</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_3</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_3</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_4</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_4</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_5</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_5</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_6</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_6</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_7</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_7</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_8</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_8</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_9</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_9</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_colon</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_SEMICOLON</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_semicolon</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_SEMICOLON</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_angle_left</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_COMMA</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_equal</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_EQUAL</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_angle_right</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_DOT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_question</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_SLASH</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_at</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_2</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_A</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_A</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_B</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_B</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_C</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_C</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_D</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_D</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_E</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_E</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_F</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_F</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_G</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_G</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_H</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_H</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_I</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_I</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_J</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_J</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_K</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_K</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_L</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_L</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_M</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_M</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_N</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_N</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_O</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_O</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_P</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_P</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_Q</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_Q</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_R</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_R</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_S</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_S</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_T</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_T</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_U</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_U</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_V</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_V</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_W</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_W</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_X</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_X</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_Y</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_Y</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_Z</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_Z</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_brace_left</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_LEFTBRACE</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_backslash</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_BACKSLASH</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_brace_right</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_RIGHTBRACE</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_hat</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_6</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_underscore</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MINUS</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_grave</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_GRAVE</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_a</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_A</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_b</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_B</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_c</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_C</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_d</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_D</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_e</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_E</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_f</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_F</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_g</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_G</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_h</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_H</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_i</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_I</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_j</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_J</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_k</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_K</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_l</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_L</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_m</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_M</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_n</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_N</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_o</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_O</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_p</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_P</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_q</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_Q</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_r</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_R</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_s</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_S</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_t</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_T</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_u</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_U</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_v</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_V</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_w</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_W</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_x</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_X</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_y</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_Y</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_z</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_Z</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_curly_left</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_LEFTBRACE</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_pipe</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_BACKSLASH</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_curly_right</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_RIGHTBRACE</span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_tilda</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEYMAP_MODIFIER_KEY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_MOD_LSHIFT</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_GRAVE</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">seq_del</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KEYMAP_KEY_DOWN</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">KEY_BACKSPACE</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">KeySequence</span><span class="w"> </span><span class="n">unmapped</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nb">NULL</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="mi">0</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="c1">//define the keymap</span>
+<span class="k">const</span><span class="w"> </span><span class="n">KeySequence</span><span class="w"> </span><span class="n">ascii_keymap</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="c1">//0 - 7</span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_backspace</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_tab</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_newline</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="n">unmapped</span><span class="p">,</span><span class="w"> </span><span class="c1">//16 - 31</span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_space</span><span class="p">),</span><span class="w">                             </span><span class="c1">//32 space</span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_exclamation_point</span><span class="p">),</span><span class="w">                 </span><span class="c1">//33 !</span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_quote</span><span class="p">),</span><span class="w">                             </span><span class="c1">//34 &quot;</span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_pound</span><span class="p">),</span><span class="w">                             </span><span class="c1">//35 #</span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_dollar</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_percent</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_amp</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_apostrophe</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_left_paren</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_right_paren</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_ast</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_plus</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_comma</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_minus</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_dot</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_slash</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_0</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_1</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_2</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_3</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_4</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_5</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_6</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_7</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_8</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_9</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_colon</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_semicolon</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_angle_left</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_equal</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_angle_right</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_question</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_at</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_A</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_B</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_C</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_D</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_E</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_F</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_G</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_H</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_I</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_J</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_K</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_L</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_M</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_N</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_O</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_P</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_Q</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_R</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_S</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_T</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_U</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_V</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_W</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_X</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_Y</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_Z</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_brace_left</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_backslash</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_brace_right</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_hat</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_underscore</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_grave</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_a</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_b</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_c</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_d</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_e</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_f</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_g</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_h</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_i</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_j</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_k</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_l</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_m</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_n</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_o</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_p</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_q</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_r</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_s</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_t</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_u</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_v</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_w</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_x</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_y</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_z</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_curly_left</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_pipe</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_curly_right</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_tilda</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">KEYMAP_REGISTER</span><span class="p">(</span><span class="n">seq_del</span><span class="p">),</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="n">AsciiKeyMap</span><span class="w"> </span><span class="nf">asciiKeyMap</span><span class="p">(</span><span class="n">ascii_keymap</span><span class="p">,</span><span class="w"> </span><span class="mi">128</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

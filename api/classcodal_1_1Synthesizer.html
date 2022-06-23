@@ -1,0 +1,572 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Class Synthesizer &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL for the Micro:bit v2
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/the-basics.html">
+     The Basics - CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inheritance-relationships">
+   Inheritance Relationships
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#base-types">
+     Base Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Class Synthesizer</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inheritance-relationships">
+   Inheritance Relationships
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#base-types">
+     Base Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="class-synthesizer">
+<span id="exhale-class-classcodal-1-1synthesizer"></span><h1>Class Synthesizer<a class="headerlink" href="#class-synthesizer" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_Synthesizer.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-streams-synthesizer-h"><span class="std std-ref">File Synthesizer.h</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">#</a></h2>
+<section id="base-types">
+<h3>Base Types<a class="headerlink" href="#base-types" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::DataSource</span></code> (<a class="reference internal" href="classcodal_1_1DataSource.html#exhale-class-classcodal-1-1datasource"><span class="std std-ref">Class DataSource</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::CodalComponent</span></code> (<a class="reference internal" href="classcodal_1_1CodalComponent.html#exhale-class-classcodal-1-1codalcomponent"><span class="std std-ref">Class CodalComponent</span></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">#</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11SynthesizerE">
+<span id="_CPPv3N5codal11SynthesizerE"></span><span id="_CPPv2N5codal11SynthesizerE"></span><span id="codal::Synthesizer"></span><span class="target" id="classcodal_1_1Synthesizer"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Synthesizer</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classcodal_1_1DataSource.html#_CPPv4N5codal10DataSourceE" title="codal::DataSource"><span class="n"><span class="pre">DataSource</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classcodal_1_1CodalComponent.html#_CPPv4N5codal14CodalComponentE" title="codal::CodalComponent"><span class="n"><span class="pre">CodalComponent</span></span></a><a class="headerlink" href="#_CPPv4N5codal11SynthesizerE" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11Synthesizer11SynthesizerEib">
+<span id="_CPPv3N5codal11Synthesizer11SynthesizerEib"></span><span id="_CPPv2N5codal11Synthesizer11SynthesizerEib"></span><span id="codal::Synthesizer::Synthesizer__i.b"></span><span class="target" id="classcodal_1_1Synthesizer_1a2804fff697b0c304c241cfb4d04ed0a1"></span><span class="sig-name descname"><span class="n"><span class="pre">Synthesizer</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sampleRate</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">44100</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">isSigned</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11Synthesizer11SynthesizerEib" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Default Constructor. Creates an empty <a class="reference internal" href="classcodal_1_1DataStream.html#classcodal_1_1DataStream"><span class="std std-ref">DataStream</span></a>.</p>
+<p>
+Class definition for a <a class="reference internal" href="#classcodal_1_1Synthesizer"><span class="std std-ref">Synthesizer</span></a>. A <a class="reference internal" href="#classcodal_1_1Synthesizer"><span class="std std-ref">Synthesizer</span></a> generates a tone waveform based on a number of overlapping waveforms. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sampleRate</strong> – The sample rate at which this synthesizer will produce data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11SynthesizerD0Ev">
+<span id="_CPPv3N5codal11SynthesizerD0Ev"></span><span id="_CPPv2N5codal11SynthesizerD0Ev"></span><span id="codal::Synthesizer::~Synthesizer"></span><span class="target" id="classcodal_1_1Synthesizer_1a23e5e65b4d7024318009d4f550c11c04"></span><span class="sig-name descname"><span class="n"><span class="pre">~Synthesizer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11SynthesizerD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Destructor. Removes all resources held by the instance. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11Synthesizer12setFrequencyEf">
+<span id="_CPPv3N5codal11Synthesizer12setFrequencyEf"></span><span id="_CPPv2N5codal11Synthesizer12setFrequencyEf"></span><span id="codal::Synthesizer::setFrequency__float"></span><span class="target" id="classcodal_1_1Synthesizer_1a296ebdb3e3983ce05bf72de801e19bf7"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFrequency</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">frequency</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11Synthesizer12setFrequencyEf" title="Permalink to this definition">#</a><br /></dt>
+<dd><p><p>Define the central frequency of this synthesizer. Takes effect at the start of the next waveform period.</p>
+<p>Define the central frequency of this synthesizer</p>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>frequency</strong> – The frequency, in Hz to generate.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11Synthesizer12setFrequencyEfiii">
+<span id="_CPPv3N5codal11Synthesizer12setFrequencyEfiii"></span><span id="_CPPv2N5codal11Synthesizer12setFrequencyEfiii"></span><span id="codal::Synthesizer::setFrequency__float.i.i.i"></span><span class="target" id="classcodal_1_1Synthesizer_1a89e30b26148e831afd243810edb91003"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFrequency</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">frequency</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">period</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">envelopeStart</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1024</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">envelopeEnd</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1024</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11Synthesizer12setFrequencyEfiii" title="Permalink to this definition">#</a><br /></dt>
+<dd><p><p>Define the central frequency of this synthesizer. Takes effect at the start of the next waveform period.</p>
+<p>Define the central frequency of this synthesizer. Takes effect immediately, and automatically stops the tone after the given period. &#64;frequency The frequency, in Hz to generate. &#64;period The period, in ms, to play the frequency.</p>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>frequency</strong> – The frequency, in Hz to generate. </p></li>
+<li><p><strong>period</strong> – The period, in ms, to play the frequency. </p></li>
+<li><p><strong>envelopeStart</strong> – Starting amplitude (multiplied by general volume of this synth) </p></li>
+<li><p><strong>envelopeEnd</strong> – Final amplitude (multiplied by general volume of this synth)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11Synthesizer9setVolumeEi">
+<span id="_CPPv3N5codal11Synthesizer9setVolumeEi"></span><span id="_CPPv2N5codal11Synthesizer9setVolumeEi"></span><span id="codal::Synthesizer::setVolume__i"></span><span class="target" id="classcodal_1_1Synthesizer_1a3cfa7706fa578e89d0158c634e3757b1"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setVolume</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">volume</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11Synthesizer9setVolumeEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p><p>Define the volume of the wave to generate.</p>
+<p>Define the volume of the wave to generate.</p>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>volume</strong> – The new output volume, in the range 0..1023 </p></li>
+<li><p><strong>volume</strong> – The new output volume, in the range 0..1024 </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK on success, or DEVICE_INVALID_PARAMETER</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11Synthesizer13setBufferSizeEi">
+<span id="_CPPv3N5codal11Synthesizer13setBufferSizeEi"></span><span id="_CPPv2N5codal11Synthesizer13setBufferSizeEi"></span><span id="codal::Synthesizer::setBufferSize__i"></span><span class="target" id="classcodal_1_1Synthesizer_1a766bf5b9542d3208cf4f67126089bc5e"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setBufferSize</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11Synthesizer13setBufferSizeEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p><p>Define the size of the audio buffer to hold. The larger the buffer, the lower the CPU overhead, but the longer the delay.</p>
+<p>Define the size of the audio buffer to hold. The larger the buffer, the lower the CPU overhead, but the longer the delay.</p>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>size</strong> – The new bufer size to use. </p></li>
+<li><p><strong>size</strong> – The new bufer size to use, in bytes. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK on success, or DEVICE_INVALID_PARAMETER</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>DEVICE_OK on success, or DEVICE_INVALID_PARAMETER </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11Synthesizer13getSampleRateEv">
+<span id="_CPPv3N5codal11Synthesizer13getSampleRateEv"></span><span id="_CPPv2N5codal11Synthesizer13getSampleRateEv"></span><span id="codal::Synthesizer::getSampleRate"></span><span class="target" id="classcodal_1_1Synthesizer_1a247b624e4c31dfa28b1b5ae0c996d4e7"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSampleRate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11Synthesizer13getSampleRateEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Determine the sample rate currently in use by this <a class="reference internal" href="#classcodal_1_1Synthesizer"><span class="std std-ref">Synthesizer</span></a>. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the current sample rate, in Hz. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11Synthesizer13setSampleRateEi">
+<span id="_CPPv3N5codal11Synthesizer13setSampleRateEi"></span><span id="_CPPv2N5codal11Synthesizer13setSampleRateEi"></span><span id="codal::Synthesizer::setSampleRate__i"></span><span class="target" id="classcodal_1_1Synthesizer_1abbce6b36ac99cb62fa8e523cbe0f5ae2"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSampleRate</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sampleRate</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11Synthesizer13setSampleRateEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Change the sample rate used by this <a class="reference internal" href="#classcodal_1_1Synthesizer"><span class="std std-ref">Synthesizer</span></a><p>,</p>
+<p>Change the sample rate used by this</p>
+<a class="reference internal" href="#classcodal_1_1Synthesizer"><span class="std std-ref">Synthesizer</span></a>, </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sampleRate</strong> – The new sample rate, in Hz. </p></li>
+<li><p><strong>frequency</strong> – The new sample rate, in Hz. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK on success.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>DEVICE_OK on success. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11Synthesizer4pullEv">
+<span id="_CPPv3N5codal11Synthesizer4pullEv"></span><span id="_CPPv2N5codal11Synthesizer4pullEv"></span><span id="codal::Synthesizer::pull"></span><span class="target" id="classcodal_1_1Synthesizer_1a7c8724f276ecfa3b17c6a1c36c47d578"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="classcodal_1_1ManagedBuffer.html#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pull</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11Synthesizer4pullEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Provide the next available <a class="reference internal" href="classcodal_1_1ManagedBuffer.html#classcodal_1_1ManagedBuffer"><span class="std std-ref">ManagedBuffer</span></a> to our downstream caller, if available. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11Synthesizer12idleCallbackEv">
+<span id="_CPPv3N5codal11Synthesizer12idleCallbackEv"></span><span id="_CPPv2N5codal11Synthesizer12idleCallbackEv"></span><span id="codal::Synthesizer::idleCallback"></span><span class="target" id="classcodal_1_1Synthesizer_1a568ed33a8ce0bd299682bed2cb255a6f"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idleCallback</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11Synthesizer12idleCallbackEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Implement this function to receive a callback when the device is idling. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11Synthesizer8generateEiii">
+<span id="_CPPv3N5codal11Synthesizer8generateEiii"></span><span id="_CPPv2N5codal11Synthesizer8generateEiii"></span><span id="codal::Synthesizer::generate__i.i.i"></span><span class="target" id="classcodal_1_1Synthesizer_1aabba41b928b56841704c2637ba3daf17"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">generate</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">playoutTimeUs</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">envelopeStart</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1024</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">envelopeEnd</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1024</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11Synthesizer8generateEiii" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Creates the next audio buffer, and attmepts to queue this on the output stream. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11Synthesizer7setToneE20SynthesizerGetSamplePv">
+<span id="_CPPv3N5codal11Synthesizer7setToneE20SynthesizerGetSamplePv"></span><span id="_CPPv2N5codal11Synthesizer7setToneE20SynthesizerGetSamplePv"></span><span id="codal::Synthesizer::setTone__SynthesizerGetSample.voidP"></span><span class="target" id="classcodal_1_1Synthesizer_1a0339ea0e42022eea425919b14ef31396"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setTone</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespacecodal_1aa2cc026008219e630407221295a96eb9.html#_CPPv4N5codal20SynthesizerGetSampleE" title="codal::SynthesizerGetSample"><span class="n"><span class="pre">SynthesizerGetSample</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">tonePrint</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">arg</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">NULL</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11Synthesizer7setToneE20SynthesizerGetSamplePv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p><p>Defines the tone to generate.</p>
+<p>Synthesizer::SineTone Synthesizer::SawtoothTone Synthesizer::TriangleTone Synthesizer::SquareWaveTone Synthesizer::SquareWaveToneExt (with argument which is duty cycle 0-1023)</p>
+</p>
+<p><p>Defines the tone to generate.</p>
+<p>Synthesizer::SineTone Synthesizer::SawtoothTone Synthesizer::SquareWaveTone</p>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>the</strong> – tone print to use with this synthesizer. Examples include:</p></li>
+<li><p><strong>the</strong> – tone print to use with this synthesizer. Examples include:</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11Synthesizer7setToneEPK8uint16_t">
+<span id="_CPPv3N5codal11Synthesizer7setToneEPK8uint16_t"></span><span id="_CPPv2N5codal11Synthesizer7setToneEPK8uint16_t"></span><span id="codal::Synthesizer::setTone__uint16_tCP"></span><span class="target" id="classcodal_1_1Synthesizer_1a28b0953765ec80966d4f074398890af0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setTone</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">tonePrint</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11Synthesizer7setToneEPK8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11Synthesizer6outputE">
+<span id="_CPPv3N5codal11Synthesizer6outputE"></span><span id="_CPPv2N5codal11Synthesizer6outputE"></span><span id="codal::Synthesizer::output__DataStream"></span><span class="target" id="classcodal_1_1Synthesizer_1a366c345295b4f31f89d006593af325ce"></span><a class="reference internal" href="classcodal_1_1DataStream.html#_CPPv4N5codal10DataStreamE" title="codal::DataStream"><span class="n"><span class="pre">DataStream</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">output</span></span></span><a class="headerlink" href="#_CPPv4N5codal11Synthesizer6outputE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11Synthesizer8SineToneEPvi">
+<span id="_CPPv3N5codal11Synthesizer8SineToneEPvi"></span><span id="_CPPv2N5codal11Synthesizer8SineToneEPvi"></span><span id="codal::Synthesizer::SineTone__voidP.i"></span><span class="target" id="classcodal_1_1Synthesizer_1ab999a09c8afb83c489df811de89df6b5"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SineTone</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">arg</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11Synthesizer8SineToneEPvi" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11Synthesizer12SawtoothToneEPvi">
+<span id="_CPPv3N5codal11Synthesizer12SawtoothToneEPvi"></span><span id="_CPPv2N5codal11Synthesizer12SawtoothToneEPvi"></span><span id="codal::Synthesizer::SawtoothTone__voidP.i"></span><span class="target" id="classcodal_1_1Synthesizer_1a0111eb1d12cd7bd20cfa34e5c389fbd1"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SawtoothTone</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">arg</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11Synthesizer12SawtoothToneEPvi" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11Synthesizer12TriangleToneEPvi">
+<span id="_CPPv3N5codal11Synthesizer12TriangleToneEPvi"></span><span id="_CPPv2N5codal11Synthesizer12TriangleToneEPvi"></span><span id="codal::Synthesizer::TriangleTone__voidP.i"></span><span class="target" id="classcodal_1_1Synthesizer_1aa87cc9e68cc3a39acbd158fddaaca0fd"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TriangleTone</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">arg</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11Synthesizer12TriangleToneEPvi" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11Synthesizer14SquareWaveToneEPvi">
+<span id="_CPPv3N5codal11Synthesizer14SquareWaveToneEPvi"></span><span id="_CPPv2N5codal11Synthesizer14SquareWaveToneEPvi"></span><span id="codal::Synthesizer::SquareWaveTone__voidP.i"></span><span class="target" id="classcodal_1_1Synthesizer_1a2c28532ff2d3dffe70aaa9e472a328f6"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SquareWaveTone</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">arg</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11Synthesizer14SquareWaveToneEPvi" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11Synthesizer17SquareWaveToneExtEPvi">
+<span id="_CPPv3N5codal11Synthesizer17SquareWaveToneExtEPvi"></span><span id="_CPPv2N5codal11Synthesizer17SquareWaveToneExtEPvi"></span><span id="codal::Synthesizer::SquareWaveToneExt__voidP.i"></span><span class="target" id="classcodal_1_1Synthesizer_1ac25ad6f2e7aed5827dffae802ac6807e"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SquareWaveToneExt</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">arg</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11Synthesizer17SquareWaveToneExtEPvi" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11Synthesizer9NoiseToneEPvi">
+<span id="_CPPv3N5codal11Synthesizer9NoiseToneEPvi"></span><span id="_CPPv2N5codal11Synthesizer9NoiseToneEPvi"></span><span id="codal::Synthesizer::NoiseTone__voidP.i"></span><span class="target" id="classcodal_1_1Synthesizer_1a57bf279769ca5e99e042dbc43ebe0c65"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NoiseTone</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">arg</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11Synthesizer9NoiseToneEPvi" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11Synthesizer10CustomToneEPvi">
+<span id="_CPPv3N5codal11Synthesizer10CustomToneEPvi"></span><span id="_CPPv2N5codal11Synthesizer10CustomToneEPvi"></span><span id="codal::Synthesizer::CustomTone__voidP.i"></span><span class="target" id="classcodal_1_1Synthesizer_1a4c568681a544b430e6369bcdb2db5a96"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CustomTone</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">arg</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11Synthesizer10CustomToneEPvi" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,398 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Class DataSource &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL for the Micro:bit v2
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/the-basics.html">
+     The Basics - CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inheritance-relationships">
+   Inheritance Relationships
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derived-types">
+     Derived Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Class DataSource</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inheritance-relationships">
+   Inheritance Relationships
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derived-types">
+     Derived Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="class-datasource">
+<span id="exhale-class-classcodal-1-1datasource"></span><h1>Class DataSource<a class="headerlink" href="#class-datasource" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_DataStream.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-streams-datastream-h"><span class="std std-ref">File DataStream.h</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">#</a></h2>
+<section id="derived-types">
+<h3>Derived Types<a class="headerlink" href="#derived-types" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::DataStream</span></code> (<a class="reference internal" href="classcodal_1_1DataStream.html#exhale-class-classcodal-1-1datastream"><span class="std std-ref">Class DataStream</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::FIFOStream</span></code> (<a class="reference internal" href="classcodal_1_1FIFOStream.html#exhale-class-classcodal-1-1fifostream"><span class="std std-ref">Class FIFOStream</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::MemorySource</span></code> (<a class="reference internal" href="classcodal_1_1MemorySource.html#exhale-class-classcodal-1-1memorysource"><span class="std std-ref">Class MemorySource</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::Mixer</span></code> (<a class="reference internal" href="classcodal_1_1Mixer.html#exhale-class-classcodal-1-1mixer"><span class="std std-ref">Class Mixer</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::Mixer2</span></code> (<a class="reference internal" href="classcodal_1_1Mixer2.html#exhale-class-classcodal-1-1mixer2"><span class="std std-ref">Class Mixer2</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::SoundEmojiSynthesizer</span></code> (<a class="reference internal" href="classcodal_1_1SoundEmojiSynthesizer.html#exhale-class-classcodal-1-1soundemojisynthesizer"><span class="std std-ref">Class SoundEmojiSynthesizer</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::StreamFilter</span></code> (<a class="reference internal" href="classcodal_1_1StreamFilter.html#exhale-class-classcodal-1-1streamfilter"><span class="std std-ref">Class StreamFilter</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::StreamFlowTrigger</span></code> (<a class="reference internal" href="classcodal_1_1StreamFlowTrigger.html#exhale-class-classcodal-1-1streamflowtrigger"><span class="std std-ref">Class StreamFlowTrigger</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::StreamNormalizer</span></code> (<a class="reference internal" href="classcodal_1_1StreamNormalizer.html#exhale-class-classcodal-1-1streamnormalizer"><span class="std std-ref">Class StreamNormalizer</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::StreamRecording</span></code> (<a class="reference internal" href="classcodal_1_1StreamRecording.html#exhale-class-classcodal-1-1streamrecording"><span class="std std-ref">Class StreamRecording</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::StreamSplitter</span></code> (<a class="reference internal" href="classcodal_1_1StreamSplitter.html#exhale-class-classcodal-1-1streamsplitter"><span class="std std-ref">Class StreamSplitter</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::Synthesizer</span></code> (<a class="reference internal" href="classcodal_1_1Synthesizer.html#exhale-class-classcodal-1-1synthesizer"><span class="std std-ref">Class Synthesizer</span></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">#</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10DataSourceE">
+<span id="_CPPv3N5codal10DataSourceE"></span><span id="_CPPv2N5codal10DataSourceE"></span><span id="codal::DataSource"></span><span class="target" id="classcodal_1_1DataSource"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DataSource</span></span></span><a class="headerlink" href="#_CPPv4N5codal10DataSourceE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Interface definition for a <a class="reference internal" href="#classcodal_1_1DataSource"><span class="std std-ref">DataSource</span></a>. </p>
+<p>Subclassed by <a class="reference internal" href="classcodal_1_1DataStream.html#classcodal_1_1DataStream"><span class="std std-ref">codal::DataStream</span></a>, <a class="reference internal" href="classcodal_1_1FIFOStream.html#classcodal_1_1FIFOStream"><span class="std std-ref">codal::FIFOStream</span></a>, <a class="reference internal" href="classcodal_1_1MemorySource.html#classcodal_1_1MemorySource"><span class="std std-ref">codal::MemorySource</span></a>, <a class="reference internal" href="classcodal_1_1Mixer.html#classcodal_1_1Mixer"><span class="std std-ref">codal::Mixer</span></a>, <a class="reference internal" href="classcodal_1_1Mixer2.html#classcodal_1_1Mixer2"><span class="std std-ref">codal::Mixer2</span></a>, <a class="reference internal" href="classcodal_1_1SoundEmojiSynthesizer.html#classcodal_1_1SoundEmojiSynthesizer"><span class="std std-ref">codal::SoundEmojiSynthesizer</span></a>, <a class="reference internal" href="classcodal_1_1StreamFilter.html#classcodal_1_1StreamFilter"><span class="std std-ref">codal::StreamFilter</span></a>, <a class="reference internal" href="classcodal_1_1StreamFlowTrigger.html#classcodal_1_1StreamFlowTrigger"><span class="std std-ref">codal::StreamFlowTrigger</span></a>, <a class="reference internal" href="classcodal_1_1StreamNormalizer.html#classcodal_1_1StreamNormalizer"><span class="std std-ref">codal::StreamNormalizer</span></a>, <a class="reference internal" href="classcodal_1_1StreamRecording.html#classcodal_1_1StreamRecording"><span class="std std-ref">codal::StreamRecording</span></a>, <a class="reference internal" href="classcodal_1_1StreamSplitter.html#classcodal_1_1StreamSplitter"><span class="std std-ref">codal::StreamSplitter</span></a>, <a class="reference internal" href="classcodal_1_1Synthesizer.html#classcodal_1_1Synthesizer"><span class="std std-ref">codal::Synthesizer</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10DataSource4pullEv">
+<span id="_CPPv3N5codal10DataSource4pullEv"></span><span id="_CPPv2N5codal10DataSource4pullEv"></span><span id="codal::DataSource::pull"></span><span class="target" id="classcodal_1_1DataSource_1a0ea6e65a3271d97cbef1ae2123713d56"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="classcodal_1_1ManagedBuffer.html#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pull</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataSource4pullEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Default implementation of <a class="reference internal" href="#classcodal_1_1DataSource"><span class="std std-ref">DataSource</span></a> and <a class="reference internal" href="classcodal_1_1DataSink.html#classcodal_1_1DataSink"><span class="std std-ref">DataSink</span></a> classes. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10DataSource7connectER8DataSink">
+<span id="_CPPv3N5codal10DataSource7connectER8DataSink"></span><span id="_CPPv2N5codal10DataSource7connectER8DataSink"></span><span id="codal::DataSource::connect__DataSinkR"></span><span class="target" id="classcodal_1_1DataSource_1a71557338b4abeb7928db455025e7f10e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">connect</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataSink.html#_CPPv4N5codal8DataSinkE" title="codal::DataSink"><span class="n"><span class="pre">DataSink</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sink</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataSource7connectER8DataSink" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10DataSource10disconnectEv">
+<span id="_CPPv3N5codal10DataSource10disconnectEv"></span><span id="_CPPv2N5codal10DataSource10disconnectEv"></span><span id="codal::DataSource::disconnect"></span><span class="target" id="classcodal_1_1DataSource_1a41466166a0f3f5924580401cd800b80e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disconnect</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataSource10disconnectEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10DataSource9getFormatEv">
+<span id="_CPPv3N5codal10DataSource9getFormatEv"></span><span id="_CPPv2N5codal10DataSource9getFormatEv"></span><span id="codal::DataSource::getFormat"></span><span class="target" id="classcodal_1_1DataSource_1a6307116267f87ca2dc8a73c2e6b7a35f"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFormat</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataSource9getFormatEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10DataSource9setFormatEi">
+<span id="_CPPv3N5codal10DataSource9setFormatEi"></span><span id="_CPPv2N5codal10DataSource9setFormatEi"></span><span id="codal::DataSource::setFormat__i"></span><span class="target" id="classcodal_1_1DataSource_1a9abeabd357de1207d3c793feb9b02bfa"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFormat</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">format</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataSource9setFormatEi" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

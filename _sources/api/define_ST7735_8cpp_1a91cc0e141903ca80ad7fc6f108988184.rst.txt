@@ -1,0 +1,14 @@
+.. _exhale_define_ST7735_8cpp_1a91cc0e141903ca80ad7fc6f108988184:
+
+Define ST7735_PWCTR5
+====================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_ST7735.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: ST7735_PWCTR5
+   :project: CODAL

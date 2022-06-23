@@ -1,0 +1,121 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitUSBFlashManager.h:
+
+File MicroBitUSBFlashManager.h
+==============================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/MicroBitUSBFlashManager.h``)
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitUSBFlashManager.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``MicroBitCompat.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`)
+
+- ``MicroBitConfig.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitConfig.h`)
+
+- ``MicroBitIO.h``
+
+- ``MicroBitPowerManager.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitPowerManager.h`)
+
+- ``NVMController.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_NVMController.h`)
+
+- ``codal-core/inc/core/CodalComponent.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalComponent.h`)
+
+- ``codal-core/inc/driver-models/I2C.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_I2C.h`)
+
+- ``codal-core/inc/driver-models/Pin.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Pin.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitLog.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitUSBFlashManager.cpp`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structMicroBitUSBFlashConfig`
+
+- :ref:`exhale_struct_structMicroBitUSBFlashGeometry`
+
+- :ref:`exhale_class_classMicroBitUSBFlashManager`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_MicroBitUSBFlashManager_8h_1a2ce269dd701172c78c1a0a7caf73d3a1`
+
+- :ref:`exhale_define_MicroBitUSBFlashManager_8h_1ab9afb72a3bf1b30834e7f70eec6969c4`
+
+- :ref:`exhale_define_MicroBitUSBFlashManager_8h_1ae690737070e6e02b78ee00a91fd2319d`
+
+- :ref:`exhale_define_MicroBitUSBFlashManager_8h_1a17f1696f1d7bb00c8ad861f9437e1850`
+
+- :ref:`exhale_define_MicroBitUSBFlashManager_8h_1a7d1eb08f9b327f204a4a1581a7d6521d`
+
+- :ref:`exhale_define_MicroBitUSBFlashManager_8h_1a29ebf7ad76729cd986cdd7b4f57048d1`
+
+- :ref:`exhale_define_MicroBitUSBFlashManager_8h_1a441d301d5d5211298cbac6d8151c2f9d`
+
+- :ref:`exhale_define_MicroBitUSBFlashManager_8h_1a10a99b58edb935e6a4ee8be6abbbbcd4`
+
+- :ref:`exhale_define_MicroBitUSBFlashManager_8h_1a5c15d6dff5006c3c8a5b8b2ae1c99a6a`
+
+- :ref:`exhale_define_MicroBitUSBFlashManager_8h_1a5b6db50780cadc2d04b4af867d87c316`
+
+- :ref:`exhale_define_MicroBitUSBFlashManager_8h_1ae886b6bae6d7c0c9b16e2ae1f4a3fdd3`
+
+- :ref:`exhale_define_MicroBitUSBFlashManager_8h_1a6f736ab8ea7d5d1798648cfd9c04466e`
+
+- :ref:`exhale_define_MicroBitUSBFlashManager_8h_1a20f41957a41c512d241715ed933d2651`
+
+- :ref:`exhale_define_MicroBitUSBFlashManager_8h_1a2f79eaca3137f60772220a3ff9792636`
+
+- :ref:`exhale_define_MicroBitUSBFlashManager_8h_1a05c524f97df6401aabb79af6157f9302`
+
+- :ref:`exhale_define_MicroBitUSBFlashManager_8h_1a1844fd88f015e0bef9dbb225395f78f7`
+
+- :ref:`exhale_define_MicroBitUSBFlashManager_8h_1aa358e63c2fa5b544c3e2120e4ba265bc`
+
+- :ref:`exhale_define_MicroBitUSBFlashManager_8h_1af4e4750c5fe7e391b8f46c3b001fb63b`
+
+- :ref:`exhale_define_MicroBitUSBFlashManager_8h_1a2958e2c71537de566ba2ad6ba07a18f1`
+
+- :ref:`exhale_define_MicroBitUSBFlashManager_8h_1af60049fcb524da222c4be5ec36e2ddb3`
+
+- :ref:`exhale_define_MicroBitUSBFlashManager_8h_1ad74d5dfe58943d890648310288c91704`
+
+- :ref:`exhale_define_MicroBitUSBFlashManager_8h_1a6ef4ddbfc26eaa8ce1639504010fbd85`
+
+- :ref:`exhale_define_MicroBitUSBFlashManager_8h_1a030830cf569a08372b4e3d4124d1938c`
+

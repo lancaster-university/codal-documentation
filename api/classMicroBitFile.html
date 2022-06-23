@@ -1,0 +1,533 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Class MicroBitFile &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL for the Micro:bit v2
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/the-basics.html">
+     The Basics - CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Class MicroBitFile</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="class-microbitfile">
+<span id="exhale-class-classmicrobitfile"></span><h1>Class MicroBitFile<a class="headerlink" href="#class-microbitfile" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitFile.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitfile-h"><span class="std std-ref">File MicroBitFile.h</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">#</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv412MicroBitFile">
+<span id="_CPPv312MicroBitFile"></span><span id="_CPPv212MicroBitFile"></span><span id="MicroBitFile"></span><span class="target" id="classMicroBitFile"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitFile</span></span></span><a class="headerlink" href="#_CPPv412MicroBitFile" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12MicroBitFile12MicroBitFileE13ManagedStringi">
+<span id="_CPPv3N12MicroBitFile12MicroBitFileE13ManagedStringi"></span><span id="_CPPv2N12MicroBitFile12MicroBitFileE13ManagedStringi"></span><span id="MicroBitFile::MicroBitFile__ManagedString.i"></span><span class="target" id="classMicroBitFile_1a4e2ec331c80b392508bbbe481f9c56f3"></span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitFile</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">ManagedString</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fileName</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x01</span></span><span class="w"> </span><span class="o"><span class="pre">|</span></span><span class="w"> </span><span class="m"><span class="pre">0x02</span></span><span class="w"> </span><span class="o"><span class="pre">|</span></span><span class="w"> </span><span class="m"><span class="pre">0x04</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MicroBitFile12MicroBitFileE13ManagedStringi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Creates an instance of a <a class="reference internal" href="#classMicroBitFile"><span class="std std-ref">MicroBitFile</span></a> and creates a new file if required.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fileName</strong> – the name of the file to create/open.</p></li>
+<li><p><strong>mode</strong> – One of: READ, WRITE, READ_AND_WRITE. Defaults to READ_AND_WRITE. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12MicroBitFile11setPositionEi">
+<span id="_CPPv3N12MicroBitFile11setPositionEi"></span><span id="_CPPv2N12MicroBitFile11setPositionEi"></span><span id="MicroBitFile::setPosition__i"></span><span class="target" id="classMicroBitFile_1a30503eaeb0e4d53847092c8bf40c0a51"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPosition</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MicroBitFile11setPositionEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Seeks to a position in this <a class="reference internal" href="#classMicroBitFile"><span class="std std-ref">MicroBitFile</span></a> instance from the beginning of the file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>offset</strong> – the number of bytes to seek, relative to the beginning of the file.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the new seek position, MICROBIT_NOT_SUPPORTED if the current file handle is invalid, MICROBIT_INVALID_PARAMETER if the given offset is negative. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12MicroBitFile11getPositionEv">
+<span id="_CPPv3N12MicroBitFile11getPositionEv"></span><span id="_CPPv2N12MicroBitFile11getPositionEv"></span><span id="MicroBitFile::getPosition"></span><span class="target" id="classMicroBitFile_1a2e90d4abaf1e0c723fe71b47bd72f365"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPosition</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MicroBitFile11getPositionEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns the current position of the seek head for the current file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the new seek position, MICROBIT_NOT_SUPPORTED if the current file handle is invalid. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12MicroBitFile5writeEPKci">
+<span id="_CPPv3N12MicroBitFile5writeEPKci"></span><span id="_CPPv2N12MicroBitFile5writeEPKci"></span><span id="MicroBitFile::write__cCP.i"></span><span class="target" id="classMicroBitFile_1a0230f3fc2bdec4aa4381b3c1e58cbd22"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bytes</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MicroBitFile5writeEPKci" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Writes the given bytes to this <a class="reference internal" href="#classMicroBitFile"><span class="std std-ref">MicroBitFile</span></a> instance at the current position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bytes</strong> – a pointer to the bytes to write to this file.</p></li>
+<li><p><strong>len</strong> – the number of bytes to write.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The number of bytes written, MICROBIT_NOT_SUPPORTED if the current file handle is invalid, MICROBIT_INVALID_PARAMETER if bytes is invalid, or len is negative. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12MicroBitFile5writeE13ManagedString">
+<span id="_CPPv3N12MicroBitFile5writeE13ManagedString"></span><span id="_CPPv2N12MicroBitFile5writeE13ManagedString"></span><span id="MicroBitFile::write__ManagedString"></span><span class="target" id="classMicroBitFile_1a95a10a6d064c948376e9bceb0663e1b7"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">ManagedString</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MicroBitFile5writeE13ManagedString" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Writes the given ManagedString to this <a class="reference internal" href="#classMicroBitFile"><span class="std std-ref">MicroBitFile</span></a> instance at the current position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>s</strong> – The ManagedString to write to this file.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The number of bytes written, MICROBIT_NOT_SUPPORTED if the current file handle is invalid, MICROBIT_INVALID_PARAMETER if bytes is invalid, or len is negative. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12MicroBitFile4readEv">
+<span id="_CPPv3N12MicroBitFile4readEv"></span><span id="_CPPv2N12MicroBitFile4readEv"></span><span id="MicroBitFile::read"></span><span class="target" id="classMicroBitFile_1a40ef2af38e685fe521cda297d87d63ce"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MicroBitFile4readEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Reads a single character from the file at the current position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the character, or MICROBIT_NOT_SUPPORTED if the current file handle is invalid. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12MicroBitFile4readEPci">
+<span id="_CPPv3N12MicroBitFile4readEPci"></span><span id="_CPPv2N12MicroBitFile4readEPci"></span><span id="MicroBitFile::read__cP.i"></span><span class="target" id="classMicroBitFile_1a221c86a4f472d3bc99d181ddc69109c8"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buffer</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MicroBitFile4readEPci" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Reads from the file into a given buffer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>buffer</strong> – a pointer to the buffer where data will be stored.</p></li>
+<li><p><strong>size</strong> – the number of bytes that can be safely stored in the buffer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the number of bytes read, or MICROBIT_INVALID_PARAMETER if buffer is invalid, or the size given is less than 0. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12MicroBitFile4readEi">
+<span id="_CPPv3N12MicroBitFile4readEi"></span><span id="_CPPv2N12MicroBitFile4readEi"></span><span id="MicroBitFile::read__i"></span><span class="target" id="classMicroBitFile_1aa1e8b357d31c0c37b3964fb203b64a17"></span><span class="n"><span class="pre">ManagedString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MicroBitFile4readEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Reads from the current <a class="reference internal" href="#classMicroBitFile"><span class="std std-ref">MicroBitFile</span></a> into a given buffer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>size</strong> – the number of bytes to be read from the file.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a ManagedString containing the requested bytes, oran empty ManagedString on error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12MicroBitFile6removeEv">
+<span id="_CPPv3N12MicroBitFile6removeEv"></span><span id="_CPPv2N12MicroBitFile6removeEv"></span><span id="MicroBitFile::remove"></span><span class="target" id="classMicroBitFile_1aa5e8fa747ee0d862c67be8374ae630a7"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">remove</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MicroBitFile6removeEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Removes this <a class="reference internal" href="#classMicroBitFile"><span class="std std-ref">MicroBitFile</span></a> from the <a class="reference internal" href="classMicroBitFileSystem.html#classMicroBitFileSystem"><span class="std std-ref">MicroBitFileSystem</span></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>MICROBIT_OK on success, MICROBIT_INVALID_PARAMETER if the given filename does not exist, MICROBIT_CANCELLED if something went wrong. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12MicroBitFile6appendEPKci">
+<span id="_CPPv3N12MicroBitFile6appendEPKci"></span><span id="_CPPv2N12MicroBitFile6appendEPKci"></span><span id="MicroBitFile::append__cCP.i"></span><span class="target" id="classMicroBitFile_1a5acd0e0ea19fb54f37e7f83624bfcf3e"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">append</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bytes</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MicroBitFile6appendEPKci" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Seeks to the end of the file, and appends the given ManagedString to this <a class="reference internal" href="#classMicroBitFile"><span class="std std-ref">MicroBitFile</span></a> instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bytes</strong> – a pointer to the bytes to write to this file.</p></li>
+<li><p><strong>len</strong> – the number of bytes to write.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The number of bytes written, MICROBIT_NOT_SUPPORTED if the current file handle is invalid or this file was not opened in WRITE mode. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12MicroBitFile6appendE13ManagedString">
+<span id="_CPPv3N12MicroBitFile6appendE13ManagedString"></span><span id="_CPPv2N12MicroBitFile6appendE13ManagedString"></span><span id="MicroBitFile::append__ManagedString"></span><span class="target" id="classMicroBitFile_1ad56a9e26918c06830eb3cdd44ae5eeae"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">append</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">ManagedString</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MicroBitFile6appendE13ManagedString" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Seeks to the end of the file, and appends the given ManagedString to this <a class="reference internal" href="#classMicroBitFile"><span class="std std-ref">MicroBitFile</span></a> instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>s</strong> – The ManagedString to write to this file.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The number of bytes written, MICROBIT_NOT_SUPPORTED if the current file handle is invalid or this file was not opened in WRITE mode. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12MicroBitFile7isValidEv">
+<span id="_CPPv3N12MicroBitFile7isValidEv"></span><span id="_CPPv2N12MicroBitFile7isValidEv"></span><span id="MicroBitFile::isValid"></span><span class="target" id="classMicroBitFile_1a4a92f8501d7e10f4ada6945f20308f4d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isValid</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MicroBitFile7isValidEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Determines if this <a class="reference internal" href="#classMicroBitFile"><span class="std std-ref">MicroBitFile</span></a> instance refers to a valid, open file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>true if this file is valid, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12MicroBitFile9getHandleEv">
+<span id="_CPPv3N12MicroBitFile9getHandleEv"></span><span id="_CPPv2N12MicroBitFile9getHandleEv"></span><span id="MicroBitFile::getHandle"></span><span class="target" id="classMicroBitFile_1af9dd98573c3f9951e912fe660c982162"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getHandle</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MicroBitFile9getHandleEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns the handle used by this <a class="reference internal" href="#classMicroBitFile"><span class="std std-ref">MicroBitFile</span></a> instance.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This member function will also inform the user of any errors encountered during the opening of this <a class="reference internal" href="#classMicroBitFile"><span class="std std-ref">MicroBitFile</span></a>. At open, the handle is set to the return value from <a class="reference internal" href="classMicroBitFileSystem.html#classMicroBitFileSystem_1a89afb809c323b6fbdde58fe0b4cf8537"><span class="std std-ref">MicroBitFileSystem.open()</span></a>. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12MicroBitFile5closeEv">
+<span id="_CPPv3N12MicroBitFile5closeEv"></span><span id="_CPPv2N12MicroBitFile5closeEv"></span><span id="MicroBitFile::close"></span><span class="target" id="classMicroBitFile_1a07016d763565a2b4b9ccef875748067b"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">close</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MicroBitFile5closeEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Closes this <a class="reference internal" href="#classMicroBitFile"><span class="std std-ref">MicroBitFile</span></a> instance</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>MicroBitFiles are opened at construction and are implicitly closed at destruction. They can be closed explicitly using this member function. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>MICROBIT_OK on success, MICROBIT_NOT_SUPPORTED if the file handle is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12MicroBitFile5flushEv">
+<span id="_CPPv3N12MicroBitFile5flushEv"></span><span id="_CPPv2N12MicroBitFile5flushEv"></span><span id="MicroBitFile::flush"></span><span class="target" id="classMicroBitFile_1a4656aff522b0e80101fc7ebb8e31d115"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">flush</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MicroBitFile5flushEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Writes back all state associated with the given file to FLASH memory, leaving the file open.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>MICROBIT_OK on success, MICROBIT_NOT_SUPPORTED if the file system has not been initialised or if this file is invalid. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12MicroBitFileD0Ev">
+<span id="_CPPv3N12MicroBitFileD0Ev"></span><span id="_CPPv2N12MicroBitFileD0Ev"></span><span id="MicroBitFile::~MicroBitFile"></span><span class="target" id="classMicroBitFile_1ac42c7a74c47ab7e2aa7d85d6bb26d35a"></span><span class="sig-name descname"><span class="n"><span class="pre">~MicroBitFile</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MicroBitFileD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Destructor for <a class="reference internal" href="#classMicroBitFile"><span class="std std-ref">MicroBitFile</span></a>. Implicitly closes the current file. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

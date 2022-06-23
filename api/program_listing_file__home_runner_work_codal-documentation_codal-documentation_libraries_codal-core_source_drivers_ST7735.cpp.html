@@ -1,0 +1,727 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Program Listing for File ST7735.cpp &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL for the Micro:bit v2
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/the-basics.html">
+     The Basics - CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Program Listing for File ST7735.cpp</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="program-listing-for-file-st7735-cpp">
+<span id="program-listing-file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-st7735-cpp"></span><h1>Program Listing for File ST7735.cpp<a class="headerlink" href="#program-listing-for-file-st7735-cpp" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_ST7735.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-st7735-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/source/drivers/ST7735.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ST7735.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CodalFiber.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CodalDmesg.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#define SWAP 0</span>
+
+<span class="cp">#define assert(cond)                                                                               \</span>
+<span class="cp">    if (!(cond))                                                                                   \</span>
+<span class="cp">    target_panic(909)</span>
+
+<span class="cp">#define ST7735_NOP 0x00</span>
+<span class="cp">#define ST7735_SWRESET 0x01</span>
+<span class="cp">#define ST7735_RDDID 0x04</span>
+<span class="cp">#define ST7735_RDDST 0x09</span>
+
+<span class="cp">#define ST7735_SLPIN 0x10</span>
+<span class="cp">#define ST7735_SLPOUT 0x11</span>
+<span class="cp">#define ST7735_PTLON 0x12</span>
+<span class="cp">#define ST7735_NORON 0x13</span>
+
+<span class="cp">#define ST7735_INVOFF 0x20</span>
+<span class="cp">#define ST7735_INVON 0x21</span>
+<span class="cp">#define ST7735_DISPOFF 0x28</span>
+<span class="cp">#define ST7735_DISPON 0x29</span>
+<span class="cp">#define ST7735_CASET 0x2A</span>
+<span class="cp">#define ST7735_RASET 0x2B</span>
+<span class="cp">#define ST7735_RAMWR 0x2C</span>
+<span class="cp">#define ST7735_RAMRD 0x2E</span>
+
+<span class="cp">#define ST7735_PTLAR 0x30</span>
+<span class="cp">#define ST7735_COLMOD 0x3A</span>
+<span class="cp">#define ST7735_MADCTL 0x36</span>
+
+<span class="cp">#define ST7735_FRMCTR1 0xB1</span>
+<span class="cp">#define ST7735_FRMCTR2 0xB2</span>
+<span class="cp">#define ST7735_FRMCTR3 0xB3</span>
+<span class="cp">#define ST7735_INVCTR 0xB4</span>
+<span class="cp">#define ST7735_DISSET5 0xB6</span>
+
+<span class="cp">#define ST7735_PWCTR1 0xC0</span>
+<span class="cp">#define ST7735_PWCTR2 0xC1</span>
+<span class="cp">#define ST7735_PWCTR3 0xC2</span>
+<span class="cp">#define ST7735_PWCTR4 0xC3</span>
+<span class="cp">#define ST7735_PWCTR5 0xC4</span>
+<span class="cp">#define ST7735_VMCTR1 0xC5</span>
+
+<span class="cp">#define ST7735_RDID1 0xDA</span>
+<span class="cp">#define ST7735_RDID2 0xDB</span>
+<span class="cp">#define ST7735_RDID3 0xDC</span>
+<span class="cp">#define ST7735_RDID4 0xDD</span>
+
+<span class="cp">#define ST7735_PWCTR6 0xFC</span>
+
+<span class="cp">#define ST7735_GMCTRP1 0xE0</span>
+<span class="cp">#define ST7735_GMCTRN1 0xE1</span>
+
+<span class="cp">#define MADCTL_MY 0x80</span>
+<span class="cp">#define MADCTL_MX 0x40</span>
+<span class="cp">#define MADCTL_MV 0x20</span>
+<span class="cp">#define MADCTL_ML 0x10</span>
+<span class="cp">#define MADCTL_RGB 0x00</span>
+<span class="cp">#define MADCTL_BGR 0x08</span>
+<span class="cp">#define MADCTL_MH 0x04</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">codal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="n">ST7735</span><span class="o">::</span><span class="n">ST7735</span><span class="p">(</span><span class="n">ScreenIO</span><span class="w"> </span><span class="o">&amp;</span><span class="n">io</span><span class="p">,</span><span class="w"> </span><span class="n">Pin</span><span class="w"> </span><span class="o">&amp;</span><span class="n">cs</span><span class="p">,</span><span class="w"> </span><span class="n">Pin</span><span class="w"> </span><span class="o">&amp;</span><span class="n">dc</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">io</span><span class="p">(</span><span class="n">io</span><span class="p">),</span><span class="w"> </span><span class="n">cs</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cs</span><span class="p">),</span><span class="w"> </span><span class="n">dc</span><span class="p">(</span><span class="o">&amp;</span><span class="n">dc</span><span class="p">),</span><span class="w"> </span><span class="n">work</span><span class="p">(</span><span class="nb">NULL</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">double16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">inSleepMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="cp">#define DELAY 0x80</span>
+
+<span class="c1">// clang-format off</span>
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">initCmds</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">ST7735_SWRESET</span><span class="p">,</span><span class="w">   </span><span class="n">DELAY</span><span class="p">,</span><span class="w">  </span><span class="c1">//  1: Software reset, 0 args, w/delay</span>
+<span class="w">      </span><span class="mi">120</span><span class="p">,</span><span class="w">                    </span><span class="c1">//     150 ms delay</span>
+<span class="w">    </span><span class="n">ST7735_SLPOUT</span><span class="w"> </span><span class="p">,</span><span class="w">   </span><span class="n">DELAY</span><span class="p">,</span><span class="w">  </span><span class="c1">//  2: Out of sleep mode, 0 args, w/delay</span>
+<span class="w">      </span><span class="mi">120</span><span class="p">,</span><span class="w">                    </span><span class="c1">//     500 ms delay</span>
+<span class="w">      </span><span class="cp">#if 0</span><span class="c"></span>
+<span class="c">    ST7735_FRMCTR1, 3      ,  //  3: Frame rate ctrl - normal mode, 3 args:</span>
+<span class="c">      0x02, 0x2c, 0x2d,       //     Rate = fosc/(1x2+40) * (LINE+2C+2D)</span>
+<span class="c">    ST7735_FRMCTR2, 3      ,  //  4: Frame rate control - idle mode, 3 args:</span>
+<span class="c">      0x01, 0x2C, 0x2D,       //     Rate = fosc/(1x2+40) * (LINE+2C+2D)</span>
+<span class="c">    ST7735_FRMCTR3, 6      ,  //  5: Frame rate ctrl - partial mode, 6 args:</span>
+<span class="c">      0x01, 0x2C, 0x2D,       //     Dot inversion mode</span>
+<span class="c">      0x01, 0x2C, 0x2D,       //     Line inversion mode</span>
+<span class="c">    ST7735_INVCTR , 1      ,  //  6: Display inversion ctrl, 1 arg, no delay:</span>
+<span class="c">      0x07,                   //     No inversion</span>
+<span class="c">    ST7735_PWCTR1 , 3      ,  //  7: Power control, 3 args, no delay:</span>
+<span class="c">      0xA2,</span>
+<span class="c">      0x02,                   //     -4.6V</span>
+<span class="c">      0x84,                   //     AUTO mode</span>
+<span class="c">    ST7735_PWCTR2 , 1      ,  //  8: Power control, 1 arg, no delay:</span>
+<span class="c">      0xC5,                   //     VGH25 = 2.4C VGSEL = -10 VGH = 3 * AVDD</span>
+<span class="c">    ST7735_PWCTR3 , 2      ,  //  9: Power control, 2 args, no delay:</span>
+<span class="c">      0x0A,                   //     Opamp current small</span>
+<span class="c">      0x00,                   //     Boost frequency</span>
+<span class="c">    ST7735_PWCTR4 , 2      ,  // 10: Power control, 2 args, no delay:</span>
+<span class="c">      0x8A,                   //     BCLK/2, Opamp current small &amp; Medium low</span>
+<span class="c">      0x2A,</span>
+<span class="c">    ST7735_PWCTR5 , 2      ,  // 11: Power control, 2 args, no delay:</span>
+<span class="c">      0x8A, 0xEE,</span>
+<span class="c">    ST7735_VMCTR1 , 1      ,  // 12: Power control, 1 arg, no delay:</span>
+<span class="c">      0x0E,</span>
+<span class="cp">      #endif</span>
+<span class="w">    </span><span class="n">ST7735_INVOFF</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w">      </span><span class="p">,</span><span class="w">  </span><span class="c1">// 13: Don&#39;t invert display, no args, no delay</span>
+<span class="w">    </span><span class="n">ST7735_COLMOD</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w">      </span><span class="p">,</span><span class="w">  </span><span class="c1">// 15: set color mode, 1 arg, no delay:</span>
+<span class="w">      </span><span class="mh">0x03</span><span class="p">,</span><span class="w">                  </span><span class="c1">//     12-bit color</span>
+
+<span class="w">    </span><span class="n">ST7735_GMCTRP1</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="w">      </span><span class="p">,</span><span class="w"> </span><span class="c1">//  1: Magical unicorn dust, 16 args, no delay:</span>
+<span class="w">      </span><span class="mh">0x02</span><span class="p">,</span><span class="w"> </span><span class="mh">0x1c</span><span class="p">,</span><span class="w"> </span><span class="mh">0x07</span><span class="p">,</span><span class="w"> </span><span class="mh">0x12</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="mh">0x37</span><span class="p">,</span><span class="w"> </span><span class="mh">0x32</span><span class="p">,</span><span class="w"> </span><span class="mh">0x29</span><span class="p">,</span><span class="w"> </span><span class="mh">0x2d</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="mh">0x29</span><span class="p">,</span><span class="w"> </span><span class="mh">0x25</span><span class="p">,</span><span class="w"> </span><span class="mh">0x2B</span><span class="p">,</span><span class="w"> </span><span class="mh">0x39</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x01</span><span class="p">,</span><span class="w"> </span><span class="mh">0x03</span><span class="p">,</span><span class="w"> </span><span class="mh">0x10</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">ST7735_GMCTRN1</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="w">      </span><span class="p">,</span><span class="w"> </span><span class="c1">//  2: Sparkles and rainbows, 16 args, no delay:</span>
+<span class="w">      </span><span class="mh">0x03</span><span class="p">,</span><span class="w"> </span><span class="mh">0x1d</span><span class="p">,</span><span class="w"> </span><span class="mh">0x07</span><span class="p">,</span><span class="w"> </span><span class="mh">0x06</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="mh">0x2E</span><span class="p">,</span><span class="w"> </span><span class="mh">0x2C</span><span class="p">,</span><span class="w"> </span><span class="mh">0x29</span><span class="p">,</span><span class="w"> </span><span class="mh">0x2D</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="mh">0x2E</span><span class="p">,</span><span class="w"> </span><span class="mh">0x2E</span><span class="p">,</span><span class="w"> </span><span class="mh">0x37</span><span class="p">,</span><span class="w"> </span><span class="mh">0x3F</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x02</span><span class="p">,</span><span class="w"> </span><span class="mh">0x10</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">ST7735_NORON</span><span class="w">  </span><span class="p">,</span><span class="w">    </span><span class="n">DELAY</span><span class="p">,</span><span class="w"> </span><span class="c1">//  3: Normal display on, no args, w/delay</span>
+<span class="w">      </span><span class="mi">10</span><span class="p">,</span><span class="w">                     </span><span class="c1">//     10 ms delay</span>
+<span class="w">    </span><span class="n">ST7735_DISPON</span><span class="w"> </span><span class="p">,</span><span class="w">    </span><span class="n">DELAY</span><span class="p">,</span><span class="w"> </span><span class="c1">//  4: Main screen turn on, no args w/delay</span>
+<span class="w">      </span><span class="mi">10</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="c1">// END</span>
+<span class="p">};</span><span class="w"></span>
+<span class="c1">// clang-format on</span>
+
+<span class="c1">// Nordic cannot send more than 255 bytes at a time;</span>
+<span class="c1">// 224 aligns with a word</span>
+<span class="cp">#ifdef NRF52_SERIES</span>
+<span class="cp">#define DATABUFSIZE 224</span>
+<span class="cp">#else</span>
+<span class="cp">#define DATABUFSIZE 500</span>
+<span class="cp">#endif</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">ST7735WorkBuffer</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">width</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">height</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">dataBuf</span><span class="p">[</span><span class="n">DATABUFSIZE</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">srcPtr</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">paletteTable</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">srcLeft</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">inProgress</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">expPalette</span><span class="p">[</span><span class="mi">256</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">ST7735::sendBytes</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">srcLeft</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">srcLeft</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">srcLeft</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">double16</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">dst</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">dataBuf</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="o">--</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">srcPtr</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="o">*</span><span class="n">dst</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">expPalette</span><span class="p">[</span><span class="n">v</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xf</span><span class="p">];</span><span class="w"></span>
+<span class="w">            </span><span class="o">*</span><span class="n">dst</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">expPalette</span><span class="p">[</span><span class="n">v</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">4</span><span class="p">];</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="n">startTransfer</span><span class="p">((</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">dst</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">dataBuf</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">dst</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">dataBuf</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="o">--</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">expPalette</span><span class="p">[</span><span class="o">*</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">srcPtr</span><span class="o">++</span><span class="p">];</span><span class="w"></span>
+<span class="w">            </span><span class="o">*</span><span class="n">dst</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="o">*</span><span class="n">dst</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="o">*</span><span class="n">dst</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">16</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="n">startTransfer</span><span class="p">(</span><span class="n">dst</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">dataBuf</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">ST7735::sendWords</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">numBytes</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numBytes</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">srcLeft</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">numBytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">srcLeft</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">~</span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">numBytes</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">srcLeft</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">numBytes</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">numWords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numBytes</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">srcPtr</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">tbl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">expPalette</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">dst</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">dataBuf</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">double16</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">numWords</span><span class="o">--</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">src</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="o">*</span><span class="n">dst</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tbl</span><span class="p">[</span><span class="mh">0xf</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)];</span><span class="w"></span>
+<span class="w">            </span><span class="o">*</span><span class="n">dst</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tbl</span><span class="p">[</span><span class="mh">0xf</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">4</span><span class="p">)];</span><span class="w"></span>
+<span class="w">            </span><span class="o">*</span><span class="n">dst</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tbl</span><span class="p">[</span><span class="mh">0xf</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)];</span><span class="w"></span>
+<span class="w">            </span><span class="o">*</span><span class="n">dst</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tbl</span><span class="p">[</span><span class="mh">0xf</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">12</span><span class="p">)];</span><span class="w"></span>
+<span class="w">            </span><span class="o">*</span><span class="n">dst</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tbl</span><span class="p">[</span><span class="mh">0xf</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">16</span><span class="p">)];</span><span class="w"></span>
+<span class="w">            </span><span class="o">*</span><span class="n">dst</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tbl</span><span class="p">[</span><span class="mh">0xf</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">20</span><span class="p">)];</span><span class="w"></span>
+<span class="w">            </span><span class="o">*</span><span class="n">dst</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tbl</span><span class="p">[</span><span class="mh">0xf</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">24</span><span class="p">)];</span><span class="w"></span>
+<span class="w">            </span><span class="o">*</span><span class="n">dst</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tbl</span><span class="p">[</span><span class="mh">0xf</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">28</span><span class="p">)];</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">numWords</span><span class="o">--</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">src</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tbl</span><span class="p">[</span><span class="n">s</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xff</span><span class="p">];</span><span class="w"></span>
+<span class="w">            </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tbl</span><span class="p">[(</span><span class="n">s</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xff</span><span class="p">];</span><span class="w"></span>
+<span class="w">            </span><span class="o">*</span><span class="n">dst</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">24</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="n">o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tbl</span><span class="p">[(</span><span class="n">s</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xff</span><span class="p">];</span><span class="w"></span>
+<span class="w">            </span><span class="o">*</span><span class="n">dst</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">16</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tbl</span><span class="p">[</span><span class="n">s</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">24</span><span class="p">];</span><span class="w"></span>
+<span class="w">            </span><span class="o">*</span><span class="n">dst</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">srcPtr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">src</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">startTransfer</span><span class="p">((</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">dst</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">dataBuf</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">ST7735::sendColorsStep</span><span class="p">(</span><span class="n">ST7735</span><span class="w"> </span><span class="o">*</span><span class="n">st</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">ST7735WorkBuffer</span><span class="w"> </span><span class="o">*</span><span class="n">work</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">st</span><span class="o">-&gt;</span><span class="n">work</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">paletteTable</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">paletteTable</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">paletteTable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">memset</span><span class="p">(</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">dataBuf</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">dataBuf</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">dataBuf</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">16</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">base</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">palette</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x3f</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">base</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">32</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">palette</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x3f</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">base</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">32</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">64</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">palette</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x3f</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="n">st</span><span class="o">-&gt;</span><span class="n">startRAMWR</span><span class="p">(</span><span class="mh">0x2D</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">st</span><span class="o">-&gt;</span><span class="n">io</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">dataBuf</span><span class="p">,</span><span class="w"> </span><span class="mi">128</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">st</span><span class="o">-&gt;</span><span class="n">endCS</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">st</span><span class="o">-&gt;</span><span class="n">startRAMWR</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">x</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">st</span><span class="o">-&gt;</span><span class="n">double16</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">srcLeft</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">x</span><span class="o">++</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">width</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">srcLeft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">height</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">srcPtr</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">srcLeft</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// with the current image format in PXT the sendBytes cases never happen</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">align</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="p">)</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">srcPtr</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">srcLeft</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">align</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">st</span><span class="o">-&gt;</span><span class="n">sendBytes</span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">align</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">srcLeft</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">srcLeft</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">st</span><span class="o">-&gt;</span><span class="n">endCS</span><span class="p">();</span><span class="w"></span>
+<span class="w">            </span><span class="n">Event</span><span class="p">(</span><span class="n">DEVICE_ID_DISPLAY</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">else</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">st</span><span class="o">-&gt;</span><span class="n">sendBytes</span><span class="p">(</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">srcLeft</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">st</span><span class="o">-&gt;</span><span class="n">double16</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="n">st</span><span class="o">-&gt;</span><span class="n">sendWords</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">dataBuf</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">else</span><span class="w"></span>
+<span class="w">            </span><span class="n">st</span><span class="o">-&gt;</span><span class="n">sendWords</span><span class="p">((</span><span class="k">sizeof</span><span class="p">(</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">dataBuf</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">4</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">ST7735::startTransfer</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">size</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">io</span><span class="p">.</span><span class="n">startSend</span><span class="p">(</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">dataBuf</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">PVoidCallback</span><span class="p">)</span><span class="o">&amp;</span><span class="n">ST7735</span><span class="o">::</span><span class="n">sendColorsStep</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">ST7735::startRAMWR</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">cmd</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cmd</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ST7735_RAMWR</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">cmdBuf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">sendCmd</span><span class="p">(</span><span class="n">cmdBuf</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">setData</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">beginCS</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">ST7735::sendDone</span><span class="p">(</span><span class="n">Event</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// this executes outside of interrupt context, so we don&#39;t get a race</span>
+<span class="w">    </span><span class="c1">// with waitForSendDone</span>
+<span class="w">    </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">inProgress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">Event</span><span class="p">(</span><span class="n">DEVICE_ID_DISPLAY</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">ST7735::waitForSendDone</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">work</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">inProgress</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">fiber_wait_for_event</span><span class="p">(</span><span class="n">DEVICE_ID_DISPLAY</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">ST7735::setSleep</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">sleepMode</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sleepMode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">inSleepMode</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sleepMode</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ST7735_SLPIN</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">inSleepMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">waitForSendDone</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">sendCmd</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ST7735_SLPOUT</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">sendCmd</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">fiber_sleep</span><span class="p">(</span><span class="mi">120</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">inSleepMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="cp">#define ENC16(r, g, b) (((r &lt;&lt; 3) | (g &gt;&gt; 3)) &amp; 0xff) | (((b | (g &lt;&lt; 5)) &amp; 0xff) &lt;&lt; 8)</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">ST7735::sendIndexedImage</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">palette</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">work</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">work</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ST7735WorkBuffer</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">memset</span><span class="p">(</span><span class="n">work</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="o">*</span><span class="n">work</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">double16</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">16</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ENC16</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">expPalette</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">16</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">else</span><span class="w"></span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">256</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">expPalette</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x1011</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xf</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="mh">0x110100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">4</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="n">EventModel</span><span class="o">::</span><span class="n">defaultEventBus</span><span class="o">-&gt;</span><span class="n">listen</span><span class="p">(</span><span class="n">DEVICE_ID_DISPLAY</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ST7735</span><span class="o">::</span><span class="n">sendDone</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">work</span><span class="o">-&gt;</span><span class="n">inProgress</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">inSleepMode</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_BUSY</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">paletteTable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">palette</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">inProgress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">srcPtr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">src</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">width</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">srcLeft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">height</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// when not scaling up, we don&#39;t care about where lines end</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">double16</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">srcLeft</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">width</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">work</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">sendColorsStep</span><span class="p">(</span><span class="k">this</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// we don&#39;t modify *buf, but it cannot be in flash, so no const as a hint</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">ST7735::sendCmd</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// make sure cmd isn&#39;t on stack</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">buf</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">cmdBuf</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">memcpy</span><span class="p">(</span><span class="n">cmdBuf</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">len</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">buf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cmdBuf</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">setCommand</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">beginCS</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">io</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">setData</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">len</span><span class="o">--</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">buf</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">len</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">io</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">len</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">endCS</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">ST7735::sendCmdSeq</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">buf</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cmdBuf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">~</span><span class="n">DELAY</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// note that we have to copy to RAM</span>
+<span class="w">        </span><span class="n">memcpy</span><span class="p">(</span><span class="n">cmdBuf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">len</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">sendCmd</span><span class="p">(</span><span class="n">cmdBuf</span><span class="p">,</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">buf</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">len</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">DELAY</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">fiber_sleep</span><span class="p">(</span><span class="o">*</span><span class="n">buf</span><span class="o">++</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">ST7735::setAddrWindow</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">h</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">y2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">cmd0</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">ST7735_RASET</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)(</span><span class="n">x2</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="n">x2</span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">cmd1</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">ST7735_CASET</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)(</span><span class="n">y</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)(</span><span class="n">y2</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="n">y2</span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="n">sendCmd</span><span class="p">(</span><span class="n">cmd1</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">cmd1</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="n">sendCmd</span><span class="p">(</span><span class="n">cmd0</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">cmd0</span><span class="p">));</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">ST7735::init</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">endCS</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">setData</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">fiber_sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// TODO check if delay needed</span>
+<span class="w">    </span><span class="n">sendCmdSeq</span><span class="p">(</span><span class="n">initCmds</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">ST7735::configure</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">madctl</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">frmctr1</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">cmd0</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">ST7735_MADCTL</span><span class="p">,</span><span class="w"> </span><span class="n">madctl</span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">cmd1</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">ST7735_FRMCTR1</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)(</span><span class="n">frmctr1</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">16</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)(</span><span class="n">frmctr1</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">),</span><span class="w"></span>
+<span class="w">                      </span><span class="p">(</span><span class="kt">uint8_t</span><span class="p">)</span><span class="n">frmctr1</span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">madctl</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mh">0xff</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">sendCmd</span><span class="p">(</span><span class="n">cmd0</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">cmd0</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">frmctr1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mh">0xffffff</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">sendCmd</span><span class="p">(</span><span class="n">cmd1</span><span class="p">,</span><span class="w"> </span><span class="n">cmd1</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">0xff</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace codal</span>
+</pre></div>
+</div>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

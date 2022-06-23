@@ -1,0 +1,14 @@
+.. _exhale_define_ILI9341_8cpp_1aed59201f8eb2291e618d3b3151adc497:
+
+Define ILI9341_VSCRSADD
+=======================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_ILI9341.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: ILI9341_VSCRSADD
+   :project: CODAL

@@ -1,0 +1,37 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_NonLinearAnalogSensor.cpp:
+
+File NonLinearAnalogSensor.cpp
+==============================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/source/drivers``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/source/drivers/NonLinearAnalogSensor.cpp``)
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_NonLinearAnalogSensor.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``NonLinearAnalogSensor.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_NonLinearAnalogSensor.h`)
+
+
+
+
+

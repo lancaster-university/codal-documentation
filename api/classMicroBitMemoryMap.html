@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Class MicroBitMemoryMap &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL for the Micro:bit v2
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/the-basics.html">
+     The Basics - CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nested-relationships">
+   Nested Relationships
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nested-types">
+     Nested Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Class MicroBitMemoryMap</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nested-relationships">
+   Nested Relationships
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nested-types">
+     Nested Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="class-microbitmemorymap">
+<span id="exhale-class-classmicrobitmemorymap"></span><h1>Class MicroBitMemoryMap<a class="headerlink" href="#class-microbitmemorymap" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitMemoryMap.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitmemorymap-h"><span class="std std-ref">File MicroBitMemoryMap.h</span></a></p></li>
+</ul>
+<section id="nested-relationships">
+<h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Permalink to this headline">#</a></h2>
+<section id="nested-types">
+<h3>Nested Types<a class="headerlink" href="#nested-types" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="structMicroBitMemoryMap_1_1MemoryMapStore.html#exhale-struct-structmicrobitmemorymap-1-1memorymapstore"><span class="std std-ref">Struct MicroBitMemoryMap::MemoryMapStore</span></a></p></li>
+<li><p><a class="reference internal" href="structMicroBitMemoryMap_1_1MicroPythonLayoutRecord.html#exhale-struct-structmicrobitmemorymap-1-1micropythonlayoutrecord"><span class="std std-ref">Struct MicroBitMemoryMap::MicroPythonLayoutRecord</span></a></p></li>
+<li><p><a class="reference internal" href="structMicroBitMemoryMap_1_1Region.html#exhale-struct-structmicrobitmemorymap-1-1region"><span class="std std-ref">Struct MicroBitMemoryMap::Region</span></a></p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">#</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv417MicroBitMemoryMap">
+<span id="_CPPv317MicroBitMemoryMap"></span><span id="_CPPv217MicroBitMemoryMap"></span><span id="MicroBitMemoryMap"></span><span class="target" id="classMicroBitMemoryMap"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitMemoryMap</span></span></span><a class="headerlink" href="#_CPPv417MicroBitMemoryMap" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Class definition for the <a class="reference internal" href="#classMicroBitMemoryMap"><span class="std std-ref">MicroBitMemoryMap</span></a> class. This allows reading and writing of regions within the memory map.</p>
+<p>This class maps the different regions used on the flash memory to allow a region to updated independently of the others AKA Partial Flashing. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N17MicroBitMemoryMap17MicroBitMemoryMapEv">
+<span id="_CPPv3N17MicroBitMemoryMap17MicroBitMemoryMapEv"></span><span id="_CPPv2N17MicroBitMemoryMap17MicroBitMemoryMapEv"></span><span id="MicroBitMemoryMap::MicroBitMemoryMap"></span><span class="target" id="classMicroBitMemoryMap_1a093c763a69038ac23a8aad298788d9d9"></span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitMemoryMap</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17MicroBitMemoryMap17MicroBitMemoryMapEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Default constructor.</p>
+<p>Creates an instance of <a class="reference internal" href="#classMicroBitMemoryMap"><span class="std std-ref">MicroBitMemoryMap</span></a> </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N17MicroBitMemoryMap10pushRegionE6Region">
+<span id="_CPPv3N17MicroBitMemoryMap10pushRegionE6Region"></span><span id="_CPPv2N17MicroBitMemoryMap10pushRegionE6Region"></span><span id="MicroBitMemoryMap::pushRegion__Region"></span><span class="target" id="classMicroBitMemoryMap_1a0f1a1ef192a2f2a4cd5354036d630933"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pushRegion</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structMicroBitMemoryMap_1_1Region.html#_CPPv4N17MicroBitMemoryMap6RegionE" title="MicroBitMemoryMap::Region"><span class="n"><span class="pre">Region</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">region</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17MicroBitMemoryMap10pushRegionE6Region" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Function for adding a Region to the end of the MemoryMap</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>region</strong> – The Region to add to the MemoryMap</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>MICROBIT_OK on success </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N17MicroBitMemoryMap12updateRegionE6Region">
+<span id="_CPPv3N17MicroBitMemoryMap12updateRegionE6Region"></span><span id="_CPPv2N17MicroBitMemoryMap12updateRegionE6Region"></span><span id="MicroBitMemoryMap::updateRegion__Region"></span><span class="target" id="classMicroBitMemoryMap_1ac16c4f6ae0c8a8a69df524cddaee2b98"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateRegion</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structMicroBitMemoryMap_1_1Region.html#_CPPv4N17MicroBitMemoryMap6RegionE" title="MicroBitMemoryMap::Region"><span class="n"><span class="pre">Region</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">region</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17MicroBitMemoryMap12updateRegionE6Region" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Function for updating a Region of the MemoryMap</p>
+<p>
+Function for updating a Region of the MemoryMap</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>region</strong> – The Region to update in the MemoryMap. The name is used as the selector.</p></li>
+<li><p><strong>region</strong> – The Region to update in the MemoryMap. The name is used as the selector.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>MICROBIT_OK success, MICROBIT_NO_DATA if the region is not found</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>MICROBIT_OK success, MICROBIT_NO_RESOURCES if the region is not found </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N17MicroBitMemoryMap10findHashesEv">
+<span id="_CPPv3N17MicroBitMemoryMap10findHashesEv"></span><span id="_CPPv2N17MicroBitMemoryMap10findHashesEv"></span><span id="MicroBitMemoryMap::findHashes"></span><span class="target" id="classMicroBitMemoryMap_1a02eff13f0912da89167b0d068bf01e23"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">findHashes</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17MicroBitMemoryMap10findHashesEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Function to fetch hashes from PXT/uPy Build </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N17MicroBitMemoryMap13processRecordEP8uint32_t">
+<span id="_CPPv3N17MicroBitMemoryMap13processRecordEP8uint32_t"></span><span id="_CPPv2N17MicroBitMemoryMap13processRecordEP8uint32_t"></span><span id="MicroBitMemoryMap::processRecord__uint32_tP"></span><span class="target" id="classMicroBitMemoryMap_1a2b30d9fb72f37bc6ddcd02c1c90f9bae"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">processRecord</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">address</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17MicroBitMemoryMap13processRecordEP8uint32_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Function to process records from uPy Build</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>MICROBIT_OK success, MICROBIT_INVALID_PARAM if the region.id is too great </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17MicroBitMemoryMap14memoryMapStoreE">
+<span id="_CPPv3N17MicroBitMemoryMap14memoryMapStoreE"></span><span id="_CPPv2N17MicroBitMemoryMap14memoryMapStoreE"></span><span id="MicroBitMemoryMap::memoryMapStore__MemoryMapStore"></span><span class="target" id="classMicroBitMemoryMap_1ae5fccdff611c0714e611d4a3ec0debf8"></span><a class="reference internal" href="structMicroBitMemoryMap_1_1MemoryMapStore.html#_CPPv4N17MicroBitMemoryMap14MemoryMapStoreE" title="MicroBitMemoryMap::MemoryMapStore"><span class="n"><span class="pre">MemoryMapStore</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">memoryMapStore</span></span></span><a class="headerlink" href="#_CPPv4N17MicroBitMemoryMap14memoryMapStoreE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

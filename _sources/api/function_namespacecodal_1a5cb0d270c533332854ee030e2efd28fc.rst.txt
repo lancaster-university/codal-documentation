@@ -1,0 +1,14 @@
+.. _exhale_function_namespacecodal_1a5cb0d270c533332854ee030e2efd28fc:
+
+Function codal::system_timer_wait_ms
+====================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Timer.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: codal::system_timer_wait_ms(uint32_t)
+   :project: CODAL

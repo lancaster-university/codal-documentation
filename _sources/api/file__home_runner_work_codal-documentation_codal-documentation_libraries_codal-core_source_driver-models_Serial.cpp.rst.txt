@@ -1,0 +1,41 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Serial.cpp:
+
+File Serial.cpp
+===============
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/source/driver-models``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/source/driver-models/Serial.cpp``)
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Serial.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``CodalDmesg.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalDmesg.h`)
+
+- ``NotifyEvents.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_NotifyEvents.h`)
+
+- ``Serial.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_DMASingleWireSerial.h`)
+
+
+
+
+

@@ -1,0 +1,14 @@
+.. _exhale_function_namespacecodal_1a41a479204fe84822f46832e73f9d1fad:
+
+Function codal::ble_running
+===========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitDevice.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: codal::ble_running()
+   :project: CODAL

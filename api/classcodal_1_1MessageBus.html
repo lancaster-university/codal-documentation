@@ -1,0 +1,472 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Class MessageBus &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL for the Micro:bit v2
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/the-basics.html">
+     The Basics - CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inheritance-relationships">
+   Inheritance Relationships
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#base-types">
+     Base Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Class MessageBus</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inheritance-relationships">
+   Inheritance Relationships
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#base-types">
+     Base Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="class-messagebus">
+<span id="exhale-class-classcodal-1-1messagebus"></span><h1>Class MessageBus<a class="headerlink" href="#class-messagebus" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MessageBus.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-drivers-messagebus-h"><span class="std std-ref">File MessageBus.h</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">#</a></h2>
+<section id="base-types">
+<h3>Base Types<a class="headerlink" href="#base-types" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::EventModel</span></code> (<a class="reference internal" href="classcodal_1_1EventModel.html#exhale-class-classcodal-1-1eventmodel"><span class="std std-ref">Class EventModel</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::CodalComponent</span></code> (<a class="reference internal" href="classcodal_1_1CodalComponent.html#exhale-class-classcodal-1-1codalcomponent"><span class="std std-ref">Class CodalComponent</span></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">#</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10MessageBusE">
+<span id="_CPPv3N5codal10MessageBusE"></span><span id="_CPPv2N5codal10MessageBusE"></span><span id="codal::MessageBus"></span><span class="target" id="classcodal_1_1MessageBus"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MessageBus</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classcodal_1_1EventModel.html#_CPPv4N5codal10EventModelE" title="codal::EventModel"><span class="n"><span class="pre">EventModel</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classcodal_1_1CodalComponent.html#_CPPv4N5codal14CodalComponentE" title="codal::CodalComponent"><span class="n"><span class="pre">CodalComponent</span></span></a><a class="headerlink" href="#_CPPv4N5codal10MessageBusE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Class definition for the <a class="reference internal" href="#classcodal_1_1MessageBus"><span class="std std-ref">MessageBus</span></a>.</p>
+<p>The <a class="reference internal" href="#classcodal_1_1MessageBus"><span class="std std-ref">MessageBus</span></a> is the common mechanism to deliver asynchronous events on the Device platform. It serves a number of purposes:</p>
+<p>1) It provides an eventing abstraction that is independent of the underlying substrate.</p>
+<p>2) It provides a mechanism to decouple user code from trusted system code i.e. the basis of a message passing nano kernel.</p>
+<p>3) It allows a common high level eventing abstraction across a range of hardware types.e.g. buttons, BLE…</p>
+<p>4) It provides a mechanim for extensibility - new devices added via I/O pins can have OO based drivers and communicate via the message bus with minima impact on user level languages.</p>
+<p>5) It allows for the possiblility of event / data aggregation, which in turn can save energy.</p>
+<p>It has the following design principles:</p>
+<p>1) Maintain a low RAM footprint where possible</p>
+<p>2) Make few assumptions about the underlying platform, but allow optimizations where possible. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10MessageBus10MessageBusEv">
+<span id="_CPPv3N5codal10MessageBus10MessageBusEv"></span><span id="_CPPv2N5codal10MessageBus10MessageBusEv"></span><span id="codal::MessageBus::MessageBus"></span><span class="target" id="classcodal_1_1MessageBus_1a216884392b3c1e14100c457029c49e9b"></span><span class="sig-name descname"><span class="n"><span class="pre">MessageBus</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10MessageBus10MessageBusEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Default constructor.</p>
+<p>Adds itself as a fiber component, and also configures itself to be the default <a class="reference internal" href="classcodal_1_1EventModel.html#classcodal_1_1EventModel"><span class="std std-ref">EventModel</span></a> if defaultEventBus is NULL. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10MessageBus4sendE5Event">
+<span id="_CPPv3N5codal10MessageBus4sendE5Event"></span><span id="_CPPv2N5codal10MessageBus4sendE5Event"></span><span id="codal::MessageBus::send__Event"></span><span class="target" id="classcodal_1_1MessageBus_1a4221ad0897ad952a473b119f075eff80"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">send</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">evt</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10MessageBus4sendE5Event" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Queues the given event to be sent to all registered recipients.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MessageBus</span><span class="w"> </span><span class="n">bus</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Creates and sends the Event using bus.</span>
+<span class="n">Event</span><span class="w"> </span><span class="nf">evt</span><span class="p">(</span><span class="n">DEVICE_ID_BUTTON_A</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_BUTTON_EVT_CLICK</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Creates the Event, but delays the sending of that event.</span>
+<span class="n">Event</span><span class="w"> </span><span class="nf">evt1</span><span class="p">(</span><span class="n">DEVICE_ID_BUTTON_A</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_BUTTON_EVT_CLICK</span><span class="p">,</span><span class="w"> </span><span class="n">CREATE_ONLY</span><span class="p">);</span><span class="w"></span>
+
+<span class="n">bus</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="n">evt1</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// This has the same effect!</span>
+<span class="n">evt1</span><span class="p">.</span><span class="n">fire</span><span class="p">()</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>evt</strong> – The event to send.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10MessageBus7processER5Eventb">
+<span id="_CPPv3N5codal10MessageBus7processER5Eventb"></span><span id="_CPPv2N5codal10MessageBus7processER5Eventb"></span><span id="codal::MessageBus::process__EventR.b"></span><span class="target" id="classcodal_1_1MessageBus_1abbd05e2d8ce105d548a6979e82001b5f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">process</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">evt</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">urgent</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10MessageBus7processER5Eventb" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Internal function, used to deliver the given event to all relevant recipients. Normally, this is called once an event has been removed from the event queue.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is recommended that all external code uses the <a class="reference internal" href="#classcodal_1_1MessageBus_1a4221ad0897ad952a473b119f075eff80"><span class="std std-ref">send()</span></a> function instead of this function, or the constructors provided by <a class="reference internal" href="classcodal_1_1Event.html#classcodal_1_1Event"><span class="std std-ref">Event</span></a>. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>evt</strong> – The event to send.</p></li>
+<li><p><strong>urgent</strong> – The type of listeners to process (optional). If set to true, only listeners defined as urgent and non-blocking will be processed otherwise, all other (standard) listeners will be processed. Defaults to false.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>1 if all matching listeners were processed, 0 if further processing is required.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10MessageBus9elementAtEi">
+<span id="_CPPv3N5codal10MessageBus9elementAtEi"></span><span id="_CPPv2N5codal10MessageBus9elementAtEi"></span><span id="codal::MessageBus::elementAt__i"></span><span class="target" id="classcodal_1_1MessageBus_1a498a295d7d6518d8fdada1c9ffd3faa5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="structcodal_1_1Listener.html#_CPPv4N5codal8ListenerE" title="codal::Listener"><span class="n"><span class="pre">Listener</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">elementAt</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10MessageBus9elementAtEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns the <a class="reference internal" href="structcodal_1_1Listener.html#structcodal_1_1Listener"><span class="std std-ref">Listener</span></a> with the given position in our list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>n</strong> – The position in the list to return.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the <a class="reference internal" href="structcodal_1_1Listener.html#structcodal_1_1Listener"><span class="std std-ref">Listener</span></a> at postion n in the list, or NULL if the position is invalid. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10MessageBusD0Ev">
+<span id="_CPPv3N5codal10MessageBusD0Ev"></span><span id="_CPPv2N5codal10MessageBusD0Ev"></span><span id="codal::MessageBus::~MessageBus"></span><span class="target" id="classcodal_1_1MessageBus_1abb1ea2ac43c53ce88fd6d7de3274ea94"></span><span class="sig-name descname"><span class="n"><span class="pre">~MessageBus</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10MessageBusD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Destructor for <a class="reference internal" href="#classcodal_1_1MessageBus"><span class="std std-ref">MessageBus</span></a>, where we deregister this instance from the array of fiber components. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10MessageBus3addEP8Listener">
+<span id="_CPPv3N5codal10MessageBus3addEP8Listener"></span><span id="_CPPv2N5codal10MessageBus3addEP8Listener"></span><span id="codal::MessageBus::add__ListenerP"></span><span class="target" id="classcodal_1_1MessageBus_1ac96c7d5905fffdad85c73572c6784c5d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">add</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structcodal_1_1Listener.html#_CPPv4N5codal8ListenerE" title="codal::Listener"><span class="n"><span class="pre">Listener</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">newListener</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10MessageBus3addEP8Listener" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Add the given <a class="reference internal" href="structcodal_1_1Listener.html#structcodal_1_1Listener"><span class="std std-ref">Listener</span></a> to the list of event handlers, unconditionally.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>listener</strong> – The <a class="reference internal" href="structcodal_1_1Listener.html#structcodal_1_1Listener"><span class="std std-ref">Listener</span></a> to add.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK if the listener is valid, DEVICE_INVALID_PARAMETER otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10MessageBus6removeEP8Listener">
+<span id="_CPPv3N5codal10MessageBus6removeEP8Listener"></span><span id="_CPPv2N5codal10MessageBus6removeEP8Listener"></span><span id="codal::MessageBus::remove__ListenerP"></span><span class="target" id="classcodal_1_1MessageBus_1a5dbb00beeb9f98ed53178b3c07de9f4b"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">remove</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structcodal_1_1Listener.html#_CPPv4N5codal8ListenerE" title="codal::Listener"><span class="n"><span class="pre">Listener</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">newListener</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10MessageBus6removeEP8Listener" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Remove the given <a class="reference internal" href="structcodal_1_1Listener.html#structcodal_1_1Listener"><span class="std std-ref">Listener</span></a> from the list of event handlers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>listener</strong> – The <a class="reference internal" href="structcodal_1_1Listener.html#structcodal_1_1Listener"><span class="std std-ref">Listener</span></a> to remove.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK if the listener is valid, DEVICE_INVALID_PARAMETER otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

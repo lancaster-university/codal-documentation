@@ -1,0 +1,605 @@
+
+.. _namespace_codal:
+
+Namespace codal
+===============
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+
+
+
+Detailed Description
+--------------------
+
+Class definition for a :ref:`exhale_class_classcodal_1_1MbedMemberFunctionCallback`.
+
+C++ member functions (also known as methods) have a more complex representation than normal C functions. This class allows a reference to a C++ member function to be stored then called at a later date.
+
+This class is used extensively by the DeviceMessageBus to deliver events to C++ methods.
+
+Class definition for a SoundPin.
+
+Provides an abstraction between an analog output pin and an input to the audio mixer pipeline.
+
+Class definition for :ref:`exhale_class_classcodal_1_1CodalComponent`.
+
+All components should inherit from this class.
+
+If a component requires regular updates, then that component can be added to the to the periodicCallback and/or idleCallback queues. This provides a simple, extensible mechanism for code that requires periodic/occasional background processing but does not warrant the complexity of maintaining its own thread.
+
+Two levels of support are available.
+
+periodicCallback() provides a periodic callback during the codal device's system timer interrupt. This provides a guaranteed periodic callback, but in interrupt context and is suitable for code with lightweight processing requirements, but strict time constraints.
+
+idleCallback() provides a periodic callback whenever the scheduler is idle. This provides occasional, callbacks in the main thread context, but with no guarantees of frequency. This is suitable for non-urgent background tasks.
+
+Components wishing to use these facilities should override the periodicCallback and/or idleCallback functions defined here, and register their components using system_timer_add_component() fiber_add_idle_component() respectively.
+
+Class definition for :ref:`exhale_class_classcodal_1_1CodalDevice`.
+
+All devices should inherit from this class, and override any of the methods below to provide define core functionality needed by codal.
+
+This structure defines a :ref:`exhale_struct_structcodal_1_1Listener` used to invoke functions, or member functions if an instance of :ref:`exhale_class_classcodal_1_1EventModel` receives an event whose id and value match this :ref:`exhale_struct_structcodal_1_1Listener`'s id and value.
+
+Class definition for the codal device :ref:`exhale_class_classcodal_1_1EventModel`.
+
+It is common to need to send events from one part of a program (or system) to another. The way that these events are stored and delivered is known as an :ref:`exhale_class_classcodal_1_1Event` Model...
+
+The codal device can be programmed in a number of languages, and it not be good to constrain those languages to any particular event model (e.g. they may have their own already).
+
+This class defines the functionality an event model needs to have to be able to interact with events generated and/or used by the codal device runtime. Programmer may choose to implement such functionality to integrate their own event models.
+
+This is an example of a key principle in computing - ABSTRACTION. This is now part of the UK's Computing curriculum in schools... so ask your teacher about it. :-)
+
+An :ref:`exhale_class_classcodal_1_1EventModel` implementation is provided in the DeviceMessageBus class.
+
+Class definition for a :ref:`exhale_class_classcodal_1_1MemberFunctionCallback`.
+
+C++ member functions (also known as methods) have a more complex representation than normal C functions. This class allows a reference to a C++ member function to be stored then called at a later date.
+
+This class is used extensively by the DeviceMessageBus to deliver events to C++ methods.
+
+Class definition for LSM303_M.
+
+This class provides the low level driver implementation for the LSM303_M Magnetometer
+
+Class definition for a :ref:`exhale_class_classcodal_1_1MultiButton`.
+
+Represents a virtual button, capable of reacting to simultaneous presses of two other buttons.
+
+A simple buffer class for streaming bytes from memory across the Stream APIs.
+
+Default configuration values 
+
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structcodal_1_1____attribute____`
+
+- :ref:`exhale_struct_structcodal_1_1BufferData`
+
+- :ref:`exhale_struct_structcodal_1_1CacheEntry`
+
+- :ref:`exhale_struct_structcodal_1_1CodalComponent_1_1deepSleepCallbackData`
+
+- :ref:`exhale_struct_structcodal_1_1CompassCalibration`
+
+- :ref:`exhale_struct_structcodal_1_1EventQueueItem`
+
+- :ref:`exhale_struct_structcodal_1_1Fiber`
+
+- :ref:`exhale_struct_structcodal_1_1FrameBuffer`
+
+- :ref:`exhale_struct_structcodal_1_1FXOSRawSample`
+
+- :ref:`exhale_struct_structcodal_1_1ImageData`
+
+- :ref:`exhale_struct_structcodal_1_1JournalEntry`
+
+- :ref:`exhale_struct_structcodal_1_1KeySequence`
+
+- :ref:`exhale_struct_structcodal_1_1KeyValuePair`
+
+- :ref:`exhale_struct_structcodal_1_1KeyValueStore`
+
+- :ref:`exhale_struct_structcodal_1_1KeyValueTable`
+
+- :ref:`exhale_struct_structcodal_1_1KeyValueTableEntry`
+
+- :ref:`exhale_struct_structcodal_1_1Listener`
+
+- :ref:`exhale_struct_structcodal_1_1MatrixMap`
+
+- :ref:`exhale_struct_structcodal_1_1MatrixPoint`
+
+- :ref:`exhale_struct_structcodal_1_1microbit__LEDMapStr`
+
+- :ref:`exhale_struct_structcodal_1_1MicroBitLogMetaData`
+
+- :ref:`exhale_struct_structcodal_1_1PacketData`
+
+- :ref:`exhale_struct_structcodal_1_1Progression`
+
+- :ref:`exhale_struct_structcodal_1_1RefCounted`
+
+- :ref:`exhale_struct_structcodal_1_1Sample3D`
+
+- :ref:`exhale_struct_structcodal_1_1ShakeHistory`
+
+- :ref:`exhale_struct_structcodal_1_1SoundEffect`
+
+- :ref:`exhale_struct_structcodal_1_1ST7735WorkBuffer`
+
+- :ref:`exhale_struct_structcodal_1_1StringData`
+
+- :ref:`exhale_struct_structcodal_1_1TimerEvent`
+
+- :ref:`exhale_struct_structcodal_1_1ToneEffect`
+
+- :ref:`exhale_struct_structcodal_1_1TonePrint`
+
+- :ref:`exhale_class_classcodal_1_1AbstractButton`
+
+- :ref:`exhale_class_classcodal_1_1Accelerometer`
+
+- :ref:`exhale_class_classcodal_1_1AnalogSensor`
+
+- :ref:`exhale_class_classcodal_1_1AnimatedDisplay`
+
+- :ref:`exhale_class_classcodal_1_1AsciiKeyMap`
+
+- :ref:`exhale_class_classcodal_1_1BitmapFont`
+
+- :ref:`exhale_class_classcodal_1_1Button`
+
+- :ref:`exhale_class_classcodal_1_1CodalComponent`
+
+- :ref:`exhale_class_classcodal_1_1CodalDevice`
+
+- :ref:`exhale_class_classcodal_1_1ColumnEntry`
+
+- :ref:`exhale_class_classcodal_1_1Compass`
+
+- :ref:`exhale_class_classcodal_1_1CoordinateSpace`
+
+- :ref:`exhale_class_classcodal_1_1DataSink`
+
+- :ref:`exhale_class_classcodal_1_1DataSource`
+
+- :ref:`exhale_class_classcodal_1_1DataStream`
+
+- :ref:`exhale_class_classcodal_1_1Display`
+
+- :ref:`exhale_class_classcodal_1_1DMASingleWireSerial`
+
+- :ref:`exhale_class_classcodal_1_1Event`
+
+- :ref:`exhale_class_classcodal_1_1EventModel`
+
+- :ref:`exhale_class_classcodal_1_1FiberLock`
+
+- :ref:`exhale_class_classcodal_1_1FIFOStream`
+
+- :ref:`exhale_class_classcodal_1_1FSCache`
+
+- :ref:`exhale_class_classcodal_1_1FXOS8700`
+
+- :ref:`exhale_class_classcodal_1_1Gyroscope`
+
+- :ref:`exhale_class_classcodal_1_1I2C`
+
+- :ref:`exhale_class_classcodal_1_1ILI9341`
+
+- :ref:`exhale_class_classcodal_1_1Image`
+
+- :ref:`exhale_class_classcodal_1_1KeyMap`
+
+- :ref:`exhale_class_classcodal_1_1KeyValueStorage`
+
+- :ref:`exhale_class_classcodal_1_1LEDMatrix`
+
+- :ref:`exhale_class_classcodal_1_1LevelDetector`
+
+- :ref:`exhale_class_classcodal_1_1LevelDetectorSPL`
+
+- :ref:`exhale_class_classcodal_1_1LinearAnalogSensor`
+
+- :ref:`exhale_class_classcodal_1_1LIS3DH`
+
+- :ref:`exhale_class_classcodal_1_1LowLevelTimer`
+
+- :ref:`exhale_class_classcodal_1_1LSM303Accelerometer`
+
+- :ref:`exhale_class_classcodal_1_1LSM303Magnetometer`
+
+- :ref:`exhale_class_classcodal_1_1MAG3110`
+
+- :ref:`exhale_class_classcodal_1_1ManagedBuffer`
+
+- :ref:`exhale_class_classcodal_1_1ManagedString`
+
+- :ref:`exhale_class_classcodal_1_1MbedMemberFunctionCallback`
+
+- :ref:`exhale_class_classcodal_1_1MemberFunctionCallback`
+
+- :ref:`exhale_class_classcodal_1_1MemorySource`
+
+- :ref:`exhale_class_classcodal_1_1MessageBus`
+
+- :ref:`exhale_class_classcodal_1_1MicroBitAudio`
+
+- :ref:`exhale_class_classcodal_1_1MicroBitButton`
+
+- :ref:`exhale_class_classcodal_1_1MicroBitCompassCalibrator`
+
+- :ref:`exhale_class_classcodal_1_1MicroBitDevice`
+
+- :ref:`exhale_class_classcodal_1_1MicroBitDisplay`
+
+- :ref:`exhale_class_classcodal_1_1MicroBitI2C`
+
+- :ref:`exhale_class_classcodal_1_1MicroBitLog`
+
+- :ref:`exhale_class_classcodal_1_1MicroBitRadio`
+
+- :ref:`exhale_class_classcodal_1_1MicroBitRadioDatagram`
+
+- :ref:`exhale_class_classcodal_1_1MicroBitRadioEvent`
+
+- :ref:`exhale_class_classcodal_1_1MicroBitSerial`
+
+- :ref:`exhale_class_classcodal_1_1MicroBitThermometer`
+
+- :ref:`exhale_class_classcodal_1_1Mixer`
+
+- :ref:`exhale_class_classcodal_1_1Mixer2`
+
+- :ref:`exhale_class_classcodal_1_1MixerChannel`
+
+- :ref:`exhale_class_classcodal_1_1MMA8453`
+
+- :ref:`exhale_class_classcodal_1_1MMA8653`
+
+- :ref:`exhale_class_classcodal_1_1MPU6050`
+
+- :ref:`exhale_class_classcodal_1_1MultiButton`
+
+- :ref:`exhale_class_classcodal_1_1MusicalIntervals`
+
+- :ref:`exhale_class_classcodal_1_1MusicalProgressions`
+
+- :ref:`exhale_class_classcodal_1_1NonLinearAnalogSensor`
+
+- :ref:`exhale_class_classcodal_1_1NRF52FlashManager`
+
+- :ref:`exhale_class_classcodal_1_1NRF52LEDMatrix`
+
+- :ref:`exhale_class_classcodal_1_1NVMController`
+
+- :ref:`exhale_class_classcodal_1_1PacketBuffer`
+
+- :ref:`exhale_class_classcodal_1_1PearsonHash`
+
+- :ref:`exhale_class_classcodal_1_1Pin`
+
+- :ref:`exhale_class_classcodal_1_1PulseIn`
+
+- :ref:`exhale_class_classcodal_1_1Radio`
+
+- :ref:`exhale_class_classcodal_1_1ScreenIO`
+
+- :ref:`exhale_class_classcodal_1_1Sensor`
+
+- :ref:`exhale_class_classcodal_1_1Serial`
+
+- :ref:`exhale_class_classcodal_1_1SingleWireSerial`
+
+- :ref:`exhale_class_classcodal_1_1SoundEmojiSynthesizer`
+
+- :ref:`exhale_class_classcodal_1_1SoundExpressions`
+
+- :ref:`exhale_class_classcodal_1_1SoundOutputPin`
+
+- :ref:`exhale_class_classcodal_1_1SoundSynthesizerEffects`
+
+- :ref:`exhale_class_classcodal_1_1SPI`
+
+- :ref:`exhale_class_classcodal_1_1SPIFlash`
+
+- :ref:`exhale_class_classcodal_1_1SPIScreenIO`
+
+- :ref:`exhale_class_classcodal_1_1ST7735`
+
+- :ref:`exhale_class_classcodal_1_1StandardSPIFlash`
+
+- :ref:`exhale_class_classcodal_1_1StreamFilter`
+
+- :ref:`exhale_class_classcodal_1_1StreamFlowTrigger`
+
+- :ref:`exhale_class_classcodal_1_1StreamNormalizer`
+
+- :ref:`exhale_class_classcodal_1_1StreamRecording`
+
+- :ref:`exhale_class_classcodal_1_1StreamSplitter`
+
+- :ref:`exhale_class_classcodal_1_1Synthesizer`
+
+- :ref:`exhale_class_classcodal_1_1Timer`
+
+- :ref:`exhale_class_classcodal_1_1TouchButton`
+
+- :ref:`exhale_class_classcodal_1_1TouchSensor`
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_namespacecodal_1ab23a2a4983ebcd94bf459968184a3fa4`
+
+- :ref:`exhale_enum_namespacecodal_1a4c6ab785a47779b9d58a07b6b653012c`
+
+- :ref:`exhale_enum_namespacecodal_1a23d0a998bb434e4720c04f2fc411ccb1`
+
+- :ref:`exhale_enum_namespacecodal_1ab60ee69ed382592e3346140d07480ac6`
+
+- :ref:`exhale_enum_namespacecodal_1aad67e961be14bb8567846d2abb24e67f`
+
+- :ref:`exhale_enum_namespacecodal_1a866bcc6be70641f502a56364295fe0a9`
+
+- :ref:`exhale_enum_namespacecodal_1a3fb7609391e97d57988252a4e94a341e`
+
+- :ref:`exhale_enum_namespacecodal_1ab431dafc212f4c70e2c242d4678e94b6`
+
+- :ref:`exhale_enum_namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4`
+
+- :ref:`exhale_enum_namespacecodal_1a88ae322e740d0baf7766aebaa9f1396e`
+
+- :ref:`exhale_enum_namespacecodal_1a2e3f8f3b3d544a72b39f6c18707e6525`
+
+- :ref:`exhale_enum_namespacecodal_1a3a98de58fe083a95585a24ac94dd2246`
+
+- :ref:`exhale_enum_namespacecodal_1a5df2bd7d867b5b1f78974158a34aad7b`
+
+- :ref:`exhale_enum_namespacecodal_1a36368bb452f86665796b9a358d4c9b1d`
+
+- :ref:`exhale_enum_namespacecodal_1ade186187b09165f7de8bb2ee5cc0cc56`
+
+- :ref:`exhale_enum_namespacecodal_1a52525cab6f4fe330a94fd5f9d4769449`
+
+- :ref:`exhale_enum_namespacecodal_1a7bd3648c40110abf0188014d5472b386`
+
+- :ref:`exhale_enum_namespacecodal_1a56d64e68fe03b41e0fad7a0eee1fb9f7`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespacecodal_1a2b8e9bf5fdd11d4746ac1d375171119f`
+
+- :ref:`exhale_function_namespacecodal_1a41a479204fe84822f46832e73f9d1fad`
+
+- :ref:`exhale_function_namespacecodal_1aa08182a8151fbabc3a8b6297c059692b`
+
+- :ref:`exhale_function_namespacecodal_1a24cc7686409216907b58508680f07006`
+
+- :ref:`exhale_function_namespacecodal_1a2c9faa46e5af38b729f087388dbdce3f`
+
+- :ref:`exhale_function_namespacecodal_1a31eda7875f5a8038999556662e7821a5`
+
+- :ref:`exhale_function_namespacecodal_1a3f314eb211d045b62fcca8829165362c`
+
+- :ref:`exhale_function_namespacecodal_1a356720646ed8ec0b5d1392503120dcfd`
+
+- :ref:`exhale_function_namespacecodal_1a2c2f8c0437504989b14ab55fc57c6171`
+
+- :ref:`exhale_function_namespacecodal_1a4c0f8ade68592c64d500ee576f7c9a76`
+
+- :ref:`exhale_function_namespacecodal_1a5bc6ae64f3b21bc1deb9cc73479022dc`
+
+- :ref:`exhale_function_namespacecodal_1a0e114ae9b9f557fab7b484053a115298`
+
+- :ref:`exhale_function_namespacecodal_1a3f1c28d0f2748b1558dc1b3707860285`
+
+- :ref:`exhale_function_namespacecodal_1a937c993e85a6bac188faae77b35408f0`
+
+- :ref:`exhale_function_namespacecodal_1a52fc469a622b9f82932b4c78572bcf73`
+
+- :ref:`exhale_function_namespacecodal_1a81fa876da802ea3dfc88a9ea5efc2ba0`
+
+- :ref:`exhale_function_namespacecodal_1a6800ad025f4818be6f408e050289c7a7`
+
+- :ref:`exhale_function_namespacecodal_1a79db4118feb74e91b5862de34d5ead6f`
+
+- :ref:`exhale_function_namespacecodal_1a31adb977c83c6df204078958fc653303`
+
+- :ref:`exhale_function_namespacecodal_1a37767880675d21087ed1d53046c210a5`
+
+- :ref:`exhale_function_namespacecodal_1a7e28d4c1ceed076f8bb798f1b6ddf072`
+
+- :ref:`exhale_function_namespacecodal_1adf9013aa51d33d15531095cf8217795e`
+
+- :ref:`exhale_function_namespacecodal_1af6368b5ed7feddd59281231c43f1bf49`
+
+- :ref:`exhale_function_namespacecodal_1a15ac28de687caaae15093f8cb4401afb`
+
+- :ref:`exhale_function_namespacecodal_1a97447ee924e17f6691add95b43bcd93d`
+
+- :ref:`exhale_function_namespacecodal_1a37b5f22b5018609dd5ddf9cfa945ce92`
+
+- :ref:`exhale_function_namespacecodal_1a16635de84ac62b3f85dc6f7332583763`
+
+- :ref:`exhale_function_namespacecodal_1ab4b4a1b525085be79ed6b568a6bafb58`
+
+- :ref:`exhale_function_namespacecodal_1a87f56b4e1e7dcfb873ad7bd4af38caa7`
+
+- :ref:`exhale_function_namespacecodal_1ab604606508a63fa13c70922558ad6abd`
+
+- :ref:`exhale_function_namespacecodal_1aa6ccb05d4b191c32e60dd0b5b81eb650`
+
+- :ref:`exhale_function_namespacecodal_1aa10cead111d291e5967557df09dca606`
+
+- :ref:`exhale_function_namespacecodal_1a2079d63af3cbe958d7e84fb8b9acafb5`
+
+- :ref:`exhale_function_namespacecodal_1a0bcdfb56a7b8143916d8963a585a60e7`
+
+- :ref:`exhale_function_namespacecodal_1a27a5bc08ff7ce978b774057e83e7e550`
+
+- :ref:`exhale_function_namespacecodal_1a3604567bcf6823dab02d339171e20559`
+
+- :ref:`exhale_function_namespacecodal_1a354d973c675a747d46b1e2f1e1bba469`
+
+- :ref:`exhale_function_namespacecodal_1af43b7490559c2c52205093c2576372ab`
+
+- :ref:`exhale_function_namespacecodal_1a9aefebeee6bf073575b379d19d00a3f4`
+
+- :ref:`exhale_function_namespacecodal_1aad929ae0913afefb621d909eaf94aece`
+
+- :ref:`exhale_function_namespacecodal_1a385a8d97cae0761d23c53d8b18e98751`
+
+- :ref:`exhale_function_namespacecodal_1af7d82336f01f39fb77f3c1ac581b4b3c`
+
+- :ref:`exhale_function_namespacecodal_1abfe912cf436c0ae36e5ba328af78cc33`
+
+- :ref:`exhale_function_namespacecodal_1a5750ff11e8d04023b682a014d99b901b`
+
+- :ref:`exhale_function_namespacecodal_1a83e7fe17375b41f3c7bded287324053f`
+
+- :ref:`exhale_function_namespacecodal_1a10f9b51de208b4de63fa18737afe219b`
+
+- :ref:`exhale_function_namespacecodal_1a6d670f8f5745f2dc4ddaf45d28c1594c`
+
+- :ref:`exhale_function_namespacecodal_1ace587d81c305660e933609f7d658e58b`
+
+- :ref:`exhale_function_namespacecodal_1a3a392541e538f0e1a5278c41cffccbac`
+
+- :ref:`exhale_function_namespacecodal_1add318b2ed604d6627fec8803f9ca147a`
+
+- :ref:`exhale_function_namespacecodal_1a0f2267d069f5fe51ac291450908f0a12`
+
+- :ref:`exhale_function_namespacecodal_1a0757572bc980fb6f43f137fbc68f514f`
+
+- :ref:`exhale_function_namespacecodal_1af6287c02d3b564a856fc9795433be3bf`
+
+- :ref:`exhale_function_namespacecodal_1abf3ec632cc4c666d1f94ac6d7cd1ac33`
+
+- :ref:`exhale_function_namespacecodal_1ad670baa5eaf28cf83d4634a42f3e8b2e`
+
+- :ref:`exhale_function_namespacecodal_1aa75ccd0b389dd1728894dc950e43693c`
+
+- :ref:`exhale_function_namespacecodal_1a8805c83ad5c219e824f1c8cc831d0bbe`
+
+- :ref:`exhale_function_namespacecodal_1a215dbd85c2353f3195034b2e18298a12`
+
+- :ref:`exhale_function_namespacecodal_1ac8c68a8dfac1d80d3e1396a1684096a4`
+
+- :ref:`exhale_function_namespacecodal_1a283b1acc09d84dd3cdd65da64958b53e`
+
+- :ref:`exhale_function_namespacecodal_1a77ccb660b955d82e8ae448baa5de79e5`
+
+- :ref:`exhale_function_namespacecodal_1a8aa3bf65c48895c41d740f859f26c551`
+
+- :ref:`exhale_function_namespacecodal_1adc93f1c602d188647b9d1f82d4736fcd`
+
+- :ref:`exhale_function_namespacecodal_1a5b7eb8b8c6bd50d6625c209ce2c3eb8f`
+
+- :ref:`exhale_function_namespacecodal_1a4471bff0f6d2cc966838241e17c5494a`
+
+- :ref:`exhale_function_namespacecodal_1aae7936b004fca58e2d19c8e0e2eb0796`
+
+- :ref:`exhale_function_namespacecodal_1acd36098ffffc1acea0c8786d8eb3932f`
+
+- :ref:`exhale_function_namespacecodal_1a6134d71b88b2bd441edfadf7cf51feb4`
+
+- :ref:`exhale_function_namespacecodal_1ab3dea2a097889c1e75ba49e98ab20cdd`
+
+- :ref:`exhale_function_namespacecodal_1ad297c0ba6f9b80534a29cf24575146eb`
+
+- :ref:`exhale_function_namespacecodal_1a5cb0d270c533332854ee030e2efd28fc`
+
+- :ref:`exhale_function_namespacecodal_1a5a6563076bc3f635e49e2a4b34e30dc6`
+
+- :ref:`exhale_function_namespacecodal_1a2c2dc4be93b8c3ad430c735925453e0b`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_namespacecodal_1a3731f47723ab9c6b2e265bc589fbf5e9`
+
+- :ref:`exhale_typedef_namespacecodal_1a8449cf8d6a048d04f55c5ff21f33cd5b`
+
+- :ref:`exhale_typedef_namespacecodal_1a3a89a267df18144b75ca7ba619ba5112`
+
+- :ref:`exhale_typedef_namespacecodal_1af89f6dece8b88bd9b5cfa895c3c02a1b`
+
+- :ref:`exhale_typedef_namespacecodal_1ac1596127a05e8b32df499e87d86b6436`
+
+- :ref:`exhale_typedef_namespacecodal_1a5d6d303686f66955c4aa4de95512279c`
+
+- :ref:`exhale_typedef_namespacecodal_1aa2cc026008219e630407221295a96eb9`
+
+- :ref:`exhale_typedef_namespacecodal_1ac0e3fa115a3f7808f697b2ff1271a6fb`
+
+- :ref:`exhale_typedef_namespacecodal_1a9d6e486ae9e8496bb7fa49b11e80666c`
+
+- :ref:`exhale_typedef_namespacecodal_1a15a839e8b82d6b5b403dc5a38f2c6615`
+
+
+Unions
+------
+
+
+- :ref:`exhale_union_unioncodal_1_1Key`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_namespacecodal_1ac832ec50590272e1274ffe935b8e2088`
+
+- :ref:`exhale_variable_namespacecodal_1a875529fe3c5e7bbdd548733a4e5e1de9`
+
+- :ref:`exhale_variable_namespacecodal_1aafb289e9e5ab78b01c7f5e7bb467bb88`
+
+- :ref:`exhale_variable_namespacecodal_1ab33e92569d99baa36adfbaa1c9a83ae3`
+
+- :ref:`exhale_variable_namespacecodal_1a8ccfb37c12a9651b85c545a31c630913`
+
+- :ref:`exhale_variable_namespacecodal_1a6a03c0975b4fb247c9dd3b4a2b222c4f`
+
+- :ref:`exhale_variable_namespacecodal_1a8548039b21f185e3e3bbe4e4a365a26e`
+
+- :ref:`exhale_variable_namespacecodal_1ad6f9a39ab738ae2bb17e15410fd343d9`
+
+- :ref:`exhale_variable_namespacecodal_1ad3b4768ec67808bc2ba52b4582473720`
+
+- :ref:`exhale_variable_namespacecodal_1ad8b3b7b2a628f99bde2d771ceb5d2d13`
+
+- :ref:`exhale_variable_namespacecodal_1a3e733810377dde17a57ef676f2a01c6e`
+
+- :ref:`exhale_variable_namespacecodal_1a6bc4f8afa78cc2f4ced08845e37ce237`
+
+- :ref:`exhale_variable_namespacecodal_1a5b247a1b9c09c76d22f0e1466c82b76c`
+
+- :ref:`exhale_variable_namespacecodal_1a9faece0521707b322bd008870f91b8da`
+
+- :ref:`exhale_variable_namespacecodal_1a321f36a72129609bbefc8ef11f5f0594`
+
+- :ref:`exhale_variable_namespacecodal_1a79d205f4fdf41a28905f91cbe67e302c`
+
+- :ref:`exhale_variable_namespacecodal_1a31dd81fe866b637aec4df0095428f024`
+
+- :ref:`exhale_variable_namespacecodal_1a024441a947df7cf106c747afc1c71884`

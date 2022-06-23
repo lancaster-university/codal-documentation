@@ -1,0 +1,445 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Program Listing for File ILI9341.cpp &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL for the Micro:bit v2
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/the-basics.html">
+     The Basics - CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Program Listing for File ILI9341.cpp</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="program-listing-for-file-ili9341-cpp">
+<span id="program-listing-file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-ili9341-cpp"></span><h1>Program Listing for File ILI9341.cpp<a class="headerlink" href="#program-listing-for-file-ili9341-cpp" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_ILI9341.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-ili9341-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/source/drivers/ILI9341.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ILI9341.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CodalFiber.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CodalDmesg.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#define ILI9341_NOP 0x00</span>
+<span class="cp">#define ILI9341_SWRESET 0x01</span>
+<span class="cp">#define ILI9341_RDDID 0x04</span>
+<span class="cp">#define ILI9341_RDDST 0x09</span>
+
+<span class="cp">#define ILI9341_SLPIN 0x10</span>
+<span class="cp">#define ILI9341_SLPOUT 0x11</span>
+<span class="cp">#define ILI9341_PTLON 0x12</span>
+<span class="cp">#define ILI9341_NORON 0x13</span>
+
+<span class="cp">#define ILI9341_RDMODE 0x0A</span>
+<span class="cp">#define ILI9341_RDMADCTL 0x0B</span>
+<span class="cp">#define ILI9341_RDPIXFMT 0x0C</span>
+<span class="cp">#define ILI9341_RDIMGFMT 0x0D</span>
+<span class="cp">#define ILI9341_RDSELFDIAG 0x0F</span>
+
+<span class="cp">#define ILI9341_INVOFF 0x20</span>
+<span class="cp">#define ILI9341_INVON 0x21</span>
+<span class="cp">#define ILI9341_GAMMASET 0x26</span>
+<span class="cp">#define ILI9341_DISPOFF 0x28</span>
+<span class="cp">#define ILI9341_DISPON 0x29</span>
+
+<span class="cp">#define ILI9341_CASET 0x2A</span>
+<span class="cp">#define ILI9341_PASET 0x2B</span>
+<span class="cp">#define ILI9341_RAMWR 0x2C</span>
+<span class="cp">#define ILI9341_RAMRD 0x2E</span>
+
+<span class="cp">#define ILI9341_PTLAR 0x30</span>
+<span class="cp">#define ILI9341_MADCTL 0x36</span>
+<span class="cp">#define ILI9341_VSCRSADD 0x37</span>
+<span class="cp">#define ILI9341_PIXFMT 0x3A</span>
+
+<span class="cp">#define ILI9341_FRMCTR1 0xB1</span>
+<span class="cp">#define ILI9341_FRMCTR2 0xB2</span>
+<span class="cp">#define ILI9341_FRMCTR3 0xB3</span>
+<span class="cp">#define ILI9341_INVCTR 0xB4</span>
+<span class="cp">#define ILI9341_DFUNCTR 0xB6</span>
+
+<span class="cp">#define ILI9341_PWCTR1 0xC0</span>
+<span class="cp">#define ILI9341_PWCTR2 0xC1</span>
+<span class="cp">#define ILI9341_PWCTR3 0xC2</span>
+<span class="cp">#define ILI9341_PWCTR4 0xC3</span>
+<span class="cp">#define ILI9341_PWCTR5 0xC4</span>
+<span class="cp">#define ILI9341_VMCTR1 0xC5</span>
+<span class="cp">#define ILI9341_VMCTR2 0xC7</span>
+
+<span class="cp">#define ILI9341_RDID1 0xDA</span>
+<span class="cp">#define ILI9341_RDID2 0xDB</span>
+<span class="cp">#define ILI9341_RDID3 0xDC</span>
+<span class="cp">#define ILI9341_RDID4 0xDD</span>
+
+<span class="cp">#define ILI9341_GMCTRP1 0xE0</span>
+<span class="cp">#define ILI9341_GMCTRN1 0xE1</span>
+<span class="c1">//#define ILI9341_PWCTR6     0xFC</span>
+
+
+<span class="c1">// clang-format off</span>
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">initcmd</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="cp">#if 0</span><span class="c"></span>
+<span class="c">    // Parameters based on https://github.com/juj/fbcp-ili9341</span>
+<span class="c">    0x01/*Software Reset*/, 0x80, 5,</span>
+<span class="c">    0x28/*Display OFF*/, 0,</span>
+<span class="c">    // The following appear in ILI9341 Data Sheet v1.11 (2011/06/10), but not in older v1.02 (2010/12/06).</span>
+<span class="c">    0xCB/*Power Control A*/, 5, 0x39/*Reserved*/, 0x2C/*Reserved*/, 0x00/*Reserved*/, 0x34/*REG_VD=1.6V*/, 0x02/*VBC=5.6V*/,</span>
+<span class="c">    0xCF/*Power Control B*/, 3, 0x00/*Always Zero*/, 0xC1/*Power Control=0,DRV_ena=0,PCEQ=1*/, 0x30,/*DC_ena=1*/ // Not sure what the effect is, set to default as per ILI9341 Application Notes v0.6 (2011/03/11) document (which is not apparently same as default at power on).</span>
+<span class="c">    0xE8/*Driver Timing Control A*/, 3, 0x85, 0x00, 0x78, // Not sure what the effect is, set to default as per ILI9341 Application Notes v0.6 (2011/03/11) document (which is not apparently same as default at power on).</span>
+<span class="c">    0xEA/*Driver Timing Control B*/, 2, 0x00, 0x00, // Not sure what the effect is, set to default as per ILI9341 Application Notes v0.6 (2011/03/11) document (which is not apparently same as default at power on).</span>
+<span class="c">    0xED/*Power On Sequence Control*/, 4, 0x64, 0x03, 0x12, 0x81, // Not sure what the effect is, set to default as per ILI9341 Application Notes v0.6 (2011/03/11) document (which is not apparently same as default at power on).</span>
+<span class="c">    // The following appear also in old ILI9341 Data Sheet v1.02 (2010/12/06).</span>
+<span class="c">    0xC0/*Power Control 1*/, 1, 0x23,/*VRH=4.60V*/ // Set the GVDD level, which is a reference level for the VCOM level and the grayscale voltage level.</span>
+<span class="c">    0xC1/*Power Control 2*/, 1, 0x10,/*AVCC=VCIx2,VGH=VCIx7,VGL=-VCIx4*/ // Sets the factor used in the step-up circuits. To reduce power consumption, set a smaller factor.</span>
+<span class="c">    0xC5/*VCOM Control 1*/, 2, 0x3e/*VCOMH=4.250V*/, 0x28,/*VCOML=-1.500V*/ // Adjusting VCOM 1 and 2 can control display brightness</span>
+<span class="c">    0xC7/*VCOM Control 2*/, 1, 0x86,/*VCOMH=VMH-58,VCOML=VML-58*/</span>
+
+<span class="c">    0x36/*MADCTL: Memory Access Control*/  , 1, 0x48,             // Memory Access Control</span>
+
+<span class="c">    0x20/*Display Inversion OFF*/, 0,</span>
+<span class="c">    0x3A/*COLMOD: Pixel Format Set*/, 1, 0x55,/*DPI=16bits/pixel,DBI=16bits/pixel*/</span>
+
+<span class="c">    // According to spec sheet, display frame rate in 4-wire SPI &quot;internal clock mode&quot; is computed with the following formula:</span>
+<span class="c">    // frameRate = 615000 / [ (pow(2,DIVA) * (320 + VFP + VBP) * RTNA ]</span>
+<span class="c">    // where</span>
+<span class="c">    // - DIVA is clock division ratio, 0 &lt;= DIVA &lt;= 3; so pow(2,DIVA) is either 1, 2, 4 or 8.</span>
+<span class="c">    // - RTNA specifies the number of clocks assigned to each horizontal scanline, and must follow 16 &lt;= RTNA &lt;= 31.</span>
+<span class="c">    // - VFP is vertical front porch, number of idle sleep scanlines before refreshing a new frame, 2 &lt;= VFP &lt;= 127.</span>
+<span class="c">    // - VBP is vertical back porch, number of idle sleep scanlines after refreshing a new frame, 2 &lt;= VBP &lt;= 127.</span>
+
+<span class="c">    // Max refresh rate then is with DIVA=0, VFP=2, VBP=2 and RTNA=16:</span>
+<span class="c">    // maxFrameRate = 615000 / (1 * (320 + 2 + 2) * 16) = 118.63 Hz</span>
+
+<span class="c">    // To get 60fps, set DIVA=0, RTNA=31, VFP=2 and VBP=2:</span>
+<span class="c">    // minFrameRate = 615000 / (8 * (320 + 2 + 2) * 31) = 61.23 Hz</span>
+
+<span class="c">    // It seems that in internal clock mode, horizontal front and back porch settings (HFP, BFP) are ignored(?)</span>
+
+<span class="c">    0xB1/*Frame Rate Control (In Normal Mode/Full Colors)*/, 2, 0x00/*DIVA=fosc*/, 0x18,/*RTNA(Frame Rate)*/</span>
+
+<span class="c">    0xB6/*Display Function Control*/, 1, 0x08,/*PTG=Interval Scan,PT=V63/V0/VCOML/VCOMH*/ 0x82/*REV=1(Normally white),ISC(Scan Cycle)=5 frames*/, 1, 0x27,/*LCD Driver Lines=320*/</span>
+<span class="c">    0xF2/*Enable 3G*/, 1, 0x02,/*False*/ // This one is present only in ILI9341 Data Sheet v1.11 (2011/06/10)</span>
+<span class="c">    0x26/*Gamma Set*/, 1, 0x01/*Gamma curve 1 (G2.2)*/,</span>
+<span class="c">    0xE0/*Positive Gamma Correction*/, 15, 0x0F, 0x31, 0x2B, 0x0C, 0x0E, 0x08, 0x4E, 0xF1, 0x37, 0x07, 0x10, 0x03, 0x0E, 0x09, 0x00,</span>
+<span class="c">    0xE1/*Negative Gamma Correction*/, 15, 0x00, 0x0E, 0x14, 0x03, 0x11, 0x07, 0x31, 0xC1, 0x48, 0x08, 0x0F, 0x0C, 0x31, 0x36, 0x0F,</span>
+<span class="c">    0x11, 0x80, /*Sleep Out*/</span>
+<span class="c">    120,</span>
+<span class="c">    /*Display ON*/0x29, 0x80,</span>
+<span class="c">    120,</span>
+<span class="c">    0, 0,</span>
+<span class="cp">#else</span>
+
+<span class="w">  </span><span class="c1">// Parameters based on https://github.com/adafruit/Adafruit_ILI9341</span>
+<span class="w">  </span><span class="mh">0xEF</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mh">0x03</span><span class="p">,</span><span class="w"> </span><span class="mh">0x80</span><span class="p">,</span><span class="w"> </span><span class="mh">0x02</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="mh">0xCF</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0xC1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x30</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="mh">0xED</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mh">0x64</span><span class="p">,</span><span class="w"> </span><span class="mh">0x03</span><span class="p">,</span><span class="w"> </span><span class="mh">0x12</span><span class="p">,</span><span class="w"> </span><span class="mh">0x81</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="mh">0xE8</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mh">0x85</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x78</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="mh">0xCB</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mh">0x39</span><span class="p">,</span><span class="w"> </span><span class="mh">0x2C</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x34</span><span class="p">,</span><span class="w"> </span><span class="mh">0x02</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="mh">0xF7</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x20</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="mh">0xEA</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">ILI9341_PWCTR1</span><span class="w">  </span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x23</span><span class="p">,</span><span class="w">             </span><span class="c1">// Power control VRH[5:0]</span>
+<span class="w">  </span><span class="n">ILI9341_PWCTR2</span><span class="w">  </span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x10</span><span class="p">,</span><span class="w">             </span><span class="c1">// Power control SAP[2:0];BT[3:0]</span>
+<span class="w">  </span><span class="n">ILI9341_VMCTR1</span><span class="w">  </span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mh">0x3e</span><span class="p">,</span><span class="w"> </span><span class="mh">0x28</span><span class="p">,</span><span class="w">       </span><span class="c1">// VCM control</span>
+<span class="w">  </span><span class="n">ILI9341_VMCTR2</span><span class="w">  </span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x86</span><span class="p">,</span><span class="w">             </span><span class="c1">// VCM control2</span>
+<span class="w">  </span><span class="n">ILI9341_MADCTL</span><span class="w">  </span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x08</span><span class="p">,</span><span class="w">             </span><span class="c1">// Memory Access Control</span>
+<span class="w">  </span><span class="n">ILI9341_VSCRSADD</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w">             </span><span class="c1">// Vertical scroll zero</span>
+<span class="w">  </span><span class="n">ILI9341_PIXFMT</span><span class="w">  </span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x55</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">ILI9341_FRMCTR1</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x18</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">ILI9341_DFUNCTR</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mh">0x08</span><span class="p">,</span><span class="w"> </span><span class="mh">0x82</span><span class="p">,</span><span class="w"> </span><span class="mh">0x27</span><span class="p">,</span><span class="w"> </span><span class="c1">// Display Function Control</span>
+<span class="w">  </span><span class="mh">0xF2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w">                         </span><span class="c1">// 3Gamma Function Disable</span>
+<span class="w">  </span><span class="n">ILI9341_GAMMASET</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x01</span><span class="p">,</span><span class="w">             </span><span class="c1">// Gamma curve selected</span>
+<span class="w">  </span><span class="n">ILI9341_GMCTRP1</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mh">0x0F</span><span class="p">,</span><span class="w"> </span><span class="mh">0x31</span><span class="p">,</span><span class="w"> </span><span class="mh">0x2B</span><span class="p">,</span><span class="w"> </span><span class="mh">0x0C</span><span class="p">,</span><span class="w"> </span><span class="mh">0x0E</span><span class="p">,</span><span class="w"> </span><span class="mh">0x08</span><span class="p">,</span><span class="w"> </span><span class="c1">// Set Gamma</span>
+<span class="w">    </span><span class="mh">0x4E</span><span class="p">,</span><span class="w"> </span><span class="mh">0xF1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x37</span><span class="p">,</span><span class="w"> </span><span class="mh">0x07</span><span class="p">,</span><span class="w"> </span><span class="mh">0x10</span><span class="p">,</span><span class="w"> </span><span class="mh">0x03</span><span class="p">,</span><span class="w"> </span><span class="mh">0x0E</span><span class="p">,</span><span class="w"> </span><span class="mh">0x09</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">ILI9341_GMCTRN1</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x0E</span><span class="p">,</span><span class="w"> </span><span class="mh">0x14</span><span class="p">,</span><span class="w"> </span><span class="mh">0x03</span><span class="p">,</span><span class="w"> </span><span class="mh">0x11</span><span class="p">,</span><span class="w"> </span><span class="mh">0x07</span><span class="p">,</span><span class="w"> </span><span class="c1">// Set Gamma</span>
+<span class="w">    </span><span class="mh">0x31</span><span class="p">,</span><span class="w"> </span><span class="mh">0xC1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x48</span><span class="p">,</span><span class="w"> </span><span class="mh">0x08</span><span class="p">,</span><span class="w"> </span><span class="mh">0x0F</span><span class="p">,</span><span class="w"> </span><span class="mh">0x0C</span><span class="p">,</span><span class="w"> </span><span class="mh">0x31</span><span class="p">,</span><span class="w"> </span><span class="mh">0x36</span><span class="p">,</span><span class="w"> </span><span class="mh">0x0F</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">ILI9341_SLPOUT</span><span class="w">  </span><span class="p">,</span><span class="w"> </span><span class="mh">0x80</span><span class="p">,</span><span class="w">                </span><span class="c1">// Exit Sleep</span>
+<span class="w">    </span><span class="mi">120</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">ILI9341_DISPON</span><span class="w">  </span><span class="p">,</span><span class="w"> </span><span class="mh">0x80</span><span class="p">,</span><span class="w">                </span><span class="c1">// Display on</span>
+<span class="w">    </span><span class="mi">120</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w">                                </span><span class="c1">// End of list</span>
+<span class="cp">#endif</span>
+
+<span class="p">};</span><span class="w"></span>
+<span class="c1">// clang-format on</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">codal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="n">ILI9341</span><span class="o">::</span><span class="n">ILI9341</span><span class="p">(</span><span class="n">ScreenIO</span><span class="w"> </span><span class="o">&amp;</span><span class="n">io</span><span class="p">,</span><span class="w"> </span><span class="n">Pin</span><span class="w"> </span><span class="o">&amp;</span><span class="n">cs</span><span class="p">,</span><span class="w"> </span><span class="n">Pin</span><span class="w"> </span><span class="o">&amp;</span><span class="n">dc</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ST7735</span><span class="p">(</span><span class="n">io</span><span class="p">,</span><span class="w"> </span><span class="n">cs</span><span class="p">,</span><span class="w"> </span><span class="n">dc</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">double16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">ILI9341</span><span class="o">::</span><span class="n">init</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">endCS</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">setData</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">fiber_sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">sendCmdSeq</span><span class="p">(</span><span class="n">initcmd</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace codal</span>
+</pre></div>
+</div>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

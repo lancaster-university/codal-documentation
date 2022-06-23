@@ -1,0 +1,575 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Struct __attribute__ &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL for the Micro:bit v2
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/the-basics.html">
+     The Basics - CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#struct-documentation">
+   Struct Documentation
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Struct __attribute__</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#struct-documentation">
+   Struct Documentation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="struct-attribute">
+<span id="exhale-struct-struct-attribute"></span><h1>Struct __attribute__<a class="headerlink" href="#struct-attribute" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USBMassStorageClass.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-drivers-usbmassstorageclass-h"><span class="std std-ref">File USBMassStorageClass.h</span></a></p></li>
+</ul>
+<section id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">#</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp">
+<span class="target" id="struct____attribute____"></span><span class="sig-name descname"><span class="pre">__attribute__</span></span></dt>
+<dd><p>Mass Storage Class Command Block Wrapper. </p>
+<p>Mass Storage Class SCSI Inquiry Structure.</p>
+<p>Mass Storage Class SCSI Sense Structure.</p>
+<p>Mass Storage Class Command Status Wrapper.</p>
+<p>Type define for a Command Block Wrapper, used in the Mass Storage Bulk-Only Transport protocol.</p>
+<p>
+Type define for a Command Status Wrapper, used in the Mass Storage Bulk-Only Transport protocol.</p>
+<p>
+Type define for a SCSI Sense structure. Structures of this type are filled out by the device via the MS_Host_RequestSense() function, indicating the current sense data of the device (giving explicit error codes for the last issued command). For details of the structure contents, refer to the SCSI specifications.</p>
+<p>Type define for a SCSI Inquiry structure. Structures of this type are filled out by the device via the MS_Host_GetInquiryData() function, retrieving the attached device’s information.</p>
+<p>For details of the structure contents, refer to the SCSI specifications. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Regardless of CPU architecture, these values should be stored as little endian.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Regardless of CPU architecture, these values should be stored as little endian.</p>
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError9SignatureE">
+<span id="_CPPv3N19PhonyNameDueToError9SignatureE"></span><span id="_CPPv2N19PhonyNameDueToError9SignatureE"></span><span id="PhonyNameDueToError::Signature__uint32_t"></span><span class="target" id="group__Group__USBClassMSCommon_1ga6299c8e1c3fd6e3e71ab5aa5958e3f55"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Signature</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError9SignatureE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Command block signature, must be <a class="reference internal" href="define_group__Group__USBClassMSCommon_1ga7ae1b6714e8380708e0b9e5a8d59283e.html#group__Group__USBClassMSCommon_1ga7ae1b6714e8380708e0b9e5a8d59283e"><span class="std std-ref">MS_CBW_SIGNATURE</span></a> to indicate a valid Command Block.</p>
+<p>Status block signature, must be <a class="reference internal" href="define_group__Group__USBClassMSCommon_1ga0541393f005be378949825592f169ec0.html#group__Group__USBClassMSCommon_1ga0541393f005be378949825592f169ec0"><span class="std std-ref">MS_CSW_SIGNATURE</span></a> to indicate a valid Command Status. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError3TagE">
+<span id="_CPPv3N19PhonyNameDueToError3TagE"></span><span id="_CPPv2N19PhonyNameDueToError3TagE"></span><span id="PhonyNameDueToError::Tag__uint32_t"></span><span class="target" id="group__Group__USBClassMSCommon_1gabf601fb196e654256265aceca1942bfb"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Tag</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError3TagE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Unique command ID value, to associate a command block wrapper with its command status wrapper. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError18DataTransferLengthE">
+<span id="_CPPv3N19PhonyNameDueToError18DataTransferLengthE"></span><span id="_CPPv2N19PhonyNameDueToError18DataTransferLengthE"></span><span id="PhonyNameDueToError::DataTransferLength__uint32_t"></span><span class="target" id="group__Group__USBClassMSCommon_1ga01f8f266e292ce48dbba88601f595fa3"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DataTransferLength</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError18DataTransferLengthE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Length of the optional data portion of the issued command, in bytes. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError5FlagsE">
+<span id="_CPPv3N19PhonyNameDueToError5FlagsE"></span><span id="_CPPv2N19PhonyNameDueToError5FlagsE"></span><span id="PhonyNameDueToError::Flags__uint8_t"></span><span class="target" id="group__Group__USBClassMSCommon_1ga2cc81f57e1eeabcb27b2e1488010da50"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Flags</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError5FlagsE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Command block flags, indicating command data direction. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError3LUNE">
+<span id="_CPPv3N19PhonyNameDueToError3LUNE"></span><span id="_CPPv2N19PhonyNameDueToError3LUNE"></span><span id="PhonyNameDueToError::LUN__uint8_t"></span><span class="target" id="group__Group__USBClassMSCommon_1ga7a67871de7cdfeb4c7268e07288c14b1"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LUN</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError3LUNE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Logical Unit number this command is issued to. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError17SCSICommandLengthE">
+<span id="_CPPv3N19PhonyNameDueToError17SCSICommandLengthE"></span><span id="_CPPv2N19PhonyNameDueToError17SCSICommandLengthE"></span><span id="PhonyNameDueToError::SCSICommandLength__uint8_t"></span><span class="target" id="group__Group__USBClassMSCommon_1gac83b5c040eee34f66cc7dc51d15e56a6"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SCSICommandLength</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError17SCSICommandLengthE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Length of the issued SCSI command within the SCSI command data array. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError15SCSICommandDataE">
+<span id="_CPPv3N19PhonyNameDueToError15SCSICommandDataE"></span><span id="_CPPv2N19PhonyNameDueToError15SCSICommandDataE"></span><span id="PhonyNameDueToError::SCSICommandData__uint8_tA"></span><span class="target" id="group__Group__USBClassMSCommon_1gac70ba2d56ac1fbea08b6436b3329035d"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SCSICommandData</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">16</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError15SCSICommandDataE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Issued SCSI command in the Command Block. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError19DataTransferResidueE">
+<span id="_CPPv3N19PhonyNameDueToError19DataTransferResidueE"></span><span id="_CPPv2N19PhonyNameDueToError19DataTransferResidueE"></span><span id="PhonyNameDueToError::DataTransferResidue__uint32_t"></span><span class="target" id="group__Group__USBClassMSCommon_1ga7a7f602097b2864f9be8a903015cf696"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DataTransferResidue</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError19DataTransferResidueE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Number of bytes of data not processed in the SCSI command. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError6StatusE">
+<span id="_CPPv3N19PhonyNameDueToError6StatusE"></span><span id="_CPPv2N19PhonyNameDueToError6StatusE"></span><span id="PhonyNameDueToError::Status__uint8_t"></span><span class="target" id="group__Group__USBClassMSCommon_1ga486ea1e9933b56f787ad2e87a96cc81c"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Status</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError6StatusE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Status code of the issued command - a value from the <a class="reference internal" href="enum_group__Group__USBClassMSCommon_1gad65cbd8e097fd3336dd232513f23ad0d.html#group__Group__USBClassMSCommon_1gad65cbd8e097fd3336dd232513f23ad0d"><span class="std std-ref">MS_CommandStatusCodes_t</span></a> enum. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError12ResponseCodeE">
+<span id="_CPPv3N19PhonyNameDueToError12ResponseCodeE"></span><span id="_CPPv2N19PhonyNameDueToError12ResponseCodeE"></span><span id="PhonyNameDueToError::ResponseCode__uint8_t"></span><span class="target" id="group__Group__USBClassMSCommon_1gaf3bbbba1ab17b1da0cd63f45e2a70008"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ResponseCode</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError12ResponseCodeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError13SegmentNumberE">
+<span id="_CPPv3N19PhonyNameDueToError13SegmentNumberE"></span><span id="_CPPv2N19PhonyNameDueToError13SegmentNumberE"></span><span id="PhonyNameDueToError::SegmentNumber__uint8_t"></span><span class="target" id="group__Group__USBClassMSCommon_1gab2732f5a2d0a0d7479a202947cec8c1b"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SegmentNumber</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError13SegmentNumberE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError8SenseKeyE">
+<span id="_CPPv3N19PhonyNameDueToError8SenseKeyE"></span><span id="_CPPv2N19PhonyNameDueToError8SenseKeyE"></span><span id="PhonyNameDueToError::SenseKey__unsigned"></span><span class="target" id="group__Group__USBClassMSCommon_1ga0fb3f87dc09c7e29dee21721f96d4909"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SenseKey</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError8SenseKeyE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError8ReservedE">
+<span id="_CPPv3N19PhonyNameDueToError8ReservedE"></span><span id="_CPPv2N19PhonyNameDueToError8ReservedE"></span><span id="PhonyNameDueToError::Reserved__unsigned"></span><span class="target" id="group__Group__USBClassMSCommon_1ga2e92e32f0e1777ec7312b9e8a7060885"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Reserved</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError8ReservedE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError3ILIE">
+<span id="_CPPv3N19PhonyNameDueToError3ILIE"></span><span id="_CPPv2N19PhonyNameDueToError3ILIE"></span><span id="PhonyNameDueToError::ILI__unsigned"></span><span class="target" id="group__Group__USBClassMSCommon_1ga174063af8509fb015d6c639a728621cf"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ILI</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError3ILIE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError3EOME">
+<span id="_CPPv3N19PhonyNameDueToError3EOME"></span><span id="_CPPv2N19PhonyNameDueToError3EOME"></span><span id="PhonyNameDueToError::EOM__unsigned"></span><span class="target" id="group__Group__USBClassMSCommon_1ga8ec9fc72cfab1fa4b6d117a2659a876b"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EOM</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError3EOME" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError8FileMarkE">
+<span id="_CPPv3N19PhonyNameDueToError8FileMarkE"></span><span id="_CPPv2N19PhonyNameDueToError8FileMarkE"></span><span id="PhonyNameDueToError::FileMark__unsigned"></span><span class="target" id="group__Group__USBClassMSCommon_1gac43d0158def5cf63c27d42faad0f464c"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FileMark</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError8FileMarkE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError11InformationE">
+<span id="_CPPv3N19PhonyNameDueToError11InformationE"></span><span id="_CPPv2N19PhonyNameDueToError11InformationE"></span><span id="PhonyNameDueToError::Information__uint8_tA"></span><span class="target" id="group__Group__USBClassMSCommon_1ga8a66dd242e47b1c878b3a1b67c0652d1"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Information</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError11InformationE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError16AdditionalLengthE">
+<span id="_CPPv3N19PhonyNameDueToError16AdditionalLengthE"></span><span id="_CPPv2N19PhonyNameDueToError16AdditionalLengthE"></span><span id="PhonyNameDueToError::AdditionalLength__uint8_t"></span><span class="target" id="group__Group__USBClassMSCommon_1ga18087f2f477ba118ea0a3d8ed2286eff"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AdditionalLength</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError16AdditionalLengthE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError22CmdSpecificInformationE">
+<span id="_CPPv3N19PhonyNameDueToError22CmdSpecificInformationE"></span><span id="_CPPv2N19PhonyNameDueToError22CmdSpecificInformationE"></span><span id="PhonyNameDueToError::CmdSpecificInformation__uint8_tA"></span><span class="target" id="group__Group__USBClassMSCommon_1ga4b0f7130217ba58173e0dfeb5736400e"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CmdSpecificInformation</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError22CmdSpecificInformationE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError19AdditionalSenseCodeE">
+<span id="_CPPv3N19PhonyNameDueToError19AdditionalSenseCodeE"></span><span id="_CPPv2N19PhonyNameDueToError19AdditionalSenseCodeE"></span><span id="PhonyNameDueToError::AdditionalSenseCode__uint8_t"></span><span class="target" id="group__Group__USBClassMSCommon_1gaa6cb1ad19e796ce1d870ac3f9740ef90"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AdditionalSenseCode</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError19AdditionalSenseCodeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError24AdditionalSenseQualifierE">
+<span id="_CPPv3N19PhonyNameDueToError24AdditionalSenseQualifierE"></span><span id="_CPPv2N19PhonyNameDueToError24AdditionalSenseQualifierE"></span><span id="PhonyNameDueToError::AdditionalSenseQualifier__uint8_t"></span><span class="target" id="group__Group__USBClassMSCommon_1gaa4691ca7051352a99ba59954223537d4"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AdditionalSenseQualifier</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError24AdditionalSenseQualifierE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError24FieldReplaceableUnitCodeE">
+<span id="_CPPv3N19PhonyNameDueToError24FieldReplaceableUnitCodeE"></span><span id="_CPPv2N19PhonyNameDueToError24FieldReplaceableUnitCodeE"></span><span id="PhonyNameDueToError::FieldReplaceableUnitCode__uint8_t"></span><span class="target" id="group__Group__USBClassMSCommon_1ga7a4058f0ed84a1c07db4dc8c05b75abd"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FieldReplaceableUnitCode</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError24FieldReplaceableUnitCodeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError16SenseKeySpecificE">
+<span id="_CPPv3N19PhonyNameDueToError16SenseKeySpecificE"></span><span id="_CPPv2N19PhonyNameDueToError16SenseKeySpecificE"></span><span id="PhonyNameDueToError::SenseKeySpecific__uint8_tA"></span><span class="target" id="group__Group__USBClassMSCommon_1ga9c2b2f724dde828161c07bf9cae8696d"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SenseKeySpecific</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError16SenseKeySpecificE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError10DeviceTypeE">
+<span id="_CPPv3N19PhonyNameDueToError10DeviceTypeE"></span><span id="_CPPv2N19PhonyNameDueToError10DeviceTypeE"></span><span id="PhonyNameDueToError::DeviceType__unsigned"></span><span class="target" id="group__Group__USBClassMSCommon_1ga6b05dd622174045e2c262fffb58cbdca"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DeviceType</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError10DeviceTypeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError19PeripheralQualifierE">
+<span id="_CPPv3N19PhonyNameDueToError19PeripheralQualifierE"></span><span id="_CPPv2N19PhonyNameDueToError19PeripheralQualifierE"></span><span id="PhonyNameDueToError::PeripheralQualifier__unsigned"></span><span class="target" id="group__Group__USBClassMSCommon_1gafb42de51899b323ec2cb8c13b3bcf27c"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PeripheralQualifier</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError19PeripheralQualifierE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError9RemovableE">
+<span id="_CPPv3N19PhonyNameDueToError9RemovableE"></span><span id="_CPPv2N19PhonyNameDueToError9RemovableE"></span><span id="PhonyNameDueToError::Removable__unsigned"></span><span class="target" id="group__Group__USBClassMSCommon_1gad2e52afbc7f9cc8b669cec76444bab87"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Removable</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError9RemovableE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError7VersionE">
+<span id="_CPPv3N19PhonyNameDueToError7VersionE"></span><span id="_CPPv2N19PhonyNameDueToError7VersionE"></span><span id="PhonyNameDueToError::Version__uint8_t"></span><span class="target" id="group__Group__USBClassMSCommon_1gaff2856204d2f62150166dfc4444eee84"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Version</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError7VersionE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError18ResponseDataFormatE">
+<span id="_CPPv3N19PhonyNameDueToError18ResponseDataFormatE"></span><span id="_CPPv2N19PhonyNameDueToError18ResponseDataFormatE"></span><span id="PhonyNameDueToError::ResponseDataFormat__unsigned"></span><span class="target" id="group__Group__USBClassMSCommon_1ga90ac396d765f1b95c5a7203fcaf04b7c"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ResponseDataFormat</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError18ResponseDataFormatE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError9Reserved2E">
+<span id="_CPPv3N19PhonyNameDueToError9Reserved2E"></span><span id="_CPPv2N19PhonyNameDueToError9Reserved2E"></span><span id="PhonyNameDueToError::Reserved2__unsigned"></span><span class="target" id="group__Group__USBClassMSCommon_1gabf876738614714b84779288eeda1a2a1"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Reserved2</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError9Reserved2E" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError7NormACAE">
+<span id="_CPPv3N19PhonyNameDueToError7NormACAE"></span><span id="_CPPv2N19PhonyNameDueToError7NormACAE"></span><span id="PhonyNameDueToError::NormACA__unsigned"></span><span class="target" id="group__Group__USBClassMSCommon_1ga4e3a7cc5ed6faa39ea553216912737bd"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NormACA</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError7NormACAE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError6TrmTskE">
+<span id="_CPPv3N19PhonyNameDueToError6TrmTskE"></span><span id="_CPPv2N19PhonyNameDueToError6TrmTskE"></span><span id="PhonyNameDueToError::TrmTsk__unsigned"></span><span class="target" id="group__Group__USBClassMSCommon_1gab602d9e1860603419eb33a92962b7a68"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TrmTsk</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError6TrmTskE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError4AERCE">
+<span id="_CPPv3N19PhonyNameDueToError4AERCE"></span><span id="_CPPv2N19PhonyNameDueToError4AERCE"></span><span id="PhonyNameDueToError::AERC__unsigned"></span><span class="target" id="group__Group__USBClassMSCommon_1ga81feb305e9d94031ff153cf1c7d40389"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AERC</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError4AERCE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError9Reserved3E">
+<span id="_CPPv3N19PhonyNameDueToError9Reserved3E"></span><span id="_CPPv2N19PhonyNameDueToError9Reserved3E"></span><span id="PhonyNameDueToError::Reserved3__uint8_tA"></span><span class="target" id="group__Group__USBClassMSCommon_1ga9336499af9094522dbe1bfd4d43934a1"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Reserved3</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError9Reserved3E" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError9SoftResetE">
+<span id="_CPPv3N19PhonyNameDueToError9SoftResetE"></span><span id="_CPPv2N19PhonyNameDueToError9SoftResetE"></span><span id="PhonyNameDueToError::SoftReset__unsigned"></span><span class="target" id="group__Group__USBClassMSCommon_1gaadb7a42d049d2a18274761feb108dfa3"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SoftReset</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError9SoftResetE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError6CmdQueE">
+<span id="_CPPv3N19PhonyNameDueToError6CmdQueE"></span><span id="_CPPv2N19PhonyNameDueToError6CmdQueE"></span><span id="PhonyNameDueToError::CmdQue__unsigned"></span><span class="target" id="group__Group__USBClassMSCommon_1gaccf67ea6f11304b4d84f1954f68d4aaf"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CmdQue</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError6CmdQueE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError9Reserved4E">
+<span id="_CPPv3N19PhonyNameDueToError9Reserved4E"></span><span id="_CPPv2N19PhonyNameDueToError9Reserved4E"></span><span id="PhonyNameDueToError::Reserved4__unsigned"></span><span class="target" id="group__Group__USBClassMSCommon_1gade34b41522478e3c973d1a8bc8ab98d1"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Reserved4</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError9Reserved4E" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError6LinkedE">
+<span id="_CPPv3N19PhonyNameDueToError6LinkedE"></span><span id="_CPPv2N19PhonyNameDueToError6LinkedE"></span><span id="PhonyNameDueToError::Linked__unsigned"></span><span class="target" id="group__Group__USBClassMSCommon_1ga1643751ff45ce90225ba4edff6dfde61"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Linked</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError6LinkedE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError4SyncE">
+<span id="_CPPv3N19PhonyNameDueToError4SyncE"></span><span id="_CPPv2N19PhonyNameDueToError4SyncE"></span><span id="PhonyNameDueToError::Sync__unsigned"></span><span class="target" id="group__Group__USBClassMSCommon_1ga8579c9c922266c9891fa0e309a34b14f"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sync</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError4SyncE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError12WideBus16BitE">
+<span id="_CPPv3N19PhonyNameDueToError12WideBus16BitE"></span><span id="_CPPv2N19PhonyNameDueToError12WideBus16BitE"></span><span id="PhonyNameDueToError::WideBus16Bit__unsigned"></span><span class="target" id="group__Group__USBClassMSCommon_1gabf686fb0e0fcf40c44ca506c0a968143"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WideBus16Bit</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError12WideBus16BitE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError12WideBus32BitE">
+<span id="_CPPv3N19PhonyNameDueToError12WideBus32BitE"></span><span id="_CPPv2N19PhonyNameDueToError12WideBus32BitE"></span><span id="PhonyNameDueToError::WideBus32Bit__unsigned"></span><span class="target" id="group__Group__USBClassMSCommon_1ga8aa50856d729484cf5d380236c7feba0"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WideBus32Bit</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError12WideBus32BitE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError7RelAddrE">
+<span id="_CPPv3N19PhonyNameDueToError7RelAddrE"></span><span id="_CPPv2N19PhonyNameDueToError7RelAddrE"></span><span id="PhonyNameDueToError::RelAddr__unsigned"></span><span class="target" id="group__Group__USBClassMSCommon_1gacef0149bd96271e825e13c828422c5d8"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RelAddr</span></span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError7RelAddrE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError8VendorIDE">
+<span id="_CPPv3N19PhonyNameDueToError8VendorIDE"></span><span id="_CPPv2N19PhonyNameDueToError8VendorIDE"></span><span id="PhonyNameDueToError::VendorID__uint8_tA"></span><span class="target" id="group__Group__USBClassMSCommon_1gadda38cff959fc7b7c34601931361c9a4"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VendorID</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">8</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError8VendorIDE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError9ProductIDE">
+<span id="_CPPv3N19PhonyNameDueToError9ProductIDE"></span><span id="_CPPv2N19PhonyNameDueToError9ProductIDE"></span><span id="PhonyNameDueToError::ProductID__uint8_tA"></span><span class="target" id="group__Group__USBClassMSCommon_1ga7e17250d8672931f3160f6fac5ddda63"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ProductID</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">16</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError9ProductIDE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19PhonyNameDueToError10RevisionIDE">
+<span id="_CPPv3N19PhonyNameDueToError10RevisionIDE"></span><span id="_CPPv2N19PhonyNameDueToError10RevisionIDE"></span><span id="PhonyNameDueToError::RevisionID__uint8_tA"></span><span class="target" id="group__Group__USBClassMSCommon_1ga07ca36d9056c273dc340e55e3619c6cb"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RevisionID</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N19PhonyNameDueToError10RevisionIDE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

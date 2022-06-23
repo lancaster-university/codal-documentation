@@ -1,0 +1,63 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_LIS3DH.cpp:
+
+File LIS3DH.cpp
+===============
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/source/drivers``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/source/drivers/LIS3DH.cpp``)
+-------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_LIS3DH.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``CodalCompat.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalCompat.h`)
+
+- ``CodalConfig.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h`)
+
+- ``CodalFiber.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalFiber.h`)
+
+- ``ErrorNo.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_ErrorNo.h`)
+
+- ``LIS3DH.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LIS3DH.h`)
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_LIS3DH_8cpp_1a36a971ec52ae8c2dbf51b944d8cefaa6`
+
+- :ref:`exhale_function_LIS3DH_8cpp_1a292563457da80677c6ddc2f2ebf9591b`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_LIS3DH_8cpp_1ae1f31e8793a543459b039ef0decad1ad`
+
+- :ref:`exhale_variable_LIS3DH_8cpp_1a71103c9f99262747c9a498efd5e54ec2`
+

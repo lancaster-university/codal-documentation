@@ -1,0 +1,14 @@
+.. _exhale_function_namespacecodal_1aa08182a8151fbabc3a8b6297c059692b:
+
+Function codal::create_fiber(void(\*)(void), void(\*)(void))
+============================================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalFiber.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: codal::create_fiber(void(*)(void), void(*)(void))
+   :project: CODAL

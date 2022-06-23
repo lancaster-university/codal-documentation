@@ -1,0 +1,471 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>File MicroBitPowerManager.h &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL for the Micro:bit v2
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/the-basics.html">
+     The Basics - CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitpowermanager-h">
+   Definition (
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     /home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/MicroBitPowerManager.h
+    </span>
+   </code>
+   )
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#includes">
+   Includes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#included-by">
+   Included By
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classes">
+   Classes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enums">
+   Enums
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defines">
+   Defines
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>File MicroBitPowerManager.h</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitpowermanager-h">
+   Definition (
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     /home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/MicroBitPowerManager.h
+    </span>
+   </code>
+   )
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#includes">
+   Includes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#included-by">
+   Included By
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classes">
+   Classes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enums">
+   Enums
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defines">
+   Defines
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="file-microbitpowermanager-h">
+<span id="file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitpowermanager-h"></span><h1>File MicroBitPowerManager.h<a class="headerlink" href="#file-microbitpowermanager-h" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc.html#dir-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc</span></code>)</p>
+<div class="contents local topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitpowermanager-h" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/MicroBitPowerManager.h</span></code>)</a></p></li>
+<li><p><a class="reference internal" href="#includes" id="id2">Includes</a></p></li>
+<li><p><a class="reference internal" href="#included-by" id="id3">Included By</a></p></li>
+<li><p><a class="reference internal" href="#classes" id="id4">Classes</a></p></li>
+<li><p><a class="reference internal" href="#enums" id="id5">Enums</a></p></li>
+<li><p><a class="reference internal" href="#defines" id="id6">Defines</a></p></li>
+</ul>
+</div>
+<section id="definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitpowermanager-h">
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/MicroBitPowerManager.h</span></code>)<a class="headerlink" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitpowermanager-h" title="Permalink to this headline">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitPowerManager.h.html">Program Listing for File MicroBitPowerManager.h</a></li>
+</ul>
+</div>
+</section>
+<section id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MicroBitCompat.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-microbitcompat-h"><span class="std std-ref">File MicroBitCompat.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MicroBitConfig.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitConfig.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitconfig-h"><span class="std std-ref">File MicroBitConfig.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MicroBitIO.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codal-core/inc/core/CodalComponent.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalComponent.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-codalcomponent-h"><span class="std std-ref">File CodalComponent.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codal-core/inc/driver-models/I2C.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_I2C.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-driver-models-i2c-h"><span class="std std-ref">File I2C.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codal-core/inc/driver-models/Pin.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Pin.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-driver-models-pin-h"><span class="std std-ref">File Pin.h</span></a>)</p></li>
+</ul>
+</section>
+<section id="included-by">
+<h2>Included By<a class="headerlink" href="#included-by" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitUSBFlashManager.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitusbflashmanager-h"><span class="std std-ref">File MicroBitUSBFlashManager.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitPowerManager.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-microbitpowermanager-cpp"><span class="std std-ref">File MicroBitPowerManager.cpp</span></a></p></li>
+</ul>
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="structMicroBitPowerData.html#exhale-struct-structmicrobitpowerdata"><span class="std std-ref">Struct MicroBitPowerData</span></a></p></li>
+<li><p><a class="reference internal" href="structMicroBitVersion.html#exhale-struct-structmicrobitversion"><span class="std std-ref">Struct MicroBitVersion</span></a></p></li>
+<li><p><a class="reference internal" href="classMicroBitPowerManager.html#exhale-class-classmicrobitpowermanager"><span class="std std-ref">Class MicroBitPowerManager</span></a></p></li>
+</ul>
+</section>
+<section id="enums">
+<h2>Enums<a class="headerlink" href="#enums" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="enum_MicroBitPowerManager_8h_1ab642d86f18cce01a396ef3adb855f8ef.html#exhale-enum-microbitpowermanager-8h-1ab642d86f18cce01a396ef3adb855f8ef"><span class="std std-ref">Enum MicroBitPowerSource</span></a></p></li>
+<li><p><a class="reference internal" href="enum_MicroBitPowerManager_8h_1a22d7244e6b7b64e37dfca42227952e1a.html#exhale-enum-microbitpowermanager-8h-1a22d7244e6b7b64e37dfca42227952e1a"><span class="std std-ref">Enum MicroBitUSBStatus</span></a></p></li>
+</ul>
+</section>
+<section id="defines">
+<h2>Defines<a class="headerlink" href="#defines" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a128ac7c57eb0a4b9fb8140026e3bceb3.html#exhale-define-microbitpowermanager-8h-1a128ac7c57eb0a4b9fb8140026e3bceb3"><span class="std std-ref">Define CONFIG_MINIMUM_DEEP_SLEEP_TIME</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1ab0f387bc427fbc4d946660f1c8074adc.html#exhale-define-microbitpowermanager-8h-1ab0f387bc427fbc4d946660f1c8074adc"><span class="std std-ref">Define CONFIG_MINIMUM_POWER_ON_TIME</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a5b54d769f9d42f6bacae56a7aba1bdf4.html#exhale-define-microbitpowermanager-8h-1a5b54d769f9d42f6bacae56a7aba1bdf4"><span class="std std-ref">Define MICROBIT_UIPM_BAD_LENGTH</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a971ecafcefd39663e2e131056aaa3133.html#exhale-define-microbitpowermanager-8h-1a971ecafcefd39663e2e131056aaa3133"><span class="std std-ref">Define MICROBIT_UIPM_BUSY</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a7606afbbd4d2b1130b53856785103759.html#exhale-define-microbitpowermanager-8h-1a7606afbbd4d2b1130b53856785103759"><span class="std std-ref">Define MICROBIT_UIPM_COMMAND_ERROR_RESPONSE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a8b88e4bcae93927247df606136bb67a0.html#exhale-define-microbitpowermanager-8h-1a8b88e4bcae93927247df606136bb67a0"><span class="std std-ref">Define MICROBIT_UIPM_COMMAND_READ_REQUEST</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1ab5345f83c739bdaff0f45bfcfd8b364a.html#exhale-define-microbitpowermanager-8h-1ab5345f83c739bdaff0f45bfcfd8b364a"><span class="std std-ref">Define MICROBIT_UIPM_COMMAND_READ_RESPONSE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a7cae1642c5f4ce71e0c371b6017d9db5.html#exhale-define-microbitpowermanager-8h-1a7cae1642c5f4ce71e0c371b6017d9db5"><span class="std std-ref">Define MICROBIT_UIPM_COMMAND_WRITE_REQUEST</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1ae1653b0897bab4cf8fbcf1cb8f76f23c.html#exhale-define-microbitpowermanager-8h-1ae1653b0897bab4cf8fbcf1cb8f76f23c"><span class="std std-ref">Define MICROBIT_UIPM_COMMAND_WRITE_RESPONSE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1aae6a566a2e6d8cd4b448275d36c8874d.html#exhale-define-microbitpowermanager-8h-1aae6a566a2e6d8cd4b448275d36c8874d"><span class="std std-ref">Define MICROBIT_UIPM_EVENT_RESET_LONG_PRESS</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a10b0406179f012d8d42ec1401355b4f9.html#exhale-define-microbitpowermanager-8h-1a10b0406179f012d8d42ec1401355b4f9"><span class="std std-ref">Define MICROBIT_UIPM_EVENT_WAKE_RESET</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1ad5f682c3df85a923965d18218cb10bcb.html#exhale-define-microbitpowermanager-8h-1ad5f682c3df85a923965d18218cb10bcb"><span class="std std-ref">Define MICROBIT_UIPM_EVENT_WAKE_USB_INSERTION</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1add0fbc0263e7678d845f313f98ac3720.html#exhale-define-microbitpowermanager-8h-1add0fbc0263e7678d845f313f98ac3720"><span class="std std-ref">Define MICROBIT_UIPM_FORBIDDEN</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a2d043bcf9abc5839d52f26b80c1dc19b.html#exhale-define-microbitpowermanager-8h-1a2d043bcf9abc5839d52f26b80c1dc19b"><span class="std std-ref">Define MICROBIT_UIPM_I2C_ADDRESS</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a3d6136fa58501fd946e621ab7800ab2b.html#exhale-define-microbitpowermanager-8h-1a3d6136fa58501fd946e621ab7800ab2b"><span class="std std-ref">Define MICROBIT_UIPM_INCOMPLETE_CMD</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a082df20bcb2888e25179fb36c9aafd93.html#exhale-define-microbitpowermanager-8h-1a082df20bcb2888e25179fb36c9aafd93"><span class="std std-ref">Define MICROBIT_UIPM_MAX_BUFFER_SIZE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1ad8b623ae57be581b0a1900b92ac68cb8.html#exhale-define-microbitpowermanager-8h-1ad8b623ae57be581b0a1900b92ac68cb8"><span class="std std-ref">Define MICROBIT_UIPM_MAX_RETRIES</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a0dab2967374056717a88938b6a8f1640.html#exhale-define-microbitpowermanager-8h-1a0dab2967374056717a88938b6a8f1640"><span class="std std-ref">Define MICROBIT_UIPM_NOT_RECOGNISED</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a401ad2ce89aeb92e775f4bd723bfe5d7.html#exhale-define-microbitpowermanager-8h-1a401ad2ce89aeb92e775f4bd723bfe5d7"><span class="std std-ref">Define MICROBIT_UIPM_PROPERTY_BOARD_REVISION</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a752bf8c2e8e76510cb9844be6ccab4f1.html#exhale-define-microbitpowermanager-8h-1a752bf8c2e8e76510cb9844be6ccab4f1"><span class="std std-ref">Define MICROBIT_UIPM_PROPERTY_DAPLINK_VERSION</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1af918f9b3afee3306950eebba409df45c.html#exhale-define-microbitpowermanager-8h-1af918f9b3afee3306950eebba409df45c"><span class="std std-ref">Define MICROBIT_UIPM_PROPERTY_I2C_VERSION</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1aaa44d456ce8bbae85337ef32d3ccd6f5.html#exhale-define-microbitpowermanager-8h-1aaa44d456ce8bbae85337ef32d3ccd6f5"><span class="std std-ref">Define MICROBIT_UIPM_PROPERTY_KL27_POWER_LED_STATE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a8960fc9c38372639881eef1a9013618e.html#exhale-define-microbitpowermanager-8h-1a8960fc9c38372639881eef1a9013618e"><span class="std std-ref">Define MICROBIT_UIPM_PROPERTY_KL27_POWER_MODE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a80dfc4b00c561850748c793a5dc7a8ed.html#exhale-define-microbitpowermanager-8h-1a80dfc4b00c561850748c793a5dc7a8ed"><span class="std std-ref">Define MICROBIT_UIPM_PROPERTY_KL27_USER_EVENT</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a20c0242e68a27585556ffe5f51b26249.html#exhale-define-microbitpowermanager-8h-1a20c0242e68a27585556ffe5f51b26249"><span class="std std-ref">Define MICROBIT_UIPM_PROPERTY_POWER_CONSUMPTION</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a96e717e3cf9f05a7c1a61e8269c568f2.html#exhale-define-microbitpowermanager-8h-1a96e717e3cf9f05a7c1a61e8269c568f2"><span class="std std-ref">Define MICROBIT_UIPM_PROPERTY_POWER_SOURCE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1afa72003fea3ac29f0e23341b91758d6a.html#exhale-define-microbitpowermanager-8h-1afa72003fea3ac29f0e23341b91758d6a"><span class="std std-ref">Define MICROBIT_UIPM_PROPERTY_USB_STATE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a10a2b7da7b40f96a2e5432f5e2dc7aea.html#exhale-define-microbitpowermanager-8h-1a10a2b7da7b40f96a2e5432f5e2dc7aea"><span class="std std-ref">Define MICROBIT_UIPM_READ_FORBIDDEN</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a24f370a193440cdc379a0c172067427d.html#exhale-define-microbitpowermanager-8h-1a24f370a193440cdc379a0c172067427d"><span class="std std-ref">Define MICROBIT_UIPM_SUCCESS</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1ae9b5d5265d9327990c05c506100a1797.html#exhale-define-microbitpowermanager-8h-1ae9b5d5265d9327990c05c506100a1797"><span class="std std-ref">Define MICROBIT_UIPM_UNKNOWN_CMD</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1ada469f74ec8d2f5abba8b59ce7f0cfb5.html#exhale-define-microbitpowermanager-8h-1ada469f74ec8d2f5abba8b59ce7f0cfb5"><span class="std std-ref">Define MICROBIT_UIPM_WRITE_FAIL</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1aa74fff4c6c2a316884c6c1fc252dcda6.html#exhale-define-microbitpowermanager-8h-1aa74fff4c6c2a316884c6c1fc252dcda6"><span class="std std-ref">Define MICROBIT_UIPM_WRITE_FORBIDDEN</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a6c5f3e1495299b79cbfbf4be0b7198c3.html#exhale-define-microbitpowermanager-8h-1a6c5f3e1495299b79cbfbf4be0b7198c3"><span class="std std-ref">Define MICROBIT_USB_INTERFACE_ALWAYS_NOP</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a130de2f770f13812b6264bace14ec748.html#exhale-define-microbitpowermanager-8h-1a130de2f770f13812b6264bace14ec748"><span class="std std-ref">Define MICROBIT_USB_INTERFACE_AWAITING_RESPONSE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1ab7cf861f5db12d2f9f3ae76fea568ee0.html#exhale-define-microbitpowermanager-8h-1ab7cf861f5db12d2f9f3ae76fea568ee0"><span class="std std-ref">Define MICROBIT_USB_INTERFACE_BUSY_FLAG_SUPPORTED</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a539f437926891813a7a6ecb362b1314d.html#exhale-define-microbitpowermanager-8h-1a539f437926891813a7a6ecb362b1314d"><span class="std std-ref">Define MICROBIT_USB_INTERFACE_IRQ_THRESHOLD</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a6d10588e393675df5acc7507e9ee0716.html#exhale-define-microbitpowermanager-8h-1a6d10588e393675df5acc7507e9ee0716"><span class="std std-ref">Define MICROBIT_USB_INTERFACE_POWER_MODE_VLLS0</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1a4b20961db108ab8b4892a94d4f56f401.html#exhale-define-microbitpowermanager-8h-1a4b20961db108ab8b4892a94d4f56f401"><span class="std std-ref">Define MICROBIT_USB_INTERFACE_POWER_MODE_VLPS</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitPowerManager_8h_1ad379e78ac9b6f8ed3ec9d9957c90e34c.html#exhale-define-microbitpowermanager-8h-1ad379e78ac9b6f8ed3ec9d9957c90e34c"><span class="std std-ref">Define MICROBIT_USB_INTERFACE_VERSION_LOADED</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

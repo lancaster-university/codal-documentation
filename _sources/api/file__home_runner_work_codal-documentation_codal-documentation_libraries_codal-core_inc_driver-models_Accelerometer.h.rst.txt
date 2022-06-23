@@ -1,0 +1,160 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Accelerometer.h:
+
+File Accelerometer.h
+====================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/driver-models``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/driver-models/Accelerometer.h``)
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Accelerometer.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``CodalComponent.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalComponent.h`)
+
+- ``CodalConfig.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h`)
+
+- ``CodalUtil.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalUtil.h`)
+
+- ``CoordinateSystem.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_CoordinateSystem.h`)
+
+- ``Pin.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Pin.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitAccelerometer.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitCompassCalibrator.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Compass.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_FXOS8700.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LIS3DH.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LSM303Accelerometer.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MAG3110.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MMA8653.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MPU6050.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Accelerometer.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_FXOS8700.cpp`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_codal`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structcodal_1_1ShakeHistory`
+
+- :ref:`exhale_class_classcodal_1_1Accelerometer`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_Accelerometer_8h_1a1ca5da994850d4d805727608cce998ba`
+
+- :ref:`exhale_define_Accelerometer_8h_1a834098fc5dadf61c6b31200bf0c4a579`
+
+- :ref:`exhale_define_Accelerometer_8h_1a8416dced24101a031baee73db6ef3ed9`
+
+- :ref:`exhale_define_Accelerometer_8h_1ab5b236695f4ce894114691557f69ed72`
+
+- :ref:`exhale_define_Accelerometer_8h_1aecd0e8249e3360c1497dc927a52e74aa`
+
+- :ref:`exhale_define_Accelerometer_8h_1a513030f2a39abacf905ea9e25aedcad0`
+
+- :ref:`exhale_define_Accelerometer_8h_1a2feec4cfcf7224a1f1bfdbf88a044af3`
+
+- :ref:`exhale_define_Accelerometer_8h_1a7edf7581a9cf8cb2c38b9b832d32c002`
+
+- :ref:`exhale_define_Accelerometer_8h_1a04335abd5d44ffa3498479fd41169056`
+
+- :ref:`exhale_define_Accelerometer_8h_1a069cb0e9c5f06571bdce13b38caac45d`
+
+- :ref:`exhale_define_Accelerometer_8h_1a13fca636a1ef6e9d852857b1aef09e30`
+
+- :ref:`exhale_define_Accelerometer_8h_1aae42a3dd3aec139fcc58b35a828e05d5`
+
+- :ref:`exhale_define_Accelerometer_8h_1a349b175859b5b132f0e76b48d0294b6a`
+
+- :ref:`exhale_define_Accelerometer_8h_1ae0b53a662b4d70703c86e399147f3d2f`
+
+- :ref:`exhale_define_Accelerometer_8h_1a3df41c66ca2296d72b2b9178737c057d`
+
+- :ref:`exhale_define_Accelerometer_8h_1a72b1b9b689ff4cbcbc6fe735237d23f4`
+
+- :ref:`exhale_define_Accelerometer_8h_1a8bece5868ab61da1719b1abf2ed919b5`
+
+- :ref:`exhale_define_Accelerometer_8h_1a6eeb5c625adbae6c14cae68439076461`
+
+- :ref:`exhale_define_Accelerometer_8h_1ae198720453d9cc4c3957438e70d1ed42`
+
+- :ref:`exhale_define_Accelerometer_8h_1ac03fe1e3d9e3bd256494a7abe4e36511`
+
+- :ref:`exhale_define_Accelerometer_8h_1a9009ac8617b68262d10ea33f44512a88`
+
+- :ref:`exhale_define_Accelerometer_8h_1ab1ac2d62805a9991234b85ced7544d2c`
+
+- :ref:`exhale_define_Accelerometer_8h_1a7a74a10f41d76cb630cd482d2fb10fc9`
+
+- :ref:`exhale_define_Accelerometer_8h_1a905927cf92f10635fa58f8c3ada73bbe`
+
+- :ref:`exhale_define_Accelerometer_8h_1a480003b54f8180adddf291cc2dbe833b`
+
+- :ref:`exhale_define_Accelerometer_8h_1a1c18c9574d1d06fd4be4fd38abf51e28`
+
+- :ref:`exhale_define_Accelerometer_8h_1a05146d567f7d6bc4eb36af32a936bdb1`
+
+- :ref:`exhale_define_Accelerometer_8h_1a0d6f49fda296da4f9c998af91ac20e48`
+
+- :ref:`exhale_define_Accelerometer_8h_1a75ce1deb0032ea3ab4b09e3af3b09f1f`
+
+- :ref:`exhale_define_Accelerometer_8h_1a336f4ba069ae6896cf7d45d78ec38778`
+
+- :ref:`exhale_define_Accelerometer_8h_1a4939773c586875b1adc61a0e2b6c978c`
+
+- :ref:`exhale_define_Accelerometer_8h_1afa5216c4c3445d67c4be5dd41da33dc2`
+
+- :ref:`exhale_define_Accelerometer_8h_1ad7306933d2fa6cb18e1e1b6f51d004ef`
+

@@ -1,0 +1,14 @@
+.. _exhale_typedef_namespacecodal_1a3a89a267df18144b75ca7ba619ba5112:
+
+Typedef codal::microbit_LEDMapStr
+=================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitDevice.cpp`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: codal::microbit_LEDMapStr
+   :project: CODAL

@@ -1,0 +1,685 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>File MicroBitCompat.h &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL for the Micro:bit v2
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/the-basics.html">
+     The Basics - CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-microbitcompat-h">
+   Definition (
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     /home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/compat/MicroBitCompat.h
+    </span>
+   </code>
+   )
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#includes">
+   Includes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#included-by">
+   Included By
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#namespaces">
+   Namespaces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enums">
+   Enums
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions">
+   Functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defines">
+   Defines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#typedefs">
+   Typedefs
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>File MicroBitCompat.h</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-microbitcompat-h">
+   Definition (
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     /home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/compat/MicroBitCompat.h
+    </span>
+   </code>
+   )
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#includes">
+   Includes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#included-by">
+   Included By
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#namespaces">
+   Namespaces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enums">
+   Enums
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions">
+   Functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defines">
+   Defines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#typedefs">
+   Typedefs
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="file-microbitcompat-h">
+<span id="file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-microbitcompat-h"></span><h1>File MicroBitCompat.h<a class="headerlink" href="#file-microbitcompat-h" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat.html#dir-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/compat</span></code>)</p>
+<div class="contents local topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-microbitcompat-h" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/compat/MicroBitCompat.h</span></code>)</a></p></li>
+<li><p><a class="reference internal" href="#includes" id="id2">Includes</a></p></li>
+<li><p><a class="reference internal" href="#included-by" id="id3">Included By</a></p></li>
+<li><p><a class="reference internal" href="#namespaces" id="id4">Namespaces</a></p></li>
+<li><p><a class="reference internal" href="#enums" id="id5">Enums</a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id6">Functions</a></p></li>
+<li><p><a class="reference internal" href="#defines" id="id7">Defines</a></p></li>
+<li><p><a class="reference internal" href="#typedefs" id="id8">Typedefs</a></p></li>
+</ul>
+</div>
+<section id="definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-microbitcompat-h">
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/compat/MicroBitCompat.h</span></code>)<a class="headerlink" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-microbitcompat-h" title="Permalink to this headline">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h.html">Program Listing for File MicroBitCompat.h</a></li>
+</ul>
+</div>
+</section>
+<section id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CodalConfig.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-codalconfig-h"><span class="std std-ref">File CodalConfig.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ErrorNo.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_ErrorNo.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-errorno-h"><span class="std std-ref">File ErrorNo.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MicroBitI2C.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitI2C.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-microbiti2c-h"><span class="std std-ref">File MicroBitI2C.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MicroBitIO.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NRF52I2C.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NRF52Pin.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NRF52SPI.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NRF52Serial.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codal-core/inc/core/CodalComponent.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalComponent.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-codalcomponent-h"><span class="std std-ref">File CodalComponent.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codal-core/inc/core/CodalDmesg.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalDmesg.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-codaldmesg-h"><span class="std std-ref">File CodalDmesg.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codal-core/inc/driver-models/Accelerometer.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Accelerometer.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-driver-models-accelerometer-h"><span class="std std-ref">File Accelerometer.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codal-core/inc/driver-models/Compass.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Compass.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-driver-models-compass-h"><span class="std std-ref">File Compass.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codal-core/inc/driver-models/I2C.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_I2C.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-driver-models-i2c-h"><span class="std std-ref">File I2C.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codal-core/inc/driver-models/Serial.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Serial.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-driver-models-serial-h"><span class="std std-ref">File Serial.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codal-core/inc/driver-models/Timer.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Timer.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-driver-models-timer-h"><span class="std std-ref">File Timer.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codal-core/inc/drivers/AnimatedDisplay.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_AnimatedDisplay.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-drivers-animateddisplay-h"><span class="std std-ref">File AnimatedDisplay.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codal-core/inc/drivers/Button.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_Button.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-drivers-button-h"><span class="std std-ref">File Button.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codal-core/inc/drivers/KeyValueStorage.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_KeyValueStorage.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-drivers-keyvaluestorage-h"><span class="std std-ref">File KeyValueStorage.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codal-core/inc/drivers/LEDMatrix.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LEDMatrix.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-drivers-ledmatrix-h"><span class="std std-ref">File LEDMatrix.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codal-core/inc/drivers/MultiButton.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MultiButton.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-drivers-multibutton-h"><span class="std std-ref">File MultiButton.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codal-core/inc/types/Event.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_Event.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-types-event-h"><span class="std std-ref">File Event.h</span></a>)</p></li>
+</ul>
+</section>
+<section id="included-by">
+<h2>Included By<a class="headerlink" href="#included-by" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_InterruptIn.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-interruptin-h"><span class="std std-ref">File InterruptIn.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitI2C.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-microbiti2c-h"><span class="std std-ref">File MicroBitI2C.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitEvent.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-microbitevent-h"><span class="std std-ref">File MicroBitEvent.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_Ticker.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-ticker-h"><span class="std std-ref">File Ticker.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_Timeout.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-timeout-h"><span class="std std-ref">File Timeout.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_PwmOut.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-pwmout-h"><span class="std std-ref">File PwmOut.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitButton.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-microbitbutton-h"><span class="std std-ref">File MicroBitButton.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitComponent.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-microbitcomponent-h"><span class="std std-ref">File MicroBitComponent.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitDevice.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-microbitdevice-h"><span class="std std-ref">File MicroBitDevice.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitFiber.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-microbitfiber-h"><span class="std std-ref">File MicroBitFiber.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitImage.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-microbitimage-h"><span class="std std-ref">File MicroBitImage.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitSerial.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-microbitserial-h"><span class="std std-ref">File MicroBitSerial.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitStorage.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-microbitstorage-h"><span class="std std-ref">File MicroBitStorage.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitSystemTimer.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-microbitsystemtimer-h"><span class="std std-ref">File MicroBitSystemTimer.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitAccelerometer.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitaccelerometer-h"><span class="std std-ref">File MicroBitAccelerometer.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_SoundOutputPin.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-soundoutputpin-h"><span class="std std-ref">File SoundOutputPin.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitConfig.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitconfig-h"><span class="std std-ref">File MicroBitConfig.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitUSBFlashManager.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitusbflashmanager-h"><span class="std std-ref">File MicroBitUSBFlashManager.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitPowerManager.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitpowermanager-h"><span class="std std-ref">File MicroBitPowerManager.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitUtil.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitutil-h"><span class="std std-ref">File MicroBitUtil.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitAccelerometer.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-microbitaccelerometer-cpp"><span class="std std-ref">File MicroBitAccelerometer.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitCompass.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-microbitcompass-cpp"><span class="std std-ref">File MicroBitCompass.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitCompat.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-microbitcompat-cpp"><span class="std std-ref">File MicroBitCompat.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitFileSystem.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-microbitfilesystem-cpp"><span class="std std-ref">File MicroBitFileSystem.cpp</span></a></p></li>
+</ul>
+</section>
+<section id="namespaces">
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="namespace_codal.html#namespace-codal"><span class="std std-ref">Namespace codal</span></a></p></li>
+</ul>
+</section>
+<section id="enums">
+<h2>Enums<a class="headerlink" href="#enums" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="enum_MicroBitCompat_8h_1a15c0c34a3baec6b9d2390a426bd3ba96.html#exhale-enum-microbitcompat-8h-1a15c0c34a3baec6b9d2390a426bd3ba96"><span class="std std-ref">Enum PinMode</span></a></p></li>
+</ul>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="function_namespacecodal_1a31eda7875f5a8038999556662e7821a5.html#exhale-function-namespacecodal-1a31eda7875f5a8038999556662e7821a5"><span class="std std-ref">Function codal::fiber_add_idle_component</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a52fc469a622b9f82932b4c78572bcf73.html#exhale-function-namespacecodal-1a52fc469a622b9f82932b4c78572bcf73"><span class="std std-ref">Function codal::htonl</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a81fa876da802ea3dfc88a9ea5efc2ba0.html#exhale-function-namespacecodal-1a81fa876da802ea3dfc88a9ea5efc2ba0"><span class="std std-ref">Function codal::htons</span></a></p></li>
+</ul>
+</section>
+<section id="defines">
+<h2>Defines<a class="headerlink" href="#defines" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1aac138a1e01602d2169ae1fab3799dda5.html#exhale-define-microbitcompat-8h-1aac138a1e01602d2169ae1fab3799dda5"><span class="std std-ref">Define MICROBIT_ACCEL_ADDED_TO_IDLE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a92c4c1e19cc59a7363dd6a7c2920da38.html#exhale-define-microbitcompat-8h-1a92c4c1e19cc59a7363dd6a7c2920da38"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_3G_THRESHOLD</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a99188d4b4bcaffc538e2231c0a1d9a9e.html#exhale-define-microbitcompat-8h-1a99188d4b4bcaffc538e2231c0a1d9a9e"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_3G_TOLERANCE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a6b95de05f50803454a838a8e27790e95.html#exhale-define-microbitcompat-8h-1a6b95de05f50803454a838a8e27790e95"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_6G_THRESHOLD</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1adf0ae5baffe5b5afa8cab5267e03bd69.html#exhale-define-microbitcompat-8h-1adf0ae5baffe5b5afa8cab5267e03bd69"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_6G_TOLERANCE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a0c3d3ed87b98a22ef0ce3da9252a3b5e.html#exhale-define-microbitcompat-8h-1a0c3d3ed87b98a22ef0ce3da9252a3b5e"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_8G_THRESHOLD</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1af8f12b109efb9a343eb091bfe654d972.html#exhale-define-microbitcompat-8h-1af8f12b109efb9a343eb091bfe654d972"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_8G_TOLERANCE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ad1d83a698b84f9a560ba0387de4afd22.html#exhale-define-microbitcompat-8h-1ad1d83a698b84f9a560ba0387de4afd22"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_EVT_3G</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a6a8c02744cb5b7db54e4f249a0f8537a.html#exhale-define-microbitcompat-8h-1a6a8c02744cb5b7db54e4f249a0f8537a"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_EVT_6G</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1abc79efee14cf23e8d0398d09526b6b2f.html#exhale-define-microbitcompat-8h-1abc79efee14cf23e8d0398d09526b6b2f"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_EVT_8G</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ac899062ff64621e2a249b6c55267b524.html#exhale-define-microbitcompat-8h-1ac899062ff64621e2a249b6c55267b524"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_EVT_DATA_UPDATE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1afe9f8a9cc3d5dd9c353fc0a3213d12ab.html#exhale-define-microbitcompat-8h-1afe9f8a9cc3d5dd9c353fc0a3213d12ab"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_EVT_FACE_DOWN</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ac956b38c81f3f8a1d6ba924548b23b2b.html#exhale-define-microbitcompat-8h-1ac956b38c81f3f8a1d6ba924548b23b2b"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_EVT_FACE_UP</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a27129b6795e790ba3bd8a97cb123f8e9.html#exhale-define-microbitcompat-8h-1a27129b6795e790ba3bd8a97cb123f8e9"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_EVT_FREEFALL</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a562ed079db11c8426ab7ab3ddc9bc107.html#exhale-define-microbitcompat-8h-1a562ed079db11c8426ab7ab3ddc9bc107"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_EVT_NONE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1afc0526ba163dbb4f67ef483336ad82d3.html#exhale-define-microbitcompat-8h-1afc0526ba163dbb4f67ef483336ad82d3"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_EVT_SHAKE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ac23f82dc88d28f3cbc24d5b5251cb81a.html#exhale-define-microbitcompat-8h-1ac23f82dc88d28f3cbc24d5b5251cb81a"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_EVT_TILT_DOWN</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a015f32f1bd1f4092610f294aa94fad02.html#exhale-define-microbitcompat-8h-1a015f32f1bd1f4092610f294aa94fad02"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_EVT_TILT_LEFT</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1aa5a9c4491026b2ed34683505c115ed5d.html#exhale-define-microbitcompat-8h-1aa5a9c4491026b2ed34683505c115ed5d"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_EVT_TILT_RIGHT</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1aea555325cad03d52c91ec0ecfaf531cc.html#exhale-define-microbitcompat-8h-1aea555325cad03d52c91ec0ecfaf531cc"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_EVT_TILT_UP</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ab91a9fb74c1443a356db7bb715a25416.html#exhale-define-microbitcompat-8h-1ab91a9fb74c1443a356db7bb715a25416"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_FREEFALL_THRESHOLD</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1aa5a7a8e6c4732c6a8794302624e096a9.html#exhale-define-microbitcompat-8h-1aa5a7a8e6c4732c6a8794302624e096a9"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_FREEFALL_TOLERANCE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a1418f395638b5c31272dafa189eb793f.html#exhale-define-microbitcompat-8h-1a1418f395638b5c31272dafa189eb793f"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_GESTURE_DAMPING</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ae3308c2af1896bf4574d4e5ddbeb1b5c.html#exhale-define-microbitcompat-8h-1ae3308c2af1896bf4574d4e5ddbeb1b5c"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_REST_THRESHOLD</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a06e7e3f6b45f8defa7cd81f291cb6869.html#exhale-define-microbitcompat-8h-1a06e7e3f6b45f8defa7cd81f291cb6869"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_REST_TOLERANCE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a57e4d7b8ac76a1fcb639eafc3973c689.html#exhale-define-microbitcompat-8h-1a57e4d7b8ac76a1fcb639eafc3973c689"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_SHAKE_COUNT_THRESHOLD</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1abacbeb5d03c5b4d3bf513295f1b3baa9.html#exhale-define-microbitcompat-8h-1abacbeb5d03c5b4d3bf513295f1b3baa9"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_SHAKE_DAMPING</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a22e778a27fcbb1adca4b7e00507bd3cc.html#exhale-define-microbitcompat-8h-1a22e778a27fcbb1adca4b7e00507bd3cc"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_SHAKE_RTX</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a36413c2470d404e388962aac6cc7f150.html#exhale-define-microbitcompat-8h-1a36413c2470d404e388962aac6cc7f150"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_SHAKE_TOLERANCE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ac14b0913ef452682b9b10381db14ed29.html#exhale-define-microbitcompat-8h-1ac14b0913ef452682b9b10381db14ed29"><span class="std std-ref">Define MICROBIT_ACCELEROMETER_TILT_TOLERANCE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a7742502485040679ebe35ccbd8d1c95f.html#exhale-define-microbitcompat-8h-1a7742502485040679ebe35ccbd8d1c95f"><span class="std std-ref">Define MICROBIT_BUSY</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ad5e3d7ce9fa367853bdd8bd6a09473f5.html#exhale-define-microbitcompat-8h-1ad5e3d7ce9fa367853bdd8bd6a09473f5"><span class="std std-ref">Define MICROBIT_BUTTON_ALL_EVENTS</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a728a61b2217d3808bfae382568b571c8.html#exhale-define-microbitcompat-8h-1a728a61b2217d3808bfae382568b571c8"><span class="std std-ref">Define MICROBIT_BUTTON_EVT_CLICK</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a00d5dcc9b6aad875483734c23e2de59a.html#exhale-define-microbitcompat-8h-1a00d5dcc9b6aad875483734c23e2de59a"><span class="std std-ref">Define MICROBIT_BUTTON_EVT_DOUBLE_CLICK</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ab22282404816a99cb50539558713614b.html#exhale-define-microbitcompat-8h-1ab22282404816a99cb50539558713614b"><span class="std std-ref">Define MICROBIT_BUTTON_EVT_DOWN</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1aaa3ec118fb1e5ace4497fb3f033efe86.html#exhale-define-microbitcompat-8h-1aaa3ec118fb1e5ace4497fb3f033efe86"><span class="std std-ref">Define MICROBIT_BUTTON_EVT_HOLD</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1abcb1b96384820997cafddfc3c1d5fd00.html#exhale-define-microbitcompat-8h-1abcb1b96384820997cafddfc3c1d5fd00"><span class="std std-ref">Define MICROBIT_BUTTON_EVT_LONG_CLICK</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a7a3527e5deaf70d8cc375a5954b1c9b7.html#exhale-define-microbitcompat-8h-1a7a3527e5deaf70d8cc375a5954b1c9b7"><span class="std std-ref">Define MICROBIT_BUTTON_EVT_UP</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ac6c7d4eded91becc26aa633ab1f07732.html#exhale-define-microbitcompat-8h-1ac6c7d4eded91becc26aa633ab1f07732"><span class="std std-ref">Define MICROBIT_BUTTON_SIMPLE_EVENTS</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a2f5aeb7e1e61ea60a582f5eee0afd637.html#exhale-define-microbitcompat-8h-1a2f5aeb7e1e61ea60a582f5eee0afd637"><span class="std std-ref">Define MICROBIT_CALIBRATION_IN_PROGRESS</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a5587aa2f94f54b7b1ee3cd106a00246d.html#exhale-define-microbitcompat-8h-1a5587aa2f94f54b7b1ee3cd106a00246d"><span class="std std-ref">Define MICROBIT_CALIBRATION_REQUIRED</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a616f40ba804754c7ca67fefbb7971446.html#exhale-define-microbitcompat-8h-1a616f40ba804754c7ca67fefbb7971446"><span class="std std-ref">Define MICROBIT_CANCELLED</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a9e42ba6f0ddd75fd0c708ef7705abbba.html#exhale-define-microbitcompat-8h-1a9e42ba6f0ddd75fd0c708ef7705abbba"><span class="std std-ref">Define MICROBIT_COMPASS_EVT_CAL_END</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1abf861a87326d1b95b5b3ad19848cbf56.html#exhale-define-microbitcompat-8h-1abf861a87326d1b95b5b3ad19848cbf56"><span class="std std-ref">Define MICROBIT_COMPASS_EVT_CAL_REQUIRED</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a918b8cdb7b48cf048a8502eb9a673c6b.html#exhale-define-microbitcompat-8h-1a918b8cdb7b48cf048a8502eb9a673c6b"><span class="std std-ref">Define MICROBIT_COMPASS_EVT_CAL_START</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a7634868d183c1cf2f47c7323702ec5c5.html#exhale-define-microbitcompat-8h-1a7634868d183c1cf2f47c7323702ec5c5"><span class="std std-ref">Define MICROBIT_COMPASS_EVT_CALIBRATE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1aaaaba5fdd55c532b69a8aa52f134f9d2.html#exhale-define-microbitcompat-8h-1aaaaba5fdd55c532b69a8aa52f134f9d2"><span class="std std-ref">Define MICROBIT_COMPASS_EVT_CALIBRATION_NEEDED</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a953090b9afc93a5f6d6fcfa848d08129.html#exhale-define-microbitcompat-8h-1a953090b9afc93a5f6d6fcfa848d08129"><span class="std std-ref">Define MICROBIT_COMPASS_EVT_CONFIG_NEEDED</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a21c4dbe987331f5f9e38e633f132c128.html#exhale-define-microbitcompat-8h-1a21c4dbe987331f5f9e38e633f132c128"><span class="std std-ref">Define MICROBIT_COMPASS_EVT_DATA_UPDATE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1aee57b686866ea55afb9927ff6e30ff6b.html#exhale-define-microbitcompat-8h-1aee57b686866ea55afb9927ff6e30ff6b"><span class="std std-ref">Define MICROBIT_COMPASS_STATUS_ADDED_TO_IDLE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a917e0627f2d52b49777049773857c1aa.html#exhale-define-microbitcompat-8h-1a917e0627f2d52b49777049773857c1aa"><span class="std std-ref">Define MICROBIT_COMPONENT_RUNNING</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a56f59e8fd974bfed2eca43b7ef2850ef.html#exhale-define-microbitcompat-8h-1a56f59e8fd974bfed2eca43b7ef2850ef"><span class="std std-ref">Define MICROBIT_DBG</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ac1fea18490bb4831ec7054efd6739dba.html#exhale-define-microbitcompat-8h-1ac1fea18490bb4831ec7054efd6739dba"><span class="std std-ref">Define MICROBIT_DEFAULT_PRINT_SPEED</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a6f0bb68c58d9af99751e9fe5e6b82b5e.html#exhale-define-microbitcompat-8h-1a6f0bb68c58d9af99751e9fe5e6b82b5e"><span class="std std-ref">Define MICROBIT_DEFAULT_PULLMODE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1acfe952804d4d20b876ff92092f9f588c.html#exhale-define-microbitcompat-8h-1acfe952804d4d20b876ff92092f9f588c"><span class="std std-ref">Define MICROBIT_DEFAULT_PWM_PERIOD</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a14ad3a01e8271e6f8ead3b080e73f56c.html#exhale-define-microbitcompat-8h-1a14ad3a01e8271e6f8ead3b080e73f56c"><span class="std std-ref">Define MICROBIT_DEFAULT_SCROLL_SPEED</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1aa2df97b7e0761c0b86a5dcea6ef829e5.html#exhale-define-microbitcompat-8h-1aa2df97b7e0761c0b86a5dcea6ef829e5"><span class="std std-ref">Define MICROBIT_DEFAULT_SCROLL_STRIDE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a715859acce52e09ebe26d25a4485c5de.html#exhale-define-microbitcompat-8h-1a715859acce52e09ebe26d25a4485c5de"><span class="std std-ref">Define MICROBIT_DEFAULT_SERIAL_MODE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ac5ed60e35bc50a771ac2130e268c00b7.html#exhale-define-microbitcompat-8h-1ac5ed60e35bc50a771ac2130e268c00b7"><span class="std std-ref">Define MICROBIT_DISPLAY_ANIMATE_DEFAULT_POS</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a246dabc6e820cb1ed9394ac20158ce28.html#exhale-define-microbitcompat-8h-1a246dabc6e820cb1ed9394ac20158ce28"><span class="std std-ref">Define MICROBIT_DISPLAY_DEFAULT_AUTOCLEAR</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1aaaedd4dce1263183ea1f7e6b9512c8a8.html#exhale-define-microbitcompat-8h-1aaaedd4dce1263183ea1f7e6b9512c8a8"><span class="std std-ref">Define MICROBIT_DISPLAY_DEFAULT_BRIGHTNESS</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a247de0b16567f14bff718a215b5ad46b.html#exhale-define-microbitcompat-8h-1a247de0b16567f14bff718a215b5ad46b"><span class="std std-ref">Define MICROBIT_DISPLAY_EVT_ANIMATION_COMPLETE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ae93de8ab900f03a580b5e8dc250c75ad.html#exhale-define-microbitcompat-8h-1ae93de8ab900f03a580b5e8dc250c75ad"><span class="std std-ref">Define MICROBIT_DISPLAY_EVT_FREE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1af3b10710797f59c32d1dae1c47853855.html#exhale-define-microbitcompat-8h-1af3b10710797f59c32d1dae1c47853855"><span class="std std-ref">Define MICROBIT_DISPLAY_EVT_LIGHT_SENSE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a7e5d5d13de927e9d9703eddd93d1dfd3.html#exhale-define-microbitcompat-8h-1a7e5d5d13de927e9d9703eddd93d1dfd3"><span class="std std-ref">Define MICROBIT_DISPLAY_GREYSCALE_BIT_DEPTH</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ab72c8f99e469ab0fb93f2526593cc5e4.html#exhale-define-microbitcompat-8h-1ab72c8f99e469ab0fb93f2526593cc5e4"><span class="std std-ref">Define MICROBIT_DISPLAY_MAXIMUM_BRIGHTNESS</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a15b847ef67d02499313e458e84d31eaa.html#exhale-define-microbitcompat-8h-1a15b847ef67d02499313e458e84d31eaa"><span class="std std-ref">Define MICROBIT_DISPLAY_MINIMUM_BRIGHTNESS</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a3fbba5b5236381ef075c286966768c17.html#exhale-define-microbitcompat-8h-1a3fbba5b5236381ef075c286966768c17"><span class="std std-ref">Define MICROBIT_DISPLAY_ROTATION_0</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a54968891ab2369abbfec34340a610131.html#exhale-define-microbitcompat-8h-1a54968891ab2369abbfec34340a610131"><span class="std std-ref">Define MICROBIT_DISPLAY_ROTATION_180</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a57839f0781c918b31df88a8ffdbf27c2.html#exhale-define-microbitcompat-8h-1a57839f0781c918b31df88a8ffdbf27c2"><span class="std std-ref">Define MICROBIT_DISPLAY_ROTATION_270</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ab915bd6bc04264f82c5bb406fc8d3869.html#exhale-define-microbitcompat-8h-1ab915bd6bc04264f82c5bb406fc8d3869"><span class="std std-ref">Define MICROBIT_DISPLAY_ROTATION_90</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a1fa3392e6d525c5771b557fa67429e2b.html#exhale-define-microbitcompat-8h-1a1fa3392e6d525c5771b557fa67429e2b"><span class="std std-ref">Define MICROBIT_EVENT_DEFAULT_LAUNCH_MODE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a4888edb77284d34fd4fcee728973ff06.html#exhale-define-microbitcompat-8h-1a4888edb77284d34fd4fcee728973ff06"><span class="std std-ref">Define MICROBIT_EVT_ANY</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a09dc76145a3dfb46d6059236153d9075.html#exhale-define-microbitcompat-8h-1a09dc76145a3dfb46d6059236153d9075"><span class="std std-ref">Define MICROBIT_FONT_ASCII_END</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a6dc5b8a30a804fc4d7a12fc85a945735.html#exhale-define-microbitcompat-8h-1a6dc5b8a30a804fc4d7a12fc85a945735"><span class="std std-ref">Define MICROBIT_FONT_ASCII_START</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a5fd256603422c558b21d9767589c141f.html#exhale-define-microbitcompat-8h-1a5fd256603422c558b21d9767589c141f"><span class="std std-ref">Define MICROBIT_FONT_HEIGHT</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a124b067e322e174a01f933c9c134cda9.html#exhale-define-microbitcompat-8h-1a124b067e322e174a01f933c9c134cda9"><span class="std std-ref">Define MICROBIT_FONT_WIDTH</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ad355386a96bb6b9ffd1fbae1120aadc3.html#exhale-define-microbitcompat-8h-1ad355386a96bb6b9ffd1fbae1120aadc3"><span class="std std-ref">Define MICROBIT_HEAP_ALLOCATOR</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a341ae33be8d0414dcdd9e83615a25c41.html#exhale-define-microbitcompat-8h-1a341ae33be8d0414dcdd9e83615a25c41"><span class="std std-ref">Define MICROBIT_HEAP_BLOCK_SIZE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a53284bb64b5cef2e7e1183d6d436e509.html#exhale-define-microbitcompat-8h-1a53284bb64b5cef2e7e1183d6d436e509"><span class="std std-ref">Define MICROBIT_HEAP_DBG</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a69a550c197b054bb1bab7274edcc8594.html#exhale-define-microbitcompat-8h-1a69a550c197b054bb1bab7274edcc8594"><span class="std std-ref">Define MICROBIT_HEAP_END</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1af9e2e8f60c4147bc7c9db819f0a250c1.html#exhale-define-microbitcompat-8h-1af9e2e8f60c4147bc7c9db819f0a250c1"><span class="std std-ref">Define MICROBIT_HEAP_ERROR</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a5a1598d8d84c3967427dde86bad0fc2b.html#exhale-define-microbitcompat-8h-1a5a1598d8d84c3967427dde86bad0fc2b"><span class="std std-ref">Define MICROBIT_I2C_ERROR</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a0214d51ce9e58bbed6fb5881773d73db.html#exhale-define-microbitcompat-8h-1a0214d51ce9e58bbed6fb5881773d73db"><span class="std std-ref">Define MICROBIT_I2C_MAX_RETRIES</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a55a3bc09ebbd1230fb132f9eea05ec10.html#exhale-define-microbitcompat-8h-1a55a3bc09ebbd1230fb132f9eea05ec10"><span class="std std-ref">Define MICROBIT_ID_ACCELEROMETER</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a61aa859009cb401312823fa85a80c70a.html#exhale-define-microbitcompat-8h-1a61aa859009cb401312823fa85a80c70a"><span class="std std-ref">Define MICROBIT_ID_ANY</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a8d5fe298e73b439915da3815911d81d3.html#exhale-define-microbitcompat-8h-1a8d5fe298e73b439915da3815911d81d3"><span class="std std-ref">Define MICROBIT_ID_BUTTON_A</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a4b3f962eb2680a3f0da02969fc4498a7.html#exhale-define-microbitcompat-8h-1a4b3f962eb2680a3f0da02969fc4498a7"><span class="std std-ref">Define MICROBIT_ID_BUTTON_AB</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a906f68db243c58c77563c753b5e61d50.html#exhale-define-microbitcompat-8h-1a906f68db243c58c77563c753b5e61d50"><span class="std std-ref">Define MICROBIT_ID_BUTTON_B</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a5fb6625411673b9e33878e1074a90c00.html#exhale-define-microbitcompat-8h-1a5fb6625411673b9e33878e1074a90c00"><span class="std std-ref">Define MICROBIT_ID_BUTTON_RESET</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ac7967efd0fedad52ef34bc54ab32b486.html#exhale-define-microbitcompat-8h-1ac7967efd0fedad52ef34bc54ab32b486"><span class="std std-ref">Define MICROBIT_ID_COMPASS</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a2de5d6d3d57893e6ab344a9ff4ddd766.html#exhale-define-microbitcompat-8h-1a2de5d6d3d57893e6ab344a9ff4ddd766"><span class="std std-ref">Define MICROBIT_ID_DISPLAY</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1af9e54aa5e1ce9323c1439761853311d9.html#exhale-define-microbitcompat-8h-1af9e54aa5e1ce9323c1439761853311d9"><span class="std std-ref">Define MICROBIT_ID_FACE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a1244943a6d61e6d8646024fce1d0f38c.html#exhale-define-microbitcompat-8h-1a1244943a6d61e6d8646024fce1d0f38c"><span class="std std-ref">Define MICROBIT_ID_GESTURE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a5b4997d8183bb003ab1bac3b53b53608.html#exhale-define-microbitcompat-8h-1a5b4997d8183bb003ab1bac3b53b53608"><span class="std std-ref">Define MICROBIT_ID_IO_P0</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a5846344e34aa571d250f83e31e6ffbf8.html#exhale-define-microbitcompat-8h-1a5846344e34aa571d250f83e31e6ffbf8"><span class="std std-ref">Define MICROBIT_ID_IO_P1</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ae592fdb3fcffb2c1364d29e8f2e97b22.html#exhale-define-microbitcompat-8h-1ae592fdb3fcffb2c1364d29e8f2e97b22"><span class="std std-ref">Define MICROBIT_ID_IO_P10</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a6f7039b4256ff082cc5dd8f306582846.html#exhale-define-microbitcompat-8h-1a6f7039b4256ff082cc5dd8f306582846"><span class="std std-ref">Define MICROBIT_ID_IO_P11</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1aa83956a4e705640f673efe4423af46d9.html#exhale-define-microbitcompat-8h-1aa83956a4e705640f673efe4423af46d9"><span class="std std-ref">Define MICROBIT_ID_IO_P12</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1aeac39b240f174855a6a3f28968abf2d7.html#exhale-define-microbitcompat-8h-1aeac39b240f174855a6a3f28968abf2d7"><span class="std std-ref">Define MICROBIT_ID_IO_P13</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1aeb05070266fa54e40dd31d7aa8d2c038.html#exhale-define-microbitcompat-8h-1aeb05070266fa54e40dd31d7aa8d2c038"><span class="std std-ref">Define MICROBIT_ID_IO_P14</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a1d72e8f678e5c20c05e2214b8042bb02.html#exhale-define-microbitcompat-8h-1a1d72e8f678e5c20c05e2214b8042bb02"><span class="std std-ref">Define MICROBIT_ID_IO_P15</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a8be582163c6f0186aee52e883abffeff.html#exhale-define-microbitcompat-8h-1a8be582163c6f0186aee52e883abffeff"><span class="std std-ref">Define MICROBIT_ID_IO_P16</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a06ff117f413e3291ffc7fb78ab0fe3ed.html#exhale-define-microbitcompat-8h-1a06ff117f413e3291ffc7fb78ab0fe3ed"><span class="std std-ref">Define MICROBIT_ID_IO_P19</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a12c1b7bcf65dceb160612c8ba90e8f8d.html#exhale-define-microbitcompat-8h-1a12c1b7bcf65dceb160612c8ba90e8f8d"><span class="std std-ref">Define MICROBIT_ID_IO_P2</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ae6d69d4a6ae41f15f854d2f2a7d8a0e8.html#exhale-define-microbitcompat-8h-1ae6d69d4a6ae41f15f854d2f2a7d8a0e8"><span class="std std-ref">Define MICROBIT_ID_IO_P20</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a47b676604e61a286ec247cb2a40ac269.html#exhale-define-microbitcompat-8h-1a47b676604e61a286ec247cb2a40ac269"><span class="std std-ref">Define MICROBIT_ID_IO_P3</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1aaebd8b26e91a8fc9118b995a10f8c391.html#exhale-define-microbitcompat-8h-1aaebd8b26e91a8fc9118b995a10f8c391"><span class="std std-ref">Define MICROBIT_ID_IO_P4</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1aa8c1d4e2c5fa74597b76cca965d29098.html#exhale-define-microbitcompat-8h-1aa8c1d4e2c5fa74597b76cca965d29098"><span class="std std-ref">Define MICROBIT_ID_IO_P5</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1aaadc1122e2198e58e2ddd29747ca7a31.html#exhale-define-microbitcompat-8h-1aaadc1122e2198e58e2ddd29747ca7a31"><span class="std std-ref">Define MICROBIT_ID_IO_P6</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a346b6e3d2381c07a39c63fbb8418022e.html#exhale-define-microbitcompat-8h-1a346b6e3d2381c07a39c63fbb8418022e"><span class="std std-ref">Define MICROBIT_ID_IO_P7</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a484f68879ecfdb3a05543cb64fa03163.html#exhale-define-microbitcompat-8h-1a484f68879ecfdb3a05543cb64fa03163"><span class="std std-ref">Define MICROBIT_ID_IO_P8</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a04880746c86fd1d45c2e5c550074eb0d.html#exhale-define-microbitcompat-8h-1a04880746c86fd1d45c2e5c550074eb0d"><span class="std std-ref">Define MICROBIT_ID_IO_P9</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a20c7cb0eeca159dd2a01910c12b91f9e.html#exhale-define-microbitcompat-8h-1a20c7cb0eeca159dd2a01910c12b91f9e"><span class="std std-ref">Define MICROBIT_ID_LOG</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a024325c2c53c8d7bd20da62ae5a56826.html#exhale-define-microbitcompat-8h-1a024325c2c53c8d7bd20da62ae5a56826"><span class="std std-ref">Define MICROBIT_ID_LOGO</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a12fd256db57cdf8a515176f82a3596f9.html#exhale-define-microbitcompat-8h-1a12fd256db57cdf8a515176f82a3596f9"><span class="std std-ref">Define MICROBIT_ID_MBED_INTERRUPT_IN</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a3d6239a81f2d0ed3f14524e2a3a60365.html#exhale-define-microbitcompat-8h-1a3d6239a81f2d0ed3f14524e2a3a60365"><span class="std std-ref">Define MICROBIT_ID_MBED_PWM</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a80e95c91db666e8e3cbe015ae13e8b81.html#exhale-define-microbitcompat-8h-1a80e95c91db666e8e3cbe015ae13e8b81"><span class="std std-ref">Define MICROBIT_ID_MBED_TICKER</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ae16c2b71d6c7a4dcde6389bfb1fa8b2a.html#exhale-define-microbitcompat-8h-1ae16c2b71d6c7a4dcde6389bfb1fa8b2a"><span class="std std-ref">Define MICROBIT_ID_MBED_TIMEOUT</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a485b1a6750f9571eea423c13355b3090.html#exhale-define-microbitcompat-8h-1a485b1a6750f9571eea423c13355b3090"><span class="std std-ref">Define MICROBIT_ID_MESSAGE_BUS_LISTENER</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a08d4c96a9054f4b03f338d8b630610ed.html#exhale-define-microbitcompat-8h-1a08d4c96a9054f4b03f338d8b630610ed"><span class="std std-ref">Define MICROBIT_ID_MULTIBUTTON_ATTACH</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a6be229d08fc236b50090dec9f147a650.html#exhale-define-microbitcompat-8h-1a6be229d08fc236b50090dec9f147a650"><span class="std std-ref">Define MICROBIT_ID_NOTIFY</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a4a24e455f109ec28b140b1b69a8b7818.html#exhale-define-microbitcompat-8h-1a4a24e455f109ec28b140b1b69a8b7818"><span class="std std-ref">Define MICROBIT_ID_NOTIFY_ONE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ae8aeee10ed9de95bc031bb70dba0ad62.html#exhale-define-microbitcompat-8h-1ae8aeee10ed9de95bc031bb70dba0ad62"><span class="std std-ref">Define MICROBIT_ID_PARTIAL_FLASHING</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a142c36cfeea633879dfb1175803132ec.html#exhale-define-microbitcompat-8h-1a142c36cfeea633879dfb1175803132ec"><span class="std std-ref">Define MICROBIT_ID_POWER_MANAGER</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a7bfd35f94230c54f4a035ecd0d4387be.html#exhale-define-microbitcompat-8h-1a7bfd35f94230c54f4a035ecd0d4387be"><span class="std std-ref">Define MICROBIT_ID_RADIO</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ab7fc7ab0336ea2d0f5f31d15cc83c8ac.html#exhale-define-microbitcompat-8h-1ab7fc7ab0336ea2d0f5f31d15cc83c8ac"><span class="std std-ref">Define MICROBIT_ID_RADIO_DATA_READY</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a9d3498b7fc7900550681f7485f4624f7.html#exhale-define-microbitcompat-8h-1a9d3498b7fc7900550681f7485f4624f7"><span class="std std-ref">Define MICROBIT_ID_SERIAL</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a04b2baee16546c324e7ddd568556f02d.html#exhale-define-microbitcompat-8h-1a04b2baee16546c324e7ddd568556f02d"><span class="std std-ref">Define MICROBIT_ID_THERMOMETER</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a862a6be4e4533268c377938650695db5.html#exhale-define-microbitcompat-8h-1a862a6be4e4533268c377938650695db5"><span class="std std-ref">Define MICROBIT_ID_USB_FLASH_MANAGER</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a391f5a247f047e94342d464dda9831e4.html#exhale-define-microbitcompat-8h-1a391f5a247f047e94342d464dda9831e4"><span class="std std-ref">Define MICROBIT_ID_VIRTUAL_SPEAKER_PIN</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a0160fd1bbe45da1d695ffbe6186d2d0e.html#exhale-define-microbitcompat-8h-1a0160fd1bbe45da1d695ffbe6186d2d0e"><span class="std std-ref">Define MICROBIT_IDLE_COMPONENTS</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ad81e59880c2c614030dc3f8a6a211560.html#exhale-define-microbitcompat-8h-1ad81e59880c2c614030dc3f8a6a211560"><span class="std std-ref">Define MICROBIT_INVALID_PARAMETER</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a82e7f978ccda7ed0e40eccaf7e9b8a15.html#exhale-define-microbitcompat-8h-1a82e7f978ccda7ed0e40eccaf7e9b8a15"><span class="std std-ref">Define MICROBIT_MAXIMUM_HEAPS</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a45f05ad2bf3504af96a938de48d595c8.html#exhale-define-microbitcompat-8h-1a45f05ad2bf3504af96a938de48d595c8"><span class="std std-ref">Define MICROBIT_NESTED_HEAP_SIZE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a6f132347e3a6026bc4bcb92466a73fe1.html#exhale-define-microbitcompat-8h-1a6f132347e3a6026bc4bcb92466a73fe1"><span class="std std-ref">Define MICROBIT_NO_DATA</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1aed658527e020ab308bf66ae6b9c1c658.html#exhale-define-microbitcompat-8h-1aed658527e020ab308bf66ae6b9c1c658"><span class="std std-ref">Define MICROBIT_NO_RESOURCES</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a25a2b316eba56a1b3f5bf080b59af909.html#exhale-define-microbitcompat-8h-1a25a2b316eba56a1b3f5bf080b59af909"><span class="std std-ref">Define MICROBIT_NOT_SUPPORTED</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a3e4093c10621bb4ae9c6d163fd661502.html#exhale-define-microbitcompat-8h-1a3e4093c10621bb4ae9c6d163fd661502"><span class="std std-ref">Define MICROBIT_NULL_DEREFERENCE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a8749b9a64a97973577cb3b9c54c8d870.html#exhale-define-microbitcompat-8h-1a8749b9a64a97973577cb3b9c54c8d870"><span class="std std-ref">Define MICROBIT_OK</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1aa4cc957f959c6781473c6f1fa90a163b.html#exhale-define-microbitcompat-8h-1aa4cc957f959c6781473c6f1fa90a163b"><span class="std std-ref">Define MICROBIT_OOM</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a1616cb220bd784782d6a23c5d86f4038.html#exhale-define-microbitcompat-8h-1a1616cb220bd784782d6a23c5d86f4038"><span class="std std-ref">Define MICROBIT_PANIC_HEAP_FULL</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ad52924a8e07a0df3e65f8a4d2d95b3ec.html#exhale-define-microbitcompat-8h-1ad52924a8e07a0df3e65f8a4d2d95b3ec"><span class="std std-ref">Define MICROBIT_PIN_DEFAULT_SERVO_CENTER</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a9d5fc28e2549b5720b25150b346b934e.html#exhale-define-microbitcompat-8h-1a9d5fc28e2549b5720b25150b346b934e"><span class="std std-ref">Define MICROBIT_PIN_DEFAULT_SERVO_RANGE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a209159e0ca048bc7e3002cf9f0eca545.html#exhale-define-microbitcompat-8h-1a209159e0ca048bc7e3002cf9f0eca545"><span class="std std-ref">Define MICROBIT_PIN_EVENT_NONE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a70bcdadd0128658073cb1267f7714c15.html#exhale-define-microbitcompat-8h-1a70bcdadd0128658073cb1267f7714c15"><span class="std std-ref">Define MICROBIT_PIN_EVENT_ON_EDGE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ad6ff426570a7396e106d3c955e2402dd.html#exhale-define-microbitcompat-8h-1ad6ff426570a7396e106d3c955e2402dd"><span class="std std-ref">Define MICROBIT_PIN_EVENT_ON_PULSE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ac439fac32f76999a7916f37e6c84c647.html#exhale-define-microbitcompat-8h-1ac439fac32f76999a7916f37e6c84c647"><span class="std std-ref">Define MICROBIT_PIN_EVENT_ON_TOUCH</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1aeaac77e1791aa8ccfe5acbfb783ce617.html#exhale-define-microbitcompat-8h-1aeaac77e1791aa8ccfe5acbfb783ce617"><span class="std std-ref">Define MICROBIT_PIN_EVT_FALL</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a26957a2732ee180fbe1f40774eb7bf13.html#exhale-define-microbitcompat-8h-1a26957a2732ee180fbe1f40774eb7bf13"><span class="std std-ref">Define MICROBIT_PIN_EVT_PULSE_HI</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a1dd1a6354b52ac315819e4a0293c83ef.html#exhale-define-microbitcompat-8h-1a1dd1a6354b52ac315819e4a0293c83ef"><span class="std std-ref">Define MICROBIT_PIN_EVT_PULSE_LO</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a6fb23edcb2885c94cbfd2e895e800cde.html#exhale-define-microbitcompat-8h-1a6fb23edcb2885c94cbfd2e895e800cde"><span class="std std-ref">Define MICROBIT_PIN_EVT_RISE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a672ffc2dbe90b2d87eccd643c5d58f65.html#exhale-define-microbitcompat-8h-1a672ffc2dbe90b2d87eccd643c5d58f65"><span class="std std-ref">Define MICROBIT_PIN_MAX_OUTPUT</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a105e19987b0e264793f11468bcf96e35.html#exhale-define-microbitcompat-8h-1a105e19987b0e264793f11468bcf96e35"><span class="std std-ref">Define MICROBIT_PIN_MAX_SERVO_RANGE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1afd6dfa5b397285532103ebe99e02347c.html#exhale-define-microbitcompat-8h-1afd6dfa5b397285532103ebe99e02347c"><span class="std std-ref">Define MICROBIT_SCHEDULER_RUNNING</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1aa0fa6fc5cdbf7228ec2d4c6c453a7608.html#exhale-define-microbitcompat-8h-1aa0fa6fc5cdbf7228ec2d4c6c453a7608"><span class="std std-ref">Define MICROBIT_SERIAL_DEFAULT_BAUD_RATE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1af90397b234ab9777c0fc60250ae79645.html#exhale-define-microbitcompat-8h-1af90397b234ab9777c0fc60250ae79645"><span class="std std-ref">Define MICROBIT_SERIAL_DEFAULT_BUFFER_SIZE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a7b7d42e566493f36371f969d95ae7b4c.html#exhale-define-microbitcompat-8h-1a7b7d42e566493f36371f969d95ae7b4c"><span class="std std-ref">Define MICROBIT_SERIAL_EVT_DELIM_MATCH</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a1d44b39b0f532abda4fbe36a92096d53.html#exhale-define-microbitcompat-8h-1a1d44b39b0f532abda4fbe36a92096d53"><span class="std std-ref">Define MICROBIT_SERIAL_EVT_HEAD_MATCH</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ae55a237880d0ca5b8c0e47cbdcbb574c.html#exhale-define-microbitcompat-8h-1ae55a237880d0ca5b8c0e47cbdcbb574c"><span class="std std-ref">Define MICROBIT_SERIAL_EVT_RX_FULL</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a5c39b35aa30dcc65fec5708322522c33.html#exhale-define-microbitcompat-8h-1a5c39b35aa30dcc65fec5708322522c33"><span class="std std-ref">Define MICROBIT_SERIAL_EVT_TX_EMPTY</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1ac7b20617074f07963822c3d78a8cea1d.html#exhale-define-microbitcompat-8h-1ac7b20617074f07963822c3d78a8cea1d"><span class="std std-ref">Define MICROBIT_SERIAL_IN_USE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a5891b5c64445ac553d37146a974d5973.html#exhale-define-microbitcompat-8h-1a5891b5c64445ac553d37146a974d5973"><span class="std std-ref">Define MICROBIT_SERIAL_RX_BUFF_INIT</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1adcb333a4dbd4656d3183f29b875f7562.html#exhale-define-microbitcompat-8h-1adcb333a4dbd4656d3183f29b875f7562"><span class="std std-ref">Define MICROBIT_SERIAL_RX_IN_USE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a24384b9d06670a60becad57280a13071.html#exhale-define-microbitcompat-8h-1a24384b9d06670a60becad57280a13071"><span class="std std-ref">Define MICROBIT_SERIAL_TX_BUFF_INIT</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1aad30f00d0966b53f6d39a131eeebf393.html#exhale-define-microbitcompat-8h-1aad30f00d0966b53f6d39a131eeebf393"><span class="std std-ref">Define MICROBIT_SERIAL_TX_IN_USE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1aaf4d28e23e5eea80fbce188b7a95e829.html#exhale-define-microbitcompat-8h-1aaf4d28e23e5eea80fbce188b7a95e829"><span class="std std-ref">Define MICROBIT_SRAM_BASE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a5d9c18da191ec80961dc4aaf39a1598c.html#exhale-define-microbitcompat-8h-1a5d9c18da191ec80961dc4aaf39a1598c"><span class="std std-ref">Define MICROBIT_SRAM_END</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a557a60cea7900345ef8a4560f4a2f0e0.html#exhale-define-microbitcompat-8h-1a557a60cea7900345ef8a4560f4a2f0e0"><span class="std std-ref">Define MICROBIT_STACK_SIZE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1acfc80f25f531ce4765b232eef9fa3dcd.html#exhale-define-microbitcompat-8h-1acfc80f25f531ce4765b232eef9fa3dcd"><span class="std std-ref">Define MICROBIT_SYSTEM_COMPONENTS</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a3ebfc37f4afc6b5fd8709c0593931ccf.html#exhale-define-microbitcompat-8h-1a3ebfc37f4afc6b5fd8709c0593931ccf"><span class="std std-ref">Define MICROBIT_UART_S_EVT_TX_EMPTY</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a7334c540878c8c4d801fd75ed9fd8063.html#exhale-define-microbitcompat-8h-1a7334c540878c8c4d801fd75ed9fd8063"><span class="std std-ref">Define MISO</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a5d3f11f2fdf8a7e27b975291e0c2c8cc.html#exhale-define-microbitcompat-8h-1a5d3f11f2fdf8a7e27b975291e0c2c8cc"><span class="std std-ref">Define MOSI</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1a2dd443a4430713d325ab86895a4a45eb.html#exhale-define-microbitcompat-8h-1a2dd443a4430713d325ab86895a4a45eb"><span class="std std-ref">Define SCK</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitCompat_8h_1aadd93900fc87105fa3ef514675d4133b.html#exhale-define-microbitcompat-8h-1aadd93900fc87105fa3ef514675d4133b"><span class="std std-ref">Define SPI</span></a></p></li>
+</ul>
+</section>
+<section id="typedefs">
+<h2>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="typedef_MicroBitCompat_8h_1a82e6e2fcebf5ebde30c206e5a16fe7c0.html#exhale-typedef-microbitcompat-8h-1a82e6e2fcebf5ebde30c206e5a16fe7c0"><span class="std std-ref">Typedef MicroBitComponent</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_MicroBitCompat_8h_1ab2b8aad33ff526d5a6ecdcfb57db7f1e.html#exhale-typedef-microbitcompat-8h-1ab2b8aad33ff526d5a6ecdcfb57db7f1e"><span class="std std-ref">Typedef MicroBitEvent</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_MicroBitCompat_8h_1aa53904c072baf2f3b81397a3ed10b4e7.html#exhale-typedef-microbitcompat-8h-1aa53904c072baf2f3b81397a3ed10b4e7"><span class="std std-ref">Typedef MicroBitEventLaunchMode</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_MicroBitCompat_8h_1a6b4ed0fd0d053febb2523f83785b0efa.html#exhale-typedef-microbitcompat-8h-1a6b4ed0fd0d053febb2523f83785b0efa"><span class="std std-ref">Typedef MicroBitFont</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_MicroBitCompat_8h_1af3f34f30d9b449e4f2247a45b1d7b884.html#exhale-typedef-microbitcompat-8h-1af3f34f30d9b449e4f2247a45b1d7b884"><span class="std std-ref">Typedef MicroBitImage</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_MicroBitCompat_8h_1a2945ad755e7f240df82d56f8b2007676.html#exhale-typedef-microbitcompat-8h-1a2945ad755e7f240df82d56f8b2007676"><span class="std std-ref">Typedef MicroBitListener</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_MicroBitCompat_8h_1a28bda0a8dfeb8ed3ef544e75e70d624d.html#exhale-typedef-microbitcompat-8h-1a28bda0a8dfeb8ed3ef544e75e70d624d"><span class="std std-ref">Typedef MicroBitPin</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_MicroBitCompat_8h_1a1705ced36510a692efcf26564f11efe8.html#exhale-typedef-microbitcompat-8h-1a1705ced36510a692efcf26564f11efe8"><span class="std std-ref">Typedef MicroBitSerialMode</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_MicroBitCompat_8h_1a5528ff96a60f11d121459d5c0cfe52fc.html#exhale-typedef-microbitcompat-8h-1a5528ff96a60f11d121459d5c0cfe52fc"><span class="std std-ref">Typedef MicroBitStorage</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

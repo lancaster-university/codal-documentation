@@ -1,0 +1,107 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitLog.h:
+
+File MicroBitLog.h
+==================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/MicroBitLog.h``)
+------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitLog.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``FSCache.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_FSCache.h`)
+
+- ``ManagedString.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_ManagedString.h`)
+
+- ``MicroBitUSBFlashManager.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitUSBFlashManager.h`)
+
+- ``NRF52Serial.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitLog.cpp`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_codal`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structcodal_1_1JournalEntry`
+
+- :ref:`exhale_struct_structcodal_1_1MicroBitLogMetaData`
+
+- :ref:`exhale_class_classcodal_1_1ColumnEntry`
+
+- :ref:`exhale_class_classcodal_1_1MicroBitLog`
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_namespacecodal_1aad67e961be14bb8567846d2abb24e67f`
+
+- :ref:`exhale_enum_namespacecodal_1a56d64e68fe03b41e0fad7a0eee1fb9f7`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_MicroBitLog_8h_1af82a7bbae743971dca82b8b2ff23de43`
+
+- :ref:`exhale_define_MicroBitLog_8h_1a8dd13f58c06e32f6df581d2d1ac9bf17`
+
+- :ref:`exhale_define_MicroBitLog_8h_1a3da8c0ec0f884e75c06c8181823a022a`
+
+- :ref:`exhale_define_MicroBitLog_8h_1a293c46aea3a9d10088d986ddbdadeea4`
+
+- :ref:`exhale_define_MicroBitLog_8h_1af9cfb93f27c6c2029cfe1213c41cce10`
+
+- :ref:`exhale_define_MicroBitLog_8h_1a567b152a918da1ecf6994feee050faa1`
+
+- :ref:`exhale_define_MicroBitLog_8h_1a94726a1881fa43b27e9e5d631c63bdee`
+
+- :ref:`exhale_define_MicroBitLog_8h_1a62bd8913b3042396c5038f6caa124e7d`
+
+- :ref:`exhale_define_MicroBitLog_8h_1a96b0b21148b8ee883d07a219db12db8d`
+
+- :ref:`exhale_define_MicroBitLog_8h_1a283c2250c22d9a38b2b4edfb2150f6ca`
+
+- :ref:`exhale_define_MicroBitLog_8h_1af7031e44ad4525449d3cf26451521b90`
+
+- :ref:`exhale_define_MicroBitLog_8h_1aa15edbe0864cba6c5f71c28a58dea85d`
+

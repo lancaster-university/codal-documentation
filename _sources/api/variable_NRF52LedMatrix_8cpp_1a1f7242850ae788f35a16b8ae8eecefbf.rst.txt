@@ -1,0 +1,14 @@
+.. _exhale_variable_NRF52LedMatrix_8cpp_1a1f7242850ae788f35a16b8ae8eecefbf:
+
+Variable instance
+=================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_NRF52LedMatrix.cpp`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: instance
+   :project: CODAL

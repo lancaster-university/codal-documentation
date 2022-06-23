@@ -1,0 +1,592 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Class CodalComponent &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL for the Micro:bit v2
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/the-basics.html">
+     The Basics - CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nested-relationships">
+   Nested Relationships
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nested-types">
+     Nested Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inheritance-relationships">
+   Inheritance Relationships
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derived-types">
+     Derived Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Class CodalComponent</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nested-relationships">
+   Nested Relationships
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nested-types">
+     Nested Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inheritance-relationships">
+   Inheritance Relationships
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derived-types">
+     Derived Types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="class-codalcomponent">
+<span id="exhale-class-classcodal-1-1codalcomponent"></span><h1>Class CodalComponent<a class="headerlink" href="#class-codalcomponent" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalComponent.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-codalcomponent-h"><span class="std std-ref">File CodalComponent.h</span></a></p></li>
+</ul>
+<section id="nested-relationships">
+<h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Permalink to this headline">#</a></h2>
+<section id="nested-types">
+<h3>Nested Types<a class="headerlink" href="#nested-types" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="structcodal_1_1CodalComponent_1_1deepSleepCallbackData.html#exhale-struct-structcodal-1-1codalcomponent-1-1deepsleepcallbackdata"><span class="std std-ref">Struct CodalComponent::deepSleepCallbackData</span></a></p></li>
+</ul>
+</section>
+</section>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">#</a></h2>
+<section id="derived-types">
+<h3>Derived Types<a class="headerlink" href="#derived-types" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::AbstractButton</span></code> (<a class="reference internal" href="classcodal_1_1AbstractButton.html#exhale-class-classcodal-1-1abstractbutton"><span class="std std-ref">Class AbstractButton</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::Accelerometer</span></code> (<a class="reference internal" href="classcodal_1_1Accelerometer.html#exhale-class-classcodal-1-1accelerometer"><span class="std std-ref">Class Accelerometer</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::AnimatedDisplay</span></code> (<a class="reference internal" href="classcodal_1_1AnimatedDisplay.html#exhale-class-classcodal-1-1animateddisplay"><span class="std std-ref">Class AnimatedDisplay</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::Compass</span></code> (<a class="reference internal" href="classcodal_1_1Compass.html#exhale-class-classcodal-1-1compass"><span class="std std-ref">Class Compass</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::Display</span></code> (<a class="reference internal" href="classcodal_1_1Display.html#exhale-class-classcodal-1-1display"><span class="std std-ref">Class Display</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::Gyroscope</span></code> (<a class="reference internal" href="classcodal_1_1Gyroscope.html#exhale-class-classcodal-1-1gyroscope"><span class="std std-ref">Class Gyroscope</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::LevelDetector</span></code> (<a class="reference internal" href="classcodal_1_1LevelDetector.html#exhale-class-classcodal-1-1leveldetector"><span class="std std-ref">Class LevelDetector</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::LevelDetectorSPL</span></code> (<a class="reference internal" href="classcodal_1_1LevelDetectorSPL.html#exhale-class-classcodal-1-1leveldetectorspl"><span class="std std-ref">Class LevelDetectorSPL</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::LowLevelTimer</span></code> (<a class="reference internal" href="classcodal_1_1LowLevelTimer.html#exhale-class-classcodal-1-1lowleveltimer"><span class="std std-ref">Class LowLevelTimer</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::MessageBus</span></code> (<a class="reference internal" href="classcodal_1_1MessageBus.html#exhale-class-classcodal-1-1messagebus"><span class="std std-ref">Class MessageBus</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::MicroBitAudio</span></code> (<a class="reference internal" href="classcodal_1_1MicroBitAudio.html#exhale-class-classcodal-1-1microbitaudio"><span class="std std-ref">Class MicroBitAudio</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private</span> <span class="pre">codal::MicroBitRadio</span></code> (<a class="reference internal" href="classcodal_1_1MicroBitRadio.html#exhale-class-classcodal-1-1microbitradio"><span class="std std-ref">Class MicroBitRadio</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::MicroBitThermometer</span></code> (<a class="reference internal" href="classcodal_1_1MicroBitThermometer.html#exhale-class-classcodal-1-1microbitthermometer"><span class="std std-ref">Class MicroBitThermometer</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::Radio</span></code> (<a class="reference internal" href="classcodal_1_1Radio.html#exhale-class-classcodal-1-1radio"><span class="std std-ref">Class Radio</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::Sensor</span></code> (<a class="reference internal" href="classcodal_1_1Sensor.html#exhale-class-classcodal-1-1sensor"><span class="std std-ref">Class Sensor</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::Serial</span></code> (<a class="reference internal" href="classcodal_1_1Serial.html#exhale-class-classcodal-1-1serial"><span class="std std-ref">Class Serial</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::SingleWireSerial</span></code> (<a class="reference internal" href="classcodal_1_1SingleWireSerial.html#exhale-class-classcodal-1-1singlewireserial"><span class="std std-ref">Class SingleWireSerial</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::SoundEmojiSynthesizer</span></code> (<a class="reference internal" href="classcodal_1_1SoundEmojiSynthesizer.html#exhale-class-classcodal-1-1soundemojisynthesizer"><span class="std std-ref">Class SoundEmojiSynthesizer</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::SoundOutputPin</span></code> (<a class="reference internal" href="classcodal_1_1SoundOutputPin.html#exhale-class-classcodal-1-1soundoutputpin"><span class="std std-ref">Class SoundOutputPin</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::ST7735</span></code> (<a class="reference internal" href="classcodal_1_1ST7735.html#exhale-class-classcodal-1-1st7735"><span class="std std-ref">Class ST7735</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::StreamSplitter</span></code> (<a class="reference internal" href="classcodal_1_1StreamSplitter.html#exhale-class-classcodal-1-1streamsplitter"><span class="std std-ref">Class StreamSplitter</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::Synthesizer</span></code> (<a class="reference internal" href="classcodal_1_1Synthesizer.html#exhale-class-classcodal-1-1synthesizer"><span class="std std-ref">Class Synthesizer</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private</span> <span class="pre">codal::TouchSensor</span></code> (<a class="reference internal" href="classcodal_1_1TouchSensor.html#exhale-class-classcodal-1-1touchsensor"><span class="std std-ref">Class TouchSensor</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">MicroBitPowerManager</span></code> (<a class="reference internal" href="classMicroBitPowerManager.html#exhale-class-classmicrobitpowermanager"><span class="std std-ref">Class MicroBitPowerManager</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">MicroBitUSBFlashManager</span></code> (<a class="reference internal" href="classMicroBitUSBFlashManager.html#exhale-class-classmicrobitusbflashmanager"><span class="std std-ref">Class MicroBitUSBFlashManager</span></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">#</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponentE">
+<span id="_CPPv3N5codal14CodalComponentE"></span><span id="_CPPv2N5codal14CodalComponentE"></span><span id="codal::CodalComponent"></span><span class="target" id="classcodal_1_1CodalComponent"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CodalComponent</span></span></span><a class="headerlink" href="#_CPPv4N5codal14CodalComponentE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Subclassed by <a class="reference internal" href="classcodal_1_1AbstractButton.html#classcodal_1_1AbstractButton"><span class="std std-ref">codal::AbstractButton</span></a>, <a class="reference internal" href="classcodal_1_1Accelerometer.html#classcodal_1_1Accelerometer"><span class="std std-ref">codal::Accelerometer</span></a>, <a class="reference internal" href="classcodal_1_1AnimatedDisplay.html#classcodal_1_1AnimatedDisplay"><span class="std std-ref">codal::AnimatedDisplay</span></a>, <a class="reference internal" href="classcodal_1_1Compass.html#classcodal_1_1Compass"><span class="std std-ref">codal::Compass</span></a>, <a class="reference internal" href="classcodal_1_1Display.html#classcodal_1_1Display"><span class="std std-ref">codal::Display</span></a>, <a class="reference internal" href="classcodal_1_1Gyroscope.html#classcodal_1_1Gyroscope"><span class="std std-ref">codal::Gyroscope</span></a>, <a class="reference internal" href="classcodal_1_1LevelDetector.html#classcodal_1_1LevelDetector"><span class="std std-ref">codal::LevelDetector</span></a>, <a class="reference internal" href="classcodal_1_1LevelDetectorSPL.html#classcodal_1_1LevelDetectorSPL"><span class="std std-ref">codal::LevelDetectorSPL</span></a>, <a class="reference internal" href="classcodal_1_1LowLevelTimer.html#classcodal_1_1LowLevelTimer"><span class="std std-ref">codal::LowLevelTimer</span></a>, <a class="reference internal" href="classcodal_1_1MessageBus.html#classcodal_1_1MessageBus"><span class="std std-ref">codal::MessageBus</span></a>, <a class="reference internal" href="classcodal_1_1MicroBitAudio.html#classcodal_1_1MicroBitAudio"><span class="std std-ref">codal::MicroBitAudio</span></a>, <a class="reference internal" href="classcodal_1_1MicroBitRadio.html#classcodal_1_1MicroBitRadio"><span class="std std-ref">codal::MicroBitRadio</span></a>, <a class="reference internal" href="classcodal_1_1MicroBitThermometer.html#classcodal_1_1MicroBitThermometer"><span class="std std-ref">codal::MicroBitThermometer</span></a>, <a class="reference internal" href="classcodal_1_1Radio.html#classcodal_1_1Radio"><span class="std std-ref">codal::Radio</span></a>, <a class="reference internal" href="classcodal_1_1Sensor.html#classcodal_1_1Sensor"><span class="std std-ref">codal::Sensor</span></a>, <a class="reference internal" href="classcodal_1_1Serial.html#classcodal_1_1Serial"><span class="std std-ref">codal::Serial</span></a>, <a class="reference internal" href="classcodal_1_1SingleWireSerial.html#classcodal_1_1SingleWireSerial"><span class="std std-ref">codal::SingleWireSerial</span></a>, <a class="reference internal" href="classcodal_1_1SoundEmojiSynthesizer.html#classcodal_1_1SoundEmojiSynthesizer"><span class="std std-ref">codal::SoundEmojiSynthesizer</span></a>, <a class="reference internal" href="classcodal_1_1SoundOutputPin.html#classcodal_1_1SoundOutputPin"><span class="std std-ref">codal::SoundOutputPin</span></a>, <a class="reference internal" href="classcodal_1_1ST7735.html#classcodal_1_1ST7735"><span class="std std-ref">codal::ST7735</span></a>, <a class="reference internal" href="classcodal_1_1StreamSplitter.html#classcodal_1_1StreamSplitter"><span class="std std-ref">codal::StreamSplitter</span></a>, <a class="reference internal" href="classcodal_1_1Synthesizer.html#classcodal_1_1Synthesizer"><span class="std std-ref">codal::Synthesizer</span></a>, <a class="reference internal" href="classcodal_1_1TouchSensor.html#classcodal_1_1TouchSensor"><span class="std std-ref">codal::TouchSensor</span></a>, <a class="reference internal" href="classMicroBitPowerManager.html#classMicroBitPowerManager"><span class="std std-ref">MicroBitPowerManager</span></a>, <a class="reference internal" href="classMicroBitUSBFlashManager.html#classMicroBitUSBFlashManager"><span class="std std-ref">MicroBitUSBFlashManager</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent23deepSleepCallbackReasonE">
+<span id="_CPPv3N5codal14CodalComponent23deepSleepCallbackReasonE"></span><span id="_CPPv2N5codal14CodalComponent23deepSleepCallbackReasonE"></span><span class="target" id="classcodal_1_1CodalComponent_1a6dcf2a07948ff43d09ac17a5c5758a6e"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deepSleepCallbackReason</span></span></span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent23deepSleepCallbackReasonE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent23deepSleepCallbackReason24deepSleepCallbackPrepareE">
+<span id="_CPPv3N5codal14CodalComponent23deepSleepCallbackReason24deepSleepCallbackPrepareE"></span><span id="_CPPv2N5codal14CodalComponent23deepSleepCallbackReason24deepSleepCallbackPrepareE"></span><span class="target" id="classcodal_1_1CodalComponent_1a6dcf2a07948ff43d09ac17a5c5758a6ea1374eecb3d838f7c9d6856c695e181ce"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deepSleepCallbackPrepare</span></span></span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent23deepSleepCallbackReason24deepSleepCallbackPrepareE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent23deepSleepCallbackReason22deepSleepCallbackBeginE">
+<span id="_CPPv3N5codal14CodalComponent23deepSleepCallbackReason22deepSleepCallbackBeginE"></span><span id="_CPPv2N5codal14CodalComponent23deepSleepCallbackReason22deepSleepCallbackBeginE"></span><span class="target" id="classcodal_1_1CodalComponent_1a6dcf2a07948ff43d09ac17a5c5758a6ea175f58128a0c281dcfc4d8746c1c1d3b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deepSleepCallbackBegin</span></span></span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent23deepSleepCallbackReason22deepSleepCallbackBeginE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent23deepSleepCallbackReason33deepSleepCallbackBeginWithWakeUpsE">
+<span id="_CPPv3N5codal14CodalComponent23deepSleepCallbackReason33deepSleepCallbackBeginWithWakeUpsE"></span><span id="_CPPv2N5codal14CodalComponent23deepSleepCallbackReason33deepSleepCallbackBeginWithWakeUpsE"></span><span class="target" id="classcodal_1_1CodalComponent_1a6dcf2a07948ff43d09ac17a5c5758a6ea9a2eeb2c41294281d52af06f4423984b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deepSleepCallbackBeginWithWakeUps</span></span></span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent23deepSleepCallbackReason33deepSleepCallbackBeginWithWakeUpsE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent23deepSleepCallbackReason20deepSleepCallbackEndE">
+<span id="_CPPv3N5codal14CodalComponent23deepSleepCallbackReason20deepSleepCallbackEndE"></span><span id="_CPPv2N5codal14CodalComponent23deepSleepCallbackReason20deepSleepCallbackEndE"></span><span class="target" id="classcodal_1_1CodalComponent_1a6dcf2a07948ff43d09ac17a5c5758a6ea9057d23a0c6b1450fee5562daba6ea36"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deepSleepCallbackEnd</span></span></span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent23deepSleepCallbackReason20deepSleepCallbackEndE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent23deepSleepCallbackReason31deepSleepCallbackEndWithWakeUpsE">
+<span id="_CPPv3N5codal14CodalComponent23deepSleepCallbackReason31deepSleepCallbackEndWithWakeUpsE"></span><span id="_CPPv2N5codal14CodalComponent23deepSleepCallbackReason31deepSleepCallbackEndWithWakeUpsE"></span><span class="target" id="classcodal_1_1CodalComponent_1a6dcf2a07948ff43d09ac17a5c5758a6ea352748e041e85220f3e99f7391e4ebe5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deepSleepCallbackEndWithWakeUps</span></span></span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent23deepSleepCallbackReason31deepSleepCallbackEndWithWakeUpsE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent23deepSleepCallbackReason29deepSleepCallbackCountWakeUpsE">
+<span id="_CPPv3N5codal14CodalComponent23deepSleepCallbackReason29deepSleepCallbackCountWakeUpsE"></span><span id="_CPPv2N5codal14CodalComponent23deepSleepCallbackReason29deepSleepCallbackCountWakeUpsE"></span><span class="target" id="classcodal_1_1CodalComponent_1a6dcf2a07948ff43d09ac17a5c5758a6ea342213f9fcd3258639340ad66496d70b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deepSleepCallbackCountWakeUps</span></span></span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent23deepSleepCallbackReason29deepSleepCallbackCountWakeUpsE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent23deepSleepCallbackReason29deepSleepCallbackClearWakeUpsE">
+<span id="_CPPv3N5codal14CodalComponent23deepSleepCallbackReason29deepSleepCallbackClearWakeUpsE"></span><span id="_CPPv2N5codal14CodalComponent23deepSleepCallbackReason29deepSleepCallbackClearWakeUpsE"></span><span class="target" id="classcodal_1_1CodalComponent_1a6dcf2a07948ff43d09ac17a5c5758a6eaed684bdc54e7aec7f904608839c210e0"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deepSleepCallbackClearWakeUps</span></span></span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent23deepSleepCallbackReason29deepSleepCallbackClearWakeUpsE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp">
+<span class="target" id="classcodal_1_1CodalComponent_1a46da4adc6fe4ab79bcc747ed015e3107"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N5codal14CodalComponentE" title="codal::CodalComponent"><span class="n"><span class="pre">CodalComponent</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N5codal14CodalComponent23deepSleepCallbackReasonE" title="codal::CodalComponent::deepSleepCallbackReason"><span class="n"><span class="pre">deepSleepCallbackReason</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deepSleepCallbackReason</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent21deepSleepCallbackDataE">
+<span id="_CPPv3N5codal14CodalComponent21deepSleepCallbackDataE"></span><span id="_CPPv2N5codal14CodalComponent21deepSleepCallbackDataE"></span><span id="codal::CodalComponent::deepSleepCallbackData"></span><span class="target" id="classcodal_1_1CodalComponent_1a83d4670c5423af6e5dea7f462d9ffc96"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N5codal14CodalComponentE" title="codal::CodalComponent"><span class="n"><span class="pre">CodalComponent</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N5codal14CodalComponent21deepSleepCallbackDataE" title="codal::CodalComponent::deepSleepCallbackData"><span class="n"><span class="pre">deepSleepCallbackData</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deepSleepCallbackData</span></span></span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent21deepSleepCallbackDataE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent12addComponentEv">
+<span id="_CPPv3N5codal14CodalComponent12addComponentEv"></span><span id="_CPPv2N5codal14CodalComponent12addComponentEv"></span><span id="codal::CodalComponent::addComponent"></span><span class="target" id="classcodal_1_1CodalComponent_1a13e3af6bd42728b50b41c96aa246b8a8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addComponent</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent12addComponentEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Adds the current <a class="reference internal" href="#classcodal_1_1CodalComponent"><span class="std std-ref">CodalComponent</span></a> instance to our array of components. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent15removeComponentEv">
+<span id="_CPPv3N5codal14CodalComponent15removeComponentEv"></span><span id="_CPPv2N5codal14CodalComponent15removeComponentEv"></span><span id="codal::CodalComponent::removeComponent"></span><span class="target" id="classcodal_1_1CodalComponent_1a32789682f5218ddcf98f9dca834d102d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">removeComponent</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent15removeComponentEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Removes the current <a class="reference internal" href="#classcodal_1_1CodalComponent"><span class="std std-ref">CodalComponent</span></a> instance from our array of components. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent14CodalComponentEv">
+<span id="_CPPv3N5codal14CodalComponent14CodalComponentEv"></span><span id="_CPPv2N5codal14CodalComponent14CodalComponentEv"></span><span id="codal::CodalComponent::CodalComponent"></span><span class="target" id="classcodal_1_1CodalComponent_1a6ba4e1ff99531da909283abc45dacf40"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CodalComponent</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent14CodalComponentEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>The default constructor of a <a class="reference internal" href="#classcodal_1_1CodalComponent"><span class="std std-ref">CodalComponent</span></a> </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent14CodalComponentE8uint16_t8uint16_t">
+<span id="_CPPv3N5codal14CodalComponent14CodalComponentE8uint16_t8uint16_t"></span><span id="_CPPv2N5codal14CodalComponent14CodalComponentE8uint16_t8uint16_t"></span><span id="codal::CodalComponent::CodalComponent__uint16_t.uint16_t"></span><span class="target" id="classcodal_1_1CodalComponent_1a6453194acfc6f6bff64c04d657de41b3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CodalComponent</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">status</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent14CodalComponentE8uint16_t8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent4initEv">
+<span id="_CPPv3N5codal14CodalComponent4initEv"></span><span id="_CPPv2N5codal14CodalComponent4initEv"></span><span id="codal::CodalComponent::init"></span><span class="target" id="classcodal_1_1CodalComponent_1aabce36418573fa49800cdbcdfc63e056"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent4initEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Implement this function to receive a function call after the devices’ device model has been instantiated. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent16periodicCallbackEv">
+<span id="_CPPv3N5codal14CodalComponent16periodicCallbackEv"></span><span id="_CPPv2N5codal14CodalComponent16periodicCallbackEv"></span><span id="codal::CodalComponent::periodicCallback"></span><span class="target" id="classcodal_1_1CodalComponent_1a0be29d29ebe2e95ab2784b438fa5c663"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">periodicCallback</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent16periodicCallbackEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Implement this function to receive a callback every SCHEDULER_TICK_PERIOD_MS. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent12idleCallbackEv">
+<span id="_CPPv3N5codal14CodalComponent12idleCallbackEv"></span><span id="_CPPv2N5codal14CodalComponent12idleCallbackEv"></span><span id="codal::CodalComponent::idleCallback"></span><span class="target" id="classcodal_1_1CodalComponent_1a37dab3cb4347533746d0e4f557e8feb5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idleCallback</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent12idleCallbackEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Implement this function to receive a callback when the device is idling. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent8setSleepEb">
+<span id="_CPPv3N5codal14CodalComponent8setSleepEb"></span><span id="_CPPv2N5codal14CodalComponent8setSleepEb"></span><span id="codal::CodalComponent::setSleep__b"></span><span class="target" id="classcodal_1_1CodalComponent_1a4b23a42b7cb0cbb4c102b5b8bc5dcfde"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSleep</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">doSleep</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent8setSleepEb" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Puts the component in (or out of) sleep (low power) mode. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent17deepSleepCallbackE23deepSleepCallbackReasonP21deepSleepCallbackData">
+<span id="_CPPv3N5codal14CodalComponent17deepSleepCallbackE23deepSleepCallbackReasonP21deepSleepCallbackData"></span><span id="_CPPv2N5codal14CodalComponent17deepSleepCallbackE23deepSleepCallbackReasonP21deepSleepCallbackData"></span><span id="codal::CodalComponent::deepSleepCallback__deepSleepCallbackReason.deepSleepCallbackDataP"></span><span class="target" id="classcodal_1_1CodalComponent_1a63e8fd6ff3cb573c4567267acd5ecefe"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deepSleepCallback</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5codal14CodalComponent23deepSleepCallbackReasonE" title="codal::CodalComponent::deepSleepCallbackReason"><span class="n"><span class="pre">deepSleepCallbackReason</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">reason</span></span>, <a class="reference internal" href="#_CPPv4N5codal14CodalComponent21deepSleepCallbackDataE" title="codal::CodalComponent::deepSleepCallbackData"><span class="n"><span class="pre">deepSleepCallbackData</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent17deepSleepCallbackE23deepSleepCallbackReasonP21deepSleepCallbackData" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Perform functions related to deep sleep. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponentD0Ev">
+<span id="_CPPv3N5codal14CodalComponentD0Ev"></span><span id="_CPPv2N5codal14CodalComponentD0Ev"></span><span id="codal::CodalComponent::~CodalComponent"></span><span class="target" id="classcodal_1_1CodalComponent_1ad6bdcbcf3859f35746d612fbfb156991"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~CodalComponent</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14CodalComponentD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>If you have added your component to the idle or system tick component arrays, you must remember to remove your component from them if your component is destructed. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent2idE">
+<span id="_CPPv3N5codal14CodalComponent2idE"></span><span id="_CPPv2N5codal14CodalComponent2idE"></span><span id="codal::CodalComponent::id__uint16_t"></span><span class="target" id="classcodal_1_1CodalComponent_1a77ebca4e1177a1a7591dcfe5a32e4556"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">id</span></span></span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent2idE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent6statusE">
+<span id="_CPPv3N5codal14CodalComponent6statusE"></span><span id="_CPPv2N5codal14CodalComponent6statusE"></span><span id="codal::CodalComponent::status__uint16_t"></span><span class="target" id="classcodal_1_1CodalComponent_1ae66978a2ce7830e8a50554bbee8722dc"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">status</span></span></span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent6statusE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent11setAllSleepEb">
+<span id="_CPPv3N5codal14CodalComponent11setAllSleepEb"></span><span id="_CPPv2N5codal14CodalComponent11setAllSleepEb"></span><span id="codal::CodalComponent::setAllSleep__b"></span><span class="target" id="classcodal_1_1CodalComponent_1ad56c7f0b00a32fe011e3155893ae6401"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAllSleep</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">doSleep</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent11setAllSleepEb" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Puts all components in (or out of) sleep (low power) mode. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent12deepSleepAllE23deepSleepCallbackReasonP21deepSleepCallbackData">
+<span id="_CPPv3N5codal14CodalComponent12deepSleepAllE23deepSleepCallbackReasonP21deepSleepCallbackData"></span><span id="_CPPv2N5codal14CodalComponent12deepSleepAllE23deepSleepCallbackReasonP21deepSleepCallbackData"></span><span id="codal::CodalComponent::deepSleepAll__deepSleepCallbackReason.deepSleepCallbackDataP"></span><span class="target" id="classcodal_1_1CodalComponent_1a74a9f0c80b9bbe89352a544744174a97"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deepSleepAll</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5codal14CodalComponent23deepSleepCallbackReasonE" title="codal::CodalComponent::deepSleepCallbackReason"><span class="n"><span class="pre">deepSleepCallbackReason</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">reason</span></span>, <a class="reference internal" href="#_CPPv4N5codal14CodalComponent21deepSleepCallbackDataE" title="codal::CodalComponent::deepSleepCallbackData"><span class="n"><span class="pre">deepSleepCallbackData</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent12deepSleepAllE23deepSleepCallbackReasonP21deepSleepCallbackData" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Perform functions related to deep sleep. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-attributes">Public Static Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent10componentsE">
+<span id="_CPPv3N5codal14CodalComponent10componentsE"></span><span id="_CPPv2N5codal14CodalComponent10componentsE"></span><span id="codal::CodalComponent::components__CodalComponentPA"></span><span class="target" id="classcodal_1_1CodalComponent_1adca68c990300afa4d1b3c5569d7ef983"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5codal14CodalComponentE" title="codal::CodalComponent"><span class="n"><span class="pre">CodalComponent</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">components</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">100</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent10componentsE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp">
+<span class="target" id="structcodal_1_1CodalComponent_1_1deepSleepCallbackData"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deepSleepCallbackData</span></span></span><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent21deepSleepCallbackData4initEv">
+<span id="_CPPv3N5codal14CodalComponent21deepSleepCallbackData4initEv"></span><span id="_CPPv2N5codal14CodalComponent21deepSleepCallbackData4initEv"></span><span id="codal::CodalComponent::deepSleepCallbackData::init"></span><span class="target" id="structcodal_1_1CodalComponent_1_1deepSleepCallbackData_1a05bf41e24d931e1bc0ebf95ca8ad3e30"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent21deepSleepCallbackData4initEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent21deepSleepCallbackData21deepSleepCallbackDataEv">
+<span id="_CPPv3N5codal14CodalComponent21deepSleepCallbackData21deepSleepCallbackDataEv"></span><span id="_CPPv2N5codal14CodalComponent21deepSleepCallbackData21deepSleepCallbackDataEv"></span><span id="codal::CodalComponent::deepSleepCallbackData::deepSleepCallbackData"></span><span class="target" id="structcodal_1_1CodalComponent_1_1deepSleepCallbackData_1a4c1eb6b8ca2dba81f58aa85f946d9a9a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deepSleepCallbackData</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent21deepSleepCallbackData21deepSleepCallbackDataEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal14CodalComponent21deepSleepCallbackData5countE">
+<span id="_CPPv3N5codal14CodalComponent21deepSleepCallbackData5countE"></span><span id="_CPPv2N5codal14CodalComponent21deepSleepCallbackData5countE"></span><span id="codal::CodalComponent::deepSleepCallbackData::count__i"></span><span class="target" id="structcodal_1_1CodalComponent_1_1deepSleepCallbackData_1a4add129ab26960dd456e1df4845add87"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">count</span></span></span><a class="headerlink" href="#_CPPv4N5codal14CodalComponent21deepSleepCallbackData5countE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

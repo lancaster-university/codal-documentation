@@ -1,0 +1,14 @@
+.. _exhale_variable_namespacecodal_1a6a03c0975b4fb247c9dd3b4a2b222c4f:
+
+Variable codal::idleFiber
+=========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalFiber.cpp`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: codal::idleFiber
+   :project: CODAL

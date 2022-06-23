@@ -1,0 +1,817 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Class Pin &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL for the Micro:bit v2
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/the-basics.html">
+     The Basics - CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inheritance-relationships">
+   Inheritance Relationships
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derived-type">
+     Derived Type
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Class Pin</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inheritance-relationships">
+   Inheritance Relationships
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derived-type">
+     Derived Type
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="class-pin">
+<span id="exhale-class-classcodal-1-1pin"></span><h1>Class Pin<a class="headerlink" href="#class-pin" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Pin.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-driver-models-pin-h"><span class="std std-ref">File Pin.h</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">#</a></h2>
+<section id="derived-type">
+<h3>Derived Type<a class="headerlink" href="#derived-type" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::SoundOutputPin</span></code> (<a class="reference internal" href="classcodal_1_1SoundOutputPin.html#exhale-class-classcodal-1-1soundoutputpin"><span class="std std-ref">Class SoundOutputPin</span></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">#</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3PinE">
+<span id="_CPPv3N5codal3PinE"></span><span id="_CPPv2N5codal3PinE"></span><span id="codal::Pin"></span><span class="target" id="classcodal_1_1Pin"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Pin</span></span></span><a class="headerlink" href="#_CPPv4N5codal3PinE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Class definition for <a class="reference internal" href="#classcodal_1_1Pin"><span class="std std-ref">Pin</span></a>.</p>
+<p>Commonly represents an I/O pin on the edge connector. </p>
+<p>Subclassed by <a class="reference internal" href="classcodal_1_1SoundOutputPin.html#classcodal_1_1SoundOutputPin"><span class="std std-ref">codal::SoundOutputPin</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin3PinEi9PinNumber13PinCapability">
+<span id="_CPPv3N5codal3Pin3PinEi9PinNumber13PinCapability"></span><span id="_CPPv2N5codal3Pin3PinEi9PinNumber13PinCapability"></span><span id="codal::Pin::Pin__i.PinNumber.PinCapability"></span><span class="target" id="classcodal_1_1Pin_1a449ed8a95096414c66f8717a94913efa"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Pin</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <a class="reference internal" href="typedef_namespacecodal_1ac1596127a05e8b32df499e87d86b6436.html#_CPPv4N5codal9PinNumberE" title="codal::PinNumber"><span class="n"><span class="pre">PinNumber</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">name</span></span>, <a class="reference internal" href="enum_namespacecodal_1a2e3f8f3b3d544a72b39f6c18707e6525.html#_CPPv4N5codal13PinCapabilityE" title="codal::PinCapability"><span class="n"><span class="pre">PinCapability</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">capability</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin3PinEi9PinNumber13PinCapability" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Constructor. Create a <a class="reference internal" href="#classcodal_1_1Pin"><span class="std std-ref">Pin</span></a> instance, generally used to represent a pin on the edge connector.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Pin</span><span class="w"> </span><span class="nf">P0</span><span class="p">(</span><span class="n">DEVICE_ID_IO_P0</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_PIN_P0</span><span class="p">,</span><span class="w"> </span><span class="n">PIN_CAPABILITY_ALL</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> – the unique <a class="reference internal" href="classcodal_1_1EventModel.html#classcodal_1_1EventModel"><span class="std std-ref">EventModel</span></a> id of this component.</p></li>
+<li><p><strong>name</strong> – the PinNumber for this <a class="reference internal" href="#classcodal_1_1Pin"><span class="std std-ref">Pin</span></a> instance.</p></li>
+<li><p><strong>capability</strong> – the capabilities this <a class="reference internal" href="#classcodal_1_1Pin"><span class="std std-ref">Pin</span></a> instance should have. (PIN_CAPABILITY_DIGITAL, PIN_CAPABILITY_ANALOG, PIN_CAPABILITY_AD, PIN_CAPABILITY_ALL)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin15setDigitalValueEi">
+<span id="_CPPv3N5codal3Pin15setDigitalValueEi"></span><span id="_CPPv2N5codal3Pin15setDigitalValueEi"></span><span id="codal::Pin::setDigitalValue__i"></span><span class="target" id="classcodal_1_1Pin_1ac0306a5994d65678d2e879de5b1b6330"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setDigitalValue</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin15setDigitalValueEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Configures this IO pin as a digital output (if necessary) and sets the pin to ‘value’.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Pin</span><span class="w"> </span><span class="nf">P0</span><span class="p">(</span><span class="n">DEVICE_ID_IO_P0</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_PIN_P0</span><span class="p">,</span><span class="w"> </span><span class="n">PIN_CAPABILITY_BOTH</span><span class="p">);</span><span class="w"></span>
+<span class="n">P0</span><span class="p">.</span><span class="n">setDigitalValue</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// P0 is now HI</span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> – 0 (LO) or 1 (HI)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK on success, DEVICE_INVALID_PARAMETER if value is out of range, or DEVICE_NOT_SUPPORTED if the given pin does not have digital capability.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin15getDigitalValueEv">
+<span id="_CPPv3N5codal3Pin15getDigitalValueEv"></span><span id="_CPPv2N5codal3Pin15getDigitalValueEv"></span><span id="codal::Pin::getDigitalValue"></span><span class="target" id="classcodal_1_1Pin_1acb8524cd486776c54f19d459274596d1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getDigitalValue</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin15getDigitalValueEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Configures this IO pin as a digital input (if necessary) and tests its current value.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Pin</span><span class="w"> </span><span class="nf">P0</span><span class="p">(</span><span class="n">DEVICE_ID_IO_P0</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_PIN_P0</span><span class="p">,</span><span class="w"> </span><span class="n">PIN_CAPABILITY_BOTH</span><span class="p">);</span><span class="w"></span>
+<span class="n">P0</span><span class="p">.</span><span class="n">getDigitalValue</span><span class="p">();</span><span class="w"> </span><span class="c1">// P0 is either 0 or 1;</span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>1 if this input is high, 0 if input is LO, or DEVICE_NOT_SUPPORTED if the given pin does not have digital capability.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin15getDigitalValueE8PullMode">
+<span id="_CPPv3N5codal3Pin15getDigitalValueE8PullMode"></span><span id="_CPPv2N5codal3Pin15getDigitalValueE8PullMode"></span><span id="codal::Pin::getDigitalValue__PullMode"></span><span class="target" id="classcodal_1_1Pin_1a9ab3d3e1d6d4207989ea725805326f2d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getDigitalValue</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enum_namespacecodal_1a3a98de58fe083a95585a24ac94dd2246.html#_CPPv4N5codal8PullModeE" title="codal::PullMode"><span class="n"><span class="pre">PullMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">pull</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin15getDigitalValueE8PullMode" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Configures this IO pin as a digital input with the specified internal pull-up/pull-down configuraiton (if necessary) and tests its current value.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Pin</span><span class="w"> </span><span class="nf">P0</span><span class="p">(</span><span class="n">DEVICE_ID_IO_P0</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_PIN_P0</span><span class="p">,</span><span class="w"> </span><span class="n">PIN_CAPABILITY_BOTH</span><span class="p">);</span><span class="w"></span>
+<span class="n">P0</span><span class="p">.</span><span class="n">getDigitalValue</span><span class="p">(</span><span class="n">PullUp</span><span class="p">);</span><span class="w"> </span><span class="c1">// P0 is either 0 or 1;</span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pull</strong> – one of the mbed pull configurations: PullUp, PullDown, PullNone</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>1 if this input is high, 0 if input is LO, or DEVICE_NOT_SUPPORTED if the given pin does not have digital capability.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin14setAnalogValueEi">
+<span id="_CPPv3N5codal3Pin14setAnalogValueEi"></span><span id="_CPPv2N5codal3Pin14setAnalogValueEi"></span><span id="codal::Pin::setAnalogValue__i"></span><span class="target" id="classcodal_1_1Pin_1afc14800aa158ae573a90abb6f06e5a9f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAnalogValue</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin14setAnalogValueEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Configures this IO pin as an analog/pwm output, and change the output value to the given level.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> – the level to set on the output pin, in the range 0 - 1024</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK on success, DEVICE_INVALID_PARAMETER if value is out of range, or DEVICE_NOT_SUPPORTED if the given pin does not have analog capability. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin13setServoValueEiii">
+<span id="_CPPv3N5codal3Pin13setServoValueEiii"></span><span id="_CPPv2N5codal3Pin13setServoValueEiii"></span><span id="codal::Pin::setServoValue__i.i.i"></span><span class="target" id="classcodal_1_1Pin_1ab52f7d0d92e27c936ed667edf16dc6e7"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setServoValue</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">range</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">2000</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">center</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1500</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin13setServoValueEiii" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Configures this IO pin as an analog/pwm output (if necessary) and configures the period to be 20ms, with a duty cycle between 500 us and 2500 us.</p>
+<p>A value of 180 sets the duty cycle to be 2500us, and a value of 0 sets the duty cycle to be 500us by default.</p>
+<p>This range can be modified to fine tune, and also tolerate different servos.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – the level to set on the output pin, in the range 0 - 180.</p></li>
+<li><p><strong>range</strong> – which gives the span of possible values the i.e. the lower and upper bounds (center +/- range/2). Defaults to DEVICE_PIN_DEFAULT_SERVO_RANGE.</p></li>
+<li><p><strong>center</strong> – the center point from which to calculate the lower and upper bounds. Defaults to DEVICE_PIN_DEFAULT_SERVO_CENTER</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK on success, DEVICE_INVALID_PARAMETER if value is out of range, or DEVICE_NOT_SUPPORTED if the given pin does not have analog capability. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin14getAnalogValueEv">
+<span id="_CPPv3N5codal3Pin14getAnalogValueEv"></span><span id="_CPPv2N5codal3Pin14getAnalogValueEv"></span><span id="codal::Pin::getAnalogValue"></span><span class="target" id="classcodal_1_1Pin_1afb175274e532bd044f85187292b4ba5f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAnalogValue</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin14getAnalogValueEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Configures this IO pin as an analogue input (if necessary), and samples the <a class="reference internal" href="#classcodal_1_1Pin"><span class="std std-ref">Pin</span></a> for its analog value.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Pin</span><span class="w"> </span><span class="nf">P0</span><span class="p">(</span><span class="n">DEVICE_ID_IO_P0</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_PIN_P0</span><span class="p">,</span><span class="w"> </span><span class="n">PIN_CAPABILITY_BOTH</span><span class="p">);</span><span class="w"></span>
+<span class="n">P0</span><span class="p">.</span><span class="n">getAnalogValue</span><span class="p">();</span><span class="w"> </span><span class="c1">// P0 is a value in the range of 0 - 1024</span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the current analogue level on the pin, in the range 0 - 1024, or DEVICE_NOT_SUPPORTED if the given pin does not have analog capability.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin7isInputEv">
+<span id="_CPPv3N5codal3Pin7isInputEv"></span><span id="_CPPv2N5codal3Pin7isInputEv"></span><span id="codal::Pin::isInput"></span><span class="target" id="classcodal_1_1Pin_1aa1aabdcd4cd59ef676e7d22635ec2f78"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isInput</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin7isInputEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Determines if this IO pin is currently configured as an input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>1 if pin is an analog or digital input, 0 otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin8isOutputEv">
+<span id="_CPPv3N5codal3Pin8isOutputEv"></span><span id="_CPPv2N5codal3Pin8isOutputEv"></span><span id="codal::Pin::isOutput"></span><span class="target" id="classcodal_1_1Pin_1ad537e8a60f2284e80681c9c09a647265"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isOutput</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin8isOutputEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Determines if this IO pin is currently configured as an output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>1 if pin is an analog or digital output, 0 otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin9isDigitalEv">
+<span id="_CPPv3N5codal3Pin9isDigitalEv"></span><span id="_CPPv2N5codal3Pin9isDigitalEv"></span><span id="codal::Pin::isDigital"></span><span class="target" id="classcodal_1_1Pin_1a5be9315257f57d7478e64ad09be987c4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isDigital</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin9isDigitalEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Determines if this IO pin is currently configured for digital use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>1 if pin is digital, 0 otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin8isAnalogEv">
+<span id="_CPPv3N5codal3Pin8isAnalogEv"></span><span id="_CPPv2N5codal3Pin8isAnalogEv"></span><span id="codal::Pin::isAnalog"></span><span class="target" id="classcodal_1_1Pin_1a6d3f9d6ef8055f79680e5c306d7ee801"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isAnalog</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin8isAnalogEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Determines if this IO pin is currently configured for analog use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>1 if pin is analog, 0 otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin9isTouchedEv">
+<span id="_CPPv3N5codal3Pin9isTouchedEv"></span><span id="_CPPv2N5codal3Pin9isTouchedEv"></span><span id="codal::Pin::isTouched"></span><span class="target" id="classcodal_1_1Pin_1a6e416edd1f879240daa9eaf9a62dcf62"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isTouched</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin9isTouchedEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Configures this IO pin as a “makey makey” style touch sensor (if necessary) and tests its current debounced state.</p>
+<p>Users can also subscribe to DeviceButton events generated from this pin.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DeviceMessageBus</span><span class="w"> </span><span class="n">bus</span><span class="p">;</span><span class="w"></span>
+
+<span class="n">Pin</span><span class="w"> </span><span class="nf">P0</span><span class="p">(</span><span class="n">DEVICE_ID_IO_P0</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_PIN_P0</span><span class="p">,</span><span class="w"> </span><span class="n">PIN_CAPABILITY_ALL</span><span class="p">);</span><span class="w"></span>
+<span class="k">if</span><span class="p">(</span><span class="n">P0</span><span class="p">.</span><span class="n">isTouched</span><span class="p">())</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//do something!</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// subscribe to events generated by this pin!</span>
+<span class="n">bus</span><span class="p">.</span><span class="n">listen</span><span class="p">(</span><span class="n">DEVICE_ID_IO_P0</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_BUTTON_EVT_CLICK</span><span class="p">,</span><span class="w"> </span><span class="n">someFunction</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>1 if pin is touched, 0 if not, or DEVICE_NOT_SUPPORTED if this pin does not support touch capability.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin15setServoPulseUsE8uint32_t">
+<span id="_CPPv3N5codal3Pin15setServoPulseUsE8uint32_t"></span><span id="_CPPv2N5codal3Pin15setServoPulseUsE8uint32_t"></span><span id="codal::Pin::setServoPulseUs__uint32_t"></span><span class="target" id="classcodal_1_1Pin_1a0e4631bfe223d8a321f69762cdee2eee"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setServoPulseUs</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pulseWidth</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin15setServoPulseUsE8uint32_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Configures this IO pin as an analog/pwm output if it isn’t already, configures the period to be 20ms, and sets the pulse width, based on the value it is given.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pulseWidth</strong> – the desired pulse width in microseconds.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK on success, DEVICE_INVALID_PARAMETER if value is out of range, or DEVICE_NOT_SUPPORTED if the given pin does not have analog capability. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin15setAnalogPeriodEi">
+<span id="_CPPv3N5codal3Pin15setAnalogPeriodEi"></span><span id="_CPPv2N5codal3Pin15setAnalogPeriodEi"></span><span id="codal::Pin::setAnalogPeriod__i"></span><span class="target" id="classcodal_1_1Pin_1aac61c9856e91890b813305e154afe477"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAnalogPeriod</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">period</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin15setAnalogPeriodEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Configures the PWM period of the analog output to the given value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>period</strong> – The new period for the analog output in milliseconds.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK on success, or DEVICE_NOT_SUPPORTED if the given pin is not configured as an analog output. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin17setAnalogPeriodUsE8uint32_t">
+<span id="_CPPv3N5codal3Pin17setAnalogPeriodUsE8uint32_t"></span><span id="_CPPv2N5codal3Pin17setAnalogPeriodUsE8uint32_t"></span><span id="codal::Pin::setAnalogPeriodUs__uint32_t"></span><span class="target" id="classcodal_1_1Pin_1a9e0f5b25ff5139e51e03e70b0ba09686"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAnalogPeriodUs</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">period</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin17setAnalogPeriodUsE8uint32_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Configures the PWM period of the analog output to the given value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>period</strong> – The new period for the analog output in microseconds.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK on success, or DEVICE_NOT_SUPPORTED if the given pin is not configured as an analog output. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin17getAnalogPeriodUsEv">
+<span id="_CPPv3N5codal3Pin17getAnalogPeriodUsEv"></span><span id="_CPPv2N5codal3Pin17getAnalogPeriodUsEv"></span><span id="codal::Pin::getAnalogPeriodUs"></span><span class="target" id="classcodal_1_1Pin_1a46d48cdcf69b6ac5fbf671c5048fac7b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAnalogPeriodUs</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin17getAnalogPeriodUsEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Obtains the PWM period of the analog output in microseconds.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the period on success, or DEVICE_NOT_SUPPORTED if the given pin is not configured as an analog output. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin15getAnalogPeriodEv">
+<span id="_CPPv3N5codal3Pin15getAnalogPeriodEv"></span><span id="_CPPv2N5codal3Pin15getAnalogPeriodEv"></span><span id="codal::Pin::getAnalogPeriod"></span><span class="target" id="classcodal_1_1Pin_1ab20afcd4fc8ab69800fcaea19bf51aa8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAnalogPeriod</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin15getAnalogPeriodEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Obtains the PWM period of the analog output in milliseconds.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the period on success, or DEVICE_NOT_SUPPORTED if the given pin is not configured as an analog output. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin7setPullE8PullMode">
+<span id="_CPPv3N5codal3Pin7setPullE8PullMode"></span><span id="_CPPv2N5codal3Pin7setPullE8PullMode"></span><span id="codal::Pin::setPull__PullMode"></span><span class="target" id="classcodal_1_1Pin_1a08458a12709e2c4818da9ee2ff36e2ff"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPull</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enum_namespacecodal_1a3a98de58fe083a95585a24ac94dd2246.html#_CPPv4N5codal8PullModeE" title="codal::PullMode"><span class="n"><span class="pre">PullMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">pull</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin7setPullE8PullMode" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Configures the pull of this pin.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pull</strong> – one of the mbed pull configurations: PullUp, PullDown, PullNone</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_NOT_SUPPORTED if the current pin configuration is anything other than a digital input, otherwise DEVICE_OK. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin8drainPinEv">
+<span id="_CPPv3N5codal3Pin8drainPinEv"></span><span id="_CPPv2N5codal3Pin8drainPinEv"></span><span id="codal::Pin::drainPin"></span><span class="target" id="classcodal_1_1Pin_1a509e7b2d3df4818bafd0db1b9f24aeb8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">drainPin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin8drainPinEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Utility function to drain any residual capacitative charge held on a pin. This is useful for applicaitons that measure rise/fall time of digital inputs, such as resititve touch sensors like makeymakey.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>DEVICE_NOT_SUPPORTED if the current pin configuration is anything other than a digital input, otherwise DEVICE_OK. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin6setIRQEPFviE">
+<span id="_CPPv3N5codal3Pin6setIRQEPFviE"></span><span id="_CPPv2N5codal3Pin6setIRQEPFviE"></span><span class="target" id="classcodal_1_1Pin_1a9dd085c72f859aafd01dfbc3b74456cd"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setIRQ</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">gpio_interrupt</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin6setIRQEPFviE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin10getPulseUsEi">
+<span id="_CPPv3N5codal3Pin10getPulseUsEi"></span><span id="_CPPv2N5codal3Pin10getPulseUsEi"></span><span id="codal::Pin::getPulseUs__i"></span><span class="target" id="classcodal_1_1Pin_1a4f44851aa2737f2d1590316df9a0446b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPulseUs</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">timeout</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin10getPulseUsEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Measures the period of the next digital pulse on this pin. The polarity of the detected pulse is defined by <a class="reference internal" href="#classcodal_1_1Pin_1a8494764eb5b82e8e14cf4a0e2ef9ae15"><span class="std std-ref">setPolarity()</span></a>. The calling fiber is blocked until a pulse is received or the specified timeout passes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>timeout</strong> – The maximum period of time in microseconds to wait for a pulse. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the period of the pulse in microseconds, or DEVICE_CANCELLED on timeout. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin7eventOnEi">
+<span id="_CPPv3N5codal3Pin7eventOnEi"></span><span id="_CPPv2N5codal3Pin7eventOnEi"></span><span id="codal::Pin::eventOn__i"></span><span class="target" id="classcodal_1_1Pin_1a1124f7a3dbd9e484b11baa11c99c30bf"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">eventOn</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">eventType</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin7eventOnEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Configures the events generated by this <a class="reference internal" href="#classcodal_1_1Pin"><span class="std std-ref">Pin</span></a> instance.</p>
+<p>DEVICE_PIN_INTERRUPT_ON_EDGE - Configures this pin to a digital input, and invokes gpio_irq with the new state, whenever a rise/fall is detected on this pin. DEVICE_PIN_EVENT_ON_EDGE - Configures this pin to a digital input, and generates events whenever a rise/fall is detected on this pin. (DEVICE_PIN_EVT_RISE, DEVICE_PIN_EVT_FALL) DEVICE_PIN_EVENT_ON_PULSE - Configures this pin to a digital input, and generates events where the timestamp is the duration that this pin was either HI or LO. (DEVICE_PIN_EVT_PULSE_HI, DEVICE_PIN_EVT_PULSE_LO) DEVICE_PIN_EVENT_ON_TOUCH - Configures this pin as a makey makey style touch sensor, in the form of a DeviceButton. Normal button events will be generated using the ID of this pin. DEVICE_PIN_EVENT_ON_TOUCH - Configures this pin as a makey makey style touch sensor, in the form of a DeviceButton. Normal button events will be generated using the ID of this pin. DEVICE_PIN_EVENT_NONE - Disables events for this pin.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DeviceMessageBus</span><span class="w"> </span><span class="n">bus</span><span class="p">;</span><span class="w"></span>
+
+<span class="n">Pin</span><span class="w"> </span><span class="nf">P0</span><span class="p">(</span><span class="n">DEVICE_ID_IO_P0</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_PIN_P0</span><span class="p">,</span><span class="w"> </span><span class="n">PIN_CAPABILITY_BOTH</span><span class="p">);</span><span class="w"></span>
+<span class="n">P0</span><span class="p">.</span><span class="n">eventOn</span><span class="p">(</span><span class="n">DEVICE_PIN_EVENT_ON_PULSE</span><span class="p">);</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">onPulse</span><span class="p">(</span><span class="n">Event</span><span class="w"> </span><span class="n">evt</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">duration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">evt</span><span class="p">.</span><span class="n">timestamp</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">bus</span><span class="p">.</span><span class="n">listen</span><span class="p">(</span><span class="n">DEVICE_ID_IO_P0</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_PIN_EVT_PULSE_HI</span><span class="p">,</span><span class="w"> </span><span class="n">onPulse</span><span class="p">,</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_IMMEDIATE</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the DEVICE_PIN_EVENT_ON_PULSE mode, the smallest pulse that was reliably detected was 85us, around 5khz. If more precision is required, please use the <a class="reference internal" href="classInterruptIn.html#classInterruptIn"><span class="std std-ref">InterruptIn</span></a> class supplied by ARM mbed. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>eventType</strong> – One of: DEVICE_PIN_EVENT_ON_EDGE, DEVICE_PIN_EVENT_ON_PULSE, DEVICE_PIN_EVENT_ON_TOUCH, DEVICE_PIN_EVENT_NONE</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK on success, or DEVICE_INVALID_PARAMETER if the given eventype does not match</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin21getAndSetDigitalValueEi">
+<span id="_CPPv3N5codal3Pin21getAndSetDigitalValueEi"></span><span id="_CPPv2N5codal3Pin21getAndSetDigitalValueEi"></span><span id="codal::Pin::getAndSetDigitalValue__i"></span><span class="target" id="classcodal_1_1Pin_1a2b5368cb973fdbe243833ec548da283f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAndSetDigitalValue</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin21getAndSetDigitalValueEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Set pin value iff its current value as input is the opposite.</p>
+<p>If pin is configured as input and reads as !value, set it to value and return DEVICE_OK. Otherwise, do nothing and return DEVICE_BUSY. Note, that this is overwritten in hardware-specific classes to check the condition immedietly before changing the pin value. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin8isActiveEv">
+<span id="_CPPv3N5codal3Pin8isActiveEv"></span><span id="_CPPv2N5codal3Pin8isActiveEv"></span><span id="codal::Pin::isActive"></span><span class="target" id="classcodal_1_1Pin_1a9d401978a1264b8ddaa02ca1dd9fe094"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isActive</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin8isActiveEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Determines if pin is active, taking into account polarity information defined by setActive().</p>
+<p>By default, pins are ACTIVE_HI (a high voltage implies a TRUE logic state).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>1 if the digital value read from this pin matches its active polarity state, and 0 otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin11setPolarityEi">
+<span id="_CPPv3N5codal3Pin11setPolarityEi"></span><span id="_CPPv2N5codal3Pin11setPolarityEi"></span><span id="codal::Pin::setPolarity__i"></span><span class="target" id="classcodal_1_1Pin_1a8494764eb5b82e8e14cf4a0e2ef9ae15"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPolarity</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">polarity</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin11setPolarityEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Sets the polarity of the pin to be ACTIVE_HI or ATIVE_LO, depending on the given parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>polarity</strong> – The polarity of the pin - either 1 for ACTIVE_HI or 0 for ACTIVE_LO </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin11getPolarityEv">
+<span id="_CPPv3N5codal3Pin11getPolarityEv"></span><span id="_CPPv2N5codal3Pin11getPolarityEv"></span><span id="codal::Pin::getPolarity"></span><span class="target" id="classcodal_1_1Pin_1aef4282d4f763fc177080abc02311721e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPolarity</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin11getPolarityEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Determines the polarity of the pin - either ACTIVE_HI or ATIVE_LO.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>1 for ACTIVE_HI or 0 for ACTIVE_LO </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin11setActiveHiEv">
+<span id="_CPPv3N5codal3Pin11setActiveHiEv"></span><span id="_CPPv2N5codal3Pin11setActiveHiEv"></span><span id="codal::Pin::setActiveHi"></span><span class="target" id="classcodal_1_1Pin_1a06d07fe0ea42a96bd0b30e29897717e4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setActiveHi</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin11setActiveHiEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Sets the polarity of the pin to be ACTIVE_HI. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin11setActiveLoEv">
+<span id="_CPPv3N5codal3Pin11setActiveLoEv"></span><span id="_CPPv2N5codal3Pin11setActiveLoEv"></span><span id="codal::Pin::setActiveLo"></span><span class="target" id="classcodal_1_1Pin_1a338c63133f46b6ac8466e7aa3e6b8f64"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setActiveLo</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin11setActiveLoEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Sets the polarity of the pin to be ACTIVE_LO. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin12wakeOnActiveEi">
+<span id="_CPPv3N5codal3Pin12wakeOnActiveEi"></span><span id="_CPPv2N5codal3Pin12wakeOnActiveEi"></span><span id="codal::Pin::wakeOnActive__i"></span><span class="target" id="classcodal_1_1Pin_1a72f66cc8fa5ba2730d0da40689b7d8a6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wakeOnActive</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">wake</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin12wakeOnActiveEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Sets whether the pin should trigger power manager wake-up.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>wake</strong> – The action of the pin - either 1 to trigger wake-up or 0 for no wake-up </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin14isWakeOnActiveEv">
+<span id="_CPPv3N5codal3Pin14isWakeOnActiveEv"></span><span id="_CPPv2N5codal3Pin14isWakeOnActiveEv"></span><span id="codal::Pin::isWakeOnActive"></span><span class="target" id="classcodal_1_1Pin_1ac45cdef64ceabaf83732f46a8925fda1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isWakeOnActive</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin14isWakeOnActiveEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Deternine if the pin should trigger power manager wake-up.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>wake</strong> – The action of the pin - either 1 to trigger wake up or 0 for no </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin10disconnectEv">
+<span id="_CPPv3N5codal3Pin10disconnectEv"></span><span id="_CPPv2N5codal3Pin10disconnectEv"></span><span id="codal::Pin::disconnect"></span><span class="target" id="classcodal_1_1Pin_1a96e277aa05eb4f1ffe9fb6444d8f282a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disconnect</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3Pin10disconnectEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Disconnect any attached peripherals from this pin. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3PinD0Ev">
+<span id="_CPPv3N5codal3PinD0Ev"></span><span id="_CPPv2N5codal3PinD0Ev"></span><span id="codal::Pin::~Pin"></span><span class="target" id="classcodal_1_1Pin_1a2873fb85bb6d063fb027866436280340"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~Pin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3PinD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin6statusE">
+<span id="_CPPv3N5codal3Pin6statusE"></span><span id="_CPPv2N5codal3Pin6statusE"></span><span id="codal::Pin::status__uint16_t"></span><span class="target" id="classcodal_1_1Pin_1a05d99daffa3edbaf3bfa7b4f62e16a74"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">status</span></span></span><a class="headerlink" href="#_CPPv4N5codal3Pin6statusE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin2idE">
+<span id="_CPPv3N5codal3Pin2idE"></span><span id="_CPPv2N5codal3Pin2idE"></span><span id="codal::Pin::id__uint16_t"></span><span class="target" id="classcodal_1_1Pin_1a5e2d84fa155d37eda8148a02b062cf36"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">id</span></span></span><a class="headerlink" href="#_CPPv4N5codal3Pin2idE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin8gpio_irqE">
+<span id="_CPPv3N5codal3Pin8gpio_irqE"></span><span id="_CPPv2N5codal3Pin8gpio_irqE"></span><span class="target" id="classcodal_1_1Pin_1a69abb8a4b0041fd93c00e2454101166d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">gpio_irq</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N5codal3Pin8gpio_irqE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin4nameE">
+<span id="_CPPv3N5codal3Pin4nameE"></span><span id="_CPPv2N5codal3Pin4nameE"></span><span id="codal::Pin::name__PinNumber"></span><span class="target" id="classcodal_1_1Pin_1a3244d20d12c6f60a58a668911352a1bf"></span><a class="reference internal" href="typedef_namespacecodal_1ac1596127a05e8b32df499e87d86b6436.html#_CPPv4N5codal9PinNumberE" title="codal::PinNumber"><span class="n"><span class="pre">PinNumber</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><a class="headerlink" href="#_CPPv4N5codal3Pin4nameE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin10capabilityE">
+<span id="_CPPv3N5codal3Pin10capabilityE"></span><span id="_CPPv2N5codal3Pin10capabilityE"></span><span id="codal::Pin::capability__PinCapability"></span><span class="target" id="classcodal_1_1Pin_1ae585463bb385afcea19286993d905fe4"></span><a class="reference internal" href="enum_namespacecodal_1a2e3f8f3b3d544a72b39f6c18707e6525.html#_CPPv4N5codal13PinCapabilityE" title="codal::PinCapability"><span class="n"><span class="pre">PinCapability</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">capability</span></span></span><a class="headerlink" href="#_CPPv4N5codal3Pin10capabilityE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal3Pin8pullModeE">
+<span id="_CPPv3N5codal3Pin8pullModeE"></span><span id="_CPPv2N5codal3Pin8pullModeE"></span><span id="codal::Pin::pullMode__PullMode"></span><span class="target" id="classcodal_1_1Pin_1a794a6c877a9bae1a35bd69d089531f15"></span><a class="reference internal" href="enum_namespacecodal_1a3a98de58fe083a95585a24ac94dd2246.html#_CPPv4N5codal8PullModeE" title="codal::PullMode"><span class="n"><span class="pre">PullMode</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pullMode</span></span></span><a class="headerlink" href="#_CPPv4N5codal3Pin8pullModeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
