@@ -1,7 +1,7 @@
-Welcome to CODAL's documentation!
-=================================
+CODAL for the Micro:bit v2
+==========================
 
-These pages detail the C++ API to CODAL for the micro:bit and related platforms.
+These pages detail the C++ API to CODAL for the Micro:bit and related platforms.
 
 This some of this content is generated from the source code directly, so may deviate slightly if you're using an old, or specific version of the source tree.
 

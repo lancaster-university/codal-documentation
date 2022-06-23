@@ -22,6 +22,7 @@ def genInputString( libraries ):
     buffer = []
     for lib in libraries:
         buffer.append( F"\"{os.path.join( '..', '..', 'libraries', lib, 'inc' )}\"" )
+        buffer.append( F"\"{os.path.join( '..', '..', 'libraries', lib, 'source' )}\"" ) # This will complain if we have duplicated documentation!
     return ' '.join(buffer)
 
 def getGitVersion( library ):
@@ -51,7 +52,8 @@ release = getGitVersion( 'codal-microbit-v2' )
 # ones.
 extensions = [
     'breathe',
-    'exhale'
+    'exhale',
+    'sphinx.ext.githubpages'
 ]
 
 # Breathe Configuration (paths from the source/ subpath context)
@@ -62,7 +64,7 @@ breathe_default_project = "CODAL"
 # Setup the exhale extension
 exhale_args = {
     # These arguments are required
-    "containmentFolder":     "./_api",
+    "containmentFolder":     "./api",
     "rootFileName":          "root.rst",
     "doxygenStripFromPath":  "..",
     # Heavily encouraged optional argument (see docs)
@@ -83,7 +85,7 @@ primary_domain = 'cpp'
 highlight_language = 'cpp'
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = [ '_templates' ]
+templates_path = [ 'templates' ]
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -112,4 +114,4 @@ html_theme_options = {
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = [ '_static' ]
+html_static_path = [ 'static' ]
