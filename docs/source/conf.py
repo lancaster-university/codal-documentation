@@ -30,7 +30,7 @@ def getGitVersion( library ):
         cwd=os.path.join( '..', '..', 'libraries', library ),
         stdout=subprocess.PIPE
     )
-    return F"{library} {result.stdout.decode('UTF-8').strip()}"
+    return result.stdout.decode('UTF-8').strip()
 
 # -- Project information -----------------------------------------------------
 
