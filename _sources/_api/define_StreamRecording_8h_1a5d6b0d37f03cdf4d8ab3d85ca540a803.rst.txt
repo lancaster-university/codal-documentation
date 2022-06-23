@@ -1,0 +1,14 @@
+.. _exhale_define_StreamRecording_8h_1a5d6b0d37f03cdf4d8ab3d85ca540a803:
+
+Define REC_STATE_RECORDING
+==========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_StreamRecording.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: REC_STATE_RECORDING
+   :project: CODAL

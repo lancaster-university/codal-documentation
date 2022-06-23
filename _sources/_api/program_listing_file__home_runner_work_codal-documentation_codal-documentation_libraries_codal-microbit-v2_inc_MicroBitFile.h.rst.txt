@@ -1,0 +1,87 @@
+
+.. _program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitFile.h:
+
+Program Listing for File MicroBitFile.h
+=======================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitFile.h>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/MicroBitFile.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   /*
+   The MIT License (MIT)
+   Copyright (c) 2016 British Broadcasting Corporation.
+   This software is provided by Lancaster University by arrangement with the BBC.
+   Permission is hereby granted, free of charge, to any person obtaining a
+   copy of this software and associated documentation files (the "Software"),
+   to deal in the Software without restriction, including without limitation
+   the rights to use, copy, modify, merge, publish, distribute, sublicense,
+   and/or sell copies of the Software, and to permit persons to whom the
+   Software is furnished to do so, subject to the following conditions:
+   The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+   THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+   */
+   
+   #ifndef MICROBIT_FILE_H
+   #define MICROBIT_FILE_H
+   
+   #include "MicroBitConfig.h"
+   #include "MicroBitFileSystem.h"
+   #include "ManagedString.h"
+   
+   #define READ                            MB_READ
+   #define WRITE                           MB_WRITE
+   #define READ_AND_WRITE                  READ | WRITE
+   #define CREATE                          MB_CREAT
+   
+   class MicroBitFile
+   {
+   
+       int fileHandle;
+       ManagedString fileName;
+   
+       public:
+   
+       MicroBitFile(ManagedString fileName, int mode = READ | WRITE | CREATE);
+   
+       int setPosition(int position);
+   
+       int getPosition();
+   
+       int write(const char *bytes, int len);
+   
+       int write(ManagedString s);
+   
+       int read();
+   
+       int read(char *buffer, int size);
+   
+       ManagedString read(int size);
+   
+       int remove();
+   
+       int append(const char *bytes, int len);
+   
+       int append(ManagedString s);
+   
+       bool isValid();
+   
+       int getHandle();
+   
+       int close();
+   
+       int flush();
+   
+       ~MicroBitFile();
+   };
+   
+   #endif

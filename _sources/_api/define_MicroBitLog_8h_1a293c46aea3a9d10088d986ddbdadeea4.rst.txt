@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitLog_8h_1a293c46aea3a9d10088d986ddbdadeea4:
+
+Define CONFIG_MICROBIT_LOG_JOURNAL_SIZE
+=======================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitLog.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CONFIG_MICROBIT_LOG_JOURNAL_SIZE
+   :project: CODAL

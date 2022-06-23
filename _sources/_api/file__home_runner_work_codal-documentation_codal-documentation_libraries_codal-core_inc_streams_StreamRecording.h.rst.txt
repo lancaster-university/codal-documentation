@@ -1,0 +1,66 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_StreamRecording.h:
+
+File StreamRecording.h
+======================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/streams``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/streams/StreamRecording.h``)
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_StreamRecording.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``DataStream.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_DataStream.h`)
+
+- ``ManagedBuffer.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_ManagedBuffer.h`)
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_codal`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classcodal_1_1StreamRecording`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_StreamRecording_8h_1ae9579e4a0234ea4cfe3b248099e4c157`
+
+- :ref:`exhale_define_StreamRecording_8h_1a64c9d709a7b0eabed2205a94c50627c4`
+
+- :ref:`exhale_define_StreamRecording_8h_1a5d6b0d37f03cdf4d8ab3d85ca540a803`
+
+- :ref:`exhale_define_StreamRecording_8h_1a5a31c106d1066c986b553492fe24406c`
+

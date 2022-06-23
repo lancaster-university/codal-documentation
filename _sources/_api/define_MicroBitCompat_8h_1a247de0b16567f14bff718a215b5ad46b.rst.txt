@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitCompat_8h_1a247de0b16567f14bff718a215b5ad46b:
+
+Define MICROBIT_DISPLAY_EVT_ANIMATION_COMPLETE
+==============================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_DISPLAY_EVT_ANIMATION_COMPLETE
+   :project: CODAL

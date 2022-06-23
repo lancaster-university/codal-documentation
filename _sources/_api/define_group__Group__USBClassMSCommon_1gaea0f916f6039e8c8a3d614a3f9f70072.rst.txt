@@ -1,0 +1,14 @@
+.. _exhale_define_group__Group__USBClassMSCommon_1gaea0f916f6039e8c8a3d614a3f9f70072:
+
+Define SCSI_CMD_WRITE_6
+=======================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USBMassStorageClass.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SCSI_CMD_WRITE_6
+   :project: CODAL

@@ -1,0 +1,14 @@
+.. _exhale_enum_namespacecodal_1a52525cab6f4fe330a94fd5f9d4769449:
+
+Enum TimerBitMode
+=================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_LowLevelTimer.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: codal::TimerBitMode
+   :project: CODAL

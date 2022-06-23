@@ -1,0 +1,14 @@
+.. _exhale_define_CodalComponent_8h_1a0fedbf4cf05c08fa900708bf99b8aa99:
+
+Define DEVICE_COMPONENT_STATUS_IDLE_TICK
+========================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalComponent.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DEVICE_COMPONENT_STATUS_IDLE_TICK
+   :project: CODAL

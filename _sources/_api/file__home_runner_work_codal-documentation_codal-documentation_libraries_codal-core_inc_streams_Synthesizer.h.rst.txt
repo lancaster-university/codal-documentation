@@ -1,0 +1,67 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_Synthesizer.h:
+
+File Synthesizer.h
+==================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/streams``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/streams/Synthesizer.h``)
+-------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_Synthesizer.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``DataStream.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_DataStream.h`)
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_codal`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classcodal_1_1Synthesizer`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_Synthesizer_8h_1a71135aaeb624d05117dd7acb85d7059c`
+
+- :ref:`exhale_define_Synthesizer_8h_1a8633c4138fbea7c21934bdd813da3b4a`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_namespacecodal_1aa2cc026008219e630407221295a96eb9`
+

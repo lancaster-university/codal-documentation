@@ -1,0 +1,33 @@
+.. _dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core:
+
+
+Directory core
+==============
+
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+*Directory path:* ``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/core``
+
+
+Files
+-----
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_codal_target_hal.h`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalCompat.h`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalComponent.h`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalDevice.h`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalDmesg.h`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalFiber.h`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalHeapAllocator.h`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalListener.h`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalUtil.h`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_ErrorNo.h`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_EventModel.h`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_MemberFunctionCallback.h`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_NotifyEvents.h`
+
+

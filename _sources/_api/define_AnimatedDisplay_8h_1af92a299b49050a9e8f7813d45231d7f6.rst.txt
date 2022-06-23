@@ -1,0 +1,14 @@
+.. _exhale_define_AnimatedDisplay_8h_1af92a299b49050a9e8f7813d45231d7f6:
+
+Define DISPLAY_SPACING
+======================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_AnimatedDisplay.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DISPLAY_SPACING
+   :project: CODAL

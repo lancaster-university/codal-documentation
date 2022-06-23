@@ -1,0 +1,14 @@
+.. _exhale_define_CodalComponent_8h_1a64585c0c22fa33a937b1d41e34989a9d:
+
+Define DEVICE_ID_THERMOMETER
+============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalComponent.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DEVICE_ID_THERMOMETER
+   :project: CODAL

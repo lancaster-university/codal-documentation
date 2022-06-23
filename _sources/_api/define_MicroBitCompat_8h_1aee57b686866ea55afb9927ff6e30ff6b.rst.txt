@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitCompat_8h_1aee57b686866ea55afb9927ff6e30ff6b:
+
+Define MICROBIT_COMPASS_STATUS_ADDED_TO_IDLE
+============================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_COMPASS_STATUS_ADDED_TO_IDLE
+   :project: CODAL

@@ -1,0 +1,14 @@
+.. _exhale_define_Compass_8h_1a852db3b5f942cd744f8834ee51fdf800:
+
+Define COMPASS_STATUS_CALIBRATED
+================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Compass.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: COMPASS_STATUS_CALIBRATED
+   :project: CODAL

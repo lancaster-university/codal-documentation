@@ -1,0 +1,14 @@
+.. _exhale_define_MultiButton_8h_1abf8d1db7a8328ca5c04f009e583371d5:
+
+Define MULTI_BUTTON_SUPRESSED_2
+===============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MultiButton.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MULTI_BUTTON_SUPRESSED_2
+   :project: CODAL

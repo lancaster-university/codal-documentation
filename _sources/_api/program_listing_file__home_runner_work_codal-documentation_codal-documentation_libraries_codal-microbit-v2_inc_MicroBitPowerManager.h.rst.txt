@@ -1,0 +1,273 @@
+
+.. _program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitPowerManager.h:
+
+Program Listing for File MicroBitPowerManager.h
+===============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitPowerManager.h>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/MicroBitPowerManager.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   /*
+   The MIT License (MIT)
+   
+   Copyright (c) 2017 Lancaster University.
+   
+   Permission is hereby granted, free of charge, to any person obtaining a
+   copy of this software and associated documentation files (the "Software"),
+   to deal in the Software without restriction, including without limitation
+   the rights to use, copy, modify, merge, publish, distribute, sublicense,
+   and/or sell copies of the Software, and to permit persons to whom the
+   Software is furnished to do so, subject to the following conditions:
+   
+   The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+   
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+   THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+   */
+   
+   #ifndef MICROBIT_POWER_MANAGER_H
+   #define MICROBIT_POWER_MANAGER_H
+   
+   #include "MicroBitConfig.h"
+   #include "MicroBitCompat.h"
+   #include "MicroBitIO.h"
+   #include "codal-core/inc/core/CodalComponent.h"
+   #include "codal-core/inc/driver-models/I2C.h"
+   #include "codal-core/inc/driver-models/Pin.h"
+   
+   
+   // Constants for USB Interface Power Management Protocol
+   
+   //
+   // I2C Address of the USB Interface Chip (Control interface)
+   //
+   #define MICROBIT_UIPM_I2C_ADDRESS                   (0x70 << 1)
+   
+   //
+   // General constants 
+   //
+   #define MICROBIT_UIPM_MAX_BUFFER_SIZE               12
+   #define MICROBIT_UIPM_MAX_RETRIES                   20
+   #define MICROBIT_USB_INTERFACE_IRQ_THRESHOLD        30
+   
+   //
+   // Command codes for the USB Interface Chip
+   //
+   #define MICROBIT_UIPM_COMMAND_READ_REQUEST           0x10
+   #define MICROBIT_UIPM_COMMAND_READ_RESPONSE          0x11
+   #define MICROBIT_UIPM_COMMAND_WRITE_REQUEST          0x12
+   #define MICROBIT_UIPM_COMMAND_WRITE_RESPONSE         0x13
+   #define MICROBIT_UIPM_COMMAND_ERROR_RESPONSE         0x20
+   
+   //
+   // Queryable/Settable properties of the USB Interface Chip
+   //
+   
+   #define MICROBIT_UIPM_PROPERTY_BOARD_REVISION       0x01
+   #define MICROBIT_UIPM_PROPERTY_I2C_VERSION          0x02
+   #define MICROBIT_UIPM_PROPERTY_DAPLINK_VERSION      0x03
+   #define MICROBIT_UIPM_PROPERTY_POWER_SOURCE         0x04
+   #define MICROBIT_UIPM_PROPERTY_POWER_CONSUMPTION    0x05
+   #define MICROBIT_UIPM_PROPERTY_USB_STATE            0x06
+   #define MICROBIT_UIPM_PROPERTY_KL27_POWER_MODE      0x07
+   #define MICROBIT_UIPM_PROPERTY_KL27_POWER_LED_STATE 0x08
+   #define MICROBIT_UIPM_PROPERTY_KL27_USER_EVENT      0x09
+   
+   //
+   // KL27 User event sources
+   //
+   #define MICROBIT_UIPM_EVENT_WAKE_RESET              0x01
+   #define MICROBIT_UIPM_EVENT_WAKE_USB_INSERTION      0x02
+   #define MICROBIT_UIPM_EVENT_RESET_LONG_PRESS        0x03
+   
+   //
+   // USB Interface Power Management Protocol error codes
+   //
+   #define MICROBIT_UIPM_SUCCESS             0x30
+   #define MICROBIT_UIPM_INCOMPLETE_CMD      0x31
+   #define MICROBIT_UIPM_UNKNOWN_CMD         0x32
+   #define MICROBIT_UIPM_FORBIDDEN           0x33
+   #define MICROBIT_UIPM_NOT_RECOGNISED    0x34
+   #define MICROBIT_UIPM_BAD_LENGTH        0x35
+   #define MICROBIT_UIPM_READ_FORBIDDEN    0x36                    // Why not just FORBIDDEN?
+   #define MICROBIT_UIPM_WRITE_FORBIDDEN   0x37                    // Why not just FORBIDDEN?
+   #define MICROBIT_UIPM_WRITE_FAIL        0x38                    // Generalise to any FAIL?
+   #define MICROBIT_UIPM_BUSY              0x39
+   
+   
+   
+   //
+   // Enumeration of device power modes
+   //
+   typedef enum {
+       PWR_SOURCE_NONE = 0,
+       PWR_USB_ONLY,
+       PWR_BATT_ONLY,
+       PWR_USB_AND_BATT
+   } MicroBitPowerSource;
+   
+   //
+   // Enumeration of USB states
+   //
+   typedef enum {
+       USB_DISCONNECTED = 0,
+       USB_CONNECTING,
+       USB_CONNECTED,
+       USB_CHECK_CONNECTED,
+       USB_CONFIGURED,
+       USB_DISCONNECTING
+   } MicroBitUSBStatus;
+   
+   //
+   // USB interface and device version information
+   //
+   
+   // board versions:
+   // V2.0 (KL27 I/F):      0x9904
+   // V2.2 (NRF52833 I/F):  0x9905
+   // V2.2 (NRF52820 I/F):  0x9906
+   
+   typedef struct {
+       uint16_t        i2c;
+       uint16_t        daplink;
+       uint16_t        board;
+   } MicroBitVersion;
+   
+   typedef struct {
+       uint32_t batteryMicroVolts;
+       uint32_t vinMicroVolts;
+       float estimatedPowerConsumption;
+   } MicroBitPowerData;
+   
+   //
+   // USB Interface Chip Power States
+   //
+   #define MICROBIT_USB_INTERFACE_POWER_MODE_VLPS    0x06          // Light Sleep - wake up on I2C. First message ignored.  
+   #define MICROBIT_USB_INTERFACE_POWER_MODE_VLLS0   0x08          // Deep Sleep - wake on reset + .... ??? Do we need this?
+   
+   //
+   // Component Status flags
+   //
+   #define MICROBIT_USB_INTERFACE_AWAITING_RESPONSE   0x01
+   #define MICROBIT_USB_INTERFACE_VERSION_LOADED      0x02
+   #define MICROBIT_USB_INTERFACE_ALWAYS_NOP          0x04
+   #define MICROBIT_USB_INTERFACE_BUSY_FLAG_SUPPORTED 0x20
+   
+   //
+   // Minimum deep sleep time (milliseconds)
+   //
+   #ifndef CONFIG_MINIMUM_DEEP_SLEEP_TIME
+   #define CONFIG_MINIMUM_DEEP_SLEEP_TIME  100
+   #endif
+   
+   //
+   // Minimum time between power up and power down (milliseconds)
+   //
+   #ifndef CONFIG_MINIMUM_POWER_ON_TIME
+   #define CONFIG_MINIMUM_POWER_ON_TIME  500
+   #endif
+   
+   
+   class MicroBitPowerManager : public CodalComponent
+   {
+       public:
+       
+           MicroBitVersion         version;                            // Hardware versioning information
+           MicroBitPowerSource     powerSource;                        // Last known power source
+           //uint32_t                powerConsumption;                   // Last known power consumption (units?)
+           MicroBitPowerData       powerData;                          //
+           MicroBitUSBStatus       usbStatus;                          // Last known USB status
+           MicroBitI2C             &i2cBus;                            // The I2C bus to use to communicate with USB interface chip
+           MicroBitIO              &io;                                // Pins used by this device
+           NRFLowLevelTimer        *sysTimer;                          // The system timer. 
+   
+           MicroBitPowerManager(MicroBitI2C &i2c, MicroBitIO &ioPins, NRFLowLevelTimer &systemTimer, uint16_t id = MICROBIT_ID_POWER_MANAGER);
+   
+           MicroBitPowerSource getPowerSource();
+   
+           uint32_t getPowerConsumption() __attribute__ ((deprecated("Use getPowerData() instead")));
+   
+           MicroBitPowerData getPowerData();
+   
+           MicroBitVersion getVersion();
+   
+           MicroBitUSBStatus getUSBStatus();
+           
+           int sendUIPMPacket(ManagedBuffer packet);
+   
+           ManagedBuffer recvUIPMPacket();
+   
+           ManagedBuffer awaitUIPMPacket();
+   
+           ManagedBuffer writeProperty(ManagedBuffer request, bool ack = true);
+   
+           ManagedBuffer readProperty(int property);
+   
+           void nop();
+   
+           void off();
+   
+           void readInterfaceRequest();
+   
+           virtual void idleCallback() override;
+   
+           void awaitingPacket(bool awaiting);
+   
+           ~MicroBitPowerManager();
+   
+           void deepSleep();
+   
+           void deepSleep(uint32_t milliSeconds);
+   
+           void deepSleepAsync();
+   
+           void powerDownEnable();
+   
+           void powerDownDisable();
+   
+           bool powerDownIsEnabled();
+   
+           bool waitingForDeepSleep();
+   
+           bool readyForDeepSleep();
+   
+           int startDeepSleep();
+   
+           void cancelDeepSleep();
+   
+           private:
+   
+           void listener(Event evt);
+           void listen();
+           void ignore();
+           
+           void prepareDeepSleep();
+   
+           void deepSleepWait();
+   
+           void setPowerLED(bool doSleep);
+           
+           static volatile uint16_t timer_irq_channels;
+           static void deepSleepTimerIRQ(uint16_t chan);
+   
+           FiberLock               deepSleepLock;
+           int                     powerDownDisableCount;
+           CODAL_TIMESTAMP         powerUpTime;
+           uint16_t                eventValue;
+   
+           int canDeepSleep( bool wakeOnTime, CODAL_TIMESTAMP wakeUpTime, bool wakeUpSources, NRF52Pin *wakeUpPin);
+   
+           int simpleDeepSleep();
+   
+           int simpleDeepSleep( bool wakeOnTime, CODAL_TIMESTAMP wakeUpTime, bool wakeUpSources, NRF52Pin *wakeUpPin);
+   };
+   #endif

@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitCompat_8h_1a0160fd1bbe45da1d695ffbe6186d2d0e:
+
+Define MICROBIT_IDLE_COMPONENTS
+===============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_IDLE_COMPONENTS
+   :project: CODAL

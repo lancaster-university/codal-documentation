@@ -1,0 +1,14 @@
+.. _exhale_function_namespacecodal_1ab3dea2a097889c1e75ba49e98ab20cdd:
+
+Function codal::system_timer_event_every_us
+===========================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Timer.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: codal::system_timer_event_every_us(CODAL_TIMESTAMP, uint16_t, uint16_t, uint32_t)
+   :project: CODAL

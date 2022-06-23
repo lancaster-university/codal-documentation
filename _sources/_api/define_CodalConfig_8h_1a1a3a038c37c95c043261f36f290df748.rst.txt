@@ -1,0 +1,14 @@
+.. _exhale_define_CodalConfig_8h_1a1a3a038c37c95c043261f36f290df748:
+
+Define DEVICE_WEBUSB
+====================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DEVICE_WEBUSB
+   :project: CODAL

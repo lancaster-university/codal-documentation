@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitUSBFlashManager_8h_1af60049fcb524da222c4be5ec36e2ddb3:
+
+Define MICROBIT_USB_FLASH_USE_NULL_TRANSACTION
+==============================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitUSBFlashManager.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_USB_FLASH_USE_NULL_TRANSACTION
+   :project: CODAL

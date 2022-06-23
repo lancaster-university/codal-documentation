@@ -1,0 +1,14 @@
+.. _exhale_define_uf2format_8h_1a2d87dd22d24f4e73425aa499cd2dc97d:
+
+Define UF2_MAGIC_END
+====================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_uf2format.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: UF2_MAGIC_END
+   :project: CODAL

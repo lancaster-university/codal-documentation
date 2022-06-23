@@ -1,0 +1,14 @@
+.. _exhale_define_MESEvents_8h_1a00d3d7a82984e99c5714458d4eefa0a9:
+
+Define MES_DPAD_BUTTON_3_DOWN
+=============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MESEvents.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MES_DPAD_BUTTON_3_DOWN
+   :project: CODAL

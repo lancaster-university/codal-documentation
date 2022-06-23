@@ -1,0 +1,14 @@
+.. _exhale_define_AnalogSensor_8h_1a8a996d984f859d823e8962dd88c706ce:
+
+Define ANALOG_SENSOR_HIGH_THRESHOLD_PASSED
+==========================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_AnalogSensor.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: ANALOG_SENSOR_HIGH_THRESHOLD_PASSED
+   :project: CODAL

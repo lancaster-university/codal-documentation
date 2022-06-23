@@ -1,0 +1,164 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalFiber.h:
+
+File CodalFiber.h
+=================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/core``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/core/CodalFiber.h``)
+---------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalFiber.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``CodalConfig.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h`)
+
+- ``Event.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_Event.h`)
+
+- ``EventModel.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_EventModel.h`)
+
+- ``codal_target_hal.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_codal_target_hal.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalDevice.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_PulseIn.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_codal`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structcodal_1_1Fiber`
+
+- :ref:`exhale_class_classcodal_1_1FiberLock`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespacecodal_1ab94994ca0d79c3191ef4252813aee2c0`
+
+- :ref:`exhale_function_namespacecodal_1a8f6dc14893952930895929da49e83260`
+
+- :ref:`exhale_function_namespacecodal_1a73f27eabf66e2b721aa470c6063316a1`
+
+- :ref:`exhale_function_namespacecodal_1a3f314eb211d045b62fcca8829165362c`
+
+- :ref:`exhale_function_namespacecodal_1a1fe8c15a04bbefa02dbe8ac38d63a3cd`
+
+- :ref:`exhale_function_namespacecodal_1a2c2f8c0437504989b14ab55fc57c6171`
+
+- :ref:`exhale_function_namespacecodal_1a4c0f8ade68592c64d500ee576f7c9a76`
+
+- :ref:`exhale_function_namespacecodal_1a5bc6ae64f3b21bc1deb9cc73479022dc`
+
+- :ref:`exhale_function_namespacecodal_1a0e114ae9b9f557fab7b484053a115298`
+
+- :ref:`exhale_function_namespacecodal_1ad30ef8c023a055a54bb19f3386db46ac`
+
+- :ref:`exhale_function_namespacecodal_1a6800ad025f4818be6f408e050289c7a7`
+
+- :ref:`exhale_function_namespacecodal_1a79db4118feb74e91b5862de34d5ead6f`
+
+- :ref:`exhale_function_namespacecodal_1a31adb977c83c6df204078958fc653303`
+
+- :ref:`exhale_function_namespacecodal_1a37767880675d21087ed1d53046c210a5`
+
+- :ref:`exhale_function_namespacecodal_1af6368b5ed7feddd59281231c43f1bf49`
+
+- :ref:`exhale_function_namespacecodal_1a15ac28de687caaae15093f8cb4401afb`
+
+- :ref:`exhale_function_namespacecodal_1aa9f724d7838407d9a8cd63337691b123`
+
+- :ref:`exhale_function_namespacecodal_1a5ae8a97f84867ffbcdbe563d87f8afdc`
+
+- :ref:`exhale_function_namespacecodal_1add318b2ed604d6627fec8803f9ca147a`
+
+- :ref:`exhale_function_namespacecodal_1a0f2267d069f5fe51ac291450908f0a12`
+
+- :ref:`exhale_function_namespacecodal_1a0757572bc980fb6f43f137fbc68f514f`
+
+- :ref:`exhale_function_namespacecodal_1af6287c02d3b564a856fc9795433be3bf`
+
+- :ref:`exhale_function_namespacecodal_1abf3ec632cc4c666d1f94ac6d7cd1ac33`
+
+- :ref:`exhale_function_namespacecodal_1ad670baa5eaf28cf83d4634a42f3e8b2e`
+
+- :ref:`exhale_function_namespacecodal_1aa75ccd0b389dd1728894dc950e43693c`
+
+- :ref:`exhale_function_namespacecodal_1a2c2dc4be93b8c3ad430c735925453e0b`
+
+- :ref:`exhale_function_CodalFiber_8h_1a23498f3df034b9d1706a3a87a8b0c624`
+
+- :ref:`exhale_function_CodalFiber_8h_1a7a68feecce676df52c1b95579b89f987`
+
+- :ref:`exhale_function_CodalFiber_8h_1a569e1b46118d79a65a401cb15aa9b064`
+
+- :ref:`exhale_function_CodalFiber_8h_1a3301585d795b6db720b434b464e1b254`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_CodalFiber_8h_1a50077514197a43ec13ed66695c08e050`
+
+- :ref:`exhale_define_CodalFiber_8h_1a104c691d4f9c2af836ef780aaaaedb15`
+
+- :ref:`exhale_define_CodalFiber_8h_1accec8731172e1afd1c01063c7ed79085`
+
+- :ref:`exhale_define_CodalFiber_8h_1a912114686e39fe347c80fe7160ebb05d`
+
+- :ref:`exhale_define_CodalFiber_8h_1aea71c32acd6c3388c77ed72fde69b885`
+
+- :ref:`exhale_define_CodalFiber_8h_1ac27bad235b7c7e1852c08b452ef22464`
+
+- :ref:`exhale_define_CodalFiber_8h_1a99a7380b02cf31a99fe3d2d9136fc095`
+
+- :ref:`exhale_define_CodalFiber_8h_1ac58eeb9e0b95eebcbed6139ad3adeb18`
+
+- :ref:`exhale_define_CodalFiber_8h_1a8423a99968466c182c11a8c4c6c68795`
+
+- :ref:`exhale_define_CodalFiber_8h_1a9f6b829962cd42bfda8d03496577c45e`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_namespacecodal_1a6b3f16aa2de21913219f4b2c05d943fb`
+

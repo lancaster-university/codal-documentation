@@ -1,0 +1,14 @@
+.. _exhale_define_CodalDmesg_8h_1a3ec67cd09c057c750f09d37acb078380:
+
+Define DMESG
+============
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalDmesg.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DMESG
+   :project: CODAL

@@ -1,0 +1,14 @@
+.. _exhale_define_SingleWireSerial_8h_1a1da50ad4d02d059336e67ea3230b42ed:
+
+Define SWS_EVT_DATA_RECEIVED
+============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_SingleWireSerial.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SWS_EVT_DATA_RECEIVED
+   :project: CODAL

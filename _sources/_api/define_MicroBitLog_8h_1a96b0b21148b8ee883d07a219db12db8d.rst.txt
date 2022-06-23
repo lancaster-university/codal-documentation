@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitLog_8h_1a96b0b21148b8ee883d07a219db12db8d:
+
+Define MICROBIT_LOG_STATUS_INITIALIZED
+======================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitLog.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_LOG_STATUS_INITIALIZED
+   :project: CODAL

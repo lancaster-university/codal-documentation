@@ -1,0 +1,682 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Program Listing for File MicroBitCompat.h &#8212; CODAL codal-microbit-v2 v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL codal-microbit-v2 v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Welcome to CODAL’s documentation!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/the-basics.html">
+     The Basics - CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Program Listing for File MicroBitCompat.h</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="program-listing-for-file-microbitcompat-h">
+<span id="program-listing-file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-microbitcompat-h"></span><h1>Program Listing for File MicroBitCompat.h<a class="headerlink" href="#program-listing-for-file-microbitcompat-h" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-microbitcompat-h"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/compat/MicroBitCompat.h</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm">The MIT License (MIT)</span>
+
+<span class="cm">Copyright (c) 2016 British Broadcasting Corporation.</span>
+<span class="cm">This software is provided by Lancaster University by arrangement with the BBC.</span>
+
+<span class="cm">Permission is hereby granted, free of charge, to any person obtaining a</span>
+<span class="cm">copy of this software and associated documentation files (the &quot;Software&quot;),</span>
+<span class="cm">to deal in the Software without restriction, including without limitation</span>
+<span class="cm">the rights to use, copy, modify, merge, publish, distribute, sublicense,</span>
+<span class="cm">and/or sell copies of the Software, and to permit persons to whom the</span>
+<span class="cm">Software is furnished to do so, subject to the following conditions:</span>
+
+<span class="cm">The above copyright notice and this permission notice shall be included in</span>
+<span class="cm">all copies or substantial portions of the Software.</span>
+
+<span class="cm">THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<span class="cm">IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
+<span class="cm">FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL</span>
+<span class="cm">THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span>
+<span class="cm">LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING</span>
+<span class="cm">FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER</span>
+<span class="cm">DEALINGS IN THE SOFTWARE.</span>
+<span class="cm">*/</span><span class="w"></span>
+
+<span class="cp">#ifndef MICROBIT_COMPAT_H</span>
+<span class="cp">#define MICROBIT_COMPAT_H</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CodalConfig.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ErrorNo.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;codal-core/inc/types/Event.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;codal-core/inc/core/CodalComponent.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;codal-core/inc/core/CodalDmesg.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;codal-core/inc/driver-models/Accelerometer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;codal-core/inc/drivers/Button.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;codal-core/inc/driver-models/Timer.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;codal-core/inc/drivers/MultiButton.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;codal-core/inc/driver-models/Compass.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;codal-core/inc/driver-models/Serial.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;codal-core/inc/drivers/LEDMatrix.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;codal-core/inc/drivers/AnimatedDisplay.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;codal-core/inc/driver-models/I2C.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;codal-core/inc/drivers/KeyValueStorage.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MicroBitIO.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;NRF52Pin.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;NRF52I2C.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;NRF52SPI.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;NRF52Serial.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MicroBitI2C.h&quot;</span><span class="cp"></span>
+
+<span class="c1">//</span>
+<span class="c1">// Historic mbed types</span>
+<span class="c1">//</span>
+<span class="k">typedef</span><span class="w"> </span><span class="k">enum</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">PullNone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">PullDown</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">PullUp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">PullDefault</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PullUp</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="n">PinMode</span><span class="p">;</span><span class="w"></span>
+
+
+<span class="c1">//</span>
+<span class="c1">// MicroBit types</span>
+<span class="c1">//</span>
+<span class="k">typedef</span><span class="w"> </span><span class="n">codal</span><span class="o">::</span><span class="n">NRF52Pin</span><span class="w"> </span><span class="n">MicroBitPin</span><span class="p">;</span><span class="w"></span>
+<span class="k">typedef</span><span class="w"> </span><span class="n">codal</span><span class="o">::</span><span class="n">Event</span><span class="w"> </span><span class="n">MicroBitEvent</span><span class="p">;</span><span class="w"></span>
+<span class="k">typedef</span><span class="w"> </span><span class="n">codal</span><span class="o">::</span><span class="n">Listener</span><span class="w"> </span><span class="n">MicroBitListener</span><span class="p">;</span><span class="w"></span>
+<span class="k">typedef</span><span class="w"> </span><span class="n">codal</span><span class="o">::</span><span class="n">Image</span><span class="w"> </span><span class="n">MicroBitImage</span><span class="p">;</span><span class="w"></span>
+<span class="k">typedef</span><span class="w"> </span><span class="n">codal</span><span class="o">::</span><span class="n">SerialMode</span><span class="w"> </span><span class="n">MicroBitSerialMode</span><span class="p">;</span><span class="w"></span>
+<span class="k">typedef</span><span class="w"> </span><span class="n">codal</span><span class="o">::</span><span class="n">CodalComponent</span><span class="w"> </span><span class="n">MicroBitComponent</span><span class="p">;</span><span class="w"></span>
+<span class="k">typedef</span><span class="w"> </span><span class="n">codal</span><span class="o">::</span><span class="n">EventLaunchMode</span><span class="w"> </span><span class="n">MicroBitEventLaunchMode</span><span class="p">;</span><span class="w"></span>
+<span class="k">typedef</span><span class="w"> </span><span class="n">codal</span><span class="o">::</span><span class="n">KeyValueStorage</span><span class="w"> </span><span class="n">MicroBitStorage</span><span class="p">;</span><span class="w"></span>
+<span class="k">typedef</span><span class="w"> </span><span class="n">codal</span><span class="o">::</span><span class="n">BitmapFont</span><span class="w"> </span><span class="n">MicroBitFont</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">//</span>
+<span class="c1">// MICROBIT specific error codes</span>
+<span class="c1">//</span>
+<span class="cp">#define MICROBIT_BUSY                           DEVICE_BUSY</span>
+<span class="cp">#define MICROBIT_CANCELLED                      DEVICE_CANCELLED</span>
+<span class="cp">#define MICROBIT_CALIBRATION_IN_PROGRESS        DEVICE_CALIBRATION_IN_PROGRESS</span>
+<span class="cp">#define MICROBIT_CALIBRATION_REQUIRED           DEVICE_CALIBRATION_REQUIRED</span>
+<span class="cp">#define MICROBIT_HEAP_ERROR                     DEVICE_HEAP_ERROR</span>
+<span class="cp">#define MICROBIT_I2C_ERROR                      DEVICE_I2C_ERROR</span>
+<span class="cp">#define MICROBIT_INVALID_PARAMETER              DEVICE_INVALID_PARAMETER</span>
+<span class="cp">#define MICROBIT_NO_DATA                        DEVICE_NO_DATA</span>
+<span class="cp">#define MICROBIT_NO_RESOURCES                   DEVICE_NO_RESOURCES</span>
+<span class="cp">#define MICROBIT_NOT_SUPPORTED                  DEVICE_NOT_SUPPORTED</span>
+<span class="cp">#define MICROBIT_NULL_DEREFERENCE               DEVICE_NULL_DEREFERENCE</span>
+<span class="cp">#define MICROBIT_OK                             DEVICE_OK</span>
+<span class="cp">#define MICROBIT_OOM                            DEVICE_OOM</span>
+<span class="cp">#define MICROBIT_SERIAL_IN_USE                  DEVICE_SERIAL_IN_USE</span>
+
+
+<span class="c1">//</span>
+<span class="c1">// MICROBIT CONFIG options</span>
+<span class="c1">//</span>
+
+<span class="c1">// BLE related constants - not yet supported.</span>
+<span class="c1">//#define MICROBIT_DAL_BLUETOOTH_ADVERTISING_TIMEOUT</span>
+<span class="c1">//#define MICROBIT_DAL_BLUETOOTH_DEVICE_INFO_SERVICE</span>
+<span class="c1">//#define MICROBIT_DAL_BLUETOOTH_DFU_SERVICE</span>
+<span class="c1">//#define MICROBIT_DAL_BLUETOOTH_EDDYSTONE_UID</span>
+<span class="c1">//#define MICROBIT_DAL_BLUETOOTH_EDDYSTONE_URL</span>
+<span class="c1">//#define MICROBIT_DAL_BLUETOOTH_ENABLED</span>
+<span class="c1">//#define MICROBIT_DAL_BLUETOOTH_EVENT_SERVICE</span>
+<span class="c1">//#define MICROBIT_DAL_BLUETOOTH_OPEN</span>
+<span class="c1">//#define MICROBIT_DAL_BLUETOOTH_PAIRING_MODE</span>
+<span class="c1">//#define MICROBIT_DAL_BLUETOOTH_PRIVATE_ADDRESSING</span>
+<span class="c1">//#define MICROBIT_DAL_BLUETOOTH_SECURITY_LEVEL</span>
+<span class="c1">//#define MICROBIT_DAL_BLUETOOTH_TX_POWER</span>
+<span class="c1">//#define MICROBIT_DAL_BLUETOOTH_WHITELIST</span>
+
+
+
+<span class="c1">//</span>
+<span class="c1">// MICROBIT specific constants with CODAL mappings where appropriate</span>
+<span class="c1">//</span>
+
+<span class="cp">#define MICROBIT_ACCELEROMETER_3G_THRESHOLD                     ACCELEROMETER_3G_THRESHOLD</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_3G_TOLERANCE                     ACCELEROMETER_3G_TOLERANCE</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_6G_THRESHOLD                     ACCELEROMETER_6G_THRESHOLD</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_6G_TOLERANCE                     ACCELEROMETER_6G_TOLERANCE</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_8G_THRESHOLD                     ACCELEROMETER_8G_THRESHOLD</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_8G_TOLERANCE                     ACCELEROMETER_8G_TOLERANCE</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_FREEFALL_THRESHOLD               ACCELEROMETER_FREEFALL_THRESHOLD</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_FREEFALL_TOLERANCE               ACCELEROMETER_FREEFALL_TOLERANCE</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_GESTURE_DAMPING                  ACCELEROMETER_GESTURE_DAMPING</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_REST_THRESHOLD                   ACCELEROMETER_REST_THRESHOLD</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_REST_TOLERANCE                   ACCELEROMETER_REST_TOLERANCE</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_SHAKE_COUNT_THRESHOLD            ACCELEROMETER_SHAKE_COUNT_THRESHOLD</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_SHAKE_DAMPING                    ACCELEROMETER_SHAKE_DAMPING</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_SHAKE_RTX                        ACCELEROMETER_SHAKE_RTX</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_SHAKE_TOLERANCE                  ACCELEROMETER_SHAKE_TOLERANCE</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_TILT_TOLERANCE                   ACCELEROMETER_TILT_TOLERANCE</span>
+<span class="cp">#define MICROBIT_COMPONENT_RUNNING                              DEVICE_COMPONENT_RUNNING</span>
+<span class="cp">#define MICROBIT_DBG                                            CODAL_DEBUG</span>
+<span class="cp">#define MICROBIT_DEFAULT_PRINT_SPEED                            DISPLAY_DEFAULT_PRINT_SPEED</span>
+<span class="cp">#define MICROBIT_DEFAULT_PULLMODE                               DEVICE_DEFAULT_PULLMODE</span>
+<span class="cp">#define MICROBIT_DEFAULT_PWM_PERIOD                             DEVICE_DEFAULT_PWM_PERIOD</span>
+<span class="cp">#define MICROBIT_DEFAULT_SCROLL_SPEED                           DISPLAY_DEFAULT_SCROLL_SPEED</span>
+<span class="cp">#define MICROBIT_DEFAULT_SCROLL_STRIDE                          DISPLAY_DEFAULT_SCROLL_STRIDE</span>
+<span class="cp">#define MICROBIT_DEFAULT_SERIAL_MODE                            DEVICE_DEFAULT_SERIAL_MODE</span>
+<span class="cp">#define MICROBIT_DISPLAY_DEFAULT_AUTOCLEAR                      DISPLAY_DEFAULT_AUTOCLEAR</span>
+<span class="cp">#define MICROBIT_DISPLAY_DEFAULT_BRIGHTNESS                     LED_MATRIX_DEFAULT_BRIGHTNESS</span>
+<span class="cp">#define MICROBIT_DISPLAY_GREYSCALE_BIT_DEPTH                    LED_MATRIX_GREYSCALE_BIT_DEPTH</span>
+<span class="cp">#define MICROBIT_DISPLAY_MAXIMUM_BRIGHTNESS                     LED_MATRIX_MAXIMUM_BRIGHTNESS</span>
+<span class="cp">#define MICROBIT_DISPLAY_MINIMUM_BRIGHTNESS                     LED_MATRIX_MINIMUM_BRIGHTNESS</span>
+<span class="cp">#define MICROBIT_DISPLAY_ROTATION_0                             MATRIX_DISPLAY_ROTATION_0</span>
+<span class="cp">#define MICROBIT_DISPLAY_ROTATION_180                           MATRIX_DISPLAY_ROTATION_180</span>
+<span class="cp">#define MICROBIT_DISPLAY_ROTATION_270                           MATRIX_DISPLAY_ROTATION_270</span>
+<span class="cp">#define MICROBIT_DISPLAY_ROTATION_90                            MATRIX_DISPLAY_ROTATION_90</span>
+<span class="cp">#define MICROBIT_EVENT_DEFAULT_LAUNCH_MODE                      DEVICE_EVENT_DEFAULT_LAUNCH_MODE</span>
+<span class="cp">#define MICROBIT_DISPLAY_ANIMATE_DEFAULT_POS                    DISPLAY_ANIMATE_DEFAULT_POS</span>
+<span class="cp">#define MICROBIT_FONT_ASCII_END                                 BITMAP_FONT_ASCII_END</span>
+<span class="cp">#define MICROBIT_FONT_ASCII_START                               BITMAP_FONT_ASCII_START</span>
+<span class="cp">#define MICROBIT_FONT_HEIGHT                                    BITMAP_FONT_HEIGHT</span>
+<span class="cp">#define MICROBIT_FONT_WIDTH                                     BITMAP_FONT_WIDTH</span>
+<span class="cp">#define MICROBIT_HEAP_ALLOCATOR                                 DEVICE_HEAP_ALLOCATOR</span>
+<span class="cp">#define MICROBIT_HEAP_BLOCK_SIZE                                DEVICE_HEAP_BLOCK_SIZE</span>
+<span class="cp">#define MICROBIT_HEAP_DBG                                       (CODAL_DEBUG == CODAL_DEBUG_HEAP)</span>
+<span class="cp">#define MICROBIT_HEAP_END                                       CODAL_HEAP_END</span>
+<span class="cp">#define MICROBIT_I2C_MAX_RETRIES                                1</span>
+<span class="cp">#define MICROBIT_IDLE_COMPONENTS                                DEVICE_COMPONENT_COUNT</span>
+<span class="cp">#define MICROBIT_SYSTEM_COMPONENTS                              DEVICE_COMPONENT_COUNT</span>
+<span class="cp">#define MICROBIT_PIN_DEFAULT_SERVO_CENTER                       DEVICE_PIN_DEFAULT_SERVO_CENTER</span>
+<span class="cp">#define MICROBIT_PIN_DEFAULT_SERVO_RANGE                        DEVICE_PIN_DEFAULT_SERVO_RANGE</span>
+<span class="cp">#define MICROBIT_PIN_EVENT_NONE                                 DEVICE_PIN_EVENT_NONE</span>
+<span class="cp">#define MICROBIT_PIN_EVENT_ON_EDGE                              DEVICE_PIN_EVENT_ON_EDGE</span>
+<span class="cp">#define MICROBIT_PIN_EVENT_ON_PULSE                             DEVICE_PIN_EVENT_ON_PULSE</span>
+<span class="cp">#define MICROBIT_PIN_EVENT_ON_TOUCH                             DEVICE_PIN_EVENT_ON_TOUCH</span>
+<span class="cp">#define MICROBIT_PIN_EVT_FALL                                   DEVICE_PIN_EVT_FALL</span>
+<span class="cp">#define MICROBIT_PIN_EVT_PULSE_HI                               DEVICE_PIN_EVT_PULSE_HI</span>
+<span class="cp">#define MICROBIT_PIN_EVT_PULSE_LO                               DEVICE_PIN_EVT_PULSE_LO</span>
+<span class="cp">#define MICROBIT_PIN_EVT_RISE                                   DEVICE_PIN_EVT_RISE</span>
+<span class="cp">#define MICROBIT_PIN_MAX_OUTPUT                                 DEVICE_PIN_MAX_OUTPUT</span>
+<span class="cp">#define MICROBIT_PIN_MAX_SERVO_RANGE                            DEVICE_PIN_MAX_SERVO_RANGE</span>
+
+<span class="c1">//</span>
+<span class="c1">// BLE related constants - not yet supported.</span>
+<span class="c1">//</span>
+
+<span class="c1">//#define MICROBIT_BLE_ADVERTISING_TIMEOUT</span>
+<span class="c1">//#define MICROBIT_BLE_DEFAULT_TX_POWER</span>
+<span class="c1">//#define MICROBIT_BLE_DEVICE_INFORMATION_SERVICE</span>
+<span class="c1">//#define MICROBIT_BLE_DFU_SERVICE</span>
+<span class="c1">//#define MICROBIT_BLE_DISCONNECT_AFTER_PAIRING_DELAY</span>
+<span class="c1">//#define MICROBIT_BLE_EDDYSTONE_ADV_INTERVAL</span>
+<span class="c1">//#define MICROBIT_BLE_EDDYSTONE_DEFAULT_POWER</span>
+<span class="c1">//#define MICROBIT_BLE_EDDYSTONE_UID</span>
+<span class="c1">//#define MICROBIT_BLE_EDDYSTONE_URL</span>
+<span class="c1">//#define MICROBIT_BLE_ENABLE_BONDING</span>
+<span class="c1">//#define MICROBIT_BLE_ENABLED</span>
+<span class="c1">//#define MICROBIT_BLE_EVENT_SERVICE</span>
+<span class="c1">//#define MICROBIT_BLE_EVT_CONNECTED</span>
+<span class="c1">//#define MICROBIT_BLE_EVT_DISCONNECTED</span>
+<span class="c1">//#define MICROBIT_BLE_FIRMWARE_VERSION</span>
+<span class="c1">//#define MICROBIT_BLE_HARDWARE_VERSION</span>
+<span class="c1">//#define MICROBIT_BLE_MANUFACTURER</span>
+<span class="c1">//#define MICROBIT_BLE_MAXIMUM_BONDS</span>
+<span class="c1">//#define MICROBIT_BLE_MAXIMUM_SCROLLTEXT</span>
+<span class="c1">//#define MICROBIT_BLE_MODEL</span>
+<span class="c1">//#define MICROBIT_BLE_OPEN</span>
+<span class="c1">//#define MICROBIT_BLE_PAIR_COMPLETE</span>
+<span class="c1">//#define MICROBIT_BLE_PAIRING_MODE</span>
+<span class="c1">//#define MICROBIT_BLE_PAIRING_TIMEOUT</span>
+<span class="c1">//#define MICROBIT_BLE_PAIR_PASSCODE</span>
+<span class="c1">//#define MICROBIT_BLE_PAIR_REQUEST</span>
+<span class="c1">//#define MICROBIT_BLE_PAIR_SUCCESSFUL</span>
+<span class="c1">//#define MICROBIT_BLE_PRIVATE_ADDRESSES</span>
+<span class="c1">//#define MICROBIT_BLE_SECURITY_LEVEL</span>
+<span class="c1">//#define MICROBIT_BLE_SOFTWARE_VERSION</span>
+<span class="c1">//#define MICROBIT_BLE_STATUS_DISCONNECT</span>
+<span class="c1">//#define MICROBIT_BLE_STATUS_STORE_SYSATTR</span>
+<span class="c1">//#define MICROBIT_BLE_WHITELIST</span>
+
+<span class="c1">//#define MICROBIT_DFU_HISTOGRAM_HEIGHT</span>
+<span class="c1">//#define MICROBIT_DFU_HISTOGRAM_WIDTH</span>
+<span class="c1">//#define MICROBIT_DFU_OPCODE_START_DFU</span>
+
+<span class="c1">//#define MICROBIT_HEAP_REUSE_SD</span>
+<span class="c1">//#define MICROBIT_SD_GATT_TABLE_SIZE</span>
+<span class="c1">//#define MICROBIT_SD_GATT_TABLE_START</span>
+<span class="c1">//#define MICROBIT_SD_LIMIT</span>
+<span class="c1">//#define MICROBIT_ID_BLE</span>
+<span class="c1">//#define MICROBIT_ID_BLE_UART</span>
+<span class="c1">//#define MICROBIT_IO_PIN_SERVICE_DATA_SIZE</span>
+<span class="c1">//#define MICROBIT_IO_PIN_SERVICE_PINCOUNT</span>
+
+<span class="c1">//#define MICROBIT_NAME_CODE_LETTERS</span>
+<span class="c1">//#define MICROBIT_NAME_LENGTH</span>
+<span class="c1">//#define MICROBIT_PAIRING_FADE_SPEED</span>
+<span class="c1">//#define MICROBIT_PWM_PIN_SERVICE_DATA_SIZE</span>
+
+<span class="c1">//#define MICROBIT_UART_S_DEFAULT_BUF_SIZE</span>
+<span class="c1">//#define MICROBIT_UART_S_EVT_DELIM_MATCH</span>
+<span class="c1">//#define MICROBIT_UART_S_EVT_HEAD_MATCH</span>
+<span class="c1">//#define MICROBIT_UART_S_EVT_RX_FULL</span>
+<span class="cp">#define MICROBIT_UART_S_EVT_TX_EMPTY                    BLE_EVT_SERIAL_TX_EMPTY</span>
+
+<span class="c1">//</span>
+<span class="c1">// Light Sensor not yet implemented</span>
+<span class="c1">//</span>
+
+<span class="c1">//#define MICROBIT_LIGHT_SENSOR_AN_SET_TIME</span>
+<span class="c1">//#define MICROBIT_LIGHT_SENSOR_CHAN_NUM</span>
+<span class="c1">//#define MICROBIT_LIGHT_SENSOR_MAX_VALUE</span>
+<span class="c1">//#define MICROBIT_LIGHT_SENSOR_MIN_VALUE</span>
+<span class="c1">//#define MICROBIT_LIGHT_SENSOR_TICK_PERIOD</span>
+<span class="c1">//#define MICROBIT_LIGHT_SENSOR_TICK_SPEED</span>
+
+<span class="c1">//</span>
+<span class="c1">// Storage not yet implemented</span>
+<span class="c1">//</span>
+
+<span class="c1">//#define MICROBIT_STORAGE_BLOCK_SIZE</span>
+<span class="c1">//#define MICROBIT_STORAGE_KEY_SIZE</span>
+<span class="c1">//#define MICROBIT_STORAGE_MAGIC</span>
+<span class="c1">//#define MICROBIT_STORAGE_SCRATCH_PAGE_OFFSET</span>
+<span class="c1">//#define MICROBIT_STORAGE_STORE_PAGE_OFFSET</span>
+<span class="c1">//#define MICROBIT_STORAGE_VALUE_SIZE</span>
+
+
+<span class="c1">//</span>
+<span class="c1">// MicroBit Panic not yet implemented</span>
+<span class="c1">//</span>
+
+<span class="c1">//#define MICROBIT_PANIC_ERROR_CHARS</span>
+
+
+<span class="c1">//</span>
+<span class="c1">// MICROBIT specific component IDs and event codes</span>
+<span class="c1">//</span>
+
+<span class="cp">#define MICROBIT_ACCELEROMETER_EVT_3G                           ACCELEROMETER_EVT_3G</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_EVT_6G                           ACCELEROMETER_EVT_6G</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_EVT_8G                           ACCELEROMETER_EVT_8G</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_EVT_DATA_UPDATE                  ACCELEROMETER_EVT_DATA_UPDATE</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_EVT_FACE_DOWN                    ACCELEROMETER_EVT_FACE_DOWN</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_EVT_FACE_UP                      ACCELEROMETER_EVT_FACE_UP</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_EVT_FREEFALL                     ACCELEROMETER_EVT_FREEFALL</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_EVT_NONE                         ACCELEROMETER_EVT_NONE</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_EVT_SHAKE                        ACCELEROMETER_EVT_SHAKE</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_EVT_TILT_DOWN                    ACCELEROMETER_EVT_TILT_DOWN</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_EVT_TILT_LEFT                    ACCELEROMETER_EVT_TILT_LEFT</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_EVT_TILT_RIGHT                   ACCELEROMETER_EVT_TILT_RIGHT</span>
+<span class="cp">#define MICROBIT_ACCELEROMETER_EVT_TILT_UP                      ACCELEROMETER_EVT_TILT_UP</span>
+
+<span class="cp">#define MICROBIT_BUTTON_ALL_EVENTS                              DEVICE_BUTTON_ALL_EVENTS</span>
+<span class="cp">#define MICROBIT_BUTTON_SIMPLE_EVENTS                           DEVICE_BUTTON_SIMPLE_EVENTS</span>
+<span class="cp">#define MICROBIT_BUTTON_EVT_CLICK                               DEVICE_BUTTON_EVT_CLICK</span>
+<span class="cp">#define MICROBIT_BUTTON_EVT_DOUBLE_CLICK                        DEVICE_BUTTON_EVT_DOUBLE_CLICK</span>
+<span class="cp">#define MICROBIT_BUTTON_EVT_DOWN                                DEVICE_BUTTON_EVT_DOWN</span>
+<span class="cp">#define MICROBIT_BUTTON_EVT_HOLD                                DEVICE_BUTTON_EVT_HOLD</span>
+<span class="cp">#define MICROBIT_BUTTON_EVT_LONG_CLICK                          DEVICE_BUTTON_EVT_LONG_CLICK</span>
+<span class="cp">#define MICROBIT_BUTTON_EVT_UP                                  DEVICE_BUTTON_EVT_UP</span>
+
+<span class="cp">#define MICROBIT_COMPASS_EVT_CAL_END                            COMPASS_EVT_CAL_END</span>
+<span class="cp">#define MICROBIT_COMPASS_EVT_CALIBRATE                          COMPASS_EVT_CALIBRATE</span>
+<span class="cp">#define MICROBIT_COMPASS_EVT_CAL_REQUIRED                       COMPASS_EVT_CAL_REQUIRED</span>
+<span class="cp">#define MICROBIT_COMPASS_EVT_CAL_START                          COMPASS_EVT_CAL_START</span>
+<span class="cp">#define MICROBIT_COMPASS_EVT_CONFIG_NEEDED                      COMPASS_EVT_CONFIG_NEEDED</span>
+<span class="cp">#define MICROBIT_COMPASS_EVT_DATA_UPDATE                        COMPASS_EVT_DATA_UPDATE</span>
+<span class="cp">#define MICROBIT_COMPASS_EVT_CALIBRATION_NEEDED                 COMPASS_EVT_CALIBRATION_NEEDED</span>
+
+<span class="cp">#define MICROBIT_DISPLAY_EVT_ANIMATION_COMPLETE                 DISPLAY_EVT_ANIMATION_COMPLETE</span>
+<span class="cp">#define MICROBIT_DISPLAY_EVT_FREE                               DISPLAY_EVT_FREE</span>
+<span class="cp">#define MICROBIT_DISPLAY_EVT_LIGHT_SENSE                        DISPLAY_EVT_LIGHT_SENSE</span>
+
+<span class="cp">#define MICROBIT_SERIAL_EVT_DELIM_MATCH                         CODAL_SERIAL_EVT_DELIM_MATCH</span>
+<span class="cp">#define MICROBIT_SERIAL_EVT_HEAD_MATCH                          CODAL_SERIAL_EVT_HEAD_MATCH</span>
+<span class="cp">#define MICROBIT_SERIAL_EVT_RX_FULL                             CODAL_SERIAL_EVT_RX_FULL</span>
+<span class="cp">#define MICROBIT_SERIAL_EVT_TX_EMPTY                            CODAL_SERIAL_EVT_TX_EMPTY</span>
+
+<span class="cp">#define MICROBIT_ID_ANY                                         DEVICE_ID_ANY</span>
+<span class="cp">#define MICROBIT_EVT_ANY                                        DEVICE_EVT_ANY</span>
+
+<span class="cp">#define MICROBIT_ID_ACCELEROMETER                               DEVICE_ID_ACCELEROMETER</span>
+<span class="cp">#define MICROBIT_ID_BUTTON_A                                    DEVICE_ID_BUTTON_A</span>
+<span class="cp">#define MICROBIT_ID_BUTTON_B                                    DEVICE_ID_BUTTON_B</span>
+<span class="cp">#define MICROBIT_ID_BUTTON_AB                                   DEVICE_ID_BUTTON_AB</span>
+<span class="cp">#define MICROBIT_ID_BUTTON_RESET                                DEVICE_ID_BUTTON_RESET</span>
+<span class="cp">#define MICROBIT_ID_COMPASS                                     DEVICE_ID_COMPASS</span>
+<span class="cp">#define MICROBIT_ID_DISPLAY                                     DEVICE_ID_DISPLAY</span>
+<span class="cp">#define MICROBIT_ID_GESTURE                                     DEVICE_ID_GESTURE</span>
+<span class="cp">#define MICROBIT_ID_IO_P0                                       ID_PIN_P0</span>
+<span class="cp">#define MICROBIT_ID_IO_P1                                       ID_PIN_P1</span>
+<span class="cp">#define MICROBIT_ID_IO_P2                                       ID_PIN_P2</span>
+<span class="cp">#define MICROBIT_ID_IO_P3                                       ID_PIN_P3</span>
+<span class="cp">#define MICROBIT_ID_IO_P4                                       ID_PIN_P4</span>
+<span class="cp">#define MICROBIT_ID_IO_P5                                       ID_PIN_P5</span>
+<span class="cp">#define MICROBIT_ID_IO_P6                                       ID_PIN_P6</span>
+<span class="cp">#define MICROBIT_ID_IO_P7                                       ID_PIN_P7</span>
+<span class="cp">#define MICROBIT_ID_IO_P8                                       ID_PIN_P8</span>
+<span class="cp">#define MICROBIT_ID_IO_P9                                       ID_PIN_P9</span>
+<span class="cp">#define MICROBIT_ID_IO_P10                                      ID_PIN_P10</span>
+<span class="cp">#define MICROBIT_ID_IO_P11                                      ID_PIN_P11</span>
+<span class="cp">#define MICROBIT_ID_IO_P12                                      ID_PIN_P12</span>
+<span class="cp">#define MICROBIT_ID_IO_P13                                      ID_PIN_P13</span>
+<span class="cp">#define MICROBIT_ID_IO_P14                                      ID_PIN_P14</span>
+<span class="cp">#define MICROBIT_ID_IO_P15                                      ID_PIN_P15</span>
+<span class="cp">#define MICROBIT_ID_IO_P16                                      ID_PIN_P16</span>
+<span class="cp">#define MICROBIT_ID_IO_P19                                      ID_PIN_P19</span>
+<span class="cp">#define MICROBIT_ID_IO_P20                                      ID_PIN_P20</span>
+<span class="cp">#define MICROBIT_ID_LOGO                                        ID_PIN_LOGO</span>
+
+<span class="c1">// For MakeCode extension compat. Delete ASAP.</span>
+<span class="cp">#define MICROBIT_ID_FACE                                        ID_PIN_FACE</span>
+
+<span class="cp">#define MICROBIT_ID_MESSAGE_BUS_LISTENER                        DEVICE_ID_MESSAGE_BUS_LISTENER</span>
+<span class="cp">#define MICROBIT_ID_MULTIBUTTON_ATTACH                          DEVICE_ID_MULTIBUTTON_ATTACH</span>
+<span class="cp">#define MICROBIT_ID_NOTIFY                                      DEVICE_ID_NOTIFY</span>
+<span class="cp">#define MICROBIT_ID_NOTIFY_ONE                                  DEVICE_ID_NOTIFY_ONE</span>
+<span class="cp">#define MICROBIT_ID_RADIO                                       DEVICE_ID_RADIO</span>
+<span class="cp">#define MICROBIT_ID_RADIO_DATA_READY                            DEVICE_ID_RADIO_DATA_READY</span>
+<span class="cp">#define MICROBIT_ID_SERIAL                                      DEVICE_ID_SERIAL</span>
+<span class="cp">#define MICROBIT_ID_THERMOMETER                                 DEVICE_ID_THERMOMETER</span>
+
+<span class="cp">#define MICROBIT_ID_PARTIAL_FLASHING                            36</span>
+<span class="cp">#define MICROBIT_ID_POWER_MANAGER                               37</span>
+<span class="cp">#define MICROBIT_ID_USB_FLASH_MANAGER                           38</span>
+
+<span class="cp">#define MICROBIT_ID_VIRTUAL_SPEAKER_PIN                         39</span>
+
+<span class="cp">#define MICROBIT_ID_MBED_INTERRUPT_IN                           40</span>
+<span class="cp">#define MICROBIT_ID_MBED_PWM                                    41</span>
+<span class="cp">#define MICROBIT_ID_MBED_TIMEOUT                                42</span>
+<span class="cp">#define MICROBIT_ID_MBED_TICKER                                 43</span>
+
+<span class="cp">#define MICROBIT_ID_LOG                                         44</span>
+
+<span class="cp">#define MICROBIT_MAXIMUM_HEAPS                                  DEVICE_MAXIMUM_HEAPS</span>
+<span class="cp">#define MICROBIT_NESTED_HEAP_SIZE                               0</span>
+<span class="cp">#define MICROBIT_PANIC_HEAP_FULL                                DEVICE_PANIC_HEAP_FULL</span>
+
+<span class="cp">#define MICROBIT_SCHEDULER_RUNNING                              DEVICE_SCHEDULER_RUNNING</span>
+<span class="cp">#define MICROBIT_SERIAL_DEFAULT_BAUD_RATE                       CODAL_SERIAL_DEFAULT_BAUD_RATE</span>
+<span class="cp">#define MICROBIT_SERIAL_DEFAULT_BUFFER_SIZE                     CODAL_SERIAL_DEFAULT_BUFFER_SIZE</span>
+<span class="cp">#define MICROBIT_SERIAL_RX_BUFF_INIT                            CODAL_SERIAL_RX_BUFF_INIT</span>
+<span class="cp">#define MICROBIT_SERIAL_RX_IN_USE                               CODAL_SERIAL_RX_IN_USE</span>
+<span class="cp">#define MICROBIT_SERIAL_TX_BUFF_INIT                            CODAL_SERIAL_TX_BUFF_INIT</span>
+<span class="cp">#define MICROBIT_SERIAL_TX_IN_USE                               CODAL_SERIAL_TX_IN_USE</span>
+<span class="cp">#define MICROBIT_SRAM_BASE                                      DEVICE_SRAM_BASE</span>
+<span class="cp">#define MICROBIT_SRAM_END                                       DEVICE_SRAM_END</span>
+<span class="cp">#define MICROBIT_STACK_SIZE                                     DEVICE_STACK_SIZE</span>
+
+<span class="cp">#define SCK uBit.io.P13</span>
+<span class="cp">#define MISO uBit.io.P14</span>
+<span class="cp">#define MOSI uBit.io.P15</span>
+<span class="cp">#define SPI NRF52SPI</span>
+
+<span class="cp">#define MICROBIT_ACCEL_ADDED_TO_IDLE                            COMPASS_STATUS_ADDED_TO_IDLE</span>
+<span class="cp">#define MICROBIT_COMPASS_STATUS_ADDED_TO_IDLE                   COMPASS_STATUS_ADDED_TO_IDLE</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">codal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">fiber_add_idle_component</span><span class="p">(</span><span class="n">CodalComponent</span><span class="w"> </span><span class="o">*</span><span class="n">c</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="nf">htonl</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">v</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="nf">htons</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">v</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">codal</span><span class="p">;</span><span class="w"></span>
+
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

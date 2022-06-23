@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitCompat_8h_1aac138a1e01602d2169ae1fab3799dda5:
+
+Define MICROBIT_ACCEL_ADDED_TO_IDLE
+===================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_ACCEL_ADDED_TO_IDLE
+   :project: CODAL

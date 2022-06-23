@@ -1,0 +1,14 @@
+.. _exhale_define_NotifyEvents_8h_1aff2019dfd14cfc415435e36625410057:
+
+Define DEVICE_NOTIFY_USER_EVENT_BASE
+====================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_NotifyEvents.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DEVICE_NOTIFY_USER_EVENT_BASE
+   :project: CODAL

@@ -1,0 +1,14 @@
+.. _exhale_define_USB__HID__Keys_8h_1ac534c340c41f6a897cf2879ebae360bc:
+
+Define KEY_MEDIA_VOLUMEDOWN
+===========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USB_HID_Keys.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: KEY_MEDIA_VOLUMEDOWN
+   :project: CODAL

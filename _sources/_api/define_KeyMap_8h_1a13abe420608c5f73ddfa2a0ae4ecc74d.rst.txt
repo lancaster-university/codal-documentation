@@ -1,0 +1,14 @@
+.. _exhale_define_KeyMap_8h_1a13abe420608c5f73ddfa2a0ae4ecc74d:
+
+Define KEYMAP_KEY_DOWN
+======================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_KeyMap.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: KEYMAP_KEY_DOWN
+   :project: CODAL

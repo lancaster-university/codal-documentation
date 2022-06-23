@@ -1,0 +1,877 @@
+:orphan:
+
+
+Full API
+========
+
+Directories
+***********
+
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__home_runner_work_codal-documentation_codal-documentation_libraries.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat.rst
+
+Files
+*****
+
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_AbstractButton.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Accelerometer.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_AnalogSensor.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_AnimatedDisplay.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_AsciiKeyMap.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_BitmapFont.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_Button.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_codal_target_hal.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalCompat.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalComponent.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalDevice.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalDmesg.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalFiber.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalHeapAllocator.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalListener.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_CodalUSB.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalUtil.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Compass.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_CoordinateSystem.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_DataStream.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_DigitalIn.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_DigitalOut.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Display.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_DMASingleWireSerial.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_ErrorNo.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_Event.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_EventModel.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_ExternalEvents.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_FAT.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_FIFOStream.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_FSCache.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_FXOS8700.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_GhostFAT.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Gyroscope.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_HID.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_HIDJoystick.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_HIDKeyboard.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_HIDMouse.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_I2C.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_ILI9341.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_Image.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_InterruptIn.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_KeyMap.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_KeyValueStorage.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LEDMatrix.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_LevelDetector.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_LevelDetectorSPL.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LinearAnalogSensor.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LIS3DH.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_LowLevelTimer.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LSM303Accelerometer.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LSM303Magnetometer.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MAG3110.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_ManagedBuffer.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_ManagedString.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_ManagedType.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_Matrix4.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_mbed.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MbedMemberFunctionCallback.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MbedTimer.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_MemberFunctionCallback.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_MemorySource.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MESEvents.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MessageBus.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitAccelerometer.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitAccelerometerService.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitAudio.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitBLEChar.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitBLEManager.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitBLEService.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitBLEServices.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitBLETypes.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitButton.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitButtonService.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitCompass.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitCompassCalibrator.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitComponent.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitConfig.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitDevice.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitDevice.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitDisplay.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitEddystone.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitEvent.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitEventService.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitFiber.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitFile.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitFileSystem.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitFlash.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitI2C.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitImage.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitIOPinService.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitLEDService.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitLog.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitMagnetometerService.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitMemoryMap.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitPartialFlashingService.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitPowerManager.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitRadio.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitRadioDatagram.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitRadioEvent.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitSerial.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitStorage.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitSystemTimer.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitTemperatureService.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitThermometer.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitUARTService.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitUSBFlashManager.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitUtil.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroSynth.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_Mixer.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_Mixer2.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MMA8453.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MMA8653.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MPU6050.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MultiButton.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_NonLinearAnalogSensor.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_NotifyEvents.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_NRF52FlashManager.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_NRF52LedMatrix.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_NVMController.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_PacketBuffer.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_PearsonHash.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Pin.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_PulseIn.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_PwmOut.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Radio.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_RefCounted.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_ScreenIO.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Sensor.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Serial.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_SingleWireSerial.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_SoundEmojiSynthesizer.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_SoundExpressions.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_SoundOutputPin.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_SoundSynthesizerEffects.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_SPI.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_SPIFlash.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_SPIScreenIO.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_ST7735.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_StandardSPIFlash.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_StreamFilter.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_StreamFlowTrigger.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_StreamNormalizer.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_StreamRecording.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_StreamSplitter.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_Synthesizer.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_Ticker.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_Timeout.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Timer.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_TouchButton.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_TouchSensor.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_uf2format.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USB_HID_Keys.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USBMassStorageClass.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USBMSC.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_yotta_cfg_mappings.h.rst
+
+Pages
+*****
+
+
+.. toctree::
+   :maxdepth: 5
+
+   page_todo.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   page_deprecated.rst

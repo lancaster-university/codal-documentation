@@ -1,0 +1,14 @@
+.. _exhale_function_CodalHeapAllocator_8h_1a32db060cf15e9ac68b357cfbabfd0d30:
+
+Function device_heap_size
+=========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalHeapAllocator.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: device_heap_size(uint8_t)
+   :project: CODAL

@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitPowerManager_8h_1a401ad2ce89aeb92e775f4bd723bfe5d7:
+
+Define MICROBIT_UIPM_PROPERTY_BOARD_REVISION
+============================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitPowerManager.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_UIPM_PROPERTY_BOARD_REVISION
+   :project: CODAL

@@ -1,0 +1,126 @@
+
+.. _program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_KeyValueStorage.h:
+
+Program Listing for File KeyValueStorage.h
+==========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_KeyValueStorage.h>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/drivers/KeyValueStorage.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   /*
+   The MIT License (MIT)
+   
+   Copyright (c) 2016 British Broadcasting Corporation.
+   This software is provided by Lancaster University by arrangement with the BBC.
+   
+   Permission is hereby granted, free of charge, to any person obtaining a
+   copy of this software and associated documentation files (the "Software"),
+   to deal in the Software without restriction, including without limitation
+   the rights to use, copy, modify, merge, publish, distribute, sublicense,
+   and/or sell copies of the Software, and to permit persons to whom the
+   Software is furnished to do so, subject to the following conditions:
+   
+   The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+   
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+   THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+   */
+   
+   #ifndef KEY_VALUE_STORAGE_H
+   #define KEY_VALUE_STORAGE_H
+   
+   #include "CodalConfig.h"
+   #include "ManagedString.h"
+   #include "ErrorNo.h"
+   #include "NVMController.h"
+   
+   #ifndef DEVICE_KEY_VALUE_STORE_OFFSET
+   #define DEVICE_KEY_VALUE_STORE_OFFSET             -4
+   #endif
+   
+   #define KEY_VALUE_STORAGE_MAGIC                   0xC0DA1
+   
+   #define KEY_VALUE_STORAGE_BLOCK_SIZE              48
+   #define KEY_VALUE_STORAGE_KEY_SIZE                16
+   #define KEY_VALUE_STORAGE_VALUE_SIZE              KEY_VALUE_STORAGE_BLOCK_SIZE - KEY_VALUE_STORAGE_KEY_SIZE
+   
+   #define KEY_VALUE_STORAGE_SCRATCH_WORD_SIZE       64
+   
+   #define KEY_VALUE_STORAGE_MAX_PAIRS               5
+   
+   namespace codal
+   {
+     struct KeyValuePair
+     {
+         uint8_t key[KEY_VALUE_STORAGE_KEY_SIZE];
+         uint8_t value[KEY_VALUE_STORAGE_VALUE_SIZE];
+     };
+   
+     struct KeyValueStore
+     {
+         uint32_t magic;
+         uint32_t size;
+   
+         KeyValueStore(uint32_t magic, uint32_t size)
+         {
+             this->magic = magic;
+             this->size = size;
+         }
+   
+         KeyValueStore()
+         {
+             this->magic = 0;
+             this->size = 0;
+         }
+     };
+   
+   
+     class KeyValueStorage
+     {
+         uint32_t          flashPagePtr;
+         NVMController&    controller;
+         uint32_t          *scratch;
+   
+         public:
+   
+         KeyValueStorage(NVMController& controller, int pageNumber = DEVICE_KEY_VALUE_STORE_OFFSET);
+   
+         int put(const char* key, uint8_t* data, int dataSize);
+   
+   
+         int put(ManagedString key, uint8_t* data, int dataSize);
+   
+         KeyValuePair* get(const char* key);
+   
+         KeyValuePair* get(ManagedString key);
+   
+         int remove(const char* key);
+   
+         int remove(ManagedString key);
+   
+         int size();
+   
+         int wipe();
+   
+         private:
+   
+         void scratchReset();
+   
+         void scratchKeyValueStore(KeyValueStore store);
+   
+         void scratchKeyValuePair(KeyValuePair pair, int scratchOffset);
+   
+   
+     };
+   }
+   
+   #endif

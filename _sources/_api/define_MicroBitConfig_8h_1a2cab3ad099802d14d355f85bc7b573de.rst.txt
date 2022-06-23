@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitConfig_8h_1a2cab3ad099802d14d355f85bc7b573de:
+
+Define __MICROBIT_CONFIG_SECURITY_MODE_ENCRYPTION_WITH_MITM
+===========================================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: __MICROBIT_CONFIG_SECURITY_MODE_ENCRYPTION_WITH_MITM
+   :project: CODAL

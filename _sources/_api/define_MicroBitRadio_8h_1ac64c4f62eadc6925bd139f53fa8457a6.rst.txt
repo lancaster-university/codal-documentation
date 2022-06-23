@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitRadio_8h_1ac64c4f62eadc6925bd139f53fa8457a6:
+
+Define MICROBIT_RADIO_MAXIMUM_RX_BUFFERS
+========================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitRadio.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_RADIO_MAXIMUM_RX_BUFFERS
+   :project: CODAL

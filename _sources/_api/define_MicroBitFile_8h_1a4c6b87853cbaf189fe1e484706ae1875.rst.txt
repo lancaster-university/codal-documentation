@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitFile_8h_1a4c6b87853cbaf189fe1e484706ae1875:
+
+Define CREATE
+=============
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitFile.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CREATE
+   :project: CODAL

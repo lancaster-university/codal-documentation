@@ -1,0 +1,14 @@
+.. _exhale_define_group__Group__USBClassMSCommon_1ga193c6674b8dee669a59b2d32035c3c4b:
+
+Define SCSI_CMD_SEND_DIAGNOSTIC
+===============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USBMassStorageClass.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SCSI_CMD_SEND_DIAGNOSTIC
+   :project: CODAL

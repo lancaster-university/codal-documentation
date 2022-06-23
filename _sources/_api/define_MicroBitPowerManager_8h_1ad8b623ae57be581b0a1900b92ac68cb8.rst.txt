@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitPowerManager_8h_1ad8b623ae57be581b0a1900b92ac68cb8:
+
+Define MICROBIT_UIPM_MAX_RETRIES
+================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitPowerManager.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_UIPM_MAX_RETRIES
+   :project: CODAL

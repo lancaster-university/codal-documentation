@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitPowerManager_8h_1a130de2f770f13812b6264bace14ec748:
+
+Define MICROBIT_USB_INTERFACE_AWAITING_RESPONSE
+===============================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitPowerManager.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_USB_INTERFACE_AWAITING_RESPONSE
+   :project: CODAL

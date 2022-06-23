@@ -1,0 +1,17 @@
+.. _exhale_struct_structDirectory:
+
+Struct Directory
+================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitFileSystem.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: Directory
+   :project: CODAL
+   :members:
+   :protected-members:
+   :undoc-members:

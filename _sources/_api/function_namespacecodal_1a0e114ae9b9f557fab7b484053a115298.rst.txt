@@ -1,0 +1,14 @@
+.. _exhale_function_namespacecodal_1a0e114ae9b9f557fab7b484053a115298:
+
+Function codal::fiber_wake_on_event
+===================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalFiber.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: codal::fiber_wake_on_event(uint16_t, uint16_t)
+   :project: CODAL

@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>File MESEvents.h &#8212; CODAL codal-microbit-v2 v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL codal-microbit-v2 v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Welcome to CODAL’s documentation!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/the-basics.html">
+     The Basics - CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-bluetooth-mesevents-h">
+   Definition (
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     /home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/bluetooth/MESEvents.h
+    </span>
+   </code>
+   )
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#included-by">
+   Included By
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defines">
+   Defines
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>File MESEvents.h</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-bluetooth-mesevents-h">
+   Definition (
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     /home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/bluetooth/MESEvents.h
+    </span>
+   </code>
+   )
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#included-by">
+   Included By
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defines">
+   Defines
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="file-mesevents-h">
+<span id="file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-bluetooth-mesevents-h"></span><h1>File MESEvents.h<a class="headerlink" href="#file-mesevents-h" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth.html#dir-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-bluetooth"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/bluetooth</span></code>)</p>
+<div class="contents local topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-bluetooth-mesevents-h" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/bluetooth/MESEvents.h</span></code>)</a></p></li>
+<li><p><a class="reference internal" href="#included-by" id="id2">Included By</a></p></li>
+<li><p><a class="reference internal" href="#defines" id="id3">Defines</a></p></li>
+</ul>
+</div>
+<section id="definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-bluetooth-mesevents-h">
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/bluetooth/MESEvents.h</span></code>)<a class="headerlink" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-bluetooth-mesevents-h" title="Permalink to this headline">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MESEvents.h.html">Program Listing for File MESEvents.h</a></li>
+</ul>
+</div>
+</section>
+<section id="included-by">
+<h2>Included By<a class="headerlink" href="#included-by" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_ExternalEvents.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-bluetooth-externalevents-h"><span class="std std-ref">File ExternalEvents.h</span></a></p></li>
+</ul>
+</section>
+<section id="defines">
+<h2>Defines<a class="headerlink" href="#defines" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a0684dc0e496139e0ba29d1e6dfd403d6.html#exhale-define-mesevents-8h-1a0684dc0e496139e0ba29d1e6dfd403d6"><span class="std std-ref">Define MES_ALERT_EVT_ALARM1</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1aa5aea73394a19998c3822a98441cf2c0.html#exhale-define-mesevents-8h-1aa5aea73394a19998c3822a98441cf2c0"><span class="std std-ref">Define MES_ALERT_EVT_ALARM2</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1aa6cc5fd4b93fa6a589027b109eecbfdd.html#exhale-define-mesevents-8h-1aa6cc5fd4b93fa6a589027b109eecbfdd"><span class="std std-ref">Define MES_ALERT_EVT_ALARM3</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1acbda1fe1ae953a366bdc9c2985b18dc0.html#exhale-define-mesevents-8h-1acbda1fe1ae953a366bdc9c2985b18dc0"><span class="std std-ref">Define MES_ALERT_EVT_ALARM4</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1abe6d041cf85f13388c77ed324a3afa28.html#exhale-define-mesevents-8h-1abe6d041cf85f13388c77ed324a3afa28"><span class="std std-ref">Define MES_ALERT_EVT_ALARM5</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a677b12a32b88af6bc42d2ec3b88fb2ea.html#exhale-define-mesevents-8h-1a677b12a32b88af6bc42d2ec3b88fb2ea"><span class="std std-ref">Define MES_ALERT_EVT_ALARM6</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a9b57efa3db8ca8e8a95d2706b293b52a.html#exhale-define-mesevents-8h-1a9b57efa3db8ca8e8a95d2706b293b52a"><span class="std std-ref">Define MES_ALERT_EVT_DISPLAY_TOAST</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a65eb03270f4442d399e21c56d438b779.html#exhale-define-mesevents-8h-1a65eb03270f4442d399e21c56d438b779"><span class="std std-ref">Define MES_ALERT_EVT_FIND_MY_PHONE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1ab98815a75052fd9148e395806cef0b9b.html#exhale-define-mesevents-8h-1ab98815a75052fd9148e395806cef0b9b"><span class="std std-ref">Define MES_ALERT_EVT_PLAY_RINGTONE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1ada0011f5689013c181fb1a01a7d20890.html#exhale-define-mesevents-8h-1ada0011f5689013c181fb1a01a7d20890"><span class="std std-ref">Define MES_ALERT_EVT_PLAY_SOUND</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a1fe50ecdfa3d4312acd0dad181bccb95.html#exhale-define-mesevents-8h-1a1fe50ecdfa3d4312acd0dad181bccb95"><span class="std std-ref">Define MES_ALERT_EVT_VIBRATE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a0832c7e7206c6101fe0b0471283d468f.html#exhale-define-mesevents-8h-1a0832c7e7206c6101fe0b0471283d468f"><span class="std std-ref">Define MES_ALERTS_ID</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a0990cd3d46093a9535c48892274a185a.html#exhale-define-mesevents-8h-1a0990cd3d46093a9535c48892274a185a"><span class="std std-ref">Define MES_BROADCAST_GENERAL_ID</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a83a5247ec53b7747e148f5cdbcef8e8b.html#exhale-define-mesevents-8h-1a83a5247ec53b7747e148f5cdbcef8e8b"><span class="std std-ref">Define MES_CAMERA_EVT_LAUNCH_PHOTO_MODE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a1e017c6f02325abb81881a03be07d7c8.html#exhale-define-mesevents-8h-1a1e017c6f02325abb81881a03be07d7c8"><span class="std std-ref">Define MES_CAMERA_EVT_LAUNCH_VIDEO_MODE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a65050f06640ddf829e1009277c5b36b7.html#exhale-define-mesevents-8h-1a65050f06640ddf829e1009277c5b36b7"><span class="std std-ref">Define MES_CAMERA_EVT_START_VIDEO_CAPTURE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1aa481a5de710590b3dfd7cc7ccd2d9ebf.html#exhale-define-mesevents-8h-1aa481a5de710590b3dfd7cc7ccd2d9ebf"><span class="std std-ref">Define MES_CAMERA_EVT_STOP_PHOTO_MODE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a19d7f5e9638afc66a1b3c5617fd02d6f.html#exhale-define-mesevents-8h-1a19d7f5e9638afc66a1b3c5617fd02d6f"><span class="std std-ref">Define MES_CAMERA_EVT_STOP_VIDEO_CAPTURE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1aea912803389b3387d0276b77bf6e7f8d.html#exhale-define-mesevents-8h-1aea912803389b3387d0276b77bf6e7f8d"><span class="std std-ref">Define MES_CAMERA_EVT_STOP_VIDEO_MODE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1af4ca6e353936bb29654efc32a2b0bd54.html#exhale-define-mesevents-8h-1af4ca6e353936bb29654efc32a2b0bd54"><span class="std std-ref">Define MES_CAMERA_EVT_TAKE_PHOTO</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a7a275ffdc13d0316bed2a412c1315d01.html#exhale-define-mesevents-8h-1a7a275ffdc13d0316bed2a412c1315d01"><span class="std std-ref">Define MES_CAMERA_EVT_TOGGLE_FRONT_REAR</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1ad9c7b8a2ea58ba694aeb8ea6ebbbace0.html#exhale-define-mesevents-8h-1ad9c7b8a2ea58ba694aeb8ea6ebbbace0"><span class="std std-ref">Define MES_CAMERA_ID</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1ab0791b48cc30181027a308e36b8cac56.html#exhale-define-mesevents-8h-1ab0791b48cc30181027a308e36b8cac56"><span class="std std-ref">Define MES_DEVICE_DISPLAY_OFF</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1acac8b92cda909016c7aaee3e0223d3f3.html#exhale-define-mesevents-8h-1acac8b92cda909016c7aaee3e0223d3f3"><span class="std std-ref">Define MES_DEVICE_DISPLAY_ON</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1aa5f09d817c990a0149e0640b31656c67.html#exhale-define-mesevents-8h-1aa5f09d817c990a0149e0640b31656c67"><span class="std std-ref">Define MES_DEVICE_GESTURE_DEVICE_SHAKEN</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a0371dc4a0070895c7d3270fe244ef004.html#exhale-define-mesevents-8h-1a0371dc4a0070895c7d3270fe244ef004"><span class="std std-ref">Define MES_DEVICE_GESTURE_NONE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a0263a95a34bfcb9910e3783dc458d3d7.html#exhale-define-mesevents-8h-1a0263a95a34bfcb9910e3783dc458d3d7"><span class="std std-ref">Define MES_DEVICE_INCOMING_CALL</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1ae296442a80c683daa15ac9ad30a205a4.html#exhale-define-mesevents-8h-1ae296442a80c683daa15ac9ad30a205a4"><span class="std std-ref">Define MES_DEVICE_INCOMING_MESSAGE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1ae74dc1b25b23de5fe1afa5cc63766ca5.html#exhale-define-mesevents-8h-1ae74dc1b25b23de5fe1afa5cc63766ca5"><span class="std std-ref">Define MES_DEVICE_INFO_ID</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1aea30bc940accc56bc2f7a0883dc38893.html#exhale-define-mesevents-8h-1aea30bc940accc56bc2f7a0883dc38893"><span class="std std-ref">Define MES_DEVICE_ORIENTATION_LANDSCAPE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a99b7f7c56e0cf72047dd1fece09f46ea.html#exhale-define-mesevents-8h-1a99b7f7c56e0cf72047dd1fece09f46ea"><span class="std std-ref">Define MES_DEVICE_ORIENTATION_PORTRAIT</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1ac556e41fccb0863ec52cff7e85c6ed9a.html#exhale-define-mesevents-8h-1ac556e41fccb0863ec52cff7e85c6ed9a"><span class="std std-ref">Define MES_DPAD_BUTTON_1_DOWN</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a87b4aa7c5115f428f3173e7e0acfc7cd.html#exhale-define-mesevents-8h-1a87b4aa7c5115f428f3173e7e0acfc7cd"><span class="std std-ref">Define MES_DPAD_BUTTON_1_UP</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1ad680e4dea86b98c19c2c421abc67a875.html#exhale-define-mesevents-8h-1ad680e4dea86b98c19c2c421abc67a875"><span class="std std-ref">Define MES_DPAD_BUTTON_2_DOWN</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a9c29dab9aafabaf1459a6cc6ae9e3b57.html#exhale-define-mesevents-8h-1a9c29dab9aafabaf1459a6cc6ae9e3b57"><span class="std std-ref">Define MES_DPAD_BUTTON_2_UP</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a00d3d7a82984e99c5714458d4eefa0a9.html#exhale-define-mesevents-8h-1a00d3d7a82984e99c5714458d4eefa0a9"><span class="std std-ref">Define MES_DPAD_BUTTON_3_DOWN</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a2c77476979d2f72c4fb7c87450f8fe1f.html#exhale-define-mesevents-8h-1a2c77476979d2f72c4fb7c87450f8fe1f"><span class="std std-ref">Define MES_DPAD_BUTTON_3_UP</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a5ad89bcd369509b092ecf54ab151ee5c.html#exhale-define-mesevents-8h-1a5ad89bcd369509b092ecf54ab151ee5c"><span class="std std-ref">Define MES_DPAD_BUTTON_4_DOWN</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1af2d709d50cff9a4cad954583c0a94146.html#exhale-define-mesevents-8h-1af2d709d50cff9a4cad954583c0a94146"><span class="std std-ref">Define MES_DPAD_BUTTON_4_UP</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a3efa28f64e5501735aea0529c0ff590c.html#exhale-define-mesevents-8h-1a3efa28f64e5501735aea0529c0ff590c"><span class="std std-ref">Define MES_DPAD_BUTTON_A_DOWN</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a2c9d6792eee3c0559568ab73b170f8fa.html#exhale-define-mesevents-8h-1a2c9d6792eee3c0559568ab73b170f8fa"><span class="std std-ref">Define MES_DPAD_BUTTON_A_UP</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1ac66e50292be051dae42417ddf0c97476.html#exhale-define-mesevents-8h-1ac66e50292be051dae42417ddf0c97476"><span class="std std-ref">Define MES_DPAD_BUTTON_B_DOWN</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1ae830a2eeb144088eaf3fc1e361534780.html#exhale-define-mesevents-8h-1ae830a2eeb144088eaf3fc1e361534780"><span class="std std-ref">Define MES_DPAD_BUTTON_B_UP</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1abe0ad404b0951681e3d0d5f583843d7e.html#exhale-define-mesevents-8h-1abe0ad404b0951681e3d0d5f583843d7e"><span class="std std-ref">Define MES_DPAD_BUTTON_C_DOWN</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a8b783641ffe7c5cd7d92cac1bbbcab4d.html#exhale-define-mesevents-8h-1a8b783641ffe7c5cd7d92cac1bbbcab4d"><span class="std std-ref">Define MES_DPAD_BUTTON_C_UP</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a442dfa48c09be9a07f8e68a2de964884.html#exhale-define-mesevents-8h-1a442dfa48c09be9a07f8e68a2de964884"><span class="std std-ref">Define MES_DPAD_BUTTON_D_DOWN</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a21c53d823e1d9210a799710c99c2cf8f.html#exhale-define-mesevents-8h-1a21c53d823e1d9210a799710c99c2cf8f"><span class="std std-ref">Define MES_DPAD_BUTTON_D_UP</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1ae202aca39242ab5b636d973330f7a0c3.html#exhale-define-mesevents-8h-1ae202aca39242ab5b636d973330f7a0c3"><span class="std std-ref">Define MES_DPAD_CONTROLLER_ID</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a6c02c63d90733cd388ed36cfd997a2d4.html#exhale-define-mesevents-8h-1a6c02c63d90733cd388ed36cfd997a2d4"><span class="std std-ref">Define MES_REMOTE_CONTROL_EVT_FORWARD</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a64af2cb2dff390e6a2293af0330dc20e.html#exhale-define-mesevents-8h-1a64af2cb2dff390e6a2293af0330dc20e"><span class="std std-ref">Define MES_REMOTE_CONTROL_EVT_NEXTTRACK</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a8e12f64fc60c70570a97f62c09864d77.html#exhale-define-mesevents-8h-1a8e12f64fc60c70570a97f62c09864d77"><span class="std std-ref">Define MES_REMOTE_CONTROL_EVT_PAUSE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a7a8fd7dbead584429d40aeeda7fb0f0b.html#exhale-define-mesevents-8h-1a7a8fd7dbead584429d40aeeda7fb0f0b"><span class="std std-ref">Define MES_REMOTE_CONTROL_EVT_PLAY</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1af99d943d2775c905e9875a6178746c32.html#exhale-define-mesevents-8h-1af99d943d2775c905e9875a6178746c32"><span class="std std-ref">Define MES_REMOTE_CONTROL_EVT_PREVTRACK</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a11fcea98e3ad3a51325859c0c7d8fe5c.html#exhale-define-mesevents-8h-1a11fcea98e3ad3a51325859c0c7d8fe5c"><span class="std std-ref">Define MES_REMOTE_CONTROL_EVT_REWIND</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a2ea2fc8527571dcd38173860d1e32439.html#exhale-define-mesevents-8h-1a2ea2fc8527571dcd38173860d1e32439"><span class="std std-ref">Define MES_REMOTE_CONTROL_EVT_STOP</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a5dbe413ca6b4226a325d2e8d4b093493.html#exhale-define-mesevents-8h-1a5dbe413ca6b4226a325d2e8d4b093493"><span class="std std-ref">Define MES_REMOTE_CONTROL_EVT_VOLUMEDOWN</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a642d5ab8e7ddc6d535fb889efc1c3f69.html#exhale-define-mesevents-8h-1a642d5ab8e7ddc6d535fb889efc1c3f69"><span class="std std-ref">Define MES_REMOTE_CONTROL_EVT_VOLUMEUP</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1ad71182fb0106d23b4e618c7040cafd60.html#exhale-define-mesevents-8h-1ad71182fb0106d23b4e618c7040cafd60"><span class="std std-ref">Define MES_REMOTE_CONTROL_ID</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1aae4518ffdb0203d61a596330bffa2727.html#exhale-define-mesevents-8h-1aae4518ffdb0203d61a596330bffa2727"><span class="std std-ref">Define MES_SIGNAL_STRENGTH_EVT_FOUR_BAR</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1aec6240b44357196e67a1cf7451a194cc.html#exhale-define-mesevents-8h-1aec6240b44357196e67a1cf7451a194cc"><span class="std std-ref">Define MES_SIGNAL_STRENGTH_EVT_NO_BAR</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a27aedaae1f63b02edc68a12adaecb69e.html#exhale-define-mesevents-8h-1a27aedaae1f63b02edc68a12adaecb69e"><span class="std std-ref">Define MES_SIGNAL_STRENGTH_EVT_ONE_BAR</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1a80a2b456db04aff65993215666aa5fed.html#exhale-define-mesevents-8h-1a80a2b456db04aff65993215666aa5fed"><span class="std std-ref">Define MES_SIGNAL_STRENGTH_EVT_THREE_BAR</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1ad59bb53c93ab9bd81fc7d703a2125aaf.html#exhale-define-mesevents-8h-1ad59bb53c93ab9bd81fc7d703a2125aaf"><span class="std std-ref">Define MES_SIGNAL_STRENGTH_EVT_TWO_BAR</span></a></p></li>
+<li><p><a class="reference internal" href="define_MESEvents_8h_1ad0ef4323cc1c496451121fa4086dd3da.html#exhale-define-mesevents-8h-1ad0ef4323cc1c496451121fa4086dd3da"><span class="std std-ref">Define MES_SIGNAL_STRENGTH_ID</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

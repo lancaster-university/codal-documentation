@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitRadio_8h_1a0d39f7c3cf8fa4b1a95295607a30ed9e:
+
+Define MICROBIT_RADIO_DEFAULT_TX_POWER
+======================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitRadio.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_RADIO_DEFAULT_TX_POWER
+   :project: CODAL

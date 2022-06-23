@@ -1,0 +1,14 @@
+.. _exhale_define_MESEvents_8h_1a65050f06640ddf829e1009277c5b36b7:
+
+Define MES_CAMERA_EVT_START_VIDEO_CAPTURE
+=========================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MESEvents.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MES_CAMERA_EVT_START_VIDEO_CAPTURE
+   :project: CODAL

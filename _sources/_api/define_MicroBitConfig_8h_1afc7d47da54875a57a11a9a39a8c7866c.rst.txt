@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitConfig_8h_1afc7d47da54875a57a11a9a39a8c7866c:
+
+Define MICROBIT_SOFTDEVICE_EXISTS
+=================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_SOFTDEVICE_EXISTS
+   :project: CODAL

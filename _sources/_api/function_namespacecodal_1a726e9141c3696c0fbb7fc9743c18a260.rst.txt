@@ -1,0 +1,14 @@
+.. _exhale_function_namespacecodal_1a726e9141c3696c0fbb7fc9743c18a260:
+
+Function codal::microbit_friendly_name
+======================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitDevice.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: codal::microbit_friendly_name()
+   :project: CODAL

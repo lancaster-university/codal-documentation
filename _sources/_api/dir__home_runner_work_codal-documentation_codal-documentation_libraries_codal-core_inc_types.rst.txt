@@ -1,0 +1,28 @@
+.. _dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types:
+
+
+Directory types
+===============
+
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+*Directory path:* ``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/types``
+
+
+Files
+-----
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_BitmapFont.h`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_CoordinateSystem.h`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_Event.h`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_Image.h`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_ManagedBuffer.h`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_ManagedString.h`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_ManagedType.h`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_Matrix4.h`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_RefCounted.h`
+
+

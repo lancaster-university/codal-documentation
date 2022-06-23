@@ -1,0 +1,14 @@
+.. _exhale_define_mbed_8h_1adbcdf633ebb7ea649cb307f42b7ad9e9:
+
+Define PIN_CAPABILITY_STANDARD
+==============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_mbed.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: PIN_CAPABILITY_STANDARD
+   :project: CODAL

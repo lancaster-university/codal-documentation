@@ -1,0 +1,392 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USB_HID_Keys.h:
+
+File USB_HID_Keys.h
+===================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/drivers``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/drivers/USB_HID_Keys.h``)
+--------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USB_HID_Keys.h.rst
+
+
+
+
+
+
+
+
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a51ca76d1508339b071a974798b90474b`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a5a7fd35018971faa28dacd3e33a8f737`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a6912a9bf55bacce330ee374e2deb1651`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a3a146cb397d373be978dfa9fd1dc9b3a`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a701a135e841c3cfb69d9c5bb1444e198`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a219891753a1b6ccd51c8ae763905dbf9`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a8520da12c76efb8ca95ca2068d1ca35c`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a4ab32ce5ef6b5d115253d2a712f2e19b`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a5895875bee3ae13b13cdb5e85b45161b`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ad2888e35bf1cbd0b25c3e82bc360c647`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ae6838379f118dfbfc78d82fcd8886a41`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a024e62650f02bfd64a4ce2b158ec2dd7`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a52a80c17722ea8f4579c22cee6e447e8`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a04c942f1bdb07af34d274e09ae4387d0`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ad2ae94d1ffed5c399aa6f8c40c0fc3c7`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a8734bd813d4bbbab29cdf61a085b6762`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a1e9a449dee19c686a2af4edcdc1a1042`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a21db833332c950e74a8d5cd79ebffc8d`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1af168e54444bdaff5f50f6f4734784762`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a6aa02ea882191812302aa9d1d26186fc`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a8e0364b99fab348c81d1b5addbda6afc`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a8478293dd03b292ddd28387758c67411`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a6d5523b042d403fdc5742bf0d99f5abf`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ad2017b35fcff527a10050ab7c9af2d5c`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a1d654db2e04ad94a58f880fb9e127ad6`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a1658c8645b6f658354010e0d39f1ee18`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a203163bc0189184a1de6ca8d1e53c6bf`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a76fcab7ae716facf6eefcee03457fe7d`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a912861b945e779c29f718cdcd62be10c`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1abaee5edb96e542206ae6c8102ac228af`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ae83cfa48ed6b7c324e233c6603a9bea4`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a2d8aba311088a232286ed505c8686bf6`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a86b2b2d4eda22067d85d2287c118e2d8`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1acc696937f28ef5bdd90eeb8addd0ef82`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a2772a1f7024ba1fd62e88ec1adb541f8`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ad37282615edb2c357149c2a1342b4a85`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1abd820bb8b4b2a47e4210401b13789106`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a0a3de83275f6bbc2b88692f947f0d595`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1af87d33df472dd073863b12035c7bd1d4`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ad566421e6cb409e725578835e9e328bb`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a4835f0dc20db5a4d3433acab66236595`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1afea8064b70679bb9e0389d5f6621a2f2`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a6fa230f5d490af7d6ef87a88ca2db5ae`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a2f93cd984f0472309d8af80e1e2f947f`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a5bf91538e8323ad995199c817045b26e`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ae2e2edb31bb7796786da12f85f2d5cd1`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a49e680a4ea19e73fb97fe98b0891b0b5`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a0084ae075bfc60dc50f2a11c2fdf299f`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ab481f83ccc2f1af97e32fcef5bf5c7f3`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1aae4824ffb7a7f7e29443290c503e6718`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1aa495d7fdfc50768240f0838fcebbd54b`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a38ebe8e5c5f1d5727c9638bf79fc3952`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ab99474b01ffcbc57d74b60a77895e5e8`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a2a0aae1931111382ade29fd75ef64790`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ad31281b771b8b85f4aa98bbd527d91a0`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a7eed6766ef9ddb721c6a2bce807fc9dc`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a7a8ad03f07f2e4757a70385e88fbbe3c`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a417a382624f91fb0cdfdf1c33adc8c90`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a1b976f2d8ea62c53e34507178bc0eb26`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a4f8c8bfded006c2687aaff293f3ca678`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ac38f385af8c9c0b21678f07b55f28edf`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a19730cd6b2ac55a8723de9a3693a2791`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ac7cfd77bb9d2d498bbf591be4420f7a8`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a19d054522f984e028ceb9d20eb2cf449`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a7d0a23527a82dd43e275cae84111af8b`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1acd11bfff6eeb0ecb9b073d33307d92af`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a25d124148127e7f9f57ba21c0a8eaf7c`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a7c58eb7b56a0a079c4d24fff8e00b152`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ad84425f5d997c062314050f88f9c9e3a`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1af6806366178266b3eaf1fb16f991cbee`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a31ae832a3de882f92710ed9cb0b46e0a`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1aaa67a531439790dc20ed750f482d4a3e`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a5e90bac1d19a8a6b8bc79be340470271`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a98a32c947983c2266dfc309eb7f3fc5c`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a9caa9eb88b68041d55ff559539dd9c04`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1abc48a22dc1d35752c8b4dcb6ebc70521`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a9c57bd322e2e2a82f0b31cd19c62047d`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a0ea45017a62f460a3dcb833d444e5d2b`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ad1dce9f85b25f2ecc37a1edda5742b01`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a493f18d154a9a24c7f827fd878273b07`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a0edb6b7650284dfeb3ec8c6675d3b527`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a32e932ecbfa2acaa1d18d861b3041e49`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a199e75bb4d75117296710e34c8d6124b`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a90402c2c54f29343122d9fff4f252cce`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1abb32fcbc195ae87fef3f9a987a0aa451`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ad3de5a9bf4d5ac1cc49ab1fcca411e9f`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1abd3a98974ca5744b65e12ecef4220002`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1aa961ad72be612e8296ee9059831d1fe0`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a2c53da0a0f928dc1ab433beddd8ae7bf`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a26e07bbbcf97c7c2351390230715e401`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a85a014c528e3e193c8314ba9f41108d3`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a9ee337be73aa09a984183c1ef70acb4d`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a8bdd273ff6b240cf4c7060060a2b6c38`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a8d4af0c33552022467acc210f1d42775`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ac0c8d4b7b0f615f7ac9d8bf448515e59`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a7ade08934a11d858f3ea1e073bdfbea7`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1af2ca2552ae3b758f4f62e1143dfd9ede`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a600bb1ce7eb7b6ca4dcbb41546c32ec5`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1af4d1b8a2912354646c74cf36c69f8223`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ad092ab621dd17fd8e1e639603fd49c96`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ae09b698f16c72a9cd3c7ca9ec10ed09c`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a70742b96021528f02cd3257070cf1971`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a3d313c424c31c4817e70070d03e54c05`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a13a0f4f476ef33ca0ef8f62c3ed3823b`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ae2552d156f2ef6dff240456f7c648beb`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a2fedfb4e713aeffa63add6fbf93a30c3`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1aca7be311dfa103e424ac503a33a5c2d9`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a2862d639a07bc2b9e5f060f757b8e247`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1af39ae00939f48c3dfc02110e0bfe066e`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a44a28559b93073534b24037da3379d30`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ad63b3fb7b83b0444d17806508a0dc2f3`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ab4ad255d244efd0bad02ceb03db75c6f`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ae507086abff0e20addf55268560a915d`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a5ca7b2f6a83816944faa877bce535735`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ae01c37b7aea2eebfaf166dea58d27a6b`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a93a3e46797cf42b9c78ab4a5573502e5`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ad301c20912c91d8fbc32fb30833c3af0`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a833d5aaee1b47c85a7c51d0d043e5b70`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a4c6555c97add08eb85460eb10a8d0b2f`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ac532fba7e3c4ea5619a11e410d00fd54`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1af95fadea3031438d9f28d4f99af06aba`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a7d7126b521c06154b55e000f2c97bfe5`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ac534c340c41f6a897cf2879ebae360bc`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a8fbffb24251ac92e5aaf40f2814a478c`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a4e608179a5978cf9a1581b78ea7f0f87`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a3eefcaaf496c52c1c7283caa3d1dab99`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a7c039f3cfd96c7693230763feb8d8fcf`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a90d71e4a30e3b03ee08b463bb8242efb`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1abf8e92652201fcf1ec6261ec7eb26379`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a5d6ee4b25f671e4eae6a6b7204f52b4e`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ad49f127cc1a84057b91b92f807c90103`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a7b96d9df08370501995faffc9f9e5053`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a2ab4747c02f009f16ea1069d7d8d0b46`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a4d7513c294351f07ccd5d9d9224067c8`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1aac379b0db7af3163aa3e1dbf2aaa98e3`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a222c823dcaa3e4638edf14e5d0b102d1`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a2e446da6a7d4ff47e81f5318a40e53ea`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a02531bf28bf1c98caf3da055f22a08bd`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1aa9a01a8ed5fb358424866f4bc61d7c13`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1adc0df72b7f6cbb006adeabff653ebeac`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a7a343955f7e5d2ed3f0dd93084547602`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a0d7cb02ca48dc1dc020e54d104fb9915`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a0e8036dd16e0d2a672f952a61a8674f6`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ad9a7ec454712e27b31fc4487990ff485`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a2e48f6fe076bc44e92aa04921c7d8b9f`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ae176aa9af3d2acaeba5b8453aff5bbbf`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ac1c4669bb83df8f8617e6d20a62a6c09`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a5a774479b6e1355c2c3fa683779732a6`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a201284fc5d50eea7e2db09fb5495bceb`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1aa020da9e48a194889ac72f94408b3c25`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a004194639b9ad76cea01d9e93716d4d6`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a77f9fb79004137171ac75f0bfb245e5d`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a2ee39e43001921a286526fe8abae33cb`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a9319cea641c4658e47f9bf09414e4d9d`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a711e9cf4fc867bbda13cd4a76c413112`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a2f554668b12882e07f3b09affc1136d8`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a4b169f697f0c19cf7ec60b3e4c6bcb5e`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a6f09e2899747f5db41369ce1dae11ebd`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a864123ec9700eac6b326d85523af90d9`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1aaaf77eb9716854e4838799c5d2bd26a5`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ae98958c265380bd0e491ef368c513196`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a8a5ff83d21dfa704c1c3eff56d5b3a4b`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a1461819eba930c3aa6c245e523c32729`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a11354a2b4789eaef9c07c4c1938c666b`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1adb39050b8845e8b16f503a747e196749`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a4fa9fbcc86d5ee884a821459a87f3a54`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a050a6de4c5edb8eb9582c3eb80fed07f`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1adedb4a254c6a94be9a46e28dc1e5d218`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1afa086fc916a81e7fd348ec00cf786916`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a1b4a450ef7e51ae0b691dd5489f74535`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a779ea1466fc5867d1b2083c21fcce10d`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1af37beae1e9a2d57c85eb4e2fc10bee0e`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1afdebd5d771ee260c703a74f459767c09`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a832280ef5a7afeda19f32939951e8b10`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1ad9db04899df9fe71bb221c02721e28ac`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a0a936ee331987b0a482e517536cbebf8`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a7c655f9f55336c6db42503e356028f4d`
+
+- :ref:`exhale_define_USB__HID__Keys_8h_1a6da3b6bdf2ff02836e9cf8bc58d119e7`
+

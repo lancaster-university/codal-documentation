@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitLog_8h_1a283c2250c22d9a38b2b4edfb2150f6ca:
+
+Define MICROBIT_LOG_STATUS_ROW_STARTED
+======================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitLog.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_LOG_STATUS_ROW_STARTED
+   :project: CODAL

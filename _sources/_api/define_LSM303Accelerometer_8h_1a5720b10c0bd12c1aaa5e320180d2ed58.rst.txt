@@ -1,0 +1,14 @@
+.. _exhale_define_LSM303Accelerometer_8h_1a5720b10c0bd12c1aaa5e320180d2ed58:
+
+Define LSM303_TEMP_CFG_REG_A
+============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LSM303Accelerometer.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LSM303_TEMP_CFG_REG_A
+   :project: CODAL

@@ -1,0 +1,14 @@
+.. _exhale_define_MESEvents_8h_1ada0011f5689013c181fb1a01a7d20890:
+
+Define MES_ALERT_EVT_PLAY_SOUND
+===============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MESEvents.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MES_ALERT_EVT_PLAY_SOUND
+   :project: CODAL

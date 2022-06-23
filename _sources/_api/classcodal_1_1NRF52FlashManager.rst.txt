@@ -1,0 +1,26 @@
+.. _exhale_class_classcodal_1_1NRF52FlashManager:
+
+Class NRF52FlashManager
+=======================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_NRF52FlashManager.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public codal::NVMController`` (:ref:`exhale_class_classcodal_1_1NVMController`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: codal::NRF52FlashManager
+   :project: CODAL
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,14 @@
+.. _exhale_define_Pin_8h_1a69a1ab91b3e41ddd345b28c5393b0bcd:
+
+Define DEVICE_PIN_MAX_SERVO_RANGE
+=================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Pin.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DEVICE_PIN_MAX_SERVO_RANGE
+   :project: CODAL

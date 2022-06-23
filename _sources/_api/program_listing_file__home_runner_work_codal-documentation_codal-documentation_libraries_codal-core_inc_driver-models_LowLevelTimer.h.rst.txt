@@ -1,0 +1,109 @@
+
+.. _program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_LowLevelTimer.h:
+
+Program Listing for File LowLevelTimer.h
+========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_LowLevelTimer.h>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/driver-models/LowLevelTimer.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef LOW_LEVEL_TIMER_H
+   #define LOW_LEVEL_TIMER_H
+   
+   #include "CodalConfig.h"
+   #include "CodalComponent.h"
+   #include "codal_target_hal.h"
+   
+   #define CODAL_LOWLEVELTIMER_STATUS_SLEEP_IRQENABLE    0x01
+   
+   namespace codal
+   {
+   
+   enum TimerMode
+   {
+       TimerModeTimer = 0,
+       TimerModeCounter,
+       TimerModeAlternateFunction
+   };
+   
+   enum TimerBitMode
+   {
+       BitMode8 = 0,
+       BitMode16,
+       BitMode24,
+       BitMode32
+   };
+   
+   class LowLevelTimer : public CodalComponent
+   {
+       protected:
+       TimerBitMode bitMode; // the current bitMode of the timer.
+       uint8_t channel_count; // the number of channels this timer instance has.
+   
+       public:
+   
+       void (*timer_pointer) (uint16_t channel_bitmsk);
+   
+       virtual int setIRQ(void (*timer_pointer) (uint16_t channel_bitmsk))
+       {
+           this->timer_pointer = timer_pointer;
+           return DEVICE_OK;
+       }
+   
+       virtual int setIRQPriority(int)
+       {
+           target_panic(DEVICE_NOT_IMPLEMENTED);
+           return DEVICE_NOT_IMPLEMENTED;
+       }
+   
+       LowLevelTimer(uint8_t channel_count)
+       {
+           this->channel_count = channel_count;
+           this->timer_pointer = NULL;
+       }
+   
+       virtual ~LowLevelTimer()
+       {
+       }
+   
+       virtual int enable() = 0;
+   
+       virtual int enableIRQ() = 0;
+   
+       virtual int disable() = 0;
+   
+       virtual int disableIRQ() = 0;
+   
+       virtual int reset() = 0;
+   
+       virtual int setMode(TimerMode t) = 0;
+   
+       virtual int setCompare(uint8_t channel, uint32_t value)= 0;
+   
+       virtual int offsetCompare(uint8_t channel, uint32_t value) = 0;
+   
+       virtual int clearCompare(uint8_t channel) = 0;
+   
+       virtual uint32_t captureCounter() = 0;
+   
+       virtual int setClockSpeed(uint32_t speedKHz) = 0;
+   
+       virtual int setBitMode(TimerBitMode t) = 0;
+   
+       virtual TimerBitMode getBitMode()
+       {
+           return bitMode;
+       }
+   
+       int getChannelCount()
+       {
+           return channel_count;
+       }
+   };
+   }
+   
+   
+   #endif

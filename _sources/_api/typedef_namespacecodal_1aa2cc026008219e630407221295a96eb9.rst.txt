@@ -1,0 +1,14 @@
+.. _exhale_typedef_namespacecodal_1aa2cc026008219e630407221295a96eb9:
+
+Typedef codal::SynthesizerGetSample
+===================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_Synthesizer.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: codal::SynthesizerGetSample
+   :project: CODAL

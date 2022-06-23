@@ -1,0 +1,690 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Class AnimatedDisplay &#8212; CODAL codal-microbit-v2 v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL codal-microbit-v2 v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Welcome to CODAL’s documentation!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/the-basics.html">
+     The Basics - CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inheritance-relationships">
+   Inheritance Relationships
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#base-type">
+     Base Type
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derived-type">
+     Derived Type
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Class AnimatedDisplay</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inheritance-relationships">
+   Inheritance Relationships
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#base-type">
+     Base Type
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derived-type">
+     Derived Type
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="class-animateddisplay">
+<span id="exhale-class-classcodal-1-1animateddisplay"></span><h1>Class AnimatedDisplay<a class="headerlink" href="#class-animateddisplay" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_AnimatedDisplay.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-drivers-animateddisplay-h"><span class="std std-ref">File AnimatedDisplay.h</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">#</a></h2>
+<section id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::CodalComponent</span></code> (<a class="reference internal" href="classcodal_1_1CodalComponent.html#exhale-class-classcodal-1-1codalcomponent"><span class="std std-ref">Class CodalComponent</span></a>)</p></li>
+</ul>
+</section>
+<section id="derived-type">
+<h3>Derived Type<a class="headerlink" href="#derived-type" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::MicroBitDisplay</span></code> (<a class="reference internal" href="classcodal_1_1MicroBitDisplay.html#exhale-class-classcodal-1-1microbitdisplay"><span class="std std-ref">Class MicroBitDisplay</span></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">#</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplayE">
+<span id="_CPPv3N5codal15AnimatedDisplayE"></span><span id="_CPPv2N5codal15AnimatedDisplayE"></span><span id="codal::AnimatedDisplay"></span><span class="target" id="classcodal_1_1AnimatedDisplay"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AnimatedDisplay</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classcodal_1_1CodalComponent.html#_CPPv4N5codal14CodalComponentE" title="codal::CodalComponent"><span class="n"><span class="pre">CodalComponent</span></span></a><a class="headerlink" href="#_CPPv4N5codal15AnimatedDisplayE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Class definition for <a class="reference internal" href="#classcodal_1_1AnimatedDisplay"><span class="std std-ref">AnimatedDisplay</span></a>.</p>
+<p>This class provides a high level abstraction level to show text and graphic animations on a <a class="reference internal" href="classcodal_1_1Display.html#classcodal_1_1Display"><span class="std std-ref">Display</span></a>, e.g. on the LED matrix display. </p>
+<p>Subclassed by <a class="reference internal" href="classcodal_1_1MicroBitDisplay.html#classcodal_1_1MicroBitDisplay"><span class="std std-ref">codal::MicroBitDisplay</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay15AnimatedDisplayER7Display8uint16_t">
+<span id="_CPPv3N5codal15AnimatedDisplay15AnimatedDisplayER7Display8uint16_t"></span><span id="_CPPv2N5codal15AnimatedDisplay15AnimatedDisplayER7Display8uint16_t"></span><span id="codal::AnimatedDisplay::AnimatedDisplay__DisplayR.uint16_t"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1af819526062d286f07f1007fe4e261ac5"></span><span class="sig-name descname"><span class="n"><span class="pre">AnimatedDisplay</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Display.html#_CPPv4N5codal7DisplayE" title="codal::Display"><span class="n"><span class="pre">Display</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">display</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_DISPLAY</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15AnimatedDisplay15AnimatedDisplayER7Display8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Constructor.</p>
+<p>Create a software representation of an animated display. This class provides a high level abstraction level to show text and graphic animations on a CodalDisplay, e.g. on the LED matrix display.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>display</strong> – The CodalDisplay instance that is used to show the text and graphic animations of this class</p></li>
+<li><p><strong>id</strong> – The id the display should use when sending events on the <a class="reference internal" href="classcodal_1_1MessageBus.html#classcodal_1_1MessageBus"><span class="std std-ref">MessageBus</span></a>. Defaults to DEVICE_ID_DISPLAY. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay16periodicCallbackEv">
+<span id="_CPPv3N5codal15AnimatedDisplay16periodicCallbackEv"></span><span id="_CPPv2N5codal15AnimatedDisplay16periodicCallbackEv"></span><span id="codal::AnimatedDisplay::periodicCallback"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1aa430bcbebcf357d4e384693a718872bb"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">periodicCallback</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15AnimatedDisplay16periodicCallbackEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Frame update method, invoked periodically to strobe the display. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay13stopAnimationEv">
+<span id="_CPPv3N5codal15AnimatedDisplay13stopAnimationEv"></span><span id="_CPPv2N5codal15AnimatedDisplay13stopAnimationEv"></span><span id="codal::AnimatedDisplay::stopAnimation"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1aa968b014159176136948f38c0ebab09d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stopAnimation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15AnimatedDisplay13stopAnimationEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Stops any currently running animation, and any that are waiting to be displayed. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay14printCharAsyncEci">
+<span id="_CPPv3N5codal15AnimatedDisplay14printCharAsyncEci"></span><span id="_CPPv2N5codal15AnimatedDisplay14printCharAsyncEci"></span><span id="codal::AnimatedDisplay::printCharAsync__c.i"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1a2cb44c0ef35d2b401b00235ff9fa80f1"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">printCharAsync</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">c</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15AnimatedDisplay14printCharAsyncEci" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Prints the given character to the display, if it is not in use.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">.</span><span class="n">printCharAsync</span><span class="p">(</span><span class="sc">&#39;p&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="n">display</span><span class="p">.</span><span class="n">printCharAsync</span><span class="p">(</span><span class="sc">&#39;p&#39;</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>c</strong> – The character to display.</p></li>
+<li><p><strong>delay</strong> – Optional parameter - the time for which to show the character. Zero displays the character forever, or until the Displays next use.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK, DEVICE_BUSY is the screen is in use, or DEVICE_INVALID_PARAMETER.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay10printAsyncE13ManagedStringi">
+<span id="_CPPv3N5codal15AnimatedDisplay10printAsyncE13ManagedStringi"></span><span id="_CPPv2N5codal15AnimatedDisplay10printAsyncE13ManagedStringi"></span><span id="codal::AnimatedDisplay::printAsync__ManagedString.i"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1ab7fa01cc29fe24d0dace9e6faa76ac4a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">printAsync</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">s</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">400</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15AnimatedDisplay10printAsyncE13ManagedStringi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Prints the given <a class="reference internal" href="classcodal_1_1ManagedString.html#classcodal_1_1ManagedString"><span class="std std-ref">ManagedString</span></a> to the display, one character at a time. Returns immediately, and executes the animation asynchronously.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">.</span><span class="n">printAsync</span><span class="p">(</span><span class="s">&quot;abc123&quot;</span><span class="p">,</span><span class="mi">400</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – The string to display.</p></li>
+<li><p><strong>delay</strong> – The time to delay between characters, in milliseconds. Must be &gt; 0. Defaults to: DISPLAY_DEFAULT_PRINT_SPEED.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK, or DEVICE_INVALID_PARAMETER.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay10printAsyncE5Imageiiii">
+<span id="_CPPv3N5codal15AnimatedDisplay10printAsyncE5Imageiiii"></span><span id="_CPPv2N5codal15AnimatedDisplay10printAsyncE5Imageiiii"></span><span id="codal::AnimatedDisplay::printAsync__Image.i.i.i.i"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1ae984a32d0e2203e40595d2154ea01719"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">printAsync</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Image.html#_CPPv4N5codal5ImageE" title="codal::Image"><span class="n"><span class="pre">Image</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">alpha</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15AnimatedDisplay10printAsyncE5Imageiiii" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Prints the given image to the display, if the display is not in use. Returns immediately, and executes the animation asynchronously.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="w"> </span><span class="nf">i</span><span class="p">(</span><span class="s">&quot;1,1,1,1,1</span><span class="se">\n</span><span class="s">1,1,1,1,1</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">display</span><span class="p">.</span><span class="n">printAsync</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">400</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>i</strong> – The image to display.</p></li>
+<li><p><strong>x</strong> – The horizontal position on the screen to display the image. Defaults to 0.</p></li>
+<li><p><strong>y</strong> – The vertical position on the screen to display the image. Defaults to 0.</p></li>
+<li><p><strong>alpha</strong> – Treats the brightness level ‘0’ as transparent. Defaults to 0.</p></li>
+<li><p><strong>delay</strong> – The time to delay between characters, in milliseconds. Defaults to 0.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay9printCharEci">
+<span id="_CPPv3N5codal15AnimatedDisplay9printCharEci"></span><span id="_CPPv2N5codal15AnimatedDisplay9printCharEci"></span><span id="codal::AnimatedDisplay::printChar__c.i"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1a1570f1a1063a75c98e8bce17851d65cc"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">printChar</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">c</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15AnimatedDisplay9printCharEci" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Prints the given character to the display.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">.</span><span class="n">printAsync</span><span class="p">(</span><span class="sc">&#39;p&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="n">display</span><span class="p">.</span><span class="n">printAsync</span><span class="p">(</span><span class="sc">&#39;p&#39;</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>c</strong> – The character to display.</p></li>
+<li><p><strong>delay</strong> – Optional parameter - the time for which to show the character. Zero displays the character forever, or until the Displays next use.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK, DEVICE_CANCELLED or DEVICE_INVALID_PARAMETER.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay5printE13ManagedStringi">
+<span id="_CPPv3N5codal15AnimatedDisplay5printE13ManagedStringi"></span><span id="_CPPv2N5codal15AnimatedDisplay5printE13ManagedStringi"></span><span id="codal::AnimatedDisplay::print__ManagedString.i"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1a427972218ebd22025644f626373c35ef"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">print</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">s</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">400</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15AnimatedDisplay5printE13ManagedStringi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Prints the given string to the display, one character at a time.</p>
+<p>Blocks the calling thread until all the text has been displayed.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;abc123&quot;</span><span class="p">,</span><span class="mi">400</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – The string to display.</p></li>
+<li><p><strong>delay</strong> – The time to delay between characters, in milliseconds. Defaults to: DISPLAY_DEFAULT_PRINT_SPEED.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK, DEVICE_CANCELLED or DEVICE_INVALID_PARAMETER.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay5printE5Imageiiii">
+<span id="_CPPv3N5codal15AnimatedDisplay5printE5Imageiiii"></span><span id="_CPPv2N5codal15AnimatedDisplay5printE5Imageiiii"></span><span id="codal::AnimatedDisplay::print__Image.i.i.i.i"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1ac119445e4086a50a217b9ef1fa153855"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">print</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Image.html#_CPPv4N5codal5ImageE" title="codal::Image"><span class="n"><span class="pre">Image</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">alpha</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15AnimatedDisplay5printE5Imageiiii" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Prints the given image to the display. Blocks the calling thread until all the image has been displayed.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="w"> </span><span class="nf">i</span><span class="p">(</span><span class="s">&quot;1,1,1,1,1</span><span class="se">\n</span><span class="s">1,1,1,1,1</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">400</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>i</strong> – The image to display.</p></li>
+<li><p><strong>x</strong> – The horizontal position on the screen to display the image. Defaults to 0.</p></li>
+<li><p><strong>y</strong> – The vertical position on the screen to display the image. Defaults to 0.</p></li>
+<li><p><strong>alpha</strong> – Treats the brightness level ‘0’ as transparent. Defaults to 0.</p></li>
+<li><p><strong>delay</strong> – The time to display the image for, or zero to show the image forever. Defaults to 0.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK, DEVICE_BUSY if the display is already in use, or DEVICE_INVALID_PARAMETER.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay11scrollAsyncE13ManagedStringi">
+<span id="_CPPv3N5codal15AnimatedDisplay11scrollAsyncE13ManagedStringi"></span><span id="_CPPv2N5codal15AnimatedDisplay11scrollAsyncE13ManagedStringi"></span><span id="codal::AnimatedDisplay::scrollAsync__ManagedString.i"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1a05ca470cd1d010ad8e916bb0bd7b00a7"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">scrollAsync</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">s</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">120</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15AnimatedDisplay11scrollAsyncE13ManagedStringi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Scrolls the given string to the display, from right to left. Returns immediately, and executes the animation asynchronously.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">.</span><span class="n">scrollAsync</span><span class="p">(</span><span class="s">&quot;abc123&quot;</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – The string to display.</p></li>
+<li><p><strong>delay</strong> – The time to delay between characters, in milliseconds. Defaults to: DISPLAY_DEFAULT_SCROLL_SPEED.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK, DEVICE_BUSY if the display is already in use, or DEVICE_INVALID_PARAMETER.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay11scrollAsyncE5Imageii">
+<span id="_CPPv3N5codal15AnimatedDisplay11scrollAsyncE5Imageii"></span><span id="_CPPv2N5codal15AnimatedDisplay11scrollAsyncE5Imageii"></span><span id="codal::AnimatedDisplay::scrollAsync__Image.i.i"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1aa478d6828ecab3909fa2d1d616e84986"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">scrollAsync</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Image.html#_CPPv4N5codal5ImageE" title="codal::Image"><span class="n"><span class="pre">Image</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">image</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">120</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">stride</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15AnimatedDisplay11scrollAsyncE5Imageii" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Scrolls the given image across the display, from right to left. Returns immediately, and executes the animation asynchronously.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="w"> </span><span class="nf">i</span><span class="p">(</span><span class="s">&quot;1,1,1,1,1</span><span class="se">\n</span><span class="s">1,1,1,1,1</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">display</span><span class="p">.</span><span class="n">scrollAsync</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> – The image to display.</p></li>
+<li><p><strong>delay</strong> – The time between updates, in milliseconds. Defaults to: DISPLAY_DEFAULT_SCROLL_SPEED.</p></li>
+<li><p><strong>stride</strong> – The number of pixels to shift by in each update. Defaults to DISPLAY_DEFAULT_SCROLL_STRIDE.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK, DEVICE_BUSY if the display is already in use, or DEVICE_INVALID_PARAMETER.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay6scrollE13ManagedStringi">
+<span id="_CPPv3N5codal15AnimatedDisplay6scrollE13ManagedStringi"></span><span id="_CPPv2N5codal15AnimatedDisplay6scrollE13ManagedStringi"></span><span id="codal::AnimatedDisplay::scroll__ManagedString.i"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1ac2850fbdc153cbf7fc975e78c0f264b9"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">scroll</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">s</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">120</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15AnimatedDisplay6scrollE13ManagedStringi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Scrolls the given string across the display, from right to left. Blocks the calling thread until all text has been displayed.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">.</span><span class="n">scroll</span><span class="p">(</span><span class="s">&quot;abc123&quot;</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – The string to display.</p></li>
+<li><p><strong>delay</strong> – The time to delay between characters, in milliseconds. Defaults to: DISPLAY_DEFAULT_SCROLL_SPEED.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK, DEVICE_CANCELLED or DEVICE_INVALID_PARAMETER.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay6scrollE5Imageii">
+<span id="_CPPv3N5codal15AnimatedDisplay6scrollE5Imageii"></span><span id="_CPPv2N5codal15AnimatedDisplay6scrollE5Imageii"></span><span id="codal::AnimatedDisplay::scroll__Image.i.i"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1a030e959f4fe224d164f602700a51cba8"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">scroll</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Image.html#_CPPv4N5codal5ImageE" title="codal::Image"><span class="n"><span class="pre">Image</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">image</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">120</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">stride</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15AnimatedDisplay6scrollE5Imageii" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Scrolls the given image across the display, from right to left. Blocks the calling thread until all the text has been displayed.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="w"> </span><span class="nf">i</span><span class="p">(</span><span class="s">&quot;1,1,1,1,1</span><span class="se">\n</span><span class="s">1,1,1,1,1</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">display</span><span class="p">.</span><span class="n">scroll</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> – The image to display.</p></li>
+<li><p><strong>delay</strong> – The time between updates, in milliseconds. Defaults to: DISPLAY_DEFAULT_SCROLL_SPEED.</p></li>
+<li><p><strong>stride</strong> – The number of pixels to shift by in each update. Defaults to DISPLAY_DEFAULT_SCROLL_STRIDE.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK, DEVICE_CANCELLED or DEVICE_INVALID_PARAMETER.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay12animateAsyncE5Imageiiii">
+<span id="_CPPv3N5codal15AnimatedDisplay12animateAsyncE5Imageiiii"></span><span id="_CPPv2N5codal15AnimatedDisplay12animateAsyncE5Imageiiii"></span><span id="codal::AnimatedDisplay::animateAsync__Image.i.i.i.i"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1abc6107e94103965009dcf4105f2a5569"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">animateAsync</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Image.html#_CPPv4N5codal5ImageE" title="codal::Image"><span class="n"><span class="pre">Image</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">image</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">stride</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">startingPosition</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">255</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">autoClear</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15AnimatedDisplay12animateAsyncE5Imageiiii" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>“Animates” the current image across the display with a given stride, finishing on the last frame of the animation. Returns immediately.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">heart_w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">heart_h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">heart</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+
+<span class="n">Image</span><span class="w"> </span><span class="nf">i</span><span class="p">(</span><span class="n">heart_w</span><span class="p">,</span><span class="n">heart_h</span><span class="p">,</span><span class="n">heart</span><span class="p">);</span><span class="w"></span>
+<span class="n">display</span><span class="p">.</span><span class="n">animateAsync</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> – The image to display.</p></li>
+<li><p><strong>delay</strong> – The time to delay between each update of the display, in milliseconds.</p></li>
+<li><p><strong>stride</strong> – The number of pixels to shift by in each update.</p></li>
+<li><p><strong>startingPosition</strong> – the starting position on the display for the animation to begin at. Defaults to DISPLAY_ANIMATE_DEFAULT_POS.</p></li>
+<li><p><strong>autoClear</strong> – defines whether or not the display is automatically cleared once the animation is complete. By default, the display is cleared. Set this parameter to zero to disable the autoClear operation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK, DEVICE_BUSY if the screen is in use, or DEVICE_INVALID_PARAMETER.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay7animateE5Imageiiii">
+<span id="_CPPv3N5codal15AnimatedDisplay7animateE5Imageiiii"></span><span id="_CPPv2N5codal15AnimatedDisplay7animateE5Imageiiii"></span><span id="codal::AnimatedDisplay::animate__Image.i.i.i.i"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1adde552945dbdcfe5d7efc7f66866557a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">animate</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Image.html#_CPPv4N5codal5ImageE" title="codal::Image"><span class="n"><span class="pre">Image</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">image</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">stride</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">startingPosition</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">255</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">autoClear</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15AnimatedDisplay7animateE5Imageiiii" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>“Animates” the current image across the display with a given stride, finishing on the last frame of the animation. Blocks the calling thread until the animation is complete.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">heart_w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">heart_h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">heart</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+
+<span class="n">Image</span><span class="w"> </span><span class="nf">i</span><span class="p">(</span><span class="n">heart_w</span><span class="p">,</span><span class="n">heart_h</span><span class="p">,</span><span class="n">heart</span><span class="p">);</span><span class="w"></span>
+<span class="n">display</span><span class="p">.</span><span class="n">animate</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>delay</strong> – The time to delay between each update of the display, in milliseconds.</p></li>
+<li><p><strong>stride</strong> – The number of pixels to shift by in each update.</p></li>
+<li><p><strong>startingPosition</strong> – the starting position on the display for the animation to begin at. Defaults to DISPLAY_ANIMATE_DEFAULT_POS.</p></li>
+<li><p><strong>autoClear</strong> – defines whether or not the display is automatically cleared once the animation is complete. By default, the display is cleared. Set this parameter to zero to disable the autoClear operation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK, DEVICE_CANCELLED or DEVICE_INVALID_PARAMETER.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplayD0Ev">
+<span id="_CPPv3N5codal15AnimatedDisplayD0Ev"></span><span id="_CPPv2N5codal15AnimatedDisplayD0Ev"></span><span id="codal::AnimatedDisplay::~AnimatedDisplay"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1a1c1be4db3f8ed76e085243e1f205bd47"></span><span class="sig-name descname"><span class="n"><span class="pre">~AnimatedDisplay</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15AnimatedDisplayD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Destructor for <a class="reference internal" href="#classcodal_1_1AnimatedDisplay"><span class="std std-ref">AnimatedDisplay</span></a>, where we deregister this instance from the array of system components. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

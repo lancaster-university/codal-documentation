@@ -1,0 +1,17 @@
+.. _exhale_struct_structMMA8653SampleRangeConfig:
+
+Struct MMA8653SampleRangeConfig
+===============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MMA8653.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: MMA8653SampleRangeConfig
+   :project: CODAL
+   :members:
+   :protected-members:
+   :undoc-members:

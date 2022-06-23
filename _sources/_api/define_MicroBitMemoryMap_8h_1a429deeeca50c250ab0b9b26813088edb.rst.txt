@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitMemoryMap_8h_1a429deeeca50c250ab0b9b26813088edb:
+
+Define REGION_MAKECODE
+======================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitMemoryMap.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: REGION_MAKECODE
+   :project: CODAL

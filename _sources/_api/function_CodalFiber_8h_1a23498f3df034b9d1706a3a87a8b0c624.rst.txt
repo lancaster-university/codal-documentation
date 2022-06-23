@@ -1,0 +1,14 @@
+.. _exhale_function_CodalFiber_8h_1a23498f3df034b9d1706a3a87a8b0c624:
+
+Function restore_register_context
+=================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalFiber.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: restore_register_context(void *)
+   :project: CODAL

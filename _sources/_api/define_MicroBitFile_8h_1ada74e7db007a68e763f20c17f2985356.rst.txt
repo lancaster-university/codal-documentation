@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitFile_8h_1ada74e7db007a68e763f20c17f2985356:
+
+Define READ
+===========
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitFile.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: READ
+   :project: CODAL

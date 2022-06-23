@@ -1,0 +1,14 @@
+.. _exhale_define_group__Group__USBClassMSCommon_1ga1befdc28b18afab5541e2e75c5504943:
+
+Define SCSI_ASENSE_NO_ADDITIONAL_INFORMATION
+============================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USBMassStorageClass.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SCSI_ASENSE_NO_ADDITIONAL_INFORMATION
+   :project: CODAL

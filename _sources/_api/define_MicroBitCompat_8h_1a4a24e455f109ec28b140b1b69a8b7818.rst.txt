@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitCompat_8h_1a4a24e455f109ec28b140b1b69a8b7818:
+
+Define MICROBIT_ID_NOTIFY_ONE
+=============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_ID_NOTIFY_ONE
+   :project: CODAL

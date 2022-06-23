@@ -1,0 +1,102 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitRadio.h:
+
+File MicroBitRadio.h
+====================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/MicroBitRadio.h``)
+--------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitRadio.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``CodalConfig.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h`)
+
+- ``MicroBitRadioDatagram.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitRadioDatagram.h`)
+
+- ``MicroBitRadioEvent.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitRadioEvent.h`)
+
+- ``PacketBuffer.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_PacketBuffer.h`)
+
+- ``codal-core/inc/types/Event.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_Event.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitRadioDatagram.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitRadioEvent.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_codal`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structcodal_1_1FrameBuffer`
+
+- :ref:`exhale_class_classcodal_1_1MicroBitRadio`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_MicroBitRadio_8h_1a947d848572d715458863e414d503f7dc`
+
+- :ref:`exhale_define_MicroBitRadio_8h_1ad6ba7b60d2d15b03c18ea5f1bc1c320a`
+
+- :ref:`exhale_define_MicroBitRadio_8h_1a01b94e6e59430d4151be77fadb05ee28`
+
+- :ref:`exhale_define_MicroBitRadio_8h_1a0d39f7c3cf8fa4b1a95295607a30ed9e`
+
+- :ref:`exhale_define_MicroBitRadio_8h_1ac606ae2002f8f797b50ddfdb86c3bd84`
+
+- :ref:`exhale_define_MicroBitRadio_8h_1a4d6cca6e6643f714baea6b222c78b4ab`
+
+- :ref:`exhale_define_MicroBitRadio_8h_1abd92aab457b17093a114cf8725d08045`
+
+- :ref:`exhale_define_MicroBitRadio_8h_1ac64c4f62eadc6925bd139f53fa8457a6`
+
+- :ref:`exhale_define_MicroBitRadio_8h_1acf2b6fdd7b52827e8bbb5733199bb4ae`
+
+- :ref:`exhale_define_MicroBitRadio_8h_1aa841586bb5eac74ab5702845bc8463cb`
+
+- :ref:`exhale_define_MicroBitRadio_8h_1a53a51a085e1bbe7b1c08371b45469a5a`
+
+- :ref:`exhale_define_MicroBitRadio_8h_1a008dd4b18165d6f81bcbc4a9c2daaae5`
+
+- :ref:`exhale_define_MicroBitRadio_8h_1a6eaee89efb53e744258fbc6253f8b1b5`
+
+- :ref:`exhale_define_MicroBitRadio_8h_1a66488fe30703db62c70f0ca24b07dad2`
+

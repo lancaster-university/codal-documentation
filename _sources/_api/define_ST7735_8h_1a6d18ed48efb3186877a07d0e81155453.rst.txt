@@ -1,0 +1,14 @@
+.. _exhale_define_ST7735_8h_1a6d18ed48efb3186877a07d0e81155453:
+
+Define MADCTL_MX
+================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_ST7735.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MADCTL_MX
+   :project: CODAL

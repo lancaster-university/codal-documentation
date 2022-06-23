@@ -1,0 +1,17 @@
+.. _exhale_struct_structMicroBitPowerData:
+
+Struct MicroBitPowerData
+========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitPowerManager.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: MicroBitPowerData
+   :project: CODAL
+   :members:
+   :protected-members:
+   :undoc-members:

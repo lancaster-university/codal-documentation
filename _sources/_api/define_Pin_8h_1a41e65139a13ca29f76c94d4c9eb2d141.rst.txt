@@ -1,0 +1,14 @@
+.. _exhale_define_Pin_8h_1a41e65139a13ca29f76c94d4c9eb2d141:
+
+Define DEVICE_PIN_EVENT_ON_TOUCH
+================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Pin.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DEVICE_PIN_EVENT_ON_TOUCH
+   :project: CODAL

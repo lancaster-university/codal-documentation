@@ -1,0 +1,36 @@
+.. _exhale_class_classcodal_1_1DataSink:
+
+Class DataSink
+==============
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_DataStream.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Derived Types
+*************
+
+- ``public codal::DataStream`` (:ref:`exhale_class_classcodal_1_1DataStream`)
+- ``public codal::FIFOStream`` (:ref:`exhale_class_classcodal_1_1FIFOStream`)
+- ``public codal::LevelDetector`` (:ref:`exhale_class_classcodal_1_1LevelDetector`)
+- ``public codal::LevelDetectorSPL`` (:ref:`exhale_class_classcodal_1_1LevelDetectorSPL`)
+- ``public codal::Mixer`` (:ref:`exhale_class_classcodal_1_1Mixer`)
+- ``public codal::MixerChannel`` (:ref:`exhale_class_classcodal_1_1MixerChannel`)
+- ``public codal::StreamFilter`` (:ref:`exhale_class_classcodal_1_1StreamFilter`)
+- ``public codal::StreamFlowTrigger`` (:ref:`exhale_class_classcodal_1_1StreamFlowTrigger`)
+- ``public codal::StreamNormalizer`` (:ref:`exhale_class_classcodal_1_1StreamNormalizer`)
+- ``public codal::StreamRecording`` (:ref:`exhale_class_classcodal_1_1StreamRecording`)
+- ``public codal::StreamSplitter`` (:ref:`exhale_class_classcodal_1_1StreamSplitter`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: codal::DataSink
+   :project: CODAL
+   :members:
+   :protected-members:
+   :undoc-members:

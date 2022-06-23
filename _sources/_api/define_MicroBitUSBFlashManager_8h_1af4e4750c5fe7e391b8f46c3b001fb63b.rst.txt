@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitUSBFlashManager_8h_1af4e4750c5fe7e391b8f46c3b001fb63b:
+
+Define MICROBIT_USB_FLASH_SINGLE_PAGE_ERASE_ONLY
+================================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitUSBFlashManager.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_USB_FLASH_SINGLE_PAGE_ERASE_ONLY
+   :project: CODAL

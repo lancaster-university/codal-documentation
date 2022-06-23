@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitRadio_8h_1a4d6cca6e6643f714baea6b222c78b4ab:
+
+Define MICROBIT_RADIO_HEADER_SIZE
+=================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitRadio.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_RADIO_HEADER_SIZE
+   :project: CODAL

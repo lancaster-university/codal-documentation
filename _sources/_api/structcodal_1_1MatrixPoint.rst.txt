@@ -1,0 +1,17 @@
+.. _exhale_struct_structcodal_1_1MatrixPoint:
+
+Struct MatrixPoint
+==================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LEDMatrix.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: codal::MatrixPoint
+   :project: CODAL
+   :members:
+   :protected-members:
+   :undoc-members:

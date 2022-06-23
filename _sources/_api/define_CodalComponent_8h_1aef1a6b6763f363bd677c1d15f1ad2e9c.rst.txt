@@ -1,0 +1,14 @@
+.. _exhale_define_CodalComponent_8h_1aef1a6b6763f363bd677c1d15f1ad2e9c:
+
+Define DEVICE_ID_BUTTON_RIGHT
+=============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalComponent.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DEVICE_ID_BUTTON_RIGHT
+   :project: CODAL

@@ -1,0 +1,29 @@
+.. _exhale_struct_structcodal_1_1RefCounted:
+
+Struct RefCounted
+=================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_RefCounted.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Derived Types
+*************
+
+- ``public codal::BufferData`` (:ref:`exhale_struct_structcodal_1_1BufferData`)
+- ``public codal::ImageData`` (:ref:`exhale_struct_structcodal_1_1ImageData`)
+- ``public codal::PacketData`` (:ref:`exhale_struct_structcodal_1_1PacketData`)
+- ``public codal::StringData`` (:ref:`exhale_struct_structcodal_1_1StringData`)
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: codal::RefCounted
+   :project: CODAL
+   :members:
+   :protected-members:
+   :undoc-members:

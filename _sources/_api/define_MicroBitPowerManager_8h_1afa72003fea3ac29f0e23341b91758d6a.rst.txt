@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitPowerManager_8h_1afa72003fea3ac29f0e23341b91758d6a:
+
+Define MICROBIT_UIPM_PROPERTY_USB_STATE
+=======================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitPowerManager.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_UIPM_PROPERTY_USB_STATE
+   :project: CODAL

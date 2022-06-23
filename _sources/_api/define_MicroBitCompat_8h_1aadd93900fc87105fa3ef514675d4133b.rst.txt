@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitCompat_8h_1aadd93900fc87105fa3ef514675d4133b:
+
+Define SPI
+==========
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SPI
+   :project: CODAL

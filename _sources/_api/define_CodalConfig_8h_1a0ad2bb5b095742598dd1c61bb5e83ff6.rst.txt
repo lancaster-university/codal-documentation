@@ -1,0 +1,14 @@
+.. _exhale_define_CodalConfig_8h_1a0ad2bb5b095742598dd1c61bb5e83ff6:
+
+Define DEVICE_TAG
+=================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DEVICE_TAG
+   :project: CODAL

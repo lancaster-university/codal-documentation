@@ -1,0 +1,26 @@
+.. _exhale_class_classcodal_1_1MicroBitAudio:
+
+Class MicroBitAudio
+===================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitAudio.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public codal::CodalComponent`` (:ref:`exhale_class_classcodal_1_1CodalComponent`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: codal::MicroBitAudio
+   :project: CODAL
+   :members:
+   :protected-members:
+   :undoc-members:

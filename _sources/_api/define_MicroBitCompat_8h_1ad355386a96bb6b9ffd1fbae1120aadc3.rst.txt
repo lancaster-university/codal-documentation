@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitCompat_8h_1ad355386a96bb6b9ffd1fbae1120aadc3:
+
+Define MICROBIT_HEAP_ALLOCATOR
+==============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_HEAP_ALLOCATOR
+   :project: CODAL

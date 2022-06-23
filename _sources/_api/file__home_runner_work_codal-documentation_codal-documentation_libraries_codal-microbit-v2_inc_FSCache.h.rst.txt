@@ -1,0 +1,72 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_FSCache.h:
+
+File FSCache.h
+==============
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/FSCache.h``)
+--------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_FSCache.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``CodalCompat.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalCompat.h`)
+
+- ``NVMController.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_NVMController.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitLog.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_codal`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structcodal_1_1CacheEntry`
+
+- :ref:`exhale_class_classcodal_1_1FSCache`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_FSCache_8h_1ae3ac4582ebd0b871b66535b47e8ae428`
+
+- :ref:`exhale_define_FSCache_8h_1ab5992e3b6e51cc189772614cacb4c4f6`
+
+- :ref:`exhale_define_FSCache_8h_1a1aebed01ad94a9cf974624d2b3a69e88`
+

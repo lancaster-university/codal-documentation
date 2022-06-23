@@ -1,0 +1,14 @@
+.. _exhale_define_Accelerometer_8h_1ae0b53a662b4d70703c86e399147f3d2f:
+
+Define ACCELEROMETER_EVT_FACE_DOWN
+==================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Accelerometer.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: ACCELEROMETER_EVT_FACE_DOWN
+   :project: CODAL

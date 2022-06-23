@@ -1,0 +1,14 @@
+.. _exhale_define_SoundEmojiSynthesizer_8h_1ad5aeea6400a6ecc8ce09a056f71f1ff8:
+
+Define EMOJI_SYNTHESIZER_TONE_EFFECT_PARAMETERS
+===============================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_SoundEmojiSynthesizer.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: EMOJI_SYNTHESIZER_TONE_EFFECT_PARAMETERS
+   :project: CODAL

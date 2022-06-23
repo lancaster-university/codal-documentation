@@ -1,0 +1,1029 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Class Serial &#8212; CODAL codal-microbit-v2 v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL codal-microbit-v2 v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Welcome to CODAL’s documentation!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/the-basics.html">
+     The Basics - CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inheritance-relationships">
+   Inheritance Relationships
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#base-type">
+     Base Type
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Class Serial</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inheritance-relationships">
+   Inheritance Relationships
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#base-type">
+     Base Type
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="class-serial">
+<span id="exhale-class-classcodal-1-1serial"></span><h1>Class Serial<a class="headerlink" href="#class-serial" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Serial.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-driver-models-serial-h"><span class="std std-ref">File Serial.h</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">#</a></h2>
+<section id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::CodalComponent</span></code> (<a class="reference internal" href="classcodal_1_1CodalComponent.html#exhale-class-classcodal-1-1codalcomponent"><span class="std std-ref">Class CodalComponent</span></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">#</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6SerialE">
+<span id="_CPPv3N5codal6SerialE"></span><span id="_CPPv2N5codal6SerialE"></span><span id="codal::Serial"></span><span class="target" id="classcodal_1_1Serial"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Serial</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classcodal_1_1CodalComponent.html#_CPPv4N5codal14CodalComponentE" title="codal::CodalComponent"><span class="n"><span class="pre">CodalComponent</span></span></a><a class="headerlink" href="#_CPPv4N5codal6SerialE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Class definition for DeviceSerial.</p>
+<p>Represents an instance of RawSerial which accepts codal device specific data types. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial15dataTransmittedEv">
+<span id="_CPPv3N5codal6Serial15dataTransmittedEv"></span><span id="_CPPv2N5codal6Serial15dataTransmittedEv"></span><span id="codal::Serial::dataTransmitted"></span><span class="target" id="classcodal_1_1Serial_1ac4b83f7dcb81b7d8f4d893faafcbbcdf"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dataTransmitted</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial15dataTransmittedEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial12dataReceivedEc">
+<span id="_CPPv3N5codal6Serial12dataReceivedEc"></span><span id="_CPPv2N5codal6Serial12dataReceivedEc"></span><span id="codal::Serial::dataReceived__c"></span><span class="target" id="classcodal_1_1Serial_1abb1e1afd9ee063fbc41e73b9556240b1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dataReceived</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">c</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial12dataReceivedEc" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial12idleCallbackEv">
+<span id="_CPPv3N5codal6Serial12idleCallbackEv"></span><span id="_CPPv2N5codal6Serial12idleCallbackEv"></span><span id="codal::Serial::idleCallback"></span><span class="target" id="classcodal_1_1Serial_1a11bdd0929e5115dda64e249d9e9aac66"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idleCallback</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal6Serial12idleCallbackEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Implement this function to receive a callback when the device is idling. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial4putcEc">
+<span id="_CPPv3N5codal6Serial4putcEc"></span><span id="_CPPv2N5codal6Serial4putcEc"></span><span id="codal::Serial::putc__c"></span><span class="target" id="classcodal_1_1Serial_1aeb24acb729f10f75cb6e201f16c86c8e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">putc</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">c</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N5codal6Serial4putcEc" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>SUB CLASSES / IMPLEMENTATIONS DEFINE THE FOLLOWING METHODS: </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial4getcEv">
+<span id="_CPPv3N5codal6Serial4getcEv"></span><span id="_CPPv2N5codal6Serial4getcEv"></span><span id="codal::Serial::getc"></span><span class="target" id="classcodal_1_1Serial_1af955777314d04fe61d1af1de238e7593"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getc</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N5codal6Serial4getcEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial6SerialER3PinR3Pin7uint8_t7uint8_t8uint16_t">
+<span id="_CPPv3N5codal6Serial6SerialER3PinR3Pin7uint8_t7uint8_t8uint16_t"></span><span id="_CPPv2N5codal6Serial6SerialER3PinR3Pin7uint8_t7uint8_t8uint16_t"></span><span id="codal::Serial::Serial__PinR.PinR.uint8_t.uint8_t.uint16_t"></span><span class="target" id="classcodal_1_1Serial_1aa169a61d830964c5309a9beb07112dd8"></span><span class="sig-name descname"><span class="n"><span class="pre">Serial</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">tx</span></span>, <a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">rx</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rxBufferSize</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">20</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">txBufferSize</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">20</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_SERIAL</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial6SerialER3PinR3Pin7uint8_t7uint8_t8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Constructor. Create an instance of DeviceSerial</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DeviceSerial</span><span class="w"> </span><span class="nf">serial</span><span class="p">(</span><span class="n">USBTX</span><span class="p">,</span><span class="w"> </span><span class="n">USBRX</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>the default baud rate is 115200. <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span>  Buffers aren&#39;t allocated until the first send or receive respectively.
+</pre></div>
+</div>
+ </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tx</strong> – the <a class="reference internal" href="classcodal_1_1Pin.html#classcodal_1_1Pin"><span class="std std-ref">Pin</span></a> to be used for transmission</p></li>
+<li><p><strong>rx</strong> – the <a class="reference internal" href="classcodal_1_1Pin.html#classcodal_1_1Pin"><span class="std std-ref">Pin</span></a> to be used for receiving data</p></li>
+<li><p><strong>rxBufferSize</strong> – the size of the buffer to be used for receiving bytes</p></li>
+<li><p><strong>txBufferSize</strong> – the size of the buffer to be used for transmitting bytes</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial8sendCharEc10SerialMode">
+<span id="_CPPv3N5codal6Serial8sendCharEc10SerialMode"></span><span id="_CPPv2N5codal6Serial8sendCharEc10SerialMode"></span><span id="codal::Serial::sendChar__c.SerialMode"></span><span class="target" id="classcodal_1_1Serial_1a65d6ba7a3dc8f338fb1657a1da4d3af9"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sendChar</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">c</span></span>, <a class="reference internal" href="enum_namespacecodal_1a36368bb452f86665796b9a358d4c9b1d.html#_CPPv4N5codal10SerialModeE" title="codal::SerialMode"><span class="n"><span class="pre">SerialMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_DEFAULT_SERIAL_MODE</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial8sendCharEc10SerialMode" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Sends a single character over the serial line.</p>
+<p>
+Defaults to SYNC_SLEEP.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>c</strong> – the character to send</p></li>
+<li><p><strong>mode</strong> – the selected mode, one of: ASYNC, SYNC_SPINWAIT, SYNC_SLEEP. Each mode gives a different behaviour: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ASYNC</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">character</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">copied</span><span class="w"> </span><span class="n">into</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">txBuff</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="n">immediately</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">SYNC_SPINWAIT</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">character</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">copied</span><span class="w"> </span><span class="n">into</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">txBuff</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="n">method</span><span class="w"></span>
+<span class="w">                </span><span class="n">will</span><span class="w"> </span><span class="n">spin</span><span class="w"> </span><span class="p">(</span><span class="n">lock</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">processor</span><span class="p">)</span><span class="w"> </span><span class="n">until</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">character</span><span class="w"> </span><span class="n">has</span><span class="w"></span>
+<span class="w">                </span><span class="n">been</span><span class="w"> </span><span class="n">sent</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">SYNC_SLEEP</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">character</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">copied</span><span class="w"> </span><span class="n">into</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">txBuff</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">fiber</span><span class="w"> </span><span class="n">sleeps</span><span class="w"></span>
+<span class="w">             </span><span class="n">until</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">character</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">been</span><span class="w"> </span><span class="n">sent</span><span class="p">.</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">allows</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="n">fibers</span><span class="w"></span>
+<span class="w">             </span><span class="n">to</span><span class="w"> </span><span class="k">continue</span><span class="w"> </span><span class="n">execution</span><span class="p">.</span><span class="w"></span>
+</pre></div>
+</div>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the number of bytes written, or CODAL_SERIAL_IN_USE if another fiber is using the serial instance for transmission. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial4sendE13ManagedString10SerialMode">
+<span id="_CPPv3N5codal6Serial4sendE13ManagedString10SerialMode"></span><span id="_CPPv2N5codal6Serial4sendE13ManagedString10SerialMode"></span><span id="codal::Serial::send__ManagedString.SerialMode"></span><span class="target" id="classcodal_1_1Serial_1a06f421797410f5e6d33bfdf6e319f16c"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">send</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">s</span></span>, <a class="reference internal" href="enum_namespacecodal_1a36368bb452f86665796b9a358d4c9b1d.html#_CPPv4N5codal10SerialModeE" title="codal::SerialMode"><span class="n"><span class="pre">SerialMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_DEFAULT_SERIAL_MODE</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial4sendE13ManagedString10SerialMode" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Sends a <a class="reference internal" href="classcodal_1_1ManagedString.html#classcodal_1_1ManagedString"><span class="std std-ref">ManagedString</span></a> over the serial line.</p>
+<p>
+Defaults to SYNC_SLEEP.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – the string to send</p></li>
+<li><p><strong>mode</strong> – the selected mode, one of: ASYNC, SYNC_SPINWAIT, SYNC_SLEEP. Each mode gives a different behaviour: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ASYNC</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">bytes</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">copied</span><span class="w"> </span><span class="n">into</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">txBuff</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="n">immediately</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">SYNC_SPINWAIT</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">bytes</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">copied</span><span class="w"> </span><span class="n">into</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">txBuff</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="n">method</span><span class="w"></span>
+<span class="w">                </span><span class="n">will</span><span class="w"> </span><span class="n">spin</span><span class="w"> </span><span class="p">(</span><span class="n">lock</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">processor</span><span class="p">)</span><span class="w"> </span><span class="n">until</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">bytes</span><span class="w"></span>
+<span class="w">                </span><span class="n">have</span><span class="w"> </span><span class="n">been</span><span class="w"> </span><span class="n">sent</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">SYNC_SLEEP</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">bytes</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">copied</span><span class="w"> </span><span class="n">into</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">txBuff</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">fiber</span><span class="w"> </span><span class="n">sleeps</span><span class="w"></span>
+<span class="w">             </span><span class="n">until</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">bytes</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">been</span><span class="w"> </span><span class="n">sent</span><span class="p">.</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">allows</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="n">fibers</span><span class="w"></span>
+<span class="w">             </span><span class="n">to</span><span class="w"> </span><span class="k">continue</span><span class="w"> </span><span class="n">execution</span><span class="p">.</span><span class="w"></span>
+</pre></div>
+</div>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the number of bytes written, CODAL_SERIAL_IN_USE if another fiber is using the serial instance for transmission, DEVICE_INVALID_PARAMETER if buffer is invalid, or the given bufferLen is &lt;= 0. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial4sendEP7uint8_ti10SerialMode">
+<span id="_CPPv3N5codal6Serial4sendEP7uint8_ti10SerialMode"></span><span id="_CPPv2N5codal6Serial4sendEP7uint8_ti10SerialMode"></span><span id="codal::Serial::send__uint8_tP.i.SerialMode"></span><span class="target" id="classcodal_1_1Serial_1ade961f43d1523f2b27d9f1b9644dc196"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">send</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buffer</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bufferLen</span></span>, <a class="reference internal" href="enum_namespacecodal_1a36368bb452f86665796b9a358d4c9b1d.html#_CPPv4N5codal10SerialModeE" title="codal::SerialMode"><span class="n"><span class="pre">SerialMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_DEFAULT_SERIAL_MODE</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial4sendEP7uint8_ti10SerialMode" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Sends a buffer of known length over the serial line.</p>
+<p>
+Defaults to SYNC_SLEEP.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>buffer</strong> – a pointer to the first character of the buffer</p></li>
+<li><p><strong>len</strong> – the number of bytes that are safely available to read.</p></li>
+<li><p><strong>mode</strong> – the selected mode, one of: ASYNC, SYNC_SPINWAIT, SYNC_SLEEP. Each mode gives a different behaviour: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ASYNC</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">bytes</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">copied</span><span class="w"> </span><span class="n">into</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">txBuff</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="n">immediately</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">SYNC_SPINWAIT</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">bytes</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">copied</span><span class="w"> </span><span class="n">into</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">txBuff</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="n">method</span><span class="w"></span>
+<span class="w">                </span><span class="n">will</span><span class="w"> </span><span class="n">spin</span><span class="w"> </span><span class="p">(</span><span class="n">lock</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">processor</span><span class="p">)</span><span class="w"> </span><span class="n">until</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">bytes</span><span class="w"></span>
+<span class="w">                </span><span class="n">have</span><span class="w"> </span><span class="n">been</span><span class="w"> </span><span class="n">sent</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">SYNC_SLEEP</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">bytes</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">copied</span><span class="w"> </span><span class="n">into</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">txBuff</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">fiber</span><span class="w"> </span><span class="n">sleeps</span><span class="w"></span>
+<span class="w">             </span><span class="n">until</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">bytes</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">been</span><span class="w"> </span><span class="n">sent</span><span class="p">.</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">allows</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="n">fibers</span><span class="w"></span>
+<span class="w">             </span><span class="n">to</span><span class="w"> </span><span class="k">continue</span><span class="w"> </span><span class="n">execution</span><span class="p">.</span><span class="w"></span>
+</pre></div>
+</div>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the number of bytes written, CODAL_SERIAL_IN_USE if another fiber is using the serial instance for transmission, DEVICE_INVALID_PARAMETER if buffer is invalid, or the given bufferLen is &lt;= 0. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial4readE10SerialMode">
+<span id="_CPPv3N5codal6Serial4readE10SerialMode"></span><span id="_CPPv2N5codal6Serial4readE10SerialMode"></span><span id="codal::Serial::read__SerialMode"></span><span class="target" id="classcodal_1_1Serial_1a02b02e33cae0778f58e747715489e34f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enum_namespacecodal_1a36368bb452f86665796b9a358d4c9b1d.html#_CPPv4N5codal10SerialModeE" title="codal::SerialMode"><span class="n"><span class="pre">SerialMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_DEFAULT_SERIAL_MODE</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial4readE10SerialMode" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Reads a single character from the rxBuff</p>
+<p>
+Defaults to SYNC_SLEEP.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mode</strong> – the selected mode, one of: ASYNC, SYNC_SPINWAIT, SYNC_SLEEP. Each mode gives a different behaviour: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ASYNC</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">character</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">read</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">rxBuff</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">available</span><span class="p">,</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">there</span><span class="w"></span>
+<span class="w">        </span><span class="n">are</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">read</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">DEVICE_NO_DATA</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">returned</span><span class="w"> </span><span class="n">immediately</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">SYNC_SPINWAIT</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">character</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">read</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">rxBuff</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">available</span><span class="p">,</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">there</span><span class="w"></span>
+<span class="w">                </span><span class="n">are</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">read</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">spin</span><span class="w"></span>
+<span class="w">                </span><span class="p">(</span><span class="n">lock</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">processor</span><span class="p">)</span><span class="w"> </span><span class="n">until</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">character</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">available</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">SYNC_SLEEP</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">character</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">read</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">rxBuff</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">available</span><span class="p">,</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">there</span><span class="w"></span>
+<span class="w">             </span><span class="n">are</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">read</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">calling</span><span class="w"> </span><span class="n">fiber</span><span class="w"> </span><span class="n">sleeps</span><span class="w"></span>
+<span class="w">             </span><span class="n">until</span><span class="w"> </span><span class="n">there</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">character</span><span class="w"> </span><span class="n">available</span><span class="p">.</span><span class="w"></span>
+</pre></div>
+</div>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a character, CODAL_SERIAL_IN_USE if another fiber is using the serial instance for reception, DEVICE_NO_RESOURCES if buffer allocation did not complete successfully, or DEVICE_NO_DATA if the rx buffer is empty and the mode given is ASYNC. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial7getCharE10SerialMode">
+<span id="_CPPv3N5codal6Serial7getCharE10SerialMode"></span><span id="_CPPv2N5codal6Serial7getCharE10SerialMode"></span><span id="codal::Serial::getChar__SerialMode"></span><span class="target" id="classcodal_1_1Serial_1ae09256d33aa43cbbbd823cf35fc422d8"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getChar</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enum_namespacecodal_1a36368bb452f86665796b9a358d4c9b1d.html#_CPPv4N5codal10SerialModeE" title="codal::SerialMode"><span class="n"><span class="pre">SerialMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial7getCharE10SerialMode" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial4readEi10SerialMode">
+<span id="_CPPv3N5codal6Serial4readEi10SerialMode"></span><span id="_CPPv2N5codal6Serial4readEi10SerialMode"></span><span id="codal::Serial::read__i.SerialMode"></span><span class="target" id="classcodal_1_1Serial_1adb2fbf2cc4abd0bdd2a35328ed3c36d9"></span><a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span>, <a class="reference internal" href="enum_namespacecodal_1a36368bb452f86665796b9a358d4c9b1d.html#_CPPv4N5codal10SerialModeE" title="codal::SerialMode"><span class="n"><span class="pre">SerialMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_DEFAULT_SERIAL_MODE</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial4readEi10SerialMode" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Reads multiple characters from the rxBuff and returns them as a <a class="reference internal" href="classcodal_1_1ManagedString.html#classcodal_1_1ManagedString"><span class="std std-ref">ManagedString</span></a></p>
+<p>
+Defaults to SYNC_SLEEP.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>size</strong> – the number of characters to read.</p></li>
+<li><p><strong>mode</strong> – the selected mode, one of: ASYNC, SYNC_SPINWAIT, SYNC_SLEEP. Each mode gives a different behaviour: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ASYNC</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">desired</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">available</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="k">return</span><span class="w"></span>
+<span class="w">        </span><span class="n">a</span><span class="w"> </span><span class="n">ManagedString</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">expected</span><span class="w"> </span><span class="n">size</span><span class="p">.</span><span class="w"> </span><span class="n">Otherwise</span><span class="p">,</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">read</span><span class="w"> </span><span class="n">however</span><span class="w"></span>
+<span class="w">        </span><span class="n">many</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="n">there</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">available</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">SYNC_SPINWAIT</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">desired</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">available</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="k">return</span><span class="w"></span>
+<span class="w">                </span><span class="n">a</span><span class="w"> </span><span class="n">ManagedString</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">expected</span><span class="w"> </span><span class="n">size</span><span class="p">.</span><span class="w"> </span><span class="n">Otherwise</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">spin</span><span class="w"></span>
+<span class="w">                </span><span class="p">(</span><span class="n">lock</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">processor</span><span class="p">)</span><span class="w"> </span><span class="n">until</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">desired</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">been</span><span class="w"> </span><span class="n">read</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">SYNC_SLEEP</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">desired</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">available</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="k">return</span><span class="w"></span>
+<span class="w">             </span><span class="n">a</span><span class="w"> </span><span class="n">ManagedString</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">expected</span><span class="w"> </span><span class="n">size</span><span class="p">.</span><span class="w"> </span><span class="n">Otherwise</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">calling</span><span class="w"> </span><span class="n">fiber</span><span class="w"> </span><span class="n">sleeps</span><span class="w"></span>
+<span class="w">             </span><span class="n">until</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">desired</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">been</span><span class="w"> </span><span class="n">read</span><span class="p">.</span><span class="w"></span>
+</pre></div>
+</div>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <a class="reference internal" href="classcodal_1_1ManagedString.html#classcodal_1_1ManagedString"><span class="std std-ref">ManagedString</span></a>, or an empty <a class="reference internal" href="classcodal_1_1ManagedString.html#classcodal_1_1ManagedString"><span class="std std-ref">ManagedString</span></a> if an error was encountered during the read. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial4readEP7uint8_ti10SerialMode">
+<span id="_CPPv3N5codal6Serial4readEP7uint8_ti10SerialMode"></span><span id="_CPPv2N5codal6Serial4readEP7uint8_ti10SerialMode"></span><span id="codal::Serial::read__uint8_tP.i.SerialMode"></span><span class="target" id="classcodal_1_1Serial_1ae90a49f48f41764a045ce50ab4429a62"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buffer</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bufferLen</span></span>, <a class="reference internal" href="enum_namespacecodal_1a36368bb452f86665796b9a358d4c9b1d.html#_CPPv4N5codal10SerialModeE" title="codal::SerialMode"><span class="n"><span class="pre">SerialMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_DEFAULT_SERIAL_MODE</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial4readEP7uint8_ti10SerialMode" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Reads multiple characters from the rxBuff and fills a user buffer.</p>
+<p>
+Defaults to SYNC_SLEEP.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>buffer</strong> – a pointer to a user allocated buffer.</p></li>
+<li><p><strong>bufferLen</strong> – the amount of data that can be safely stored</p></li>
+<li><p><strong>mode</strong> – the selected mode, one of: ASYNC, SYNC_SPINWAIT, SYNC_SLEEP. Each mode gives a different behaviour: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ASYNC</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">desired</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">available</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">fill</span><span class="w"></span>
+<span class="w">        </span><span class="n">the</span><span class="w"> </span><span class="n">given</span><span class="w"> </span><span class="n">buffer</span><span class="p">.</span><span class="w"> </span><span class="n">Otherwise</span><span class="p">,</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">buffer</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">however</span><span class="w"></span>
+<span class="w">        </span><span class="n">many</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="n">there</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">available</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">SYNC_SPINWAIT</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">desired</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">available</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">fill</span><span class="w"></span>
+<span class="w">                </span><span class="n">the</span><span class="w"> </span><span class="n">given</span><span class="w"> </span><span class="n">buffer</span><span class="p">.</span><span class="w"> </span><span class="n">Otherwise</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">spin</span><span class="w"> </span><span class="p">(</span><span class="n">lock</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">processor</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="n">and</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">buffer</span><span class="w"> </span><span class="n">until</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">desired</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">been</span><span class="w"> </span><span class="n">read</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">SYNC_SLEEP</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">desired</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">available</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">fill</span><span class="w"></span>
+<span class="w">             </span><span class="n">the</span><span class="w"> </span><span class="n">given</span><span class="w"> </span><span class="n">buffer</span><span class="p">.</span><span class="w"> </span><span class="n">Otherwise</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">calling</span><span class="w"> </span><span class="n">fiber</span><span class="w"> </span><span class="n">sleeps</span><span class="w"></span>
+<span class="w">             </span><span class="n">until</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">desired</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">been</span><span class="w"> </span><span class="n">read</span><span class="p">.</span><span class="w"></span>
+</pre></div>
+</div>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the number of characters read, or CODAL_SERIAL_IN_USE if another fiber is using the instance for receiving. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial9readUntilE13ManagedString10SerialMode">
+<span id="_CPPv3N5codal6Serial9readUntilE13ManagedString10SerialMode"></span><span id="_CPPv2N5codal6Serial9readUntilE13ManagedString10SerialMode"></span><span id="codal::Serial::readUntil__ManagedString.SerialMode"></span><span class="target" id="classcodal_1_1Serial_1a36ec53dd903294c4ea1ae41e3062597c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readUntil</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">delimeters</span></span>, <a class="reference internal" href="enum_namespacecodal_1a36368bb452f86665796b9a358d4c9b1d.html#_CPPv4N5codal10SerialModeE" title="codal::SerialMode"><span class="n"><span class="pre">SerialMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_DEFAULT_SERIAL_MODE</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial9readUntilE13ManagedString10SerialMode" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Reads until one of the delimeters matches a character in the rxBuff</p>
+<p>
+Defaults to SYNC_SLEEP.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>delimeters are matched on a per byte basis. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>delimeters</strong> – a <a class="reference internal" href="classcodal_1_1ManagedString.html#classcodal_1_1ManagedString"><span class="std std-ref">ManagedString</span></a> containing a sequence of delimeter characters e.g. <a class="reference internal" href="classcodal_1_1ManagedString.html#classcodal_1_1ManagedString"><span class="std std-ref">ManagedString</span></a>(“\r\n”)</p></li>
+<li><p><strong>mode</strong> – the selected mode, one of: ASYNC, SYNC_SPINWAIT, SYNC_SLEEP. Each mode gives a different behaviour: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ASYNC</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">If</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">delimeters</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">character</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">rxBuff</span><span class="w"></span>
+<span class="w">        </span><span class="k">this</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">ManagedString</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">delimeter</span><span class="p">.</span><span class="w"></span>
+<span class="w">        </span><span class="n">Otherwise</span><span class="p">,</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">Empty</span><span class="w"> </span><span class="n">ManagedString</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">SYNC_SPINWAIT</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">If</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">delimeters</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">character</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">rxBuff</span><span class="w"></span>
+<span class="w">                </span><span class="k">this</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">ManagedString</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">delimeter</span><span class="p">.</span><span class="w"></span>
+<span class="w">                </span><span class="n">Otherwise</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">spin</span><span class="w"> </span><span class="p">(</span><span class="n">lock</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">processor</span><span class="p">)</span><span class="w"> </span><span class="n">until</span><span class="w"> </span><span class="n">a</span><span class="w"></span>
+<span class="w">                </span><span class="n">received</span><span class="w"> </span><span class="n">character</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">delimeters</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">SYNC_SLEEP</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">If</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">delimeters</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">character</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">rxBuff</span><span class="w"></span>
+<span class="w">             </span><span class="k">this</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">ManagedString</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">delimeter</span><span class="p">.</span><span class="w"></span>
+<span class="w">             </span><span class="n">Otherwise</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">calling</span><span class="w"> </span><span class="n">fiber</span><span class="w"> </span><span class="n">sleeps</span><span class="w"> </span><span class="n">until</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">character</span><span class="w"> </span><span class="n">matching</span><span class="w"> </span><span class="n">one</span><span class="w"></span>
+<span class="w">             </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">delimeters</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">seen</span><span class="p">.</span><span class="w"></span>
+</pre></div>
+</div>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <a class="reference internal" href="classcodal_1_1ManagedString.html#classcodal_1_1ManagedString"><span class="std std-ref">ManagedString</span></a> containing the characters up to a delimeter, or an Empty <a class="reference internal" href="classcodal_1_1ManagedString.html#classcodal_1_1ManagedString"><span class="std std-ref">ManagedString</span></a>, if another fiber is currently using this instance for reception.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial7setBaudEi">
+<span id="_CPPv3N5codal6Serial7setBaudEi"></span><span id="_CPPv2N5codal6Serial7setBaudEi"></span><span id="codal::Serial::setBaud__i"></span><span class="target" id="classcodal_1_1Serial_1aece4cbcfa07c02ec28b11173e22f99a7"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setBaud</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">baudrate</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial7setBaudEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>A wrapper around the inherited method “baud” so we can trap the baud rate as it changes and restore it if <a class="reference internal" href="#classcodal_1_1Serial_1ac2233727eba6a62192c0d0c2d5845ce0"><span class="std std-ref">redirect()</span></a> is called.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>the underlying implementation chooses the first allowable rate at or above that requested. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>baudrate</strong> – the new baudrate. See:<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/mbedmicro/mbed/blob/master/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/serial_api.c">https://github.com/mbedmicro/mbed/blob/master/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/serial_api.c</a> for permitted baud rates.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_INVALID_PARAMETER if baud rate is less than 0, otherwise DEVICE_OK.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial8redirectER3PinR3Pin">
+<span id="_CPPv3N5codal6Serial8redirectER3PinR3Pin"></span><span id="_CPPv2N5codal6Serial8redirectER3PinR3Pin"></span><span id="codal::Serial::redirect__PinR.PinR"></span><span class="target" id="classcodal_1_1Serial_1ac2233727eba6a62192c0d0c2d5845ce0"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">redirect</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">tx</span></span>, <a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">rx</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial8redirectER3PinR3Pin" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>A way of dynamically configuring the serial instance to use pins other than USBTX and USBRX.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tx</strong> – the new transmission pin.</p></li>
+<li><p><strong>rx</strong> – the new reception pin.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CODAL_SERIAL_IN_USE if another fiber is currently transmitting or receiving, otherwise DEVICE_OK. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial10eventAfterEi10SerialMode">
+<span id="_CPPv3N5codal6Serial10eventAfterEi10SerialMode"></span><span id="_CPPv2N5codal6Serial10eventAfterEi10SerialMode"></span><span id="codal::Serial::eventAfter__i.SerialMode"></span><span class="target" id="classcodal_1_1Serial_1a8f5551d3583fc03f5bb7b04054d8f813"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">eventAfter</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span>, <a class="reference internal" href="enum_namespacecodal_1a36368bb452f86665796b9a358d4c9b1d.html#_CPPv4N5codal10SerialModeE" title="codal::SerialMode"><span class="n"><span class="pre">SerialMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="enum_namespacecodal_1a36368bb452f86665796b9a358d4c9b1d.html#_CPPv4N5codal10SerialMode5ASYNCE" title="codal::ASYNC"><span class="n"><span class="pre">ASYNC</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial10eventAfterEi10SerialMode" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Configures an event to be fired after “len” characters.</p>
+<p>Will generate an event with the ID: DEVICE_ID_SERIAL and the value CODAL_SERIAL_EVT_HEAD_MATCH.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>len</strong> – the number of characters to wait before triggering the event.</p></li>
+<li><p><strong>mode</strong> – the selected mode, one of: ASYNC, SYNC_SPINWAIT, SYNC_SLEEP. Each mode gives a different behaviour: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ASYNC</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Will</span><span class="w"> </span><span class="n">configure</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">immediately</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">SYNC_SPINWAIT</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_INVALID_PARAMETER</span><span class="w"></span>
+
+<span class="n">SYNC_SLEEP</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Will</span><span class="w"> </span><span class="n">configure</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">block</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">fiber</span><span class="w"> </span><span class="n">until</span><span class="w"> </span><span class="n">the</span><span class="w"></span>
+<span class="w">             </span><span class="n">event</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">received</span><span class="p">.</span><span class="w"></span>
+</pre></div>
+</div>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_INVALID_PARAMETER if the mode given is SYNC_SPINWAIT, otherwise DEVICE_OK. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial7eventOnE13ManagedString10SerialMode">
+<span id="_CPPv3N5codal6Serial7eventOnE13ManagedString10SerialMode"></span><span id="_CPPv2N5codal6Serial7eventOnE13ManagedString10SerialMode"></span><span id="codal::Serial::eventOn__ManagedString.SerialMode"></span><span class="target" id="classcodal_1_1Serial_1a47499342f3a4aa0ac178382a5f9d5050"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">eventOn</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">delimeters</span></span>, <a class="reference internal" href="enum_namespacecodal_1a36368bb452f86665796b9a358d4c9b1d.html#_CPPv4N5codal10SerialModeE" title="codal::SerialMode"><span class="n"><span class="pre">SerialMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="enum_namespacecodal_1a36368bb452f86665796b9a358d4c9b1d.html#_CPPv4N5codal10SerialMode5ASYNCE" title="codal::ASYNC"><span class="n"><span class="pre">ASYNC</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial7eventOnE13ManagedString10SerialMode" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Configures an event to be fired on a match with one of the delimeters.</p>
+<p>Will generate an event with the ID: DEVICE_ID_SERIAL and the value CODAL_SERIAL_EVT_DELIM_MATCH.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>delimeters are matched on a per byte basis. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>delimeters</strong> – the characters to match received characters against e.g. <a class="reference internal" href="classcodal_1_1ManagedString.html#classcodal_1_1ManagedString"><span class="std std-ref">ManagedString</span></a>(“\n”)</p></li>
+<li><p><strong>mode</strong> – the selected mode, one of: ASYNC, SYNC_SPINWAIT, SYNC_SLEEP. Each mode gives a different behaviour: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ASYNC</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Will</span><span class="w"> </span><span class="n">configure</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">immediately</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">SYNC_SPINWAIT</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_INVALID_PARAMETER</span><span class="w"></span>
+
+<span class="n">SYNC_SLEEP</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Will</span><span class="w"> </span><span class="n">configure</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">block</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">fiber</span><span class="w"> </span><span class="n">until</span><span class="w"> </span><span class="n">the</span><span class="w"></span>
+<span class="w">             </span><span class="n">event</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">received</span><span class="p">.</span><span class="w"></span>
+</pre></div>
+</div>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_INVALID_PARAMETER if the mode given is SYNC_SPINWAIT, otherwise DEVICE_OK.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial10isReadableEv">
+<span id="_CPPv3N5codal6Serial10isReadableEv"></span><span id="_CPPv2N5codal6Serial10isReadableEv"></span><span id="codal::Serial::isReadable"></span><span class="target" id="classcodal_1_1Serial_1ad1ed49d9db2680728a8c926470035915"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isReadable</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial10isReadableEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Determines whether there is any data waiting in our Rx buffer.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We do not wrap the super’s readable() method as we don’t want to interfere with communities that use manual calls to serial.readable(). </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>1 if we have space, 0 if we do not.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial11isWriteableEv">
+<span id="_CPPv3N5codal6Serial11isWriteableEv"></span><span id="_CPPv2N5codal6Serial11isWriteableEv"></span><span id="codal::Serial::isWriteable"></span><span class="target" id="classcodal_1_1Serial_1a200be6536485f427bf2316ba771debcf"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isWriteable</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial11isWriteableEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Determines if we have space in our txBuff.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We do not wrap the super’s writeable() method as we don’t want to interfere with communities that use manual calls to serial.writeable(). </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>1 if we have space, 0 if we do not.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial15setRxBufferSizeE7uint8_t">
+<span id="_CPPv3N5codal6Serial15setRxBufferSizeE7uint8_t"></span><span id="_CPPv2N5codal6Serial15setRxBufferSizeE7uint8_t"></span><span id="codal::Serial::setRxBufferSize__uint8_t"></span><span class="target" id="classcodal_1_1Serial_1a2f8eed918ae56cb2c18530e41ddd4946"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRxBufferSize</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial15setRxBufferSizeE7uint8_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Reconfigures the size of our rxBuff</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>size</strong> – the new size for our rxBuff</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CODAL_SERIAL_IN_USE if another fiber is currently using this instance for reception, otherwise DEVICE_OK. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial15setTxBufferSizeE7uint8_t">
+<span id="_CPPv3N5codal6Serial15setTxBufferSizeE7uint8_t"></span><span id="_CPPv2N5codal6Serial15setTxBufferSizeE7uint8_t"></span><span id="codal::Serial::setTxBufferSize__uint8_t"></span><span class="target" id="classcodal_1_1Serial_1ac4e5c50c51902a0b8c8fa5da17eaf411"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setTxBufferSize</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial15setTxBufferSizeE7uint8_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Reconfigures the size of our txBuff</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>size</strong> – the new size for our txBuff</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CODAL_SERIAL_IN_USE if another fiber is currently using this instance for transmission, otherwise DEVICE_OK. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial15getRxBufferSizeEv">
+<span id="_CPPv3N5codal6Serial15getRxBufferSizeEv"></span><span id="_CPPv2N5codal6Serial15getRxBufferSizeEv"></span><span id="codal::Serial::getRxBufferSize"></span><span class="target" id="classcodal_1_1Serial_1adddd73a5441437bce10d5f42531f772f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRxBufferSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial15getRxBufferSizeEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>The size of our rx buffer in bytes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the current size of rxBuff in bytes </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial15getTxBufferSizeEv">
+<span id="_CPPv3N5codal6Serial15getTxBufferSizeEv"></span><span id="_CPPv2N5codal6Serial15getTxBufferSizeEv"></span><span id="codal::Serial::getTxBufferSize"></span><span class="target" id="classcodal_1_1Serial_1aad7c31beeb2c2475247df0dcced23650"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTxBufferSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial15getTxBufferSizeEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>The size of our tx buffer in bytes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the current size of txBuff in bytes </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial13clearRxBufferEv">
+<span id="_CPPv3N5codal6Serial13clearRxBufferEv"></span><span id="_CPPv2N5codal6Serial13clearRxBufferEv"></span><span id="codal::Serial::clearRxBuffer"></span><span class="target" id="classcodal_1_1Serial_1ac15f8a1a3cbcf52dfcfa871ad06c0000"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clearRxBuffer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial13clearRxBufferEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Sets the tail to match the head of our circular buffer for reception, effectively clearing the reception buffer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>CODAL_SERIAL_IN_USE if another fiber is currently using this instance for reception, otherwise DEVICE_OK. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial13clearTxBufferEv">
+<span id="_CPPv3N5codal6Serial13clearTxBufferEv"></span><span id="_CPPv2N5codal6Serial13clearTxBufferEv"></span><span id="codal::Serial::clearTxBuffer"></span><span class="target" id="classcodal_1_1Serial_1a1a639a153a0043d630381fa5d0d63fe3"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clearTxBuffer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial13clearTxBufferEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Sets the tail to match the head of our circular buffer for transmission, effectively clearing the transmission buffer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>CODAL_SERIAL_IN_USE if another fiber is currently using this instance for transmission, otherwise DEVICE_OK. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial14rxBufferedSizeEv">
+<span id="_CPPv3N5codal6Serial14rxBufferedSizeEv"></span><span id="_CPPv2N5codal6Serial14rxBufferedSizeEv"></span><span id="codal::Serial::rxBufferedSize"></span><span class="target" id="classcodal_1_1Serial_1ab02e9b660621ada0295865ad8032ded4"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rxBufferedSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial14rxBufferedSizeEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>The number of bytes currently stored in our rx buffer waiting to be digested, by the user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The currently buffered number of bytes in our rxBuff. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial14txBufferedSizeEv">
+<span id="_CPPv3N5codal6Serial14txBufferedSizeEv"></span><span id="_CPPv2N5codal6Serial14txBufferedSizeEv"></span><span id="codal::Serial::txBufferedSize"></span><span class="target" id="classcodal_1_1Serial_1acb25cf57ff285764abd7968aeb9f69dd"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">txBufferedSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial14txBufferedSizeEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>The number of bytes currently stored in our tx buffer waiting to be transmitted by the hardware.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The currently buffered number of bytes in our txBuff. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial7rxInUseEv">
+<span id="_CPPv3N5codal6Serial7rxInUseEv"></span><span id="_CPPv2N5codal6Serial7rxInUseEv"></span><span id="codal::Serial::rxInUse"></span><span class="target" id="classcodal_1_1Serial_1a901c9738e2d0d2f3d6d21a9889d3a317"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rxInUse</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial7rxInUseEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Determines if the serial bus is currently in use by another fiber for reception.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only one fiber can call read at a time </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The state of our mutex lock for reception.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial7txInUseEv">
+<span id="_CPPv3N5codal6Serial7txInUseEv"></span><span id="_CPPv2N5codal6Serial7txInUseEv"></span><span id="codal::Serial::txInUse"></span><span class="target" id="classcodal_1_1Serial_1a79aede51b7a7d4fcd777601865101af9"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">txInUse</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial7txInUseEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Determines if the serial bus is currently in use by another fiber for transmission.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only one fiber can call send at a time </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The state of our mutex lock for transmition.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial6lockRxEv">
+<span id="_CPPv3N5codal6Serial6lockRxEv"></span><span id="_CPPv2N5codal6Serial6lockRxEv"></span><span id="codal::Serial::lockRx"></span><span class="target" id="classcodal_1_1Serial_1a35211c96d58f4b6929b77781e88d3476"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lockRx</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial6lockRxEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial6lockTxEv">
+<span id="_CPPv3N5codal6Serial6lockTxEv"></span><span id="_CPPv2N5codal6Serial6lockTxEv"></span><span id="codal::Serial::lockTx"></span><span class="target" id="classcodal_1_1Serial_1a57e007912f5b20dc9091becee95ad7e1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lockTx</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial6lockTxEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial8unlockRxEv">
+<span id="_CPPv3N5codal6Serial8unlockRxEv"></span><span id="_CPPv2N5codal6Serial8unlockRxEv"></span><span id="codal::Serial::unlockRx"></span><span class="target" id="classcodal_1_1Serial_1aff76bba58bbb057d6d85f5ce76228355"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">unlockRx</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial8unlockRxEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial8unlockTxEv">
+<span id="_CPPv3N5codal6Serial8unlockTxEv"></span><span id="_CPPv2N5codal6Serial8unlockTxEv"></span><span id="codal::Serial::unlockTx"></span><span class="target" id="classcodal_1_1Serial_1a227f34299b3a6c061f96cb8dd51bc00d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">unlockTx</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial8unlockTxEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6SerialD0Ev">
+<span id="_CPPv3N5codal6SerialD0Ev"></span><span id="_CPPv2N5codal6SerialD0Ev"></span><span id="codal::Serial::~Serial"></span><span class="target" id="classcodal_1_1Serial_1a78d4bdf64369effa90be05435acabd38"></span><span class="sig-name descname"><span class="n"><span class="pre">~Serial</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6SerialD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial15enableInterruptE19SerialInterruptType">
+<span id="_CPPv3N5codal6Serial15enableInterruptE19SerialInterruptType"></span><span id="_CPPv2N5codal6Serial15enableInterruptE19SerialInterruptType"></span><span id="codal::Serial::enableInterrupt__SerialInterruptType"></span><span class="target" id="classcodal_1_1Serial_1a13a792439893dcf4be453e7d00c6bff4"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableInterrupt</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enum_namespacecodal_1a5df2bd7d867b5b1f78974158a34aad7b.html#_CPPv4N5codal19SerialInterruptTypeE" title="codal::SerialInterruptType"><span class="n"><span class="pre">SerialInterruptType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">t</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N5codal6Serial15enableInterruptE19SerialInterruptType" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>SUB CLASSES / IMPLEMENTATIONS DEFINE THE FOLLOWING METHODS: </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial16disableInterruptE19SerialInterruptType">
+<span id="_CPPv3N5codal6Serial16disableInterruptE19SerialInterruptType"></span><span id="_CPPv2N5codal6Serial16disableInterruptE19SerialInterruptType"></span><span id="codal::Serial::disableInterrupt__SerialInterruptType"></span><span class="target" id="classcodal_1_1Serial_1a9fadc488cdd5a70eecb912d5631bf185"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disableInterrupt</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enum_namespacecodal_1a5df2bd7d867b5b1f78974158a34aad7b.html#_CPPv4N5codal19SerialInterruptTypeE" title="codal::SerialInterruptType"><span class="n"><span class="pre">SerialInterruptType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">t</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N5codal6Serial16disableInterruptE19SerialInterruptType" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial11setBaudrateE8uint32_t">
+<span id="_CPPv3N5codal6Serial11setBaudrateE8uint32_t"></span><span id="_CPPv2N5codal6Serial11setBaudrateE8uint32_t"></span><span id="codal::Serial::setBaudrate__uint32_t"></span><span class="target" id="classcodal_1_1Serial_1a62feb74129b71d086b7a452a29a3e6f3"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setBaudrate</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">baudrate</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N5codal6Serial11setBaudrateE8uint32_t" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial13configurePinsER3PinR3Pin">
+<span id="_CPPv3N5codal6Serial13configurePinsER3PinR3Pin"></span><span id="_CPPv2N5codal6Serial13configurePinsER3PinR3Pin"></span><span id="codal::Serial::configurePins__PinR.PinR"></span><span class="target" id="classcodal_1_1Serial_1aa6d04e075724b7ff8b4df02278d11286"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configurePins</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">tx</span></span>, <a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">rx</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N5codal6Serial13configurePinsER3PinR3Pin" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial12initialiseRxEv">
+<span id="_CPPv3N5codal6Serial12initialiseRxEv"></span><span id="_CPPv2N5codal6Serial12initialiseRxEv"></span><span id="codal::Serial::initialiseRx"></span><span class="target" id="classcodal_1_1Serial_1a8989280e4b95d340e9320dea0252b09d"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initialiseRx</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial12initialiseRxEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>We do not want to always have our buffers initialised, especially if users to not use them. We only bring them up on demand. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial12initialiseTxEv">
+<span id="_CPPv3N5codal6Serial12initialiseTxEv"></span><span id="_CPPv2N5codal6Serial12initialiseTxEv"></span><span id="codal::Serial::initialiseTx"></span><span class="target" id="classcodal_1_1Serial_1a050d74001fff8ae26d8dd4b852da85e7"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initialiseTx</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial12initialiseTxEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>We do not want to always have our buffers initialised, especially if users to not use them. We only bring them up on demand. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial12circularCopyEP7uint8_t7uint8_tP7uint8_t8uint16_t8uint16_t">
+<span id="_CPPv3N5codal6Serial12circularCopyEP7uint8_t7uint8_tP7uint8_t8uint16_t8uint16_t"></span><span id="_CPPv2N5codal6Serial12circularCopyEP7uint8_t7uint8_tP7uint8_t8uint16_t8uint16_t"></span><span id="codal::Serial::circularCopy__uint8_tP.uint8_t.uint8_tP.uint16_t.uint16_t"></span><span class="target" id="classcodal_1_1Serial_1a7419fbd0bf68bdedc9808e71859a3801"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">circularCopy</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">circularBuff</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">circularBuffSize</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">linearBuff</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">tailPosition</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">headPosition</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial12circularCopyEP7uint8_t7uint8_tP7uint8_t8uint16_t8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial14setTxInterruptEP7uint8_ti10SerialMode">
+<span id="_CPPv3N5codal6Serial14setTxInterruptEP7uint8_ti10SerialMode"></span><span id="_CPPv2N5codal6Serial14setTxInterruptEP7uint8_ti10SerialMode"></span><span id="codal::Serial::setTxInterrupt__uint8_tP.i.SerialMode"></span><span class="target" id="classcodal_1_1Serial_1a64af3a8c14b3ec90f9c57fc3d7903e68"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setTxInterrupt</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">string</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span>, <a class="reference internal" href="enum_namespacecodal_1a36368bb452f86665796b9a358d4c9b1d.html#_CPPv4N5codal10SerialModeE" title="codal::SerialMode"><span class="n"><span class="pre">SerialMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Serial14setTxInterruptEP7uint8_ti10SerialMode" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial2txE">
+<span id="_CPPv3N5codal6Serial2txE"></span><span id="_CPPv2N5codal6Serial2txE"></span><span id="codal::Serial::tx__PinR"></span><span class="target" id="classcodal_1_1Serial_1a4b1144f9c255593de5cda044c5c861f9"></span><a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">tx</span></span></span><a class="headerlink" href="#_CPPv4N5codal6Serial2txE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial2rxE">
+<span id="_CPPv3N5codal6Serial2rxE"></span><span id="_CPPv2N5codal6Serial2rxE"></span><span id="codal::Serial::rx__PinR"></span><span class="target" id="classcodal_1_1Serial_1aba3c3be7aa899d6b8e11919a97d06a5a"></span><a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">rx</span></span></span><a class="headerlink" href="#_CPPv4N5codal6Serial2rxE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial10delimetersE">
+<span id="_CPPv3N5codal6Serial10delimetersE"></span><span id="_CPPv2N5codal6Serial10delimetersE"></span><span id="codal::Serial::delimeters__ManagedString"></span><span class="target" id="classcodal_1_1Serial_1ab63492e9e31023533d2d09a2eae8e079"></span><a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">delimeters</span></span></span><a class="headerlink" href="#_CPPv4N5codal6Serial10delimetersE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial15rxBuffHeadMatchE">
+<span id="_CPPv3N5codal6Serial15rxBuffHeadMatchE"></span><span id="_CPPv2N5codal6Serial15rxBuffHeadMatchE"></span><span id="codal::Serial::rxBuffHeadMatch__i"></span><span class="target" id="classcodal_1_1Serial_1af5fe161fa0ae3efce8ec75a91576ef4d"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rxBuffHeadMatch</span></span></span><a class="headerlink" href="#_CPPv4N5codal6Serial15rxBuffHeadMatchE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial6rxBuffE">
+<span id="_CPPv3N5codal6Serial6rxBuffE"></span><span id="_CPPv2N5codal6Serial6rxBuffE"></span><span id="codal::Serial::rxBuff__uint8_tP"></span><span class="target" id="classcodal_1_1Serial_1a39798cdc55a781c6c314c0f6391e525c"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">rxBuff</span></span></span><a class="headerlink" href="#_CPPv4N5codal6Serial6rxBuffE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial10rxBuffSizeE">
+<span id="_CPPv3N5codal6Serial10rxBuffSizeE"></span><span id="_CPPv2N5codal6Serial10rxBuffSizeE"></span><span id="codal::Serial::rxBuffSize__uint8_t"></span><span class="target" id="classcodal_1_1Serial_1a8a83e47734d3c45ee34cae3896c7064a"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rxBuffSize</span></span></span><a class="headerlink" href="#_CPPv4N5codal6Serial10rxBuffSizeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial10rxBuffHeadE">
+<span id="_CPPv3N5codal6Serial10rxBuffHeadE"></span><span id="_CPPv2N5codal6Serial10rxBuffHeadE"></span><span id="codal::Serial::rxBuffHead__uint16_t"></span><span class="target" id="classcodal_1_1Serial_1aa8517754c2bb62a2f669a33496489f96"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rxBuffHead</span></span></span><a class="headerlink" href="#_CPPv4N5codal6Serial10rxBuffHeadE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial10rxBuffTailE">
+<span id="_CPPv3N5codal6Serial10rxBuffTailE"></span><span id="_CPPv2N5codal6Serial10rxBuffTailE"></span><span id="codal::Serial::rxBuffTail__uint16_t"></span><span class="target" id="classcodal_1_1Serial_1a42f5456d815e6e44214dc028fb00908b"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rxBuffTail</span></span></span><a class="headerlink" href="#_CPPv4N5codal6Serial10rxBuffTailE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial6txBuffE">
+<span id="_CPPv3N5codal6Serial6txBuffE"></span><span id="_CPPv2N5codal6Serial6txBuffE"></span><span id="codal::Serial::txBuff__uint8_tP"></span><span class="target" id="classcodal_1_1Serial_1a626c1d0cd7e39d1a7ef3d0c7488e82a8"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">txBuff</span></span></span><a class="headerlink" href="#_CPPv4N5codal6Serial6txBuffE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial10txBuffSizeE">
+<span id="_CPPv3N5codal6Serial10txBuffSizeE"></span><span id="_CPPv2N5codal6Serial10txBuffSizeE"></span><span id="codal::Serial::txBuffSize__uint8_t"></span><span class="target" id="classcodal_1_1Serial_1a08662b7a0983c88be8457b8a1961fdb9"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">txBuffSize</span></span></span><a class="headerlink" href="#_CPPv4N5codal6Serial10txBuffSizeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial10txBuffHeadE">
+<span id="_CPPv3N5codal6Serial10txBuffHeadE"></span><span id="_CPPv2N5codal6Serial10txBuffHeadE"></span><span id="codal::Serial::txBuffHead__uint16_t"></span><span class="target" id="classcodal_1_1Serial_1a8a5cd4703144d90c8f011cad8fc0291e"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">txBuffHead</span></span></span><a class="headerlink" href="#_CPPv4N5codal6Serial10txBuffHeadE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial10txBuffTailE">
+<span id="_CPPv3N5codal6Serial10txBuffTailE"></span><span id="_CPPv2N5codal6Serial10txBuffTailE"></span><span id="codal::Serial::txBuffTail__uint16_t"></span><span class="target" id="classcodal_1_1Serial_1a6f9fb91a310aedc33971723c336b9a08"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">txBuffTail</span></span></span><a class="headerlink" href="#_CPPv4N5codal6Serial10txBuffTailE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Serial8baudrateE">
+<span id="_CPPv3N5codal6Serial8baudrateE"></span><span id="_CPPv2N5codal6Serial8baudrateE"></span><span id="codal::Serial::baudrate__uint32_t"></span><span class="target" id="classcodal_1_1Serial_1ab60976b9254dd4ccf7e2425b96d8c13b"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">baudrate</span></span></span><a class="headerlink" href="#_CPPv4N5codal6Serial8baudrateE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

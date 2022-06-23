@@ -1,0 +1,14 @@
+.. _exhale_function_namespacecodal_1a81fa876da802ea3dfc88a9ea5efc2ba0:
+
+Function codal::htons
+=====================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: codal::htons(uint16_t)
+   :project: CODAL

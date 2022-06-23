@@ -1,0 +1,14 @@
+.. _exhale_define_MultiButton_8h_1a5440208b4cee2312d3c6e4d0ae5077b1:
+
+Define MULTI_BUTTON_HOLD_TRIGGERED_1
+====================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MultiButton.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MULTI_BUTTON_HOLD_TRIGGERED_1
+   :project: CODAL

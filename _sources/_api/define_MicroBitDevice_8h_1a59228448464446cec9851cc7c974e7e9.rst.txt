@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitDevice_8h_1a59228448464446cec9851cc7c974e7e9:
+
+Define MICROBIT_NAME_LENGTH
+===========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitDevice.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_NAME_LENGTH
+   :project: CODAL

@@ -1,0 +1,14 @@
+.. _exhale_define_USB__HID__Keys_8h_1af4d1b8a2912354646c74cf36c69f8223:
+
+Define KEY_LEFT
+===============
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USB_HID_Keys.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: KEY_LEFT
+   :project: CODAL

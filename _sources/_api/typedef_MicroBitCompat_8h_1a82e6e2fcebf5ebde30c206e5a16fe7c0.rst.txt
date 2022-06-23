@@ -1,0 +1,14 @@
+.. _exhale_typedef_MicroBitCompat_8h_1a82e6e2fcebf5ebde30c206e5a16fe7c0:
+
+Typedef MicroBitComponent
+=========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: MicroBitComponent
+   :project: CODAL

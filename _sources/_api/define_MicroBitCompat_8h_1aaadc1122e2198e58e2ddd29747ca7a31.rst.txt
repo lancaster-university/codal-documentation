@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitCompat_8h_1aaadc1122e2198e58e2ddd29747ca7a31:
+
+Define MICROBIT_ID_IO_P6
+========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_ID_IO_P6
+   :project: CODAL

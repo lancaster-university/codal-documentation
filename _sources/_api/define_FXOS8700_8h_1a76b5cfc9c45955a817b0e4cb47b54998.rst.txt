@@ -1,0 +1,14 @@
+.. _exhale_define_FXOS8700_8h_1a76b5cfc9c45955a817b0e4cb47b54998:
+
+Define FXOS8700_M_VECM_CFG
+==========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_FXOS8700.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FXOS8700_M_VECM_CFG
+   :project: CODAL

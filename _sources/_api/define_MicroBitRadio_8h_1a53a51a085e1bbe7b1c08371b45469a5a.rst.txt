@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitRadio_8h_1a53a51a085e1bbe7b1c08371b45469a5a:
+
+Define MICROBIT_RADIO_PROTOCOL_EVENTBUS
+=======================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitRadio.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_RADIO_PROTOCOL_EVENTBUS
+   :project: CODAL

@@ -1,0 +1,14 @@
+.. _exhale_define_LIS3DH_8h_1a76f6ef62ce0e5847ccb4b5c5c422c245:
+
+Define LIS3DH_WHOAMI_VAL
+========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LIS3DH.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LIS3DH_WHOAMI_VAL
+   :project: CODAL

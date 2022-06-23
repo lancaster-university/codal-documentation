@@ -1,0 +1,14 @@
+.. _exhale_define_CodalConfig_8h_1ae8474efcc4cfe2ec55069993bb5a846c:
+
+Define DEVICE_DMESG
+===================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DEVICE_DMESG
+   :project: CODAL

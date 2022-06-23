@@ -1,0 +1,99 @@
+
+.. _program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_codal_target_hal.h:
+
+Program Listing for File codal_target_hal.h
+===========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_codal_target_hal.h>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/core/codal_target_hal.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   /*
+   The MIT License (MIT)
+   
+   Copyright (c) 2017 Lancaster University.
+   
+   Permission is hereby granted, free of charge, to any person obtaining a
+   copy of this software and associated documentation files (the "Software"),
+   to deal in the Software without restriction, including without limitation
+   the rights to use, copy, modify, merge, publish, distribute, sublicense,
+   and/or sell copies of the Software, and to permit persons to whom the
+   Software is furnished to do so, subject to the following conditions:
+   
+   The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+   
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+   THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+   */
+   
+   #ifndef CODAL_TARGET_HAL_H
+   #define CODAL_TARGET_HAL_H
+   
+   #include "platform_includes.h"
+   
+   extern "C"
+   {
+       void target_enable_irq();
+   
+       void target_disable_irq();
+   
+       void target_reset();
+   
+       void target_wait(uint32_t milliseconds);
+   
+       void target_wait_us(uint32_t us);
+   
+       int target_seed_random(uint32_t rand);
+   
+       int target_random(int max);
+   
+       uint64_t target_get_serial();
+   
+       void target_scheduler_idle();
+   
+       void target_wait_for_event();
+     
+       void target_deepsleep();
+   
+       void target_panic(int statusCode);
+   
+       PROCESSOR_WORD_TYPE fiber_initial_stack_base();
+       void tcb_configure_lr(void* tcb, PROCESSOR_WORD_TYPE function);
+   
+       void* tcb_allocate();
+   
+       void tcb_configure_sp(void* tcb, PROCESSOR_WORD_TYPE sp);
+   
+       void tcb_configure_stack_base(void* tcb, PROCESSOR_WORD_TYPE stack_base);
+   
+       PROCESSOR_WORD_TYPE tcb_get_stack_base(void* tcb);
+   
+       PROCESSOR_WORD_TYPE get_current_sp();
+   
+       PROCESSOR_WORD_TYPE tcb_get_sp(void* tcb);
+   
+       void tcb_configure_args(void* tcb, PROCESSOR_WORD_TYPE ep, PROCESSOR_WORD_TYPE cp, PROCESSOR_WORD_TYPE pm);
+   
+       short unsigned int __sync_fetch_and_add_2 (volatile void *ptr, short unsigned int value);
+   
+   }
+   
+   // This is re-defined in targets with external flash, that require certain functions to be placed in RAM
+   #ifndef REAL_TIME_FUNC
+   #define REAL_TIME_FUNC /* */
+   #endif
+   
+   // This is for cycle-precise wait even in presence of flash caches (forces function to sit in RAM)
+   #ifndef FORCE_RAM_FUNC
+   #define FORCE_RAM_FUNC __attribute__((noinline, long_call, section(".data.ramfuncs")))
+   #endif
+   
+   #endif

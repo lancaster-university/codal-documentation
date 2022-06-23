@@ -1,0 +1,14 @@
+.. _exhale_enum_group__Group__USBClassMSCommon_1gad65cbd8e097fd3336dd232513f23ad0d:
+
+Enum MS_CommandStatusCodes_t
+============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USBMassStorageClass.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: MS_CommandStatusCodes_t
+   :project: CODAL

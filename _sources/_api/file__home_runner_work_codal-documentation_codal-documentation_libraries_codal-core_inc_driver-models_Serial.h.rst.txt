@@ -1,0 +1,99 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Serial.h:
+
+File Serial.h
+=============
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/driver-models``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/driver-models/Serial.h``)
+--------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Serial.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``CodalComponent.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalComponent.h`)
+
+- ``ManagedString.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_ManagedString.h`)
+
+- ``Pin.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Pin.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_codal`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classcodal_1_1Serial`
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_namespacecodal_1a5df2bd7d867b5b1f78974158a34aad7b`
+
+- :ref:`exhale_enum_namespacecodal_1a36368bb452f86665796b9a358d4c9b1d`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_Serial_8h_1aa109bdf3398d405d41826b2a19dba9e0`
+
+- :ref:`exhale_define_Serial_8h_1a86c2be03a9861c1e0b36910deea8a5df`
+
+- :ref:`exhale_define_Serial_8h_1a2fd904a1788ac265ebd432dd5ed305b9`
+
+- :ref:`exhale_define_Serial_8h_1a92b7b4fa5743809aeef682198fc88d93`
+
+- :ref:`exhale_define_Serial_8h_1acaa2384cd10bbd8c9a56c525ef83b3e0`
+
+- :ref:`exhale_define_Serial_8h_1ad54b16921062393d313bdf0b2d6ef609`
+
+- :ref:`exhale_define_Serial_8h_1aabe89856f38b51da996872d97b2f1e4b`
+
+- :ref:`exhale_define_Serial_8h_1ad2d0aac9def4d8de79058c64f110e489`
+
+- :ref:`exhale_define_Serial_8h_1a368734ff31c5583c952630213c95b3fe`
+
+- :ref:`exhale_define_Serial_8h_1a0afdbcc021d82ee4c2b76bf5f1ba961d`
+
+- :ref:`exhale_define_Serial_8h_1ab7494e9a75451ff7eccc2143695a038b`
+
+- :ref:`exhale_define_Serial_8h_1a47eb8f8ab7ea7ff414529171b9f66235`
+

@@ -1,0 +1,14 @@
+.. _exhale_define_RefCounted_8h_1a3e4a52cee79a4b89733cdc795f23fbd4:
+
+Define REF_COUNTED_DEF_EMPTY
+============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_RefCounted.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: REF_COUNTED_DEF_EMPTY
+   :project: CODAL

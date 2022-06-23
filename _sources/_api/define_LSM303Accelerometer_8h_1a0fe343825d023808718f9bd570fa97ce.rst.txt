@@ -1,0 +1,14 @@
+.. _exhale_define_LSM303Accelerometer_8h_1a0fe343825d023808718f9bd570fa97ce:
+
+Define LSM303_TIME_LATENCY_A
+============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LSM303Accelerometer.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LSM303_TIME_LATENCY_A
+   :project: CODAL

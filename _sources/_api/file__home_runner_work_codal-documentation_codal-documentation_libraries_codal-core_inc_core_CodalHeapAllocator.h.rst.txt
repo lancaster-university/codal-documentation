@@ -1,0 +1,75 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalHeapAllocator.h:
+
+File CodalHeapAllocator.h
+=========================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/core``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/core/CodalHeapAllocator.h``)
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalHeapAllocator.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``CodalConfig.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h`)
+
+
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structHeapDefinition`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_CodalHeapAllocator_8h_1ab4f19869537dd843ff03db0738d2c0b4`
+
+- :ref:`exhale_function_CodalHeapAllocator_8h_1a32461dabe66522c46a8263a1437c87cc`
+
+- :ref:`exhale_function_CodalHeapAllocator_8h_1a32db060cf15e9ac68b357cfbabfd0d30`
+
+- :ref:`exhale_function_CodalHeapAllocator_8h_1a5dffa1175146f69db7bc8d49220d9368`
+
+- :ref:`exhale_function_CodalHeapAllocator_8h_1a5fbf347e9acbac5176532bb42bec68f3`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_CodalHeapAllocator_8h_1ac3a4526b5885e4234f82c3b9a17647c0`
+
+- :ref:`exhale_define_CodalHeapAllocator_8h_1a4320b0532e05fbf1d53f0747cbb8a100`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_CodalHeapAllocator_8h_1a40d7e27944a45ce031baa8835cc19278`
+

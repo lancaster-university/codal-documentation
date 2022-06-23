@@ -1,0 +1,14 @@
+.. _exhale_define_LSM303Accelerometer_8h_1a36384a7381e872a021c55a7c5a64c83e:
+
+Define LSM303_INT1_SRC_A
+========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LSM303Accelerometer.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LSM303_INT1_SRC_A
+   :project: CODAL

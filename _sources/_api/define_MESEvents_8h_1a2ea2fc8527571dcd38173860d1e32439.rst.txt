@@ -1,0 +1,14 @@
+.. _exhale_define_MESEvents_8h_1a2ea2fc8527571dcd38173860d1e32439:
+
+Define MES_REMOTE_CONTROL_EVT_STOP
+==================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MESEvents.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MES_REMOTE_CONTROL_EVT_STOP
+   :project: CODAL

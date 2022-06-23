@@ -1,0 +1,14 @@
+.. _exhale_define_FXOS8700_8h_1aca835a5ddbda918fe14ccc5e7b6cf39b:
+
+Define FXOS8700_PULSE_WIND
+==========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_FXOS8700.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FXOS8700_PULSE_WIND
+   :project: CODAL

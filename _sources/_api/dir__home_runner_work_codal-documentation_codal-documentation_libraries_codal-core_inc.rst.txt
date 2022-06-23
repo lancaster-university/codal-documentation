@@ -1,0 +1,24 @@
+.. _dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc:
+
+
+Directory inc
+=============
+
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+*Directory path:* ``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc``
+
+Subdirectories
+--------------
+
+- :ref:`dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core`
+- :ref:`dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models`
+- :ref:`dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers`
+- :ref:`dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams`
+- :ref:`dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types`
+
+
+

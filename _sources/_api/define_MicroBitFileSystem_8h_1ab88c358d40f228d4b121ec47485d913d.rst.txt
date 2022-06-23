@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitFileSystem_8h_1ab88c358d40f228d4b121ec47485d913d:
+
+Define MBFS_FILENAME_LENGTH
+===========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitFileSystem.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MBFS_FILENAME_LENGTH
+   :project: CODAL

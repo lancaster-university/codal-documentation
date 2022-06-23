@@ -1,0 +1,14 @@
+.. _exhale_define_FXOS8700_8h_1ad8fbc1f0824d35e79c0f67e9242ac14a:
+
+Define FXOS8700_PULSE_THSY
+==========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_FXOS8700.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FXOS8700_PULSE_THSY
+   :project: CODAL

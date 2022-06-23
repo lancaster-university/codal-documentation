@@ -1,0 +1,14 @@
+.. _exhale_define_Serial_8h_1a47eb8f8ab7ea7ff414529171b9f66235:
+
+Define CODAL_SERIAL_STATUS_TX_IN_USE
+====================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Serial.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CODAL_SERIAL_STATUS_TX_IN_USE
+   :project: CODAL

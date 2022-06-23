@@ -1,0 +1,68 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_mbed.h:
+
+File mbed.h
+===========
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/compat``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/compat/mbed.h``)
+------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_mbed.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``DigitalIn.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_DigitalIn.h`)
+
+- ``DigitalOut.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_DigitalOut.h`)
+
+- ``InterruptIn.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_InterruptIn.h`)
+
+- ``MbedTimer.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MbedTimer.h`)
+
+- ``MicroBitIO.h``
+
+- ``PwmOut.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_PwmOut.h`)
+
+- ``Ticker.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_Ticker.h`)
+
+- ``Timeout.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_Timeout.h`)
+
+- ``cstdio``
+
+- ``map`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_BitmapFont.h`)
+
+- ``stdint.h``
+
+- ``vector``
+
+
+
+
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_mbed_8h_1adbcdf633ebb7ea649cb307f42b7ad9e9`
+
+- :ref:`exhale_define_mbed_8h_1aa13e54f4302c547705cb7152efccbcf1`
+

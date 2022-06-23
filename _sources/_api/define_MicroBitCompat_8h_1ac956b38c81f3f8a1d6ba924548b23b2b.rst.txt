@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitCompat_8h_1ac956b38c81f3f8a1d6ba924548b23b2b:
+
+Define MICROBIT_ACCELEROMETER_EVT_FACE_UP
+=========================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_ACCELEROMETER_EVT_FACE_UP
+   :project: CODAL

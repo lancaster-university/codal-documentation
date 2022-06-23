@@ -1,0 +1,14 @@
+.. _exhale_function_namespacecodal_1ac8c68a8dfac1d80d3e1396a1684096a4:
+
+Function codal::system_timer_calibrate_cycles
+=============================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Timer.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: codal::system_timer_calibrate_cycles()
+   :project: CODAL

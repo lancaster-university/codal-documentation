@@ -1,0 +1,14 @@
+.. _exhale_define_KeyValueStorage_8h_1a21a06552e9e0a98343bbcd99de124dbc:
+
+Define DEVICE_KEY_VALUE_STORE_OFFSET
+====================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_KeyValueStorage.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DEVICE_KEY_VALUE_STORE_OFFSET
+   :project: CODAL

@@ -1,0 +1,14 @@
+.. _exhale_define_LSM303Accelerometer_8h_1a55a31946cc5413c7ce40287756f0a201:
+
+Define LSM303_OUT_TEMP_L_A
+==========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LSM303Accelerometer.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LSM303_OUT_TEMP_L_A
+   :project: CODAL

@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitCompat_8h_1ac14b0913ef452682b9b10381db14ed29:
+
+Define MICROBIT_ACCELEROMETER_TILT_TOLERANCE
+============================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_ACCELEROMETER_TILT_TOLERANCE
+   :project: CODAL

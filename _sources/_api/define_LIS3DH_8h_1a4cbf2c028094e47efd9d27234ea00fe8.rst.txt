@@ -1,0 +1,14 @@
+.. _exhale_define_LIS3DH_8h_1a4cbf2c028094e47efd9d27234ea00fe8:
+
+Define LIS3DH_CTRL_REG1
+=======================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LIS3DH.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LIS3DH_CTRL_REG1
+   :project: CODAL

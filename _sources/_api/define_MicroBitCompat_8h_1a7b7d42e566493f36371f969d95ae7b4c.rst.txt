@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitCompat_8h_1a7b7d42e566493f36371f969d95ae7b4c:
+
+Define MICROBIT_SERIAL_EVT_DELIM_MATCH
+======================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_SERIAL_EVT_DELIM_MATCH
+   :project: CODAL

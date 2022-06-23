@@ -1,0 +1,14 @@
+.. _exhale_define_MMA8653_8h_1a57791a9a62af0d84cc7589ca11a116dc:
+
+Define MMA8653_OUT_X_MSB
+========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MMA8653.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MMA8653_OUT_X_MSB
+   :project: CODAL

@@ -1,0 +1,14 @@
+.. _exhale_define_LIS3DH_8h_1a0454c68f32d760ab0d4fe84c41961c1e:
+
+Define LIS3DH_INT2_SRC
+======================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LIS3DH.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LIS3DH_INT2_SRC
+   :project: CODAL

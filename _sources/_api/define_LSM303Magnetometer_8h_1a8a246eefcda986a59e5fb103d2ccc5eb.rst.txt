@@ -1,0 +1,14 @@
+.. _exhale_define_LSM303Magnetometer_8h_1a8a246eefcda986a59e5fb103d2ccc5eb:
+
+Define LSM303_CFG_REG_A_M
+=========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LSM303Magnetometer.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LSM303_CFG_REG_A_M
+   :project: CODAL

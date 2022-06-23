@@ -1,0 +1,14 @@
+.. _exhale_define_CodalListener_8h_1a8cf4d230cd662f4eb384b6eec247922c:
+
+Define MESSAGE_BUS_LISTENER_IMMEDIATE
+=====================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalListener.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MESSAGE_BUS_LISTENER_IMMEDIATE
+   :project: CODAL

@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitCompat_8h_1abacbeb5d03c5b4d3bf513295f1b3baa9:
+
+Define MICROBIT_ACCELEROMETER_SHAKE_DAMPING
+===========================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_ACCELEROMETER_SHAKE_DAMPING
+   :project: CODAL

@@ -1,0 +1,14 @@
+.. _exhale_define_SPIFlash_8h_1a44bd2e69cb354f49ed50395794ba2de6:
+
+Define SPIFLASH_SMALL_ROW_SIZE
+==============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_SPIFlash.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SPIFLASH_SMALL_ROW_SIZE
+   :project: CODAL

@@ -1,0 +1,14 @@
+.. _exhale_define_group__Group__USBClassMSCommon_1ga87d36fcc093376de23ffdc4469dcf5a8:
+
+Define MS_COMMAND_DIR_DATA_IN
+=============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USBMassStorageClass.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MS_COMMAND_DIR_DATA_IN
+   :project: CODAL

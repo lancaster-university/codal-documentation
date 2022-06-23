@@ -1,0 +1,72 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_SPIFlash.h:
+
+File SPIFlash.h
+===============
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/driver-models``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/driver-models/SPIFlash.h``)
+----------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_SPIFlash.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``CodalDevice.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalDevice.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_StandardSPIFlash.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_codal`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classcodal_1_1SPIFlash`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_SPIFlash_8h_1a885520658d9c50d95a9971d0c6a823d3`
+
+- :ref:`exhale_define_SPIFlash_8h_1a0f0c96bc652fdf22165c2e1ea03960b9`
+
+- :ref:`exhale_define_SPIFlash_8h_1ad78e67e7b0363db3e3b384bd570a419e`
+
+- :ref:`exhale_define_SPIFlash_8h_1afa58302919c6a0346bddbd0fee17338a`
+
+- :ref:`exhale_define_SPIFlash_8h_1a44bd2e69cb354f49ed50395794ba2de6`
+

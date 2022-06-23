@@ -1,0 +1,14 @@
+.. _exhale_define_CodalComponent_8h_1aaa2c8754c3afb8b4ea3332a3148cf540:
+
+Define DEVICE_ID_SYSTEM_TIMER
+=============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalComponent.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DEVICE_ID_SYSTEM_TIMER
+   :project: CODAL

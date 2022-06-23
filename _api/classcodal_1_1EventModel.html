@@ -1,0 +1,857 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Class EventModel &#8212; CODAL codal-microbit-v2 v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL codal-microbit-v2 v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Welcome to CODAL’s documentation!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/the-basics.html">
+     The Basics - CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inheritance-relationships">
+   Inheritance Relationships
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derived-type">
+     Derived Type
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Class EventModel</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inheritance-relationships">
+   Inheritance Relationships
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derived-type">
+     Derived Type
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="class-eventmodel">
+<span id="exhale-class-classcodal-1-1eventmodel"></span><h1>Class EventModel<a class="headerlink" href="#class-eventmodel" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_EventModel.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-eventmodel-h"><span class="std std-ref">File EventModel.h</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">#</a></h2>
+<section id="derived-type">
+<h3>Derived Type<a class="headerlink" href="#derived-type" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::MessageBus</span></code> (<a class="reference internal" href="classcodal_1_1MessageBus.html#exhale-class-classcodal-1-1messagebus"><span class="std std-ref">Class MessageBus</span></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">#</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10EventModelE">
+<span id="_CPPv3N5codal10EventModelE"></span><span id="_CPPv2N5codal10EventModelE"></span><span id="codal::EventModel"></span><span class="target" id="classcodal_1_1EventModel"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EventModel</span></span></span><a class="headerlink" href="#_CPPv4N5codal10EventModelE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Subclassed by <a class="reference internal" href="classcodal_1_1MessageBus.html#classcodal_1_1MessageBus"><span class="std std-ref">codal::MessageBus</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10EventModel10EventModelEv">
+<span id="_CPPv3N5codal10EventModel10EventModelEv"></span><span id="_CPPv2N5codal10EventModel10EventModelEv"></span><span id="codal::EventModel::EventModel"></span><span class="target" id="classcodal_1_1EventModel_1a54c5f0323d39129bbeafca6db93d5f0f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EventModel</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10EventModel10EventModelEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10EventModel4sendE5Event">
+<span id="_CPPv3N5codal10EventModel4sendE5Event"></span><span id="_CPPv2N5codal10EventModel4sendE5Event"></span><span id="codal::EventModel::send__Event"></span><span class="target" id="classcodal_1_1EventModel_1a73a6005ab6ada92105c38a1650510df3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">send</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10EventModel4sendE5Event" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Queues the given event to be sent to all registered recipients. The method of delivery will vary depending on the underlying implementation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>The</strong> – event to send.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>This default implementation simply returns DEVICE_NOT_SUPPORTED. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10EventModel3addEP8Listener">
+<span id="_CPPv3N5codal10EventModel3addEP8Listener"></span><span id="_CPPv2N5codal10EventModel3addEP8Listener"></span><span id="codal::EventModel::add__ListenerP"></span><span class="target" id="classcodal_1_1EventModel_1a18dbcf5c1c1f9cf617a5e5006758a6cc"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">add</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structcodal_1_1Listener.html#_CPPv4N5codal8ListenerE" title="codal::Listener"><span class="n"><span class="pre">Listener</span></span></a><span class="p"><span class="pre">*</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10EventModel3addEP8Listener" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Add the given <a class="reference internal" href="structcodal_1_1Listener.html#structcodal_1_1Listener"><span class="std std-ref">Listener</span></a> to the list of event handlers, unconditionally.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>listener</strong> – The <a class="reference internal" href="structcodal_1_1Listener.html#structcodal_1_1Listener"><span class="std std-ref">Listener</span></a> to validate.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>This default implementation simply returns DEVICE_NOT_SUPPORTED. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10EventModel6removeEP8Listener">
+<span id="_CPPv3N5codal10EventModel6removeEP8Listener"></span><span id="_CPPv2N5codal10EventModel6removeEP8Listener"></span><span id="codal::EventModel::remove__ListenerP"></span><span class="target" id="classcodal_1_1EventModel_1a6cbb2f267bd316fa01b02d51cabbc1be"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">remove</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structcodal_1_1Listener.html#_CPPv4N5codal8ListenerE" title="codal::Listener"><span class="n"><span class="pre">Listener</span></span></a><span class="p"><span class="pre">*</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10EventModel6removeEP8Listener" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Remove the given <a class="reference internal" href="structcodal_1_1Listener.html#structcodal_1_1Listener"><span class="std std-ref">Listener</span></a> from the list of event handlers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>listener</strong> – The <a class="reference internal" href="structcodal_1_1Listener.html#structcodal_1_1Listener"><span class="std std-ref">Listener</span></a> to remove.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>This default implementation simply returns DEVICE_NOT_SUPPORTED. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10EventModel9elementAtEi">
+<span id="_CPPv3N5codal10EventModel9elementAtEi"></span><span id="_CPPv2N5codal10EventModel9elementAtEi"></span><span id="codal::EventModel::elementAt__i"></span><span class="target" id="classcodal_1_1EventModel_1abf72ccce2d7eae2cb02031d737199dd8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="structcodal_1_1Listener.html#_CPPv4N5codal8ListenerE" title="codal::Listener"><span class="n"><span class="pre">Listener</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">elementAt</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10EventModel9elementAtEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns the <a class="reference internal" href="structcodal_1_1Listener.html#structcodal_1_1Listener"><span class="std std-ref">Listener</span></a> at the given position in the list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>n</strong> – The index of the desired <a class="reference internal" href="structcodal_1_1Listener.html#structcodal_1_1Listener"><span class="std std-ref">Listener</span></a>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>This default implementation simply returns NULL. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10EventModel27setListenerDeletionCallbackEPFvP8ListenerE">
+<span id="_CPPv3N5codal10EventModel27setListenerDeletionCallbackEPFvP8ListenerE"></span><span id="_CPPv2N5codal10EventModel27setListenerDeletionCallbackEPFvP8ListenerE"></span><span class="target" id="classcodal_1_1EventModel_1a715bc84cedbedcd7a6036324e6f5251c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setListenerDeletionCallback</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">listener_deletion_callback</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="structcodal_1_1Listener.html#_CPPv4N5codal8ListenerE" title="codal::Listener"><span class="n"><span class="pre">Listener</span></span></a><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10EventModel27setListenerDeletionCallbackEPFvP8ListenerE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Sets a pointer to a handler that is invoked when any listener is deleted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>DEVICE_OK on success. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10EventModel6listenEiiPFv5EventE8uint16_t">
+<span id="_CPPv3N5codal10EventModel6listenEiiPFv5EventE8uint16_t"></span><span id="_CPPv2N5codal10EventModel6listenEiiPFv5EventE8uint16_t"></span><span class="target" id="classcodal_1_1EventModel_1aedce15896fe9cd10c34bf15b72ea1a78"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">listen</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">handler</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="p"><span class="pre">)</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flags</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x0010</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10EventModel6listenEiiPFv5EventE8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Register a listener function.</p>
+<p>An <a class="reference internal" href="#classcodal_1_1EventModel"><span class="std std-ref">EventModel</span></a> implementing this interface may optionally choose to override this method, if that <a class="reference internal" href="#classcodal_1_1EventModel"><span class="std std-ref">EventModel</span></a> supports asynchronous callbacks to user code, but there is no requirement to do so.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">onButtonBClicked</span><span class="p">(</span><span class="n">Event</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//do something</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// call onButtonBClicked when ever a click event from buttonB is detected.</span>
+<span class="n">uBit</span><span class="p">.</span><span class="n">messageBus</span><span class="p">.</span><span class="n">listen</span><span class="p">(</span><span class="n">DEVICE_ID_BUTTON_B</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_BUTTON_EVT_CLICK</span><span class="p">,</span><span class="w"> </span><span class="n">onButtonBClick</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> – The source of messages to listen for. Events sent from any other IDs will be filtered. Use DEVICE_ID_ANY to receive events from all components.</p></li>
+<li><p><strong>value</strong> – The value of messages to listen for. Events with any other values will be filtered. Use DEVICE_EVT_ANY to receive events of any value.</p></li>
+<li><p><strong>handler</strong> – The function to call when an event is received.</p></li>
+<li><p><strong>flags</strong> – User specified, implementation specific flags, that allow behaviour of this events listener to be tuned.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK on success, or any valid error code defined in “ErrNo.h”. The default implementation simply returns DEVICE_NOT_SUPPORTED.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10EventModel6listenEiiPFv5EventPvEPv8uint16_t">
+<span id="_CPPv3N5codal10EventModel6listenEiiPFv5EventPvEPv8uint16_t"></span><span id="_CPPv2N5codal10EventModel6listenEiiPFv5EventPvEPv8uint16_t"></span><span class="target" id="classcodal_1_1EventModel_1aeff4a9650df215b09358a2e5225f6903"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">listen</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">handler</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">)</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">arg</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flags</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x0010</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10EventModel6listenEiiPFv5EventPvEPv8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Register a listener function.</p>
+<p>An <a class="reference internal" href="#classcodal_1_1EventModel"><span class="std std-ref">EventModel</span></a> implementing this interface may optionally choose to override this method, if that <a class="reference internal" href="#classcodal_1_1EventModel"><span class="std std-ref">EventModel</span></a> supports asynchronous callbacks to user code, but there is no requirement to do so.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">onButtonBClicked</span><span class="p">(</span><span class="n">Event</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//do something</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// call onButtonBClicked when ever a click event from buttonB is detected.</span>
+<span class="n">uBit</span><span class="p">.</span><span class="n">messageBus</span><span class="p">.</span><span class="n">listen</span><span class="p">(</span><span class="n">DEVICE_ID_BUTTON_B</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_BUTTON_EVT_CLICK</span><span class="p">,</span><span class="w"> </span><span class="n">onButtonBClick</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> – The source of messages to listen for. Events sent from any other IDs will be filtered. Use DEVICE_ID_ANY to receive events from all components.</p></li>
+<li><p><strong>value</strong> – The value of messages to listen for. Events with any other values will be filtered. Use DEVICE_EVT_ANY to receive events of any value.</p></li>
+<li><p><strong>handler</strong> – The function to call when an event is received.</p></li>
+<li><p><strong>arg</strong> – Provide the callback with in an additional argument.</p></li>
+<li><p><strong>flags</strong> – User specified, implementation specific flags, that allow behaviour of this events listener to be tuned.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK on success, or any valid error code defined in “ErrNo.h”. The default implementation simply returns DEVICE_NOT_SUPPORTED.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN5codal10EventModel6listenEi8uint16_t8uint16_tP1TM1TFv5EventE8uint16_t">
+<span id="_CPPv3I0EN5codal10EventModel6listenE8uint16_t8uint16_tP1TM1TFv5EventE8uint16_t"></span><span id="_CPPv2I0EN5codal10EventModel6listenE8uint16_t8uint16_tP1TM1TFv5EventE8uint16_t"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classcodal_1_1EventModel_1aeb8a2d6bb6dfa2e810eab2137e1ec13e"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">listen</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <a class="reference internal" href="#_CPPv4I0EN5codal10EventModel6listenEi8uint16_t8uint16_tP1TM1TFv5EventE8uint16_t" title="codal::EventModel::listen::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">object</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4I0EN5codal10EventModel6listenEi8uint16_t8uint16_tP1TM1TFv5EventE8uint16_t" title="codal::EventModel::listen::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">::</span></span><span class="p"><span class="pre">*</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">handler</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="p"><span class="pre">)</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flags</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x0010</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN5codal10EventModel6listenEi8uint16_t8uint16_tP1TM1TFv5EventE8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Register a listener function.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">SomeClass::onButtonBClicked</span><span class="p">(</span><span class="n">Event</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//do something</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">SomeClass</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SomeClass</span><span class="p">();</span><span class="w"></span>
+
+<span class="n">uBit</span><span class="p">.</span><span class="n">messageBus</span><span class="p">.</span><span class="n">listen</span><span class="p">(</span><span class="n">DEVICE_ID_BUTTON_B</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_BUTTON_EVT_CLICK</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">SomeClass</span><span class="o">::</span><span class="n">onButtonBClick</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</p>
+<p>A registration function to allow C++ member functions (methods) to be registered as an event listener.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> – The source of messages to listen for. Events sent from any other IDs will be filtered. Use DEVICE_ID_ANY to receive events from all components.</p></li>
+<li><p><strong>value</strong> – The value of messages to listen for. Events with any other values will be filtered. Use DEVICE_EVT_ANY to receive events of any value.</p></li>
+<li><p><strong>hander</strong> – The function to call when an event is received.</p></li>
+<li><p><strong>flags</strong> – User specified, implementation specific flags, that allow behaviour of this events listener to be tuned.</p></li>
+<li><p><strong>id</strong> – The source of messages to listen for. Events sent from any other IDs will be filtered. Use DEVICE_ID_ANY to receive events from all components.</p></li>
+<li><p><strong>value</strong> – The value of messages to listen for. Events with any other values will be filtered. Use DEVICE_EVT_ANY to receive events of any value.</p></li>
+<li><p><strong>object</strong> – The object on which the method should be invoked.</p></li>
+<li><p><strong>handler</strong> – The method to call when an event is received.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK on success or DEVICE_INVALID_PARAMETER if the handler or object pointers are NULL.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>DEVICE_OK on success or DEVICE_INVALID_PARAMETER if the handler or object pointers are NULL. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10EventModel6listenER14CodalComponentiPFv5EventE8uint16_t">
+<span id="_CPPv3N5codal10EventModel6listenER14CodalComponentiPFv5EventE8uint16_t"></span><span id="_CPPv2N5codal10EventModel6listenER14CodalComponentiPFv5EventE8uint16_t"></span><span class="target" id="classcodal_1_1EventModel_1af1ebe1cac5efef8d180d47592a001099"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">listen</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1CodalComponent.html#_CPPv4N5codal14CodalComponentE" title="codal::CodalComponent"><span class="n"><span class="pre">CodalComponent</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">component</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">handler</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="p"><span class="pre">)</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flags</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x0010</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10EventModel6listenER14CodalComponentiPFv5EventE8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Register a listener function.</p>
+<p>An <a class="reference internal" href="#classcodal_1_1EventModel"><span class="std std-ref">EventModel</span></a> implementing this interface may optionally choose to override this method, if that <a class="reference internal" href="#classcodal_1_1EventModel"><span class="std std-ref">EventModel</span></a> supports asynchronous callbacks to user code, but there is no requirement to do so.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">onButtonBClicked</span><span class="p">(</span><span class="n">Event</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//do something</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// call onButtonBClicked when ever a click event from buttonB is detected.</span>
+<span class="n">uBit</span><span class="p">.</span><span class="n">messageBus</span><span class="p">.</span><span class="n">listen</span><span class="p">(</span><span class="n">device</span><span class="p">.</span><span class="n">buttonB</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_BUTTON_EVT_CLICK</span><span class="p">,</span><span class="w"> </span><span class="n">onButtonBClick</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>component</strong> – The source component of messages to listen for.</p></li>
+<li><p><strong>value</strong> – The value of messages to listen for. Events with any other values will be filtered. Use DEVICE_EVT_ANY to receive events of any value.</p></li>
+<li><p><strong>handler</strong> – The function to call when an event is received.</p></li>
+<li><p><strong>flags</strong> – User specified, implementation specific flags, that allow behaviour of this events listener to be tuned.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK on success, or any valid error code defined in “ErrNo.h”. The default implementation simply returns DEVICE_NOT_SUPPORTED.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10EventModel6listenER14CodalComponentiPFv5EventPvEPv8uint16_t">
+<span id="_CPPv3N5codal10EventModel6listenER14CodalComponentiPFv5EventPvEPv8uint16_t"></span><span id="_CPPv2N5codal10EventModel6listenER14CodalComponentiPFv5EventPvEPv8uint16_t"></span><span class="target" id="classcodal_1_1EventModel_1a239913647d97f10b505c7e37668f3d68"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">listen</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1CodalComponent.html#_CPPv4N5codal14CodalComponentE" title="codal::CodalComponent"><span class="n"><span class="pre">CodalComponent</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">component</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">handler</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">)</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">arg</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flags</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x0010</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10EventModel6listenER14CodalComponentiPFv5EventPvEPv8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Register a listener function.</p>
+<p>An <a class="reference internal" href="#classcodal_1_1EventModel"><span class="std std-ref">EventModel</span></a> implementing this interface may optionally choose to override this method, if that <a class="reference internal" href="#classcodal_1_1EventModel"><span class="std std-ref">EventModel</span></a> supports asynchronous callbacks to user code, but there is no requirement to do so.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">onButtonBClicked</span><span class="p">(</span><span class="n">Event</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//do something</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// call onButtonBClicked when ever a click event from buttonB is detected.</span>
+<span class="n">uBit</span><span class="p">.</span><span class="n">messageBus</span><span class="p">.</span><span class="n">listen</span><span class="p">(</span><span class="n">device</span><span class="p">.</span><span class="n">buttonB</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_BUTTON_EVT_CLICK</span><span class="p">,</span><span class="w"> </span><span class="n">onButtonBClick</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>component</strong> – The source component of messages to listen for.</p></li>
+<li><p><strong>value</strong> – The value of messages to listen for. Events with any other values will be filtered. Use DEVICE_EVT_ANY to receive events of any value.</p></li>
+<li><p><strong>handler</strong> – The function to call when an event is received.</p></li>
+<li><p><strong>arg</strong> – Provide the callback with in an additional argument.</p></li>
+<li><p><strong>flags</strong> – User specified, implementation specific flags, that allow behaviour of this events listener to be tuned.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK on success, or any valid error code defined in “ErrNo.h”. The default implementation simply returns DEVICE_NOT_SUPPORTED.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN5codal10EventModel6listenEiR14CodalComponent8uint16_tP1TM1TFv5EventE8uint16_t">
+<span id="_CPPv3I0EN5codal10EventModel6listenER14CodalComponent8uint16_tP1TM1TFv5EventE8uint16_t"></span><span id="_CPPv2I0EN5codal10EventModel6listenER14CodalComponent8uint16_tP1TM1TFv5EventE8uint16_t"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classcodal_1_1EventModel_1a1525b54a993af9a4cdb092a02db4ca32"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">listen</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1CodalComponent.html#_CPPv4N5codal14CodalComponentE" title="codal::CodalComponent"><span class="n"><span class="pre">CodalComponent</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">component</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <a class="reference internal" href="#_CPPv4I0EN5codal10EventModel6listenEiR14CodalComponent8uint16_tP1TM1TFv5EventE8uint16_t" title="codal::EventModel::listen::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">object</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4I0EN5codal10EventModel6listenEiR14CodalComponent8uint16_tP1TM1TFv5EventE8uint16_t" title="codal::EventModel::listen::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">::</span></span><span class="p"><span class="pre">*</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">handler</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="p"><span class="pre">)</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flags</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x0010</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN5codal10EventModel6listenEiR14CodalComponent8uint16_tP1TM1TFv5EventE8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Register a listener function.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">SomeClass::onButtonBClicked</span><span class="p">(</span><span class="n">Event</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//do something</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">SomeClass</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SomeClass</span><span class="p">();</span><span class="w"></span>
+
+<span class="n">uBit</span><span class="p">.</span><span class="n">messageBus</span><span class="p">.</span><span class="n">listen</span><span class="p">(</span><span class="n">device</span><span class="p">.</span><span class="n">buttonB</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_BUTTON_EVT_CLICK</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">SomeClass</span><span class="o">::</span><span class="n">onButtonBClick</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</p>
+<p>A registration function to allow C++ member functions (methods) to be registered as an event listener.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>component</strong> – The source component of messages to listen for.</p></li>
+<li><p><strong>value</strong> – The value of messages to listen for. Events with any other values will be filtered. Use DEVICE_EVT_ANY to receive events of any value.</p></li>
+<li><p><strong>hander</strong> – The function to call when an event is received.</p></li>
+<li><p><strong>flags</strong> – User specified, implementation specific flags, that allow behaviour of this events listener to be tuned.</p></li>
+<li><p><strong>component</strong> – The source component of messages to listen for.</p></li>
+<li><p><strong>value</strong> – The value of messages to listen for. Events with any other values will be filtered. Use DEVICE_EVT_ANY to receive events of any value.</p></li>
+<li><p><strong>object</strong> – The object on which the method should be invoked.</p></li>
+<li><p><strong>handler</strong> – The method to call when an event is received.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK on success or DEVICE_INVALID_PARAMETER if the handler or object pointers are NULL.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>DEVICE_OK on success or DEVICE_INVALID_PARAMETER if the handler or object pointers are NULL. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10EventModel6ignoreEiiPFv5EventE">
+<span id="_CPPv3N5codal10EventModel6ignoreEiiPFv5EventE"></span><span id="_CPPv2N5codal10EventModel6ignoreEiiPFv5EventE"></span><span class="target" id="classcodal_1_1EventModel_1ad974fa96e02ab5c689f2a6d33375aaa8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ignore</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">handler</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10EventModel6ignoreEiiPFv5EventE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Unregister a listener function. Listeners are identified by the <a class="reference internal" href="classcodal_1_1Event.html#classcodal_1_1Event"><span class="std std-ref">Event</span></a> ID, <a class="reference internal" href="classcodal_1_1Event.html#classcodal_1_1Event"><span class="std std-ref">Event</span></a> value and handler registered using <a class="reference internal" href="#classcodal_1_1EventModel_1aedce15896fe9cd10c34bf15b72ea1a78"><span class="std std-ref">listen()</span></a>.</p>
+<p>
+Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">onButtonBClick</span><span class="p">(</span><span class="n">Event</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//do something</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">uBit</span><span class="p">.</span><span class="n">messageBus</span><span class="p">.</span><span class="n">listen</span><span class="p">(</span><span class="n">DEVICE_ID_BUTTON_B</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_BUTTON_EVT_CLICK</span><span class="p">,</span><span class="w"> </span><span class="n">onButtonBClick</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// the previously created listener is now ignored.</span>
+<span class="n">uBit</span><span class="p">.</span><span class="n">messageBus</span><span class="p">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">DEVICE_ID_BUTTON_B</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_BUTTON_EVT_CLICK</span><span class="p">,</span><span class="w"> </span><span class="n">onButtonBClick</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> – The <a class="reference internal" href="classcodal_1_1Event.html#classcodal_1_1Event"><span class="std std-ref">Event</span></a> ID used to register the listener. </p></li>
+<li><p><strong>value</strong> – The <a class="reference internal" href="classcodal_1_1Event.html#classcodal_1_1Event"><span class="std std-ref">Event</span></a> value used to register the listener. </p></li>
+<li><p><strong>handler</strong> – The function used to register the listener.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK on success or DEVICE_INVALID_PARAMETER if the handler given is NULL.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10EventModel6ignoreEiiPFv5EventPvE">
+<span id="_CPPv3N5codal10EventModel6ignoreEiiPFv5EventPvE"></span><span id="_CPPv2N5codal10EventModel6ignoreEiiPFv5EventPvE"></span><span class="target" id="classcodal_1_1EventModel_1a68d1be773f0216e75eeaa46a56bbd74b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ignore</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">handler</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10EventModel6ignoreEiiPFv5EventPvE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Unregister a listener function. Listeners are identified by the <a class="reference internal" href="classcodal_1_1Event.html#classcodal_1_1Event"><span class="std std-ref">Event</span></a> ID, <a class="reference internal" href="classcodal_1_1Event.html#classcodal_1_1Event"><span class="std std-ref">Event</span></a> value and handler registered using <a class="reference internal" href="#classcodal_1_1EventModel_1aedce15896fe9cd10c34bf15b72ea1a78"><span class="std std-ref">listen()</span></a>.</p>
+<p>
+Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">onButtonBClick</span><span class="p">(</span><span class="n">Event</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//do something</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">uBit</span><span class="p">.</span><span class="n">messageBus</span><span class="p">.</span><span class="n">listen</span><span class="p">(</span><span class="n">DEVICE_ID_BUTTON_B</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_BUTTON_EVT_CLICK</span><span class="p">,</span><span class="w"> </span><span class="n">onButtonBClick</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// the previously created listener is now ignored.</span>
+<span class="n">uBit</span><span class="p">.</span><span class="n">messageBus</span><span class="p">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">DEVICE_ID_BUTTON_B</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_BUTTON_EVT_CLICK</span><span class="p">,</span><span class="w"> </span><span class="n">onButtonBClick</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> – The <a class="reference internal" href="classcodal_1_1Event.html#classcodal_1_1Event"><span class="std std-ref">Event</span></a> ID used to register the listener. </p></li>
+<li><p><strong>value</strong> – The <a class="reference internal" href="classcodal_1_1Event.html#classcodal_1_1Event"><span class="std std-ref">Event</span></a> value used to register the listener. </p></li>
+<li><p><strong>handler</strong> – The function used to register the listener.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK on success or DEVICE_INVALID_PARAMETER if the handler given is NULL.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN5codal10EventModel6ignoreEi8uint16_t8uint16_tP1TM1TFv5EventE">
+<span id="_CPPv3I0EN5codal10EventModel6ignoreE8uint16_t8uint16_tP1TM1TFv5EventE"></span><span id="_CPPv2I0EN5codal10EventModel6ignoreE8uint16_t8uint16_tP1TM1TFv5EventE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classcodal_1_1EventModel_1abc5ec9517737d106f222d9e42b9c3539"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ignore</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <a class="reference internal" href="#_CPPv4I0EN5codal10EventModel6ignoreEi8uint16_t8uint16_tP1TM1TFv5EventE" title="codal::EventModel::ignore::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">object</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4I0EN5codal10EventModel6ignoreEi8uint16_t8uint16_tP1TM1TFv5EventE" title="codal::EventModel::ignore::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">::</span></span><span class="p"><span class="pre">*</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">handler</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN5codal10EventModel6ignoreEi8uint16_t8uint16_tP1TM1TFv5EventE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Unregister a listener function. Listners are identified by the <a class="reference internal" href="classcodal_1_1Event.html#classcodal_1_1Event"><span class="std std-ref">Event</span></a> ID, <a class="reference internal" href="classcodal_1_1Event.html#classcodal_1_1Event"><span class="std std-ref">Event</span></a> value and handler registered using <a class="reference internal" href="#classcodal_1_1EventModel_1aedce15896fe9cd10c34bf15b72ea1a78"><span class="std std-ref">listen()</span></a>.</p>
+<p>
+Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">SomeClass::onButtonBClick</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//do something</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">SomeClass</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SomeClass</span><span class="p">();</span><span class="w"></span>
+<span class="n">uBit</span><span class="p">.</span><span class="n">messageBus</span><span class="p">.</span><span class="n">listen</span><span class="p">(</span><span class="n">DEVICE_ID_BUTTON_B</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_BUTTON_EVT_CLICK</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">SomeClass</span><span class="o">::</span><span class="n">onButtonBClick</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// the previously created listener is now ignored.</span>
+<span class="n">uBit</span><span class="p">.</span><span class="n">messageBus</span><span class="p">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">DEVICE_ID_BUTTON_B</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_BUTTON_EVT_CLICK</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">SomeClass</span><span class="o">::</span><span class="n">onButtonBClick</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> – The <a class="reference internal" href="classcodal_1_1Event.html#classcodal_1_1Event"><span class="std std-ref">Event</span></a> ID used to register the listener. </p></li>
+<li><p><strong>value</strong> – The <a class="reference internal" href="classcodal_1_1Event.html#classcodal_1_1Event"><span class="std std-ref">Event</span></a> value used to register the listener. </p></li>
+<li><p><strong>handler</strong> – The function used to register the listener.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK on success or DEVICE_INVALID_PARAMETER if the handler or object pointers are NULL.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10EventModel6ignoreER14CodalComponentiPFv5EventE">
+<span id="_CPPv3N5codal10EventModel6ignoreER14CodalComponentiPFv5EventE"></span><span id="_CPPv2N5codal10EventModel6ignoreER14CodalComponentiPFv5EventE"></span><span class="target" id="classcodal_1_1EventModel_1a9944bfc2c3a0fea4b42faac3c2db4356"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ignore</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1CodalComponent.html#_CPPv4N5codal14CodalComponentE" title="codal::CodalComponent"><span class="n"><span class="pre">CodalComponent</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">component</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">handler</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10EventModel6ignoreER14CodalComponentiPFv5EventE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Unregister a listener function. Listeners are identified by the <a class="reference internal" href="classcodal_1_1Event.html#classcodal_1_1Event"><span class="std std-ref">Event</span></a> ID, <a class="reference internal" href="classcodal_1_1Event.html#classcodal_1_1Event"><span class="std std-ref">Event</span></a> value and handler registered using <a class="reference internal" href="#classcodal_1_1EventModel_1aedce15896fe9cd10c34bf15b72ea1a78"><span class="std std-ref">listen()</span></a>.</p>
+<p>
+Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">onButtonBClick</span><span class="p">(</span><span class="n">Event</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//do something</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">uBit</span><span class="p">.</span><span class="n">messageBus</span><span class="p">.</span><span class="n">listen</span><span class="p">(</span><span class="n">device</span><span class="p">.</span><span class="n">buttonB</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_BUTTON_EVT_CLICK</span><span class="p">,</span><span class="w"> </span><span class="n">onButtonBClick</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// the previously created listener is now ignored.</span>
+<span class="n">uBit</span><span class="p">.</span><span class="n">messageBus</span><span class="p">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">device</span><span class="p">.</span><span class="n">buttonB</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_BUTTON_EVT_CLICK</span><span class="p">,</span><span class="w"> </span><span class="n">onButtonBClick</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>component</strong> – The source component used to register the listener </p></li>
+<li><p><strong>value</strong> – The <a class="reference internal" href="classcodal_1_1Event.html#classcodal_1_1Event"><span class="std std-ref">Event</span></a> value used to register the listener. </p></li>
+<li><p><strong>handler</strong> – The function used to register the listener.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK on success or DEVICE_INVALID_PARAMETER if the handler given is NULL.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10EventModel6ignoreER14CodalComponentiPFv5EventPvE">
+<span id="_CPPv3N5codal10EventModel6ignoreER14CodalComponentiPFv5EventPvE"></span><span id="_CPPv2N5codal10EventModel6ignoreER14CodalComponentiPFv5EventPvE"></span><span class="target" id="classcodal_1_1EventModel_1a16a5e2a9d30e0f10ebe5290cb0279936"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ignore</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1CodalComponent.html#_CPPv4N5codal14CodalComponentE" title="codal::CodalComponent"><span class="n"><span class="pre">CodalComponent</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">component</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">handler</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10EventModel6ignoreER14CodalComponentiPFv5EventPvE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Unregister a listener function. Listeners are identified by the <a class="reference internal" href="classcodal_1_1Event.html#classcodal_1_1Event"><span class="std std-ref">Event</span></a> ID, <a class="reference internal" href="classcodal_1_1Event.html#classcodal_1_1Event"><span class="std std-ref">Event</span></a> value and handler registered using <a class="reference internal" href="#classcodal_1_1EventModel_1aedce15896fe9cd10c34bf15b72ea1a78"><span class="std std-ref">listen()</span></a>.</p>
+<p>
+Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">onButtonBClick</span><span class="p">(</span><span class="n">Event</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//do something</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">uBit</span><span class="p">.</span><span class="n">messageBus</span><span class="p">.</span><span class="n">listen</span><span class="p">(</span><span class="n">device</span><span class="p">.</span><span class="n">buttonB</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_BUTTON_EVT_CLICK</span><span class="p">,</span><span class="w"> </span><span class="n">onButtonBClick</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// the previously created listener is now ignored.</span>
+<span class="n">uBit</span><span class="p">.</span><span class="n">messageBus</span><span class="p">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">device</span><span class="p">.</span><span class="n">buttonB</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_BUTTON_EVT_CLICK</span><span class="p">,</span><span class="w"> </span><span class="n">onButtonBClick</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>component</strong> – The source component used to register the listener </p></li>
+<li><p><strong>value</strong> – The <a class="reference internal" href="classcodal_1_1Event.html#classcodal_1_1Event"><span class="std std-ref">Event</span></a> value used to register the listener. </p></li>
+<li><p><strong>handler</strong> – The function used to register the listener.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK on success or DEVICE_INVALID_PARAMETER if the handler given is NULL.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN5codal10EventModel6ignoreEiR14CodalComponent8uint16_tP1TM1TFv5EventE">
+<span id="_CPPv3I0EN5codal10EventModel6ignoreER14CodalComponent8uint16_tP1TM1TFv5EventE"></span><span id="_CPPv2I0EN5codal10EventModel6ignoreER14CodalComponent8uint16_tP1TM1TFv5EventE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classcodal_1_1EventModel_1a991d60144230e5af3654e4bec4cfe404"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ignore</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1CodalComponent.html#_CPPv4N5codal14CodalComponentE" title="codal::CodalComponent"><span class="n"><span class="pre">CodalComponent</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">component</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <a class="reference internal" href="#_CPPv4I0EN5codal10EventModel6ignoreEiR14CodalComponent8uint16_tP1TM1TFv5EventE" title="codal::EventModel::ignore::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">object</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4I0EN5codal10EventModel6ignoreEiR14CodalComponent8uint16_tP1TM1TFv5EventE" title="codal::EventModel::ignore::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">::</span></span><span class="p"><span class="pre">*</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">handler</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN5codal10EventModel6ignoreEiR14CodalComponent8uint16_tP1TM1TFv5EventE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Unregister a listener function. Listners are identified by the <a class="reference internal" href="classcodal_1_1Event.html#classcodal_1_1Event"><span class="std std-ref">Event</span></a> ID, <a class="reference internal" href="classcodal_1_1Event.html#classcodal_1_1Event"><span class="std std-ref">Event</span></a> value and handler registered using <a class="reference internal" href="#classcodal_1_1EventModel_1aedce15896fe9cd10c34bf15b72ea1a78"><span class="std std-ref">listen()</span></a>.</p>
+<p>
+Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">SomeClass::onButtonBClick</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//do something</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">SomeClass</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SomeClass</span><span class="p">();</span><span class="w"></span>
+<span class="n">uBit</span><span class="p">.</span><span class="n">messageBus</span><span class="p">.</span><span class="n">listen</span><span class="p">(</span><span class="n">device</span><span class="p">.</span><span class="n">buttonB</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_BUTTON_EVT_CLICK</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">SomeClass</span><span class="o">::</span><span class="n">onButtonBClick</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// the previously created listener is now ignored.</span>
+<span class="n">uBit</span><span class="p">.</span><span class="n">messageBus</span><span class="p">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">device</span><span class="p">.</span><span class="n">buttonB</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_BUTTON_EVT_CLICK</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">SomeClass</span><span class="o">::</span><span class="n">onButtonBClick</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>component</strong> – The source component used to register the listener </p></li>
+<li><p><strong>value</strong> – The <a class="reference internal" href="classcodal_1_1Event.html#classcodal_1_1Event"><span class="std std-ref">Event</span></a> value used to register the listener. </p></li>
+<li><p><strong>handler</strong> – The function used to register the listener.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK on success or DEVICE_INVALID_PARAMETER if the handler or object pointers are NULL.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10EventModel20setDefaultEventModelER10EventModel">
+<span id="_CPPv3N5codal10EventModel20setDefaultEventModelER10EventModel"></span><span id="_CPPv2N5codal10EventModel20setDefaultEventModelER10EventModel"></span><span id="codal::EventModel::setDefaultEventModel__EventModelR"></span><span class="target" id="classcodal_1_1EventModel_1aa0f4cf77692efd6863cd2d810efac459"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setDefaultEventModel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5codal10EventModelE" title="codal::EventModel"><span class="n"><span class="pre">EventModel</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">model</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10EventModel20setDefaultEventModelER10EventModel" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Define the default <a class="reference internal" href="#classcodal_1_1EventModel"><span class="std std-ref">EventModel</span></a> to use for events raised and consumed by the codal runtime. The default <a class="reference internal" href="#classcodal_1_1EventModel"><span class="std std-ref">EventModel</span></a> may be changed at any time.</p>
+<p>
+Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DeviceMessageBus</span><span class="w"> </span><span class="nf">b</span><span class="p">();</span><span class="w"></span>
+<span class="nl">EventModel</span><span class="p">:</span><span class="n">setDefaultEventModel</span><span class="p">(</span><span class="n">b</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>model</strong> – A new instance of an <a class="reference internal" href="#classcodal_1_1EventModel"><span class="std std-ref">EventModel</span></a> to use as the default.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK on success.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-attributes">Public Static Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10EventModel15defaultEventBusE">
+<span id="_CPPv3N5codal10EventModel15defaultEventBusE"></span><span id="_CPPv2N5codal10EventModel15defaultEventBusE"></span><span id="codal::EventModel::defaultEventBus__EventModelP"></span><span class="target" id="classcodal_1_1EventModel_1a964290aa1e45b43b9664ce70c6fe5ed6"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5codal10EventModelE" title="codal::EventModel"><span class="n"><span class="pre">EventModel</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">defaultEventBus</span></span></span><a class="headerlink" href="#_CPPv4N5codal10EventModel15defaultEventBusE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal10EventModel26listener_deletion_callbackE">
+<span id="_CPPv3N5codal10EventModel26listener_deletion_callbackE"></span><span id="_CPPv2N5codal10EventModel26listener_deletion_callbackE"></span><span class="target" id="classcodal_1_1EventModel_1a3274195bce047e2bed7261b443e9ca4c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">listener_deletion_callback</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="structcodal_1_1Listener.html#_CPPv4N5codal8ListenerE" title="codal::Listener"><span class="n"><span class="pre">Listener</span></span></a><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N5codal10EventModel26listener_deletion_callbackE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

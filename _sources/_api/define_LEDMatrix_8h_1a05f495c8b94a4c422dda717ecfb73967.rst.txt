@@ -1,0 +1,14 @@
+.. _exhale_define_LEDMatrix_8h_1a05f495c8b94a4c422dda717ecfb73967:
+
+Define LED_MATRIX_EVT_FRAME_TIMEOUT
+===================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LEDMatrix.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LED_MATRIX_EVT_FRAME_TIMEOUT
+   :project: CODAL
