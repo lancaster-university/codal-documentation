@@ -45,7 +45,6 @@ jobs:
         run: |
           make clean
           make html
-          touch build/html/.nojekyll
       - name: Deploy to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
