@@ -14,15 +14,34 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+import subprocess
+import os
+
+# Utility Functions
+def genInputString( libraries ):
+    buffer = []
+    for lib in libraries:
+        buffer.append( F"\"{os.path.join( '..', '..', 'libraries', lib, 'inc' )}\"" )
+    return ' '.join(buffer)
+
+def getGitVersion( library ):
+    result = subprocess.run(
+        ['git', 'describe', '--tags'],
+        cwd=os.path.join( '..', '..', 'libraries', library ),
+        stdout=subprocess.PIPE
+    )
+    return F"{library} {result.stdout.decode('UTF-8').strip()}"
 
 # -- Project information -----------------------------------------------------
 
+codal_libraries = [ 'codal-microbit-v2', 'codal-core' ]
+
 project = 'CODAL'
-copyright = '2022, Microbit Foundation'
-author = 'Microbit Foundation'
+copyright = '2022, Microbit Foundation, Lancaster University'
+author = 'Microbit Foundation, Lancaster University'
 
 # The full version, including alpha/beta/rc tags
-release = '1.0.0'
+release = getGitVersion( 'codal-microbit-v2' )
 
 
 # -- General configuration ---------------------------------------------------
@@ -51,10 +70,10 @@ exhale_args = {
     # Suggested optional arguments
     "createTreeView":        True,
     # TIP: if using the sphinx-bootstrap-theme, you need
-    # "treeViewIsBootstrap": True,
+    "treeViewIsBootstrap": True,
     "exhaleExecutesDoxygen": True,
-    "exhaleDoxygenStdin":    "INPUT = ../../libraries/codal-microbit-v2 ../../libraries/codal-core",
-    "verboseBuild": True
+    #"exhaleDoxygenStdin":    "INPUT = ../../libraries/codal-microbit-v2 ../../libraries/codal-core",
+    "exhaleDoxygenStdin":    F"INPUT = {genInputString(codal_libraries)}",
 }
 
 # Tell sphinx what the primary language being documented is.
@@ -82,6 +101,13 @@ html_theme = 'sphinx_book_theme'
 # html_theme = 'press'
 # html_theme = 'sphinx_celery'
 
+html_theme_options = {
+    "repository_url": "https://github.com/lancaster-university/codal-documentation",
+    "use_repository_button": True,
+    "home_page_in_toc": True,
+    "show_toc_level": 4,
+    "use_download_button": False
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
