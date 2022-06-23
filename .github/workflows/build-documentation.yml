@@ -37,11 +37,18 @@ jobs:
           python -m pip install sphinx breathe exhale sphinx_book_theme
           sudo apt-get update
           sudo apt-get install -y doxygen make
+      - name: Check versions
+        run: |
+          python --version
+          cmake --version
+          make --version
+          doxygen --version
+          sphinx-build --version
+          pip show breathe exhale sphinx sphinx_book_theme
       - name: Build Documentation
         working-directory: docs
         run: |
           make clean
-          
           make html
       - name: Deploy to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4.3.3
