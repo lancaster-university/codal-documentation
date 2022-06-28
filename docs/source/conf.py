@@ -97,18 +97,25 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-# html_theme = 'alabaster'
-html_theme = 'sphinx_book_theme'
-# html_theme = 'furo'
-# html_theme = 'press'
-# html_theme = 'sphinx_celery'
+#html_theme = 'sphinx_material'
+#html_theme_options = {
+#    'globaltoc_depth': 2
+#}
+#html_sidebars = {
+#    "**": ["globaltoc.html"]
+#}
 
+html_theme = 'sphinx_book_theme'
 html_theme_options = {
     "repository_url": "https://github.com/lancaster-university/codal-documentation",
     "use_repository_button": True,
     "home_page_in_toc": True,
     "show_toc_level": 4,
     "use_download_button": False
+}
+
+html_sidebars = {
+    "**": ["sidebar-logo.html", "search-field.html", "sbt-sidebar-nav.html"]
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,

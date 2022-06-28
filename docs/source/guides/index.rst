@@ -6,4 +6,4 @@ Guides
    :caption: Contents:
 
    prerequisites
-   the-basics
+   codal-projects

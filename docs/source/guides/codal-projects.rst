@@ -1,5 +1,5 @@
-The Basics - CODAL Projects
-===========================
+CODAL Projects
+==============
 
 .. note::
     This guide covers the setup needed for new projects, but does not include how to install the required tools.

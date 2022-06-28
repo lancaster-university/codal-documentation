@@ -13,7 +13,7 @@ Instead of simply reproducing this directly, here we will include a ``sustain`` 
 Step 1. Initial Setup
 ---------------------
 
-Create a new project as described in :doc:`/guides/the-basics` and ensure that you can build a ``MICROBIT.hex`` file without changing any code.
+Create a new project as described in :doc:`/guides/codal-projects` and ensure that you can build a ``MICROBIT.hex`` file without changing any code.
 If you can build a ``MICROBIT.hex``, we should be left with a project structure all set up, and if we open ``source/main.cpp`` in `Visual Studio Code <https://code.visualstudio.com/>`_,
 we should have the bare-bones of our new program.::
 
