@@ -37,9 +37,6 @@ jobs:
           python -m pip install sphinx breathe exhale sphinx_book_theme
           sudo apt-get update
           sudo apt-get install -y doxygen make
-      - name: Patch out an assert that breaks the build
-        run: |
-          patch /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/breathe/renderer/sphinxrenderer.py docs/sphinxrenderer.patch
       - name: Build Documentation
         working-directory: docs
         run: |
