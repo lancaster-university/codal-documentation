@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 echo "!!! MOVING TO VIRTUAL ENV !!!"
 python3 -m venv env
 source env/bin/activate
