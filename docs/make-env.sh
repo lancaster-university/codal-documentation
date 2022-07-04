@@ -5,7 +5,7 @@ source env/bin/activate
 
 pip install -r requirements.txt
 
-pip uninstall breathe
+pip uninstall -y breathe
 
 mkdir lib
 git clone https://github.com/JohnVidler/breathe.git lib/breathe
