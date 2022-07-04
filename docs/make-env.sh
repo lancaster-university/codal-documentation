@@ -17,6 +17,7 @@ cd ../../
 
 echo "!!! INSTALLING REQUIREMENTS !!!"
 #pip install -r requirements.txt
+pip install docutils==0.18.1
 pip install Sphinx exhale sphinx-book-theme
 
 echo "!!! BUILDING DOCUMENTATION !!!"
