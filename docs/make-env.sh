@@ -12,7 +12,6 @@ echo "!!! BUILDING NEW BREATHE !!!"
 mkdir lib
 git clone https://github.com/JohnVidler/breathe.git lib/breathe
 cd lib/breathe
-python3 setup.py build
 python3 setup.py install
 cd ../../
 
