@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitCompat_8h_1a15b847ef67d02499313e458e84d31eaa:
+
+Define MICROBIT_DISPLAY_MINIMUM_BRIGHTNESS
+==========================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_DISPLAY_MINIMUM_BRIGHTNESS
+   :project: CODAL

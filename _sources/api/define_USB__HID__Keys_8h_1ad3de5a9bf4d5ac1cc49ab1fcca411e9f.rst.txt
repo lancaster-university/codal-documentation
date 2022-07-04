@@ -1,0 +1,14 @@
+.. _exhale_define_USB__HID__Keys_8h_1ad3de5a9bf4d5ac1cc49ab1fcca411e9f:
+
+Define KEY_KP9
+==============
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USB_HID_Keys.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: KEY_KP9
+   :project: CODAL

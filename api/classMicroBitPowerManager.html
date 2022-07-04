@@ -1,0 +1,816 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Class MicroBitPowerManager &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL Documentation
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../getting-started.html">
+   Getting Started with CODAL
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../components/index.html">
+   Components
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/display.html">
+     Display
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/mic-and-speaker.html">
+     Microphone and Speaker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/edge-connector.html">
+     Edge Connector
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/sensors.html">
+     Sensors
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/codal-projects.html">
+     CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../codal-api.html">
+   The Complete CODAL API
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inheritance-relationships">
+   Inheritance Relationships
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#base-type">
+     Base Type
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Class MicroBitPowerManager</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inheritance-relationships">
+   Inheritance Relationships
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#base-type">
+     Base Type
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="class-microbitpowermanager">
+<span id="exhale-class-classmicrobitpowermanager"></span><h1>Class MicroBitPowerManager<a class="headerlink" href="#class-microbitpowermanager" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitPowerManager.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitpowermanager-h"><span class="std std-ref">File MicroBitPowerManager.h</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">#</a></h2>
+<section id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::CodalComponent</span></code> (<a class="reference internal" href="classcodal_1_1CodalComponent.html#exhale-class-classcodal-1-1codalcomponent"><span class="std std-ref">Class CodalComponent</span></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">#</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv420MicroBitPowerManager">
+<span id="_CPPv320MicroBitPowerManager"></span><span id="_CPPv220MicroBitPowerManager"></span><span id="MicroBitPowerManager"></span><span class="target" id="classMicroBitPowerManager"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitPowerManager</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classcodal_1_1CodalComponent.html#_CPPv4N5codal14CodalComponentE" title="codal::CodalComponent"><span class="n"><span class="pre">CodalComponent</span></span></a><a class="headerlink" href="#_CPPv420MicroBitPowerManager" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Class definition for <a class="reference internal" href="#classMicroBitPowerManager"><span class="std std-ref">MicroBitPowerManager</span></a>. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager20MicroBitPowerManagerER11MicroBitI2CR10MicroBitIOR16NRFLowLevelTimer8uint16_t">
+<span id="_CPPv3N20MicroBitPowerManager20MicroBitPowerManagerER11MicroBitI2CR10MicroBitIOR16NRFLowLevelTimer8uint16_t"></span><span id="_CPPv2N20MicroBitPowerManager20MicroBitPowerManagerER11MicroBitI2CR10MicroBitIOR16NRFLowLevelTimer8uint16_t"></span><span id="MicroBitPowerManager::MicroBitPowerManager__MicroBitI2CR.MicroBitIOR.NRFLowLevelTimerR.uint16_t"></span><span class="target" id="classMicroBitPowerManager_1aba91f0f4823aaad83aa94339464e91e4"></span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitPowerManager</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">MicroBitI2C</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">i2c</span></span>, <span class="n"><span class="pre">MicroBitIO</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ioPins</span></span>, <span class="n"><span class="pre">NRFLowLevelTimer</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">systemTimer</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">MICROBIT_ID_POWER_MANAGER</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager20MicroBitPowerManagerER11MicroBitI2CR10MicroBitIOR16NRFLowLevelTimer8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Constructor. Create a software abstraction of a power manager.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>i2c</strong> – the I2C bus to use to communicate with the micro:bit USB interface chip </p></li>
+<li><p><strong>ioPins</strong> – the IO pins in use on this device. </p></li>
+<li><p><strong>id</strong> – the unique EventModel id of this component. Defaults to: MICROBIT_ID_POWER_MANAGER </p></li>
+<li><p><strong>systemTimer</strong> – the system timer. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager14getPowerSourceEv">
+<span id="_CPPv3N20MicroBitPowerManager14getPowerSourceEv"></span><span id="_CPPv2N20MicroBitPowerManager14getPowerSourceEv"></span><span id="MicroBitPowerManager::getPowerSource"></span><span class="target" id="classMicroBitPowerManager_1a7958eea2b2ad8898d37f2e3279c8b786"></span><a class="reference internal" href="enum_MicroBitPowerManager_8h_1ab642d86f18cce01a396ef3adb855f8ef.html#_CPPv419MicroBitPowerSource" title="MicroBitPowerSource"><span class="n"><span class="pre">MicroBitPowerSource</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPowerSource</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager14getPowerSourceEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Attempts to determine the power source currently in use on this micro:bit.</p>
+<p>
+Attempts to determine the power source currently in use on this micro:bit. note: This will query the USB interface chip via I2C, and wait for completion.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This will query the USB interface chip via I2C, and wait for completion.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the current power source used by this micro:bit</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the current power source used by this micro:bit </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager19getPowerConsumptionEv">
+<span id="_CPPv3N20MicroBitPowerManager19getPowerConsumptionEv"></span><span id="_CPPv2N20MicroBitPowerManager19getPowerConsumptionEv"></span><span id="MicroBitPowerManager::getPowerConsumption"></span><span class="target" id="classMicroBitPowerManager_1a376f4cc6163fff2db045bc614f855c6c"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPowerConsumption</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="pre">__attribute__((deprecated(&quot;Use</span> <span class="pre">getPowerData()</span> <span class="pre">instead&quot;)))</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager19getPowerConsumptionEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Attempts to determine the instantaneous power consumption of this micro:bit.</p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<a class="reference internal" href="page_deprecated.html#deprecated_1_deprecated000001"><span class="std std-ref"><span class="pre">Deprecated:</span></span></a></dt>
+<dd><p>To reduce the number of calls to the KL27, please use <a class="reference internal" href="#classMicroBitPowerManager_1aeac93b41c23a375ca62a6e33d1e389ed"><span class="std std-ref">getPowerData()</span></a></p>
+</dd></dl>
+
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#classMicroBitPowerManager_1aeac93b41c23a375ca62a6e33d1e389ed"><span class="std std-ref">getPowerData()</span></a> for information.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#classMicroBitPowerManager_1aeac93b41c23a375ca62a6e33d1e389ed"><span class="std std-ref">getPowerData()</span></a> </p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This will query the USB interface chip via I2C, and wait for completion.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The value returned here is actually the <code class="docutils literal notranslate"><span class="pre">estimatedPowerConsumption</span></code> in the powerData member variable, </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the current estimated power consumption of this micro:bit </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager12getPowerDataEv">
+<span id="_CPPv3N20MicroBitPowerManager12getPowerDataEv"></span><span id="_CPPv2N20MicroBitPowerManager12getPowerDataEv"></span><span id="MicroBitPowerManager::getPowerData"></span><span class="target" id="classMicroBitPowerManager_1aeac93b41c23a375ca62a6e33d1e389ed"></span><a class="reference internal" href="structMicroBitPowerData.html#_CPPv417MicroBitPowerData" title="MicroBitPowerData"><span class="n"><span class="pre">MicroBitPowerData</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPowerData</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager12getPowerDataEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Requests the current power data from the interface chip, and calculates some approximate, but potentially useful values.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This will query the USB interface chip via I2C, and wait for completion.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Values in micro-volts in the returned structure are measured, whereas <code class="docutils literal notranslate"><span class="pre">estimatedPowerConsumption</span></code> is an approximation and subject to change.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference internal" href="structMicroBitPowerData.html#structMicroBitPowerData"><span class="std std-ref">MicroBitPowerData</span></a> The data from the interface chip, plus calculated fields. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager10getVersionEv">
+<span id="_CPPv3N20MicroBitPowerManager10getVersionEv"></span><span id="_CPPv2N20MicroBitPowerManager10getVersionEv"></span><span id="MicroBitPowerManager::getVersion"></span><span class="target" id="classMicroBitPowerManager_1a5913b2350f3cf2d0d8c86ce4df70388f"></span><a class="reference internal" href="structMicroBitVersion.html#_CPPv415MicroBitVersion" title="MicroBitVersion"><span class="n"><span class="pre">MicroBitVersion</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getVersion</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager10getVersionEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Attempts to determine the USB interface chip version in use on this micro:bit.</p>
+<p>
+Attempts to determine the USB interface chip version in use on this micro:bit. note: This will query the USB interface chip via I2C if necessary.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This will query the USB interface chip via I2C if necessary.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>MicroBitUSBVersion information.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>MicroBitUSBVersion information. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager12getUSBStatusEv">
+<span id="_CPPv3N20MicroBitPowerManager12getUSBStatusEv"></span><span id="_CPPv2N20MicroBitPowerManager12getUSBStatusEv"></span><span id="MicroBitPowerManager::getUSBStatus"></span><span class="target" id="classMicroBitPowerManager_1a87cb9a395839397f324b82a150ed3bd9"></span><a class="reference internal" href="enum_MicroBitPowerManager_8h_1a22d7244e6b7b64e37dfca42227952e1a.html#_CPPv417MicroBitUSBStatus" title="MicroBitUSBStatus"><span class="n"><span class="pre">MicroBitUSBStatus</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getUSBStatus</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager12getUSBStatusEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Attempts to determine the status of the USB interface on this micro:bit.</p>
+<p>
+Attempts to determine the status of the USB interface on this micro:bit. note: This will query the USB interface chip via I2C, and wait for completion.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This will query the USB interface chip via I2C, and wait for completion.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the current status of the USB interface on this micro:bit</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the current status of the USB interface on this micro:bit </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager14sendUIPMPacketE13ManagedBuffer">
+<span id="_CPPv3N20MicroBitPowerManager14sendUIPMPacketE13ManagedBuffer"></span><span id="_CPPv2N20MicroBitPowerManager14sendUIPMPacketE13ManagedBuffer"></span><span id="MicroBitPowerManager::sendUIPMPacket__ManagedBuffer"></span><span class="target" id="classMicroBitPowerManager_1a6d0f7db040ab842c2ddaf0806f362865"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sendUIPMPacket</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">ManagedBuffer</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">packet</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager14sendUIPMPacketE13ManagedBuffer" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Attempts to issue a control packet to the USB interface chip. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>packet</strong> – The data to send </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>MICROBIT_OK on success, or an I2C related error code on failure. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager14recvUIPMPacketEv">
+<span id="_CPPv3N20MicroBitPowerManager14recvUIPMPacketEv"></span><span id="_CPPv2N20MicroBitPowerManager14recvUIPMPacketEv"></span><span id="MicroBitPowerManager::recvUIPMPacket"></span><span class="target" id="classMicroBitPowerManager_1a9a7344140cc846bcb7f87df77e102ea4"></span><span class="n"><span class="pre">ManagedBuffer</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">recvUIPMPacket</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager14recvUIPMPacketEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Attempts to read a packet from the USB interface chip, either as a response to a prior request, or following an interrupt request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A buffer containing the complete response. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager15awaitUIPMPacketEv">
+<span id="_CPPv3N20MicroBitPowerManager15awaitUIPMPacketEv"></span><span id="_CPPv2N20MicroBitPowerManager15awaitUIPMPacketEv"></span><span id="MicroBitPowerManager::awaitUIPMPacket"></span><span class="target" id="classMicroBitPowerManager_1ab0b0ad8eeae97d25e21334bf49f4391b"></span><span class="n"><span class="pre">ManagedBuffer</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">awaitUIPMPacket</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager15awaitUIPMPacketEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Awaits a response to a previous requests to the USB interface chip. Up to MICROBIT_UIPM_MAX_RETRIES attempts will be made at ~1ms intervals.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A buffer containing the complete response. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager13writePropertyE13ManagedBufferb">
+<span id="_CPPv3N20MicroBitPowerManager13writePropertyE13ManagedBufferb"></span><span id="_CPPv2N20MicroBitPowerManager13writePropertyE13ManagedBufferb"></span><span id="MicroBitPowerManager::writeProperty__ManagedBuffer.b"></span><span class="target" id="classMicroBitPowerManager_1a352bfe73a68e030d8e20c2f3aef40dce"></span><span class="n"><span class="pre">ManagedBuffer</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeProperty</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">ManagedBuffer</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">request</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ack</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager13writePropertyE13ManagedBufferb" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Attempts to issue a control packet to the USB interface chip. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>packet</strong> – The data to send </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>MICROBIT_OK on success </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager12readPropertyEi">
+<span id="_CPPv3N20MicroBitPowerManager12readPropertyEi"></span><span id="_CPPv2N20MicroBitPowerManager12readPropertyEi"></span><span id="MicroBitPowerManager::readProperty__i"></span><span class="target" id="classMicroBitPowerManager_1ac5144990fe4446cd9cf84c347589aa30"></span><span class="n"><span class="pre">ManagedBuffer</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readProperty</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">property</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager12readPropertyEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Attempts to issue a control packet to the USB interface chip. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>packet</strong> – The data to send </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A response or error packet </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager3nopEv">
+<span id="_CPPv3N20MicroBitPowerManager3nopEv"></span><span id="_CPPv2N20MicroBitPowerManager3nopEv"></span><span id="MicroBitPowerManager::nop"></span><span class="target" id="classMicroBitPowerManager_1a4c923688b0640fed1e698694fa99ce54"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager3nopEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Perform a NULL opertion I2C transcation wit the interface chip. This is used to awken the KL27 interface chip from light sleep, as a work around for silicon errata in the KL27.</p>
+<p>Perform a NULL opertion I2C transaction with the interface chip if needed. This is used to awken the KL27 interface chip from light sleep, as a work around for silicon errata in the KL27. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager3offEv">
+<span id="_CPPv3N20MicroBitPowerManager3offEv"></span><span id="_CPPv2N20MicroBitPowerManager3offEv"></span><span id="MicroBitPowerManager::off"></span><span class="target" id="classMicroBitPowerManager_1a46da79f623174c038f6b8bd1877c90fc"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">off</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager3offEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Powers down the CPU and USB interface and enters STANDBY state. All user code and peripherals will cease operation. Device can subsequently be awoken only via a RESET. User program state will be lost and will restart from main().</p>
+<p>Powers down the CPU and USB interface and enters OFF state. All user code and peripherals will cease operation. Device can subsequently be awoken only via a RESET. User program state will be lost and will restart from main(). </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager20readInterfaceRequestEv">
+<span id="_CPPv3N20MicroBitPowerManager20readInterfaceRequestEv"></span><span id="_CPPv2N20MicroBitPowerManager20readInterfaceRequestEv"></span><span id="MicroBitPowerManager::readInterfaceRequest"></span><span class="target" id="classMicroBitPowerManager_1a8f8c699eaaaaae4da22f3ea137dddfb1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readInterfaceRequest</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager20readInterfaceRequestEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Service any IRQ requests raised by the USB interface chip. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager12idleCallbackEv">
+<span id="_CPPv3N20MicroBitPowerManager12idleCallbackEv"></span><span id="_CPPv2N20MicroBitPowerManager12idleCallbackEv"></span><span id="MicroBitPowerManager::idleCallback"></span><span class="target" id="classMicroBitPowerManager_1a011ffdc72a1fe3208bbce4e4a0e8d951"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idleCallback</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager12idleCallbackEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>A periodic callback invoked by the fiber scheduler idle thread. Service any IRQ requests raised by the USB interface chip. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager14awaitingPacketEb">
+<span id="_CPPv3N20MicroBitPowerManager14awaitingPacketEb"></span><span id="_CPPv2N20MicroBitPowerManager14awaitingPacketEb"></span><span id="MicroBitPowerManager::awaitingPacket__b"></span><span class="target" id="classMicroBitPowerManager_1a5ad0a83dc5cdbc66c8ba0be83595a656"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">awaitingPacket</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">awaiting</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager14awaitingPacketEb" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Allows a subsystem to indicate that it is actively waiting for a I2C response from the KL27 (e.g. the USBFlashManager). If set, the PowerManager will defer polling of the KL27 control interface if an interrupt is asserted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>awaiting</strong> – true if a subsystem is awaiting a packet from the KL27, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManagerD0Ev">
+<span id="_CPPv3N20MicroBitPowerManagerD0Ev"></span><span id="_CPPv2N20MicroBitPowerManagerD0Ev"></span><span id="MicroBitPowerManager::~MicroBitPowerManager"></span><span class="target" id="classMicroBitPowerManager_1af7631fcaed5a75822cc04c76090043ab"></span><span class="sig-name descname"><span class="n"><span class="pre">~MicroBitPowerManager</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManagerD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager9deepSleepEv">
+<span id="_CPPv3N20MicroBitPowerManager9deepSleepEv"></span><span id="_CPPv2N20MicroBitPowerManager9deepSleepEv"></span><span id="MicroBitPowerManager::deepSleep"></span><span class="target" id="classMicroBitPowerManager_1a2eb4e624320c1b3c252863a2f3ed56a4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deepSleep</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager9deepSleepEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Powers down the CPU and USB interface and instructs peripherals to enter an inoperative low power state. However, all program state is preserved. CPU will deepsleep for the given period of time, before returning to normal operation.</p>
+<p>
+The current fiber is blocked immediately. Power down occurs when the scheduler is next idle, unless cancelled by wake up events before then.</p>
+<p>Wake up is triggered at the next Timer event created with the CODAL_TIMER_EVENT_FLAGS_WAKEUP flag or by externally configured sources, for example, pin-&gt;wakeOnActive(true).</p>
+<p>Powers down the CPU and USB interface and instructs peripherals to enter an inoperative low power state. However, all program state is preserved. CPU will deepsleep for the given period of time, before returning to normal operation.</p>
+<p>note: ALL peripherals will be shutdown in this period. If you wish to keep peripherals active, simply use uBit.sleep();</p>
+<p>The current fiber is blocked immediately. Sleep occurs when the scheduler is next idle.</p>
+<p>Wake up is triggered at the next Timer event created with the CODAL_TIMER_EVENT_FLAGS_WAKEUP flag or by externally configured sources, for example, pin-&gt;wakeOnActive(true). </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ALL peripherals will be shutdown in this period. If you wish to keep peripherals active, simply use uBit.sleep();</p>
+</div>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager9deepSleepE8uint32_t">
+<span id="_CPPv3N20MicroBitPowerManager9deepSleepE8uint32_t"></span><span id="_CPPv2N20MicroBitPowerManager9deepSleepE8uint32_t"></span><span id="MicroBitPowerManager::deepSleep__uint32_t"></span><span class="target" id="classMicroBitPowerManager_1a7ab7937e8790ba8b071bb749a439b887"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deepSleep</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">milliSeconds</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager9deepSleepE8uint32_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Powers down the CPU and USB interface and instructs peripherals to enter an inoperative low power state. However, all program state is preserved. CPU will deepsleep for the given period of time, before returning to normal operation.</p>
+<p>
+The current fiber is blocked immediately. Sleep occurs when the scheduler is next idle, unless cancelled by wake up events before then.</p>
+<p>If deep sleep is disturbed within the requested time interval, the remainder will be awake.</p>
+<p>If the requested time interval is less than CONFIG_MINIMUM_DEEP_SLEEP_TIME, or a wake-up timer cannot be allocated, the sleep will be a simple uBit.sleep() without powering down.</p>
+<p>
+Powers down the CPU and USB interface and instructs peripherals to enter an inoperative low power state. However, all program state is preserved. CPU will deepsleep for the given period of time, before returning to normal operation.</p>
+<p>note: ALL peripherals will be shutdown in this period. If you wish to keep peripherals active, simply use uBit.sleep();</p>
+<p>The current fiber is blocked immediately. Sleep occurs when the scheduler is next idle, unless cancelled by wake up events before then.</p>
+<p>If deep sleep is disturbed within the requested time interval, the remainder will be awake.</p>
+<p>If the requested time interval is less than CONFIG_MINIMUM_DEEP_SLEEP_TIME, or a wake-up timer cannot be allocated, the sleep will be a simple uBit.sleep() without powering down.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ALL peripherals will be shutdown in this period. If you wish to keep peripherals active, simply use uBit.sleep();</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>milliSeconds</strong> – The period of time to sleep, in milliseconds.</p></li>
+<li><p><strong>milliSeconds</strong> – The period of time to sleep, in milliseconds (minimum CONFIG_MINIMUM_DEEP_SLEEP_TIME). </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager14deepSleepAsyncEv">
+<span id="_CPPv3N20MicroBitPowerManager14deepSleepAsyncEv"></span><span id="_CPPv2N20MicroBitPowerManager14deepSleepAsyncEv"></span><span id="MicroBitPowerManager::deepSleepAsync"></span><span class="target" id="classMicroBitPowerManager_1ad885adf902acaf48702e8db1ff662c89"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deepSleepAsync</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager14deepSleepAsyncEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Powers down the CPU and USB interface and instructs peripherals to enter an inoperative low power state. However, all program state is preserved. CPU will deepsleep until the next <a class="reference internal" href="classcodal_1_1Timer.html#classcodal_1_1Timer"><span class="std std-ref">codal::Timer</span></a> event or other wake up source event, before returning to normal operation.</p>
+<p>
+The function returns immediately. Power down occurs when the scheduler is next idle, unless cancelled by wake up events before then.</p>
+<p>Powers down the CPU and USB interface and instructs peripherals to enter an inoperative low power state. However, all program state is preserved. CPU will deepsleep until the next <a class="reference internal" href="classcodal_1_1Timer.html#classcodal_1_1Timer"><span class="std std-ref">codal::Timer</span></a> event or other wake up source event, before returning to normal operation.</p>
+<p>note: ALL peripherals will be shutdown in this period. If you wish to keep peripherals active, simply use uBit.sleep();</p>
+<p>The function returns immediately. Sleep occurs when the scheduler is next idle. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ALL peripherals will be shutdown in this period. If you wish to keep peripherals active, simply use uBit.sleep();</p>
+</div>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager15powerDownEnableEv">
+<span id="_CPPv3N20MicroBitPowerManager15powerDownEnableEv"></span><span id="_CPPv2N20MicroBitPowerManager15powerDownEnableEv"></span><span id="MicroBitPowerManager::powerDownEnable"></span><span class="target" id="classMicroBitPowerManager_1a7dde03e71b6c1b4c7af947c63482f3a1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">powerDownEnable</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager15powerDownEnableEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Enable power down during deepSleep The default is enabled. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager16powerDownDisableEv">
+<span id="_CPPv3N20MicroBitPowerManager16powerDownDisableEv"></span><span id="_CPPv2N20MicroBitPowerManager16powerDownDisableEv"></span><span id="MicroBitPowerManager::powerDownDisable"></span><span class="target" id="classMicroBitPowerManager_1a933eb99a07dfc5e9da41ed6f5c71adde"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">powerDownDisable</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager16powerDownDisableEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Disable power down during deepSleep The default is enabled. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager18powerDownIsEnabledEv">
+<span id="_CPPv3N20MicroBitPowerManager18powerDownIsEnabledEv"></span><span id="_CPPv2N20MicroBitPowerManager18powerDownIsEnabledEv"></span><span id="MicroBitPowerManager::powerDownIsEnabled"></span><span class="target" id="classMicroBitPowerManager_1a4061d7d8e2181565744921eaaa8b542c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">powerDownIsEnabled</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager18powerDownIsEnabledEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Determine if power down during deepSleep is enabled </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager19waitingForDeepSleepEv">
+<span id="_CPPv3N20MicroBitPowerManager19waitingForDeepSleepEv"></span><span id="_CPPv2N20MicroBitPowerManager19waitingForDeepSleepEv"></span><span id="MicroBitPowerManager::waitingForDeepSleep"></span><span class="target" id="classMicroBitPowerManager_1a94d6d674babe6d6b526384aa14855ca4"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">waitingForDeepSleep</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager19waitingForDeepSleepEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p><p>For library use. Determine if deep sleep has been requested.</p>
+<p>Determine if deep sleep has been requested. For library use.</p>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>true if deep sleep has been requested</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>true if deep sleep has been requested </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager17readyForDeepSleepEv">
+<span id="_CPPv3N20MicroBitPowerManager17readyForDeepSleepEv"></span><span id="_CPPv2N20MicroBitPowerManager17readyForDeepSleepEv"></span><span id="MicroBitPowerManager::readyForDeepSleep"></span><span class="target" id="classMicroBitPowerManager_1a7cffd953c8d8b3cdd76efc5208b18467"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readyForDeepSleep</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager17readyForDeepSleepEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p><p>For library use. Determine if the program is ready for deep sleep.</p>
+<p>Determine if the program is ready for deep sleep. For library use.</p>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>true if deep sleep should be entered now</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>true if deep sleep should be entered now </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager14startDeepSleepEv">
+<span id="_CPPv3N20MicroBitPowerManager14startDeepSleepEv"></span><span id="_CPPv2N20MicroBitPowerManager14startDeepSleepEv"></span><span id="MicroBitPowerManager::startDeepSleep"></span><span class="target" id="classMicroBitPowerManager_1a73d0286be4ba071fd531ab964b4953f6"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">startDeepSleep</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager14startDeepSleepEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p><p>For library use. Start previosly requested deep sleep.</p>
+<p>Start previosly requested deep sleep</p>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>DEVICE_OK if deep sleep occurred, or DEVICE_INVALID_STATE if no usable wake up source is available</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DEVICE_OK if deep sleep occurred, or DEVICE_INVALID_STATE if no usable wake up source is available </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager15cancelDeepSleepEv">
+<span id="_CPPv3N20MicroBitPowerManager15cancelDeepSleepEv"></span><span id="_CPPv2N20MicroBitPowerManager15cancelDeepSleepEv"></span><span id="MicroBitPowerManager::cancelDeepSleep"></span><span class="target" id="classMicroBitPowerManager_1abc552ef5b7acfb92f0cd5a8aeeeb66b4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cancelDeepSleep</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager15cancelDeepSleepEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>For library use. Cancel previosly requested deep sleep.</p>
+<p>Cancel previously requested deep sleep </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager7versionE">
+<span id="_CPPv3N20MicroBitPowerManager7versionE"></span><span id="_CPPv2N20MicroBitPowerManager7versionE"></span><span id="MicroBitPowerManager::version__MicroBitVersion"></span><span class="target" id="classMicroBitPowerManager_1a65ac5e7315b59f959299c3e2c95a0a7e"></span><a class="reference internal" href="structMicroBitVersion.html#_CPPv415MicroBitVersion" title="MicroBitVersion"><span class="n"><span class="pre">MicroBitVersion</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">version</span></span></span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager7versionE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager11powerSourceE">
+<span id="_CPPv3N20MicroBitPowerManager11powerSourceE"></span><span id="_CPPv2N20MicroBitPowerManager11powerSourceE"></span><span id="MicroBitPowerManager::powerSource__MicroBitPowerSource"></span><span class="target" id="classMicroBitPowerManager_1a3a2077f6a4b63b2e3e960be9b31e97a1"></span><a class="reference internal" href="enum_MicroBitPowerManager_8h_1ab642d86f18cce01a396ef3adb855f8ef.html#_CPPv419MicroBitPowerSource" title="MicroBitPowerSource"><span class="n"><span class="pre">MicroBitPowerSource</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">powerSource</span></span></span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager11powerSourceE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager9powerDataE">
+<span id="_CPPv3N20MicroBitPowerManager9powerDataE"></span><span id="_CPPv2N20MicroBitPowerManager9powerDataE"></span><span id="MicroBitPowerManager::powerData__MicroBitPowerData"></span><span class="target" id="classMicroBitPowerManager_1ab5836752f3aba4d635a26f68b3a8602f"></span><a class="reference internal" href="structMicroBitPowerData.html#_CPPv417MicroBitPowerData" title="MicroBitPowerData"><span class="n"><span class="pre">MicroBitPowerData</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">powerData</span></span></span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager9powerDataE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager9usbStatusE">
+<span id="_CPPv3N20MicroBitPowerManager9usbStatusE"></span><span id="_CPPv2N20MicroBitPowerManager9usbStatusE"></span><span id="MicroBitPowerManager::usbStatus__MicroBitUSBStatus"></span><span class="target" id="classMicroBitPowerManager_1ab5d573921264084d35b06de645493032"></span><a class="reference internal" href="enum_MicroBitPowerManager_8h_1a22d7244e6b7b64e37dfca42227952e1a.html#_CPPv417MicroBitUSBStatus" title="MicroBitUSBStatus"><span class="n"><span class="pre">MicroBitUSBStatus</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">usbStatus</span></span></span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager9usbStatusE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager6i2cBusE">
+<span id="_CPPv3N20MicroBitPowerManager6i2cBusE"></span><span id="_CPPv2N20MicroBitPowerManager6i2cBusE"></span><span id="MicroBitPowerManager::i2cBus__MicroBitI2CR"></span><span class="target" id="classMicroBitPowerManager_1a6e96c7b526767090570b0115eb02066e"></span><span class="n"><span class="pre">MicroBitI2C</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">i2cBus</span></span></span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager6i2cBusE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager2ioE">
+<span id="_CPPv3N20MicroBitPowerManager2ioE"></span><span id="_CPPv2N20MicroBitPowerManager2ioE"></span><span id="MicroBitPowerManager::io__MicroBitIOR"></span><span class="target" id="classMicroBitPowerManager_1afa333057057de4a58ecc000a707df8a7"></span><span class="n"><span class="pre">MicroBitIO</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">io</span></span></span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager2ioE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N20MicroBitPowerManager8sysTimerE">
+<span id="_CPPv3N20MicroBitPowerManager8sysTimerE"></span><span id="_CPPv2N20MicroBitPowerManager8sysTimerE"></span><span id="MicroBitPowerManager::sysTimer__NRFLowLevelTimerP"></span><span class="target" id="classMicroBitPowerManager_1ae3a0759b7cb949715f2e3edd91c49269"></span><span class="n"><span class="pre">NRFLowLevelTimer</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">sysTimer</span></span></span><a class="headerlink" href="#_CPPv4N20MicroBitPowerManager8sysTimerE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

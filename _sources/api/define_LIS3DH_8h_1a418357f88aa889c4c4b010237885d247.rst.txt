@@ -1,0 +1,14 @@
+.. _exhale_define_LIS3DH_8h_1a418357f88aa889c4c4b010237885d247:
+
+Define LIS3DH_OUT_Y_L
+=====================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LIS3DH.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LIS3DH_OUT_Y_L
+   :project: CODAL

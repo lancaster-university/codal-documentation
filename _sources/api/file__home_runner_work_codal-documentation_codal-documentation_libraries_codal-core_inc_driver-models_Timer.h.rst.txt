@@ -1,0 +1,150 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Timer.h:
+
+File Timer.h
+============
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/driver-models``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/driver-models/Timer.h``)
+-------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Timer.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``CodalConfig.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h`)
+
+- ``ErrorNo.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_ErrorNo.h`)
+
+- ``LowLevelTimer.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_LowLevelTimer.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_Ticker.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_Timeout.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitThermometer.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_NRF52FlashManager.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LEDMatrix.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_codal_default_target_hal.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalComponent.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalFiber.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_AbstractButton.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Sensor.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Timer.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_Button.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_PulseIn.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_TouchButton.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_TouchSensor.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_LevelDetector.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_LevelDetectorSPL.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_types_Event.cpp`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_codal`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structcodal_1_1TimerEvent`
+
+- :ref:`exhale_class_classcodal_1_1Timer`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespacecodal_1ac8c68a8dfac1d80d3e1396a1684096a4`
+
+- :ref:`exhale_function_namespacecodal_1a283b1acc09d84dd3cdd65da64958b53e`
+
+- :ref:`exhale_function_namespacecodal_1a77ccb660b955d82e8ae448baa5de79e5`
+
+- :ref:`exhale_function_namespacecodal_1a8aa3bf65c48895c41d740f859f26c551`
+
+- :ref:`exhale_function_namespacecodal_1adc93f1c602d188647b9d1f82d4736fcd`
+
+- :ref:`exhale_function_namespacecodal_1a5b7eb8b8c6bd50d6625c209ce2c3eb8f`
+
+- :ref:`exhale_function_namespacecodal_1a4471bff0f6d2cc966838241e17c5494a`
+
+- :ref:`exhale_function_namespacecodal_1aae7936b004fca58e2d19c8e0e2eb0796`
+
+- :ref:`exhale_function_namespacecodal_1acd36098ffffc1acea0c8786d8eb3932f`
+
+- :ref:`exhale_function_namespacecodal_1a6134d71b88b2bd441edfadf7cf51feb4`
+
+- :ref:`exhale_function_namespacecodal_1ab3dea2a097889c1e75ba49e98ab20cdd`
+
+- :ref:`exhale_function_namespacecodal_1ad297c0ba6f9b80534a29cf24575146eb`
+
+- :ref:`exhale_function_namespacecodal_1a5cb0d270c533332854ee030e2efd28fc`
+
+- :ref:`exhale_function_namespacecodal_1a5a6563076bc3f635e49e2a4b34e30dc6`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_Timer_8h_1ac8ef563422e909a2575c0b43a886789f`
+
+- :ref:`exhale_define_Timer_8h_1a522bfa00e976f0dfac285ac342a5b338`
+
+- :ref:`exhale_define_Timer_8h_1afb77b2211e8c76d72fa1cd74a2f079f2`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_namespacecodal_1a31dd81fe866b637aec4df0095428f024`
+

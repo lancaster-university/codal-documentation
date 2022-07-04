@@ -1,0 +1,523 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>File ST7735.cpp &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL Documentation
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../getting-started.html">
+   Getting Started with CODAL
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../components/index.html">
+   Components
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/display.html">
+     Display
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/mic-and-speaker.html">
+     Microphone and Speaker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/edge-connector.html">
+     Edge Connector
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/sensors.html">
+     Sensors
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/codal-projects.html">
+     CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../codal-api.html">
+   The Complete CODAL API
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-st7735-cpp">
+   Definition (
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     /home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/source/drivers/ST7735.cpp
+    </span>
+   </code>
+   )
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#includes">
+   Includes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#namespaces">
+   Namespaces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classes">
+   Classes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defines">
+   Defines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables">
+   Variables
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>File ST7735.cpp</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-st7735-cpp">
+   Definition (
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     /home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/source/drivers/ST7735.cpp
+    </span>
+   </code>
+   )
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#includes">
+   Includes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#namespaces">
+   Namespaces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classes">
+   Classes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defines">
+   Defines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables">
+   Variables
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="file-st7735-cpp">
+<span id="file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-st7735-cpp"></span><h1>File ST7735.cpp<a class="headerlink" href="#file-st7735-cpp" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers.html#dir-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/source/drivers</span></code>)</p>
+<div class="contents local topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-st7735-cpp" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/source/drivers/ST7735.cpp</span></code>)</a></p></li>
+<li><p><a class="reference internal" href="#includes" id="id2">Includes</a></p></li>
+<li><p><a class="reference internal" href="#namespaces" id="id3">Namespaces</a></p></li>
+<li><p><a class="reference internal" href="#classes" id="id4">Classes</a></p></li>
+<li><p><a class="reference internal" href="#defines" id="id5">Defines</a></p></li>
+<li><p><a class="reference internal" href="#variables" id="id6">Variables</a></p></li>
+</ul>
+</div>
+<section id="definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-st7735-cpp">
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/source/drivers/ST7735.cpp</span></code>)<a class="headerlink" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-st7735-cpp" title="Permalink to this headline">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_ST7735.cpp.html">Program Listing for File ST7735.cpp</a></li>
+</ul>
+</div>
+</section>
+<section id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CodalDmesg.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalDmesg.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-codaldmesg-h"><span class="std std-ref">File CodalDmesg.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CodalFiber.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalFiber.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-codalfiber-h"><span class="std std-ref">File CodalFiber.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ST7735.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_ST7735.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-drivers-st7735-h"><span class="std std-ref">File ST7735.h</span></a>)</p></li>
+</ul>
+</section>
+<section id="namespaces">
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="namespace_codal.html#namespace-codal"><span class="std std-ref">Namespace codal</span></a></p></li>
+</ul>
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="structcodal_1_1ST7735WorkBuffer.html#exhale-struct-structcodal-1-1st7735workbuffer"><span class="std std-ref">Struct ST7735WorkBuffer</span></a></p></li>
+</ul>
+</section>
+<section id="defines">
+<h2>Defines<a class="headerlink" href="#defines" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a3153a272f18d0f805028fce7e4337b53.html#exhale-define-st7735-8cpp-1a3153a272f18d0f805028fce7e4337b53"><span class="std std-ref">Define assert</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1aa0981e1f4a19f848f0bb2ba8a1909c8d.html#exhale-define-st7735-8cpp-1aa0981e1f4a19f848f0bb2ba8a1909c8d"><span class="std std-ref">Define DATABUFSIZE</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a62249e384b997229a3e2ae74ade334e2.html#exhale-define-st7735-8cpp-1a62249e384b997229a3e2ae74ade334e2"><span class="std std-ref">Define DELAY</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a18838093de54eca56aa97ead2a587280.html#exhale-define-st7735-8cpp-1a18838093de54eca56aa97ead2a587280"><span class="std std-ref">Define ENC16</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a659f0d6f0c258a3d91f882a59dfa76f5.html#exhale-define-st7735-8cpp-1a659f0d6f0c258a3d91f882a59dfa76f5"><span class="std std-ref">Define MADCTL_BGR</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a6f8b9fad1b5db52b70960b389056f0dd.html#exhale-define-st7735-8cpp-1a6f8b9fad1b5db52b70960b389056f0dd"><span class="std std-ref">Define MADCTL_MH</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a9ecee6d3131d3b4f750b94d5766b998a.html#exhale-define-st7735-8cpp-1a9ecee6d3131d3b4f750b94d5766b998a"><span class="std std-ref">Define MADCTL_ML</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1adc23a239d2b6976d53254ef4fc5d1713.html#exhale-define-st7735-8cpp-1adc23a239d2b6976d53254ef4fc5d1713"><span class="std std-ref">Define MADCTL_MV</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a6d18ed48efb3186877a07d0e81155453.html#exhale-define-st7735-8cpp-1a6d18ed48efb3186877a07d0e81155453"><span class="std std-ref">Define MADCTL_MX</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1ab30e6bd24448245df1d60a3e1c4ddbdf.html#exhale-define-st7735-8cpp-1ab30e6bd24448245df1d60a3e1c4ddbdf"><span class="std std-ref">Define MADCTL_MY</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1acc1e55b52f8a56b7719ab147308a1668.html#exhale-define-st7735-8cpp-1acc1e55b52f8a56b7719ab147308a1668"><span class="std std-ref">Define MADCTL_RGB</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a484d38defdf6303f4a8d19f994d0593d.html#exhale-define-st7735-8cpp-1a484d38defdf6303f4a8d19f994d0593d"><span class="std std-ref">Define ST7735_CASET</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a9caf06c78cdaba66cea553668103b759.html#exhale-define-st7735-8cpp-1a9caf06c78cdaba66cea553668103b759"><span class="std std-ref">Define ST7735_COLMOD</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a1f9701dd8594cc2fb7c6f783b05d2f65.html#exhale-define-st7735-8cpp-1a1f9701dd8594cc2fb7c6f783b05d2f65"><span class="std std-ref">Define ST7735_DISPOFF</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a1afa532348b3d081b7b1ecdfa9ba17e0.html#exhale-define-st7735-8cpp-1a1afa532348b3d081b7b1ecdfa9ba17e0"><span class="std std-ref">Define ST7735_DISPON</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1ace47a845775310352dc7e2fae3e1586a.html#exhale-define-st7735-8cpp-1ace47a845775310352dc7e2fae3e1586a"><span class="std std-ref">Define ST7735_DISSET5</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1aeb5c49fcdd239ab153f5d9b15304ca9c.html#exhale-define-st7735-8cpp-1aeb5c49fcdd239ab153f5d9b15304ca9c"><span class="std std-ref">Define ST7735_FRMCTR1</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a3b416f231bb6eedec8cfcf277c6d36d3.html#exhale-define-st7735-8cpp-1a3b416f231bb6eedec8cfcf277c6d36d3"><span class="std std-ref">Define ST7735_FRMCTR2</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a4afe2b326d709aaeb70c657f8210ea2b.html#exhale-define-st7735-8cpp-1a4afe2b326d709aaeb70c657f8210ea2b"><span class="std std-ref">Define ST7735_FRMCTR3</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1aad3c0783af31cd4c4e33bf8748e961fa.html#exhale-define-st7735-8cpp-1aad3c0783af31cd4c4e33bf8748e961fa"><span class="std std-ref">Define ST7735_GMCTRN1</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1ad90bd9bbed9c95192a2b44b8f63f86e5.html#exhale-define-st7735-8cpp-1ad90bd9bbed9c95192a2b44b8f63f86e5"><span class="std std-ref">Define ST7735_GMCTRP1</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1addfb44b70c2b60a0d04e3d22611d54ee.html#exhale-define-st7735-8cpp-1addfb44b70c2b60a0d04e3d22611d54ee"><span class="std std-ref">Define ST7735_INVCTR</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1ad66cc531ec897ce0465ff21d152b756a.html#exhale-define-st7735-8cpp-1ad66cc531ec897ce0465ff21d152b756a"><span class="std std-ref">Define ST7735_INVOFF</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1ae670a3d34e887559366735ca999e80d3.html#exhale-define-st7735-8cpp-1ae670a3d34e887559366735ca999e80d3"><span class="std std-ref">Define ST7735_INVON</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a74afa388731002f70e250770901f90a2.html#exhale-define-st7735-8cpp-1a74afa388731002f70e250770901f90a2"><span class="std std-ref">Define ST7735_MADCTL</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a1b574de2db49ecfa63ce0216112903cc.html#exhale-define-st7735-8cpp-1a1b574de2db49ecfa63ce0216112903cc"><span class="std std-ref">Define ST7735_NOP</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a9e059398ac81ef081169997c28f908cb.html#exhale-define-st7735-8cpp-1a9e059398ac81ef081169997c28f908cb"><span class="std std-ref">Define ST7735_NORON</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a057611dfe567fd9095f27d40087e4948.html#exhale-define-st7735-8cpp-1a057611dfe567fd9095f27d40087e4948"><span class="std std-ref">Define ST7735_PTLAR</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1aac679645f819d98761965299f19620f6.html#exhale-define-st7735-8cpp-1aac679645f819d98761965299f19620f6"><span class="std std-ref">Define ST7735_PTLON</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1ab4294b48d705690347bf0fed4af82697.html#exhale-define-st7735-8cpp-1ab4294b48d705690347bf0fed4af82697"><span class="std std-ref">Define ST7735_PWCTR1</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1aef4c5d9e00b07b6fc601f8ad2dbbb101.html#exhale-define-st7735-8cpp-1aef4c5d9e00b07b6fc601f8ad2dbbb101"><span class="std std-ref">Define ST7735_PWCTR2</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1ac69d092c9c2693807a2a992dbf297f24.html#exhale-define-st7735-8cpp-1ac69d092c9c2693807a2a992dbf297f24"><span class="std std-ref">Define ST7735_PWCTR3</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a95b55308b48e83b1a3e2cf51393030f1.html#exhale-define-st7735-8cpp-1a95b55308b48e83b1a3e2cf51393030f1"><span class="std std-ref">Define ST7735_PWCTR4</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a91cc0e141903ca80ad7fc6f108988184.html#exhale-define-st7735-8cpp-1a91cc0e141903ca80ad7fc6f108988184"><span class="std std-ref">Define ST7735_PWCTR5</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a13453718ec9240ae7966d0d8995d0c8a.html#exhale-define-st7735-8cpp-1a13453718ec9240ae7966d0d8995d0c8a"><span class="std std-ref">Define ST7735_PWCTR6</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a5cbfe14163815f14aea1a4a89ea2fffc.html#exhale-define-st7735-8cpp-1a5cbfe14163815f14aea1a4a89ea2fffc"><span class="std std-ref">Define ST7735_RAMRD</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1aa9a60c99890ac51b71eb799b68d5c6d5.html#exhale-define-st7735-8cpp-1aa9a60c99890ac51b71eb799b68d5c6d5"><span class="std std-ref">Define ST7735_RAMWR</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1ae879d0b7f5639d5ecd3d265d9971c979.html#exhale-define-st7735-8cpp-1ae879d0b7f5639d5ecd3d265d9971c979"><span class="std std-ref">Define ST7735_RASET</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1aec4c29f7c63a6c6f168764b2bcec50cf.html#exhale-define-st7735-8cpp-1aec4c29f7c63a6c6f168764b2bcec50cf"><span class="std std-ref">Define ST7735_RDDID</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1acb42f35cd7e667ba514f8b6022d0dac5.html#exhale-define-st7735-8cpp-1acb42f35cd7e667ba514f8b6022d0dac5"><span class="std std-ref">Define ST7735_RDDST</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a904eaad54b53eec42bec05f81baee26f.html#exhale-define-st7735-8cpp-1a904eaad54b53eec42bec05f81baee26f"><span class="std std-ref">Define ST7735_RDID1</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1aef8a3757b39dd1bf1d79920be09511ae.html#exhale-define-st7735-8cpp-1aef8a3757b39dd1bf1d79920be09511ae"><span class="std std-ref">Define ST7735_RDID2</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a8a827d3b90198c117f3d744cc4201c68.html#exhale-define-st7735-8cpp-1a8a827d3b90198c117f3d744cc4201c68"><span class="std std-ref">Define ST7735_RDID3</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a1ca62118c4ce1ed1d288c6958004188e.html#exhale-define-st7735-8cpp-1a1ca62118c4ce1ed1d288c6958004188e"><span class="std std-ref">Define ST7735_RDID4</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a5656049de5d79e5a77260b69042179af.html#exhale-define-st7735-8cpp-1a5656049de5d79e5a77260b69042179af"><span class="std std-ref">Define ST7735_SLPIN</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1aa061cfc0b8f0fea3e70b59d72f6e1caa.html#exhale-define-st7735-8cpp-1aa061cfc0b8f0fea3e70b59d72f6e1caa"><span class="std std-ref">Define ST7735_SLPOUT</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1a2816f2fce9a937ced8567b2c2797767b.html#exhale-define-st7735-8cpp-1a2816f2fce9a937ced8567b2c2797767b"><span class="std std-ref">Define ST7735_SWRESET</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1aa4d4dfc0e9e5b75add3eb42fd7987c29.html#exhale-define-st7735-8cpp-1aa4d4dfc0e9e5b75add3eb42fd7987c29"><span class="std std-ref">Define ST7735_VMCTR1</span></a></p></li>
+<li><p><a class="reference internal" href="define_ST7735_8cpp_1aac9b57651bcead0a7564efe6460e5310.html#exhale-define-st7735-8cpp-1aac9b57651bcead0a7564efe6460e5310"><span class="std std-ref">Define SWAP</span></a></p></li>
+</ul>
+</section>
+<section id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="variable_namespacecodal_1a8548039b21f185e3e3bbe4e4a365a26e.html#exhale-variable-namespacecodal-1a8548039b21f185e3e3bbe4e4a365a26e"><span class="std std-ref">Variable codal::initCmds</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

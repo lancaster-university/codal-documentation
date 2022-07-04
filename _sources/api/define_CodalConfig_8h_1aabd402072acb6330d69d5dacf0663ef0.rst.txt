@@ -1,0 +1,14 @@
+.. _exhale_define_CodalConfig_8h_1aabd402072acb6330d69d5dacf0663ef0:
+
+Define CODAL_DEBUG_DISABLED
+===========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CODAL_DEBUG_DISABLED
+   :project: CODAL

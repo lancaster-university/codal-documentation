@@ -1,0 +1,14 @@
+.. _exhale_define_group__Group__USBClassMSCommon_1ga3d1092dd645b9965211dd74531b386eb:
+
+Define SCSI_ASENSE_MEDIUM_NOT_PRESENT
+=====================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USBMassStorageClass.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SCSI_ASENSE_MEDIUM_NOT_PRESENT
+   :project: CODAL

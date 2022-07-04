@@ -1,0 +1,14 @@
+.. _exhale_define_NRF52LedMatrix_8h_1ade7ff98a74cc1b54ee465117f7edc549:
+
+Define NRF52_LEDMATRIX_STATUS_RESET
+===================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_NRF52LedMatrix.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: NRF52_LEDMATRIX_STATUS_RESET
+   :project: CODAL

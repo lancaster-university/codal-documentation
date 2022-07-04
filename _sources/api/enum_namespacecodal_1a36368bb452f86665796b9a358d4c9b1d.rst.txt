@@ -1,0 +1,14 @@
+.. _exhale_enum_namespacecodal_1a36368bb452f86665796b9a358d4c9b1d:
+
+Enum SerialMode
+===============
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Serial.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: codal::SerialMode
+   :project: CODAL

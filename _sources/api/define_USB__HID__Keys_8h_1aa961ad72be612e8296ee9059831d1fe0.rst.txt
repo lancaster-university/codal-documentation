@@ -1,0 +1,14 @@
+.. _exhale_define_USB__HID__Keys_8h_1aa961ad72be612e8296ee9059831d1fe0:
+
+Define KEY_KPCOMMA
+==================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USB_HID_Keys.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: KEY_KPCOMMA
+   :project: CODAL

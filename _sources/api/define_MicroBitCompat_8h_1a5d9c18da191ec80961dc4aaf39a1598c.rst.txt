@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitCompat_8h_1a5d9c18da191ec80961dc4aaf39a1598c:
+
+Define MICROBIT_SRAM_END
+========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_SRAM_END
+   :project: CODAL

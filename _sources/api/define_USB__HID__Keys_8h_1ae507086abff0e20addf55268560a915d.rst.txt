@@ -1,0 +1,14 @@
+.. _exhale_define_USB__HID__Keys_8h_1ae507086abff0e20addf55268560a915d:
+
+Define KEY_MEDIA_MUTE
+=====================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USB_HID_Keys.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: KEY_MEDIA_MUTE
+   :project: CODAL

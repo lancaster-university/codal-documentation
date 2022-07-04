@@ -1,0 +1,223 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitConfig.h:
+
+File MicroBitConfig.h
+=====================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/MicroBitConfig.h``)
+---------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitConfig.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``CodalConfig.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h`)
+
+- ``MicroBitCompat.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`)
+
+- ``yotta_cfg_mappings.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_yotta_cfg_mappings.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitAccelerometerService.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitBLEManager.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitBLETypes.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitButtonService.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitEddystone.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitEventService.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitIOPinService.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitLEDService.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitMagnetometerService.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitPartialFlashingService.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitTemperatureService.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitUARTService.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitBLEChar.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitBLEService.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitBLEServices.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitCompass.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitDevice.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitFile.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitFileSystem.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitUSBFlashManager.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitPowerManager.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitMemoryMap.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitAccelerometerService.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLEChar.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLEManager.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLEService.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLEServices.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLETypes.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitButtonService.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitEddystone.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitEventService.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitIOPinService.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitLEDService.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitMagnetometerService.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitPartialFlashingService.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitTemperatureService.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitUARTService.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitCompassCalibrator.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitDevice.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitFileSystem.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitFlash.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitMemoryMap.cpp`
+
+
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_MicroBitConfig_8h_1aa74ff327dced52df9e3698e8c433837d`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1a7c6f6f710cccd88b057569f60c219aed`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1ac715f59afd3d9a145556a5df9441f2d0`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1af583a74c5573eb666253ca530c68d134`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1a2cab3ad099802d14d355f85bc7b573de`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1a589bf657a12cd5fef241d161d55e9c6e`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1a5540377ea1f6c884db1aa2304948e3f3`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1ab03ee0ddc526579de09abf10a7afe0e5`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1adaf6d0b06ca86fd460aa2cb0b335c431`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1ad9407828bca57ae66fb89121574271fb`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1a5ad0608501c590372d51c5c9cbf925fa`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1add77506dec7c6181d4c047885da3dbbd`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1a3a3bf48b18b247a9e02fde6cd2eea215`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1a79daefefcb6f006835ff7882244db04d`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1ac39fa260a15bb37791081abba1350858`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1ac16e33e0588394eb986b591644e4c4ed`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1adadbd01089bab51dd7b0f6b9675d1d97`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1a9e6d9cd20027b63b675830bede1bd8f1`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1a0c4d4c50b67fc029fc54cc5e6f43a1ff`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1a5fa10a6c596d3123116da67d41e53f8b`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1ae4106a8ab22fd4376066461219904104`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1a3bc2b92c9a71931b3c58c2636117a8fc`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1a00e93afabd32d1089a20628d90a55e60`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1afec4d4a46009b7fe7a3278629748a768`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1af02497cdfd4de499ba6b29a4574b92bd`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1ace6ba10f811e12bcb6b3e0401ee4d08e`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1a71d7405c9a6be48af65d7d2ce60f83a3`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1ab30d29dde96e45546e23c0936ba44230`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1a79434d13a3fd9c98f159e4ae79fa1cd4`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1a716c949ec6f607cc0e998ccb3559a7c6`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1afffda646af2188945a98cdaf46ff967d`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1a04c19f1af4cf56933d443de514f3bbad`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1aafac8e20f4677a0f272493fb3ac33cbb`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1a8882f012c1650d16732ffd9a1f1b95ba`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1a6c0129ce2da64b792d24fbdc35492ad4`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1afc7d47da54875a57a11a9a39a8c7866c`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1a6043e686582c4ee81d024c17ad9725dd`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1aa0ee0fb2d2539c03a6dce6e75401bb71`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1a7d467c1d283fdfa1f2081ba1e0d01b6e`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_MicroBitConfig_8h_1af2f1997dcd84754aa02b42f6da78f39e`
+
+- :ref:`exhale_variable_MicroBitConfig_8h_1ac7d0638cc79e0eeb9410c61bd54fffec`
+
+- :ref:`exhale_variable_MicroBitConfig_8h_1ab13985c98bd6014b0c7a08d27d43ed59`
+

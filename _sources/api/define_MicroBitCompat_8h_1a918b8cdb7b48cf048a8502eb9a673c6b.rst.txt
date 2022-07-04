@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitCompat_8h_1a918b8cdb7b48cf048a8502eb9a673c6b:
+
+Define MICROBIT_COMPASS_EVT_CAL_START
+=====================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_COMPASS_EVT_CAL_START
+   :project: CODAL

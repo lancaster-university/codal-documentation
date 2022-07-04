@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitUSBFlashManager_8h_1a10a99b58edb935e6a4ee8be6abbbbcd4:
+
+Define MICROBIT_USB_FLASH_FILENAME_CMD
+======================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitUSBFlashManager.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_USB_FLASH_FILENAME_CMD
+   :project: CODAL

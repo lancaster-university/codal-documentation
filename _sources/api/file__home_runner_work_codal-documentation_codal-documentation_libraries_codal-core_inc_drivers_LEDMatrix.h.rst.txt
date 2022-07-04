@@ -1,0 +1,105 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LEDMatrix.h:
+
+File LEDMatrix.h
+================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/drivers``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/drivers/LEDMatrix.h``)
+-----------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LEDMatrix.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``CodalComponent.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalComponent.h`)
+
+- ``CodalConfig.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h`)
+
+- ``Display.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_AnimatedDisplay.h`)
+
+- ``Image.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_Image.h`)
+
+- ``ManagedString.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_ManagedString.h`)
+
+- ``Pin.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Pin.h`)
+
+- ``Timer.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_LowLevelTimer.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_NRF52LedMatrix.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_LEDMatrix.cpp`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_codal`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structcodal_1_1MatrixMap`
+
+- :ref:`exhale_struct_structcodal_1_1MatrixPoint`
+
+- :ref:`exhale_class_classcodal_1_1LEDMatrix`
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_namespacecodal_1a866bcc6be70641f502a56364295fe0a9`
+
+- :ref:`exhale_enum_namespacecodal_1a3fb7609391e97d57988252a4e94a341e`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_LEDMatrix_8h_1a5c250981f3c0cd8b54ece9192c279f2a`
+
+- :ref:`exhale_define_LEDMatrix_8h_1a05f495c8b94a4c422dda717ecfb73967`
+
+- :ref:`exhale_define_LEDMatrix_8h_1aafd53d47f99e00ae40f5a694de4b7dbc`
+
+- :ref:`exhale_define_LEDMatrix_8h_1a034e7af1db9eaa0c1a5edf1e1b9da732`
+
+- :ref:`exhale_define_LEDMatrix_8h_1ae4a211e7767a346d2203fc308b0173e8`
+
+- :ref:`exhale_define_LEDMatrix_8h_1a32529e60b3104bd6db2dbd8c7943955c`
+
+- :ref:`exhale_define_LEDMatrix_8h_1ac61e294b8103818568416c839fe92384`
+

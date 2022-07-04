@@ -1,0 +1,14 @@
+.. _exhale_define_StreamRecording_8h_1a5a31c106d1066c986b553492fe24406c:
+
+Define REC_STATE_STOPPED
+========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_StreamRecording.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: REC_STATE_STOPPED
+   :project: CODAL

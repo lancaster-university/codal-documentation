@@ -1,0 +1,1049 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Program Listing for File MicroBitPowerManager.cpp &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL Documentation
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../getting-started.html">
+   Getting Started with CODAL
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../components/index.html">
+   Components
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/display.html">
+     Display
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/mic-and-speaker.html">
+     Microphone and Speaker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/edge-connector.html">
+     Edge Connector
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/sensors.html">
+     Sensors
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/codal-projects.html">
+     CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../codal-api.html">
+   The Complete CODAL API
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Program Listing for File MicroBitPowerManager.cpp</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="program-listing-for-file-microbitpowermanager-cpp">
+<span id="program-listing-file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-microbitpowermanager-cpp"></span><h1>Program Listing for File MicroBitPowerManager.cpp<a class="headerlink" href="#program-listing-for-file-microbitpowermanager-cpp" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitPowerManager.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-microbitpowermanager-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/source/MicroBitPowerManager.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm">The MIT License (MIT)</span>
+
+<span class="cm">Copyright (c) 2017 Lancaster University.</span>
+
+<span class="cm">Permission is hereby granted, free of charge, to any person obtaining a</span>
+<span class="cm">copy of this software and associated documentation files (the &quot;Software&quot;),</span>
+<span class="cm">to deal in the Software without restriction, including without limitation</span>
+<span class="cm">the rights to use, copy, modify, merge, publish, distribute, sublicense,</span>
+<span class="cm">and/or sell copies of the Software, and to permit persons to whom the</span>
+<span class="cm">Software is furnished to do so, subject to the following conditions:</span>
+
+<span class="cm">The above copyright notice and this permission notice shall be included in</span>
+<span class="cm">all copies or substantial portions of the Software.</span>
+
+<span class="cm">THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<span class="cm">IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
+<span class="cm">FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL</span>
+<span class="cm">THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span>
+<span class="cm">LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING</span>
+<span class="cm">FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER</span>
+<span class="cm">DEALINGS IN THE SOFTWARE.</span>
+<span class="cm">*/</span><span class="w"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MicroBitPowerManager.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MicroBit.h&quot;</span><span class="cp"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">UIPM_I2C_NOP</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+
+<span class="c1">// Developer note - if any of these get longer than 8 bytes of payload, MICROBIT_UIPM_MAX_BUFFER_SIZE will also have to be updated</span>
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">KeyValueTableEntry</span><span class="w"> </span><span class="n">uipmPropertyLengthData</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="n">MICROBIT_UIPM_PROPERTY_BOARD_REVISION</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="n">MICROBIT_UIPM_PROPERTY_I2C_VERSION</span><span class="p">,</span><span class="mi">2</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="n">MICROBIT_UIPM_PROPERTY_DAPLINK_VERSION</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="n">MICROBIT_UIPM_PROPERTY_POWER_SOURCE</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="n">MICROBIT_UIPM_PROPERTY_POWER_CONSUMPTION</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="n">MICROBIT_UIPM_PROPERTY_USB_STATE</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="n">MICROBIT_UIPM_PROPERTY_KL27_POWER_MODE</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="n">MICROBIT_UIPM_PROPERTY_KL27_POWER_LED_STATE</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+<span class="n">CREATE_KEY_VALUE_TABLE</span><span class="p">(</span><span class="n">uipmPropertyLengths</span><span class="p">,</span><span class="w"> </span><span class="n">uipmPropertyLengthData</span><span class="p">);</span><span class="w"></span>
+
+<span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">MicroBitPowerManager</span><span class="p">(</span><span class="n">MicroBitI2C</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i2c</span><span class="p">,</span><span class="w"> </span><span class="n">MicroBitIO</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ioPins</span><span class="p">,</span><span class="w"> </span><span class="n">NRFLowLevelTimer</span><span class="w"> </span><span class="o">&amp;</span><span class="n">systemTimer</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">i2cBus</span><span class="p">(</span><span class="n">i2c</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">io</span><span class="p">(</span><span class="n">ioPins</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">sysTimer</span><span class="p">(</span><span class="o">&amp;</span><span class="n">systemTimer</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">powerDownDisableCount</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">powerUpTime</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">eventValue</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">memset</span><span class="p">(</span><span class="w"> </span><span class="o">&amp;</span><span class="n">powerData</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">powerData</span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Indicate we&#39;d like to receive periodic callbacks both in idle and interrupt context.</span>
+<span class="w">    </span><span class="c1">// Also, be pessimistic about the interface chip in use, until we obtain version information.</span>
+<span class="w">    </span><span class="n">status</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="p">(</span><span class="n">DEVICE_COMPONENT_STATUS_IDLE_TICK</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">MICROBIT_USB_INTERFACE_ALWAYS_NOP</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">MicroBitPowerSource</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">getPowerSource</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readProperty</span><span class="p">(</span><span class="n">MICROBIT_UIPM_PROPERTY_POWER_SOURCE</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">powerSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">MicroBitPowerSource</span><span class="p">)</span><span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">powerSource</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">MicroBitVersion</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">getVersion</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MICROBIT_USB_INTERFACE_VERSION_LOADED</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Read Board Revision ID</span>
+<span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readProperty</span><span class="p">(</span><span class="n">MICROBIT_UIPM_PROPERTY_BOARD_REVISION</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">version</span><span class="p">.</span><span class="n">board</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Read I2C protocol version</span>
+<span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readProperty</span><span class="p">(</span><span class="n">MICROBIT_UIPM_PROPERTY_I2C_VERSION</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">version</span><span class="p">.</span><span class="n">i2c</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">version</span><span class="p">.</span><span class="n">i2c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="n">status</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">MICROBIT_USB_INTERFACE_BUSY_FLAG_SUPPORTED</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Read DAPLink version</span>
+<span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readProperty</span><span class="p">(</span><span class="n">MICROBIT_UIPM_PROPERTY_DAPLINK_VERSION</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">version</span><span class="p">.</span><span class="n">daplink</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Version data in non-volatile, so cache it for later.</span>
+<span class="w">        </span><span class="n">status</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">MICROBIT_USB_INTERFACE_VERSION_LOADED</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Optimise our behaviour for the version of interface chip in use.</span>
+<span class="w">        </span><span class="k">switch</span><span class="p">(</span><span class="n">version</span><span class="p">.</span><span class="n">board</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// V2.00 KL27</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">39172</span><span class="p">:</span><span class="w"></span>
+<span class="w">                </span><span class="n">status</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">MICROBIT_USB_INTERFACE_ALWAYS_NOP</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">default</span><span class="o">:</span><span class="w"></span>
+<span class="w">                </span><span class="n">status</span><span class="w"> </span><span class="o">&amp;=</span><span class="w"> </span><span class="o">~</span><span class="n">MICROBIT_USB_INTERFACE_ALWAYS_NOP</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">version</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">MicroBitUSBStatus</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">getUSBStatus</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readProperty</span><span class="p">(</span><span class="n">MICROBIT_UIPM_PROPERTY_USB_STATE</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">usbStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">MicroBitUSBStatus</span><span class="p">)</span><span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">usbStatus</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">getPowerConsumption</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">getPowerData</span><span class="p">();</span><span class="w"> </span><span class="c1">// Proxy to the new method</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">powerData</span><span class="p">.</span><span class="n">estimatedPowerConsumption</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">MicroBitPowerData</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">getPowerData</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readProperty</span><span class="p">(</span><span class="n">MICROBIT_UIPM_PROPERTY_POWER_CONSUMPTION</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">memcpy</span><span class="p">(</span><span class="w"> </span><span class="o">&amp;</span><span class="n">powerData</span><span class="p">.</span><span class="n">batteryMicroVolts</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">memcpy</span><span class="p">(</span><span class="w"> </span><span class="o">&amp;</span><span class="n">powerData</span><span class="p">.</span><span class="n">vinMicroVolts</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="o">+</span><span class="mi">4</span><span class="p">],</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">powerData</span><span class="p">.</span><span class="n">estimatedPowerConsumption</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">abs</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">powerData</span><span class="p">.</span><span class="n">vinMicroVolts</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">powerData</span><span class="p">.</span><span class="n">batteryMicroVolts</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">powerData</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">nop</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Perform a throw away zero byte write operation to the interface chip if needed.</span>
+<span class="w">    </span><span class="c1">// KL27 based implementations need this to wake from deep sleep.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MICROBIT_USB_INTERFACE_ALWAYS_NOP</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">unused</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">i2cBus</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">MICROBIT_UIPM_I2C_ADDRESS</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">unused</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">sendUIPMPacket</span><span class="p">(</span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">packet</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">nop</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">i2cBus</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">MICROBIT_UIPM_I2C_ADDRESS</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">packet</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">packet</span><span class="p">.</span><span class="n">length</span><span class="p">(),</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">recvUIPMPacket</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">io</span><span class="p">.</span><span class="n">irq1</span><span class="p">.</span><span class="n">isActive</span><span class="p">())</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">b</span><span class="p">(</span><span class="n">MICROBIT_UIPM_MAX_BUFFER_SIZE</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">nop</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i2cBus</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="n">MICROBIT_UIPM_I2C_ADDRESS</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">MICROBIT_UIPM_MAX_BUFFER_SIZE</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MICROBIT_OK</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ManagedBuffer</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">awaitUIPMPacket</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">response</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">attempts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">awaitingPacket</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Wait for a response, signalled (possibly!) by a LOW on the combined irq line</span>
+<span class="w">    </span><span class="c1">// Retry until we get a valid response or we time out.</span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="w"> </span><span class="n">attempts</span><span class="o">++</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MICROBIT_UIPM_MAX_RETRIES</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">target_wait</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Try to read a response from the KL27</span>
+<span class="w">        </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">recvUIPMPacket</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// If we receive an INCOMPLETE response, then the KL27 is still working on our request, so wait a little longer and try again.</span>
+<span class="w">        </span><span class="c1">// Similarly, if the I2C transaction fails, retry.</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="k">continue</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">response</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MICROBIT_UIPM_COMMAND_ERROR_RESPONSE</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// Is the KL27 still busy processing something? If so, reset the retries and go again.</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MICROBIT_USB_INTERFACE_BUSY_FLAG_SUPPORTED</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MICROBIT_USB_INTERFACE_BUSY_FLAG_SUPPORTED</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">response</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MICROBIT_UIPM_BUSY</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">attempts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">continue</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">response</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MICROBIT_UIPM_INCOMPLETE_CMD</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="k">continue</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Sanitize the length of the packet to meet specification and return it.</span>
+<span class="w">        </span><span class="n">response</span><span class="p">.</span><span class="n">truncate</span><span class="p">((</span><span class="n">response</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MICROBIT_UIPM_COMMAND_ERROR_RESPONSE</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">response</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MICROBIT_UIPM_COMMAND_WRITE_RESPONSE</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">uipmPropertyLengths</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="mi">1</span><span class="p">]));</span><span class="w"></span>
+<span class="w">        </span><span class="n">awaitingPacket</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">response</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// If we time out, return a generic write error to the caller</span>
+<span class="w">    </span><span class="n">DMESG</span><span class="p">(</span><span class="s">&quot;UIPM: Await timeout&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">error</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">error</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MICROBIT_UIPM_COMMAND_ERROR_RESPONSE</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">error</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MICROBIT_UIPM_WRITE_FAIL</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">awaitingPacket</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">error</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+
+<span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">writeProperty</span><span class="p">(</span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">ack</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">response</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sendUIPMPacket</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MICROBIT_OK</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">ack</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">awaitUIPMPacket</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">response</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">readProperty</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">property</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">request</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">response</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">request</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MICROBIT_UIPM_COMMAND_READ_REQUEST</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">request</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">property</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sendUIPMPacket</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MICROBIT_OK</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">awaitUIPMPacket</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">response</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">off</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">setPowerLED</span><span class="p">(</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="cm">/*doSleep*/</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Update peripheral drivers</span>
+<span class="w">    </span><span class="n">CodalComponent</span><span class="o">::</span><span class="n">deepSleepAll</span><span class="p">(</span><span class="w"> </span><span class="n">deepSleepCallbackBegin</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Instruct the KL27 interface chip to go into deep sleep.</span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">sleepCommand</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">sleepCommand</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MICROBIT_UIPM_COMMAND_WRITE_REQUEST</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">sleepCommand</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MICROBIT_UIPM_PROPERTY_KL27_POWER_MODE</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">sleepCommand</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">sleepCommand</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MICROBIT_USB_INTERFACE_POWER_MODE_VLLS0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">writeProperty</span><span class="p">(</span><span class="n">sleepCommand</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Wait a little while to ensure all hardware and peripherals have reacted to the change of power mode.</span>
+<span class="w">    </span><span class="n">target_wait</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Configure combined IRQ line to DETECT HI-&gt;LO transitions and reset the NRF52.</span>
+<span class="w">    </span><span class="c1">// When sleeping, this allows us to reset on USB insertion, as raised by the KL27 interface chip.</span>
+<span class="w">    </span><span class="n">io</span><span class="p">.</span><span class="n">irq1</span><span class="p">.</span><span class="n">setDetect</span><span class="p">(</span><span class="n">GPIO_PIN_CNF_SENSE_Low</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Enter System Off state.</span>
+<span class="w">    </span><span class="n">NRF_POWER</span><span class="o">-&gt;</span><span class="n">SYSTEMOFF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">idleCallback</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">activeCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Do nothing if there is a transaction in progress.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MICROBIT_USB_INTERFACE_AWAITING_RESPONSE</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="n">io</span><span class="p">.</span><span class="n">irq1</span><span class="p">.</span><span class="n">isActive</span><span class="p">())</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">activeCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Ensure the line has been held low for a little before services, as other sensors</span>
+<span class="w">    </span><span class="c1">// are much more likley to be the source of the IRQ.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">activeCount</span><span class="o">++</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MICROBIT_USB_INTERFACE_IRQ_THRESHOLD</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// The line has been held active beyond our threshold.</span>
+<span class="w">    </span><span class="c1">// Reset our counter, and see if the USB interface chip has any data ready for us.</span>
+<span class="w">    </span><span class="n">activeCount</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">readInterfaceRequest</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">readInterfaceRequest</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Do nothing if there is a transaction in progress.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MICROBIT_USB_INTERFACE_AWAITING_RESPONSE</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="n">io</span><span class="p">.</span><span class="n">irq1</span><span class="p">.</span><span class="n">isActive</span><span class="p">())</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Determine if the KL27 is trying to indicate an event</span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">response</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">recvUIPMPacket</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// We have a valid frame.</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MICROBIT_UIPM_COMMAND_READ_RESPONSE</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">response</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MICROBIT_UIPM_PROPERTY_KL27_USER_EVENT</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">response</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// The frame is for us - process the event.</span>
+<span class="w">            </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="no">MICROBIT_UIPM_EVENT_WAKE_RESET</span><span class="p">:</span><span class="w"></span>
+<span class="w">                    </span><span class="n">DMESG</span><span class="p">(</span><span class="s">&quot;WAKE FROM RESET BUTTON&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">                    </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="no">MICROBIT_UIPM_EVENT_WAKE_USB_INSERTION</span><span class="p">:</span><span class="w"></span>
+<span class="w">                    </span><span class="n">DMESG</span><span class="p">(</span><span class="s">&quot;WAKE FROM USB&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">                    </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="no">MICROBIT_UIPM_EVENT_RESET_LONG_PRESS</span><span class="p">:</span><span class="w"></span>
+<span class="w">                    </span><span class="n">DMESG</span><span class="p">(</span><span class="s">&quot;LONG RESET BUTTON PRESS&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">                    </span><span class="n">off</span><span class="p">();</span><span class="w"></span>
+<span class="w">                    </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">default</span><span class="o">:</span><span class="w"></span>
+<span class="w">                    </span><span class="n">DMESG</span><span class="p">(</span><span class="s">&quot;UNKNOWN KL27 EVENT CODE [%d]&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">else</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// The frame is not for us - forward the event to a Flash Manager if it has been registered</span>
+<span class="w">            </span><span class="n">DMESG</span><span class="p">(</span><span class="s">&quot;UIPM: RECEIVED UNKNWON FRAME&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">setPowerLED</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">doSleep</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Instruct the KL27 interface chip to update its LED status the power LED</span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">sleepCommand</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">sleepCommand</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MICROBIT_UIPM_COMMAND_WRITE_REQUEST</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">sleepCommand</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MICROBIT_UIPM_PROPERTY_KL27_POWER_LED_STATE</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">sleepCommand</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">sleepCommand</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">doSleep</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">writeProperty</span><span class="p">(</span><span class="n">sleepCommand</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">awaitingPacket</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">awaiting</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">awaiting</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">status</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">MICROBIT_USB_INTERFACE_AWAITING_RESPONSE</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">        </span><span class="n">status</span><span class="w"> </span><span class="o">&amp;=</span><span class="w"> </span><span class="o">~</span><span class="n">MICROBIT_USB_INTERFACE_AWAITING_RESPONSE</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">MicroBitPowerManager</span><span class="o">::~</span><span class="n">MicroBitPowerManager</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// deepSleep</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">deepSleep</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// If the scheduler is not running, perform a simple deep sleep.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">fiber_scheduler_running</span><span class="p">())</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">simpleDeepSleep</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">CODAL_TIMESTAMP</span><span class="w"> </span><span class="n">eventTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">wakeOnTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">system_timer_deepsleep_wakeup_time</span><span class="p">(</span><span class="w"> </span><span class="n">eventTime</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">canDeepSleep</span><span class="p">(</span><span class="w"> </span><span class="n">wakeOnTime</span><span class="p">,</span><span class="w"> </span><span class="n">eventTime</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="cm">/*wakeUpSources*/</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="cm">/*wakeUpPin*/</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">deepSleepWait</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">deepSleep</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">milliSeconds</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">milliSeconds</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">CONFIG_MINIMUM_DEEP_SLEEP_TIME</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">CODAL_TIMESTAMP</span><span class="w"> </span><span class="n">timeEntry</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">system_timer_current_time_us</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">CODAL_TIMESTAMP</span><span class="w"> </span><span class="n">wakeUpTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">timeEntry</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">CODAL_TIMESTAMP</span><span class="p">)</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">milliSeconds</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// If the scheduler is not running, perform a simple deep sleep.</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">fiber_scheduler_running</span><span class="p">())</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">simpleDeepSleep</span><span class="p">(</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="cm">/*wakeOnTime*/</span><span class="p">,</span><span class="w"> </span><span class="n">wakeUpTime</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="cm">/*wakeUpSources*/</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="cm">/*wakeUpPin*/</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">eventValue</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">system_timer_event_after</span><span class="p">(</span><span class="w"> </span><span class="n">milliSeconds</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">eventValue</span><span class="p">,</span><span class="w"> </span><span class="n">CODAL_TIMER_EVENT_FLAGS_WAKEUP</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">deepSleepWait</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">CODAL_TIMESTAMP</span><span class="w"> </span><span class="n">awake</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">system_timer_current_time_us</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">            </span><span class="c1">// Timed wake-up is usually &lt; 20ms early here</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">wakeUpTime</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">awake</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1000</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="c1">// If another fiber triggers deep sleep</span>
+<span class="w">                </span><span class="c1">// the wake-up timer is still in place</span>
+<span class="w">                </span><span class="n">fiber_sleep</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">wakeUpTime</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">awake</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">system_timer_cancel_event</span><span class="p">(</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">eventValue</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Block power down</span>
+<span class="w">    </span><span class="n">powerDownDisable</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">fiber_sleep</span><span class="p">(</span><span class="w"> </span><span class="n">milliSeconds</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">powerDownEnable</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">deepSleepAsync</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// If the scheduler is not running, perform a simple deep sleep.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">fiber_scheduler_running</span><span class="p">())</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">simpleDeepSleep</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">CODAL_TIMESTAMP</span><span class="w"> </span><span class="n">eventTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">wakeOnTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">system_timer_deepsleep_wakeup_time</span><span class="p">(</span><span class="w"> </span><span class="n">eventTime</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">canDeepSleep</span><span class="p">(</span><span class="w"> </span><span class="n">wakeOnTime</span><span class="p">,</span><span class="w"> </span><span class="n">eventTime</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="cm">/*wakeUpSources*/</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="cm">/*wakeUpPin*/</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">prepareDeepSleep</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">powerDownEnable</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">powerDownDisableCount</span><span class="o">--</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">powerDownDisable</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">powerDownDisableCount</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">bool</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">powerDownIsEnabled</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">powerDownDisableCount</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// deepSleep control</span>
+
+<span class="kt">bool</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">waitingForDeepSleep</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">fiber_scheduler_get_deepsleep_pending</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">bool</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">readyForDeepSleep</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">system_timer_current_time</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">powerUpTime</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">CONFIG_MINIMUM_POWER_ON_TIME</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">powerDownIsEnabled</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">startDeepSleep</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">fiber_scheduler_set_deepsleep_pending</span><span class="p">(</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">ignore</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">simpleDeepSleep</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">deepSleepLock</span><span class="p">.</span><span class="n">notifyAll</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">cancelDeepSleep</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">deepSleepLock</span><span class="p">.</span><span class="n">notifyAll</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">fiber_scheduler_set_deepsleep_pending</span><span class="p">(</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">ignore</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// deepSleep implementation</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">listener</span><span class="p">(</span><span class="n">Event</span><span class="w"> </span><span class="n">evt</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">evt</span><span class="p">.</span><span class="n">source</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DEVICE_ID_NOTIFY</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">evt</span><span class="p">.</span><span class="n">value</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">POWER_EVT_CANCEL_DEEPSLEEP</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="n">cancelDeepSleep</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">listen</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">EventModel</span><span class="o">::</span><span class="n">defaultEventBus</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">EventModel</span><span class="o">::</span><span class="n">defaultEventBus</span><span class="o">-&gt;</span><span class="n">listen</span><span class="p">(</span><span class="n">DEVICE_ID_NOTIFY</span><span class="p">,</span><span class="w"> </span><span class="n">POWER_EVT_CANCEL_DEEPSLEEP</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">listener</span><span class="p">,</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_IMMEDIATE</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">ignore</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">EventModel</span><span class="o">::</span><span class="n">defaultEventBus</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">EventModel</span><span class="o">::</span><span class="n">defaultEventBus</span><span class="o">-&gt;</span><span class="n">ignore</span><span class="p">(</span><span class="n">DEVICE_ID_NOTIFY</span><span class="p">,</span><span class="w"> </span><span class="n">POWER_EVT_CANCEL_DEEPSLEEP</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">listener</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">prepareDeepSleep</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">fiber_scheduler_get_deepsleep_pending</span><span class="p">())</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">fiber_scheduler_set_deepsleep_pending</span><span class="p">(</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">listen</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">CodalComponent</span><span class="o">::</span><span class="n">deepSleepAll</span><span class="p">(</span><span class="w"> </span><span class="n">deepSleepCallbackPrepare</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">deepSleepWait</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">deepSleepLock</span><span class="p">.</span><span class="n">getWaitCount</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// This is OK, so long as we only use notifyAll() not notify()</span>
+<span class="w">        </span><span class="n">deepSleepLock</span><span class="p">.</span><span class="n">wait</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">prepareDeepSleep</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">deepSleepLock</span><span class="p">.</span><span class="n">wait</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+
+<span class="k">volatile</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="o">::</span><span class="n">timer_irq_channels</span><span class="p">;</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">MicroBitPowerManager::deepSleepTimerIRQ</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">chan</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">timer_irq_channels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">chan</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">MicroBitPowerManager::canDeepSleep</span><span class="p">(</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">wakeOnTime</span><span class="p">,</span><span class="w"> </span><span class="n">CODAL_TIMESTAMP</span><span class="w"> </span><span class="n">wakeUpTime</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">wakeUpSources</span><span class="p">,</span><span class="w"> </span><span class="n">NRF52Pin</span><span class="w"> </span><span class="o">*</span><span class="n">wakeUpPin</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">sysTimer</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_NOT_SUPPORTED</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">CODAL_TIMESTAMP</span><span class="w"> </span><span class="n">timeEntry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">system_timer_current_time_us</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">wakeOnTime</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">wakeUpTime</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">timeEntry</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">wakeUpTime</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">timeEntry</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">CONFIG_MINIMUM_DEEP_SLEEP_TIME</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_INVALID_STATE</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">wakeUpSources</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">deepSleepCallbackData</span><span class="w"> </span><span class="n">data</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">CodalComponent</span><span class="o">::</span><span class="n">deepSleepAll</span><span class="p">(</span><span class="w"> </span><span class="n">deepSleepCallbackCountWakeUps</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">data</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">count</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_INVALID_STATE</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">else</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">wakeUpPin</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_INVALID_STATE</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">MicroBitPowerManager::simpleDeepSleep</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">CODAL_TIMESTAMP</span><span class="w"> </span><span class="n">eventTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">wakeOnTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">system_timer_deepsleep_wakeup_time</span><span class="p">(</span><span class="w"> </span><span class="n">eventTime</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">simpleDeepSleep</span><span class="p">(</span><span class="w"> </span><span class="n">wakeOnTime</span><span class="p">,</span><span class="w"> </span><span class="n">eventTime</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="cm">/*wakeUpSources*/</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="cm">/*wakeUpPin*/</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">MicroBitPowerManager::simpleDeepSleep</span><span class="p">(</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">wakeOnTime</span><span class="p">,</span><span class="w"> </span><span class="n">CODAL_TIMESTAMP</span><span class="w"> </span><span class="n">wakeUpTime</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">wakeUpSources</span><span class="p">,</span><span class="w"> </span><span class="n">NRF52Pin</span><span class="w"> </span><span class="o">*</span><span class="n">wakeUpPin</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">CODAL_TIMESTAMP</span><span class="w"> </span><span class="n">timeEntry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">system_timer_current_time_us</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">canDeepSleep</span><span class="p">(</span><span class="w"> </span><span class="n">wakeOnTime</span><span class="p">,</span><span class="w"> </span><span class="n">wakeUpTime</span><span class="p">,</span><span class="w"> </span><span class="n">wakeUpSources</span><span class="p">,</span><span class="w"> </span><span class="n">wakeUpPin</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">can</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Configure for sleep mode</span>
+<span class="w">    </span><span class="n">setPowerLED</span><span class="p">(</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="cm">/*doSleep*/</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Update peripheral drivers</span>
+<span class="w">    </span><span class="n">CodalComponent</span><span class="o">::</span><span class="n">deepSleepAll</span><span class="p">(</span><span class="w"> </span><span class="n">wakeUpSources</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">deepSleepCallbackBeginWithWakeUps</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">deepSleepCallbackBegin</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">CODAL_TIMESTAMP</span><span class="w"> </span><span class="n">tickStart</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">CODAL_TIMESTAMP</span><span class="w"> </span><span class="n">timeStart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">system_timer_deepsleep_begin</span><span class="p">(</span><span class="w"> </span><span class="n">tickStart</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w">      </span><span class="n">channel</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">      </span><span class="c1">//System timer uses period = 0, event = 1 and capture = 3</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">saveCompare</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">sysTimer</span><span class="o">-&gt;</span><span class="n">timer</span><span class="o">-&gt;</span><span class="n">CC</span><span class="p">[</span><span class="n">channel</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">saveIntenset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sysTimer</span><span class="o">-&gt;</span><span class="n">timer</span><span class="o">-&gt;</span><span class="n">INTENSET</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">sysTimer</span><span class="o">-&gt;</span><span class="n">timer</span><span class="o">-&gt;</span><span class="n">INTENCLR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sysTimer</span><span class="o">-&gt;</span><span class="n">timer</span><span class="o">-&gt;</span><span class="n">INTENSET</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">sysTimerIRQ</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">channel_bitmsk</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sysTimer</span><span class="o">-&gt;</span><span class="n">timer_pointer</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">sysTimer</span><span class="o">-&gt;</span><span class="n">setIRQ</span><span class="p">(</span><span class="w"> </span><span class="n">deepSleepTimerIRQ</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">timer_irq_channels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">usPerTick</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">ticksPerMS</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">ticksMax</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mh">0xFFFFFFFFul</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ticksPerMS</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w"> </span><span class="c1">// approx 71min</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">wakeUpSources</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">wakeUpPin</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// Ensure the requested pin into digital input mode.</span>
+<span class="w">            </span><span class="n">wakeUpPin</span><span class="o">-&gt;</span><span class="n">getDigitalValue</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">            </span><span class="c1">// Enable an interrupt on the requested pin or an interrupt from the KL27.</span>
+<span class="w">            </span><span class="n">wakeUpPin</span><span class="o">-&gt;</span><span class="n">setDetect</span><span class="p">(</span><span class="n">wakeUpPin</span><span class="o">-&gt;</span><span class="n">getPolarity</span><span class="p">()</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">GPIO_PIN_CNF_SENSE_High</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">GPIO_PIN_CNF_SENSE_Low</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Enable wakeup from the the KL27 interrupt line.</span>
+<span class="w">    </span><span class="n">io</span><span class="p">.</span><span class="n">irq1</span><span class="p">.</span><span class="n">setDetect</span><span class="p">(</span><span class="n">GPIO_PIN_CNF_SENSE_Low</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">NVIC_EnableIRQ</span><span class="p">(</span><span class="n">GPIOTE_IRQn</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">sysTimer</span><span class="o">-&gt;</span><span class="n">setCompare</span><span class="p">(</span><span class="w"> </span><span class="n">channel</span><span class="p">,</span><span class="w"> </span><span class="n">tickStart</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">sysTimer</span><span class="o">-&gt;</span><span class="n">enableIRQ</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">tick0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tickStart</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">tick1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tick0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// assume wake-up needs at least same time as power down</span>
+<span class="w">    </span><span class="c1">// it may need much longer in general</span>
+<span class="w">    </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">totalTicks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wakeUpTime</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">timeEntry</span><span class="w"></span>
+<span class="w">                        </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">timeStart</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">timeEntry</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">usPerTick</span><span class="w"></span>
+<span class="w">                        </span><span class="o">-</span><span class="w"> </span><span class="mi">13</span><span class="p">;</span><span class="w">  </span><span class="c1">// __WFI() latency</span>
+
+<span class="w">    </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">sleepTicks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">remain</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">wakeOnTime</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">sleepTicks</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">totalTicks</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">remain64</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">totalTicks</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">sleepTicks</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">remain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">remain64</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">ticksMax</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">ticksMax</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">remain64</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">else</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">remain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ticksMax</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">sysTimer</span><span class="o">-&gt;</span><span class="n">setCompare</span><span class="p">(</span><span class="w"> </span><span class="n">channel</span><span class="p">,</span><span class="w"> </span><span class="n">tick0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">remain</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Wait for an interrupt to occur. This will either be the requested transition,</span>
+<span class="w">        </span><span class="c1">// or an asynchronous event from the KL27 interface chip.</span>
+<span class="w">        </span><span class="n">__WFI</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">tick1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sysTimer</span><span class="o">-&gt;</span><span class="n">captureCounter</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">        </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">ticks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tick1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tick0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">tick0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tick1</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">sleepTicks</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">ticks</span><span class="p">;</span><span class="w"></span>
+
+<span class="cp">#if CONFIG_ENABLED(CODAL_TIMER_32BIT)</span>
+<span class="w">        </span><span class="n">system_timer_current_time_us</span><span class="p">();</span><span class="w"></span>
+<span class="cp">#endif</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">timer_irq_channels</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"> </span><span class="c1">// It must be another interrupt</span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">timer_irq_channels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Disable DETECT events</span>
+<span class="w">    </span><span class="n">io</span><span class="p">.</span><span class="n">irq1</span><span class="p">.</span><span class="n">setDetect</span><span class="p">(</span><span class="n">GPIO_PIN_CNF_SENSE_Disabled</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">wakeUpSources</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">wakeUpPin</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="n">wakeUpPin</span><span class="o">-&gt;</span><span class="n">setDetect</span><span class="p">(</span><span class="n">GPIO_PIN_CNF_SENSE_Disabled</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Restore timer state</span>
+<span class="w">    </span><span class="n">sysTimer</span><span class="o">-&gt;</span><span class="n">disableIRQ</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">sysTimer</span><span class="o">-&gt;</span><span class="n">timer</span><span class="o">-&gt;</span><span class="n">INTENCLR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sysTimer</span><span class="o">-&gt;</span><span class="n">timer</span><span class="o">-&gt;</span><span class="n">INTENSET</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">sysTimer</span><span class="o">-&gt;</span><span class="n">setIRQ</span><span class="p">(</span><span class="n">sysTimerIRQ</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">sysTimer</span><span class="o">-&gt;</span><span class="n">timer</span><span class="o">-&gt;</span><span class="n">CC</span><span class="p">[</span><span class="n">channel</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">saveCompare</span><span class="p">;</span><span class="w"></span>
+
+<span class="cp">#if CONFIG_ENABLED(CODAL_TIMER_32BIT)</span>
+<span class="w">    </span><span class="n">system_timer_deepsleep_end</span><span class="p">(</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="cp">#else</span>
+<span class="w">    </span><span class="n">system_timer_deepsleep_end</span><span class="p">(</span><span class="w"> </span><span class="n">tick1</span><span class="p">,</span><span class="w"> </span><span class="n">sleepTicks</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">usPerTick</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Events queued between the return from __WFI() and now will have incorrect times</span>
+<span class="cp">#endif</span>
+
+<span class="w">    </span><span class="n">sysTimer</span><span class="o">-&gt;</span><span class="n">timer</span><span class="o">-&gt;</span><span class="n">INTENSET</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">saveIntenset</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Configure for running mode.</span>
+<span class="w">    </span><span class="n">CodalComponent</span><span class="o">::</span><span class="n">deepSleepAll</span><span class="p">(</span><span class="w"> </span><span class="n">wakeUpSources</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">deepSleepCallbackEndWithWakeUps</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">deepSleepCallbackEnd</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">setPowerLED</span><span class="p">(</span><span class="nb">false</span><span class="w"> </span><span class="cm">/*doSleep*/</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">powerUpTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">system_timer_current_time</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

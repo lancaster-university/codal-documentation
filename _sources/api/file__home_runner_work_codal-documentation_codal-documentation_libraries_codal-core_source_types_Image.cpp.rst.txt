@@ -1,0 +1,56 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_types_Image.cpp:
+
+File Image.cpp
+==============
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_types>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/source/types``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/source/types/Image.cpp``)
+----------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_types_Image.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``BitmapFont.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_BitmapFont.h`)
+
+- ``CodalCompat.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalCompat.h`)
+
+- ``CodalConfig.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h`)
+
+- ``ErrorNo.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_ErrorNo.h`)
+
+- ``Image.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_Image.h`)
+
+- ``ManagedString.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_ManagedString.h`)
+
+
+
+
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_Image_8cpp_1a172012a40abd7130cea4483e3509d549`
+
+- :ref:`exhale_define_Image_8cpp_1a2e03803dbc104b96673147ccc7b5e28a`
+

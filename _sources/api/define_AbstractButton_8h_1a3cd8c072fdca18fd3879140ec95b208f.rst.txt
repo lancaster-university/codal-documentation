@@ -1,0 +1,14 @@
+.. _exhale_define_AbstractButton_8h_1a3cd8c072fdca18fd3879140ec95b208f:
+
+Define DEVICE_BUTTON_STATE_HOLD_TRIGGERED
+=========================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_AbstractButton.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DEVICE_BUTTON_STATE_HOLD_TRIGGERED
+   :project: CODAL

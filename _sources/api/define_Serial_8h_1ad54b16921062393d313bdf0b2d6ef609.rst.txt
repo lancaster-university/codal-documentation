@@ -1,0 +1,14 @@
+.. _exhale_define_Serial_8h_1ad54b16921062393d313bdf0b2d6ef609:
+
+Define CODAL_SERIAL_EVT_RX_FULL
+===============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Serial.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CODAL_SERIAL_EVT_RX_FULL
+   :project: CODAL

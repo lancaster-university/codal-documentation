@@ -1,0 +1,14 @@
+.. _exhale_define_LIS3DH_8h_1a90b60f1d0699337601dd37ca82dad2e2:
+
+Define LIS3DH_DEFAULT_ADDR
+==========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LIS3DH.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LIS3DH_DEFAULT_ADDR
+   :project: CODAL

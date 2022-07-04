@@ -1,0 +1,14 @@
+.. _exhale_define_FXOS8700_8h_1aeb010af27f10b4b5e6430861dfe2e481:
+
+Define FXOS8700_A_FFMT_THS_Y_LSB
+================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_FXOS8700.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FXOS8700_A_FFMT_THS_Y_LSB
+   :project: CODAL

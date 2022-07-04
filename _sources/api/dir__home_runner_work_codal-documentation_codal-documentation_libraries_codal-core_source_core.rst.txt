@@ -1,0 +1,29 @@
+.. _dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core:
+
+
+Directory core
+==============
+
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/source``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+*Directory path:* ``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/source/core``
+
+
+Files
+-----
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_codal_default_target_hal.cpp`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalCompat.cpp`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalComponent.cpp`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalDevice.cpp`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalDmesg.cpp`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalFiber.cpp`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalHeapAllocator.cpp`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalListener.cpp`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalUtil.cpp`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_MemberFunctionCallback.cpp`
+
+

@@ -1,0 +1,14 @@
+.. _exhale_define_Pin_8h_1af6d0912eaea2848cb2154bb2272d5a41:
+
+Define IO_STATUS_TOUCH_IN
+=========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Pin.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: IO_STATUS_TOUCH_IN
+   :project: CODAL

@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitFileSystem_8h_1acb4e52a8c6b48ddb1af96f68d4af4f64:
+
+Define MBFS_MAGIC
+=================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitFileSystem.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MBFS_MAGIC
+   :project: CODAL

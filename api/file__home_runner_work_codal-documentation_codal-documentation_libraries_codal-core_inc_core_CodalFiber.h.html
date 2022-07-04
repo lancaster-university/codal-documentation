@@ -1,0 +1,556 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>File CodalFiber.h &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL Documentation
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../getting-started.html">
+   Getting Started with CODAL
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../components/index.html">
+   Components
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/display.html">
+     Display
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/mic-and-speaker.html">
+     Microphone and Speaker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/edge-connector.html">
+     Edge Connector
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/sensors.html">
+     Sensors
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/codal-projects.html">
+     CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../codal-api.html">
+   The Complete CODAL API
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-codalfiber-h">
+   Definition (
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     /home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/core/CodalFiber.h
+    </span>
+   </code>
+   )
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#includes">
+   Includes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#included-by">
+   Included By
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#namespaces">
+   Namespaces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classes">
+   Classes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions">
+   Functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defines">
+   Defines
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>File CodalFiber.h</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-codalfiber-h">
+   Definition (
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     /home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/core/CodalFiber.h
+    </span>
+   </code>
+   )
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#includes">
+   Includes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#included-by">
+   Included By
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#namespaces">
+   Namespaces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classes">
+   Classes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions">
+   Functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defines">
+   Defines
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="file-codalfiber-h">
+<span id="file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-codalfiber-h"></span><h1>File CodalFiber.h<a class="headerlink" href="#file-codalfiber-h" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core.html#dir-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/core</span></code>)</p>
+<div class="contents local topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-codalfiber-h" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/core/CodalFiber.h</span></code>)</a></p></li>
+<li><p><a class="reference internal" href="#includes" id="id2">Includes</a></p></li>
+<li><p><a class="reference internal" href="#included-by" id="id3">Included By</a></p></li>
+<li><p><a class="reference internal" href="#namespaces" id="id4">Namespaces</a></p></li>
+<li><p><a class="reference internal" href="#classes" id="id5">Classes</a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id6">Functions</a></p></li>
+<li><p><a class="reference internal" href="#defines" id="id7">Defines</a></p></li>
+</ul>
+</div>
+<section id="definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-codalfiber-h">
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/core/CodalFiber.h</span></code>)<a class="headerlink" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-codalfiber-h" title="Permalink to this headline">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalFiber.h.html">Program Listing for File CodalFiber.h</a></li>
+</ul>
+</div>
+</section>
+<section id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CodalConfig.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-codalconfig-h"><span class="std std-ref">File CodalConfig.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Event.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_Event.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-types-event-h"><span class="std std-ref">File Event.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">EventModel.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_EventModel.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-eventmodel-h"><span class="std std-ref">File EventModel.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codal_target_hal.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_codal_target_hal.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-codal-target-hal-h"><span class="std std-ref">File codal_target_hal.h</span></a>)</p></li>
+</ul>
+</section>
+<section id="included-by">
+<h2>Included By<a class="headerlink" href="#included-by" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitRadio.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-microbitradio-cpp"><span class="std std-ref">File MicroBitRadio.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_SoundEmojiSynthesizer.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-soundemojisynthesizer-cpp"><span class="std std-ref">File SoundEmojiSynthesizer.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalDevice.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-codaldevice-h"><span class="std std-ref">File CodalDevice.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_PulseIn.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-drivers-pulsein-h"><span class="std std-ref">File PulseIn.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalComponent.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-core-codalcomponent-cpp"><span class="std std-ref">File CodalComponent.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalFiber.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-core-codalfiber-cpp"><span class="std std-ref">File CodalFiber.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Accelerometer.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-driver-models-accelerometer-cpp"><span class="std std-ref">File Accelerometer.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Compass.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-driver-models-compass-cpp"><span class="std std-ref">File Compass.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Gyroscope.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-driver-models-gyroscope-cpp"><span class="std std-ref">File Gyroscope.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Sensor.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-driver-models-sensor-cpp"><span class="std std-ref">File Sensor.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_SPI.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-driver-models-spi-cpp"><span class="std std-ref">File SPI.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Timer.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-driver-models-timer-cpp"><span class="std std-ref">File Timer.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_AnimatedDisplay.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-animateddisplay-cpp"><span class="std std-ref">File AnimatedDisplay.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_FXOS8700.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-fxos8700-cpp"><span class="std std-ref">File FXOS8700.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_ILI9341.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-ili9341-cpp"><span class="std std-ref">File ILI9341.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_LEDMatrix.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-ledmatrix-cpp"><span class="std std-ref">File LEDMatrix.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_LIS3DH.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-lis3dh-cpp"><span class="std std-ref">File LIS3DH.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_LSM303Accelerometer.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-lsm303accelerometer-cpp"><span class="std std-ref">File LSM303Accelerometer.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_MAG3110.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-mag3110-cpp"><span class="std std-ref">File MAG3110.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_MessageBus.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-messagebus-cpp"><span class="std std-ref">File MessageBus.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_MPU6050.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-mpu6050-cpp"><span class="std std-ref">File MPU6050.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_ST7735.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-st7735-cpp"><span class="std std-ref">File ST7735.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_TouchSensor.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-touchsensor-cpp"><span class="std std-ref">File TouchSensor.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_DataStream.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-streams-datastream-cpp"><span class="std std-ref">File DataStream.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_Synthesizer.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-streams-synthesizer-cpp"><span class="std std-ref">File Synthesizer.cpp</span></a></p></li>
+</ul>
+</section>
+<section id="namespaces">
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="namespace_codal.html#namespace-codal"><span class="std std-ref">Namespace codal</span></a></p></li>
+</ul>
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="structcodal_1_1Fiber.html#exhale-struct-structcodal-1-1fiber"><span class="std std-ref">Struct Fiber</span></a></p></li>
+<li><p><a class="reference internal" href="classcodal_1_1FiberLock.html#exhale-class-classcodal-1-1fiberlock"><span class="std std-ref">Class FiberLock</span></a></p></li>
+</ul>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="function_namespacecodal_1a24cc7686409216907b58508680f07006.html#exhale-function-namespacecodal-1a24cc7686409216907b58508680f07006"><span class="std std-ref">Function codal::create_fiber(void(*)(void *), void *, void(*)(void *))</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1aa08182a8151fbabc3a8b6297c059692b.html#exhale-function-namespacecodal-1aa08182a8151fbabc3a8b6297c059692b"><span class="std std-ref">Function codal::create_fiber(void(*)(void), void(*)(void))</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a2c9faa46e5af38b729f087388dbdce3f.html#exhale-function-namespacecodal-1a2c9faa46e5af38b729f087388dbdce3f"><span class="std std-ref">Function codal::dequeue_fiber</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a3f314eb211d045b62fcca8829165362c.html#exhale-function-namespacecodal-1a3f314eb211d045b62fcca8829165362c"><span class="std std-ref">Function codal::fiber_scheduler_get_deepsleep_pending</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a356720646ed8ec0b5d1392503120dcfd.html#exhale-function-namespacecodal-1a356720646ed8ec0b5d1392503120dcfd"><span class="std std-ref">Function codal::fiber_scheduler_running</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a2c2f8c0437504989b14ab55fc57c6171.html#exhale-function-namespacecodal-1a2c2f8c0437504989b14ab55fc57c6171"><span class="std std-ref">Function codal::fiber_scheduler_set_deepsleep_pending</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a4c0f8ade68592c64d500ee576f7c9a76.html#exhale-function-namespacecodal-1a4c0f8ade68592c64d500ee576f7c9a76"><span class="std std-ref">Function codal::fiber_sleep</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a5bc6ae64f3b21bc1deb9cc73479022dc.html#exhale-function-namespacecodal-1a5bc6ae64f3b21bc1deb9cc73479022dc"><span class="std std-ref">Function codal::fiber_wait_for_event</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a0e114ae9b9f557fab7b484053a115298.html#exhale-function-namespacecodal-1a0e114ae9b9f557fab7b484053a115298"><span class="std std-ref">Function codal::fiber_wake_on_event</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a3f1c28d0f2748b1558dc1b3707860285.html#exhale-function-namespacecodal-1a3f1c28d0f2748b1558dc1b3707860285"><span class="std std-ref">Function codal::get_fiber_list</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a6800ad025f4818be6f408e050289c7a7.html#exhale-function-namespacecodal-1a6800ad025f4818be6f408e050289c7a7"><span class="std std-ref">Function codal::idle</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a79db4118feb74e91b5862de34d5ead6f.html#exhale-function-namespacecodal-1a79db4118feb74e91b5862de34d5ead6f"><span class="std std-ref">Function codal::idle_task</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a31adb977c83c6df204078958fc653303.html#exhale-function-namespacecodal-1a31adb977c83c6df204078958fc653303"><span class="std std-ref">Function codal::invoke(void(*)(void))</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a37767880675d21087ed1d53046c210a5.html#exhale-function-namespacecodal-1a37767880675d21087ed1d53046c210a5"><span class="std std-ref">Function codal::invoke(void(*)(void *), void *)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1af6368b5ed7feddd59281231c43f1bf49.html#exhale-function-namespacecodal-1af6368b5ed7feddd59281231c43f1bf49"><span class="std std-ref">Function codal::launch_new_fiber</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a15ac28de687caaae15093f8cb4401afb.html#exhale-function-namespacecodal-1a15ac28de687caaae15093f8cb4401afb"><span class="std std-ref">Function codal::launch_new_fiber_param</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a6d670f8f5745f2dc4ddaf45d28c1594c.html#exhale-function-namespacecodal-1a6d670f8f5745f2dc4ddaf45d28c1594c"><span class="std std-ref">Function codal::queue_fiber</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a3a392541e538f0e1a5278c41cffccbac.html#exhale-function-namespacecodal-1a3a392541e538f0e1a5278c41cffccbac"><span class="std std-ref">Function codal::release_fiber(void)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1add318b2ed604d6627fec8803f9ca147a.html#exhale-function-namespacecodal-1add318b2ed604d6627fec8803f9ca147a"><span class="std std-ref">Function codal::release_fiber(void *)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a0f2267d069f5fe51ac291450908f0a12.html#exhale-function-namespacecodal-1a0f2267d069f5fe51ac291450908f0a12"><span class="std std-ref">Function codal::schedule</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a0757572bc980fb6f43f137fbc68f514f.html#exhale-function-namespacecodal-1a0757572bc980fb6f43f137fbc68f514f"><span class="std std-ref">Function codal::scheduler_event</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1af6287c02d3b564a856fc9795433be3bf.html#exhale-function-namespacecodal-1af6287c02d3b564a856fc9795433be3bf"><span class="std std-ref">Function codal::scheduler_init</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1abf3ec632cc4c666d1f94ac6d7cd1ac33.html#exhale-function-namespacecodal-1abf3ec632cc4c666d1f94ac6d7cd1ac33"><span class="std std-ref">Function codal::scheduler_runqueue_empty</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1ad670baa5eaf28cf83d4634a42f3e8b2e.html#exhale-function-namespacecodal-1ad670baa5eaf28cf83d4634a42f3e8b2e"><span class="std std-ref">Function codal::scheduler_tick</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1aa75ccd0b389dd1728894dc950e43693c.html#exhale-function-namespacecodal-1aa75ccd0b389dd1728894dc950e43693c"><span class="std std-ref">Function codal::scheduler_waitqueue_empty</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a2c2dc4be93b8c3ad430c735925453e0b.html#exhale-function-namespacecodal-1a2c2dc4be93b8c3ad430c735925453e0b"><span class="std std-ref">Function codal::verify_stack_size</span></a></p></li>
+<li><p><a class="reference internal" href="function_CodalFiber_8h_1a23498f3df034b9d1706a3a87a8b0c624.html#exhale-function-codalfiber-8h-1a23498f3df034b9d1706a3a87a8b0c624"><span class="std std-ref">Function restore_register_context</span></a></p></li>
+<li><p><a class="reference internal" href="function_CodalFiber_8h_1a7a68feecce676df52c1b95579b89f987.html#exhale-function-codalfiber-8h-1a7a68feecce676df52c1b95579b89f987"><span class="std std-ref">Function save_context</span></a></p></li>
+<li><p><a class="reference internal" href="function_CodalFiber_8h_1a569e1b46118d79a65a401cb15aa9b064.html#exhale-function-codalfiber-8h-1a569e1b46118d79a65a401cb15aa9b064"><span class="std std-ref">Function save_register_context</span></a></p></li>
+<li><p><a class="reference internal" href="function_CodalFiber_8h_1a3301585d795b6db720b434b464e1b254.html#exhale-function-codalfiber-8h-1a3301585d795b6db720b434b464e1b254"><span class="std std-ref">Function swap_context</span></a></p></li>
+</ul>
+</section>
+<section id="defines">
+<h2>Defines<a class="headerlink" href="#defines" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="define_CodalFiber_8h_1a50077514197a43ec13ed66695c08e050.html#exhale-define-codalfiber-8h-1a50077514197a43ec13ed66695c08e050"><span class="std std-ref">Define DEVICE_FIBER_FLAG_CHILD</span></a></p></li>
+<li><p><a class="reference internal" href="define_CodalFiber_8h_1a104c691d4f9c2af836ef780aaaaedb15.html#exhale-define-codalfiber-8h-1a104c691d4f9c2af836ef780aaaaedb15"><span class="std std-ref">Define DEVICE_FIBER_FLAG_DO_NOT_PAGE</span></a></p></li>
+<li><p><a class="reference internal" href="define_CodalFiber_8h_1accec8731172e1afd1c01063c7ed79085.html#exhale-define-codalfiber-8h-1accec8731172e1afd1c01063c7ed79085"><span class="std std-ref">Define DEVICE_FIBER_FLAG_FOB</span></a></p></li>
+<li><p><a class="reference internal" href="define_CodalFiber_8h_1a912114686e39fe347c80fe7160ebb05d.html#exhale-define-codalfiber-8h-1a912114686e39fe347c80fe7160ebb05d"><span class="std std-ref">Define DEVICE_FIBER_FLAG_PARENT</span></a></p></li>
+<li><p><a class="reference internal" href="define_CodalFiber_8h_1aea71c32acd6c3388c77ed72fde69b885.html#exhale-define-codalfiber-8h-1aea71c32acd6c3388c77ed72fde69b885"><span class="std std-ref">Define DEVICE_GET_FIBER_LIST_AVAILABLE</span></a></p></li>
+<li><p><a class="reference internal" href="define_CodalFiber_8h_1ac27bad235b7c7e1852c08b452ef22464.html#exhale-define-codalfiber-8h-1ac27bad235b7c7e1852c08b452ef22464"><span class="std std-ref">Define DEVICE_SCHEDULER_DEEPSLEEP</span></a></p></li>
+<li><p><a class="reference internal" href="define_CodalFiber_8h_1a99a7380b02cf31a99fe3d2d9136fc095.html#exhale-define-codalfiber-8h-1a99a7380b02cf31a99fe3d2d9136fc095"><span class="std std-ref">Define DEVICE_SCHEDULER_EVT_IDLE</span></a></p></li>
+<li><p><a class="reference internal" href="define_CodalFiber_8h_1ac58eeb9e0b95eebcbed6139ad3adeb18.html#exhale-define-codalfiber-8h-1ac58eeb9e0b95eebcbed6139ad3adeb18"><span class="std std-ref">Define DEVICE_SCHEDULER_EVT_TICK</span></a></p></li>
+<li><p><a class="reference internal" href="define_CodalFiber_8h_1a8423a99968466c182c11a8c4c6c68795.html#exhale-define-codalfiber-8h-1a8423a99968466c182c11a8c4c6c68795"><span class="std std-ref">Define DEVICE_SCHEDULER_IDLE</span></a></p></li>
+<li><p><a class="reference internal" href="define_CodalFiber_8h_1a9f6b829962cd42bfda8d03496577c45e.html#exhale-define-codalfiber-8h-1a9f6b829962cd42bfda8d03496577c45e"><span class="std std-ref">Define DEVICE_SCHEDULER_RUNNING</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

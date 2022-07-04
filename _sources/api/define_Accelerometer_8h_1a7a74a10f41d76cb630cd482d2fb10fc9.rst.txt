@@ -1,0 +1,14 @@
+.. _exhale_define_Accelerometer_8h_1a7a74a10f41d76cb630cd482d2fb10fc9:
+
+Define ACCELEROMETER_FREEFALL_THRESHOLD
+=======================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Accelerometer.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: ACCELEROMETER_FREEFALL_THRESHOLD
+   :project: CODAL

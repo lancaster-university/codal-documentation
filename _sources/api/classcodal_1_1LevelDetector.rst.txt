@@ -1,0 +1,27 @@
+.. _exhale_class_classcodal_1_1LevelDetector:
+
+Class LevelDetector
+===================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_LevelDetector.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Types
+**********
+
+- ``public codal::CodalComponent`` (:ref:`exhale_class_classcodal_1_1CodalComponent`)
+- ``public codal::DataSink`` (:ref:`exhale_class_classcodal_1_1DataSink`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: codal::LevelDetector
+   :project: CODAL
+   :members:
+   :protected-members:
+   :undoc-members:

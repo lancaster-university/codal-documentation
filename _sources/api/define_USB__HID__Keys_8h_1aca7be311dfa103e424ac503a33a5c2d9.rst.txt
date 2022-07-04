@@ -1,0 +1,14 @@
+.. _exhale_define_USB__HID__Keys_8h_1aca7be311dfa103e424ac503a33a5c2d9:
+
+Define KEY_MEDIA_CALC
+=====================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USB_HID_Keys.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: KEY_MEDIA_CALC
+   :project: CODAL

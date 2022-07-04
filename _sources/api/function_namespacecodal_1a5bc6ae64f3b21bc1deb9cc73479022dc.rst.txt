@@ -1,0 +1,14 @@
+.. _exhale_function_namespacecodal_1a5bc6ae64f3b21bc1deb9cc73479022dc:
+
+Function codal::fiber_wait_for_event
+====================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalFiber.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: codal::fiber_wait_for_event(uint16_t, uint16_t)
+   :project: CODAL

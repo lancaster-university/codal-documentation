@@ -1,0 +1,14 @@
+.. _exhale_define_Pin_8h_1a08c253cd61b70ab48222a2c2a05f68da:
+
+Define IO_STATUS_ANALOG_OUT
+===========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Pin.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: IO_STATUS_ANALOG_OUT
+   :project: CODAL

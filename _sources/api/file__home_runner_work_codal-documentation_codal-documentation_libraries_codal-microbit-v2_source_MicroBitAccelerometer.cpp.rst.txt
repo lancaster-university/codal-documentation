@@ -1,0 +1,55 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitAccelerometer.cpp:
+
+File MicroBitAccelerometer.cpp
+==============================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/source``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/source/MicroBitAccelerometer.cpp``)
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitAccelerometer.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``LSM303Accelerometer.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LSM303Accelerometer.h`)
+
+- ``LSM303Magnetometer.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LSM303Magnetometer.h`)
+
+- ``MicroBitAccelerometer.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitAccelerometer.h`)
+
+- ``MicroBitCompass.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitCompass.h`)
+
+- ``MicroBitCompat.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`)
+
+- ``MicroBitDevice.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitDevice.h`)
+
+- ``MicroBitEvent.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitEvent.h`)
+
+- ``MicroBitFiber.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitFiber.h`)
+
+- ``MicroBitI2C.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitI2C.h`)
+
+- ``MicroBitIO.h``
+
+
+
+
+

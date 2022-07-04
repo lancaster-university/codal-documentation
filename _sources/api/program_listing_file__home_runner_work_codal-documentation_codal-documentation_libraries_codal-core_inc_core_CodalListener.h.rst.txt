@@ -1,0 +1,105 @@
+
+.. _program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalListener.h:
+
+Program Listing for File CodalListener.h
+========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalListener.h>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/core/CodalListener.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   /*
+   The MIT License (MIT)
+   
+   Copyright (c) 2017 Lancaster University.
+   
+   Permission is hereby granted, free of charge, to any person obtaining a
+   copy of this software and associated documentation files (the "Software"),
+   to deal in the Software without restriction, including without limitation
+   the rights to use, copy, modify, merge, publish, distribute, sublicense,
+   and/or sell copies of the Software, and to permit persons to whom the
+   Software is furnished to do so, subject to the following conditions:
+   
+   The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+   
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+   THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+   */
+   
+   #ifndef DEVICE_LISTENER_H
+   #define DEVICE_LISTENER_H
+   
+   #include "CodalConfig.h"
+   #include "Event.h"
+   #include "MemberFunctionCallback.h"
+   
+   // Listener flags...
+   #define MESSAGE_BUS_LISTENER_PARAMETERISED          0x0001
+   #define MESSAGE_BUS_LISTENER_METHOD                 0x0002
+   #define MESSAGE_BUS_LISTENER_BUSY                   0x0004
+   #define MESSAGE_BUS_LISTENER_REENTRANT              0x0008
+   #define MESSAGE_BUS_LISTENER_QUEUE_IF_BUSY          0x0010
+   #define MESSAGE_BUS_LISTENER_DROP_IF_BUSY           0x0020
+   #define MESSAGE_BUS_LISTENER_NONBLOCKING            0x0040
+   #define MESSAGE_BUS_LISTENER_URGENT                 0x0080
+   #define MESSAGE_BUS_LISTENER_DELETING               0x8000
+   
+   #define MESSAGE_BUS_LISTENER_IMMEDIATE              (MESSAGE_BUS_LISTENER_NONBLOCKING |  MESSAGE_BUS_LISTENER_URGENT)
+   
+   namespace codal
+   {
+       struct Listener
+       {
+           uint16_t        id;             // The ID of the component that this listener is interested in.
+           uint16_t        value;          // Value this listener is interested in receiving.
+           uint16_t        flags;          // Status and configuration options codes for this listener.
+   
+           union
+           {
+               void (*cb)(Event);
+               void (*cb_param)(Event, void *);
+               MemberFunctionCallback *cb_method;
+           };
+   
+           void*           cb_arg;         // Optional argument to be passed to the caller.
+   
+           Event                 evt;
+           EventQueueItem        *evt_queue;
+   
+           Listener *next;
+   
+           Listener(uint16_t id, uint16_t value, void (*handler)(Event), uint16_t flags = EVENT_LISTENER_DEFAULT_FLAGS);
+   
+           Listener(uint16_t id, uint16_t value, void (*handler)(Event, void *), void* arg, uint16_t flags = EVENT_LISTENER_DEFAULT_FLAGS);
+   
+   
+           template <typename T>
+           Listener(uint16_t id, uint16_t value, T* object, void (T::*method)(Event), uint16_t flags = EVENT_LISTENER_DEFAULT_FLAGS);
+   
+           ~Listener();
+   
+           void queue(Event e);
+       };
+   
+       template <typename T>
+       Listener::Listener(uint16_t id, uint16_t value, T* object, void (T::*method)(Event), uint16_t flags)
+       {
+           this->id = id;
+           this->value = value;
+           this->cb_method = new MemberFunctionCallback(object, method);
+           this->cb_arg = NULL;
+           this->flags = flags | MESSAGE_BUS_LISTENER_METHOD;
+           this->evt_queue = NULL;
+           this->next = NULL;
+       }
+   }
+   
+   #endif

@@ -1,0 +1,91 @@
+
+.. _program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalCompat.h:
+
+Program Listing for File CodalCompat.h
+======================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalCompat.h>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/core/CodalCompat.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   /*
+   The MIT License (MIT)
+   
+   Copyright (c) 2017 Lancaster University.
+   
+   Permission is hereby granted, free of charge, to any person obtaining a
+   copy of this software and associated documentation files (the "Software"),
+   to deal in the Software without restriction, including without limitation
+   the rights to use, copy, modify, merge, publish, distribute, sublicense,
+   and/or sell copies of the Software, and to permit persons to whom the
+   Software is furnished to do so, subject to the following conditions:
+   
+   The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+   
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+   THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+   */
+   
+   #ifndef DEVICE_COMPAT_H
+   #define DEVICE_COMPAT_H
+   
+   #include "CodalConfig.h"
+   
+   #ifndef PI
+   #define PI 3.14159265359
+   #endif
+   
+   // Required for gcc 6+
+   #undef min
+   #undef max
+   
+   namespace codal
+   {
+       inline int min(int a, int b)
+       {
+           return (a < b ? a : b);
+       }
+   
+       inline int max(int a, int b)
+       {
+           return (a > b ? a : b);
+       }
+   
+       inline void *memclr(void *a, size_t b)
+       {
+           return memset(a,0,b);
+       }
+   
+       inline bool isdigit(char c)
+       {
+           return (c > 47 && c < 58);
+       }
+   
+       inline uint8_t high(uint16_t val)
+       {
+           return val >> 8;
+       }
+   
+       inline uint8_t low(uint16_t val)
+       {
+           return val & 0xFF;
+       }
+   
+       int string_reverse(char *s);
+   
+       int itoa(int n, char *s);
+   
+       int seed_random(uint32_t random);
+   
+       int random(int max);
+   }
+   
+   #endif

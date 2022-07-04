@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitPowerManager_8h_1ab5345f83c739bdaff0f45bfcfd8b364a:
+
+Define MICROBIT_UIPM_COMMAND_READ_RESPONSE
+==========================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitPowerManager.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_UIPM_COMMAND_READ_RESPONSE
+   :project: CODAL

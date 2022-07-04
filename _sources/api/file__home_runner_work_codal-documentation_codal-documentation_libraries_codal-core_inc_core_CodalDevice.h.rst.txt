@@ -1,0 +1,75 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalDevice.h:
+
+File CodalDevice.h
+==================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/core``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/core/CodalDevice.h``)
+----------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalDevice.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``CodalConfig.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h`)
+
+- ``CodalFiber.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalFiber.h`)
+
+- ``ErrorNo.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_ErrorNo.h`)
+
+- ``codal_target_hal.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_codal_target_hal.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitDevice.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_SPIFlash.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_RefCounted.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalDevice.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalHeapAllocator.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_types_RefCounted.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_types_RefCountedInit.cpp`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_codal`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classcodal_1_1CodalDevice`
+

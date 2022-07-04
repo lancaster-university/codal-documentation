@@ -1,0 +1,172 @@
+
+.. _program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalFiber.h:
+
+Program Listing for File CodalFiber.h
+=====================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalFiber.h>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/core/CodalFiber.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   /*
+   The MIT License (MIT)
+   
+   Copyright (c) 2017 Lancaster University.
+   
+   Permission is hereby granted, free of charge, to any person obtaining a
+   copy of this software and associated documentation files (the "Software"),
+   to deal in the Software without restriction, including without limitation
+   the rights to use, copy, modify, merge, publish, distribute, sublicense,
+   and/or sell copies of the Software, and to permit persons to whom the
+   Software is furnished to do so, subject to the following conditions:
+   
+   The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+   
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+   THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+   */
+   
+   #ifndef CODAL_FIBER_H
+   #define CODAL_FIBER_H
+   
+   #include "CodalConfig.h"
+   #include "Event.h"
+   #include "EventModel.h"
+   #include "codal_target_hal.h"
+   
+   // Fiber Scheduler Flags
+   #define DEVICE_SCHEDULER_RUNNING            0x01
+   #define DEVICE_SCHEDULER_IDLE               0x02
+   #define DEVICE_SCHEDULER_DEEPSLEEP          0x04
+   
+   // Fiber Flags
+   #define DEVICE_FIBER_FLAG_FOB               0x01
+   #define DEVICE_FIBER_FLAG_PARENT            0x02
+   #define DEVICE_FIBER_FLAG_CHILD             0x04
+   #define DEVICE_FIBER_FLAG_DO_NOT_PAGE       0x08
+   
+   #define DEVICE_SCHEDULER_EVT_TICK           1
+   #define DEVICE_SCHEDULER_EVT_IDLE           2
+   
+   #define DEVICE_GET_FIBER_LIST_AVAILABLE     1
+   
+   
+   namespace codal
+   {
+       struct Fiber
+       {
+           void* tcb;                          // Thread context when last scheduled out.
+           PROCESSOR_WORD_TYPE stack_bottom;   // The start address of this Fiber's stack. The stack is heap allocated, and full descending.
+           PROCESSOR_WORD_TYPE stack_top;      // The end address of this Fiber's stack.
+           uint32_t context;                   // Context specific information.
+           uint32_t flags;                     // Information about this fiber.
+           Fiber **queue;                      // The queue this fiber is stored on.
+           Fiber *qnext, *qprev;               // Position of this Fiber on the run queue.
+           Fiber *next;                        // Position of this Fiber on the global list of fibers.
+           #if CONFIG_ENABLED(DEVICE_FIBER_USER_DATA)
+           void *user_data;
+           #endif
+       };
+   
+       extern Fiber *currentFiber;
+   
+       void scheduler_init(EventModel &_messageBus);
+   
+       int fiber_scheduler_running();
+   
+       Fiber* get_fiber_list();
+   
+       void release_fiber(void);
+       void release_fiber(void *param);
+   
+       void launch_new_fiber(void (*ep)(void), void (*cp)(void))
+       #ifdef __GCC__
+           __attribute__((naked))
+       #endif
+       ;
+   
+       void launch_new_fiber_param(void (*ep)(void *), void (*cp)(void *), void *pm)
+       #ifdef __GCC__
+           __attribute__((naked))
+       #endif
+       ;
+   
+       Fiber *create_fiber(void (*entry_fn)(void), void (*completion_fn)(void) = release_fiber);
+   
+   
+       Fiber *create_fiber(void (*entry_fn)(void *), void *param, void (*completion_fn)(void *) = release_fiber);
+   
+   
+       void schedule()
+       #ifdef __GCC__
+           __attribute__((naked))
+       #endif
+       ;
+   
+       void fiber_sleep(unsigned long t);
+   
+       void scheduler_tick(Event);
+   
+       int fiber_wait_for_event(uint16_t id, uint16_t value);
+   
+       int fiber_wake_on_event(uint16_t id, uint16_t value);
+   
+       int invoke(void (*entry_fn)(void));
+   
+       int invoke(void (*entry_fn)(void *), void *param);
+   
+       inline void verify_stack_size(Fiber *f);
+   
+       void scheduler_event(Event evt);
+   
+       int scheduler_runqueue_empty();
+   
+       int scheduler_waitqueue_empty();
+   
+       void queue_fiber(Fiber *f, Fiber **queue);
+   
+       void dequeue_fiber(Fiber *f);
+   
+       void idle();
+   
+       void idle_task();
+   
+       int fiber_scheduler_get_deepsleep_pending();
+   
+       void fiber_scheduler_set_deepsleep_pending( int pending);
+   
+       class FiberLock
+       {
+           private:
+           int     locked;
+           Fiber   *queue;
+   
+           public:
+   
+           FiberLock();
+   
+           void wait();
+   
+           void notify();
+   
+           void notifyAll();
+   
+           int getWaitCount();
+       };
+   }
+   
+   
+   extern "C" void swap_context(void* from_tcb, PROCESSOR_WORD_TYPE from_stack, void* to_tcb, PROCESSOR_WORD_TYPE to_stack);
+   extern "C" void save_context(void* tcb, PROCESSOR_WORD_TYPE stack);
+   extern "C" void save_register_context(void* tcb);
+   extern "C" void restore_register_context(void* tcb);
+   
+   #endif

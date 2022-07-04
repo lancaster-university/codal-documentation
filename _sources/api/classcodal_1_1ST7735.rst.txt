@@ -1,0 +1,32 @@
+.. _exhale_class_classcodal_1_1ST7735:
+
+Class ST7735
+============
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_ST7735.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public codal::CodalComponent`` (:ref:`exhale_class_classcodal_1_1CodalComponent`)
+
+
+Derived Type
+************
+
+- ``public codal::ILI9341`` (:ref:`exhale_class_classcodal_1_1ILI9341`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: codal::ST7735
+   :project: CODAL
+   :members:
+   :protected-members:
+   :undoc-members:

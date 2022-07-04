@@ -1,0 +1,14 @@
+.. _exhale_define_CodalComponent_8h_1ac0a0dd5ed7e0c47440f9a65ac0ec40fa:
+
+Define DEVICE_ID_PULSE_IN
+=========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalComponent.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DEVICE_ID_PULSE_IN
+   :project: CODAL

@@ -1,0 +1,14 @@
+.. _exhale_define_USB__HID__Keys_8h_1a2fedfb4e713aeffa63add6fbf93a30c3:
+
+Define KEY_MEDIA_BACK
+=====================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USB_HID_Keys.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: KEY_MEDIA_BACK
+   :project: CODAL

@@ -1,0 +1,14 @@
+.. _exhale_define_ExternalEvents_8h_1aec8810cd7be83e7eca64df3e4e8d2103:
+
+Define MICROBIT_ID_BLE_UART
+===========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_ExternalEvents.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_ID_BLE_UART
+   :project: CODAL

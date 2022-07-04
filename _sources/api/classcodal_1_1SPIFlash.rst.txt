@@ -1,0 +1,26 @@
+.. _exhale_class_classcodal_1_1SPIFlash:
+
+Class SPIFlash
+==============
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_SPIFlash.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Derived Type
+************
+
+- ``public codal::StandardSPIFlash`` (:ref:`exhale_class_classcodal_1_1StandardSPIFlash`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: codal::SPIFlash
+   :project: CODAL
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,14 @@
+.. _exhale_define_MPU6050_8h_1a62df233c92e828ee6fdbea99d47c8138:
+
+Define MPU6050_WHOAMI
+=====================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MPU6050.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MPU6050_WHOAMI
+   :project: CODAL

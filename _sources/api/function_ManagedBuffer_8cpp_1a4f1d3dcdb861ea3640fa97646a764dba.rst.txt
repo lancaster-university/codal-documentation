@@ -1,0 +1,14 @@
+.. _exhale_function_ManagedBuffer_8cpp_1a4f1d3dcdb861ea3640fa97646a764dba:
+
+Function REF_COUNTED_DEF_EMPTY(0, 0)
+====================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_types_ManagedBuffer.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: REF_COUNTED_DEF_EMPTY(0, 0)
+   :project: CODAL

@@ -1,0 +1,14 @@
+.. _exhale_define_Pin_8h_1ae72c67e9ff3db1d82f88668914335896:
+
+Define DEVICE_PIN_INTERRUPT_ON_EDGE
+===================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Pin.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DEVICE_PIN_INTERRUPT_ON_EDGE
+   :project: CODAL

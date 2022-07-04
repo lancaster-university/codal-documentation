@@ -1,0 +1,49 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalHeapAllocator.cpp:
+
+File CodalHeapAllocator.cpp
+===========================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/source/core``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/source/core/CodalHeapAllocator.cpp``)
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalHeapAllocator.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``CodalCompat.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalCompat.h`)
+
+- ``CodalConfig.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h`)
+
+- ``CodalDevice.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalDevice.h`)
+
+- ``CodalDmesg.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalDmesg.h`)
+
+- ``CodalHeapAllocator.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalHeapAllocator.h`)
+
+- ``ErrorNo.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_ErrorNo.h`)
+
+- ``platform_includes.h``
+
+
+
+
+

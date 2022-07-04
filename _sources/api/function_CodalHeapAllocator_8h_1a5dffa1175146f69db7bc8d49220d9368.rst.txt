@@ -1,0 +1,14 @@
+.. _exhale_function_CodalHeapAllocator_8h_1a5dffa1175146f69db7bc8d49220d9368:
+
+Function device_malloc
+======================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalHeapAllocator.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: device_malloc(size_t)
+   :project: CODAL

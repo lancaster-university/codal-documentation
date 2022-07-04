@@ -1,0 +1,539 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>File MicroBitConfig.h &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL Documentation
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../getting-started.html">
+   Getting Started with CODAL
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../components/index.html">
+   Components
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/display.html">
+     Display
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/mic-and-speaker.html">
+     Microphone and Speaker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/edge-connector.html">
+     Edge Connector
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/sensors.html">
+     Sensors
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/codal-projects.html">
+     CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../codal-api.html">
+   The Complete CODAL API
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitconfig-h">
+   Definition (
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     /home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/MicroBitConfig.h
+    </span>
+   </code>
+   )
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#includes">
+   Includes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#included-by">
+   Included By
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defines">
+   Defines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables">
+   Variables
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>File MicroBitConfig.h</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitconfig-h">
+   Definition (
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     /home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/MicroBitConfig.h
+    </span>
+   </code>
+   )
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#includes">
+   Includes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#included-by">
+   Included By
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defines">
+   Defines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables">
+   Variables
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="file-microbitconfig-h">
+<span id="file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitconfig-h"></span><h1>File MicroBitConfig.h<a class="headerlink" href="#file-microbitconfig-h" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc.html#dir-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc</span></code>)</p>
+<div class="contents local topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitconfig-h" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/MicroBitConfig.h</span></code>)</a></p></li>
+<li><p><a class="reference internal" href="#includes" id="id2">Includes</a></p></li>
+<li><p><a class="reference internal" href="#included-by" id="id3">Included By</a></p></li>
+<li><p><a class="reference internal" href="#defines" id="id4">Defines</a></p></li>
+<li><p><a class="reference internal" href="#variables" id="id5">Variables</a></p></li>
+</ul>
+</div>
+<section id="definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitconfig-h">
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/MicroBitConfig.h</span></code>)<a class="headerlink" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitconfig-h" title="Permalink to this headline">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitConfig.h.html">Program Listing for File MicroBitConfig.h</a></li>
+</ul>
+</div>
+</section>
+<section id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CodalConfig.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-codalconfig-h"><span class="std std-ref">File CodalConfig.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MicroBitCompat.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-microbitcompat-h"><span class="std std-ref">File MicroBitCompat.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">yotta_cfg_mappings.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_yotta_cfg_mappings.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-yotta-cfg-mappings-h"><span class="std std-ref">File yotta_cfg_mappings.h</span></a>)</p></li>
+</ul>
+</section>
+<section id="included-by">
+<h2>Included By<a class="headerlink" href="#included-by" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitAccelerometerService.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-bluetooth-microbitaccelerometerservice-h"><span class="std std-ref">File MicroBitAccelerometerService.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitBLEManager.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-bluetooth-microbitblemanager-h"><span class="std std-ref">File MicroBitBLEManager.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitBLETypes.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-bluetooth-microbitbletypes-h"><span class="std std-ref">File MicroBitBLETypes.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitButtonService.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-bluetooth-microbitbuttonservice-h"><span class="std std-ref">File MicroBitButtonService.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitEddystone.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-bluetooth-microbiteddystone-h"><span class="std std-ref">File MicroBitEddystone.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitEventService.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-bluetooth-microbiteventservice-h"><span class="std std-ref">File MicroBitEventService.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitIOPinService.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-bluetooth-microbitiopinservice-h"><span class="std std-ref">File MicroBitIOPinService.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitLEDService.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-bluetooth-microbitledservice-h"><span class="std std-ref">File MicroBitLEDService.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitMagnetometerService.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-bluetooth-microbitmagnetometerservice-h"><span class="std std-ref">File MicroBitMagnetometerService.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitPartialFlashingService.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-bluetooth-microbitpartialflashingservice-h"><span class="std std-ref">File MicroBitPartialFlashingService.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitTemperatureService.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-bluetooth-microbittemperatureservice-h"><span class="std std-ref">File MicroBitTemperatureService.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitUARTService.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-bluetooth-microbituartservice-h"><span class="std std-ref">File MicroBitUARTService.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitBLEChar.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitblechar-h"><span class="std std-ref">File MicroBitBLEChar.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitBLEService.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitbleservice-h"><span class="std std-ref">File MicroBitBLEService.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitBLEServices.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitbleservices-h"><span class="std std-ref">File MicroBitBLEServices.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitCompass.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitcompass-h"><span class="std std-ref">File MicroBitCompass.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitDevice.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitdevice-h"><span class="std std-ref">File MicroBitDevice.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitFile.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitfile-h"><span class="std std-ref">File MicroBitFile.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitFileSystem.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitfilesystem-h"><span class="std std-ref">File MicroBitFileSystem.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitUSBFlashManager.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitusbflashmanager-h"><span class="std std-ref">File MicroBitUSBFlashManager.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitPowerManager.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitpowermanager-h"><span class="std std-ref">File MicroBitPowerManager.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitMemoryMap.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitmemorymap-h"><span class="std std-ref">File MicroBitMemoryMap.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitAccelerometerService.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-bluetooth-microbitaccelerometerservice-cpp"><span class="std std-ref">File MicroBitAccelerometerService.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLEChar.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-bluetooth-microbitblechar-cpp"><span class="std std-ref">File MicroBitBLEChar.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLEManager.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-bluetooth-microbitblemanager-cpp"><span class="std std-ref">File MicroBitBLEManager.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLEService.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-bluetooth-microbitbleservice-cpp"><span class="std std-ref">File MicroBitBLEService.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLEServices.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-bluetooth-microbitbleservices-cpp"><span class="std std-ref">File MicroBitBLEServices.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLETypes.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-bluetooth-microbitbletypes-cpp"><span class="std std-ref">File MicroBitBLETypes.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitButtonService.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-bluetooth-microbitbuttonservice-cpp"><span class="std std-ref">File MicroBitButtonService.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitEddystone.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-bluetooth-microbiteddystone-cpp"><span class="std std-ref">File MicroBitEddystone.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitEventService.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-bluetooth-microbiteventservice-cpp"><span class="std std-ref">File MicroBitEventService.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitIOPinService.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-bluetooth-microbitiopinservice-cpp"><span class="std std-ref">File MicroBitIOPinService.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitLEDService.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-bluetooth-microbitledservice-cpp"><span class="std std-ref">File MicroBitLEDService.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitMagnetometerService.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-bluetooth-microbitmagnetometerservice-cpp"><span class="std std-ref">File MicroBitMagnetometerService.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitPartialFlashingService.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-bluetooth-microbitpartialflashingservice-cpp"><span class="std std-ref">File MicroBitPartialFlashingService.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitTemperatureService.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-bluetooth-microbittemperatureservice-cpp"><span class="std std-ref">File MicroBitTemperatureService.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitUARTService.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-bluetooth-microbituartservice-cpp"><span class="std std-ref">File MicroBitUARTService.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitCompassCalibrator.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-microbitcompasscalibrator-cpp"><span class="std std-ref">File MicroBitCompassCalibrator.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitDevice.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-microbitdevice-cpp"><span class="std std-ref">File MicroBitDevice.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitFileSystem.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-microbitfilesystem-cpp"><span class="std std-ref">File MicroBitFileSystem.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitFlash.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-microbitflash-cpp"><span class="std std-ref">File MicroBitFlash.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitMemoryMap.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-microbitmemorymap-cpp"><span class="std std-ref">File MicroBitMemoryMap.cpp</span></a></p></li>
+</ul>
+</section>
+<section id="defines">
+<h2>Defines<a class="headerlink" href="#defines" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1aa74ff327dced52df9e3698e8c433837d.html#exhale-define-microbitconfig-8h-1aa74ff327dced52df9e3698e8c433837d"><span class="std std-ref">Define __MICROBIT_CONFIG_CAT</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1a7c6f6f710cccd88b057569f60c219aed.html#exhale-define-microbitconfig-8h-1a7c6f6f710cccd88b057569f60c219aed"><span class="std std-ref">Define __MICROBIT_CONFIG_SECURITY_MODE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1ac715f59afd3d9a145556a5df9441f2d0.html#exhale-define-microbitconfig-8h-1ac715f59afd3d9a145556a5df9441f2d0"><span class="std std-ref">Define __MICROBIT_CONFIG_SECURITY_MODE_ENCRYPTION_NO_MITM</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1af583a74c5573eb666253ca530c68d134.html#exhale-define-microbitconfig-8h-1af583a74c5573eb666253ca530c68d134"><span class="std std-ref">Define __MICROBIT_CONFIG_SECURITY_MODE_ENCRYPTION_OPEN_LINK</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1a2cab3ad099802d14d355f85bc7b573de.html#exhale-define-microbitconfig-8h-1a2cab3ad099802d14d355f85bc7b573de"><span class="std std-ref">Define __MICROBIT_CONFIG_SECURITY_MODE_ENCRYPTION_WITH_MITM</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1a589bf657a12cd5fef241d161d55e9c6e.html#exhale-define-microbitconfig-8h-1a589bf657a12cd5fef241d161d55e9c6e"><span class="std std-ref">Define __MICROBIT_CONFIG_SECURITY_MODE_IS</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1a5540377ea1f6c884db1aa2304948e3f3.html#exhale-define-microbitconfig-8h-1a5540377ea1f6c884db1aa2304948e3f3"><span class="std std-ref">Define BLE_BOND_DATA_PAGE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1ab03ee0ddc526579de09abf10a7afe0e5.html#exhale-define-microbitconfig-8h-1ab03ee0ddc526579de09abf10a7afe0e5"><span class="std std-ref">Define DEFAULT_SCRATCH_PAGE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1adaf6d0b06ca86fd460aa2cb0b335c431.html#exhale-define-microbitconfig-8h-1adaf6d0b06ca86fd460aa2cb0b335c431"><span class="std std-ref">Define FLASH_PROGRAM_END</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1ad9407828bca57ae66fb89121574271fb.html#exhale-define-microbitconfig-8h-1ad9407828bca57ae66fb89121574271fb"><span class="std std-ref">Define KEY_VALUE_STORE_PAGE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1a5ad0608501c590372d51c5c9cbf925fa.html#exhale-define-microbitconfig-8h-1a5ad0608501c590372d51c5c9cbf925fa"><span class="std std-ref">Define MBFS_BLOCK_SIZE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1add77506dec7c6181d4c047885da3dbbd.html#exhale-define-microbitconfig-8h-1add77506dec7c6181d4c047885da3dbbd"><span class="std std-ref">Define MBFS_CACHE_SIZE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1a3a3bf48b18b247a9e02fde6cd2eea215.html#exhale-define-microbitconfig-8h-1a3a3bf48b18b247a9e02fde6cd2eea215"><span class="std std-ref">Define MICROBIT_APP_REGION_END</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1a79daefefcb6f006835ff7882244db04d.html#exhale-define-microbitconfig-8h-1a79daefefcb6f006835ff7882244db04d"><span class="std std-ref">Define MICROBIT_APP_REGION_START</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1ac39fa260a15bb37791081abba1350858.html#exhale-define-microbitconfig-8h-1ac39fa260a15bb37791081abba1350858"><span class="std std-ref">Define MICROBIT_BLE_ADVERTISING_INTERVAL</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1ac16e33e0588394eb986b591644e4c4ed.html#exhale-define-microbitconfig-8h-1ac16e33e0588394eb986b591644e4c4ed"><span class="std std-ref">Define MICROBIT_BLE_ADVERTISING_TIMEOUT</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1adadbd01089bab51dd7b0f6b9675d1d97.html#exhale-define-microbitconfig-8h-1adadbd01089bab51dd7b0f6b9675d1d97"><span class="std std-ref">Define MICROBIT_BLE_DEFAULT_TX_POWER</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1a9e6d9cd20027b63b675830bede1bd8f1.html#exhale-define-microbitconfig-8h-1a9e6d9cd20027b63b675830bede1bd8f1"><span class="std std-ref">Define MICROBIT_BLE_DEVICE_INFORMATION_SERVICE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1a0c4d4c50b67fc029fc54cc5e6f43a1ff.html#exhale-define-microbitconfig-8h-1a0c4d4c50b67fc029fc54cc5e6f43a1ff"><span class="std std-ref">Define MICROBIT_BLE_DFU_SERVICE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1a5fa10a6c596d3123116da67d41e53f8b.html#exhale-define-microbitconfig-8h-1a5fa10a6c596d3123116da67d41e53f8b"><span class="std std-ref">Define MICROBIT_BLE_ENABLED</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1ae4106a8ab22fd4376066461219904104.html#exhale-define-microbitconfig-8h-1ae4106a8ab22fd4376066461219904104"><span class="std std-ref">Define MICROBIT_BLE_NORDIC_STYLE_UART</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1a3bc2b92c9a71931b3c58c2636117a8fc.html#exhale-define-microbitconfig-8h-1a3bc2b92c9a71931b3c58c2636117a8fc"><span class="std std-ref">Define MICROBIT_BLE_OPEN</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1a00e93afabd32d1089a20628d90a55e60.html#exhale-define-microbitconfig-8h-1a00e93afabd32d1089a20628d90a55e60"><span class="std std-ref">Define MICROBIT_BLE_PAIRING_MODE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1afec4d4a46009b7fe7a3278629748a768.html#exhale-define-microbitconfig-8h-1afec4d4a46009b7fe7a3278629748a768"><span class="std std-ref">Define MICROBIT_BLE_PRIVATE_ADDRESSES</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1af02497cdfd4de499ba6b29a4574b92bd.html#exhale-define-microbitconfig-8h-1af02497cdfd4de499ba6b29a4574b92bd"><span class="std std-ref">Define MICROBIT_BLE_SECURITY_MODE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1ace6ba10f811e12bcb6b3e0401ee4d08e.html#exhale-define-microbitconfig-8h-1ace6ba10f811e12bcb6b3e0401ee4d08e"><span class="std std-ref">Define MICROBIT_BLE_WHITELIST</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1a71d7405c9a6be48af65d7d2ce60f83a3.html#exhale-define-microbitconfig-8h-1a71d7405c9a6be48af65d7d2ce60f83a3"><span class="std std-ref">Define MICROBIT_BOOTLOADER_ADDRESS</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1ab30d29dde96e45546e23c0936ba44230.html#exhale-define-microbitconfig-8h-1ab30d29dde96e45546e23c0936ba44230"><span class="std std-ref">Define MICROBIT_BOOTLOADER_SETTINGS</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1a79434d13a3fd9c98f159e4ae79fa1cd4.html#exhale-define-microbitconfig-8h-1a79434d13a3fd9c98f159e4ae79fa1cd4"><span class="std std-ref">Define MICROBIT_BOOTLOADER_SIZE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1a716c949ec6f607cc0e998ccb3559a7c6.html#exhale-define-microbitconfig-8h-1a716c949ec6f607cc0e998ccb3559a7c6"><span class="std std-ref">Define MICROBIT_CODEPAGESIZE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1afffda646af2188945a98cdaf46ff967d.html#exhale-define-microbitconfig-8h-1afffda646af2188945a98cdaf46ff967d"><span class="std std-ref">Define MICROBIT_CODESIZE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1a04c19f1af4cf56933d443de514f3bbad.html#exhale-define-microbitconfig-8h-1a04c19f1af4cf56933d443de514f3bbad"><span class="std std-ref">Define MICROBIT_DAL_VERSION</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1aafac8e20f4677a0f272493fb3ac33cbb.html#exhale-define-microbitconfig-8h-1aafac8e20f4677a0f272493fb3ac33cbb"><span class="std std-ref">Define MICROBIT_DEFAULT_SCRATCH_PAGE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1a8882f012c1650d16732ffd9a1f1b95ba.html#exhale-define-microbitconfig-8h-1a8882f012c1650d16732ffd9a1f1b95ba"><span class="std std-ref">Define MICROBIT_FDS_PAGE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1a6c0129ce2da64b792d24fbdc35492ad4.html#exhale-define-microbitconfig-8h-1a6c0129ce2da64b792d24fbdc35492ad4"><span class="std std-ref">Define MICROBIT_MBR_PARAMS</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1afc7d47da54875a57a11a9a39a8c7866c.html#exhale-define-microbitconfig-8h-1afc7d47da54875a57a11a9a39a8c7866c"><span class="std std-ref">Define MICROBIT_SOFTDEVICE_EXISTS</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1a6043e686582c4ee81d024c17ad9725dd.html#exhale-define-microbitconfig-8h-1a6043e686582c4ee81d024c17ad9725dd"><span class="std std-ref">Define MICROBIT_STORAGE_PAGE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1aa0ee0fb2d2539c03a6dce6e75401bb71.html#exhale-define-microbitconfig-8h-1aa0ee0fb2d2539c03a6dce6e75401bb71"><span class="std std-ref">Define MICROBIT_STORAGE_SCRATCH_PAGE</span></a></p></li>
+<li><p><a class="reference internal" href="define_MicroBitConfig_8h_1a7d467c1d283fdfa1f2081ba1e0d01b6e.html#exhale-define-microbitconfig-8h-1a7d467c1d283fdfa1f2081ba1e0d01b6e"><span class="std std-ref">Define PAGE_SIZE</span></a></p></li>
+</ul>
+</section>
+<section id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="variable_MicroBitConfig_8h_1af2f1997dcd84754aa02b42f6da78f39e.html#exhale-variable-microbitconfig-8h-1af2f1997dcd84754aa02b42f6da78f39e"><span class="std std-ref">Variable __data_end__</span></a></p></li>
+<li><p><a class="reference internal" href="variable_MicroBitConfig_8h_1ac7d0638cc79e0eeb9410c61bd54fffec.html#exhale-variable-microbitconfig-8h-1ac7d0638cc79e0eeb9410c61bd54fffec"><span class="std std-ref">Variable __data_start__</span></a></p></li>
+<li><p><a class="reference internal" href="variable_MicroBitConfig_8h_1ab13985c98bd6014b0c7a08d27d43ed59.html#exhale-variable-microbitconfig-8h-1ab13985c98bd6014b0c7a08d27d43ed59"><span class="std std-ref">Variable __etext</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

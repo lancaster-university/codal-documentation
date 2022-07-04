@@ -1,0 +1,14 @@
+.. _exhale_define_CodalConfig_8h_1ad71b97977a4ba3fad76502fe005bc60d:
+
+Define CODAL_ASSERT
+===================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CODAL_ASSERT
+   :project: CODAL

@@ -1,0 +1,14 @@
+.. _exhale_define_KeyValueStorage_8h_1aa51425759d930efcfe485059cae12a4c:
+
+Define KEY_VALUE_STORAGE_MAX_PAIRS
+==================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_KeyValueStorage.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: KEY_VALUE_STORAGE_MAX_PAIRS
+   :project: CODAL

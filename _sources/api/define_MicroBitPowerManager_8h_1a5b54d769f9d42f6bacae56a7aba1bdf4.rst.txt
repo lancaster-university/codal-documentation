@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitPowerManager_8h_1a5b54d769f9d42f6bacae56a7aba1bdf4:
+
+Define MICROBIT_UIPM_BAD_LENGTH
+===============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitPowerManager.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_UIPM_BAD_LENGTH
+   :project: CODAL

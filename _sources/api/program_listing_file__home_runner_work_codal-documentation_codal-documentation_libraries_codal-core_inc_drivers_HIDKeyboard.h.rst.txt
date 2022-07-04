@@ -1,0 +1,137 @@
+
+.. _program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_HIDKeyboard.h:
+
+Program Listing for File HIDKeyboard.h
+======================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_HIDKeyboard.h>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/drivers/HIDKeyboard.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   /*
+   The MIT License (MIT)
+   
+   Copyright (c) 2017 Lancaster University.
+   
+   Permission is hereby granted, free of charge, to any person obtaining a
+   copy of this software and associated documentation files (the "Software"),
+   to deal in the Software without restriction, including without limitation
+   the rights to use, copy, modify, merge, publish, distribute, sublicense,
+   and/or sell copies of the Software, and to permit persons to whom the
+   Software is furnished to do so, subject to the following conditions:
+   
+   The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+   
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+   THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+   */
+   
+   #ifndef DEVICE_HID_KEYBOARD_H
+   #define DEVICE_HID_KEYBOARD_H
+   
+   #include "HID.h"
+   #include "KeyMap.h"
+   #include "ManagedString.h"
+   
+   #if CONFIG_ENABLED(DEVICE_USB)
+   
+   //report 0 is empty
+   #define HID_KEYBOARD_NUM_REPORTS 3
+   
+   #define HID_KEYBOARD_REPORT_GENERIC 0x01
+   #define HID_KEYBOARD_REPORT_CONSUMER 0x02
+   #define HID_KEYBOARD_KEYSTATE_SIZE_GENERIC 0x08
+   #define HID_KEYBOARD_KEYSTATE_SIZE_CONSUMER 0x02
+   #define HID_KEYBOARD_MODIFIER_OFFSET 2
+   
+   #define HID_KEYBOARD_DELAY_DEFAULT 10
+   
+   namespace codal
+   {
+       enum KeyActionType
+       {
+           PressKey,
+           ReleaseKey
+       };
+   
+       typedef struct {
+           uint8_t reportID;
+           uint8_t *keyState;
+           uint8_t reportSize;
+           uint8_t keyPressedCount;
+       } HIDKeyboardReport;
+   
+       class USBHIDKeyboard : public USBHID
+       {
+           uint8_t keyStateGeneric[HID_KEYBOARD_KEYSTATE_SIZE_GENERIC];
+           uint8_t keyStateConsumer[HID_KEYBOARD_KEYSTATE_SIZE_CONSUMER];
+   
+           int updateReport(HIDKeyboardReport* report);
+   
+           int mediaKeyPress(Key k, KeyActionType action);
+   
+           int modifierKeyPress(Key k, KeyActionType action);
+   
+           int standardKeyPress(Key k, KeyActionType action);
+   
+           void initReports();
+   
+       public:
+   
+           USBHIDKeyboard();
+   
+           USBHIDKeyboard(KeyMap& k);
+   
+           int setKeyMap(KeyMap& map);
+   
+           int keyUp(Key k);
+   
+           int keyUp(MediaKey k);
+   
+           int keyUp(FunctionKey k);
+   
+           int keyUp(uint16_t c);
+   
+           int keyDown(Key k);
+   
+           int keyDown(MediaKey k);
+   
+           int keyDown(FunctionKey k);
+   
+           int keyDown(uint16_t c);
+   
+           int press(Key k);
+   
+           int press(MediaKey k);
+   
+           int press(FunctionKey k);
+   
+           int press(uint16_t c);
+   
+           int flush();
+   
+           int type(const KeySequence *seq);
+   
+           int type(const char* s, uint32_t len);
+   
+           int type(ManagedString s);
+   
+           HIDKeyboardReport reports[HID_KEYBOARD_NUM_REPORTS];
+   
+           virtual int stdRequest(UsbEndpointIn &ctrl, USBSetup& setup);
+           virtual const InterfaceInfo *getInterfaceInfo();
+       };
+   }
+   
+   
+   #endif
+   
+   #endif

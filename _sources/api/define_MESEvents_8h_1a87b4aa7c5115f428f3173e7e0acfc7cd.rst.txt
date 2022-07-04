@@ -1,0 +1,14 @@
+.. _exhale_define_MESEvents_8h_1a87b4aa7c5115f428f3173e7e0acfc7cd:
+
+Define MES_DPAD_BUTTON_1_UP
+===========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MESEvents.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MES_DPAD_BUTTON_1_UP
+   :project: CODAL

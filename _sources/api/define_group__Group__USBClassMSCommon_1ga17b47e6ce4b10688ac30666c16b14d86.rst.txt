@@ -1,0 +1,14 @@
+.. _exhale_define_group__Group__USBClassMSCommon_1ga17b47e6ce4b10688ac30666c16b14d86:
+
+Define SCSI_CMD_START_STOP_UNIT
+===============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USBMassStorageClass.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SCSI_CMD_START_STOP_UNIT
+   :project: CODAL

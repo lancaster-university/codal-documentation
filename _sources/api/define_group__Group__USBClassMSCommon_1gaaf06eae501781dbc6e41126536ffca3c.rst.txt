@@ -1,0 +1,14 @@
+.. _exhale_define_group__Group__USBClassMSCommon_1gaaf06eae501781dbc6e41126536ffca3c:
+
+Define SCSI_CMD_PREVENT_ALLOW_MEDIUM_REMOVAL
+============================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USBMassStorageClass.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SCSI_CMD_PREVENT_ALLOW_MEDIUM_REMOVAL
+   :project: CODAL

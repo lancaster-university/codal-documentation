@@ -1,0 +1,14 @@
+.. _exhale_define_MESEvents_8h_1a6c02c63d90733cd388ed36cfd997a2d4:
+
+Define MES_REMOTE_CONTROL_EVT_FORWARD
+=====================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MESEvents.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MES_REMOTE_CONTROL_EVT_FORWARD
+   :project: CODAL

@@ -1,0 +1,14 @@
+.. _exhale_function_CodalFiber_8h_1a569e1b46118d79a65a401cb15aa9b064:
+
+Function save_register_context
+==============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalFiber.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: save_register_context(void *)
+   :project: CODAL

@@ -1,0 +1,521 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>File Accelerometer.h &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL Documentation
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../getting-started.html">
+   Getting Started with CODAL
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../components/index.html">
+   Components
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/display.html">
+     Display
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/mic-and-speaker.html">
+     Microphone and Speaker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/edge-connector.html">
+     Edge Connector
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/sensors.html">
+     Sensors
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/codal-projects.html">
+     CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../codal-api.html">
+   The Complete CODAL API
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-driver-models-accelerometer-h">
+   Definition (
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     /home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/driver-models/Accelerometer.h
+    </span>
+   </code>
+   )
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#includes">
+   Includes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#included-by">
+   Included By
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#namespaces">
+   Namespaces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classes">
+   Classes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defines">
+   Defines
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>File Accelerometer.h</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-driver-models-accelerometer-h">
+   Definition (
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     /home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/driver-models/Accelerometer.h
+    </span>
+   </code>
+   )
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#includes">
+   Includes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#included-by">
+   Included By
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#namespaces">
+   Namespaces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classes">
+   Classes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defines">
+   Defines
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="file-accelerometer-h">
+<span id="file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-driver-models-accelerometer-h"></span><h1>File Accelerometer.h<a class="headerlink" href="#file-accelerometer-h" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models.html#dir-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-driver-models"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/driver-models</span></code>)</p>
+<div class="contents local topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-driver-models-accelerometer-h" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/driver-models/Accelerometer.h</span></code>)</a></p></li>
+<li><p><a class="reference internal" href="#includes" id="id2">Includes</a></p></li>
+<li><p><a class="reference internal" href="#included-by" id="id3">Included By</a></p></li>
+<li><p><a class="reference internal" href="#namespaces" id="id4">Namespaces</a></p></li>
+<li><p><a class="reference internal" href="#classes" id="id5">Classes</a></p></li>
+<li><p><a class="reference internal" href="#defines" id="id6">Defines</a></p></li>
+</ul>
+</div>
+<section id="definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-driver-models-accelerometer-h">
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/driver-models/Accelerometer.h</span></code>)<a class="headerlink" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-driver-models-accelerometer-h" title="Permalink to this headline">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Accelerometer.h.html">Program Listing for File Accelerometer.h</a></li>
+</ul>
+</div>
+</section>
+<section id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CodalComponent.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalComponent.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-codalcomponent-h"><span class="std std-ref">File CodalComponent.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CodalConfig.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-codalconfig-h"><span class="std std-ref">File CodalConfig.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CodalUtil.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalUtil.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-codalutil-h"><span class="std std-ref">File CodalUtil.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CoordinateSystem.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_CoordinateSystem.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-types-coordinatesystem-h"><span class="std std-ref">File CoordinateSystem.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Pin.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Pin.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-driver-models-pin-h"><span class="std std-ref">File Pin.h</span></a>)</p></li>
+</ul>
+</section>
+<section id="included-by">
+<h2>Included By<a class="headerlink" href="#included-by" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-microbitcompat-h"><span class="std std-ref">File MicroBitCompat.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitAccelerometer.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitaccelerometer-h"><span class="std std-ref">File MicroBitAccelerometer.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitCompassCalibrator.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitcompasscalibrator-h"><span class="std std-ref">File MicroBitCompassCalibrator.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Compass.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-driver-models-compass-h"><span class="std std-ref">File Compass.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_FXOS8700.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-drivers-fxos8700-h"><span class="std std-ref">File FXOS8700.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LIS3DH.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-drivers-lis3dh-h"><span class="std std-ref">File LIS3DH.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LSM303Accelerometer.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-drivers-lsm303accelerometer-h"><span class="std std-ref">File LSM303Accelerometer.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MAG3110.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-drivers-mag3110-h"><span class="std std-ref">File MAG3110.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MMA8653.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-drivers-mma8653-h"><span class="std std-ref">File MMA8653.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MPU6050.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-drivers-mpu6050-h"><span class="std std-ref">File MPU6050.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Accelerometer.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-driver-models-accelerometer-cpp"><span class="std std-ref">File Accelerometer.cpp</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_FXOS8700.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-fxos8700-cpp"><span class="std std-ref">File FXOS8700.cpp</span></a></p></li>
+</ul>
+</section>
+<section id="namespaces">
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="namespace_codal.html#namespace-codal"><span class="std std-ref">Namespace codal</span></a></p></li>
+</ul>
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="structcodal_1_1ShakeHistory.html#exhale-struct-structcodal-1-1shakehistory"><span class="std std-ref">Struct ShakeHistory</span></a></p></li>
+<li><p><a class="reference internal" href="classcodal_1_1Accelerometer.html#exhale-class-classcodal-1-1accelerometer"><span class="std std-ref">Class Accelerometer</span></a></p></li>
+</ul>
+</section>
+<section id="defines">
+<h2>Defines<a class="headerlink" href="#defines" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a1ca5da994850d4d805727608cce998ba.html#exhale-define-accelerometer-8h-1a1ca5da994850d4d805727608cce998ba"><span class="std std-ref">Define ACCELEROMETER_2G_THRESHOLD</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a834098fc5dadf61c6b31200bf0c4a579.html#exhale-define-accelerometer-8h-1a834098fc5dadf61c6b31200bf0c4a579"><span class="std std-ref">Define ACCELEROMETER_2G_TOLERANCE</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a8416dced24101a031baee73db6ef3ed9.html#exhale-define-accelerometer-8h-1a8416dced24101a031baee73db6ef3ed9"><span class="std std-ref">Define ACCELEROMETER_3G_THRESHOLD</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1ab5b236695f4ce894114691557f69ed72.html#exhale-define-accelerometer-8h-1ab5b236695f4ce894114691557f69ed72"><span class="std std-ref">Define ACCELEROMETER_3G_TOLERANCE</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1aecd0e8249e3360c1497dc927a52e74aa.html#exhale-define-accelerometer-8h-1aecd0e8249e3360c1497dc927a52e74aa"><span class="std std-ref">Define ACCELEROMETER_6G_THRESHOLD</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a513030f2a39abacf905ea9e25aedcad0.html#exhale-define-accelerometer-8h-1a513030f2a39abacf905ea9e25aedcad0"><span class="std std-ref">Define ACCELEROMETER_6G_TOLERANCE</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a2feec4cfcf7224a1f1bfdbf88a044af3.html#exhale-define-accelerometer-8h-1a2feec4cfcf7224a1f1bfdbf88a044af3"><span class="std std-ref">Define ACCELEROMETER_8G_THRESHOLD</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a7edf7581a9cf8cb2c38b9b832d32c002.html#exhale-define-accelerometer-8h-1a7edf7581a9cf8cb2c38b9b832d32c002"><span class="std std-ref">Define ACCELEROMETER_8G_TOLERANCE</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a04335abd5d44ffa3498479fd41169056.html#exhale-define-accelerometer-8h-1a04335abd5d44ffa3498479fd41169056"><span class="std std-ref">Define ACCELEROMETER_EVT_2G</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a069cb0e9c5f06571bdce13b38caac45d.html#exhale-define-accelerometer-8h-1a069cb0e9c5f06571bdce13b38caac45d"><span class="std std-ref">Define ACCELEROMETER_EVT_3G</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a13fca636a1ef6e9d852857b1aef09e30.html#exhale-define-accelerometer-8h-1a13fca636a1ef6e9d852857b1aef09e30"><span class="std std-ref">Define ACCELEROMETER_EVT_6G</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1aae42a3dd3aec139fcc58b35a828e05d5.html#exhale-define-accelerometer-8h-1aae42a3dd3aec139fcc58b35a828e05d5"><span class="std std-ref">Define ACCELEROMETER_EVT_8G</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a349b175859b5b132f0e76b48d0294b6a.html#exhale-define-accelerometer-8h-1a349b175859b5b132f0e76b48d0294b6a"><span class="std std-ref">Define ACCELEROMETER_EVT_DATA_UPDATE</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1ae0b53a662b4d70703c86e399147f3d2f.html#exhale-define-accelerometer-8h-1ae0b53a662b4d70703c86e399147f3d2f"><span class="std std-ref">Define ACCELEROMETER_EVT_FACE_DOWN</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a3df41c66ca2296d72b2b9178737c057d.html#exhale-define-accelerometer-8h-1a3df41c66ca2296d72b2b9178737c057d"><span class="std std-ref">Define ACCELEROMETER_EVT_FACE_UP</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a72b1b9b689ff4cbcbc6fe735237d23f4.html#exhale-define-accelerometer-8h-1a72b1b9b689ff4cbcbc6fe735237d23f4"><span class="std std-ref">Define ACCELEROMETER_EVT_FREEFALL</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a8bece5868ab61da1719b1abf2ed919b5.html#exhale-define-accelerometer-8h-1a8bece5868ab61da1719b1abf2ed919b5"><span class="std std-ref">Define ACCELEROMETER_EVT_NONE</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a6eeb5c625adbae6c14cae68439076461.html#exhale-define-accelerometer-8h-1a6eeb5c625adbae6c14cae68439076461"><span class="std std-ref">Define ACCELEROMETER_EVT_SHAKE</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1ae198720453d9cc4c3957438e70d1ed42.html#exhale-define-accelerometer-8h-1ae198720453d9cc4c3957438e70d1ed42"><span class="std std-ref">Define ACCELEROMETER_EVT_TILT_DOWN</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1ac03fe1e3d9e3bd256494a7abe4e36511.html#exhale-define-accelerometer-8h-1ac03fe1e3d9e3bd256494a7abe4e36511"><span class="std std-ref">Define ACCELEROMETER_EVT_TILT_LEFT</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a9009ac8617b68262d10ea33f44512a88.html#exhale-define-accelerometer-8h-1a9009ac8617b68262d10ea33f44512a88"><span class="std std-ref">Define ACCELEROMETER_EVT_TILT_RIGHT</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1ab1ac2d62805a9991234b85ced7544d2c.html#exhale-define-accelerometer-8h-1ab1ac2d62805a9991234b85ced7544d2c"><span class="std std-ref">Define ACCELEROMETER_EVT_TILT_UP</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a7a74a10f41d76cb630cd482d2fb10fc9.html#exhale-define-accelerometer-8h-1a7a74a10f41d76cb630cd482d2fb10fc9"><span class="std std-ref">Define ACCELEROMETER_FREEFALL_THRESHOLD</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a905927cf92f10635fa58f8c3ada73bbe.html#exhale-define-accelerometer-8h-1a905927cf92f10635fa58f8c3ada73bbe"><span class="std std-ref">Define ACCELEROMETER_FREEFALL_TOLERANCE</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a480003b54f8180adddf291cc2dbe833b.html#exhale-define-accelerometer-8h-1a480003b54f8180adddf291cc2dbe833b"><span class="std std-ref">Define ACCELEROMETER_GESTURE_DAMPING</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a1c18c9574d1d06fd4be4fd38abf51e28.html#exhale-define-accelerometer-8h-1a1c18c9574d1d06fd4be4fd38abf51e28"><span class="std std-ref">Define ACCELEROMETER_IMU_DATA_VALID</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a05146d567f7d6bc4eb36af32a936bdb1.html#exhale-define-accelerometer-8h-1a05146d567f7d6bc4eb36af32a936bdb1"><span class="std std-ref">Define ACCELEROMETER_REST_THRESHOLD</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a0d6f49fda296da4f9c998af91ac20e48.html#exhale-define-accelerometer-8h-1a0d6f49fda296da4f9c998af91ac20e48"><span class="std std-ref">Define ACCELEROMETER_REST_TOLERANCE</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a75ce1deb0032ea3ab4b09e3af3b09f1f.html#exhale-define-accelerometer-8h-1a75ce1deb0032ea3ab4b09e3af3b09f1f"><span class="std std-ref">Define ACCELEROMETER_SHAKE_COUNT_THRESHOLD</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a336f4ba069ae6896cf7d45d78ec38778.html#exhale-define-accelerometer-8h-1a336f4ba069ae6896cf7d45d78ec38778"><span class="std std-ref">Define ACCELEROMETER_SHAKE_DAMPING</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1a4939773c586875b1adc61a0e2b6c978c.html#exhale-define-accelerometer-8h-1a4939773c586875b1adc61a0e2b6c978c"><span class="std std-ref">Define ACCELEROMETER_SHAKE_RTX</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1afa5216c4c3445d67c4be5dd41da33dc2.html#exhale-define-accelerometer-8h-1afa5216c4c3445d67c4be5dd41da33dc2"><span class="std std-ref">Define ACCELEROMETER_SHAKE_TOLERANCE</span></a></p></li>
+<li><p><a class="reference internal" href="define_Accelerometer_8h_1ad7306933d2fa6cb18e1e1b6f51d004ef.html#exhale-define-accelerometer-8h-1ad7306933d2fa6cb18e1e1b6f51d004ef"><span class="std std-ref">Define ACCELEROMETER_TILT_TOLERANCE</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

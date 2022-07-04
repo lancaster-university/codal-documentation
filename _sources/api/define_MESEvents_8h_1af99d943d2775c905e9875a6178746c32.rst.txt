@@ -1,0 +1,14 @@
+.. _exhale_define_MESEvents_8h_1af99d943d2775c905e9875a6178746c32:
+
+Define MES_REMOTE_CONTROL_EVT_PREVTRACK
+=======================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MESEvents.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MES_REMOTE_CONTROL_EVT_PREVTRACK
+   :project: CODAL

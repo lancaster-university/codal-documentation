@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitBLETypes_8h_1a0f56beab65fbf7dee53bc803828af16f:
+
+Define MICROBIT_DMESG_LEVEL_ERROR
+=================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitBLETypes.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_DMESG_LEVEL_ERROR
+   :project: CODAL

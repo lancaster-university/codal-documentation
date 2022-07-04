@@ -1,0 +1,14 @@
+.. _exhale_define_FAT_8h_1a4bde0ff5eed1c751178be937ca818324:
+
+Define FAT_START_CLUSTERS
+=========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_FAT.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FAT_START_CLUSTERS
+   :project: CODAL

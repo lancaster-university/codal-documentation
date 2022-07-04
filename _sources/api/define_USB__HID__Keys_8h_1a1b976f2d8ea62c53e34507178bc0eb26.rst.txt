@@ -1,0 +1,14 @@
+.. _exhale_define_USB__HID__Keys_8h_1a1b976f2d8ea62c53e34507178bc0eb26:
+
+Define KEY_FIND
+===============
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USB_HID_Keys.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: KEY_FIND
+   :project: CODAL

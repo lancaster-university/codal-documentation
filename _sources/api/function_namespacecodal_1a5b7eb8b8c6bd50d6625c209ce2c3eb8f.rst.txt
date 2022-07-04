@@ -1,0 +1,14 @@
+.. _exhale_function_namespacecodal_1a5b7eb8b8c6bd50d6625c209ce2c3eb8f:
+
+Function codal::system_timer_deepsleep_end
+==========================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Timer.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: codal::system_timer_deepsleep_end(CODAL_TIMESTAMP, CODAL_TIMESTAMP)
+   :project: CODAL

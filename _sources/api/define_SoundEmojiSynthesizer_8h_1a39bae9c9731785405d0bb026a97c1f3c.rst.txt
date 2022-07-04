@@ -1,0 +1,14 @@
+.. _exhale_define_SoundEmojiSynthesizer_8h_1a39bae9c9731785405d0bb026a97c1f3c:
+
+Define DEVICE_ID_SOUND_EMOJI_SYNTHESIZER_4
+==========================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_SoundEmojiSynthesizer.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DEVICE_ID_SOUND_EMOJI_SYNTHESIZER_4
+   :project: CODAL

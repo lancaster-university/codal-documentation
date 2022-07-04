@@ -1,0 +1,14 @@
+.. _exhale_define_DataStream_8h_1a2c4028b9781d0fab52c7dbb96e4cae30:
+
+Define DATASTREAM_FORMAT_24BIT_SIGNED
+=====================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_DataStream.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DATASTREAM_FORMAT_24BIT_SIGNED
+   :project: CODAL

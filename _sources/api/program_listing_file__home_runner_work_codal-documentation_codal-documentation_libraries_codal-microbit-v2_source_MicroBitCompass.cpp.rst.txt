@@ -1,0 +1,163 @@
+
+.. _program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitCompass.cpp:
+
+Program Listing for File MicroBitCompass.cpp
+============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitCompass.cpp>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/source/MicroBitCompass.cpp``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   /*
+   The MIT License (MIT)
+   
+   Copyright (c) 2017 Lancaster University.
+   
+   Permission is hereby granted, free of charge, to any person obtaining a
+   copy of this software and associated documentation files (the "Software"),
+   to deal in the Software without restriction, including without limitation
+   the rights to use, copy, modify, merge, publish, distribute, sublicense,
+   and/or sell copies of the Software, and to permit persons to whom the
+   Software is furnished to do so, subject to the following conditions:
+   
+   The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+   
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+   THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+   */
+   
+   #include "MicroBitCompass.h"
+   #include "ErrorNo.h"
+   #include "MicroBitEvent.h"
+   #include "MicroBitCompat.h"
+   #include "MicroBitFiber.h"
+   #include "MicroBitDevice.h"
+   #include "LSM303Magnetometer.h"
+   
+   Compass* MicroBitCompass::driver;
+   
+   MicroBitCompass::MicroBitCompass(MicroBitI2C &i2c, uint16_t id) : Compass(MicroBitAccelerometer::coordinateSpace)
+   {
+       autoDetect(i2c);
+   }
+   
+   Compass& MicroBitCompass::autoDetect(MicroBitI2C &i2c)
+   {
+       /*
+        * In essence, the LSM needs at least 6.4ms from power-up before we can use it.
+        * https://github.com/microbit-foundation/codal-microbit/issues/33
+        */
+       target_wait(10);
+   
+       // We only have combined sensors, so rely on the accelerometer detection code to also detect the magnetomter.
+       MicroBitAccelerometer::autoDetect(i2c);
+   
+       // This should actually never happen (if the accelerometer fails, it already panics!), but its also checked here just in case
+       if( MicroBitCompass::driver == NULL )
+           target_panic( 51 ); // FixMe: This should be a constant from the PanicCode enum, but this is out of sync
+   
+       return *MicroBitCompass::driver;
+   }
+   
+   int MicroBitCompass::heading()
+   {
+       return driver->heading();
+   }
+   
+   int MicroBitCompass::getFieldStrength()
+   {
+       return driver->getFieldStrength();
+   }
+   
+   int MicroBitCompass::calibrate()
+   {
+       return driver->calibrate();
+   }
+   
+   void MicroBitCompass::setCalibration(CompassCalibration calibration)
+   {
+       return driver->setCalibration( calibration );
+   }
+   
+   CompassCalibration MicroBitCompass::getCalibration()
+   {
+       return driver->getCalibration();
+   }
+   
+   int MicroBitCompass::isCalibrated()
+   {
+       return driver->isCalibrated();
+   }
+   
+   int MicroBitCompass::isCalibrating()
+   {
+       return driver->isCalibrating();
+   }
+   
+   void MicroBitCompass::clearCalibration()
+   {
+       return driver->clearCalibration();
+   }
+   
+   int MicroBitCompass::configure()
+   {
+       return driver->configure();
+   }
+   
+   void MicroBitCompass::setAccelerometer(MicroBitAccelerometer &accelerometer)
+   {
+       return driver->setAccelerometer( accelerometer );
+   }
+   
+   int MicroBitCompass::setPeriod(int period)
+   {
+       return driver->setPeriod( period );
+   }
+   
+   int MicroBitCompass::getPeriod()
+   {
+       return driver->getPeriod();
+   }
+   
+   int MicroBitCompass::requestUpdate()
+   {
+       return driver->requestUpdate();
+   }
+   
+   Sample3D MicroBitCompass::getSample(CoordinateSystem coordinateSystem)
+   {
+       return driver->getSample( coordinateSystem );
+   }
+   
+   Sample3D MicroBitCompass::getSample()
+   {
+       return driver->getSample();
+   }
+   
+   int MicroBitCompass::getX()
+   {
+       return driver->getX();
+   }
+   
+   int MicroBitCompass::getY()
+   {
+       return driver->getY();
+   }
+   
+   int MicroBitCompass::getZ()
+   {
+       return driver->getZ();
+   }
+   
+   MicroBitCompass::~MicroBitCompass()
+   {
+   }
+   

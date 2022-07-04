@@ -1,0 +1,14 @@
+.. _exhale_variable_MMA8653_8h_1a185e76703f4494c50d149690ee8c4411:
+
+Variable MMA8653SampleRate
+==========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MMA8653.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: MMA8653SampleRate
+   :project: CODAL

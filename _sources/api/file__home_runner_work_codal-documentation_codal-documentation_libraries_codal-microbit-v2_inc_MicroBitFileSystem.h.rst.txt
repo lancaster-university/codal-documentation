@@ -1,0 +1,107 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitFileSystem.h:
+
+File MicroBitFileSystem.h
+=========================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/MicroBitFileSystem.h``)
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitFileSystem.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``MicroBitConfig.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitConfig.h`)
+
+- ``MicroBitFlash.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitFlash.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitFile.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitFileSystem.cpp`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structDirectory`
+
+- :ref:`exhale_struct_structDirectoryEntry`
+
+- :ref:`exhale_struct_structFileDescriptor`
+
+- :ref:`exhale_class_classMicroBitFileSystem`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_MicroBitFileSystem_8h_1a6987fd461bc9ac77db0a664b2028705b`
+
+- :ref:`exhale_define_MicroBitFileSystem_8h_1a43929f5c3bdf7e411bb59e8ed18579b3`
+
+- :ref:`exhale_define_MicroBitFileSystem_8h_1a9d34d7d43e5869ec57cae557eea1ee88`
+
+- :ref:`exhale_define_MicroBitFileSystem_8h_1a674a30896671cd494ae826376bbe701a`
+
+- :ref:`exhale_define_MicroBitFileSystem_8h_1a6365e1f431a0a3522009e77f3942534f`
+
+- :ref:`exhale_define_MicroBitFileSystem_8h_1a12627a9daa98f8f1dc4901d7957e67a1`
+
+- :ref:`exhale_define_MicroBitFileSystem_8h_1ae88681e474fff31afdd4589999bbe5a8`
+
+- :ref:`exhale_define_MicroBitFileSystem_8h_1a3a89ba596e5fb73d877404aaf02b5b3f`
+
+- :ref:`exhale_define_MicroBitFileSystem_8h_1a3762b9bd81020037a276cd4b14a88852`
+
+- :ref:`exhale_define_MicroBitFileSystem_8h_1a86cb0fa5bd3cdcad5ba8c5c1abfc0e2d`
+
+- :ref:`exhale_define_MicroBitFileSystem_8h_1aaf8ea2d1444a68d96eb07bcd9c1ffa0d`
+
+- :ref:`exhale_define_MicroBitFileSystem_8h_1a2436b7776da426e08cecd268fc14dcc6`
+
+- :ref:`exhale_define_MicroBitFileSystem_8h_1a103c0a0ef51f221dc82cfbfdceb5e80b`
+
+- :ref:`exhale_define_MicroBitFileSystem_8h_1afbc9842deca590f6e80fcf14b43eeaa1`
+
+- :ref:`exhale_define_MicroBitFileSystem_8h_1a2f2c9c866e7f5b95302ecbe4f18d7cee`
+
+- :ref:`exhale_define_MicroBitFileSystem_8h_1a45b1dae0921286d7df91f91f6806edbb`
+
+- :ref:`exhale_define_MicroBitFileSystem_8h_1ae46781a8f4480566d8ed4459c8cd94e8`
+
+- :ref:`exhale_define_MicroBitFileSystem_8h_1ab88c358d40f228d4b121ec47485d913d`
+
+- :ref:`exhale_define_MicroBitFileSystem_8h_1acb4e52a8c6b48ddb1af96f68d4af4f64`
+
+- :ref:`exhale_define_MicroBitFileSystem_8h_1ac0cb469aec57bbbcd1b1440b656d7edc`
+
+- :ref:`exhale_define_MicroBitFileSystem_8h_1a1d9e2003d5777ec472adebdc5de4c7d1`
+

@@ -1,0 +1,126 @@
+
+.. _program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_ManagedBuffer.h:
+
+Program Listing for File ManagedBuffer.h
+========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_ManagedBuffer.h>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/types/ManagedBuffer.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   /*
+   The MIT License (MIT)
+   
+   Copyright (c) 2017 Lancaster University.
+   
+   Permission is hereby granted, free of charge, to any person obtaining a
+   copy of this software and associated documentation files (the "Software"),
+   to deal in the Software without restriction, including without limitation
+   the rights to use, copy, modify, merge, publish, distribute, sublicense,
+   and/or sell copies of the Software, and to permit persons to whom the
+   Software is furnished to do so, subject to the following conditions:
+   
+   The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+   
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+   THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+   */
+   
+   #ifndef DEVICE_MANAGED_BUFFER_H
+   #define DEVICE_MANAGED_BUFFER_H
+   
+   #include "CodalCompat.h"
+   #include "RefCounted.h"
+   
+   namespace codal
+   {
+       struct BufferData : RefCounted
+       {
+           uint16_t        length;             // The length of the payload in bytes
+           uint8_t         payload[0];         // ManagedBuffer data
+       };
+   
+       enum class BufferInitialize : uint8_t
+       {
+           None = 0,
+           Zero
+       };
+   
+       class ManagedBuffer
+       {
+           BufferData      *ptr;     // Pointer to payload data
+   
+           public:
+   
+           ManagedBuffer();
+   
+           ManagedBuffer(int length, BufferInitialize initialize = BufferInitialize::Zero);
+   
+           ManagedBuffer(uint8_t *data, int length);
+   
+           ManagedBuffer(const ManagedBuffer &buffer);
+   
+           ManagedBuffer(BufferData *p);
+   
+           void initEmpty();
+   
+           void init(uint8_t *data, int length, BufferInitialize initialize);
+   
+           ~ManagedBuffer();
+   
+           uint8_t *getBytes()
+           {
+               return ptr->payload;
+           }
+   
+           BufferData *leakData();
+   
+           ManagedBuffer& operator = (const ManagedBuffer& p);
+   
+           uint8_t operator [] (int i) const
+           {
+               return ptr->payload[i];
+           }
+   
+           uint8_t& operator [] (int i)
+           {
+               return ptr->payload[i];
+           }
+   
+           bool operator== (const ManagedBuffer& p);
+   
+           int setByte(int position, uint8_t value);
+   
+           int getByte(int position);
+   
+           int length() const { return ptr->length; }
+   
+           int fill(uint8_t value, int offset = 0, int length = -1);
+   
+           ManagedBuffer slice(int offset = 0, int length = -1) const;
+   
+           void shift(int offset, int start = 0, int length = -1);
+   
+           void rotate(int offset, int start = 0, int length = -1);
+   
+           int readBytes(uint8_t *dst, int offset, int length, bool swapBytes = false) const;
+   
+           int writeBytes(int dstOffset, uint8_t *src, int length, bool swapBytes = false);
+   
+           int writeBuffer(int dstOffset, const ManagedBuffer &src, int srcOffset = 0, int length = -1);
+   
+           bool isReadOnly() const { return ptr->isReadOnly(); }
+   
+           int truncate(int length);
+       };
+   }
+   
+   #endif

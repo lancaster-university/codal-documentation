@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitAudio_8h_1af58705586ce61b4e1300b375de3af4a1:
+
+Define CONFIG_DEFAULT_MICROPHONE_GAIN
+=====================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitAudio.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CONFIG_DEFAULT_MICROPHONE_GAIN
+   :project: CODAL

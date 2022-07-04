@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitCompat_8h_1aaf4d28e23e5eea80fbce188b7a95e829:
+
+Define MICROBIT_SRAM_BASE
+=========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_SRAM_BASE
+   :project: CODAL

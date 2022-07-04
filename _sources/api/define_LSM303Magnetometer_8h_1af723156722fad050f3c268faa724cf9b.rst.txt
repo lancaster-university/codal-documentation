@@ -1,0 +1,14 @@
+.. _exhale_define_LSM303Magnetometer_8h_1af723156722fad050f3c268faa724cf9b:
+
+Define LSM303_M_STATUS_DATA_READY
+=================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LSM303Magnetometer.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LSM303_M_STATUS_DATA_READY
+   :project: CODAL

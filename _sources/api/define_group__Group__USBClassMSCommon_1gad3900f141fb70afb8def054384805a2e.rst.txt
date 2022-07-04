@@ -1,0 +1,14 @@
+.. _exhale_define_group__Group__USBClassMSCommon_1gad3900f141fb70afb8def054384805a2e:
+
+Define SCSI_CMD_READ_10
+=======================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USBMassStorageClass.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SCSI_CMD_READ_10
+   :project: CODAL

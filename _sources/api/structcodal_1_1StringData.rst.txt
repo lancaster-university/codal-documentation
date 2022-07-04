@@ -1,0 +1,26 @@
+.. _exhale_struct_structcodal_1_1StringData:
+
+Struct StringData
+=================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_ManagedString.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public codal::RefCounted`` (:ref:`exhale_struct_structcodal_1_1RefCounted`)
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: codal::StringData
+   :project: CODAL
+   :members:
+   :protected-members:
+   :undoc-members:

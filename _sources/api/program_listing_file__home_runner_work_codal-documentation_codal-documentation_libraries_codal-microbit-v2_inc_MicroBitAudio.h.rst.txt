@@ -1,0 +1,123 @@
+
+.. _program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitAudio.h:
+
+Program Listing for File MicroBitAudio.h
+========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitAudio.h>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/MicroBitAudio.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   /*
+   The MIT License (MIT)
+   
+   Copyright (c) 2017 Lancaster University.
+   
+   Permission is hereby granted, free of charge, to any person obtaining a
+   copy of this software and associated documentation files (the "Software"),
+   to deal in the Software without restriction, including without limitation
+   the rights to use, copy, modify, merge, publish, distribute, sublicense,
+   and/or sell copies of the Software, and to permit persons to whom the
+   Software is furnished to do so, subject to the following conditions:
+   
+   The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+   
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+   THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+   */
+   
+   #ifndef MICROBIT_AUDIO_H
+   #define MICROBIT_AUDIO_H
+   
+   #include "NRF52PWM.h"
+   #include "SoundEmojiSynthesizer.h"
+   #include "SoundExpressions.h"
+   #include "Mixer2.h"
+   #include "SoundOutputPin.h"
+   #include "StreamNormalizer.h"
+   #include "StreamSplitter.h"
+   #include "LevelDetector.h"
+   #include "LevelDetectorSPL.h"
+   
+   // Status Flags
+   #define MICROBIT_AUDIO_STATUS_DEEPSLEEP       0x0001
+   #define CONFIG_DEFAULT_MICROPHONE_GAIN 0.1f
+   
+   namespace codal
+   {
+       class MicroBitAudio : public CodalComponent
+       {
+           public:
+           static MicroBitAudio    *instance;      // Primary instance of MicroBitAudio, on demand activated.
+           Mixer2                  mixer;          // Multi channel audio mixer
+           NRF52ADCChannel *mic;                   // Microphone ADC Channel from uBit.IO
+           StreamNormalizer        *processor;     // Stream Normaliser instance
+           StreamSplitter          *splitter;      // Stream Splitter instance
+           LevelDetector           *level;         // Level Detector instance
+           LevelDetectorSPL        *levelSPL;      // Level Detector SPL instance
+   
+           private:
+           bool speakerEnabled;                    // State of on board speaker
+           bool pinEnabled;                        // State of on auxiliary output pin
+           NRF52Pin *pin;                          // Auxiliary pin to route audio to
+           NRF52Pin &speaker;                      // Primary pin for onboard speaker
+           SoundEmojiSynthesizer synth;            // Synthesizer used bfor SoundExpressions
+           MixerChannel *soundExpressionChannel;   // Mixer channel associated with sound expression audio
+           NRF52PWM *pwm;                          // PWM driver used for sound generation (mixer output)
+           NRF52ADC &adc;                          // ADC from MicroBitConstructor
+           NRF52Pin &microphone;                   // Microphone pin passed from MicroBit constructor
+           NRF52Pin &runmic;                       // Runmic pin passed from MicroBit constructor
+   
+           int micDriverTimeout;
+   
+           public:
+           SoundExpressions soundExpressions;      // SoundExpression intepreter
+           SoundOutputPin   virtualOutputPin;      // Virtual PWM channel (backward compatibility).
+   
+           MicroBitAudio(NRF52Pin &pin, NRF52Pin &speaker, NRF52ADC &adc, NRF52Pin &microphone, NRF52Pin &runmic);
+   
+           ~MicroBitAudio();
+   
+           static void requestActivation();
+   
+           void onSplitterEvent(MicroBitEvent);
+   
+           void activateMic();
+   
+           void deactivateMic();
+   
+           void deactivateLevelSPL();
+   
+           void setMicrophoneGain(int gain = 1);
+   
+           int enable();
+   
+           int disable();
+   
+           int getVolume();
+   
+           int setVolume(int volume);
+   
+           void setSpeakerEnabled(bool on);
+   
+           bool isSpeakerEnabled();
+   
+           void setPin(NRF52Pin &pin);
+   
+           void setPinEnabled(bool on);
+   
+           bool isPinEnabled();
+   
+           virtual int setSleep(bool doSleep) override;
+       };
+   }
+   
+   #endif

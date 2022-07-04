@@ -1,0 +1,14 @@
+.. _exhale_typedef_MicroBitCompass_8h_1ac796167a509cafaa09028025790929bc:
+
+Typedef CompassSample
+=====================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitCompass.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: CompassSample
+   :project: CODAL

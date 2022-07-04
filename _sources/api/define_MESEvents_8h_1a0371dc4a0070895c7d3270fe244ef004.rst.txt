@@ -1,0 +1,14 @@
+.. _exhale_define_MESEvents_8h_1a0371dc4a0070895c7d3270fe244ef004:
+
+Define MES_DEVICE_GESTURE_NONE
+==============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MESEvents.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MES_DEVICE_GESTURE_NONE
+   :project: CODAL

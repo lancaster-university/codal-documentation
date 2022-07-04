@@ -1,0 +1,14 @@
+.. _exhale_define_USB__HID__Keys_8h_1a02531bf28bf1c98caf3da055f22a08bd:
+
+Define KEY_NONE
+===============
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USB_HID_Keys.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: KEY_NONE
+   :project: CODAL

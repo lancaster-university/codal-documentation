@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitCompat_8h_1a2de5d6d3d57893e6ab344a9ff4ddd766:
+
+Define MICROBIT_ID_DISPLAY
+==========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_ID_DISPLAY
+   :project: CODAL

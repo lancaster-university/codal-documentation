@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitCompat_8h_1ae55a237880d0ca5b8c0e47cbdcbb574c:
+
+Define MICROBIT_SERIAL_EVT_RX_FULL
+==================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_SERIAL_EVT_RX_FULL
+   :project: CODAL

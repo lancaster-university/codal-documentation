@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitConfig_8h_1ae4106a8ab22fd4376066461219904104:
+
+Define MICROBIT_BLE_NORDIC_STYLE_UART
+=====================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_BLE_NORDIC_STYLE_UART
+   :project: CODAL

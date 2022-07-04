@@ -1,0 +1,14 @@
+.. _exhale_function_codal__target__hal_8h_1a84e3799e871f0b669390828e3482c02c:
+
+Function target_random
+======================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_codal_target_hal.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: target_random(int)
+   :project: CODAL

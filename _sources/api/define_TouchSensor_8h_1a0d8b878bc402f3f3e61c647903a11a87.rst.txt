@@ -1,0 +1,14 @@
+.. _exhale_define_TouchSensor_8h_1a0d8b878bc402f3f3e61c647903a11a87:
+
+Define TOUCH_SENSOR_SAMPLE_PERIOD
+=================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_TouchSensor.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: TOUCH_SENSOR_SAMPLE_PERIOD
+   :project: CODAL

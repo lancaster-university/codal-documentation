@@ -1,0 +1,14 @@
+.. _exhale_typedef_namespacecodal_1a3731f47723ab9c6b2e265bc589fbf5e9:
+
+Typedef codal::microbit_LEDMapFnRCtoXY
+======================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitDevice.cpp`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: codal::microbit_LEDMapFnRCtoXY
+   :project: CODAL

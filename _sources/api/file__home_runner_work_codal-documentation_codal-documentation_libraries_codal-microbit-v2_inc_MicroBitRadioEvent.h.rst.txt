@@ -1,0 +1,59 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitRadioEvent.h:
+
+File MicroBitRadioEvent.h
+=========================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/MicroBitRadioEvent.h``)
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitRadioEvent.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``MicroBitRadio.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitRadio.h`)
+
+- ``codal-core/inc/types/Event.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_Event.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitRadio.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_codal`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classcodal_1_1MicroBitRadioEvent`
+

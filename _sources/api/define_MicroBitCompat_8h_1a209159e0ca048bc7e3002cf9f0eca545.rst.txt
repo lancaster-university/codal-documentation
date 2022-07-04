@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitCompat_8h_1a209159e0ca048bc7e3002cf9f0eca545:
+
+Define MICROBIT_PIN_EVENT_NONE
+==============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_PIN_EVENT_NONE
+   :project: CODAL

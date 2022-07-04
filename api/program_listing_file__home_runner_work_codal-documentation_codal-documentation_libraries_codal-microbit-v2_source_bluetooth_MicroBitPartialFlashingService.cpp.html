@@ -1,0 +1,743 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Program Listing for File MicroBitPartialFlashingService.cpp &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL Documentation
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../getting-started.html">
+   Getting Started with CODAL
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../components/index.html">
+   Components
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/display.html">
+     Display
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/mic-and-speaker.html">
+     Microphone and Speaker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/edge-connector.html">
+     Edge Connector
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/sensors.html">
+     Sensors
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/codal-projects.html">
+     CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../codal-api.html">
+   The Complete CODAL API
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Program Listing for File MicroBitPartialFlashingService.cpp</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="program-listing-for-file-microbitpartialflashingservice-cpp">
+<span id="program-listing-file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-bluetooth-microbitpartialflashingservice-cpp"></span><h1>Program Listing for File MicroBitPartialFlashingService.cpp<a class="headerlink" href="#program-listing-for-file-microbitpartialflashingservice-cpp" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitPartialFlashingService.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-bluetooth-microbitpartialflashingservice-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/source/bluetooth/MicroBitPartialFlashingService.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm">The MIT License (MIT)</span>
+
+<span class="cm">Copyright (c) 2016 British Broadcasting Corporation.</span>
+<span class="cm">This software is provided by Lancaster University by arrangement with the BBC.</span>
+
+<span class="cm">Permission is hereby granted, free of charge, to any person obtaining a</span>
+<span class="cm">copy of this software and associated documentation files (the &quot;Software&quot;),</span>
+<span class="cm">to deal in the Software without restriction, including without limitation</span>
+<span class="cm">the rights to use, copy, modify, merge, publish, distribute, sublicense,</span>
+<span class="cm">and/or sell copies of the Software, and to permit persons to whom the</span>
+<span class="cm">Software is furnished to do so, subject to the following conditions:</span>
+
+<span class="cm">The above copyright notice and this permission notice shall be included in</span>
+<span class="cm">all copies or substantial portions of the Software.</span>
+
+<span class="cm">THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<span class="cm">IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
+<span class="cm">FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL</span>
+<span class="cm">THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span>
+<span class="cm">LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING</span>
+<span class="cm">FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER</span>
+<span class="cm">DEALINGS IN THE SOFTWARE.</span>
+<span class="cm">*/</span><span class="w"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MicroBitConfig.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#if CONFIG_ENABLED(DEVICE_BLE)</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MicroBitPartialFlashingService.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MicroBit.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;nrf_sdm.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;nrf_dfu_types.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;crc32.h&quot;</span><span class="cp"></span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">codal</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w">  </span><span class="n">MicroBitPartialFlashingService</span><span class="o">::</span><span class="n">base_uuid</span><span class="p">[</span><span class="w"> </span><span class="mi">16</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="p">{</span><span class="w"> </span><span class="mh">0xe9</span><span class="p">,</span><span class="mh">0x7d</span><span class="p">,</span><span class="mh">0x00</span><span class="p">,</span><span class="mh">0x00</span><span class="p">,</span><span class="mh">0x25</span><span class="p">,</span><span class="mh">0x1d</span><span class="p">,</span><span class="mh">0x47</span><span class="p">,</span><span class="mh">0x0a</span><span class="p">,</span><span class="mh">0xa0</span><span class="p">,</span><span class="mh">0x62</span><span class="p">,</span><span class="mh">0xfa</span><span class="p">,</span><span class="mh">0x19</span><span class="p">,</span><span class="mh">0x22</span><span class="p">,</span><span class="mh">0xdf</span><span class="p">,</span><span class="mh">0xa9</span><span class="p">,</span><span class="mh">0xa8</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+
+<span class="k">const</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">MicroBitPartialFlashingService</span><span class="o">::</span><span class="n">serviceUUID</span><span class="w">               </span><span class="o">=</span><span class="w"> </span><span class="mh">0xd91d</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">MicroBitPartialFlashingService</span><span class="o">::</span><span class="n">charUUID</span><span class="p">[</span><span class="w"> </span><span class="n">mbbs_cIdxCOUNT</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mh">0x3b10</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">micropython_fs_start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x00</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">micropython_fs_end</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mh">0x00</span><span class="p">;</span><span class="w"></span>
+
+<span class="n">MicroBitPartialFlashingService</span><span class="o">::</span><span class="n">MicroBitPartialFlashingService</span><span class="p">(</span><span class="w"> </span><span class="n">BLEDevice</span><span class="w"> </span><span class="o">&amp;</span><span class="n">_ble</span><span class="p">,</span><span class="w"> </span><span class="n">EventModel</span><span class="w"> </span><span class="o">&amp;</span><span class="n">_messageBus</span><span class="p">,</span><span class="w"> </span><span class="n">MicroBitStorage</span><span class="w"> </span><span class="o">&amp;</span><span class="n">_storage</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">messageBus</span><span class="p">(</span><span class="n">_messageBus</span><span class="p">),</span><span class="w"> </span><span class="n">storage</span><span class="p">(</span><span class="n">_storage</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Set up partial flashing characteristic</span>
+<span class="w">    </span><span class="n">memclr</span><span class="p">(</span><span class="w"> </span><span class="n">characteristicValue</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="w"> </span><span class="n">characteristicValue</span><span class="p">));</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Register the base UUID and create the service.</span>
+<span class="w">    </span><span class="n">RegisterBaseUUID</span><span class="p">(</span><span class="w"> </span><span class="n">base_uuid</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">CreateService</span><span class="p">(</span><span class="w"> </span><span class="n">serviceUUID</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">CreateCharacteristic</span><span class="p">(</span><span class="w"> </span><span class="n">mbbs_cIdxCTRL</span><span class="p">,</span><span class="w"> </span><span class="n">charUUID</span><span class="p">[</span><span class="w"> </span><span class="n">mbbs_cIdxCTRL</span><span class="p">],</span><span class="w"></span>
+<span class="w">                         </span><span class="n">characteristicValue</span><span class="p">,</span><span class="w"></span>
+<span class="w">                         </span><span class="k">sizeof</span><span class="p">(</span><span class="n">characteristicValue</span><span class="p">),</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">characteristicValue</span><span class="p">),</span><span class="w"></span>
+<span class="w">                         </span><span class="n">microbit_propWRITE_WITHOUT</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">microbit_propNOTIFY</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Set up listener for SD writing</span>
+<span class="w">    </span><span class="n">messageBus</span><span class="p">.</span><span class="n">listen</span><span class="p">(</span><span class="w"> </span><span class="n">MICROBIT_ID_PARTIAL_FLASHING</span><span class="p">,</span><span class="w"> </span><span class="n">MICROBIT_EVT_ANY</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">MicroBitPartialFlashingService</span><span class="o">::</span><span class="n">partialFlashingEvent</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MicroBitPartialFlashingService</span><span class="o">::</span><span class="n">onDataWritten</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">microbit_ble_evt_write_t</span><span class="w"> </span><span class="o">*</span><span class="n">params</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Get data from BLE callback params</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">params</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">params</span><span class="o">-&gt;</span><span class="n">handle</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">valueHandle</span><span class="p">(</span><span class="w"> </span><span class="n">mbbs_cIdxCTRL</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">params</span><span class="o">-&gt;</span><span class="n">len</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// Switch CONTROL byte</span>
+<span class="w">      </span><span class="k">switch</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]){</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">REGION_INFO</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="c1">// Create instance of Memory Map to return info</span>
+<span class="w">          </span><span class="n">MicroBitMemoryMap</span><span class="w"> </span><span class="n">memoryMap</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">          </span><span class="c1">// Get and set MicroPython FS start/end</span>
+<span class="w">          </span><span class="c1">// Region with id 3 is MicroPython FS</span>
+<span class="w">          </span><span class="k">if</span><span class="p">(</span><span class="n">micropython_fs_end</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">0x00</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"></span>
+<span class="w">             </span><span class="n">memoryMap</span><span class="p">.</span><span class="n">memoryMapStore</span><span class="p">.</span><span class="n">memoryMap</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">startAddress</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mh">0x00</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"></span>
+<span class="w">             </span><span class="n">memoryMap</span><span class="p">.</span><span class="n">memoryMapStore</span><span class="p">.</span><span class="n">memoryMap</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">regionId</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">REGION_PYTHON</span><span class="w"></span>
+<span class="w">             </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">micropython_fs_start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">memoryMap</span><span class="p">.</span><span class="n">memoryMapStore</span><span class="p">.</span><span class="n">memoryMap</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">startAddress</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">micropython_fs_end</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">memoryMap</span><span class="p">.</span><span class="n">memoryMapStore</span><span class="p">.</span><span class="n">memoryMap</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">endAddress</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">          </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">buffer</span><span class="p">[</span><span class="mi">18</span><span class="p">];</span><span class="w"></span>
+<span class="w">          </span><span class="c1">// Response:</span>
+<span class="w">          </span><span class="c1">// Region and Region #</span>
+<span class="w">          </span><span class="n">buffer</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="mh">0x00</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">buffer</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+
+<span class="w">          </span><span class="c1">// Start Address</span>
+<span class="w">          </span><span class="n">buffer</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">memoryMap</span><span class="p">.</span><span class="n">memoryMapStore</span><span class="p">.</span><span class="n">memoryMap</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]].</span><span class="n">startAddress</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xFF000000</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">24</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">buffer</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">memoryMap</span><span class="p">.</span><span class="n">memoryMapStore</span><span class="p">.</span><span class="n">memoryMap</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]].</span><span class="n">startAddress</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x00FF0000</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">16</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">buffer</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">memoryMap</span><span class="p">.</span><span class="n">memoryMapStore</span><span class="p">.</span><span class="n">memoryMap</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]].</span><span class="n">startAddress</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x0000FF00</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w">  </span><span class="mi">8</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">buffer</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">memoryMap</span><span class="p">.</span><span class="n">memoryMapStore</span><span class="p">.</span><span class="n">memoryMap</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]].</span><span class="n">startAddress</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x000000FF</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">          </span><span class="c1">// End Address</span>
+<span class="w">          </span><span class="n">buffer</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">memoryMap</span><span class="p">.</span><span class="n">memoryMapStore</span><span class="p">.</span><span class="n">memoryMap</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]].</span><span class="n">endAddress</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xFF000000</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">24</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">buffer</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">memoryMap</span><span class="p">.</span><span class="n">memoryMapStore</span><span class="p">.</span><span class="n">memoryMap</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]].</span><span class="n">endAddress</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x00FF0000</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">16</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">buffer</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">memoryMap</span><span class="p">.</span><span class="n">memoryMapStore</span><span class="p">.</span><span class="n">memoryMap</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]].</span><span class="n">endAddress</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x0000FF00</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w">  </span><span class="mi">8</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">buffer</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">memoryMap</span><span class="p">.</span><span class="n">memoryMapStore</span><span class="p">.</span><span class="n">memoryMap</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]].</span><span class="n">endAddress</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x000000FF</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">          </span><span class="c1">// Region Hash</span>
+<span class="w">          </span><span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">buffer</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span><span class="w"> </span><span class="o">&amp;</span><span class="n">memoryMap</span><span class="p">.</span><span class="n">memoryMapStore</span><span class="p">.</span><span class="n">memoryMap</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]].</span><span class="n">hash</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">          </span><span class="n">MICROBIT_DEBUG_DMESGF</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;REGION_INFO %x - %x&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">memoryMap</span><span class="p">.</span><span class="n">memoryMapStore</span><span class="p">.</span><span class="n">memoryMap</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]].</span><span class="n">startAddress</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">memoryMap</span><span class="p">.</span><span class="n">memoryMapStore</span><span class="p">.</span><span class="n">memoryMap</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]].</span><span class="n">endAddress</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">          </span><span class="c1">// Send BLE Notification</span>
+<span class="w">          </span><span class="n">notifyChrValue</span><span class="p">(</span><span class="w"> </span><span class="n">mbbs_cIdxCTRL</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">          </span><span class="c1">// Reset packet count</span>
+<span class="w">          </span><span class="n">packetCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">blockPacketCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">blockNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">          </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">FLASH_DATA</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="c1">// Process FLASH data packet</span>
+<span class="w">          </span><span class="n">flashData</span><span class="p">(</span><span class="n">data</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">END_OF_TRANSMISSION</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="cm">/* Start of embedded source isn&#39;t always on a page border so client must</span>
+<span class="cm">           * inform the micro:bit that it&#39;s the last packet.</span>
+<span class="cm">           * - Write final packet</span>
+<span class="cm">           * The END_OF_TRANSMISSION packet contains no data. Write any data left in the buffer.</span>
+<span class="cm">           */</span><span class="w"></span>
+<span class="w">           </span><span class="n">MicroBitEvent</span><span class="w"> </span><span class="nf">evt</span><span class="p">(</span><span class="n">MICROBIT_ID_PARTIAL_FLASHING</span><span class="p">,</span><span class="w"> </span><span class="n">END_OF_TRANSMISSION</span><span class="p">);</span><span class="w"></span>
+<span class="w">           </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">MICROBIT_STATUS</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="cm">/*</span>
+<span class="cm">           * Return the version of the Partial Flashing Service and the current BLE mode (application / pairing)</span>
+<span class="cm">           */</span><span class="w"></span>
+<span class="w">          </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">flashNotificationBuffer</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">MICROBIT_STATUS</span><span class="p">,</span><span class="w"> </span><span class="n">PARTIAL_FLASHING_VERSION</span><span class="p">,</span><span class="w"> </span><span class="n">MicroBitBLEManager</span><span class="o">::</span><span class="n">manager</span><span class="o">-&gt;</span><span class="n">getCurrentMode</span><span class="p">()};</span><span class="w"></span>
+<span class="w">          </span><span class="n">MICROBIT_DEBUG_DMESGF</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;MICROBIT_STATUS version %d mode %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">flashNotificationBuffer</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">flashNotificationBuffer</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span><span class="w"></span>
+<span class="w">          </span><span class="n">notifyChrValue</span><span class="p">(</span><span class="w"> </span><span class="n">mbbs_cIdxCTRL</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">flashNotificationBuffer</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">flashNotificationBuffer</span><span class="p">));</span><span class="w"></span>
+<span class="w">          </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">MICROBIT_RESET</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="cm">/*</span>
+<span class="cm">           * data[1] determines which mode to reset into: MICROBIT_MODE_PAIRING or MICROBIT_MODE_APPLICATION</span>
+<span class="cm">           */</span><span class="w"></span>
+<span class="w">           </span><span class="k">switch</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">             </span><span class="k">case</span><span class="w"> </span><span class="no">MICROBIT_MODE_PAIRING</span><span class="p">:</span><span class="w"></span>
+<span class="w">             </span><span class="p">{</span><span class="w"></span>
+<span class="w">               </span><span class="n">MICROBIT_DEBUG_DMESGF</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;MICROBIT_RESET pairing&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">               </span><span class="n">MicroBitEvent</span><span class="w"> </span><span class="nf">evt</span><span class="p">(</span><span class="n">MICROBIT_ID_PARTIAL_FLASHING</span><span class="p">,</span><span class="w"> </span><span class="n">MICROBIT_RESET</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">               </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="p">}</span><span class="w"></span>
+<span class="w">             </span><span class="k">case</span><span class="w"> </span><span class="no">MICROBIT_MODE_APPLICATION</span><span class="p">:</span><span class="w"></span>
+<span class="w">             </span><span class="p">{</span><span class="w"></span>
+<span class="w">               </span><span class="n">MICROBIT_DEBUG_DMESGF</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;MICROBIT_RESET application&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">               </span><span class="n">microbit_reset</span><span class="p">();</span><span class="w"></span>
+<span class="w">               </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="p">}</span><span class="w"></span>
+<span class="w">           </span><span class="p">}</span><span class="w"></span>
+<span class="w">           </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MicroBitPartialFlashingService</span><span class="o">::</span><span class="n">flashData</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">data</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">MICROBIT_DEBUG_DMESGF</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;flashData&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">MICROBIT_DEBUG_DMESGF</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;  %x %x %x %x&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span><span class="w"></span>
+<span class="w">        </span><span class="n">MICROBIT_DEBUG_DMESGF</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;  %x %x %x %x&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">7</span><span class="p">]);</span><span class="w"></span>
+<span class="w">        </span><span class="n">MICROBIT_DEBUG_DMESGF</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;  %x %x %x %x&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">11</span><span class="p">]);</span><span class="w"></span>
+<span class="w">        </span><span class="n">MICROBIT_DEBUG_DMESGF</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;  %x %x %x %x&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">15</span><span class="p">]);</span><span class="w"></span>
+<span class="w">        </span><span class="n">MICROBIT_DEBUG_DMESGF</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;  %x %x %x %x&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">16</span><span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">17</span><span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">19</span><span class="p">]);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Receive 16 bytes per packet</span>
+<span class="w">        </span><span class="c1">// Buffer 4 packets</span>
+<span class="w">        </span><span class="c1">// When buffer is full trigger partialFlashingEvent</span>
+<span class="w">        </span><span class="c1">// When write is complete notify app and repeat</span>
+<span class="w">        </span><span class="c1">// +-----------+---------+---------+----------+</span>
+<span class="w">        </span><span class="c1">// | 1 Byte    | 2 Bytes | 1 Byte  | 16 Bytes |</span>
+<span class="w">        </span><span class="c1">// +-----------+---------+---------+----------+</span>
+<span class="w">        </span><span class="c1">// | COMMAND   | OFFSET  | PACKET# | DATA     |</span>
+<span class="w">        </span><span class="c1">// +-----------+---------+---------+----------+</span>
+<span class="w">        </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">packetNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">MICROBIT_DEBUG_DMESGF</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;flashData packetNum %d packetCount %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">packetNum</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">packetCount</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">packetNum</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">packetCount</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">packetNum</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">packetCount</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">packetCount</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">packetNum</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">packetNum</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">packetCount</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">248</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="k">return</span><span class="p">;</span><span class="w"> </span><span class="c1">// packet is from a previous batch</span>
+
+<span class="w">          </span><span class="n">MICROBIT_DEBUG_DMESGF</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;packet error&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">          </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">flashNotificationBuffer</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">FLASH_DATA</span><span class="p">,</span><span class="w"> </span><span class="mh">0xAA</span><span class="p">};</span><span class="w"></span>
+<span class="w">          </span><span class="n">notifyChrValue</span><span class="p">(</span><span class="w"> </span><span class="n">mbbs_cIdxCTRL</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">flashNotificationBuffer</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">flashNotificationBuffer</span><span class="p">));</span><span class="w"></span>
+<span class="w">          </span><span class="n">blockPacketCount</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">packetCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">blockPacketCount</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">blockNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">packetCount</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Add to block</span>
+<span class="w">        </span><span class="n">memcpy</span><span class="p">(</span><span class="n">block</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">blockNum</span><span class="p">),</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">MICROBIT_DEBUG_DMESG</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;blockNum %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">blockNum</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Actions</span>
+<span class="w">        </span><span class="k">switch</span><span class="p">(</span><span class="n">blockNum</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// blockNum is 0: set up offset</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">                    </span><span class="n">blockNum</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// blockNum is 1: complete the offset</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">offset</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="p">((</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">24</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">16</span><span class="p">);</span><span class="w"></span>
+<span class="w">                    </span><span class="n">blockNum</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// blockNum is 3, block is full</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">MICROBIT_DEBUG_DMESG</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Fire write event&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">                    </span><span class="c1">// Fire write event</span>
+<span class="w">                    </span><span class="n">MicroBitEvent</span><span class="w"> </span><span class="nf">evt</span><span class="p">(</span><span class="n">MICROBIT_ID_PARTIAL_FLASHING</span><span class="p">,</span><span class="w"> </span><span class="n">FLASH_DATA</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">                    </span><span class="c1">// Reset blockNum</span>
+<span class="w">                    </span><span class="n">blockNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="n">blockPacketCount</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="k">default</span><span class="o">:</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">blockNum</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MicroBitPartialFlashingService</span><span class="o">::</span><span class="n">validateBootloaderSettings</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">nrf_dfu_settings_t</span><span class="w"> </span><span class="o">*</span><span class="n">settings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">nrf_dfu_settings_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">MICROBIT_BOOTLOADER_SETTINGS</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">settings</span><span class="o">-&gt;</span><span class="n">boot_validation_app</span><span class="p">.</span><span class="n">type</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">NO_VALIDATION</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">setDefaultBootloaderSettings</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="cm">/*</span>
+<span class="cm"> * Set bootloader to no validation</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">MicroBitPartialFlashingService</span><span class="o">::</span><span class="n">setDefaultBootloaderSettings</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">MicroBitFlash</span><span class="w"> </span><span class="n">flash</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// make bootloader settings page</span>
+<span class="w">    </span><span class="n">nrf_dfu_settings_t</span><span class="w"> </span><span class="n">settings</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">memset</span><span class="p">(</span><span class="w"> </span><span class="o">&amp;</span><span class="n">settings</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="w"> </span><span class="n">nrf_dfu_settings_t</span><span class="p">));</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// make NO_VALIDATION settings</span>
+<span class="w">    </span><span class="n">settings</span><span class="p">.</span><span class="n">settings_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">settings</span><span class="p">.</span><span class="n">bank_0</span><span class="p">.</span><span class="n">bank_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NRF_DFU_BANK_VALID_APP</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">settings</span><span class="p">.</span><span class="n">boot_validation_app</span><span class="p">.</span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NO_VALIDATION</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// make VALIDATE_CRC settings - calculate app size and CRC</span>
+<span class="w">    </span><span class="c1">//settings.boot_validation_app.type = VALIDATE_CRC;</span>
+<span class="w">    </span><span class="c1">//settings.bank_0.image_size = offset + 16 * sizeof( uint32_t) - MICROBIT_APP_REGION_START;</span>
+<span class="w">    </span><span class="c1">//settings.bank_0.image_crc  = crc32_compute( (uint8_t*) MICROBIT_APP_REGION_START, settings.bank_0.image_size, NULL);</span>
+<span class="w">    </span><span class="c1">//memcpy(settings.boot_validation_app.bytes, &amp;settings.bank_0.image_crc, sizeof(uint32_t));</span>
+
+<span class="w">    </span><span class="c1">// calculate settings page CRCs</span>
+<span class="w">    </span><span class="n">settings</span><span class="p">.</span><span class="n">crc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">crc32_compute</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">settings</span><span class="p">.</span><span class="n">settings_version</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                  </span><span class="n">offsetof</span><span class="p">(</span><span class="n">nrf_dfu_settings_t</span><span class="p">,</span><span class="w"> </span><span class="n">init_command</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">offsetof</span><span class="p">(</span><span class="n">nrf_dfu_settings_t</span><span class="p">,</span><span class="w"> </span><span class="n">settings_version</span><span class="p">),</span><span class="w"></span>
+<span class="w">                                  </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">settings</span><span class="p">.</span><span class="n">boot_validation_crc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">crc32_compute</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">settings</span><span class="p">.</span><span class="n">boot_validation_softdevice</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">boot_validation_t</span><span class="p">),</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">settingsSizeInWords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="w"> </span><span class="n">nrf_dfu_settings_t</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">uint32_t</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">uint32_t</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// save settings to flash settings page if different</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">pSettings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">MICROBIT_BOOTLOADER_SETTINGS</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">memcmp</span><span class="p">(</span><span class="w"> </span><span class="n">pSettings</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">settings</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="w"> </span><span class="n">nrf_dfu_settings_t</span><span class="p">)))</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">flash</span><span class="p">.</span><span class="n">erase_page</span><span class="p">(</span><span class="w"> </span><span class="n">pSettings</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">flash</span><span class="p">.</span><span class="n">flash_burn</span><span class="p">(</span><span class="w"> </span><span class="n">pSettings</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">settings</span><span class="p">,</span><span class="w"> </span><span class="n">settingsSizeInWords</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// save settings to flash settings backup page if different</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">pBackup</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">MICROBIT_MBR_PARAMS</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">memcmp</span><span class="p">(</span><span class="w"> </span><span class="n">pBackup</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">settings</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="w"> </span><span class="n">nrf_dfu_settings_t</span><span class="p">)))</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">flash</span><span class="p">.</span><span class="n">erase_page</span><span class="p">(</span><span class="w"> </span><span class="n">pBackup</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">flash</span><span class="p">.</span><span class="n">flash_burn</span><span class="p">(</span><span class="w"> </span><span class="n">pBackup</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">settings</span><span class="p">,</span><span class="w"> </span><span class="n">settingsSizeInWords</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MicroBitPartialFlashingService</span><span class="o">::</span><span class="n">partialFlashingEvent</span><span class="p">(</span><span class="n">MicroBitEvent</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">MICROBIT_DEBUG_DMESG</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;partialFlashingEvent&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">MicroBitFlash</span><span class="w"> </span><span class="n">flash</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">switch</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">value</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">FLASH_DATA</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">MICROBIT_DEBUG_DMESG</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;FLASH_DATA offset %x&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">offset</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="cm">/*</span>
+<span class="cm">       * Set flashIncomplete flag if not already set to boot into BLE mode</span>
+<span class="cm">       * upon a failed flash.</span>
+<span class="cm">       */</span><span class="w"></span>
+
+<span class="w">       </span><span class="n">KeyValuePair</span><span class="o">*</span><span class="w"> </span><span class="n">flashIncomplete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">storage</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">&quot;flashIncomplete&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">       </span><span class="k">if</span><span class="p">(</span><span class="n">flashIncomplete</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">){</span><span class="w"></span>
+
+<span class="w">         </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">flashIncompleteVal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x01</span><span class="p">;</span><span class="w"></span>
+<span class="w">         </span><span class="n">storage</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="s">&quot;flashIncomplete&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">flashIncompleteVal</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">flashIncompleteVal</span><span class="p">));</span><span class="w"></span>
+
+<span class="w">         </span><span class="c1">// Check if FS exists</span>
+<span class="w">         </span><span class="k">if</span><span class="p">(</span><span class="n">micropython_fs_end</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mh">0x00</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">page</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">micropython_fs_start</span><span class="p">;</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)(</span><span class="n">micropython_fs_end</span><span class="p">);</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">(</span><span class="n">MICROBIT_CODEPAGESIZE</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">uint32_t</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="c1">// Check if page needs erasing</span>
+<span class="w">                </span><span class="k">for</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1024</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="k">if</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">page</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mh">0xFFFFFFFF</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="n">DMESG</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Erase page at %x&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">page</span><span class="p">);</span><span class="w"></span>
+<span class="w">                        </span><span class="n">flash</span><span class="p">.</span><span class="n">erase_page</span><span class="p">(</span><span class="n">page</span><span class="p">);</span><span class="w"></span>
+<span class="w">                        </span><span class="k">break</span><span class="p">;</span><span class="w"> </span><span class="c1">// If page has been erased we can skip the remaining bytes</span>
+<span class="w">                    </span><span class="p">}</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">         </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">       </span><span class="p">}</span><span class="w"></span>
+<span class="w">       </span><span class="k">delete</span><span class="w"> </span><span class="n">flashIncomplete</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">flashPointer</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)(</span><span class="n">offset</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// If the pointer is on a page boundary check if it needs erasing</span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="p">((</span><span class="kt">uint32_t</span><span class="p">)</span><span class="n">flashPointer</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">MICROBIT_CODEPAGESIZE</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="c1">// Check words</span>
+<span class="w">          </span><span class="k">for</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">MICROBIT_CODEPAGESIZE</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">uint32_t</span><span class="p">));</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">flashPointer</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mh">0xFFFFFFFF</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">flash</span><span class="p">.</span><span class="n">erase_page</span><span class="p">(</span><span class="n">flashPointer</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span><span class="w"> </span><span class="c1">// If page has been erased we can skip the remaining bytes</span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Create a pointer to the data block</span>
+<span class="w">      </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">blockPointer</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="n">blockPointer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">block</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Write to flash</span>
+<span class="w">      </span><span class="n">flash</span><span class="p">.</span><span class="n">flash_burn</span><span class="p">(</span><span class="n">flashPointer</span><span class="p">,</span><span class="w"> </span><span class="n">blockPointer</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Update flash control buffer to send next packet</span>
+<span class="w">      </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">flashNotificationBuffer</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">FLASH_DATA</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">};</span><span class="w"></span>
+<span class="w">      </span><span class="n">notifyChrValue</span><span class="p">(</span><span class="w"> </span><span class="n">mbbs_cIdxCTRL</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">flashNotificationBuffer</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">flashNotificationBuffer</span><span class="p">));</span><span class="w"></span>
+<span class="w">      </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">END_OF_TRANSMISSION</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">MICROBIT_DEBUG_DMESG</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;END_OF_TRANSMISSION offset %x&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">offset</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// Write final packet</span>
+<span class="w">      </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">blockPointer</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">flashPointer</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">offset</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="n">blockPointer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">block</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="n">flash</span><span class="p">.</span><span class="n">flash_burn</span><span class="p">(</span><span class="n">flashPointer</span><span class="p">,</span><span class="w"> </span><span class="n">blockPointer</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Set no validation</span>
+<span class="w">      </span><span class="n">setDefaultBootloaderSettings</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">      </span><span class="n">MICROBIT_DEBUG_DMESG</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;rebooting&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// Once the final packet has been written remove the BLE mode flag and reset</span>
+<span class="w">      </span><span class="c1">// the micro:bit</span>
+
+<span class="w">      </span><span class="n">storage</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="s">&quot;flashIncomplete&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Clear any persistent data that the user may have stored</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">microbit_device_instance</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">((</span><span class="n">MicroBit</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">microbit_device_instance</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">eraseUserStorage</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">      </span><span class="n">microbit_reset</span><span class="p">();</span><span class="w"></span>
+<span class="w">      </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">MICROBIT_RESET</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">MICROBIT_DEBUG_DMESG</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Calling restartInBLEMode&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">MicroBitBLEManager</span><span class="o">::</span><span class="n">manager</span><span class="o">-&gt;</span><span class="n">restartInBLEMode</span><span class="p">();</span><span class="w"></span>
+<span class="w">      </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,14 @@
+.. _exhale_define_CodalFiber_8h_1accec8731172e1afd1c01063c7ed79085:
+
+Define DEVICE_FIBER_FLAG_FOB
+============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalFiber.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DEVICE_FIBER_FLAG_FOB
+   :project: CODAL

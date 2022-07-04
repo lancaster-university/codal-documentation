@@ -1,0 +1,14 @@
+.. _exhale_define_Accelerometer_8h_1a069cb0e9c5f06571bdce13b38caac45d:
+
+Define ACCELEROMETER_EVT_3G
+===========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Accelerometer.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: ACCELEROMETER_EVT_3G
+   :project: CODAL

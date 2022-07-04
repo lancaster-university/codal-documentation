@@ -1,0 +1,88 @@
+
+.. _program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MultiButton.h:
+
+Program Listing for File MultiButton.h
+======================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MultiButton.h>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/drivers/MultiButton.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   /*
+   The MIT License (MIT)
+   
+   Copyright (c) 2017 Lancaster University.
+   
+   Permission is hereby granted, free of charge, to any person obtaining a
+   copy of this software and associated documentation files (the "Software"),
+   to deal in the Software without restriction, including without limitation
+   the rights to use, copy, modify, merge, publish, distribute, sublicense,
+   and/or sell copies of the Software, and to permit persons to whom the
+   Software is furnished to do so, subject to the following conditions:
+   
+   The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+   
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+   THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+   */
+   
+   #ifndef MULTI_BUTTON_H
+   #define MULTI_BUTTON_H
+   
+   #include "CodalConfig.h"
+   #include "Button.h"
+   #include "EventModel.h"
+   
+   #define MULTI_BUTTON_STATE_1               0x01
+   #define MULTI_BUTTON_STATE_2               0x02
+   #define MULTI_BUTTON_HOLD_TRIGGERED_1      0x04
+   #define MULTI_BUTTON_HOLD_TRIGGERED_2      0x08
+   #define MULTI_BUTTON_SUPRESSED_1           0X10
+   #define MULTI_BUTTON_SUPRESSED_2           0x20
+   #define MULTI_BUTTON_ATTACHED              0x40
+   
+   namespace codal
+   {
+       class MultiButton : public AbstractButton
+       {
+           uint16_t    button1;        // ID of the first button we're monitoring
+           uint16_t    button2;        // ID of the second button we're monitoring
+           ButtonEventConfiguration eventConfiguration;    // Do we want to generate high level event (clicks), or defer this to another service.
+   
+           uint16_t    otherSubButton(uint16_t b);
+   
+           int         isSubButtonPressed(uint16_t button);
+   
+           int         isSubButtonHeld(uint16_t button);
+   
+           int         isSubButtonSupressed(uint16_t button);
+   
+           void        setButtonState(uint16_t button, int value);
+   
+           void        setHoldState(uint16_t button, int value);
+   
+           void        setSupressedState(uint16_t button, int value);
+   
+           public:
+   
+           MultiButton(uint16_t button1, uint16_t button2, uint16_t id);
+   
+           virtual int isPressed();
+   
+           void setEventConfiguration(ButtonEventConfiguration config);
+   
+           private:
+   
+           void onButtonEvent(Event evt);
+       };
+   }
+   
+   #endif

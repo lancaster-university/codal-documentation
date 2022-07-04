@@ -1,0 +1,14 @@
+.. _exhale_define_AnimatedDisplay_8h_1a9df602ad01c2907999c46a43f289ad45:
+
+Define DISPLAY_DEFAULT_SCROLL_SPEED
+===================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_AnimatedDisplay.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DISPLAY_DEFAULT_SCROLL_SPEED
+   :project: CODAL

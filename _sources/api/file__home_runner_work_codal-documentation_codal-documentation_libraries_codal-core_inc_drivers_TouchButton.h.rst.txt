@@ -1,0 +1,84 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_TouchButton.h:
+
+File TouchButton.h
+==================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/drivers``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/drivers/TouchButton.h``)
+-------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_TouchButton.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Button.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_AbstractButton.h`)
+
+- ``CodalComponent.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalComponent.h`)
+
+- ``CodalConfig.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h`)
+
+- ``Event.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_Event.h`)
+
+- ``Pin.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Pin.h`)
+
+- ``TouchSensor.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_TouchSensor.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_TouchSensor.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_TouchButton.cpp`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_codal`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classcodal_1_1TouchButton`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_TouchButton_8h_1aa023bcf10cf30df27e93443320df03f4`
+
+- :ref:`exhale_define_TouchButton_8h_1a8e210a15a1ddd2e686cefd0673b10577`
+
+- :ref:`exhale_define_TouchButton_8h_1aeeeddced62d561c7c2558c632dc98d1f`
+
+- :ref:`exhale_define_TouchButton_8h_1ae290a98b9f8fbc14e48fbbf41310ea30`
+
+- :ref:`exhale_define_TouchButton_8h_1a7b2f8e9f36d8dae94b7fbc2eef2ebc79`
+

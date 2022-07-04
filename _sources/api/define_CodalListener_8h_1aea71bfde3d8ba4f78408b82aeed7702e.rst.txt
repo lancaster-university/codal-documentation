@@ -1,0 +1,14 @@
+.. _exhale_define_CodalListener_8h_1aea71bfde3d8ba4f78408b82aeed7702e:
+
+Define MESSAGE_BUS_LISTENER_DROP_IF_BUSY
+========================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalListener.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MESSAGE_BUS_LISTENER_DROP_IF_BUSY
+   :project: CODAL

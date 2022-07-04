@@ -1,0 +1,14 @@
+.. _exhale_define_DataStream_8h_1abbf7d193c73f6ca690246400415f08cc:
+
+Define DATASTREAM_FORMAT_16BIT_UNSIGNED
+=======================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_DataStream.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DATASTREAM_FORMAT_16BIT_UNSIGNED
+   :project: CODAL

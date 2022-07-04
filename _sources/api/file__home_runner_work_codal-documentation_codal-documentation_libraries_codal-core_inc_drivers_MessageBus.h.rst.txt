@@ -1,0 +1,71 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MessageBus.h:
+
+File MessageBus.h
+=================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/drivers``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/drivers/MessageBus.h``)
+------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MessageBus.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``CodalComponent.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalComponent.h`)
+
+- ``CodalConfig.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h`)
+
+- ``CodalListener.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalListener.h`)
+
+- ``Event.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_Event.h`)
+
+- ``EventModel.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_EventModel.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_DataStream.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_MessageBus.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_FIFOStream.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_StreamRecording.cpp`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_codal`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classcodal_1_1MessageBus`
+

@@ -1,0 +1,14 @@
+.. _exhale_variable_MAG3110_8cpp_1aaef161739390d90c05343a840c6606e4:
+
+Variable MAG3110SampleRate
+==========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_MAG3110.cpp`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: MAG3110SampleRate
+   :project: CODAL

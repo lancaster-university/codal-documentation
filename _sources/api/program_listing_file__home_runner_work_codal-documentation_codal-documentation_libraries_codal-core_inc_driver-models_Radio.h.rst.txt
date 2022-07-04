@@ -1,0 +1,42 @@
+
+.. _program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Radio.h:
+
+Program Listing for File Radio.h
+================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Radio.h>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/driver-models/Radio.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef CODAL_RADIO_H
+   #define CODAL_RADIO_H
+   
+   #include "CodalComponent.h"
+   #include "ManagedBuffer.h"
+   
+   #define RADIO_EVT_DATA_READY        2
+   
+   namespace codal
+   {
+       class Radio : public CodalComponent
+       {
+           public:
+   
+           Radio(uint16_t id = DEVICE_ID_RADIO)
+           {
+               this->id = id;
+           }
+   
+           virtual int enable() = 0;
+   
+           virtual int disable() = 0;
+   
+           virtual ManagedBuffer recvBuffer() = 0;
+   
+           virtual int sendBuffer(ManagedBuffer) = 0;
+       };
+   }
+   
+   #endif

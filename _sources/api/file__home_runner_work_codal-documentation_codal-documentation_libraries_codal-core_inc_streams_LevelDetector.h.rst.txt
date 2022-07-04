@@ -1,0 +1,80 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_LevelDetector.h:
+
+File LevelDetector.h
+====================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/streams``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/streams/LevelDetector.h``)
+---------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_LevelDetector.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``CodalConfig.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h`)
+
+- ``DataStream.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_DataStream.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitAudio.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_LevelDetector.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_LevelDetectorSPL.cpp`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_codal`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classcodal_1_1LevelDetector`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_LevelDetector_8h_1a4c12c64d90e872d60e6517767111ff64`
+
+- :ref:`exhale_define_LevelDetector_8h_1a3b2b9f10023a4a8c73b06827eb03e0b5`
+
+- :ref:`exhale_define_LevelDetector_8h_1a8bef5c9fc9a6838345f938f20bb3eb6f`
+
+- :ref:`exhale_define_LevelDetector_8h_1a115d2cb011286aa1901c9e34b9dde764`
+
+- :ref:`exhale_define_LevelDetector_8h_1a15fd9c49a72c00e78577d97158f6a970`
+
+- :ref:`exhale_define_LevelDetector_8h_1aac7f6a49189981740da9e1583156c4d8`
+

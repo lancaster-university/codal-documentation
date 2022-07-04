@@ -1,0 +1,81 @@
+
+.. _program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_I2C.h:
+
+Program Listing for File I2C.h
+==============================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_I2C.h>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/driver-models/I2C.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   /*
+   The MIT License (MIT)
+   
+   Copyright (c) 2017 Lancaster University.
+   
+   Permission is hereby granted, free of charge, to any person obtaining a
+   copy of this software and associated documentation files (the "Software"),
+   to deal in the Software without restriction, including without limitation
+   the rights to use, copy, modify, merge, publish, distribute, sublicense,
+   and/or sell copies of the Software, and to permit persons to whom the
+   Software is furnished to do so, subject to the following conditions:
+   
+   The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+   
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+   THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+   */
+   
+   #ifndef CODAL_I2C_H
+   #define CODAL_I2C_H
+   
+   #include "CodalConfig.h"
+   #include "ErrorNo.h"
+   #include "Pin.h"
+   
+   namespace codal
+   {
+   enum AcknowledgeType {ACK, NACK};
+   
+   class I2C
+   {
+   public:
+       I2C(Pin &sda, Pin &scl);
+   
+       virtual int setFrequency(uint32_t frequency);
+   
+   protected:
+       virtual int start();
+   
+       virtual int stop();
+   
+       virtual int write(uint8_t data);
+   
+       virtual int read(AcknowledgeType ack = ACK);
+   
+   public:
+       virtual int write(uint16_t address, uint8_t data);
+   
+       virtual int write(uint16_t address, uint8_t *data, int len, bool repeated = false);
+       int write(int address, char *data, int len, bool repeated = false);
+   
+       virtual int writeRegister(uint16_t address, uint8_t reg, uint8_t value);
+   
+       virtual int read(uint16_t address, uint8_t *data, int len, bool repeated = false);
+       int read(int address, char *data, int len, bool repeated = false);
+   
+       virtual int readRegister(uint16_t address, uint8_t reg, uint8_t *data, int length, bool repeated = true);
+   
+       virtual int readRegister(uint8_t address, uint8_t reg);
+   };
+   }
+   
+   #endif

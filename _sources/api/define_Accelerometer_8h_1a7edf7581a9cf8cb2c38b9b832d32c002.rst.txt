@@ -1,0 +1,14 @@
+.. _exhale_define_Accelerometer_8h_1a7edf7581a9cf8cb2c38b9b832d32c002:
+
+Define ACCELEROMETER_8G_TOLERANCE
+=================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Accelerometer.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: ACCELEROMETER_8G_TOLERANCE
+   :project: CODAL

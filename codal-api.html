@@ -1,0 +1,553 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>The Complete CODAL API &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Disco Lights" href="projects/disco-lights.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    CODAL Documentation
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="getting-started.html">
+   Getting Started with CODAL
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="components/index.html">
+   Components
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="components/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="components/display.html">
+     Display
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="components/mic-and-speaker.html">
+     Microphone and Speaker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="components/edge-connector.html">
+     Edge Connector
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="components/sensors.html">
+     Sensors
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="guides/codal-projects.html">
+     CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   The Complete CODAL API
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>The Complete CODAL API</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="the-complete-codal-api">
+<h1>The Complete CODAL API<a class="headerlink" href="#the-complete-codal-api" title="Permalink to this headline">#</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<ul class="simple">
+<li><dl class="simple">
+<dt>CODAL Core</dt><dd><ul>
+<li><dl class="simple">
+<dt>Core</dt><dd><ul>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::CodalCompat</span></code></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1CodalComponent.html#_CPPv4N5codal14CodalComponentE" title="codal::CodalComponent"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::CodalComponent</span></code></a></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::CodalConfig</span></code></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1CodalDevice.html#_CPPv4N5codal11CodalDeviceE" title="codal::CodalDevice"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::CodalDevice</span></code></a></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::CodalDmesg</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::CodalFiber</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::CodalHeapAllocator</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::CodalListener</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::CodalUtil</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::ErrorNo</span></code></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1EventModel.html#_CPPv4N5codal10EventModelE" title="codal::EventModel"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::EventModel</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1MemberFunctionCallback.html#_CPPv4N5codal22MemberFunctionCallbackE" title="codal::MemberFunctionCallback"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MemberFunctionCallback</span></code></a></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::NotifyEvents</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Driver Models</dt><dd><ul>
+<li><p><a class="reference internal" href="api/classcodal_1_1AbstractButton.html#_CPPv4N5codal14AbstractButtonE" title="codal::AbstractButton"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::AbstractButton</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1Accelerometer.html#_CPPv4N5codal13AccelerometerE" title="codal::Accelerometer"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::Accelerometer</span></code></a></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::CodalUSB</span></code></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1Compass.html#_CPPv4N5codal7CompassE" title="codal::Compass"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::Compass</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1Display.html#_CPPv4N5codal7DisplayE" title="codal::Display"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::Display</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1DMASingleWireSerial.html#_CPPv4N5codal19DMASingleWireSerialE" title="codal::DMASingleWireSerial"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::DMASingleWireSerial</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1Gyroscope.html#_CPPv4N5codal9GyroscopeE" title="codal::Gyroscope"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::Gyroscope</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1I2C.html#_CPPv4N5codal3I2CE" title="codal::I2C"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::I2C</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1LowLevelTimer.html#_CPPv4N5codal13LowLevelTimerE" title="codal::LowLevelTimer"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::LowLevelTimer</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1NVMController.html#_CPPv4N5codal13NVMControllerE" title="codal::NVMController"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::NVMController</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::Pin</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1Radio.html#_CPPv4N5codal5RadioE" title="codal::Radio"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::Radio</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1ScreenIO.html#_CPPv4N5codal8ScreenIOE" title="codal::ScreenIO"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::ScreenIO</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1Sensor.html#_CPPv4N5codal6SensorE" title="codal::Sensor"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::Sensor</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1Serial.html#_CPPv4N5codal6SerialE" title="codal::Serial"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::Serial</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1SingleWireSerial.html#_CPPv4N5codal16SingleWireSerialE" title="codal::SingleWireSerial"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::SingleWireSerial</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1SPI.html#_CPPv4N5codal3SPIE" title="codal::SPI"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::SPI</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1SPIFlash.html#_CPPv4N5codal8SPIFlashE" title="codal::SPIFlash"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::SPIFlash</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1Timer.html#_CPPv4N5codal5TimerE" title="codal::Timer"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::Timer</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Drivers</dt><dd><ul>
+<li><p><a class="reference internal" href="api/classcodal_1_1AnalogSensor.html#_CPPv4N5codal12AnalogSensorE" title="codal::AnalogSensor"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::AnalogSensor</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1AnimatedDisplay.html#_CPPv4N5codal15AnimatedDisplayE" title="codal::AnimatedDisplay"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::AnimatedDisplay</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1AsciiKeyMap.html#_CPPv4N5codal11AsciiKeyMapE" title="codal::AsciiKeyMap"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::AsciiKeyMap</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1Button.html#_CPPv4N5codal6ButtonE" title="codal::Button"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::Button</span></code></a></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::FAT</span></code></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1FXOS8700.html#_CPPv4N5codal8FXOS8700E" title="codal::FXOS8700"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::FXOS8700</span></code></a></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::GhostFAT</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::HID</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::HIDJoystick</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::HIDMouse</span></code></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1ILI9341.html#_CPPv4N5codal7ILI9341E" title="codal::ILI9341"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::ILI9341</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1KeyMap.html#_CPPv4N5codal6KeyMapE" title="codal::KeyMap"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::KeyMap</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1KeyValueStorage.html#_CPPv4N5codal15KeyValueStorageE" title="codal::KeyValueStorage"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::KeyValueStorage</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1LEDMatrix.html#_CPPv4N5codal9LEDMatrixE" title="codal::LEDMatrix"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::LEDMatrix</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1LinearAnalogSensor.html#_CPPv4N5codal18LinearAnalogSensorE" title="codal::LinearAnalogSensor"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::LinearAnalogSensor</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1LIS3DH.html#_CPPv4N5codal6LIS3DHE" title="codal::LIS3DH"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::LIS3DH</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1LSM303Accelerometer.html#_CPPv4N5codal19LSM303AccelerometerE" title="codal::LSM303Accelerometer"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::LSM303Accelerometer</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1LSM303Magnetometer.html#_CPPv4N5codal18LSM303MagnetometerE" title="codal::LSM303Magnetometer"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::LSM303Magnetometer</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1MAG3110.html#_CPPv4N5codal7MAG3110E" title="codal::MAG3110"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MAG3110</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1MessageBus.html#_CPPv4N5codal10MessageBusE" title="codal::MessageBus"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MessageBus</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1MMA8453.html#_CPPv4N5codal7MMA8453E" title="codal::MMA8453"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MMA8453</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1MMA8653.html#_CPPv4N5codal7MMA8653E" title="codal::MMA8653"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MMA8653</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1MPU6050.html#_CPPv4N5codal7MPU6050E" title="codal::MPU6050"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MPU6050</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1MultiButton.html#_CPPv4N5codal11MultiButtonE" title="codal::MultiButton"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MultiButton</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1NonLinearAnalogSensor.html#_CPPv4N5codal21NonLinearAnalogSensorE" title="codal::NonLinearAnalogSensor"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::NonLinearAnalogSensor</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1PearsonHash.html#_CPPv4N5codal11PearsonHashE" title="codal::PearsonHash"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::PearsonHash</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1PulseIn.html#_CPPv4N5codal7PulseInE" title="codal::PulseIn"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::PulseIn</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1SPIScreenIO.html#_CPPv4N5codal11SPIScreenIOE" title="codal::SPIScreenIO"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::SPIScreenIO</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1ST7735.html#_CPPv4N5codal6ST7735E" title="codal::ST7735"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::ST7735</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1StandardSPIFlash.html#_CPPv4N5codal16StandardSPIFlashE" title="codal::StandardSPIFlash"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::StandardSPIFlash</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1TouchButton.html#_CPPv4N5codal11TouchButtonE" title="codal::TouchButton"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::TouchButton</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1TouchSensor.html#_CPPv4N5codal11TouchSensorE" title="codal::TouchSensor"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::TouchSensor</span></code></a></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::USB_HID_Keys</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::USBMassStorageClass</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::USBMSC</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Streams</dt><dd><ul>
+<li><p><a class="reference internal" href="api/classcodal_1_1DataSink.html#_CPPv4N5codal8DataSinkE" title="codal::DataSink"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::DataSink</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1DataSource.html#_CPPv4N5codal10DataSourceE" title="codal::DataSource"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::DataSource</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1DataStream.html#_CPPv4N5codal10DataStreamE" title="codal::DataStream"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::DataStream</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1FIFOStream.html#_CPPv4N5codal10FIFOStreamE" title="codal::FIFOStream"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::FIFOStream</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1LevelDetector.html#_CPPv4N5codal13LevelDetectorE" title="codal::LevelDetector"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::LevelDetector</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1LevelDetectorSPL.html#_CPPv4N5codal16LevelDetectorSPLE" title="codal::LevelDetectorSPL"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::LevelDetectorSPL</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1MemorySource.html#_CPPv4N5codal12MemorySourceE" title="codal::MemorySource"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MemorySource</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1Mixer.html#_CPPv4N5codal5MixerE" title="codal::Mixer"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::Mixer</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1StreamFilter.html#_CPPv4N5codal12StreamFilterE" title="codal::StreamFilter"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::StreamFilter</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1StreamFlowTrigger.html#_CPPv4N5codal17StreamFlowTriggerE" title="codal::StreamFlowTrigger"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::StreamFlowTrigger</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1StreamNormalizer.html#_CPPv4N5codal16StreamNormalizerE" title="codal::StreamNormalizer"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::StreamNormalizer</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1StreamRecording.html#_CPPv4N5codal15StreamRecordingE" title="codal::StreamRecording"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::StreamRecording</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1StreamSplitter.html#_CPPv4N5codal14StreamSplitterE" title="codal::StreamSplitter"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::StreamSplitter</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1Synthesizer.html#_CPPv4N5codal11SynthesizerE" title="codal::Synthesizer"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::Synthesizer</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Types</dt><dd><ul>
+<li><p><a class="reference internal" href="api/classcodal_1_1BitmapFont.html#_CPPv4N5codal10BitmapFontE" title="codal::BitmapFont"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::BitmapFont</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/enum_namespacecodal_1ab60ee69ed382592e3346140d07480ac6.html#_CPPv4N5codal16CoordinateSystemE" title="codal::CoordinateSystem"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::CoordinateSystem</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::Event</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1Image.html#_CPPv4N5codal5ImageE" title="codal::Image"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::Image</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1ManagedBuffer.html#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::ManagedBuffer</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::ManagedString</span></code></a></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::ManagedType</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::Matrix4</span></code></p></li>
+<li><p><a class="reference internal" href="api/structcodal_1_1RefCounted.html#_CPPv4N5codal10RefCountedE" title="codal::RefCounted"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::RefCounted</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>CODAL MicroBit</dt><dd><ul>
+<li><p><a class="reference internal" href="api/classcodal_1_1FSCache.html#_CPPv4N5codal7FSCacheE" title="codal::FSCache"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::FSCache</span></code></a></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitAccelerometer</span></code></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1MicroBitAudio.html#_CPPv4N5codal13MicroBitAudioE" title="codal::MicroBitAudio"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitAudio</span></code></a></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitBLEChar</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitBLEService</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitBLEServices</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitCompass</span></code></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1MicroBitCompassCalibrator.html#_CPPv4N5codal25MicroBitCompassCalibratorE" title="codal::MicroBitCompassCalibrator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitCompassCalibrator</span></code></a></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitConfig</span></code></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1MicroBitDevice.html#_CPPv4N5codal14MicroBitDeviceE" title="codal::MicroBitDevice"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitDevice</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1MicroBitDisplay.html#_CPPv4N5codal15MicroBitDisplayE" title="codal::MicroBitDisplay"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitDisplay</span></code></a></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitFile</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitFileSystem</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitFlash</span></code></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1MicroBitLog.html#_CPPv4N5codal11MicroBitLogE" title="codal::MicroBitLog"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitLog</span></code></a></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitMemoryMap</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitPowerManager</span></code></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1MicroBitRadio.html#_CPPv4N5codal13MicroBitRadioE" title="codal::MicroBitRadio"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitRadio</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1MicroBitRadioDatagram.html#_CPPv4N5codal21MicroBitRadioDatagramE" title="codal::MicroBitRadioDatagram"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitRadioDatagram</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1MicroBitRadioEvent.html#_CPPv4N5codal18MicroBitRadioEventE" title="codal::MicroBitRadioEvent"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitRadioEvent</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1MicroBitThermometer.html#_CPPv4N5codal19MicroBitThermometerE" title="codal::MicroBitThermometer"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitThermometer</span></code></a></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitUSBFlashManager</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitUtil</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitSynth</span></code></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1Mixer2.html#_CPPv4N5codal6Mixer2E" title="codal::Mixer2"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::Mixer2</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1NRF52FlashManager.html#_CPPv4N5codal17NRF52FlashManagerE" title="codal::NRF52FlashManager"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::NRF52FlashManager</span></code></a></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::NRF52LedMatrix</span></code></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1PacketBuffer.html#_CPPv4N5codal12PacketBufferE" title="codal::PacketBuffer"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::PacketBuffer</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1SoundEmojiSynthesizer.html#_CPPv4N5codal21SoundEmojiSynthesizerE" title="codal::SoundEmojiSynthesizer"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::SoundEmojiSynthesizer</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1SoundExpressions.html#_CPPv4N5codal16SoundExpressionsE" title="codal::SoundExpressions"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::SoundExpressions</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1SoundOutputPin.html#_CPPv4N5codal14SoundOutputPinE" title="codal::SoundOutputPin"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::SoundOutputPin</span></code></a></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1SoundSynthesizerEffects.html#_CPPv4N5codal23SoundSynthesizerEffectsE" title="codal::SoundSynthesizerEffects"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::SoundSynthesizerEffects</span></code></a></p></li>
+<li><dl class="simple">
+<dt>Bluetooth</dt><dd><ul>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::ExternalEvents</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MSEEvents</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitAccelerometerService</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitBLEManager</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitBLETypes</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitButtonService</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitEddystone</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitEventService</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitIOPinService</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitLEDService</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitMagnetometerService</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitPartialFlashingService</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitTemperatureService</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitUARTService</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Compatibility Layer</dt><dd><ul>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::DigitalIn</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::DigitalOut</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::InterruptPin</span></code></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1MbedMemberFunctionCallback.html#_CPPv4N5codal26MbedMemberFunctionCallbackE" title="codal::MbedMemberFunctionCallback"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MbedMemberFunctionCallback</span></code></a></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MbedTimer</span></code></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1MicroBitButton.html#_CPPv4N5codal14MicroBitButtonE" title="codal::MicroBitButton"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitButton</span></code></a></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitCompat</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitComponent</span></code></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1MicroBitDevice.html#_CPPv4N5codal14MicroBitDeviceE" title="codal::MicroBitDevice"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitDevice</span></code></a></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitEvent</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitFiber</span></code></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1MicroBitI2C.html#_CPPv4N5codal11MicroBitI2CE" title="codal::MicroBitI2C"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitI2C</span></code></a></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitImage</span></code></p></li>
+<li><p><a class="reference internal" href="api/classcodal_1_1MicroBitSerial.html#_CPPv4N5codal14MicroBitSerialE" title="codal::MicroBitSerial"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitSerial</span></code></a></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitStorage</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitSystemTimer</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::PwmOut</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::Ticker</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::Timeout</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Models</dt><dd><ul>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBit</span></code></p></li>
+<li><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBitIO</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="projects/disco-lights.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Disco Lights</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,498 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Enum FunctionKey &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL Documentation
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../getting-started.html">
+   Getting Started with CODAL
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../components/index.html">
+   Components
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/display.html">
+     Display
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/mic-and-speaker.html">
+     Microphone and Speaker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/edge-connector.html">
+     Edge Connector
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/sensors.html">
+     Sensors
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/codal-projects.html">
+     CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../codal-api.html">
+   The Complete CODAL API
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enum-documentation">
+   Enum Documentation
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Enum FunctionKey</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enum-documentation">
+   Enum Documentation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="enum-functionkey">
+<span id="exhale-enum-namespacecodal-1a4174b0a37ca7ab46d20e81789cc3c6a4"></span><h1>Enum FunctionKey<a class="headerlink" href="#enum-functionkey" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_KeyMap.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-drivers-keymap-h"><span class="std std-ref">File KeyMap.h</span></a></p></li>
+</ul>
+<section id="enum-documentation">
+<h2>Enum Documentation<a class="headerlink" href="#enum-documentation" title="Permalink to this headline">#</a></h2>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKeyE">
+<span id="_CPPv3N5codal11FunctionKeyE"></span><span id="_CPPv2N5codal11FunctionKeyE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">FunctionKey</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKeyE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey5F1KeyE">
+<span id="_CPPv3N5codal11FunctionKey5F1KeyE"></span><span id="_CPPv2N5codal11FunctionKey5F1KeyE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4a25029765536740e043aa1bfa0c352b8a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">F1Key</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey5F1KeyE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey5F2KeyE">
+<span id="_CPPv3N5codal11FunctionKey5F2KeyE"></span><span id="_CPPv2N5codal11FunctionKey5F2KeyE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4adf1256a21930c3aaf8942851504c374a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">F2Key</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey5F2KeyE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey5F3KeyE">
+<span id="_CPPv3N5codal11FunctionKey5F3KeyE"></span><span id="_CPPv2N5codal11FunctionKey5F3KeyE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4a24241eb52d5d9b324ec22cf92e9f8939"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">F3Key</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey5F3KeyE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey5F4KeyE">
+<span id="_CPPv3N5codal11FunctionKey5F4KeyE"></span><span id="_CPPv2N5codal11FunctionKey5F4KeyE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4a0915fc969cf2e6b792ce941e56eb7405"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">F4Key</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey5F4KeyE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey5F5KeyE">
+<span id="_CPPv3N5codal11FunctionKey5F5KeyE"></span><span id="_CPPv2N5codal11FunctionKey5F5KeyE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4a6c542e0ef5ddf9aea106109e972aeeed"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">F5Key</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey5F5KeyE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey5F6KeyE">
+<span id="_CPPv3N5codal11FunctionKey5F6KeyE"></span><span id="_CPPv2N5codal11FunctionKey5F6KeyE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4afb758263db13278a3436e06d2f06726a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">F6Key</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey5F6KeyE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey5F7KeyE">
+<span id="_CPPv3N5codal11FunctionKey5F7KeyE"></span><span id="_CPPv2N5codal11FunctionKey5F7KeyE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4a66388bd9515f84e7a918c14f85afd70c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">F7Key</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey5F7KeyE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey5F8KeyE">
+<span id="_CPPv3N5codal11FunctionKey5F8KeyE"></span><span id="_CPPv2N5codal11FunctionKey5F8KeyE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4a0eb962fb6d3994e47c1f0c99ba4cd9b9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">F8Key</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey5F8KeyE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey5F9KeyE">
+<span id="_CPPv3N5codal11FunctionKey5F9KeyE"></span><span id="_CPPv2N5codal11FunctionKey5F9KeyE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4a030da25293f8654f08a7a93dda4d0f57"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">F9Key</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey5F9KeyE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey6F10KeyE">
+<span id="_CPPv3N5codal11FunctionKey6F10KeyE"></span><span id="_CPPv2N5codal11FunctionKey6F10KeyE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4aa7cef69e049cccebfdf85f11df994ca1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">F10Key</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey6F10KeyE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey6F11KeyE">
+<span id="_CPPv3N5codal11FunctionKey6F11KeyE"></span><span id="_CPPv2N5codal11FunctionKey6F11KeyE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4aad9883ad23980424a971375216772a84"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">F11Key</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey6F11KeyE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey6F12KeyE">
+<span id="_CPPv3N5codal11FunctionKey6F12KeyE"></span><span id="_CPPv2N5codal11FunctionKey6F12KeyE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4acfa12f20de114e698bcaf7632b2c4803"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">F12Key</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey6F12KeyE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey11PrintScreenE">
+<span id="_CPPv3N5codal11FunctionKey11PrintScreenE"></span><span id="_CPPv2N5codal11FunctionKey11PrintScreenE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4a49c196f64801c992473062113723d7d7"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PrintScreen</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey11PrintScreenE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey10ScrollLockE">
+<span id="_CPPv3N5codal11FunctionKey10ScrollLockE"></span><span id="_CPPv2N5codal11FunctionKey10ScrollLockE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4af8795ae5ae2f771277bc1969db0fd891"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScrollLock</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey10ScrollLockE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey5PauseE">
+<span id="_CPPv3N5codal11FunctionKey5PauseE"></span><span id="_CPPv2N5codal11FunctionKey5PauseE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4aff6efb9e4400257a0fa5b93f1ff4acae"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Pause</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey5PauseE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey6InsertE">
+<span id="_CPPv3N5codal11FunctionKey6InsertE"></span><span id="_CPPv2N5codal11FunctionKey6InsertE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4a8f8a80c2c397d648908a3663538e1316"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Insert</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey6InsertE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey4HomeE">
+<span id="_CPPv3N5codal11FunctionKey4HomeE"></span><span id="_CPPv2N5codal11FunctionKey4HomeE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4a7afdf05a0cb5970cb308385962ba357d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Home</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey4HomeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey6PageUpE">
+<span id="_CPPv3N5codal11FunctionKey6PageUpE"></span><span id="_CPPv2N5codal11FunctionKey6PageUpE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4ae3e84abd4172e38d611d410703cd990f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PageUp</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey6PageUpE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey13DeleteForwardE">
+<span id="_CPPv3N5codal11FunctionKey13DeleteForwardE"></span><span id="_CPPv2N5codal11FunctionKey13DeleteForwardE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4a77e6ba8486e00346d2e9483bbf799df7"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DeleteForward</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey13DeleteForwardE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey3EndE">
+<span id="_CPPv3N5codal11FunctionKey3EndE"></span><span id="_CPPv2N5codal11FunctionKey3EndE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4a884ce725f830ccb20b86a40ce460a945"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">End</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey3EndE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey8PageDownE">
+<span id="_CPPv3N5codal11FunctionKey8PageDownE"></span><span id="_CPPv2N5codal11FunctionKey8PageDownE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4ae7aa769d80cb4de7e509f88a60a11b5e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PageDown</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey8PageDownE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey10RightArrowE">
+<span id="_CPPv3N5codal11FunctionKey10RightArrowE"></span><span id="_CPPv2N5codal11FunctionKey10RightArrowE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4a04f28bb972f63bcb06dec9fa2393a214"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RightArrow</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey10RightArrowE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey9LeftArrowE">
+<span id="_CPPv3N5codal11FunctionKey9LeftArrowE"></span><span id="_CPPv2N5codal11FunctionKey9LeftArrowE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4acb16f5632c5e3e226a618643ef153bcf"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LeftArrow</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey9LeftArrowE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey9DownArrowE">
+<span id="_CPPv3N5codal11FunctionKey9DownArrowE"></span><span id="_CPPv2N5codal11FunctionKey9DownArrowE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4ac2064dc4ce4fec31958953330498b658"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DownArrow</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey9DownArrowE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11FunctionKey7UpArrowE">
+<span id="_CPPv3N5codal11FunctionKey7UpArrowE"></span><span id="_CPPv2N5codal11FunctionKey7UpArrowE"></span><span class="target" id="namespacecodal_1a4174b0a37ca7ab46d20e81789cc3c6a4a09442d67ec10798ec4585392a65b8802"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UpArrow</span></span></span><a class="headerlink" href="#_CPPv4N5codal11FunctionKey7UpArrowE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

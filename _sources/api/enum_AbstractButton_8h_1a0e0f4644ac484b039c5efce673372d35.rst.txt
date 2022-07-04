@@ -1,0 +1,14 @@
+.. _exhale_enum_AbstractButton_8h_1a0e0f4644ac484b039c5efce673372d35:
+
+Enum ButtonEventConfiguration
+=============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_AbstractButton.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: ButtonEventConfiguration
+   :project: CODAL

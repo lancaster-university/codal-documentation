@@ -1,0 +1,26 @@
+.. _exhale_class_classcodal_1_1MicroBitRadio:
+
+Class MicroBitRadio
+===================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitRadio.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``private codal::CodalComponent`` (:ref:`exhale_class_classcodal_1_1CodalComponent`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: codal::MicroBitRadio
+   :project: CODAL
+   :members:
+   :protected-members:
+   :undoc-members:

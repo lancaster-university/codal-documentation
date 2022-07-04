@@ -1,0 +1,14 @@
+.. _exhale_define_FAT_8h_1a1434d077ffdde74716be52a022c7d3e7:
+
+Define FAT_SECTORS_PER_FAT
+==========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_FAT.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FAT_SECTORS_PER_FAT
+   :project: CODAL

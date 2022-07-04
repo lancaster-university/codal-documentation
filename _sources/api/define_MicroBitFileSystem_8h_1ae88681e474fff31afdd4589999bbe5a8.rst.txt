@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitFileSystem_8h_1ae88681e474fff31afdd4589999bbe5a8:
+
+Define MB_WRITE
+===============
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitFileSystem.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MB_WRITE
+   :project: CODAL

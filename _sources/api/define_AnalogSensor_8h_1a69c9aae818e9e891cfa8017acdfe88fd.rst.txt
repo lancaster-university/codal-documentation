@@ -1,0 +1,14 @@
+.. _exhale_define_AnalogSensor_8h_1a69c9aae818e9e891cfa8017acdfe88fd:
+
+Define ANALOG_SENSOR_INITIALISED
+================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_AnalogSensor.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: ANALOG_SENSOR_INITIALISED
+   :project: CODAL

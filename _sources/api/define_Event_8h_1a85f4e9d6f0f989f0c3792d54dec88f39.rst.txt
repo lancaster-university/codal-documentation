@@ -1,0 +1,14 @@
+.. _exhale_define_Event_8h_1a85f4e9d6f0f989f0c3792d54dec88f39:
+
+Define DEVICE_EVT_ANY
+=====================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_Event.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DEVICE_EVT_ANY
+   :project: CODAL

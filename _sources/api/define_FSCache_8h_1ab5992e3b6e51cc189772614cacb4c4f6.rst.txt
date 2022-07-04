@@ -1,0 +1,14 @@
+.. _exhale_define_FSCache_8h_1ab5992e3b6e51cc189772614cacb4c4f6:
+
+Define CODAL_FS_DEFAULT_CACHE_SZE
+=================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_FSCache.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CODAL_FS_DEFAULT_CACHE_SZE
+   :project: CODAL

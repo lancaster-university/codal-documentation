@@ -1,0 +1,14 @@
+.. _exhale_function_namespacecodal_1a10f9b51de208b4de63fa18737afe219b:
+
+Function codal::min
+===================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalCompat.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: codal::min(int, int)
+   :project: CODAL

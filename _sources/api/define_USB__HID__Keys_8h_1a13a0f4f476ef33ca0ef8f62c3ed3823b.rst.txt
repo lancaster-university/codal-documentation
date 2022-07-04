@@ -1,0 +1,14 @@
+.. _exhale_define_USB__HID__Keys_8h_1a13a0f4f476ef33ca0ef8f62c3ed3823b:
+
+Define KEY_LEFTSHIFT
+====================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USB_HID_Keys.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: KEY_LEFTSHIFT
+   :project: CODAL

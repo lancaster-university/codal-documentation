@@ -1,0 +1,14 @@
+.. _exhale_define_LSM303Accelerometer_8h_1a0b172e2bccd32507639359991ed2b31f:
+
+Define LSM303_A_STATUS_ENABLED
+==============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LSM303Accelerometer.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LSM303_A_STATUS_ENABLED
+   :project: CODAL

@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitUSBFlashManager_8h_1a20f41957a41c512d241715ed933d2651:
+
+Define MICROBIT_USB_FLASH_MAX_RX_RETRIES
+========================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitUSBFlashManager.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_USB_FLASH_MAX_RX_RETRIES
+   :project: CODAL

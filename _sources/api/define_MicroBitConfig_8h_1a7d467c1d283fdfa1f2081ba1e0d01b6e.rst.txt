@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitConfig_8h_1a7d467c1d283fdfa1f2081ba1e0d01b6e:
+
+Define PAGE_SIZE
+================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: PAGE_SIZE
+   :project: CODAL

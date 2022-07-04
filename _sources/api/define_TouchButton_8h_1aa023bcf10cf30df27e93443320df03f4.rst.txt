@@ -1,0 +1,14 @@
+.. _exhale_define_TouchButton_8h_1aa023bcf10cf30df27e93443320df03f4:
+
+Define TOUCH_BUTTON_CALIBRATING
+===============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_TouchButton.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: TOUCH_BUTTON_CALIBRATING
+   :project: CODAL

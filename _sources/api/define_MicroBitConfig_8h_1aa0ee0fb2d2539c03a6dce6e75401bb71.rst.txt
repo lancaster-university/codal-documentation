@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitConfig_8h_1aa0ee0fb2d2539c03a6dce6e75401bb71:
+
+Define MICROBIT_STORAGE_SCRATCH_PAGE
+====================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_STORAGE_SCRATCH_PAGE
+   :project: CODAL

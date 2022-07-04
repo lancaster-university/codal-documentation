@@ -1,0 +1,14 @@
+.. _exhale_define_LevelDetector_8h_1a4c12c64d90e872d60e6517767111ff64:
+
+Define LEVEL_DETECTOR_DEFAULT_WINDOW_SIZE
+=========================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_LevelDetector.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LEVEL_DETECTOR_DEFAULT_WINDOW_SIZE
+   :project: CODAL

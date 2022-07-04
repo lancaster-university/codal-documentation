@@ -1,0 +1,646 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Class MicroBitFileSystem &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL Documentation
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../getting-started.html">
+   Getting Started with CODAL
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../components/index.html">
+   Components
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/display.html">
+     Display
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/mic-and-speaker.html">
+     Microphone and Speaker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/edge-connector.html">
+     Edge Connector
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/sensors.html">
+     Sensors
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/codal-projects.html">
+     CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../codal-api.html">
+   The Complete CODAL API
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Class MicroBitFileSystem</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-documentation">
+   Class Documentation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="class-microbitfilesystem">
+<span id="exhale-class-classmicrobitfilesystem"></span><h1>Class MicroBitFileSystem<a class="headerlink" href="#class-microbitfilesystem" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitFileSystem.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitfilesystem-h"><span class="std std-ref">File MicroBitFileSystem.h</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">#</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv418MicroBitFileSystem">
+<span id="_CPPv318MicroBitFileSystem"></span><span id="_CPPv218MicroBitFileSystem"></span><span id="MicroBitFileSystem"></span><span class="target" id="classMicroBitFileSystem"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitFileSystem</span></span></span><a class="headerlink" href="#_CPPv418MicroBitFileSystem" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Class definition for the MicroBit File system. </p>
+<p>Microbit file system class. Presents a POSIX-like interface consisting of:<ul class="simple">
+<li><p><a class="reference internal" href="#classMicroBitFileSystem_1a89afb809c323b6fbdde58fe0b4cf8537"><span class="std std-ref">open()</span></a></p></li>
+<li><p><a class="reference internal" href="#classMicroBitFileSystem_1a85b7705bab1bbb267b4db0231ee30fc1"><span class="std std-ref">close()</span></a></p></li>
+<li><p><a class="reference internal" href="#classMicroBitFileSystem_1a6134fcda87c2ee9408a6730a317d6379"><span class="std std-ref">read()</span></a></p></li>
+<li><p><a class="reference internal" href="#classMicroBitFileSystem_1a87466789bac22a086913f8ba89abeed4"><span class="std std-ref">write()</span></a></p></li>
+<li><p><a class="reference internal" href="#classMicroBitFileSystem_1a04f5ee2e8fb6d9fc08108aa852f97693"><span class="std std-ref">seek()</span></a></p></li>
+<li><p><a class="reference internal" href="#classMicroBitFileSystem_1a711f7fcb99ee15f84517106d39b0b80f"><span class="std std-ref">remove()</span></a></p></li>
+</ul>
+</p>
+<p>Only a single instance shoud exist at any given time. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18MicroBitFileSystem18MicroBitFileSystemE8uint32_ti">
+<span id="_CPPv3N18MicroBitFileSystem18MicroBitFileSystemE8uint32_ti"></span><span id="_CPPv2N18MicroBitFileSystem18MicroBitFileSystemE8uint32_ti"></span><span id="MicroBitFileSystem::MicroBitFileSystem__uint32_t.i"></span><span class="target" id="classMicroBitFileSystem_1a7f6a046c9bfc89fc40bfb420a3a64f0f"></span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitFileSystem</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flashStart</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flashPages</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18MicroBitFileSystem18MicroBitFileSystemE8uint32_ti" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Constructor. Creates an instance of a <a class="reference internal" href="#classMicroBitFileSystem"><span class="std std-ref">MicroBitFileSystem</span></a>. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18MicroBitFileSystem4openEPKc8uint32_t">
+<span id="_CPPv3N18MicroBitFileSystem4openEPKc8uint32_t"></span><span id="_CPPv2N18MicroBitFileSystem4openEPKc8uint32_t"></span><span id="MicroBitFileSystem::open__cCP.uint32_t"></span><span class="target" id="classMicroBitFileSystem_1a89afb809c323b6fbdde58fe0b4cf8537"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">open</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">filename</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flags</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18MicroBitFileSystem4openEPKc8uint32_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Open a new file, and obtain a new file handle (int) to read/write/seek the file. The flags are:<ul class="simple">
+<li><p>MB_READ : read from the file.</p></li>
+<li><p>MB_WRITE : write to the file.</p></li>
+<li><p>MB_CREAT : create a new file, if it doesn’t already exist.</p></li>
+</ul>
+</p>
+<p>If a file is opened that doesn’t exist, and MB_CREAT isn’t passed, an error is returned, otherwise the file is created.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MicroBitFileSystem</span><span class="w"> </span><span class="nf">f</span><span class="p">();</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="s">&quot;test.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MB_WRITE</span><span class="o">|</span><span class="n">MB_CREAT</span><span class="p">);</span><span class="w"></span>
+<span class="k">if</span><span class="p">(</span><span class="n">fd</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;file open error&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – name of the file to open, must contain only printable characters. </p></li>
+<li><p><strong>flags</strong> – One or more of MB_READ, MB_WRITE or MB_CREAT. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>return the file handle,MICROBIT_NOT_SUPPORTED if the file system has not been initialised MICROBIT_INVALID_PARAMETER if the filename is too large, MICROBIT_NO_RESOURCES if the file system is full.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18MicroBitFileSystem5flushEi">
+<span id="_CPPv3N18MicroBitFileSystem5flushEi"></span><span id="_CPPv2N18MicroBitFileSystem5flushEi"></span><span id="MicroBitFileSystem::flush__i"></span><span class="target" id="classMicroBitFileSystem_1a730330ff013ea29087c30493f7969f24"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">flush</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fd</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18MicroBitFileSystem5flushEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Writes back all state associated with the given file to FLASH memory, leaving the file open.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MicroBitFileSystem</span><span class="w"> </span><span class="nf">f</span><span class="p">();</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="s">&quot;test.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MB_READ</span><span class="p">);</span><span class="w"></span>
+
+<span class="p">...</span><span class="w"></span>
+
+<span class="n">f</span><span class="p">.</span><span class="n">flush</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fd</strong> – file descriptor - obtained with <a class="reference internal" href="#classMicroBitFileSystem_1a89afb809c323b6fbdde58fe0b4cf8537"><span class="std std-ref">open()</span></a>. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>MICROBIT_OK on success, MICROBIT_NOT_SUPPORTED if the file system has not been initialised, MICROBIT_INVALID_PARAMETER if the given file handle is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18MicroBitFileSystem5closeEi">
+<span id="_CPPv3N18MicroBitFileSystem5closeEi"></span><span id="_CPPv2N18MicroBitFileSystem5closeEi"></span><span id="MicroBitFileSystem::close__i"></span><span class="target" id="classMicroBitFileSystem_1a85b7705bab1bbb267b4db0231ee30fc1"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">close</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fd</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18MicroBitFileSystem5closeEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Close the specified file handle. File handle resources are then made available for future <a class="reference internal" href="#classMicroBitFileSystem_1a89afb809c323b6fbdde58fe0b4cf8537"><span class="std std-ref">open()</span></a> calls.</p>
+<p><a class="reference internal" href="#classMicroBitFileSystem_1a85b7705bab1bbb267b4db0231ee30fc1"><span class="std std-ref">close()</span></a> must be called to ensure all pending data is written back to FLASH memory.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MicroBitFileSystem</span><span class="w"> </span><span class="nf">f</span><span class="p">();</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="s">&quot;test.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MB_READ</span><span class="p">);</span><span class="w"></span>
+<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">f</span><span class="p">.</span><span class="n">close</span><span class="p">(</span><span class="n">fd</span><span class="p">))</span><span class="w"></span>
+<span class="w">   </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;error closing file.&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</p>
+<p>Close the specified file handle. File handle resources are then made available for future <a class="reference internal" href="#classMicroBitFileSystem_1a89afb809c323b6fbdde58fe0b4cf8537"><span class="std std-ref">open()</span></a> calls.</p>
+<p><a class="reference internal" href="#classMicroBitFileSystem_1a85b7705bab1bbb267b4db0231ee30fc1"><span class="std std-ref">close()</span></a> must be called at some point to ensure the filesize in the FT is synced with the cached value in the FD.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MicroBitFileSystem</span><span class="w"> </span><span class="nf">f</span><span class="p">();</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="s">&quot;test.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MB_READ</span><span class="p">);</span><span class="w"></span>
+<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">f</span><span class="p">.</span><span class="n">close</span><span class="p">(</span><span class="n">fd</span><span class="p">))</span><span class="w"></span>
+<span class="w">   </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;error closing file.&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>if <a class="reference internal" href="#classMicroBitFileSystem_1a85b7705bab1bbb267b4db0231ee30fc1"><span class="std std-ref">close()</span></a> is not called, the FT may not be correct, leading to data loss.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fd</strong> – file descriptor - obtained with <a class="reference internal" href="#classMicroBitFileSystem_1a89afb809c323b6fbdde58fe0b4cf8537"><span class="std std-ref">open()</span></a>. </p></li>
+<li><p><strong>fd</strong> – file descriptor - obtained with <a class="reference internal" href="#classMicroBitFileSystem_1a89afb809c323b6fbdde58fe0b4cf8537"><span class="std std-ref">open()</span></a>. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>non-zero on success, MICROBIT_NOT_SUPPORTED if the file system has not been initialised, MICROBIT_INVALID_PARAMETER if the given file handle is invalid.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>MICROBIT_OK on success, MICROBIT_NOT_SUPPORTED if the file system has not been initialised, MICROBIT_INVALID_PARAMETER if the given file handle is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18MicroBitFileSystem4seekEii7uint8_t">
+<span id="_CPPv3N18MicroBitFileSystem4seekEii7uint8_t"></span><span id="_CPPv2N18MicroBitFileSystem4seekEii7uint8_t"></span><span id="MicroBitFileSystem::seek__i.i.uint8_t"></span><span class="target" id="classMicroBitFileSystem_1a04f5ee2e8fb6d9fc08108aa852f97693"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">seek</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fd</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">offset</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flags</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18MicroBitFileSystem4seekEii7uint8_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Move the current position of a file handle, to be used for subsequent read/write calls.</p>
+<p>The offset modifier can be:<ul class="simple">
+<li><p>MB_SEEK_SET set the absolute seek position.</p></li>
+<li><p>MB_SEEK_CUR set the seek position based on the current offset.</p></li>
+<li><p>MB_SEEK_END set the seek position from the end of the file. E.g. to seek to 2nd-to-last byte, use offset=-1.</p></li>
+</ul>
+</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MicroBitFileSystem</span><span class="w"> </span><span class="n">f</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="s">&quot;test.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MB_READ</span><span class="p">);</span><span class="w"></span>
+<span class="n">f</span><span class="p">.</span><span class="n">seek</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="mi">-100</span><span class="p">,</span><span class="w"> </span><span class="n">MB_SEEK_END</span><span class="p">);</span><span class="w"> </span><span class="c1">//100 bytes before end of file.</span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fd</strong> – file handle, obtained with <a class="reference internal" href="#classMicroBitFileSystem_1a89afb809c323b6fbdde58fe0b4cf8537"><span class="std std-ref">open()</span></a> </p></li>
+<li><p><strong>offset</strong> – new offset, can be positive/negative. </p></li>
+<li><p><strong>flags</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>new offset position on success, MICROBIT_NOT_SUPPORTED if the file system is not intiialised, MICROBIT_INVALID_PARAMETER if the flag given is invalid or the file handle is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18MicroBitFileSystem5writeEiP7uint8_ti">
+<span id="_CPPv3N18MicroBitFileSystem5writeEiP7uint8_ti"></span><span id="_CPPv2N18MicroBitFileSystem5writeEiP7uint8_ti"></span><span id="MicroBitFileSystem::write__i.uint8_tP.i"></span><span class="target" id="classMicroBitFileSystem_1a87466789bac22a086913f8ba89abeed4"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fd</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buffer</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18MicroBitFileSystem5writeEiP7uint8_ti" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Write data to the file.</p>
+<p>Write from buffer, length bytes to the current seek position. On each invocation to write, the seek position of the file handle is incremented atomically, by the number of bytes returned.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MicroBitFileSystem</span><span class="w"> </span><span class="nf">f</span><span class="p">();</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="s">&quot;test.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MB_WRITE</span><span class="p">);</span><span class="w"></span>
+<span class="k">if</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hello!&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;error writing&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</p>
+<p>Write data to the file.</p>
+<p>Write from buffer, len bytes to the current seek position. On each invocation to write, the seek position of the file handle is incremented atomically, by the number of bytes returned.</p>
+<p>The cached filesize in the FD is updated on this call. Also, the FT file size is updated only if a new page(s) has been written too, to reduce the number of FT writes.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MicroBitFileSystem</span><span class="w"> </span><span class="nf">f</span><span class="p">();</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="s">&quot;test.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MB_WRITE</span><span class="p">);</span><span class="w"></span>
+<span class="k">if</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hello!&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;error writing&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fd</strong> – File handle </p></li>
+<li><p><strong>buffer</strong> – the buffer from which to write data </p></li>
+<li><p><strong>size</strong> – number of bytes to write </p></li>
+<li><p><strong>fd</strong> – File handle </p></li>
+<li><p><strong>buffer</strong> – the buffer from which to write data </p></li>
+<li><p><strong>len</strong> – number of bytes to write </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>number of bytes written on success, MICROBIT_NO_RESOURCES if data did not get written to flash or the file system has not been initialised, or this file was not opened with the MB_WRITE flag set, MICROBIT_INVALID_PARAMETER if the given file handle is invalid.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>number of bytes written on success, MICROBIT_NO_RESOURCES if data did not get written to flash or the file system has not been initialised, or this file was not opened with the MB_WRITE flag set, MICROBIT_INVALID_PARAMETER if the given file handle is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18MicroBitFileSystem4readEiP7uint8_ti">
+<span id="_CPPv3N18MicroBitFileSystem4readEiP7uint8_ti"></span><span id="_CPPv2N18MicroBitFileSystem4readEiP7uint8_ti"></span><span id="MicroBitFileSystem::read__i.uint8_tP.i"></span><span class="target" id="classMicroBitFileSystem_1a6134fcda87c2ee9408a6730a317d6379"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fd</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buffer</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18MicroBitFileSystem4readEiP7uint8_ti" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Read data from the file.</p>
+<p>Read len bytes from the current seek position in the file, into the buffer. On each invocation to read, the seek position of the file handle is incremented atomically, by the number of bytes returned.</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MicroBitFileSystem</span><span class="w"> </span><span class="n">f</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="s">&quot;read.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MB_READ</span><span class="p">);</span><span class="w"></span>
+<span class="k">if</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;read error&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fd</strong> – File handle, obtained with <a class="reference internal" href="#classMicroBitFileSystem_1a89afb809c323b6fbdde58fe0b4cf8537"><span class="std std-ref">open()</span></a> </p></li>
+<li><p><strong>buffer</strong> – to store data </p></li>
+<li><p><strong>size</strong> – number of bytes to read </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>number of bytes read on success, MICROBIT_NOT_SUPPORTED if the file system is not initialised, or this file was not opened with the MB_READ flag set, MICROBIT_INVALID_PARAMETER if the given file handle is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18MicroBitFileSystem6removeEPKc">
+<span id="_CPPv3N18MicroBitFileSystem6removeEPKc"></span><span id="_CPPv2N18MicroBitFileSystem6removeEPKc"></span><span id="MicroBitFileSystem::remove__cCP"></span><span class="target" id="classMicroBitFileSystem_1a711f7fcb99ee15f84517106d39b0b80f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">remove</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">filename</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18MicroBitFileSystem6removeEPKc" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Remove a file from the system, and free allocated assets (including assigned blocks which are returned for use by other files).</p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<a class="reference internal" href="page_todo.html#todo_1_todo000001"><span class="std std-ref"><span class="pre">Todo:</span></span></a></dt>
+<dd><p>the file must not already have an open file handle.</p>
+</dd></dl>
+
+</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MicroBitFileSystem</span><span class="w"> </span><span class="n">f</span><span class="p">;</span><span class="w"></span>
+<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">f</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="s">&quot;file.txt&quot;</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;file could not be removed&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</p>
+<p>Remove a file from the system, and free allocated assets (including assigned blocks which are returned for use by other files).</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MicroBitFileSystem</span><span class="w"> </span><span class="n">f</span><span class="p">;</span><span class="w"></span>
+<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">f</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="s">&quot;file.txt&quot;</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;file could not be removed&quot;</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – name of the file to remove. </p></li>
+<li><p><strong>filename</strong> – null-terminated name of the file to remove. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>MICROBIT_OK on success, MICROBIT_INVALID_PARAMETER if the given filename does not exist, MICROBIT_CANCELLED if something went wrong</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>MICROBIT_OK on success, MICROBIT_INVALID_PARAMETER if the given filename does not exist, MICROBIT_CANCELLED if something went wrong.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18MicroBitFileSystem15createDirectoryEPKc">
+<span id="_CPPv3N18MicroBitFileSystem15createDirectoryEPKc"></span><span id="_CPPv2N18MicroBitFileSystem15createDirectoryEPKc"></span><span id="MicroBitFileSystem::createDirectory__cCP"></span><span class="target" id="classMicroBitFileSystem_1a04562220df7fc7daad3b08fdc42ef965"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createDirectory</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18MicroBitFileSystem15createDirectoryEPKc" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Creates a new directory with the given name and location</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> – The fully qualified name of the new directory. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>MICROBIT_OK on success, MICROBIT_INVALID_PARAMETER if the path is invalid, or MICROBT_NO_RESOURCES if the FileSystem is full. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-attributes">Public Static Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18MicroBitFileSystem17defaultFileSystemE">
+<span id="_CPPv3N18MicroBitFileSystem17defaultFileSystemE"></span><span id="_CPPv2N18MicroBitFileSystem17defaultFileSystemE"></span><span id="MicroBitFileSystem::defaultFileSystem__MicroBitFileSystemP"></span><span class="target" id="classMicroBitFileSystem_1adff501fc6a9b70eba2ca21d650dbc727"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv418MicroBitFileSystem" title="MicroBitFileSystem"><span class="n"><span class="pre">MicroBitFileSystem</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">defaultFileSystem</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">NULL</span></span><a class="headerlink" href="#_CPPv4N18MicroBitFileSystem17defaultFileSystemE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,104 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Compass.h:
+
+File Compass.h
+==============
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/driver-models``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/driver-models/Compass.h``)
+---------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Compass.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Accelerometer.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Accelerometer.h`)
+
+- ``CodalComponent.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalComponent.h`)
+
+- ``CodalConfig.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalConfig.h`)
+
+- ``CodalUtil.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalUtil.h`)
+
+- ``CoordinateSystem.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_CoordinateSystem.h`)
+
+- ``Pin.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Pin.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitAccelerometer.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitCompassCalibrator.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_FXOS8700.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LSM303Magnetometer.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MAG3110.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Compass.cpp`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_LSM303Magnetometer.cpp`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_codal`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structcodal_1_1CompassCalibration`
+
+- :ref:`exhale_class_classcodal_1_1Compass`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_Compass_8h_1ac7adb2eaf828606adb0b90c16a538035`
+
+- :ref:`exhale_define_Compass_8h_1a1d4613867e337aacc5c4b0874308a60d`
+
+- :ref:`exhale_define_Compass_8h_1ae573d44bfda1593029cdac9391bc0033`
+
+- :ref:`exhale_define_Compass_8h_1ac7f29b91add5d1ba580f0e31a8fca362`
+
+- :ref:`exhale_define_Compass_8h_1a4b1d32fe4f6202b864c69b8e775bca57`
+
+- :ref:`exhale_define_Compass_8h_1a852db3b5f942cd744f8834ee51fdf800`
+
+- :ref:`exhale_define_Compass_8h_1ad87d4904d82b8b32d1be43a28004a4c3`
+
+- :ref:`exhale_define_Compass_8h_1ae0249ae94075b96e9bbe5f0d21f61a6f`
+

@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitCompat_8h_1a70bcdadd0128658073cb1267f7714c15:
+
+Define MICROBIT_PIN_EVENT_ON_EDGE
+=================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_PIN_EVENT_ON_EDGE
+   :project: CODAL

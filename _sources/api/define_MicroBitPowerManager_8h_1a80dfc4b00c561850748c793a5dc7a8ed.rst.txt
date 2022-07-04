@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitPowerManager_8h_1a80dfc4b00c561850748c793a5dc7a8ed:
+
+Define MICROBIT_UIPM_PROPERTY_KL27_USER_EVENT
+=============================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitPowerManager.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_UIPM_PROPERTY_KL27_USER_EVENT
+   :project: CODAL

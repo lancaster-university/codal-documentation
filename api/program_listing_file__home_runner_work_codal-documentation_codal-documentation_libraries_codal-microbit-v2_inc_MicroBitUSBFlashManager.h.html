@@ -1,0 +1,486 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Program Listing for File MicroBitUSBFlashManager.h &#8212; CODAL v0.2.40 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL Documentation
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../getting-started.html">
+   Getting Started with CODAL
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../components/index.html">
+   Components
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/display.html">
+     Display
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/mic-and-speaker.html">
+     Microphone and Speaker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/edge-connector.html">
+     Edge Connector
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../components/sensors.html">
+     Sensors
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/prerequisites.html">
+     Installation - Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../guides/codal-projects.html">
+     CODAL Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/disco-lights.html">
+     Disco Lights
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../codal-api.html">
+   The Complete CODAL API
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/lancaster-university/codal-documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Program Listing for File MicroBitUSBFlashManager.h</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="program-listing-for-file-microbitusbflashmanager-h">
+<span id="program-listing-file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitusbflashmanager-h"></span><h1>Program Listing for File MicroBitUSBFlashManager.h<a class="headerlink" href="#program-listing-for-file-microbitusbflashmanager-h" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitUSBFlashManager.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitusbflashmanager-h"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/MicroBitUSBFlashManager.h</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm">The MIT License (MIT)</span>
+
+<span class="cm">Copyright (c) 2020 Lancaster University.</span>
+
+<span class="cm">Permission is hereby granted, free of charge, to any person obtaining a</span>
+<span class="cm">copy of this software and associated documentation files (the &quot;Software&quot;),</span>
+<span class="cm">to deal in the Software without restriction, including without limitation</span>
+<span class="cm">the rights to use, copy, modify, merge, publish, distribute, sublicense,</span>
+<span class="cm">and/or sell copies of the Software, and to permit persons to whom the</span>
+<span class="cm">Software is furnished to do so, subject to the following conditions:</span>
+
+<span class="cm">The above copyright notice and this permission notice shall be included in</span>
+<span class="cm">all copies or substantial portions of the Software.</span>
+
+<span class="cm">THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<span class="cm">IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
+<span class="cm">FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL</span>
+<span class="cm">THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span>
+<span class="cm">LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING</span>
+<span class="cm">FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER</span>
+<span class="cm">DEALINGS IN THE SOFTWARE.</span>
+<span class="cm">*/</span><span class="w"></span>
+
+<span class="cp">#ifndef MICROBIT_USB_FLASH_MANAGER_H</span>
+<span class="cp">#define MICROBIT_USB_FLASH_MANAGER_H</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MicroBitConfig.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MicroBitCompat.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MicroBitIO.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;codal-core/inc/core/CodalComponent.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;codal-core/inc/driver-models/I2C.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;codal-core/inc/driver-models/Pin.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MicroBitPowerManager.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;NVMController.h&quot;</span><span class="cp"></span>
+
+
+<span class="c1">// Constants for USB Interface Flash Management Protocol</span>
+
+<span class="c1">//</span>
+<span class="c1">// I2C Address of the USB Interface Chip (Flash interface)</span>
+<span class="c1">//</span>
+<span class="cp">#define MICROBIT_USB_FLASH_I2C_ADDRESS              (0x72 &lt;&lt; 1)</span>
+
+<span class="c1">//</span>
+<span class="c1">// General constants</span>
+<span class="c1">//</span>
+<span class="cp">#ifndef MICROBIT_USB_FLASH_MAX_TX_RETRIES</span>
+<span class="cp">#define MICROBIT_USB_FLASH_MAX_TX_RETRIES           20</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef MICROBIT_USB_FLASH_MAX_RX_RETRIES</span>
+<span class="cp">#define MICROBIT_USB_FLASH_MAX_RX_RETRIES           20</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifndef MICROBIT_USB_FLASH_MAX_FLASH_STORAGE</span>
+<span class="cp">#define MICROBIT_USB_FLASH_MAX_FLASH_STORAGE        0x1F000</span>
+<span class="cp">#endif</span>
+
+
+<span class="c1">//</span>
+<span class="c1">// Command codes for the USB Interface Chip</span>
+<span class="c1">//</span>
+<span class="cp">#define MICROBIT_USB_FLASH_FILENAME_CMD             0x01            </span><span class="c1">// Defines the filename exposed via MICROBIT drive.</span>
+<span class="cp">#define MICROBIT_USB_FLASH_FILESIZE_CMD             0x02            </span><span class="c1">// Defines the size of the file exposed via the MICROBIT drive (KB).</span>
+<span class="cp">#define MICROBIT_USB_FLASH_VISIBILITY_CMD           0x03            </span><span class="c1">// Define if the user file should be visible on the MICROBIT drive.</span>
+<span class="cp">#define MICROBIT_USB_FLASH_WRITE_CONFIG_CMD         0x04            </span><span class="c1">// Write current config of above commands to persistent FLASH.</span>
+<span class="cp">#define MICROBIT_USB_FLASH_ERASE_CONFIG_CMD         0x05            </span><span class="c1">// Erase the config above stored in peristent FLASH.</span>
+<span class="cp">#define MICROBIT_USB_FLASH_DISK_SIZE_CMD            0x06            </span><span class="c1">// Determine the amount of availble FLASH space for application use, in KB.</span>
+<span class="cp">#define MICROBIT_USB_FLASH_SECTOR_SIZE_CMD          0x07            </span><span class="c1">// Determine the size of a physical FLASH sector.</span>
+<span class="cp">#define MICROBIT_USB_FLASH_REMOUNT_CMD              0x08            </span><span class="c1">// Remount the MICORBIT drive, taking into account any changes to config.</span>
+<span class="cp">#define MICROBIT_USB_FLASH_STATUS_CMD               0x09            </span><span class="c1">// Determine if USB interface chip is BUSY (unused).</span>
+<span class="cp">#define MICROBIT_USB_FLASH_READ_CMD                 0x0A            </span><span class="c1">// Perform a READ operation from applicaiton FLASH memory.</span>
+<span class="cp">#define MICROBIT_USB_FLASH_WRITE_CMD                0x0B            </span><span class="c1">// Perform a WRITE operation from applicaiton FLASH memory.</span>
+<span class="cp">#define MICROBIT_USB_FLASH_ERASE_CMD                0x0C            </span><span class="c1">// Perform a ERASE operation from applicaiton FLASH memory.</span>
+
+<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">ManagedString</span><span class="w">       </span><span class="n">fileName</span><span class="p">;</span><span class="w">                                   </span><span class="c1">// MUST be in 8.3 format</span>
+<span class="w">    </span><span class="kt">int</span><span class="w">                 </span><span class="n">fileSize</span><span class="p">;</span><span class="w">                                   </span><span class="c1">// File Size in KB (Odd - change to bytes?)</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w">                </span><span class="n">visible</span><span class="p">;</span><span class="w">                                    </span><span class="c1">// Whether or not this file should be visible on the MICROBIT drive</span>
+<span class="p">}</span><span class="w"> </span><span class="n">MicroBitUSBFlashConfig</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w">            </span><span class="n">blockSize</span><span class="p">;</span><span class="w">                                  </span><span class="c1">// The size of a physical block on the disk</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w">             </span><span class="n">blockCount</span><span class="p">;</span><span class="w">                                 </span><span class="c1">// The number of available blocks on the disk</span>
+<span class="p">}</span><span class="w"> </span><span class="n">MicroBitUSBFlashGeometry</span><span class="p">;</span><span class="w"></span>
+
+
+<span class="c1">//</span>
+<span class="c1">// Component Status flags</span>
+<span class="c1">//</span>
+<span class="cp">#define MICROBIT_USB_FLASH_AWAITING_RESPONSE        0x01</span>
+<span class="cp">#define MICROBIT_USB_FLASH_GEOMETRY_LOADED          0x02</span>
+<span class="cp">#define MICROBIT_USB_FLASH_CONFIG_LOADED            0x04</span>
+<span class="cp">#define MICROBIT_USB_FLASH_SINGLE_PAGE_ERASE_ONLY   0x08</span>
+<span class="cp">#define MICROBIT_USB_FLASH_USE_NULL_TRANSACTION     0x10</span>
+<span class="cp">#define MICROBIT_USB_FLASH_BUSY_FLAG_SUPPORTED      0x20</span>
+<span class="cp">#define MICROBIT_USB_FLASH_100MS_AFTER_ERASE        0x40</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">MicroBitUSBFlashManager</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">CodalComponent</span><span class="p">,</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">NVMController</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">        </span><span class="n">MicroBitI2C</span><span class="w">                 </span><span class="o">&amp;</span><span class="n">i2cBus</span><span class="p">;</span><span class="w">                            </span><span class="c1">// The I2C bus to use to communicate with USB interface chip.</span>
+<span class="w">        </span><span class="n">MicroBitIO</span><span class="w">                  </span><span class="o">&amp;</span><span class="n">io</span><span class="p">;</span><span class="w">                                </span><span class="c1">// Pins used by this device</span>
+<span class="w">        </span><span class="n">MicroBitPowerManager</span><span class="w">        </span><span class="o">&amp;</span><span class="n">power</span><span class="p">;</span><span class="w">                             </span><span class="c1">// Reference to power manager instance</span>
+<span class="w">        </span><span class="n">MicroBitUSBFlashConfig</span><span class="w">      </span><span class="n">config</span><span class="p">;</span><span class="w">                             </span><span class="c1">// Current configuration of the USB File interface</span>
+<span class="w">        </span><span class="n">MicroBitUSBFlashGeometry</span><span class="w">    </span><span class="n">geometry</span><span class="p">;</span><span class="w">                           </span><span class="c1">// Current geomtry of the USB File interface</span>
+<span class="w">        </span><span class="kt">int</span><span class="w">                         </span><span class="n">maxWriteLength</span><span class="p">;</span><span class="w">                     </span><span class="c1">// The maximum number of bytes that can be written in a single transaction.</span>
+
+<span class="w">    </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">        </span><span class="n">MicroBitUSBFlashManager</span><span class="p">(</span><span class="n">MicroBitI2C</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i2c</span><span class="p">,</span><span class="w"> </span><span class="n">MicroBitIO</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ioPins</span><span class="p">,</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="w"> </span><span class="o">&amp;</span><span class="n">powerManager</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MICROBIT_ID_USB_FLASH_MANAGER</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">MicroBitUSBFlashConfig</span><span class="w"> </span><span class="nf">getConfiguration</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="nf">setConfiguration</span><span class="p">(</span><span class="n">MicroBitUSBFlashConfig</span><span class="w"> </span><span class="n">config</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">persist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">MicroBitUSBFlashGeometry</span><span class="w"> </span><span class="nf">getGeometry</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="nf">remount</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="nf">eraseConfig</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">read</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">address</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">length</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">virtual</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">read</span><span class="p">(</span><span class="kt">uint32_t</span><span class="o">*</span><span class="w"> </span><span class="n">dest</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">address</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">length</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="nf">write</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">address</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">length</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="nf">write</span><span class="p">(</span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">address</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="nf">erase</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">address</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">length</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">virtual</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">erase</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">page</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span><span class="w"></span>
+
+
+<span class="w">        </span><span class="k">virtual</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="nf">getFlashStart</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">virtual</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="nf">getFlashEnd</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">virtual</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="nf">getPageSize</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">virtual</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="nf">getFlashSize</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="o">~</span><span class="n">MicroBitUSBFlashManager</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">private</span><span class="o">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">transact</span><span class="p">(</span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">responseLength</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">_transact</span><span class="p">(</span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">responseLength</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">transact</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">command</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="nf">isValidChar</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">);</span><span class="w"></span>
+
+<span class="p">};</span><span class="w"></span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Microbit Foundation, Lancaster University<br/>
+  
+      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

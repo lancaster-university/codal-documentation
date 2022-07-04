@@ -1,0 +1,54 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_PwmOut.h:
+
+File PwmOut.h
+=============
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/compat``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/compat/PwmOut.h``)
+--------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_PwmOut.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``MicroBitCompat.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`)
+
+- ``MicroBitIO.h``
+
+- ``NRF52Pin.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_mbed.h`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classPwmOut`
+

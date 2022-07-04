@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitCompat_8h_1a672ffc2dbe90b2d87eccd643c5d58f65:
+
+Define MICROBIT_PIN_MAX_OUTPUT
+==============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_PIN_MAX_OUTPUT
+   :project: CODAL

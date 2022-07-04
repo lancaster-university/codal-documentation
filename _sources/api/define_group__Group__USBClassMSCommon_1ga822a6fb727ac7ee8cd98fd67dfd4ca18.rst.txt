@@ -1,0 +1,14 @@
+.. _exhale_define_group__Group__USBClassMSCommon_1ga822a6fb727ac7ee8cd98fd67dfd4ca18:
+
+Define SCSI_SENSE_KEY_HARDWARE_ERROR
+====================================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USBMassStorageClass.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SCSI_SENSE_KEY_HARDWARE_ERROR
+   :project: CODAL

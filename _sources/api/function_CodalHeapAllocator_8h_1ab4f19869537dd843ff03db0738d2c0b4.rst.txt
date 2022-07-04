@@ -1,0 +1,14 @@
+.. _exhale_function_CodalHeapAllocator_8h_1ab4f19869537dd843ff03db0738d2c0b4:
+
+Function device_create_heap
+===========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalHeapAllocator.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: device_create_heap(PROCESSOR_WORD_TYPE, PROCESSOR_WORD_TYPE)
+   :project: CODAL

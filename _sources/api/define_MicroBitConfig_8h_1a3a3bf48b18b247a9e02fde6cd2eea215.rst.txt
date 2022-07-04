@@ -1,0 +1,14 @@
+.. _exhale_define_MicroBitConfig_8h_1a3a3bf48b18b247a9e02fde6cd2eea215:
+
+Define MICROBIT_APP_REGION_END
+==============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitConfig.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: MICROBIT_APP_REGION_END
+   :project: CODAL
