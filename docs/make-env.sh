@@ -6,10 +6,11 @@ echo "!!! MOVING TO VIRTUAL ENV !!!"
 python3 -m venv env
 source env/bin/activate
 
-echo "!!! INSTALLING REQUIREMENTS !!!"
-pip install -r requirements.txt
+python3 -m pip install --upgrade pip
 
-pip uninstall -y breathe
+echo "!!! INSTALLING REQUIREMENTS !!!"
+#pip install -r requirements.txt
+pip install Sphinx exhale sphinx-book-theme
 
 echo "!!! BUILDING NEW BREATHE !!!"
 mkdir lib
