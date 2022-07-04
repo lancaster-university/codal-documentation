@@ -13,6 +13,8 @@ echo "!!! BUILDING NEW BREATHE !!!"
 mkdir lib
 git clone https://github.com/JohnVidler/breathe.git lib/breathe
 cd lib/breathe
+make clean
+make
 python3 setup.py build
 python3 setup.py install
 cd ../../
