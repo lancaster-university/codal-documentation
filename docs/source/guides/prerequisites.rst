@@ -15,12 +15,46 @@ In summary, we need to have the following components installed:
 We may also want to install these optional dependencies, which may be useful for specific tasks
 
 - `Visual Studio Code <https://code.visualstudio.com/>`_ (Recommended!)
-- `pyocd <https://pyocd.io/>`_ *or* `openocd <https://openocd.org/>`_ to use on-chip debugging
+- `pyOCD <https://pyocd.io/>`_ *or* `OpenOCD <https://openocd.org/>`_ to use on-chip debugging
 
 
 Windows Instructions
 ====================
 
+Windows Package Manager (winget) is preinstalled on Windows 11 and up-to-date versions of Windows 10. You can check if it is installed on your system by checking if you can run the ``winget`` command in your terminal.
+
+.. note::
+    To open a terminal/command prompt window, right click on the start button and click ``Windows PowerShell`` if you're using Windows 10, or ``Windows Terminal`` if you're using Windows 11.
+
+If you do not have Windows Package Manager installed, you should manually download and install the dependencies listed above. Otherwise, follow the installation instructions below.
+
+Using Windows Package Manager
+-----------------------------
+
+The following commands will install each component. If you have any of the components installed already, you will not need to run its install command below.
+
+Whilst some of these will install silently in the background, you may need to manually read and accept any installation prompts which occur.
+
+Python:
+  ``winget install --id=Python.Python.3 -e``
+
+ARM GUI Toolchain:
+  ``winget install --id=Arm.GnuArmEmbeddedToolchain -e``
+
+Git:
+  ``winget install --id=Git.Git -e``
+
+CMake:
+  ``winget install --id=Kitware.CMake -e``
+
+Visual Studio Code (optional):
+  ``winget install --id=Microsoft.VisualStudioCode -e``
+
+Additional Dependencies
+-----------------------
+You will also need to install Ninja, which is a build tool allowing your code to be compiled. To install this, ensure you have installed Python successfully and run the following: ``python -m pip install ninja``.
+
+If you'd like to use debugging, note that neither pyOCD nor OpenOCD are available through the Windows Package Manager, though you can install pyOCD using ``python -m pip install -U pyocd``.
 
 
 Mac Instructions
