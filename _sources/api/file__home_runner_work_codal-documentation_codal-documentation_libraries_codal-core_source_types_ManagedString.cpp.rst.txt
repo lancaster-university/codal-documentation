@@ -8,6 +8,7 @@ File ManagedString.cpp
 
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
+
 .. contents:: Contents
    :local:
    :backlinks: none
@@ -50,9 +51,9 @@ Functions
 
 - :ref:`exhale_function_ManagedString_8cpp_1a65aa33eff2e664e696fdbe3d3e4bcd9a`
 
-- :ref:`exhale_function_ManagedString_8cpp_1a992f6bf1a5d6c2c04001658f20671e9a`
-
 - :ref:`exhale_function_ManagedString_8cpp_1a69ba288f0b720c3f6d9de722ff424409`
+
+- :ref:`exhale_function_ManagedString_8cpp_1a992f6bf1a5d6c2c04001658f20671e9a`
 
 - :ref:`exhale_function_ManagedString_8cpp_1afe03e41d94a52379a01784f210ec6839`
 

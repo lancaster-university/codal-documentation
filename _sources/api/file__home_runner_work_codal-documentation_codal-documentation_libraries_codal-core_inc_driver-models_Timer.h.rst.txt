@@ -8,6 +8,7 @@ File Timer.h
 
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
+
 .. contents:: Contents
    :local:
    :backlinks: none
@@ -108,7 +109,7 @@ Functions
 
 - :ref:`exhale_function_namespacecodal_1a77ccb660b955d82e8ae448baa5de79e5`
 
-- :ref:`exhale_function_namespacecodal_1a8aa3bf65c48895c41d740f859f26c551`
+- :ref:`exhale_function_namespacecodal_1a7fc1d2ff7d1b976bf603f2c9fd7f3517`
 
 - :ref:`exhale_function_namespacecodal_1adc93f1c602d188647b9d1f82d4736fcd`
 

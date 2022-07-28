@@ -8,6 +8,7 @@ File FXOS8700.cpp
 
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
+
 .. contents:: Contents
    :local:
    :backlinks: none
@@ -52,9 +53,9 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_FXOS8700_8cpp_1a292563457da80677c6ddc2f2ebf9591b`
-
 - :ref:`exhale_function_FXOS8700_8cpp_1a36a971ec52ae8c2dbf51b944d8cefaa6`
+
+- :ref:`exhale_function_FXOS8700_8cpp_1a292563457da80677c6ddc2f2ebf9591b`
 
 
 Variables

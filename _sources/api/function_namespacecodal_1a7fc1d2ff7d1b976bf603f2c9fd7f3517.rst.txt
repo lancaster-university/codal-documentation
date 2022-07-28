@@ -1,4 +1,4 @@
-.. _exhale_function_namespacecodal_1a8aa3bf65c48895c41d740f859f26c551:
+.. _exhale_function_namespacecodal_1a7fc1d2ff7d1b976bf603f2c9fd7f3517:
 
 Function codal::system_timer_current_time_us
 ============================================

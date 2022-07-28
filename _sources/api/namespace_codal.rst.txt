@@ -389,9 +389,9 @@ Functions
 
 - :ref:`exhale_function_namespacecodal_1a41a479204fe84822f46832e73f9d1fad`
 
-- :ref:`exhale_function_namespacecodal_1a24cc7686409216907b58508680f07006`
-
 - :ref:`exhale_function_namespacecodal_1aa08182a8151fbabc3a8b6297c059692b`
+
+- :ref:`exhale_function_namespacecodal_1a24cc7686409216907b58508680f07006`
 
 - :ref:`exhale_function_namespacecodal_1a2c9faa46e5af38b729f087388dbdce3f`
 
@@ -469,9 +469,9 @@ Functions
 
 - :ref:`exhale_function_namespacecodal_1af7d82336f01f39fb77f3c1ac581b4b3c`
 
-- :ref:`exhale_function_namespacecodal_1abfe912cf436c0ae36e5ba328af78cc33`
-
 - :ref:`exhale_function_namespacecodal_1a5750ff11e8d04023b682a014d99b901b`
+
+- :ref:`exhale_function_namespacecodal_1abfe912cf436c0ae36e5ba328af78cc33`
 
 - :ref:`exhale_function_namespacecodal_1a83e7fe17375b41f3c7bded287324053f`
 
@@ -507,7 +507,7 @@ Functions
 
 - :ref:`exhale_function_namespacecodal_1a77ccb660b955d82e8ae448baa5de79e5`
 
-- :ref:`exhale_function_namespacecodal_1a8aa3bf65c48895c41d740f859f26c551`
+- :ref:`exhale_function_namespacecodal_1a7fc1d2ff7d1b976bf603f2c9fd7f3517`
 
 - :ref:`exhale_function_namespacecodal_1adc93f1c602d188647b9d1f82d4736fcd`
 

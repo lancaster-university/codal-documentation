@@ -483,6 +483,7 @@ Program Listing for File Timer.cpp
        return system_timer->getTime();
    }
    
+   REAL_TIME_FUNC
    CODAL_TIMESTAMP codal::system_timer_current_time_us()
    {
        if(system_timer == NULL)

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Installation - Tools &#8212; CODAL v0.2.40 documentation</title>
+    <title>Installation - Tools &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -21,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -31,7 +31,7 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -75,7 +75,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40 documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -288,6 +288,18 @@ title="Source repository"
   <a class="reference internal nav-link" href="#windows-instructions">
    Windows Instructions
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-windows-package-manager">
+     Using Windows Package Manager
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#additional-dependencies">
+     Additional Dependencies
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#mac-instructions">
@@ -339,6 +351,18 @@ title="Source repository"
   <a class="reference internal nav-link" href="#windows-instructions">
    Windows Instructions
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-windows-package-manager">
+     Using Windows Package Manager
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#additional-dependencies">
+     Additional Dependencies
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#mac-instructions">
@@ -391,10 +415,38 @@ The details of how to do this on each operating system differ, so make sure you�
 <p>We may also want to install these optional dependencies, which may be useful for specific tasks</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a> (Recommended!)</p></li>
-<li><p><a class="reference external" href="https://pyocd.io/">pyocd</a> <em>or</em> <a class="reference external" href="https://openocd.org/">openocd</a> to use on-chip debugging</p></li>
+<li><p><a class="reference external" href="https://pyocd.io/">pyOCD</a> <em>or</em> <a class="reference external" href="https://openocd.org/">OpenOCD</a> to use on-chip debugging</p></li>
 </ul>
 <section id="windows-instructions">
 <h2>Windows Instructions<a class="headerlink" href="#windows-instructions" title="Permalink to this headline">#</a></h2>
+<p>Windows Package Manager (winget) is preinstalled on Windows 11 and up-to-date versions of Windows 10. You can check if it is installed on your system by checking if you can run the <code class="docutils literal notranslate"><span class="pre">winget</span></code> command in your terminal.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To open a terminal/command prompt window, right click on the start button and click <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">PowerShell</span></code> if you’re using Windows 10, or <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Terminal</span></code> if you’re using Windows 11.</p>
+</div>
+<p>If you do not have Windows Package Manager installed, you should manually download and install the dependencies listed above. Otherwise, follow the installation instructions below.</p>
+<section id="using-windows-package-manager">
+<h3>Using Windows Package Manager<a class="headerlink" href="#using-windows-package-manager" title="Permalink to this headline">#</a></h3>
+<p>The following commands will install each component. If you have any of the components installed already, you will not need to run its install command below.</p>
+<p>Whilst some of these will install silently in the background, you may need to manually read and accept any installation prompts which occur.</p>
+<dl class="simple">
+<dt>Python:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">winget</span> <span class="pre">install</span> <span class="pre">--id=Python.Python.3</span> <span class="pre">-e</span></code></p>
+</dd>
+<dt>ARM GUI Toolchain:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">winget</span> <span class="pre">install</span> <span class="pre">--id=Arm.GnuArmEmbeddedToolchain</span> <span class="pre">-e</span></code></p>
+</dd>
+<dt>Git:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">winget</span> <span class="pre">install</span> <span class="pre">--id=Git.Git</span> <span class="pre">-e</span></code></p>
+</dd>
+<dt>CMake:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">winget</span> <span class="pre">install</span> <span class="pre">--id=Kitware.CMake</span> <span class="pre">-e</span></code></p>
+</dd>
+<dt>Visual Studio Code (optional):</dt><dd><p><code class="docutils literal notranslate"><span class="pre">winget</span> <span class="pre">install</span> <span class="pre">--id=Microsoft.VisualStudioCode</span> <span class="pre">-e</span></code></p>
+</dd>
+</dl>
+</section>
+<section id="additional-dependencies">
+<h3>Additional Dependencies<a class="headerlink" href="#additional-dependencies" title="Permalink to this headline">#</a></h3>
+<p>You will also need to install Ninja, which is a build tool allowing your code to be compiled. To install this, ensure you have installed Python successfully and run the following: <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ninja</span></code>.</p>
+<p>If you’d like to use debugging, note that neither pyOCD nor OpenOCD are available through the Windows Package Manager, though you can install pyOCD using <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">pyocd</span></code>.</p>
+</section>
 </section>
 <section id="mac-instructions">
 <h2>Mac Instructions<a class="headerlink" href="#mac-instructions" title="Permalink to this headline">#</a></h2>

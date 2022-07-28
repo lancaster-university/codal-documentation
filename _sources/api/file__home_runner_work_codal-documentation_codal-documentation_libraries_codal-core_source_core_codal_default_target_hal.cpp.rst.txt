@@ -8,6 +8,7 @@ File codal_default_target_hal.cpp
 
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
+
 .. contents:: Contents
    :local:
    :backlinks: none

@@ -8,6 +8,7 @@ File CodalFiber.h
 
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
+
 .. contents:: Contents
    :local:
    :backlinks: none
@@ -116,9 +117,9 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_namespacecodal_1a24cc7686409216907b58508680f07006`
-
 - :ref:`exhale_function_namespacecodal_1aa08182a8151fbabc3a8b6297c059692b`
+
+- :ref:`exhale_function_namespacecodal_1a24cc7686409216907b58508680f07006`
 
 - :ref:`exhale_function_namespacecodal_1a2c9faa46e5af38b729f087388dbdce3f`
 

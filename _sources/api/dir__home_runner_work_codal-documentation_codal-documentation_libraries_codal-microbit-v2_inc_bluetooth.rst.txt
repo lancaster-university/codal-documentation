@@ -9,6 +9,7 @@ Directory bluetooth
 
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
+
 *Directory path:* ``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/bluetooth``
 
 
