@@ -48,12 +48,6 @@ Included By
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_DataStream.h`
 
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_MessageBus.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_FIFOStream.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_StreamRecording.cpp`
-
 
 
 
@@ -69,4 +63,11 @@ Classes
 
 
 - :ref:`exhale_class_classcodal_1_1MessageBus`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespacecodal_1a2b8e9bf5fdd11d4746ac1d375171119f`
 

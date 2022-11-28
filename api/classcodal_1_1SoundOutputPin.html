@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class SoundOutputPin &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class SoundOutputPin &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-types">
      Base Types
@@ -317,12 +318,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-types">
      Base Types
@@ -369,7 +370,7 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14SoundOutputPin14SoundOutputPinER6Mixer2i">
-<span id="_CPPv3N5codal14SoundOutputPin14SoundOutputPinER6Mixer2i"></span><span id="_CPPv2N5codal14SoundOutputPin14SoundOutputPinER6Mixer2i"></span><span id="codal::SoundOutputPin::SoundOutputPin__Mixer2R.i"></span><span class="target" id="classcodal_1_1SoundOutputPin_1a300b23f600a66051300c39cb66da002a"></span><span class="sig-name descname"><span class="n"><span class="pre">SoundOutputPin</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Mixer2.html#_CPPv4N5codal6Mixer2E" title="codal::Mixer2"><span class="n"><span class="pre">Mixer2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">mix</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">MICROBIT_ID_VIRTUAL_SPEAKER_PIN</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14SoundOutputPin14SoundOutputPinER6Mixer2i" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal14SoundOutputPin14SoundOutputPinER6Mixer2i"></span><span id="_CPPv2N5codal14SoundOutputPin14SoundOutputPinER6Mixer2i"></span><span id="codal::SoundOutputPin::SoundOutputPin__Mixer2R.i"></span><span class="target" id="classcodal_1_1SoundOutputPin_1a645e9113631f8fd412635779d7b0c26c"></span><span class="sig-name descname"><span class="n"><span class="pre">SoundOutputPin</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Mixer2.html#_CPPv4N5codal6Mixer2E" title="codal::Mixer2"><span class="n"><span class="pre">Mixer2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">mix</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">MICROBIT_ID_VIRTUAL_SPEAKER_PIN</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14SoundOutputPin14SoundOutputPinER6Mixer2i" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor. Create a DevicePin instance, generally used to represent a pin on the edge connector.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -383,7 +384,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14SoundOutputPin14setAnalogValueEi">
-<span id="_CPPv3N5codal14SoundOutputPin14setAnalogValueEi"></span><span id="_CPPv2N5codal14SoundOutputPin14setAnalogValueEi"></span><span id="codal::SoundOutputPin::setAnalogValue__i"></span><span class="target" id="classcodal_1_1SoundOutputPin_1a278de39254a761fe16a45c41311ebc07"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAnalogValue</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal14SoundOutputPin14setAnalogValueEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal14SoundOutputPin14setAnalogValueEi"></span><span id="_CPPv2N5codal14SoundOutputPin14setAnalogValueEi"></span><span id="codal::SoundOutputPin::setAnalogValue__i"></span><span class="target" id="classcodal_1_1SoundOutputPin_1a4bcf6bb5fdb6935522ae4b582388c8f5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAnalogValue</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal14SoundOutputPin14setAnalogValueEi" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Configures this IO pin as an analog/pwm output, and change the output value to the given level.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -397,27 +398,23 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14SoundOutputPin14getAnalogValueEv">
-<span id="_CPPv3N5codal14SoundOutputPin14getAnalogValueEv"></span><span id="_CPPv2N5codal14SoundOutputPin14getAnalogValueEv"></span><span id="codal::SoundOutputPin::getAnalogValue"></span><span class="target" id="classcodal_1_1SoundOutputPin_1a56f5e8b763fc5ed34ed1bd34d7bce2c3"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAnalogValue</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal14SoundOutputPin14getAnalogValueEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal14SoundOutputPin14getAnalogValueEv"></span><span id="_CPPv2N5codal14SoundOutputPin14getAnalogValueEv"></span><span id="codal::SoundOutputPin::getAnalogValue"></span><span class="target" id="classcodal_1_1SoundOutputPin_1a1b90847d5ba5dd7ba46e575ea63589ad"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAnalogValue</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal14SoundOutputPin14getAnalogValueEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Configures this IO pin as an analogue input (if necessary), and samples the <a class="reference internal" href="classcodal_1_1Pin.html#classcodal_1_1Pin"><span class="std std-ref">Pin</span></a> for its analog value.</p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Pin</span><span class="w"> </span><span class="nf">P0</span><span class="p">(</span><span class="n">DEVICE_ID_IO_P0</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_PIN_P0</span><span class="p">,</span><span class="w"> </span><span class="n">PIN_CAPABILITY_BOTH</span><span class="p">);</span><span class="w"></span>
 <span class="n">P0</span><span class="p">.</span><span class="n">getAnalogValue</span><span class="p">();</span><span class="w"> </span><span class="c1">// P0 is a value in the range of 0 - 1024</span>
 </pre></div>
 </div>
-</p>
-<p>Configures this IO pin as an analogue input (if necessary), and samples the <a class="reference internal" href="classcodal_1_1Pin.html#classcodal_1_1Pin"><span class="std std-ref">Pin</span></a> for its analog value.</p>
+ </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>the current analogue level on the pin, in the range 0 - 1024, or DEVICE_NOT_SUPPORTED if the given pin does not have analog capability.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the current analogue level on the pin, in the range 0 - 1024, or DEVICE_NOT_SUPPORTED if the given pin does not have analog capability. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14SoundOutputPin15setAnalogPeriodEi">
-<span id="_CPPv3N5codal14SoundOutputPin15setAnalogPeriodEi"></span><span id="_CPPv2N5codal14SoundOutputPin15setAnalogPeriodEi"></span><span id="codal::SoundOutputPin::setAnalogPeriod__i"></span><span class="target" id="classcodal_1_1SoundOutputPin_1ae9b958164b34ee8e89ffc610fbad51e7"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAnalogPeriod</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">period</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal14SoundOutputPin15setAnalogPeriodEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal14SoundOutputPin15setAnalogPeriodEi"></span><span id="_CPPv2N5codal14SoundOutputPin15setAnalogPeriodEi"></span><span id="codal::SoundOutputPin::setAnalogPeriod__i"></span><span class="target" id="classcodal_1_1SoundOutputPin_1a651aa3a31a3fdfaa21d4ec43e964e8ce"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAnalogPeriod</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">period</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal14SoundOutputPin15setAnalogPeriodEi" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Configures the PWM period of the analog output to the given value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -431,29 +428,21 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14SoundOutputPin17setAnalogPeriodUsE8uint32_t">
-<span id="_CPPv3N5codal14SoundOutputPin17setAnalogPeriodUsE8uint32_t"></span><span id="_CPPv2N5codal14SoundOutputPin17setAnalogPeriodUsE8uint32_t"></span><span id="codal::SoundOutputPin::setAnalogPeriodUs__uint32_t"></span><span class="target" id="classcodal_1_1SoundOutputPin_1a381ef3ecef8f865ebce7bc996df9d178"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAnalogPeriodUs</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">period</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal14SoundOutputPin17setAnalogPeriodUsE8uint32_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal14SoundOutputPin17setAnalogPeriodUsE8uint32_t"></span><span id="_CPPv2N5codal14SoundOutputPin17setAnalogPeriodUsE8uint32_t"></span><span id="codal::SoundOutputPin::setAnalogPeriodUs__uint32_t"></span><span class="target" id="classcodal_1_1SoundOutputPin_1a2de7f07f5e0a857c0c6ab7fee6419b85"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAnalogPeriodUs</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">period</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal14SoundOutputPin17setAnalogPeriodUsE8uint32_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Configures the PWM period of the analog output to the given value.</p>
-<p>
-Configures the PWM period of the analog output to the given value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>period</strong> – The new period for the analog output in microseconds.</p></li>
-<li><p><strong>period</strong> – The new period for the analog output in microseconds.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>period</strong> – The new period for the analog output in microseconds.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK on success, or DEVICE_NOT_SUPPORTED if the given pin is not configured as an analog output.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success. </p>
+<dd class="field-even"><p>DEVICE_OK on success, or DEVICE_NOT_SUPPORTED if the given pin is not configured as an analog output. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14SoundOutputPin17getAnalogPeriodUsEv">
-<span id="_CPPv3N5codal14SoundOutputPin17getAnalogPeriodUsEv"></span><span id="_CPPv2N5codal14SoundOutputPin17getAnalogPeriodUsEv"></span><span id="codal::SoundOutputPin::getAnalogPeriodUs"></span><span class="target" id="classcodal_1_1SoundOutputPin_1a415c4bd4c5ede5c8055e3b3f96e34cb9"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAnalogPeriodUs</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal14SoundOutputPin17getAnalogPeriodUsEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal14SoundOutputPin17getAnalogPeriodUsEv"></span><span id="_CPPv2N5codal14SoundOutputPin17getAnalogPeriodUsEv"></span><span id="codal::SoundOutputPin::getAnalogPeriodUs"></span><span class="target" id="classcodal_1_1SoundOutputPin_1ae9faf4818e33839c69452e8f64f4a3da"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAnalogPeriodUs</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal14SoundOutputPin17getAnalogPeriodUsEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Obtains the PWM period of the analog output in microseconds.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -464,7 +453,7 @@ Configures the PWM period of the analog output to the given value.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14SoundOutputPin15getAnalogPeriodEv">
-<span id="_CPPv3N5codal14SoundOutputPin15getAnalogPeriodEv"></span><span id="_CPPv2N5codal14SoundOutputPin15getAnalogPeriodEv"></span><span id="codal::SoundOutputPin::getAnalogPeriod"></span><span class="target" id="classcodal_1_1SoundOutputPin_1ac8807d52af5c197147ae241d09bbbbd5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAnalogPeriod</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal14SoundOutputPin15getAnalogPeriodEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal14SoundOutputPin15getAnalogPeriodEv"></span><span id="_CPPv2N5codal14SoundOutputPin15getAnalogPeriodEv"></span><span id="codal::SoundOutputPin::getAnalogPeriod"></span><span class="target" id="classcodal_1_1SoundOutputPin_1a1cb5b4b1e985f7f24684c5dbc4f9173d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAnalogPeriod</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal14SoundOutputPin15getAnalogPeriodEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Obtains the PWM period of the analog output in milliseconds.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -475,9 +464,8 @@ Configures the PWM period of the analog output to the given value.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14SoundOutputPin12idleCallbackEv">
-<span id="_CPPv3N5codal14SoundOutputPin12idleCallbackEv"></span><span id="_CPPv2N5codal14SoundOutputPin12idleCallbackEv"></span><span id="codal::SoundOutputPin::idleCallback"></span><span class="target" id="classcodal_1_1SoundOutputPin_1a94b0e821db9f64fbcc5322ba886a65a0"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idleCallback</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal14SoundOutputPin12idleCallbackEv" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Callback when the device is idling. We use this to determine long periods of silence, and disable the synthesizer.</p>
-<p>Disable the synthesizer during long periods of silence, for efficiency. </p>
+<span id="_CPPv3N5codal14SoundOutputPin12idleCallbackEv"></span><span id="_CPPv2N5codal14SoundOutputPin12idleCallbackEv"></span><span id="codal::SoundOutputPin::idleCallback"></span><span class="target" id="classcodal_1_1SoundOutputPin_1a883792d59e7760e65bbf09b887b413bc"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idleCallback</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal14SoundOutputPin12idleCallbackEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Callback when the device is idling. We use this to determine long periods of silence, and disable the synthesizer. </p>
 </dd></dl>
 
 </div>

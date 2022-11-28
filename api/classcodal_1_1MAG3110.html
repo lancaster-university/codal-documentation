@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class MAG3110 &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class MAG3110 &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -317,12 +318,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -370,34 +371,17 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal7MAG31107MAG3110ER3I2CR3PinR13AccelerometerR15CoordinateSpace8uint16_t8uint16_t">
-<span id="_CPPv3N5codal7MAG31107MAG3110ER3I2CR3PinR13AccelerometerR15CoordinateSpace8uint16_t8uint16_t"></span><span id="_CPPv2N5codal7MAG31107MAG3110ER3I2CR3PinR13AccelerometerR15CoordinateSpace8uint16_t8uint16_t"></span><span id="codal::MAG3110::MAG3110__I2CR.PinR.AccelerometerR.CoordinateSpaceR.uint16_t.uint16_t"></span><span class="target" id="classcodal_1_1MAG3110_1a536173fec9758a29c4e45f554d472843"></span><span class="sig-name descname"><span class="n"><span class="pre">MAG3110</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1I2C.html#_CPPv4N5codal3I2CE" title="codal::I2C"><span class="n"><span class="pre">I2C</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_i2c</span></span>, <a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">int1</span></span>, <a class="reference internal" href="classcodal_1_1Accelerometer.html#_CPPv4N5codal13AccelerometerE" title="codal::Accelerometer"><span class="n"><span class="pre">Accelerometer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_accelerometer</span></span>, <a class="reference internal" href="classcodal_1_1CoordinateSpace.html#_CPPv4N5codal15CoordinateSpaceE" title="codal::CoordinateSpace"><span class="n"><span class="pre">CoordinateSpace</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">coordinateSpace</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x1D</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_COMPASS</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7MAG31107MAG3110ER3I2CR3PinR13AccelerometerR15CoordinateSpace8uint16_t8uint16_t" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Constructor. Create a software representation of an e-compass.</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MAG3110</span><span class="w"> </span><span class="nf">compass</span><span class="p">(</span><span class="n">i2c</span><span class="p">,</span><span class="w"> </span><span class="n">accelerometer</span><span class="p">,</span><span class="w"> </span><span class="n">coordinateSpace</span><span class="p">);</span><span class="w"></span>
-</pre></div>
-</div>
- </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>_i2c</strong> – an instance of <a class="reference internal" href="classcodal_1_1I2C.html#classcodal_1_1I2C"><span class="std std-ref">codal::I2C</span></a>, which the compass is accessible from. </p></li>
-<li><p><strong>int1</strong> – The <a class="reference internal" href="classcodal_1_1Pin.html#classcodal_1_1Pin"><span class="std std-ref">codal::Pin</span></a> connected to the <a class="reference internal" href="#classcodal_1_1MAG3110"><span class="std std-ref">MAG3110</span></a> interrupt line. </p></li>
-<li><p><strong>_accelerometer</strong> – an instance of <a class="reference internal" href="classcodal_1_1Accelerometer.html#classcodal_1_1Accelerometer"><span class="std std-ref">codal::Accelerometer</span></a>, used for tilt compensation. </p></li>
-<li><p><strong>coordinateSpace</strong> – The 3D coordinate space transform to use with this sensor. </p></li>
-<li><p><strong>address</strong> – the address of the <a class="reference internal" href="#classcodal_1_1MAG3110"><span class="std std-ref">MAG3110</span></a> device on the i2c bus. Defaults to MAG3110_DEFAULT_ADDR. </p></li>
-<li><p><strong>id</strong> – the ID of the new <a class="reference internal" href="#classcodal_1_1MAG3110"><span class="std std-ref">MAG3110</span></a> object. Defaults to MAG3110_DEFAULT_ADDR.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
+<span id="_CPPv3N5codal7MAG31107MAG3110ER3I2CR3PinR13AccelerometerR15CoordinateSpace8uint16_t8uint16_t"></span><span id="_CPPv2N5codal7MAG31107MAG3110ER3I2CR3PinR13AccelerometerR15CoordinateSpace8uint16_t8uint16_t"></span><span id="codal::MAG3110::MAG3110__I2CR.PinR.AccelerometerR.CoordinateSpaceR.uint16_t.uint16_t"></span><span class="target" id="classcodal_1_1MAG3110_1a512e2d38a3cbfc4b1328dff0c61077d3"></span><span class="sig-name descname"><span class="n"><span class="pre">MAG3110</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1I2C.html#_CPPv4N5codal3I2CE" title="codal::I2C"><span class="n"><span class="pre">I2C</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_i2c</span></span>, <a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">int1</span></span>, <a class="reference internal" href="classcodal_1_1Accelerometer.html#_CPPv4N5codal13AccelerometerE" title="codal::Accelerometer"><span class="n"><span class="pre">Accelerometer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_accelerometer</span></span>, <a class="reference internal" href="classcodal_1_1CoordinateSpace.html#_CPPv4N5codal15CoordinateSpaceE" title="codal::CoordinateSpace"><span class="n"><span class="pre">CoordinateSpace</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">coordinateSpace</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x1D</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_COMPASS</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7MAG31107MAG3110ER3I2CR3PinR13AccelerometerR15CoordinateSpace8uint16_t8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal7MAG31106whoAmIEv">
-<span id="_CPPv3N5codal7MAG31106whoAmIEv"></span><span id="_CPPv2N5codal7MAG31106whoAmIEv"></span><span id="codal::MAG3110::whoAmI"></span><span class="target" id="classcodal_1_1MAG3110_1adf102c2eac904050b1b5d8ab17a75e29"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">whoAmI</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7MAG31106whoAmIEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal7MAG31106whoAmIEv"></span><span id="_CPPv2N5codal7MAG31106whoAmIEv"></span><span id="codal::MAG3110::whoAmI"></span><span class="target" id="classcodal_1_1MAG3110_1af043a6180453197e824a9fa21c721616"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">whoAmI</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7MAG31106whoAmIEv" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal7MAG31109configureEv">
-<span id="_CPPv3N5codal7MAG31109configureEv"></span><span id="_CPPv2N5codal7MAG31109configureEv"></span><span id="codal::MAG3110::configure"></span><span class="target" id="classcodal_1_1MAG3110_1a26c0e9d90229fb55d46b71d4eb3e599c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configure</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal7MAG31109configureEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal7MAG31109configureEv"></span><span id="_CPPv2N5codal7MAG31109configureEv"></span><span id="codal::MAG3110::configure"></span><span class="target" id="classcodal_1_1MAG3110_1ae91f27a9b2980fab9ca4e8edb30913b5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configure</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal7MAG31109configureEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Configures the compass for the sample rate defined in this object. The nearest values are chosen to those defined that are supported by the hardware. The instance variables are then updated to reflect reality.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -408,19 +392,23 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal7MAG311013requestUpdateEv">
-<span id="_CPPv3N5codal7MAG311013requestUpdateEv"></span><span id="_CPPv2N5codal7MAG311013requestUpdateEv"></span><span id="codal::MAG3110::requestUpdate"></span><span class="target" id="classcodal_1_1MAG3110_1a94b0758112668e893f8f805ad93fe8f4"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestUpdate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal7MAG311013requestUpdateEv" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Updates the local sample, only if the compass indicates that data is stale.</p>
+<span id="_CPPv3N5codal7MAG311013requestUpdateEv"></span><span id="_CPPv2N5codal7MAG311013requestUpdateEv"></span><span id="codal::MAG3110::requestUpdate"></span><span class="target" id="classcodal_1_1MAG3110_1aafd8461541e960a5339519bf9eaf9e63"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestUpdate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal7MAG311013requestUpdateEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Poll to see if new data is available from the hardware. If so, update it. n.b. it is not necessary to explicitly call this function to update data (it normally happens in the background when the scheduler is idle), but a check is performed if the user explicitly requests up to date data.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Can be used to trigger manual updates, if the device is running without a scheduler. Also called internally by all get[X,Y,Z]() member functions. </p>
+<p>This method should be overidden by the hardware driver to implement the requested changes in hardware. </p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>DEVICE_OK on success, DEVICE_I2C_ERROR if the update fails.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal7MAG311012idleCallbackEv">
-<span id="_CPPv3N5codal7MAG311012idleCallbackEv"></span><span id="_CPPv2N5codal7MAG311012idleCallbackEv"></span><span id="codal::MAG3110::idleCallback"></span><span class="target" id="classcodal_1_1MAG3110_1a1c6871e6a90188472fa25c0e69af78d3"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idleCallback</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal7MAG311012idleCallbackEv" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Periodic callback from the idle thread.</p>
-<p>Calls updateSample(). </p>
+<span id="_CPPv3N5codal7MAG311012idleCallbackEv"></span><span id="_CPPv2N5codal7MAG311012idleCallbackEv"></span><span id="codal::MAG3110::idleCallback"></span><span class="target" id="classcodal_1_1MAG3110_1ab2d6aa544b28d881f338db3a83074b40"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idleCallback</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal7MAG311012idleCallbackEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Implement this function to receive a callback when the device is idling. </p>
 </dd></dl>
 
 </div>

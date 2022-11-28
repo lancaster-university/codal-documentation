@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class Sensor &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class Sensor &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -322,12 +323,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -386,17 +387,13 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6Sensor6SensorE8uint16_t8uint16_t8uint16_t">
-<span id="_CPPv3N5codal6Sensor6SensorE8uint16_t8uint16_t8uint16_t"></span><span id="_CPPv2N5codal6Sensor6SensorE8uint16_t8uint16_t8uint16_t"></span><span id="codal::Sensor::Sensor__uint16_t.uint16_t.uint16_t"></span><span class="target" id="classcodal_1_1Sensor_1a53a4b8b867f874ef5ac826c213495a14"></span><span class="sig-name descname"><span class="n"><span class="pre">Sensor</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sensitivity</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">868</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">samplePeriod</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">500</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor6SensorE8uint16_t8uint16_t8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6Sensor6SensorE8uint16_t8uint16_t8uint16_t"></span><span id="_CPPv2N5codal6Sensor6SensorE8uint16_t8uint16_t8uint16_t"></span><span id="codal::Sensor::Sensor__uint16_t.uint16_t.uint16_t"></span><span class="target" id="classcodal_1_1Sensor_1a164a2d3304e27a6de2f10e6add96134f"></span><span class="sig-name descname"><span class="n"><span class="pre">Sensor</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sensitivity</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">868</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">samplePeriod</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">500</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor6SensorE8uint16_t8uint16_t8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor.</p>
-<p>Creates a generic <a class="reference internal" href="#classcodal_1_1Sensor"><span class="std std-ref">Sensor</span></a>.</p>
-<p>
-Constructor.</p>
 <p>Creates a generic <a class="reference internal" href="#classcodal_1_1Sensor"><span class="std std-ref">Sensor</span></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>pin</strong> – The pin on which to sense </p></li>
-<li><p><strong>id</strong> – The ID of this compoenent e.g. DEVICE_ID_THERMOMETER</p></li>
 <li><p><strong>id</strong> – The ID of this compoenent e.g. DEVICE_ID_THERMOMETER </p></li>
 </ul>
 </dd>
@@ -405,52 +402,42 @@ Constructor.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6Sensor13onSampleEventE5Event">
-<span id="_CPPv3N5codal6Sensor13onSampleEventE5Event"></span><span id="_CPPv2N5codal6Sensor13onSampleEventE5Event"></span><span id="codal::Sensor::onSampleEvent__Event"></span><span class="target" id="classcodal_1_1Sensor_1a280d8909d7abc6141f8c93bfa3b940ac"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">onSampleEvent</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor13onSampleEventE5Event" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6Sensor13onSampleEventE5Event"></span><span id="_CPPv2N5codal6Sensor13onSampleEventE5Event"></span><span id="codal::Sensor::onSampleEvent__Event"></span><span class="target" id="classcodal_1_1Sensor_1ac610f85223b681bbe185c570cb327d21"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">onSampleEvent</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor13onSampleEventE5Event" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6Sensor12updateSampleEv">
-<span id="_CPPv3N5codal6Sensor12updateSampleEv"></span><span id="_CPPv2N5codal6Sensor12updateSampleEv"></span><span id="codal::Sensor::updateSample"></span><span class="target" id="classcodal_1_1Sensor_1ab3acabbc6d0cf7c2332a1a32534dd882"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateSample</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor12updateSampleEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6Sensor12updateSampleEv"></span><span id="_CPPv2N5codal6Sensor12updateSampleEv"></span><span id="codal::Sensor::updateSample"></span><span class="target" id="classcodal_1_1Sensor_1a458c1bdb0cfbf1e436c067251861cdef"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateSample</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor12updateSampleEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Updates the internal reading of the sensor. Typically called periodicaly.</p>
-<p>
-Updates the internal reading of the sensor. Typically called periodically. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success.</p>
+<dd class="field-odd"><p>DEVICE_OK on success. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6Sensor8getValueEv">
-<span id="_CPPv3N5codal6Sensor8getValueEv"></span><span id="_CPPv2N5codal6Sensor8getValueEv"></span><span id="codal::Sensor::getValue"></span><span class="target" id="classcodal_1_1Sensor_1a8130e88906fb04cefade96eed725a1f5"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getValue</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor8getValueEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6Sensor8getValueEv"></span><span id="_CPPv2N5codal6Sensor8getValueEv"></span><span id="codal::Sensor::getValue"></span><span class="target" id="classcodal_1_1Sensor_1acba56a866b2e8e7c757b798261f2f42f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getValue</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor8getValueEv" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6Sensor9setPeriodEi">
-<span id="_CPPv3N5codal6Sensor9setPeriodEi"></span><span id="_CPPv2N5codal6Sensor9setPeriodEi"></span><span id="codal::Sensor::setPeriod__i"></span><span class="target" id="classcodal_1_1Sensor_1ae4977598a0ca02e8b5191369a65c073d"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPeriod</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">period</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor9setPeriodEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6Sensor9setPeriodEi"></span><span id="_CPPv2N5codal6Sensor9setPeriodEi"></span><span id="codal::Sensor::setPeriod__i"></span><span class="target" id="classcodal_1_1Sensor_1ad8906655de6f0a81abc20844cca88d22"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPeriod</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">period</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor9setPeriodEi" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Set the automatic sample period of the accelerometer to the specified value (in ms).</p>
-<p>
-Set the automatic sample period of the sensor to the specified value (in ms).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>period</strong> – the requested time between samples, in milliseconds.</p></li>
-<li><p><strong>period</strong> – the requested time between samples, in milliseconds.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>period</strong> – the requested time between samples, in milliseconds.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK on success, DEVICE_INVALID_PARAMETER if the request fails.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success, DEVICE_INVALID_PARAMETER if the request fails. </p>
+<dd class="field-even"><p>DEVICE_OK on success, DEVICE_INVALID_PARAMETER if the request fails. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6Sensor9getPeriodEv">
-<span id="_CPPv3N5codal6Sensor9getPeriodEv"></span><span id="_CPPv2N5codal6Sensor9getPeriodEv"></span><span id="codal::Sensor::getPeriod"></span><span class="target" id="classcodal_1_1Sensor_1a5d12ce6db07140247f791228220b4b1a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPeriod</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor9getPeriodEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6Sensor9getPeriodEv"></span><span id="_CPPv2N5codal6Sensor9getPeriodEv"></span><span id="codal::Sensor::getPeriod"></span><span class="target" id="classcodal_1_1Sensor_1ad00b68270e9adf191640641b0fda00f6"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPeriod</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor9getPeriodEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Reads the currently configured sample period.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -461,7 +448,7 @@ Set the automatic sample period of the sensor to the specified value (in ms).</p
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6Sensor15setLowThresholdE8uint16_t">
-<span id="_CPPv3N5codal6Sensor15setLowThresholdE8uint16_t"></span><span id="_CPPv2N5codal6Sensor15setLowThresholdE8uint16_t"></span><span id="codal::Sensor::setLowThreshold__uint16_t"></span><span class="target" id="classcodal_1_1Sensor_1a0ae85a94541495feb20a74fe3f86aa27"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setLowThreshold</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor15setLowThresholdE8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6Sensor15setLowThresholdE8uint16_t"></span><span id="_CPPv2N5codal6Sensor15setLowThresholdE8uint16_t"></span><span id="codal::Sensor::setLowThreshold__uint16_t"></span><span class="target" id="classcodal_1_1Sensor_1a7a4e6eb27578fc2de5ab4655e116fb11"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setLowThreshold</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor15setLowThresholdE8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Set threshold to the given value. Events will be generated when these thresholds are crossed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -475,7 +462,7 @@ Set the automatic sample period of the sensor to the specified value (in ms).</p
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6Sensor16setHighThresholdE8uint16_t">
-<span id="_CPPv3N5codal6Sensor16setHighThresholdE8uint16_t"></span><span id="_CPPv2N5codal6Sensor16setHighThresholdE8uint16_t"></span><span id="codal::Sensor::setHighThreshold__uint16_t"></span><span class="target" id="classcodal_1_1Sensor_1a3400c1757c059c668f2c26d1f6cae05c"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setHighThreshold</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor16setHighThresholdE8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6Sensor16setHighThresholdE8uint16_t"></span><span id="_CPPv2N5codal6Sensor16setHighThresholdE8uint16_t"></span><span id="codal::Sensor::setHighThreshold__uint16_t"></span><span class="target" id="classcodal_1_1Sensor_1a78011b706b1b9883b6daa1e060a364da"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setHighThreshold</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor16setHighThresholdE8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Set threshold to the given value. Events will be generated when these thresholds are crossed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -489,7 +476,7 @@ Set the automatic sample period of the sensor to the specified value (in ms).</p
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6Sensor15getLowThresholdEv">
-<span id="_CPPv3N5codal6Sensor15getLowThresholdEv"></span><span id="_CPPv2N5codal6Sensor15getLowThresholdEv"></span><span id="codal::Sensor::getLowThreshold"></span><span class="target" id="classcodal_1_1Sensor_1a6ea36c5b53efbcbb4c053cfea77b38a5"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getLowThreshold</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor15getLowThresholdEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6Sensor15getLowThresholdEv"></span><span id="_CPPv2N5codal6Sensor15getLowThresholdEv"></span><span id="codal::Sensor::getLowThreshold"></span><span class="target" id="classcodal_1_1Sensor_1a424695969ae487b38d5d0ab6025cddc2"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getLowThreshold</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor15getLowThresholdEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines the currently defined low threshold.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -500,7 +487,7 @@ Set the automatic sample period of the sensor to the specified value (in ms).</p
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6Sensor16getHighThresholdEv">
-<span id="_CPPv3N5codal6Sensor16getHighThresholdEv"></span><span id="_CPPv2N5codal6Sensor16getHighThresholdEv"></span><span id="codal::Sensor::getHighThreshold"></span><span class="target" id="classcodal_1_1Sensor_1acf1816d3a8bd325cf385325b978179da"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getHighThreshold</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor16getHighThresholdEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6Sensor16getHighThresholdEv"></span><span id="_CPPv2N5codal6Sensor16getHighThresholdEv"></span><span id="codal::Sensor::getHighThreshold"></span><span class="target" id="classcodal_1_1Sensor_1a49b8800efb5804df3eca9c159cf7d139"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getHighThreshold</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor16getHighThresholdEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines the currently defined high threshold.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -511,29 +498,21 @@ Set the automatic sample period of the sensor to the specified value (in ms).</p
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6Sensor14setSensitivityE8uint16_t">
-<span id="_CPPv3N5codal6Sensor14setSensitivityE8uint16_t"></span><span id="_CPPv2N5codal6Sensor14setSensitivityE8uint16_t"></span><span id="codal::Sensor::setSensitivity__uint16_t"></span><span class="target" id="classcodal_1_1Sensor_1a74712cacb7898c37ff84ab44064cc434"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSensitivity</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor14setSensitivityE8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6Sensor14setSensitivityE8uint16_t"></span><span id="_CPPv2N5codal6Sensor14setSensitivityE8uint16_t"></span><span id="codal::Sensor::setSensitivity__uint16_t"></span><span class="target" id="classcodal_1_1Sensor_1ad36d111589c86e7232e0641544a89c8f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSensitivity</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor14setSensitivityE8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Set smoothing value for the data. A decay average is taken of sampled data to smooth it into more accurate information.</p>
-<p>
-Set sensitivity value for the data. A decay average is taken of sampled data to smooth it into more accurate information.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – A value between 0..1023 that detemrines the level of smoothing. Set to 1023 to disable smoothing. Default value is 868</p></li>
-<li><p><strong>value</strong> – A value between 0..1023 that detemrines the level of smoothing. Set to 1023 to disable smoothing. Default value is 868</p></li>
-</ul>
+<dd class="field-odd"><p><strong>value</strong> – A value between 0..1023 that detemrines the level of smoothing. Set to 1023 to disable smoothing. Default value is 868</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK on success, DEVICE_INVALID_PARAMETER if the request fails.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success, DEVICE_INVALID_PARAMETER if the request fails. </p>
+<dd class="field-even"><p>DEVICE_OK on success, DEVICE_INVALID_PARAMETER if the request fails. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6SensorD0Ev">
-<span id="_CPPv3N5codal6SensorD0Ev"></span><span id="_CPPv2N5codal6SensorD0Ev"></span><span id="codal::Sensor::~Sensor"></span><span class="target" id="classcodal_1_1Sensor_1aee8c70e7ef05ce65e7ee33686b5d7db2"></span><span class="sig-name descname"><span class="n"><span class="pre">~Sensor</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6SensorD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6SensorD0Ev"></span><span id="_CPPv2N5codal6SensorD0Ev"></span><span id="codal::Sensor::~Sensor"></span><span class="target" id="classcodal_1_1Sensor_1a0a5cb1130f3e13c8430ad0d5ed303978"></span><span class="sig-name descname"><span class="n"><span class="pre">~Sensor</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6SensorD0Ev" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Destructor. </p>
 </dd></dl>
 
@@ -542,7 +521,7 @@ Set sensitivity value for the data. A decay average is taken of sampled data to 
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6Sensor17checkThresholdingEv">
-<span id="_CPPv3N5codal6Sensor17checkThresholdingEv"></span><span id="_CPPv2N5codal6Sensor17checkThresholdingEv"></span><span id="codal::Sensor::checkThresholding"></span><span class="target" id="classcodal_1_1Sensor_1a09900fd022d8ebe5f766957931079f8b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">checkThresholding</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor17checkThresholdingEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6Sensor17checkThresholdingEv"></span><span id="_CPPv2N5codal6Sensor17checkThresholdingEv"></span><span id="codal::Sensor::checkThresholding"></span><span class="target" id="classcodal_1_1Sensor_1a94ba96b32e48cb26c111a7464e0b5764"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">checkThresholding</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Sensor17checkThresholdingEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determine if any thresholding events need to be generated, and if so, raise them. </p>
 </dd></dl>
 

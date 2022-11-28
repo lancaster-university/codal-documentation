@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class Button &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class Button &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -322,12 +323,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -388,15 +389,13 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6Button6ButtonER3Pin8uint16_t24ButtonEventConfiguration14ButtonPolarity8PullMode">
-<span id="_CPPv3N5codal6Button6ButtonER3Pin8uint16_t24ButtonEventConfiguration14ButtonPolarity8PullMode"></span><span id="_CPPv2N5codal6Button6ButtonER3Pin8uint16_t24ButtonEventConfiguration14ButtonPolarity8PullMode"></span><span id="codal::Button::Button__PinR.uint16_t.ButtonEventConfiguration.ButtonPolarity.PullMode"></span><span class="target" id="classcodal_1_1Button_1a02d10b14d512d8daebf63c005e90d8a4"></span><span class="sig-name descname"><span class="n"><span class="pre">Button</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pin</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <a class="reference internal" href="enum_AbstractButton_8h_1a0e0f4644ac484b039c5efce673372d35.html#_CPPv424ButtonEventConfiguration" title="ButtonEventConfiguration"><span class="n"><span class="pre">ButtonEventConfiguration</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">eventConfiguration</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="enum_AbstractButton_8h_1a0e0f4644ac484b039c5efce673372d35.html#_CPPv4N24ButtonEventConfiguration24DEVICE_BUTTON_ALL_EVENTSE" title="DEVICE_BUTTON_ALL_EVENTS"><span class="n"><span class="pre">DEVICE_BUTTON_ALL_EVENTS</span></span></a>, <a class="reference internal" href="enum_AbstractButton_8h_1a61b56e805f043d91389f0295931fbd1b.html#_CPPv414ButtonPolarity" title="ButtonPolarity"><span class="n"><span class="pre">ButtonPolarity</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">polarity</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="enum_AbstractButton_8h_1a61b56e805f043d91389f0295931fbd1b.html#_CPPv4N14ButtonPolarity10ACTIVE_LOWE" title="ACTIVE_LOW"><span class="n"><span class="pre">ACTIVE_LOW</span></span></a>, <a class="reference internal" href="enum_namespacecodal_1a3a98de58fe083a95585a24ac94dd2246.html#_CPPv4N5codal8PullModeE" title="codal::PullMode"><span class="n"><span class="pre">PullMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="enum_namespacecodal_1a3a98de58fe083a95585a24ac94dd2246.html#_CPPv4N5codal8PullModeE" title="codal::PullMode"><span class="n"><span class="pre">PullMode</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="enum_namespacecodal_1a3a98de58fe083a95585a24ac94dd2246.html#_CPPv4N5codal8PullMode4NoneE" title="codal::PullMode::None"><span class="n"><span class="pre">None</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Button6ButtonER3Pin8uint16_t24ButtonEventConfiguration14ButtonPolarity8PullMode" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6Button6ButtonER3Pin8uint16_t24ButtonEventConfiguration14ButtonPolarity8PullMode"></span><span id="_CPPv2N5codal6Button6ButtonER3Pin8uint16_t24ButtonEventConfiguration14ButtonPolarity8PullMode"></span><span id="codal::Button::Button__PinR.uint16_t.ButtonEventConfiguration.ButtonPolarity.PullMode"></span><span class="target" id="classcodal_1_1Button_1a4ab40b4e52dd38d6cd080313ba731209"></span><span class="sig-name descname"><span class="n"><span class="pre">Button</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pin</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <a class="reference internal" href="enum_AbstractButton_8h_1a0e0f4644ac484b039c5efce673372d35.html#_CPPv424ButtonEventConfiguration" title="ButtonEventConfiguration"><span class="n"><span class="pre">ButtonEventConfiguration</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">eventConfiguration</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="enum_AbstractButton_8h_1a0e0f4644ac484b039c5efce673372d35.html#_CPPv4N24ButtonEventConfiguration24DEVICE_BUTTON_ALL_EVENTSE" title="DEVICE_BUTTON_ALL_EVENTS"><span class="n"><span class="pre">DEVICE_BUTTON_ALL_EVENTS</span></span></a>, <a class="reference internal" href="enum_AbstractButton_8h_1a61b56e805f043d91389f0295931fbd1b.html#_CPPv414ButtonPolarity" title="ButtonPolarity"><span class="n"><span class="pre">ButtonPolarity</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">polarity</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="enum_AbstractButton_8h_1a61b56e805f043d91389f0295931fbd1b.html#_CPPv4N14ButtonPolarity10ACTIVE_LOWE" title="ACTIVE_LOW"><span class="n"><span class="pre">ACTIVE_LOW</span></span></a>, <a class="reference internal" href="enum_namespacecodal_1a3a98de58fe083a95585a24ac94dd2246.html#_CPPv4N5codal8PullModeE" title="codal::PullMode"><span class="n"><span class="pre">PullMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="enum_namespacecodal_1a3a98de58fe083a95585a24ac94dd2246.html#_CPPv4N5codal8PullModeE" title="codal::PullMode"><span class="n"><span class="pre">PullMode</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="enum_namespacecodal_1a3a98de58fe083a95585a24ac94dd2246.html#_CPPv4N5codal8PullMode4NoneE" title="codal::PullMode::None"><span class="n"><span class="pre">None</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Button6ButtonER3Pin8uint16_t24ButtonEventConfiguration14ButtonPolarity8PullMode" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor.</p>
 <p>Create a software representation of a button.</p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">buttonA</span><span class="p">(</span><span class="n">DEVICE_PIN_BUTTON_A</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_ID_BUTTON_A</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</p>
-<p>Constructor.</p>
-<p>Create a software representation of a button.</p>
+ </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -404,10 +403,6 @@ title="Source repository"
 <li><p><strong>id</strong> – the ID of the new <a class="reference internal" href="#classcodal_1_1Button"><span class="std std-ref">Button</span></a> object.</p></li>
 <li><p><strong>eventConfiguration</strong> – Configures the events that will be generated by this <a class="reference internal" href="#classcodal_1_1Button"><span class="std std-ref">Button</span></a> instance. Defaults to DEVICE_BUTTON_ALL_EVENTS.</p></li>
 <li><p><strong>mode</strong> – the configuration of internal pullups/pulldowns, as defined in the mbed PullMode class. PullNone by default.</p></li>
-<li><p><strong>pin</strong> – the physical pin on the device connected to this button.</p></li>
-<li><p><strong>id</strong> – the ID of the new <a class="reference internal" href="#classcodal_1_1Button"><span class="std std-ref">Button</span></a> object.</p></li>
-<li><p><strong>eventConfiguration</strong> – Configures the events that will be generated by this <a class="reference internal" href="#classcodal_1_1Button"><span class="std std-ref">Button</span></a> instance. Defaults to DEVICE_BUTTON_ALL_EVENTS.</p></li>
-<li><p><strong>mode</strong> – the configuration of internal pullups/pulldowns, as defined in the mbed PullMode class. PullNone by default. </p></li>
 </ul>
 </dd>
 </dl>
@@ -415,7 +410,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6Button9isPressedEv">
-<span id="_CPPv3N5codal6Button9isPressedEv"></span><span id="_CPPv2N5codal6Button9isPressedEv"></span><span id="codal::Button::isPressed"></span><span class="target" id="classcodal_1_1Button_1a9e49d71c9f36de7c2ed25b08e405f25a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPressed</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Button9isPressedEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6Button9isPressedEv"></span><span id="_CPPv2N5codal6Button9isPressedEv"></span><span id="codal::Button::isPressed"></span><span class="target" id="classcodal_1_1Button_1a7c0ed2723c0bd72e8f56f7b8a87692ea"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPressed</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Button9isPressedEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Tests if this <a class="reference internal" href="#classcodal_1_1Button"><span class="std std-ref">Button</span></a> is currently pressed.</p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">buttonA</span><span class="p">.</span><span class="n">isPressed</span><span class="p">())</span><span class="w"></span>
 <span class="w">    </span><span class="n">display</span><span class="p">.</span><span class="n">scroll</span><span class="p">(</span><span class="s">&quot;Pressed!&quot;</span><span class="p">);</span><span class="w"></span>
@@ -431,7 +426,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6Button21setEventConfigurationE24ButtonEventConfiguration">
-<span id="_CPPv3N5codal6Button21setEventConfigurationE24ButtonEventConfiguration"></span><span id="_CPPv2N5codal6Button21setEventConfigurationE24ButtonEventConfiguration"></span><span id="codal::Button::setEventConfiguration__ButtonEventConfiguration"></span><span class="target" id="classcodal_1_1Button_1af5828a976860e94fa76ecf3b7170d712"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setEventConfiguration</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enum_AbstractButton_8h_1a0e0f4644ac484b039c5efce673372d35.html#_CPPv424ButtonEventConfiguration" title="ButtonEventConfiguration"><span class="n"><span class="pre">ButtonEventConfiguration</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">config</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Button21setEventConfigurationE24ButtonEventConfiguration" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6Button21setEventConfigurationE24ButtonEventConfiguration"></span><span id="_CPPv2N5codal6Button21setEventConfigurationE24ButtonEventConfiguration"></span><span id="codal::Button::setEventConfiguration__ButtonEventConfiguration"></span><span class="target" id="classcodal_1_1Button_1a41541edf095db24f74052beb63c11dbb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setEventConfiguration</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enum_AbstractButton_8h_1a0e0f4644ac484b039c5efce673372d35.html#_CPPv424ButtonEventConfiguration" title="ButtonEventConfiguration"><span class="n"><span class="pre">ButtonEventConfiguration</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">config</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Button21setEventConfigurationE24ButtonEventConfiguration" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Changes the event configuration used by this button to the given ButtonEventConfiguration.</p>
 <p>All subsequent events generated by this button will then be informed by this configuraiton.</p>
 <p>
@@ -452,7 +447,7 @@ Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><spa
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6Button16periodicCallbackEv">
-<span id="_CPPv3N5codal6Button16periodicCallbackEv"></span><span id="_CPPv2N5codal6Button16periodicCallbackEv"></span><span id="codal::Button::periodicCallback"></span><span class="target" id="classcodal_1_1Button_1a831d13eae5c65ffa8314b03d7b55e12e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">periodicCallback</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Button16periodicCallbackEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6Button16periodicCallbackEv"></span><span id="_CPPv2N5codal6Button16periodicCallbackEv"></span><span id="codal::Button::periodicCallback"></span><span class="target" id="classcodal_1_1Button_1a990ce751cba550a3c64bd9fabb905d85"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">periodicCallback</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Button16periodicCallbackEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>periodic callback from Device system timer.</p>
 <p>Check for state change for this button, and fires various events on a state change. </p>
 </dd></dl>
@@ -481,7 +476,7 @@ Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><spa
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6ButtonD0Ev">
-<span id="_CPPv3N5codal6ButtonD0Ev"></span><span id="_CPPv2N5codal6ButtonD0Ev"></span><span id="codal::Button::~Button"></span><span class="target" id="classcodal_1_1Button_1a2a001eb9c3cc8ae54768a850dd345002"></span><span class="sig-name descname"><span class="n"><span class="pre">~Button</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6ButtonD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6ButtonD0Ev"></span><span id="_CPPv2N5codal6ButtonD0Ev"></span><span id="codal::Button::~Button"></span><span class="target" id="classcodal_1_1Button_1acaf1bc64553e3113215243b60348ce77"></span><span class="sig-name descname"><span class="n"><span class="pre">~Button</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6ButtonD0Ev" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Destructor for <a class="reference internal" href="#classcodal_1_1Button"><span class="std std-ref">Button</span></a>, where we deregister this instance from the array of fiber components. </p>
 </dd></dl>
 
@@ -498,13 +493,13 @@ Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><spa
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6Button12buttonActiveEv">
-<span id="_CPPv3N5codal6Button12buttonActiveEv"></span><span id="_CPPv2N5codal6Button12buttonActiveEv"></span><span id="codal::Button::buttonActive"></span><span class="target" id="classcodal_1_1Button_1abbdf1a413508eac971a19e20172bb733"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">buttonActive</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Button12buttonActiveEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6Button12buttonActiveEv"></span><span id="_CPPv2N5codal6Button12buttonActiveEv"></span><span id="codal::Button::buttonActive"></span><span class="target" id="classcodal_1_1Button_1a523568c357bf759fd9f38d9b2fdbc712"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">buttonActive</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6Button12buttonActiveEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines if this button is instantenously active (i.e. pressed). Internal method, use before debouncing. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6Button8setSleepEb">
-<span id="_CPPv3N5codal6Button8setSleepEb"></span><span id="_CPPv2N5codal6Button8setSleepEb"></span><span id="codal::Button::setSleep__b"></span><span class="target" id="classcodal_1_1Button_1acf7291ff55d767741e1906fd091460cb"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSleep</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">doSleep</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal6Button8setSleepEb" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6Button8setSleepEb"></span><span id="_CPPv2N5codal6Button8setSleepEb"></span><span id="codal::Button::setSleep__b"></span><span class="target" id="classcodal_1_1Button_1aba9bd675e52e643a0f2bd645290b37e5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSleep</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">doSleep</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal6Button8setSleepEb" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Puts the component in (or out of) sleep (low power) mode. </p>
 </dd></dl>
 

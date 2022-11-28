@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class MicroBitLog &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class MicroBitLog &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,7 +282,7 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-documentation">
    Class Documentation
@@ -305,7 +306,7 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-documentation">
    Class Documentation
@@ -336,35 +337,30 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11MicroBitLog11MicroBitLogER23MicroBitUSBFlashManagerR20MicroBitPowerManagerR11NRF52Serial">
-<span id="_CPPv3N5codal11MicroBitLog11MicroBitLogER23MicroBitUSBFlashManagerR20MicroBitPowerManagerR11NRF52Serial"></span><span id="_CPPv2N5codal11MicroBitLog11MicroBitLogER23MicroBitUSBFlashManagerR20MicroBitPowerManagerR11NRF52Serial"></span><span id="codal::MicroBitLog::MicroBitLog__MicroBitUSBFlashManagerR.MicroBitPowerManagerR.NRF52SerialR"></span><span class="target" id="classcodal_1_1MicroBitLog_1a7abfc97b3e6012392a8e51b8177ac3f3"></span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitLog</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classMicroBitUSBFlashManager.html#_CPPv423MicroBitUSBFlashManager" title="MicroBitUSBFlashManager"><span class="n"><span class="pre">MicroBitUSBFlashManager</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">flash</span></span>, <a class="reference internal" href="classMicroBitPowerManager.html#_CPPv420MicroBitPowerManager" title="MicroBitPowerManager"><span class="n"><span class="pre">MicroBitPowerManager</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">power</span></span>, <span class="n"><span class="pre">NRF52Serial</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">serial</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog11MicroBitLogER23MicroBitUSBFlashManagerR20MicroBitPowerManagerR11NRF52Serial" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal11MicroBitLog11MicroBitLogER23MicroBitUSBFlashManagerR20MicroBitPowerManagerR11NRF52Serial"></span><span id="_CPPv2N5codal11MicroBitLog11MicroBitLogER23MicroBitUSBFlashManagerR20MicroBitPowerManagerR11NRF52Serial"></span><span id="codal::MicroBitLog::MicroBitLog__MicroBitUSBFlashManagerR.MicroBitPowerManagerR.NRF52SerialR"></span><span class="target" id="classcodal_1_1MicroBitLog_1ad98a8b191e57d02dbda63bb5e5911fe6"></span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitLog</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classMicroBitUSBFlashManager.html#_CPPv423MicroBitUSBFlashManager" title="MicroBitUSBFlashManager"><span class="n"><span class="pre">MicroBitUSBFlashManager</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">flash</span></span>, <a class="reference internal" href="classMicroBitPowerManager.html#_CPPv420MicroBitPowerManager" title="MicroBitPowerManager"><span class="n"><span class="pre">MicroBitPowerManager</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">power</span></span>, <span class="n"><span class="pre">NRF52Serial</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">serial</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog11MicroBitLogER23MicroBitUSBFlashManagerR20MicroBitPowerManagerR11NRF52Serial" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11MicroBitLogD0Ev">
-<span id="_CPPv3N5codal11MicroBitLogD0Ev"></span><span id="_CPPv2N5codal11MicroBitLogD0Ev"></span><span id="codal::MicroBitLog::~MicroBitLog"></span><span class="target" id="classcodal_1_1MicroBitLog_1abee0b062f88918b8ef13e9729829a983"></span><span class="sig-name descname"><span class="n"><span class="pre">~MicroBitLog</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLogD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal11MicroBitLogD0Ev"></span><span id="_CPPv2N5codal11MicroBitLogD0Ev"></span><span id="codal::MicroBitLog::~MicroBitLog"></span><span class="target" id="classcodal_1_1MicroBitLog_1afb4a4bee9bc2efa3071d60d7a75b88ab"></span><span class="sig-name descname"><span class="n"><span class="pre">~MicroBitLog</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLogD0Ev" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Destructor. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11MicroBitLog9isPresentEv">
-<span id="_CPPv3N5codal11MicroBitLog9isPresentEv"></span><span id="_CPPv2N5codal11MicroBitLog9isPresentEv"></span><span id="codal::MicroBitLog::isPresent"></span><span class="target" id="classcodal_1_1MicroBitLog_1acc3bc10440618165bc97ae26627a9a42"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPresent</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog9isPresentEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal11MicroBitLog9isPresentEv"></span><span id="_CPPv2N5codal11MicroBitLog9isPresentEv"></span><span id="codal::MicroBitLog::isPresent"></span><span class="target" id="classcodal_1_1MicroBitLog_1aefce92056d8fa483c1bafe533fe55250"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPresent</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog9isPresentEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines if a MicroBitLogFS header is present.</p>
-<p>
-Determines if a MicroMitLogFS header is present.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>true if a MICROBIT_LOG_VERSION string is present at the expected location, false otherwise.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>true if a MICROBIT_LOG_VERSION string is present at the expected location, false otherwise. </p>
+<dd class="field-odd"><p>true if a MICROBIT_LOG_VERSION string is present at the expected location, false otherwise. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11MicroBitLog6isFullEv">
-<span id="_CPPv3N5codal11MicroBitLog6isFullEv"></span><span id="_CPPv2N5codal11MicroBitLog6isFullEv"></span><span id="codal::MicroBitLog::isFull"></span><span class="target" id="classcodal_1_1MicroBitLog_1aa7bc365cbc72cd0da78eca23d25d8a9c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isFull</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog6isFullEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal11MicroBitLog6isFullEv"></span><span id="_CPPv2N5codal11MicroBitLog6isFullEv"></span><span id="codal::MicroBitLog::isFull"></span><span class="target" id="classcodal_1_1MicroBitLog_1abdd4586c0148e7837faa52ef3bc8ae55"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isFull</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog6isFullEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines if this log is full</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -375,7 +371,7 @@ Determines if a MicroMitLogFS header is present.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11MicroBitLog13setVisibilityEb">
-<span id="_CPPv3N5codal11MicroBitLog13setVisibilityEb"></span><span id="_CPPv2N5codal11MicroBitLog13setVisibilityEb"></span><span id="codal::MicroBitLog::setVisibility__b"></span><span class="target" id="classcodal_1_1MicroBitLog_1ae808829346344016bee59fd4db3de316"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setVisibility</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">visible</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog13setVisibilityEb" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal11MicroBitLog13setVisibilityEb"></span><span id="_CPPv2N5codal11MicroBitLog13setVisibilityEb"></span><span id="codal::MicroBitLog::setVisibility__b"></span><span class="target" id="classcodal_1_1MicroBitLog_1ae0f98324055aa673011b59c18d39f275"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setVisibility</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">visible</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog13setVisibilityEb" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Sets the visibility of the MY_DATA.HTM file on the MICROBIT drive. Only updates the persistent state of this visibility if it has changed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -386,26 +382,24 @@ Determines if a MicroMitLogFS header is present.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11MicroBitLog5clearEb">
-<span id="_CPPv3N5codal11MicroBitLog5clearEb"></span><span id="_CPPv2N5codal11MicroBitLog5clearEb"></span><span id="codal::MicroBitLog::clear__b"></span><span class="target" id="classcodal_1_1MicroBitLog_1aec4d708628e0a6bf19da37b76e0de61a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clear</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fullErase</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog5clearEb" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal11MicroBitLog5clearEb"></span><span id="_CPPv2N5codal11MicroBitLog5clearEb"></span><span id="codal::MicroBitLog::clear__b"></span><span class="target" id="classcodal_1_1MicroBitLog_1ab0111163e597e227dcbe43cada1ea169"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clear</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fullErase</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog5clearEb" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Clears the current log, including any previously defined keys. By default a “fast format” approach is typically adopted, where only the FS metadata is reset. Any previously stored user data will not be visible, but could still be extracted using forensic techniques. A full erase option is is supported that elimates all trace of user data, but this is not recommended unless strictly necessary as it will take a long time to complete and promotes excessive flash wear.</p>
-<p>
-Reset all data stored in persistent storage. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>fullErase</strong> – if set to true, all data will be hard erased from storage.</p>
+<dd class="field-odd"><p><strong>fullErase</strong> – if set to true, all data will be hard erased from storage. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11MicroBitLog10invalidateEv">
-<span id="_CPPv3N5codal11MicroBitLog10invalidateEv"></span><span id="_CPPv2N5codal11MicroBitLog10invalidateEv"></span><span id="codal::MicroBitLog::invalidate"></span><span class="target" id="classcodal_1_1MicroBitLog_1a537e51d4975de88a50beb13ac98debdd"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">invalidate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog10invalidateEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal11MicroBitLog10invalidateEv"></span><span id="_CPPv2N5codal11MicroBitLog10invalidateEv"></span><span id="codal::MicroBitLog::invalidate"></span><span class="target" id="classcodal_1_1MicroBitLog_1a024f9c374708775d7faf863fbb0dbd70"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">invalidate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog10invalidateEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Marks an existing Log as invalid. The log will be cleared with the default settings the next time a user attempts to use it. If no valid log is present, this method has no effect. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11MicroBitLog12setTimeStampE15TimeStampFormat">
-<span id="_CPPv3N5codal11MicroBitLog12setTimeStampE15TimeStampFormat"></span><span id="_CPPv2N5codal11MicroBitLog12setTimeStampE15TimeStampFormat"></span><span id="codal::MicroBitLog::setTimeStamp__TimeStampFormat"></span><span class="target" id="classcodal_1_1MicroBitLog_1a192b4122ecfe98491966ddecd36d1ed0"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setTimeStamp</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enum_namespacecodal_1a56d64e68fe03b41e0fad7a0eee1fb9f7.html#_CPPv4N5codal15TimeStampFormatE" title="codal::TimeStampFormat"><span class="n"><span class="pre">TimeStampFormat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">format</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog12setTimeStampE15TimeStampFormat" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal11MicroBitLog12setTimeStampE15TimeStampFormat"></span><span id="_CPPv2N5codal11MicroBitLog12setTimeStampE15TimeStampFormat"></span><span id="codal::MicroBitLog::setTimeStamp__TimeStampFormat"></span><span class="target" id="classcodal_1_1MicroBitLog_1aebc52ed3ad059b6d4045a1dc83d209ec"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setTimeStamp</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enum_namespacecodal_1a56d64e68fe03b41e0fad7a0eee1fb9f7.html#_CPPv4N5codal15TimeStampFormatE" title="codal::TimeStampFormat"><span class="n"><span class="pre">TimeStampFormat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">format</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog12setTimeStampE15TimeStampFormat" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines the format of the timestamp data to be added (if any). If requested, time stamps will be automatically added to each row of data as an integer value rounded down to the unit specified.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -416,7 +410,7 @@ Reset all data stored in persistent storage. </p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11MicroBitLog18setSerialMirroringEb">
-<span id="_CPPv3N5codal11MicroBitLog18setSerialMirroringEb"></span><span id="_CPPv2N5codal11MicroBitLog18setSerialMirroringEb"></span><span id="codal::MicroBitLog::setSerialMirroring__b"></span><span class="target" id="classcodal_1_1MicroBitLog_1a11c4d24ce4490fe682abbc9039363299"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSerialMirroring</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">enable</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog18setSerialMirroringEb" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal11MicroBitLog18setSerialMirroringEb"></span><span id="_CPPv2N5codal11MicroBitLog18setSerialMirroringEb"></span><span id="codal::MicroBitLog::setSerialMirroring__b"></span><span class="target" id="classcodal_1_1MicroBitLog_1a3a022b1ea8066b1900f221610caf60bc"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSerialMirroring</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">enable</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog18setSerialMirroringEb" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Defines if data logging should also be streamed over the serial port.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -427,8 +421,8 @@ Reset all data stored in persistent storage. </p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11MicroBitLog8beginRowEv">
-<span id="_CPPv3N5codal11MicroBitLog8beginRowEv"></span><span id="_CPPv2N5codal11MicroBitLog8beginRowEv"></span><span id="codal::MicroBitLog::beginRow"></span><span class="target" id="classcodal_1_1MicroBitLog_1a530c1f3c7546ca4b9bdf404ca905e94d"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">beginRow</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog8beginRowEv" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Creates a new row in the log, ready to be populated by <a class="reference internal" href="#classcodal_1_1MicroBitLog_1ac0231655548b761977e92f755f41a8b0"><span class="std std-ref">logData()</span></a></p>
+<span id="_CPPv3N5codal11MicroBitLog8beginRowEv"></span><span id="_CPPv2N5codal11MicroBitLog8beginRowEv"></span><span id="codal::MicroBitLog::beginRow"></span><span class="target" id="classcodal_1_1MicroBitLog_1a438a98910f8f612f8e10fd8f3ed56d95"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">beginRow</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog8beginRowEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Creates a new row in the log, ready to be populated by <a class="reference internal" href="#classcodal_1_1MicroBitLog_1a48ede810627e433811a6f9c2e6ffe116"><span class="std std-ref">logData()</span></a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>DEVICE_OK on success. </p>
@@ -438,7 +432,7 @@ Reset all data stored in persistent storage. </p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11MicroBitLog7logDataEPKcPKc">
-<span id="_CPPv3N5codal11MicroBitLog7logDataEPKcPKc"></span><span id="_CPPv2N5codal11MicroBitLog7logDataEPKcPKc"></span><span id="codal::MicroBitLog::logData__cCP.cCP"></span><span class="target" id="classcodal_1_1MicroBitLog_1ac0231655548b761977e92f755f41a8b0"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">logData</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">key</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog7logDataEPKcPKc" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal11MicroBitLog7logDataEPKcPKc"></span><span id="_CPPv2N5codal11MicroBitLog7logDataEPKcPKc"></span><span id="codal::MicroBitLog::logData__cCP.cCP"></span><span class="target" id="classcodal_1_1MicroBitLog_1a48ede810627e433811a6f9c2e6ffe116"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">logData</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">key</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog7logDataEPKcPKc" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Populates the current row with the given key/value pair. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -455,7 +449,7 @@ Reset all data stored in persistent storage. </p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11MicroBitLog7logDataE13ManagedString13ManagedString">
-<span id="_CPPv3N5codal11MicroBitLog7logDataE13ManagedString13ManagedString"></span><span id="_CPPv2N5codal11MicroBitLog7logDataE13ManagedString13ManagedString"></span><span id="codal::MicroBitLog::logData__ManagedString.ManagedString"></span><span class="target" id="classcodal_1_1MicroBitLog_1ac2af000dfbb84473fca245738f8d1987"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">logData</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">key</span></span>, <a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog7logDataE13ManagedString13ManagedString" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal11MicroBitLog7logDataE13ManagedString13ManagedString"></span><span id="_CPPv2N5codal11MicroBitLog7logDataE13ManagedString13ManagedString"></span><span id="codal::MicroBitLog::logData__ManagedString.ManagedString"></span><span class="target" id="classcodal_1_1MicroBitLog_1a31537c879a15cbf3164cc1da65df5177"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">logData</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">key</span></span>, <a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog7logDataE13ManagedString13ManagedString" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Populates the current row with the given key/value pair. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -472,7 +466,7 @@ Reset all data stored in persistent storage. </p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11MicroBitLog6endRowEv">
-<span id="_CPPv3N5codal11MicroBitLog6endRowEv"></span><span id="_CPPv2N5codal11MicroBitLog6endRowEv"></span><span id="codal::MicroBitLog::endRow"></span><span class="target" id="classcodal_1_1MicroBitLog_1a20df0097feb5945b1b4de13e3b6d17e6"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">endRow</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog6endRowEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal11MicroBitLog6endRowEv"></span><span id="_CPPv2N5codal11MicroBitLog6endRowEv"></span><span id="codal::MicroBitLog::endRow"></span><span class="target" id="classcodal_1_1MicroBitLog_1a8c1de5e848919f90c1ecc3fa5842e4b4"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">endRow</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog6endRowEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Complete a row in the log, and pushes to persistent storage. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -483,7 +477,7 @@ Reset all data stored in persistent storage. </p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11MicroBitLog9logStringEPKc">
-<span id="_CPPv3N5codal11MicroBitLog9logStringEPKc"></span><span id="_CPPv2N5codal11MicroBitLog9logStringEPKc"></span><span id="codal::MicroBitLog::logString__cCP"></span><span class="target" id="classcodal_1_1MicroBitLog_1a10ae11c25eab806c943e7ad1ac0f7f0b"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">logString</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog9logStringEPKc" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal11MicroBitLog9logStringEPKc"></span><span id="_CPPv2N5codal11MicroBitLog9logStringEPKc"></span><span id="codal::MicroBitLog::logString__cCP"></span><span class="target" id="classcodal_1_1MicroBitLog_1a8a5636cd0d1f821433a165e4026b6442"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">logString</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog9logStringEPKc" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Inject the given row into the log as text, ignoring key/value pairs. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -494,7 +488,7 @@ Reset all data stored in persistent storage. </p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11MicroBitLog9logStringE13ManagedString">
-<span id="_CPPv3N5codal11MicroBitLog9logStringE13ManagedString"></span><span id="_CPPv2N5codal11MicroBitLog9logStringE13ManagedString"></span><span id="codal::MicroBitLog::logString__ManagedString"></span><span class="target" id="classcodal_1_1MicroBitLog_1a54674e9dea1cc8994413f8b310f5af59"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">logString</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog9logStringE13ManagedString" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal11MicroBitLog9logStringE13ManagedString"></span><span id="_CPPv2N5codal11MicroBitLog9logStringE13ManagedString"></span><span id="codal::MicroBitLog::logString__ManagedString"></span><span class="target" id="classcodal_1_1MicroBitLog_1a790646d79346d871c90204fe90084f11"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">logString</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog9logStringE13ManagedString" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Inject the given row into the log as text, ignoring key/value pairs. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -505,7 +499,7 @@ Reset all data stored in persistent storage. </p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11MicroBitLog13getDataLengthE10DataFormat">
-<span id="_CPPv3N5codal11MicroBitLog13getDataLengthE10DataFormat"></span><span id="_CPPv2N5codal11MicroBitLog13getDataLengthE10DataFormat"></span><span id="codal::MicroBitLog::getDataLength__DataFormat"></span><span class="target" id="classcodal_1_1MicroBitLog_1a1f3d325dc08d91c52eabdbef92621caa"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getDataLength</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enum_namespacecodal_1aad67e961be14bb8567846d2abb24e67f.html#_CPPv4N5codal10DataFormatE" title="codal::DataFormat"><span class="n"><span class="pre">DataFormat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">format</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog13getDataLengthE10DataFormat" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal11MicroBitLog13getDataLengthE10DataFormat"></span><span id="_CPPv2N5codal11MicroBitLog13getDataLengthE10DataFormat"></span><span id="codal::MicroBitLog::getDataLength__DataFormat"></span><span class="target" id="classcodal_1_1MicroBitLog_1a142b0b8acd7f28e94b8290f031040597"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getDataLength</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enum_namespacecodal_1aad67e961be14bb8567846d2abb24e67f.html#_CPPv4N5codal10DataFormatE" title="codal::DataFormat"><span class="n"><span class="pre">DataFormat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">format</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog13getDataLengthE10DataFormat" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Get the length of the recorded data </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -519,7 +513,7 @@ Reset all data stored in persistent storage. </p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11MicroBitLog8readDataEPv8uint32_t8uint32_t10DataFormat8uint32_t">
-<span id="_CPPv3N5codal11MicroBitLog8readDataEPv8uint32_t8uint32_t10DataFormat8uint32_t"></span><span id="_CPPv2N5codal11MicroBitLog8readDataEPv8uint32_t8uint32_t10DataFormat8uint32_t"></span><span id="codal::MicroBitLog::readData__voidP.uint32_t.uint32_t.DataFormat.uint32_t"></span><span class="target" id="classcodal_1_1MicroBitLog_1adf6b1df842484a0de8dc34ed31e2fcaa"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readData</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span>, <a class="reference internal" href="enum_namespacecodal_1aad67e961be14bb8567846d2abb24e67f.html#_CPPv4N5codal10DataFormatE" title="codal::DataFormat"><span class="n"><span class="pre">DataFormat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">format</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog8readDataEPv8uint32_t8uint32_t10DataFormat8uint32_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal11MicroBitLog8readDataEPv8uint32_t8uint32_t10DataFormat8uint32_t"></span><span id="_CPPv2N5codal11MicroBitLog8readDataEPv8uint32_t8uint32_t10DataFormat8uint32_t"></span><span id="codal::MicroBitLog::readData__voidP.uint32_t.uint32_t.DataFormat.uint32_t"></span><span class="target" id="classcodal_1_1MicroBitLog_1acd54001f1aaa55bde45f918aafe55fa8"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readData</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span>, <a class="reference internal" href="enum_namespacecodal_1aad67e961be14bb8567846d2abb24e67f.html#_CPPv4N5codal10DataFormatE" title="codal::DataFormat"><span class="n"><span class="pre">DataFormat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">format</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11MicroBitLog8readDataEPv8uint32_t8uint32_t10DataFormat8uint32_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Read the recorded data </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

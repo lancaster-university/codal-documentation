@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class Gyroscope &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class Gyroscope &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -317,12 +318,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -369,17 +370,13 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal9Gyroscope9GyroscopeER15CoordinateSpace8uint16_t">
-<span id="_CPPv3N5codal9Gyroscope9GyroscopeER15CoordinateSpace8uint16_t"></span><span id="_CPPv2N5codal9Gyroscope9GyroscopeER15CoordinateSpace8uint16_t"></span><span id="codal::Gyroscope::Gyroscope__CoordinateSpaceR.uint16_t"></span><span class="target" id="classcodal_1_1Gyroscope_1ad39484007fcaba5f167999fff43fa56c"></span><span class="sig-name descname"><span class="n"><span class="pre">Gyroscope</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1CoordinateSpace.html#_CPPv4N5codal15CoordinateSpaceE" title="codal::CoordinateSpace"><span class="n"><span class="pre">CoordinateSpace</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">coordinateSpace</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_GYROSCOPE</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope9GyroscopeER15CoordinateSpace8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal9Gyroscope9GyroscopeER15CoordinateSpace8uint16_t"></span><span id="_CPPv2N5codal9Gyroscope9GyroscopeER15CoordinateSpace8uint16_t"></span><span id="codal::Gyroscope::Gyroscope__CoordinateSpaceR.uint16_t"></span><span class="target" id="classcodal_1_1Gyroscope_1a7d0442ad4c6040e91498303f294d8dab"></span><span class="sig-name descname"><span class="n"><span class="pre">Gyroscope</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1CoordinateSpace.html#_CPPv4N5codal15CoordinateSpaceE" title="codal::CoordinateSpace"><span class="n"><span class="pre">CoordinateSpace</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">coordinateSpace</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_GYROSCOPE</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope9GyroscopeER15CoordinateSpace8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor. Create a software abstraction of an gyroscope.</p>
-<p>
-Constructor. Create a software abstraction of an FXSO8700 combined accelerometer/magnetometer</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>coordinateSpace</strong> – the orientation of the sensor. Defaults to: SIMPLE_CARTESIAN </p></li>
-<li><p><strong>id</strong> – the unique <a class="reference internal" href="classcodal_1_1EventModel.html#classcodal_1_1EventModel"><span class="std std-ref">EventModel</span></a> id of this component. Defaults to: DEVICE_ID_GYROSCOPE</p></li>
-<li><p><strong>_i2c</strong> – an instance of <a class="reference internal" href="classcodal_1_1I2C.html#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> used to communicate with the device.</p></li>
-<li><p><strong>address</strong> – the default <a class="reference internal" href="classcodal_1_1I2C.html#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> address of the accelerometer. Defaults to: FXS8700_DEFAULT_ADDR. </p></li>
+<li><p><strong>id</strong> – the unique <a class="reference internal" href="classcodal_1_1EventModel.html#classcodal_1_1EventModel"><span class="std std-ref">EventModel</span></a> id of this component. Defaults to: DEVICE_ID_GYROSCOPE </p></li>
 </ul>
 </dd>
 </dl>
@@ -387,124 +384,74 @@ Constructor. Create a software abstraction of an FXSO8700 combined accelerometer
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal9Gyroscope9setPeriodEi">
-<span id="_CPPv3N5codal9Gyroscope9setPeriodEi"></span><span id="_CPPv2N5codal9Gyroscope9setPeriodEi"></span><span id="codal::Gyroscope::setPeriod__i"></span><span class="target" id="classcodal_1_1Gyroscope_1aef894215060e438150190f2ae4a0a7c4"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPeriod</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">period</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope9setPeriodEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal9Gyroscope9setPeriodEi"></span><span id="_CPPv2N5codal9Gyroscope9setPeriodEi"></span><span id="codal::Gyroscope::setPeriod__i"></span><span class="target" id="classcodal_1_1Gyroscope_1ad2c073b4b664a55c75b691b8809f1f09"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPeriod</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">period</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope9setPeriodEi" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Attempts to set the sample rate of the gyroscope to the specified value (in ms).</p>
-<p>
-Attempts to set the sample rate of the accelerometer to the specified value (in ms).</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// sample rate is now 20 ms.</span>
-<span class="n">accelerometer</span><span class="p">.</span><span class="n">setPeriod</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span><span class="w"></span>
-</pre></div>
-</div>
-</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The requested rate may not be possible on the hardware. In this case, the nearest lower rate is chosen.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This method should be overriden (if supported) by specific gyroscope device drivers.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The requested rate may not be possible on the hardware. In this case, the nearest lower rate is chosen. </p>
+<p>This method should be overriden (if supported) by specific gyroscope device drivers. </p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>period</strong> – the requested time between samples, in milliseconds. </p></li>
-<li><p><strong>period</strong> – the requested time between samples, in milliseconds.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>period</strong> – the requested time between samples, in milliseconds. </p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>DEVICE_OK on success, DEVICE_I2C_ERROR is the request fails.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success, DEVICE_I2C_ERROR is the request fails.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal9Gyroscope9getPeriodEv">
-<span id="_CPPv3N5codal9Gyroscope9getPeriodEv"></span><span id="_CPPv2N5codal9Gyroscope9getPeriodEv"></span><span id="codal::Gyroscope::getPeriod"></span><span class="target" id="classcodal_1_1Gyroscope_1aa0a18f4abc5d3ca7fd5003d93562b75d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPeriod</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope9getPeriodEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal9Gyroscope9getPeriodEv"></span><span id="_CPPv2N5codal9Gyroscope9getPeriodEv"></span><span id="codal::Gyroscope::getPeriod"></span><span class="target" id="classcodal_1_1Gyroscope_1aa15e0ec049c5214f561dde719f94db40"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPeriod</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope9getPeriodEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Reads the currently configured sample rate of the gyroscope.</p>
-<p>
-Reads the currently configured sample rate of the accelerometer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The time between samples, in milliseconds.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The time between samples, in milliseconds. </p>
+<dd class="field-odd"><p>The time between samples, in milliseconds. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal9Gyroscope8setRangeEi">
-<span id="_CPPv3N5codal9Gyroscope8setRangeEi"></span><span id="_CPPv2N5codal9Gyroscope8setRangeEi"></span><span id="codal::Gyroscope::setRange__i"></span><span class="target" id="classcodal_1_1Gyroscope_1a89ae23fd69429c6dc204130d3bbb7983"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRange</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">range</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope8setRangeEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal9Gyroscope8setRangeEi"></span><span id="_CPPv2N5codal9Gyroscope8setRangeEi"></span><span id="codal::Gyroscope::setRange__i"></span><span class="target" id="classcodal_1_1Gyroscope_1a9e7d91ea82b09066d72cfe7afe5b22ac"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRange</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">range</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope8setRangeEi" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Attempts to set the sample range of the gyroscope to the specified value (in dps).</p>
-<p>
-Attempts to set the sample range of the accelerometer to the specified value (in g).</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// the sample range of the accelerometer is now 8G.</span>
-<span class="n">accelerometer</span><span class="p">.</span><span class="n">setRange</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span><span class="w"></span>
-</pre></div>
-</div>
-</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The requested range may not be possible on the hardware. In this case, the nearest lower range is chosen.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This method should be overriden (if supported) by specific gyroscope device drivers.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The requested range may not be possible on the hardware. In this case, the nearest lower range is chosen. </p>
+<p>This method should be overriden (if supported) by specific gyroscope device drivers. </p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>range</strong> – The requested sample range of samples, in dps.</p></li>
-<li><p><strong>range</strong> – The requested sample range of samples, in g.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>range</strong> – The requested sample range of samples, in dps.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>DEVICE_OK on success, DEVICE_I2C_ERROR is the request fails.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success, DEVICE_I2C_ERROR is the request fails.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal9Gyroscope8getRangeEv">
-<span id="_CPPv3N5codal9Gyroscope8getRangeEv"></span><span id="_CPPv2N5codal9Gyroscope8getRangeEv"></span><span id="codal::Gyroscope::getRange"></span><span class="target" id="classcodal_1_1Gyroscope_1a54d9e16faa601b814e692eec83e44754"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRange</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope8getRangeEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal9Gyroscope8getRangeEv"></span><span id="_CPPv2N5codal9Gyroscope8getRangeEv"></span><span id="codal::Gyroscope::getRange"></span><span class="target" id="classcodal_1_1Gyroscope_1a6c79dd6fdd6108276ce8ca69fe3fafa9"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRange</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope8getRangeEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Reads the currently configured sample range of the gyroscope.</p>
-<p>
-Reads the currently configured sample range of the accelerometer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The sample range, in g.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The sample range, in g. </p>
+<dd class="field-odd"><p>The sample range, in g. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal9Gyroscope9configureEv">
-<span id="_CPPv3N5codal9Gyroscope9configureEv"></span><span id="_CPPv2N5codal9Gyroscope9configureEv"></span><span id="codal::Gyroscope::configure"></span><span class="target" id="classcodal_1_1Gyroscope_1a9f8d25cc8d52420a03cfa5c2ec732123"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configure</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope9configureEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal9Gyroscope9configureEv"></span><span id="_CPPv2N5codal9Gyroscope9configureEv"></span><span id="codal::Gyroscope::configure"></span><span class="target" id="classcodal_1_1Gyroscope_1a213362ab253e82b78fc91927393efc4b"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configure</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope9configureEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Configures the gyroscope for dps range and sample rate defined in this object. The nearest values are chosen to those defined that are supported by the hardware. The instance variables are then updated to reflect reality.</p>
-<p>
-Configures the accelerometer for G range and sample rate defined in this object. The nearest values are chosen to those defined that are supported by the hardware. The instance variables are then updated to reflect reality.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This method should be overidden by the hardware driver to implement the requested changes in hardware.</p>
-</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This method should be overidden by the hardware driver to implement the requested changes in hardware. </p>
@@ -513,15 +460,12 @@ Configures the accelerometer for G range and sample rate defined in this object.
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>DEVICE_OK on success, DEVICE_I2C_ERROR if the gyroscope could not be configured.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK on success, DEVICE_I2C_ERROR if the accelerometer could not be configured.</p>
-</dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal9Gyroscope13requestUpdateEv">
-<span id="_CPPv3N5codal9Gyroscope13requestUpdateEv"></span><span id="_CPPv2N5codal9Gyroscope13requestUpdateEv"></span><span id="codal::Gyroscope::requestUpdate"></span><span class="target" id="classcodal_1_1Gyroscope_1a154f878549aea329a4d01640ba5d8d0d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestUpdate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope13requestUpdateEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal9Gyroscope13requestUpdateEv"></span><span id="_CPPv2N5codal9Gyroscope13requestUpdateEv"></span><span id="codal::Gyroscope::requestUpdate"></span><span class="target" id="classcodal_1_1Gyroscope_1a43bb1f31de55fc2fd73d1c078a0df3d1"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestUpdate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope13requestUpdateEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Poll to see if new data is available from the hardware. If so, update it. n.b. it is not necessary to explicitly call this function to update data (it normally happens in the background when the scheduler is idle), but a check is performed if the user explicitly requests up to date data.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -536,115 +480,79 @@ Configures the accelerometer for G range and sample rate defined in this object.
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal9Gyroscope6updateE8Sample3D">
-<span id="_CPPv3N5codal9Gyroscope6updateE8Sample3D"></span><span id="_CPPv2N5codal9Gyroscope6updateE8Sample3D"></span><span id="codal::Gyroscope::update__Sample3D"></span><span class="target" id="classcodal_1_1Gyroscope_1ae1f2de71394b168b87d4573e2d23880c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structcodal_1_1Sample3D.html#_CPPv4N5codal8Sample3DE" title="codal::Sample3D"><span class="n"><span class="pre">Sample3D</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope6updateE8Sample3D" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal9Gyroscope6updateE8Sample3D"></span><span id="_CPPv2N5codal9Gyroscope6updateE8Sample3D"></span><span id="codal::Gyroscope::update__Sample3D"></span><span class="target" id="classcodal_1_1Gyroscope_1ab2f2a26bb4919b95dd046efc1e6a7397"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structcodal_1_1Sample3D.html#_CPPv4N5codal8Sample3DE" title="codal::Sample3D"><span class="n"><span class="pre">Sample3D</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope6updateE8Sample3D" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Stores data from the gyroscope sensor in our buffer, and perform gesture tracking.</p>
-<p>On first use, this member function will attempt to add this component to the list of fiber components in order to constantly update the values stored by this object.</p>
-<p>This lazy instantiation means that we do not obtain the overhead from non-chalantly adding this component to fiber components.</p>
-<p>
-Stores data from the accelerometer sensor in our buffer, and perform gesture tracking.</p>
 <p>On first use, this member function will attempt to add this component to the list of fiber components in order to constantly update the values stored by this object.</p>
 <p>This lazy instantiation means that we do not obtain the overhead from non-chalantly adding this component to fiber components.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success, DEVICE_I2C_ERROR if the read request fails.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK on success, DEVICE_I2C_ERROR if the read request fails. </p>
+<dd class="field-odd"><p>DEVICE_OK on success, DEVICE_I2C_ERROR if the read request fails. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal9Gyroscope9getSampleE16CoordinateSystem">
-<span id="_CPPv3N5codal9Gyroscope9getSampleE16CoordinateSystem"></span><span id="_CPPv2N5codal9Gyroscope9getSampleE16CoordinateSystem"></span><span id="codal::Gyroscope::getSample__CoordinateSystem"></span><span class="target" id="classcodal_1_1Gyroscope_1a2f2b06a23f5c3aa334eae8ce0cfa5df8"></span><a class="reference internal" href="structcodal_1_1Sample3D.html#_CPPv4N5codal8Sample3DE" title="codal::Sample3D"><span class="n"><span class="pre">Sample3D</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSample</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enum_namespacecodal_1ab60ee69ed382592e3346140d07480ac6.html#_CPPv4N5codal16CoordinateSystemE" title="codal::CoordinateSystem"><span class="n"><span class="pre">CoordinateSystem</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">coordinateSystem</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope9getSampleE16CoordinateSystem" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal9Gyroscope9getSampleE16CoordinateSystem"></span><span id="_CPPv2N5codal9Gyroscope9getSampleE16CoordinateSystem"></span><span id="codal::Gyroscope::getSample__CoordinateSystem"></span><span class="target" id="classcodal_1_1Gyroscope_1a2c64d7f6ab1243efbd4a67f3149124db"></span><a class="reference internal" href="structcodal_1_1Sample3D.html#_CPPv4N5codal8Sample3DE" title="codal::Sample3D"><span class="n"><span class="pre">Sample3D</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSample</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enum_namespacecodal_1ab60ee69ed382592e3346140d07480ac6.html#_CPPv4N5codal16CoordinateSystemE" title="codal::CoordinateSystem"><span class="n"><span class="pre">CoordinateSystem</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">coordinateSystem</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope9getSampleE16CoordinateSystem" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Reads the last gyroscope value stored, and provides it in the coordinate system requested.</p>
-<p>
-Reads the last accelerometer value stored, and provides it in the coordinate system requested.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>coordinateSpace</strong> – The coordinate system to use. </p></li>
-<li><p><strong>coordinateSpace</strong> – The coordinate system to use. </p></li>
-</ul>
+<dd class="field-odd"><p><strong>coordinateSpace</strong> – The coordinate system to use. </p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The force measured in each axis, in dps.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The force measured in each axis, in milli-g. </p>
+<dd class="field-even"><p>The force measured in each axis, in dps. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal9Gyroscope9getSampleEv">
-<span id="_CPPv3N5codal9Gyroscope9getSampleEv"></span><span id="_CPPv2N5codal9Gyroscope9getSampleEv"></span><span id="codal::Gyroscope::getSample"></span><span class="target" id="classcodal_1_1Gyroscope_1a62f153adfc17c78376637705fb817c1f"></span><a class="reference internal" href="structcodal_1_1Sample3D.html#_CPPv4N5codal8Sample3DE" title="codal::Sample3D"><span class="n"><span class="pre">Sample3D</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSample</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope9getSampleEv" title="Permalink to this definition">#</a><br /></dt>
-<dd><p><p>Reads the last gyroscope value stored, and in the coordinate system defined in the constructor.</p>
-<p>Reads the last accelerometer value stored, and in the coordinate system defined in the constructor.</p>
-</p>
+<span id="_CPPv3N5codal9Gyroscope9getSampleEv"></span><span id="_CPPv2N5codal9Gyroscope9getSampleEv"></span><span id="codal::Gyroscope::getSample"></span><span class="target" id="classcodal_1_1Gyroscope_1ab1c07a6ca3768f920c32d98b54135fe2"></span><a class="reference internal" href="structcodal_1_1Sample3D.html#_CPPv4N5codal8Sample3DE" title="codal::Sample3D"><span class="n"><span class="pre">Sample3D</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSample</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope9getSampleEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Reads the last gyroscope value stored, and in the coordinate system defined in the constructor. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The force measured in each axis, in dps.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The force measured in each axis, in milli-g. </p>
+<dd class="field-odd"><p>The force measured in each axis, in dps. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal9Gyroscope4getXEv">
-<span id="_CPPv3N5codal9Gyroscope4getXEv"></span><span id="_CPPv2N5codal9Gyroscope4getXEv"></span><span id="codal::Gyroscope::getX"></span><span class="target" id="classcodal_1_1Gyroscope_1a0e8ad76e9bb87e65c0465f9415b6bd57"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getX</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope4getXEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal9Gyroscope4getXEv"></span><span id="_CPPv2N5codal9Gyroscope4getXEv"></span><span id="codal::Gyroscope::getX"></span><span class="target" id="classcodal_1_1Gyroscope_1aac2c82c382fcafa6386bdf9f509ab82f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getX</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope4getXEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>reads the value of the x axis from the latest update retrieved from the gyroscope, using the default coordinate system as specified in the constructor.</p>
-<p>
-reads the value of the x axis from the latest update retrieved from the accelerometer, usingthe default coordinate system as specified in the constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the force measured in the x axis, in dps.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the force measured in the x axis, in milli-g. </p>
+<dd class="field-odd"><p>the force measured in the x axis, in dps. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal9Gyroscope4getYEv">
-<span id="_CPPv3N5codal9Gyroscope4getYEv"></span><span id="_CPPv2N5codal9Gyroscope4getYEv"></span><span id="codal::Gyroscope::getY"></span><span class="target" id="classcodal_1_1Gyroscope_1ab518d4ad979df12c76625586f1cb1c18"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getY</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope4getYEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal9Gyroscope4getYEv"></span><span id="_CPPv2N5codal9Gyroscope4getYEv"></span><span id="codal::Gyroscope::getY"></span><span class="target" id="classcodal_1_1Gyroscope_1ac96b7ac3ce112069696b20f564b015f3"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getY</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope4getYEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>reads the value of the y axis from the latest update retrieved from the gyroscope, using the default coordinate system as specified in the constructor.</p>
-<p>
-reads the value of the y axis from the latest update retrieved from the accelerometer, usingthe default coordinate system as specified in the constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the force measured in the y axis, in dps.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the force measured in the y axis, in milli-g. </p>
+<dd class="field-odd"><p>the force measured in the y axis, in dps. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal9Gyroscope4getZEv">
-<span id="_CPPv3N5codal9Gyroscope4getZEv"></span><span id="_CPPv2N5codal9Gyroscope4getZEv"></span><span id="codal::Gyroscope::getZ"></span><span class="target" id="classcodal_1_1Gyroscope_1a41da3539470ab69a923b7c6dfd6240c7"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getZ</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope4getZEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal9Gyroscope4getZEv"></span><span id="_CPPv2N5codal9Gyroscope4getZEv"></span><span id="codal::Gyroscope::getZ"></span><span class="target" id="classcodal_1_1Gyroscope_1ac7e46d846c8af34c86c6e4a143ac3369"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getZ</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9Gyroscope4getZEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>reads the value of the z axis from the latest update retrieved from the gyroscope, using the default coordinate system as specified in the constructor.</p>
-<p>
-reads the value of the z axis from the latest update retrieved from the accelerometer, usingthe default coordinate system as specified in the constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the force measured in the z axis, in dps.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the force measured in the z axis, in milli-g. </p>
+<dd class="field-odd"><p>the force measured in the z axis, in dps. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal9GyroscopeD0Ev">
-<span id="_CPPv3N5codal9GyroscopeD0Ev"></span><span id="_CPPv2N5codal9GyroscopeD0Ev"></span><span id="codal::Gyroscope::~Gyroscope"></span><span class="target" id="classcodal_1_1Gyroscope_1aa0e544848270a58f8c9466eb43910dd0"></span><span class="sig-name descname"><span class="n"><span class="pre">~Gyroscope</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9GyroscopeD0Ev" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Destructor.</p>
-<p>Destructor for FXS8700, where we deregister from the array of fiber components. </p>
+<span id="_CPPv3N5codal9GyroscopeD0Ev"></span><span id="_CPPv2N5codal9GyroscopeD0Ev"></span><span id="codal::Gyroscope::~Gyroscope"></span><span class="target" id="classcodal_1_1Gyroscope_1a079321411b0e71a7e9514fef3f4d4f49"></span><span class="sig-name descname"><span class="n"><span class="pre">~Gyroscope</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal9GyroscopeD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Destructor. </p>
 </dd></dl>
 
 </div>

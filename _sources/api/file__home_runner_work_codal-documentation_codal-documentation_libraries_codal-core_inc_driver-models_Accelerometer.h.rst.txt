@@ -66,10 +66,6 @@ Included By
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MPU6050.h`
 
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Accelerometer.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_FXOS8700.cpp`
-
 
 
 

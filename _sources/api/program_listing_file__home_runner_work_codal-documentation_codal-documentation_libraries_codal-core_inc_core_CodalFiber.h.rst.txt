@@ -153,11 +153,13 @@ Program Listing for File CodalFiber.h
    
            FiberLock();
    
+           FiberLock( int initial );
+   
            void wait();
    
            void notify();
    
-           void notifyAll();
+           void notifyAll( int reset = 0 );
    
            int getWaitCount();
        };

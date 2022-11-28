@@ -118,14 +118,6 @@ Included By
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitUtil.h`
 
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitAccelerometer.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitCompass.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitCompat.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitFileSystem.cpp`
-
 
 
 
@@ -146,6 +138,8 @@ Enums
 Functions
 ---------
 
+
+- :ref:`exhale_function_MicroBitCompat_8h_1aa8b4da3ab39d4c3760853ededa87b9a6`
 
 - :ref:`exhale_function_namespacecodal_1a31eda7875f5a8038999556662e7821a5`
 
@@ -387,14 +381,6 @@ Defines
 - :ref:`exhale_define_MicroBitCompat_8h_1a20c7cb0eeca159dd2a01910c12b91f9e`
 
 - :ref:`exhale_define_MicroBitCompat_8h_1a024325c2c53c8d7bd20da62ae5a56826`
-
-- :ref:`exhale_define_MicroBitCompat_8h_1a12fd256db57cdf8a515176f82a3596f9`
-
-- :ref:`exhale_define_MicroBitCompat_8h_1a3d6239a81f2d0ed3f14524e2a3a60365`
-
-- :ref:`exhale_define_MicroBitCompat_8h_1a80e95c91db666e8e3cbe015ae13e8b81`
-
-- :ref:`exhale_define_MicroBitCompat_8h_1ae16c2b71d6c7a4dcde6389bfb1fa8b2a`
 
 - :ref:`exhale_define_MicroBitCompat_8h_1a485b1a6750f9571eea423c13355b3090`
 

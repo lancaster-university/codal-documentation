@@ -1,0 +1,33 @@
+.. _exhale_class_classcodal_1_1EffectFilter:
+
+Class EffectFilter
+==================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_EffectFilter.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Types
+**********
+
+- ``public codal::DataSource`` (:ref:`exhale_class_classcodal_1_1DataSource`)
+- ``public codal::DataSink`` (:ref:`exhale_class_classcodal_1_1DataSink`)
+
+
+Derived Type
+************
+
+- ``public codal::LowPassFilter`` (:ref:`exhale_class_classcodal_1_1LowPassFilter`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: codal::EffectFilter
+   :project: CODAL
+   :members:
+   :protected-members:
+   :undoc-members:

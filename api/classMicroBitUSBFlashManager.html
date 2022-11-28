@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class MicroBitUSBFlashManager &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class MicroBitUSBFlashManager &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-types">
      Base Types
@@ -317,12 +318,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-types">
      Base Types
@@ -448,29 +449,22 @@ title="Source repository"
 <dt class="sig sig-object cpp" id="_CPPv4N23MicroBitUSBFlashManager4readE8uint32_t8uint32_t">
 <span id="_CPPv3N23MicroBitUSBFlashManager4readE8uint32_t8uint32_t"></span><span id="_CPPv2N23MicroBitUSBFlashManager4readE8uint32_t8uint32_t"></span><span id="MicroBitUSBFlashManager::read__uint32_t.uint32_t"></span><span class="target" id="classMicroBitUSBFlashManager_1afbff74498ccdc31fd5435111bea8d167"></span><span class="n"><span class="pre">ManagedBuffer</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23MicroBitUSBFlashManager4readE8uint32_t8uint32_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Reads data from the specified location in the USB file storage area.</p>
-<p>
-Reads data from the specified location in the USB file staorage area.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>address</strong> – the logical address of the memory to read. </p></li>
 <li><p><strong>length</strong> – the number of 32-bit words to read.</p></li>
-<li><p><strong>address</strong> – the logical address of the memory to read. </p></li>
-<li><p><strong>length</strong> – the number of 32-bit words to read.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the data read, or a zero length buffer on failure.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the data read, or a zero length buffer on failure. </p>
+<dd class="field-even"><p>the data read, or a zero length buffer on failure. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N23MicroBitUSBFlashManager4readEP8uint32_t8uint32_t8uint32_t">
-<span id="_CPPv3N23MicroBitUSBFlashManager4readEP8uint32_t8uint32_t8uint32_t"></span><span id="_CPPv2N23MicroBitUSBFlashManager4readEP8uint32_t8uint32_t8uint32_t"></span><span id="MicroBitUSBFlashManager::read__uint32_tP.uint32_t.uint32_t"></span><span class="target" id="classMicroBitUSBFlashManager_1afe2c5b72a517473a47676020028ff1d5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">dest</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N23MicroBitUSBFlashManager4readEP8uint32_t8uint32_t8uint32_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N23MicroBitUSBFlashManager4readEP8uint32_t8uint32_t8uint32_t"></span><span id="_CPPv2N23MicroBitUSBFlashManager4readEP8uint32_t8uint32_t8uint32_t"></span><span id="MicroBitUSBFlashManager::read__uint32_tP.uint32_t.uint32_t"></span><span class="target" id="classMicroBitUSBFlashManager_1a9731d87ababc0436e91c78f709163041"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">dest</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N23MicroBitUSBFlashManager4readEP8uint32_t8uint32_t8uint32_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Reads a block of memory from non-volatile memory into RAM</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -487,24 +481,16 @@ Reads data from the specified location in the USB file staorage area.</p>
 <dt class="sig sig-object cpp" id="_CPPv4N23MicroBitUSBFlashManager5writeE8uint32_tP8uint32_t8uint32_t">
 <span id="_CPPv3N23MicroBitUSBFlashManager5writeE8uint32_tP8uint32_t8uint32_t"></span><span id="_CPPv2N23MicroBitUSBFlashManager5writeE8uint32_tP8uint32_t8uint32_t"></span><span id="MicroBitUSBFlashManager::write__uint32_t.uint32_tP.uint32_t"></span><span class="target" id="classMicroBitUSBFlashManager_1ae95fe18313170c04a147df89b6795176"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N23MicroBitUSBFlashManager5writeE8uint32_tP8uint32_t8uint32_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Writes data to the specified location in the USB file staorage area.</p>
-<p>
-Writes data to the specified location in the USB file staorage area.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> – a buffer containing the data to write </p></li>
 <li><p><strong>address</strong> – the location to write to </p></li>
 <li><p><strong>length</strong> – the number of 32-bit words to write</p></li>
-<li><p><strong>data</strong> – a buffer containing the data to write </p></li>
-<li><p><strong>address</strong> – the location to write to. Must be 32 bit aligned. </p></li>
-<li><p><strong>length</strong> – the number of 32 bit words to write</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK on success, or error code.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success, or error code. </p>
+<dd class="field-even"><p>DEVICE_OK on success, or error code. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -513,22 +499,15 @@ Writes data to the specified location in the USB file staorage area.</p>
 <dt class="sig sig-object cpp" id="_CPPv4N23MicroBitUSBFlashManager5writeE13ManagedBuffer8uint32_t">
 <span id="_CPPv3N23MicroBitUSBFlashManager5writeE13ManagedBuffer8uint32_t"></span><span id="_CPPv2N23MicroBitUSBFlashManager5writeE13ManagedBuffer8uint32_t"></span><span id="MicroBitUSBFlashManager::write__ManagedBuffer.uint32_t"></span><span class="target" id="classMicroBitUSBFlashManager_1a24184ecaae76e7739a0627cb50825268"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">ManagedBuffer</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">data</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23MicroBitUSBFlashManager5writeE13ManagedBuffer8uint32_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Writes data to the specified location in the USB file staorage area.</p>
-<p>
-Writes data to the specified location in the USB file staorage area.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> – a buffer containing the data to write. Length MUST be 32-bit aligned. </p></li>
 <li><p><strong>address</strong> – the location to write to</p></li>
-<li><p><strong>data</strong> – a buffer containing the data to write. Length MUST be 32-bit aligned. </p></li>
-<li><p><strong>address</strong> – the location to write to.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK on success, or error code.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success, or error code. </p>
+<dd class="field-even"><p>DEVICE_OK on success, or error code. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -553,7 +532,7 @@ Writes data to the specified location in the USB file staorage area.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N23MicroBitUSBFlashManager5eraseE8uint32_t">
-<span id="_CPPv3N23MicroBitUSBFlashManager5eraseE8uint32_t"></span><span id="_CPPv2N23MicroBitUSBFlashManager5eraseE8uint32_t"></span><span id="MicroBitUSBFlashManager::erase__uint32_t"></span><span class="target" id="classMicroBitUSBFlashManager_1a7b5dce0e604e07a008807922861971b1"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">erase</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">page</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N23MicroBitUSBFlashManager5eraseE8uint32_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N23MicroBitUSBFlashManager5eraseE8uint32_t"></span><span id="_CPPv2N23MicroBitUSBFlashManager5eraseE8uint32_t"></span><span id="MicroBitUSBFlashManager::erase__uint32_t"></span><span class="target" id="classMicroBitUSBFlashManager_1aa82b131ffe9131763f561ecab79f374e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">erase</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">page</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N23MicroBitUSBFlashManager5eraseE8uint32_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Erases a given page in non-volatile memory.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -564,7 +543,7 @@ Writes data to the specified location in the USB file staorage area.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N23MicroBitUSBFlashManager13getFlashStartEv">
-<span id="_CPPv3N23MicroBitUSBFlashManager13getFlashStartEv"></span><span id="_CPPv2N23MicroBitUSBFlashManager13getFlashStartEv"></span><span id="MicroBitUSBFlashManager::getFlashStart"></span><span class="target" id="classMicroBitUSBFlashManager_1af76ff773d9995d24a0b2e0ef554f0e39"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFlashStart</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N23MicroBitUSBFlashManager13getFlashStartEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N23MicroBitUSBFlashManager13getFlashStartEv"></span><span id="_CPPv2N23MicroBitUSBFlashManager13getFlashStartEv"></span><span id="MicroBitUSBFlashManager::getFlashStart"></span><span class="target" id="classMicroBitUSBFlashManager_1a335676d4f231d701e279b054a8ad2a48"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFlashStart</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N23MicroBitUSBFlashManager13getFlashStartEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines the logical address of the start of non-volatile memory region</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -575,7 +554,7 @@ Writes data to the specified location in the USB file staorage area.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N23MicroBitUSBFlashManager11getFlashEndEv">
-<span id="_CPPv3N23MicroBitUSBFlashManager11getFlashEndEv"></span><span id="_CPPv2N23MicroBitUSBFlashManager11getFlashEndEv"></span><span id="MicroBitUSBFlashManager::getFlashEnd"></span><span class="target" id="classMicroBitUSBFlashManager_1a9f690c18e44ced704282146de268cbe6"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFlashEnd</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N23MicroBitUSBFlashManager11getFlashEndEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N23MicroBitUSBFlashManager11getFlashEndEv"></span><span id="_CPPv2N23MicroBitUSBFlashManager11getFlashEndEv"></span><span id="MicroBitUSBFlashManager::getFlashEnd"></span><span class="target" id="classMicroBitUSBFlashManager_1a9dd74fc92755b19c55c230b66a56cace"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFlashEnd</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N23MicroBitUSBFlashManager11getFlashEndEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines the logical address of the end of the non-volatile memory region</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -586,7 +565,7 @@ Writes data to the specified location in the USB file staorage area.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N23MicroBitUSBFlashManager11getPageSizeEv">
-<span id="_CPPv3N23MicroBitUSBFlashManager11getPageSizeEv"></span><span id="_CPPv2N23MicroBitUSBFlashManager11getPageSizeEv"></span><span id="MicroBitUSBFlashManager::getPageSize"></span><span class="target" id="classMicroBitUSBFlashManager_1aa0b058e9f4f135e640d97daf9040f199"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPageSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N23MicroBitUSBFlashManager11getPageSizeEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N23MicroBitUSBFlashManager11getPageSizeEv"></span><span id="_CPPv2N23MicroBitUSBFlashManager11getPageSizeEv"></span><span id="MicroBitUSBFlashManager::getPageSize"></span><span class="target" id="classMicroBitUSBFlashManager_1aaf8dc88ccb54c8ae5378628db0eba266"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPageSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N23MicroBitUSBFlashManager11getPageSizeEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines the size of a non-volatile memory page. A page is defined as the block of memory the can be efficiently erased without impacted on other regions of memory.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -597,7 +576,7 @@ Writes data to the specified location in the USB file staorage area.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N23MicroBitUSBFlashManager12getFlashSizeEv">
-<span id="_CPPv3N23MicroBitUSBFlashManager12getFlashSizeEv"></span><span id="_CPPv2N23MicroBitUSBFlashManager12getFlashSizeEv"></span><span id="MicroBitUSBFlashManager::getFlashSize"></span><span class="target" id="classMicroBitUSBFlashManager_1af0bf76443acf483e783f1077782ed3cd"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFlashSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N23MicroBitUSBFlashManager12getFlashSizeEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N23MicroBitUSBFlashManager12getFlashSizeEv"></span><span id="_CPPv2N23MicroBitUSBFlashManager12getFlashSizeEv"></span><span id="MicroBitUSBFlashManager::getFlashSize"></span><span class="target" id="classMicroBitUSBFlashManager_1a16a80e6111f4ac91400feebe0b1cd2c0"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFlashSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N23MicroBitUSBFlashManager12getFlashSizeEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines the amount of available storage.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>

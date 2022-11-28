@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class SoundEmojiSynthesizer &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class SoundEmojiSynthesizer &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-types">
      Base Types
@@ -317,12 +318,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-types">
      Base Types
@@ -370,15 +371,13 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21SoundEmojiSynthesizer21SoundEmojiSynthesizerE8uint16_ti">
-<span id="_CPPv3N5codal21SoundEmojiSynthesizer21SoundEmojiSynthesizerE8uint16_ti"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer21SoundEmojiSynthesizerE8uint16_ti"></span><span id="codal::SoundEmojiSynthesizer::SoundEmojiSynthesizer__uint16_t.i"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1ab708a0ecc7a18f79c73928037940e95e"></span><span class="sig-name descname"><span class="n"><span class="pre">SoundEmojiSynthesizer</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sampleRate</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">44100</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer21SoundEmojiSynthesizerE8uint16_ti" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal21SoundEmojiSynthesizer21SoundEmojiSynthesizerE8uint16_ti"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer21SoundEmojiSynthesizerE8uint16_ti"></span><span id="codal::SoundEmojiSynthesizer::SoundEmojiSynthesizer__uint16_t.i"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1a29541c41b3914d5b42f264cc35d32a0a"></span><span class="sig-name descname"><span class="n"><span class="pre">SoundEmojiSynthesizer</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sampleRate</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">44100</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer21SoundEmojiSynthesizerE8uint16_ti" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Default Constructor. Creates an empty <a class="reference internal" href="classcodal_1_1DataStream.html#classcodal_1_1DataStream"><span class="std std-ref">DataStream</span></a>.</p>
-<p>
-Class definition for a <a class="reference internal" href="classcodal_1_1Synthesizer.html#classcodal_1_1Synthesizer"><span class="std std-ref">Synthesizer</span></a>. A <a class="reference internal" href="classcodal_1_1Synthesizer.html#classcodal_1_1Synthesizer"><span class="std std-ref">Synthesizer</span></a> generates a tone waveform based on a number of overlapping waveforms. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>id</strong> – The ID of this synthesizer. </p></li>
-<li><p><strong>sampleRate</strong> – The sample rate at which this synthesizer will produce data.</p></li>
+<li><p><strong>sampleRate</strong> – The sample rate at which this synthesizer will produce data. </p></li>
 </ul>
 </dd>
 </dl>
@@ -386,32 +385,32 @@ Class definition for a <a class="reference internal" href="classcodal_1_1Synthes
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21SoundEmojiSynthesizerD0Ev">
-<span id="_CPPv3N5codal21SoundEmojiSynthesizerD0Ev"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizerD0Ev"></span><span id="codal::SoundEmojiSynthesizer::~SoundEmojiSynthesizer"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1aea6f0e146086071c8775e4c5b67019cc"></span><span class="sig-name descname"><span class="n"><span class="pre">~SoundEmojiSynthesizer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizerD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal21SoundEmojiSynthesizerD0Ev"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizerD0Ev"></span><span id="codal::SoundEmojiSynthesizer::~SoundEmojiSynthesizer"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1a8578a12988ef6aa848d4dda4f7bc6c3c"></span><span class="sig-name descname"><span class="n"><span class="pre">~SoundEmojiSynthesizer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizerD0Ev" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Destructor. Removes all resources held by the instance. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21SoundEmojiSynthesizer7connectER8DataSink">
-<span id="_CPPv3N5codal21SoundEmojiSynthesizer7connectER8DataSink"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer7connectER8DataSink"></span><span id="codal::SoundEmojiSynthesizer::connect__DataSinkR"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1a3101cd066baeca8ddbdb1018e9f964c6"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">connect</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataSink.html#_CPPv4N5codal8DataSinkE" title="codal::DataSink"><span class="n"><span class="pre">DataSink</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sink</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer7connectER8DataSink" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal21SoundEmojiSynthesizer7connectER8DataSink"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer7connectER8DataSink"></span><span id="codal::SoundEmojiSynthesizer::connect__DataSinkR"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1ad745320a540026dd988caae0dec13d9c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">connect</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataSink.html#_CPPv4N5codal8DataSinkE" title="codal::DataSink"><span class="n"><span class="pre">DataSink</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sink</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer7connectER8DataSink" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Define a downstream component for data stream.</p>
 <p>&#64;sink The component that data will be delivered to, when it is availiable </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21SoundEmojiSynthesizer9getFormatEv">
-<span id="_CPPv3N5codal21SoundEmojiSynthesizer9getFormatEv"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer9getFormatEv"></span><span id="codal::SoundEmojiSynthesizer::getFormat"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1a88f95bd49d0fa6b4c16b4ecd5ec0a2bc"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFormat</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer9getFormatEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal21SoundEmojiSynthesizer9getFormatEv"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer9getFormatEv"></span><span id="codal::SoundEmojiSynthesizer::getFormat"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1a53f7c43a10d3ee577159f69bba3e98c9"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFormat</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer9getFormatEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determine the data format of the buffers streamed out of this component. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21SoundEmojiSynthesizer4pullEv">
-<span id="_CPPv3N5codal21SoundEmojiSynthesizer4pullEv"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer4pullEv"></span><span id="codal::SoundEmojiSynthesizer::pull"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1a284c1099cf39b349fddd73c7a7361ef3"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="classcodal_1_1ManagedBuffer.html#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pull</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer4pullEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal21SoundEmojiSynthesizer4pullEv"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer4pullEv"></span><span id="codal::SoundEmojiSynthesizer::pull"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1af3728b0acb26ac037a9392732dc27930"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="classcodal_1_1ManagedBuffer.html#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pull</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer4pullEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Provide the next available <a class="reference internal" href="classcodal_1_1ManagedBuffer.html#classcodal_1_1ManagedBuffer"><span class="std std-ref">ManagedBuffer</span></a> to our downstream caller, if available. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21SoundEmojiSynthesizer15nextSoundEffectEv">
-<span id="_CPPv3N5codal21SoundEmojiSynthesizer15nextSoundEffectEv"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer15nextSoundEffectEv"></span><span id="codal::SoundEmojiSynthesizer::nextSoundEffect"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1a4fd57f1951adcef51262430bc9cc0f82"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nextSoundEffect</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer15nextSoundEffectEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal21SoundEmojiSynthesizer15nextSoundEffectEv"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer15nextSoundEffectEv"></span><span id="codal::SoundEmojiSynthesizer::nextSoundEffect"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1a1dccba259fc56e44c7a5d6acccc133a7"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nextSoundEffect</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer15nextSoundEffectEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Schedules the next sound effect as defined in the effectBuffer, if available. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -422,7 +421,7 @@ Class definition for a <a class="reference internal" href="classcodal_1_1Synthes
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21SoundEmojiSynthesizer4playE13ManagedBuffer">
-<span id="_CPPv3N5codal21SoundEmojiSynthesizer4playE13ManagedBuffer"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer4playE13ManagedBuffer"></span><span id="codal::SoundEmojiSynthesizer::play__ManagedBuffer"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1ad9cedd2de3340cbbcabb4b7e528bad1f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">play</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1ManagedBuffer.html#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sound</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer4playE13ManagedBuffer" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal21SoundEmojiSynthesizer4playE13ManagedBuffer"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer4playE13ManagedBuffer"></span><span id="codal::SoundEmojiSynthesizer::play__ManagedBuffer"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1a68c6d1d9ee830f0702eac7a926d90b9d"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">play</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1ManagedBuffer.html#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sound</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer4playE13ManagedBuffer" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Schedules playout of the given sound effect. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -436,35 +435,27 @@ Class definition for a <a class="reference internal" href="classcodal_1_1Synthes
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21SoundEmojiSynthesizer4stopEv">
-<span id="_CPPv3N5codal21SoundEmojiSynthesizer4stopEv"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer4stopEv"></span><span id="codal::SoundEmojiSynthesizer::stop"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1acfe07938654dd1170f3395d26068a59a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer4stopEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal21SoundEmojiSynthesizer4stopEv"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer4stopEv"></span><span id="codal::SoundEmojiSynthesizer::stop"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1aca798067f9ba3e5727b926ede92b4a21"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer4stopEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Stops play of the current buffer of SoundEffects and discards it. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21SoundEmojiSynthesizer13setBufferSizeEi">
-<span id="_CPPv3N5codal21SoundEmojiSynthesizer13setBufferSizeEi"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer13setBufferSizeEi"></span><span id="codal::SoundEmojiSynthesizer::setBufferSize__i"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1ac28065894d1824651c2878e5a2bcc41f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setBufferSize</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer13setBufferSizeEi" title="Permalink to this definition">#</a><br /></dt>
-<dd><p><p>Define the size of the audio buffer to hold. The larger the buffer, the lower the CPU overhead, but the longer the delay.</p>
-<p>Define the size of the audio buffer to hold. The larger the buffer, the lower the CPU overhead, but the longer the delay.</p>
-</p>
+<span id="_CPPv3N5codal21SoundEmojiSynthesizer13setBufferSizeEi"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer13setBufferSizeEi"></span><span id="codal::SoundEmojiSynthesizer::setBufferSize__i"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1ab493130510972b6a6e0d1d97b6e7274a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setBufferSize</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer13setBufferSizeEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Define the size of the audio buffer to hold. The larger the buffer, the lower the CPU overhead, but the longer the delay. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>size</strong> – The new bufer size to use. </p></li>
-<li><p><strong>size</strong> – The new bufer size to use, in bytes. </p></li>
-</ul>
+<dd class="field-odd"><p><strong>size</strong> – The new bufer size to use. </p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK on success, or DEVICE_INVALID_PARAMETER</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success, or DEVICE_INVALID_PARAMETER </p>
+<dd class="field-even"><p>DEVICE_OK on success, or DEVICE_INVALID_PARAMETER </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21SoundEmojiSynthesizer13getSampleRateEv">
-<span id="_CPPv3N5codal21SoundEmojiSynthesizer13getSampleRateEv"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer13getSampleRateEv"></span><span id="codal::SoundEmojiSynthesizer::getSampleRate"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1a6693232c3778729e0f2d236143491ae6"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSampleRate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer13getSampleRateEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal21SoundEmojiSynthesizer13getSampleRateEv"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer13getSampleRateEv"></span><span id="codal::SoundEmojiSynthesizer::getSampleRate"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1a8d404fd4c545e6e38a0056b78f2065ab"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSampleRate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer13getSampleRateEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determine the sample rate currently in use by this <a class="reference internal" href="classcodal_1_1Synthesizer.html#classcodal_1_1Synthesizer"><span class="std std-ref">Synthesizer</span></a>. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -475,29 +466,21 @@ Class definition for a <a class="reference internal" href="classcodal_1_1Synthes
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21SoundEmojiSynthesizer13setSampleRateEi">
-<span id="_CPPv3N5codal21SoundEmojiSynthesizer13setSampleRateEi"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer13setSampleRateEi"></span><span id="codal::SoundEmojiSynthesizer::setSampleRate__i"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1a00fee3da83fcd7f128833fc9340f9434"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSampleRate</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sampleRate</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer13setSampleRateEi" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Change the sample rate used by this <a class="reference internal" href="classcodal_1_1Synthesizer.html#classcodal_1_1Synthesizer"><span class="std std-ref">Synthesizer</span></a><p>,</p>
-<p>Change the sample rate used by this</p>
-<a class="reference internal" href="classcodal_1_1Synthesizer.html#classcodal_1_1Synthesizer"><span class="std std-ref">Synthesizer</span></a>, </p>
+<span id="_CPPv3N5codal21SoundEmojiSynthesizer13setSampleRateEi"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer13setSampleRateEi"></span><span id="codal::SoundEmojiSynthesizer::setSampleRate__i"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1a2106f5fb143961cb72dde574c9480068"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSampleRate</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sampleRate</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer13setSampleRateEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Change the sample rate used by this <a class="reference internal" href="classcodal_1_1Synthesizer.html#classcodal_1_1Synthesizer"><span class="std std-ref">Synthesizer</span></a>, </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>sampleRate</strong> – The new sample rate, in Hz. </p></li>
-<li><p><strong>frequency</strong> – The new sample rate, in Hz. </p></li>
-</ul>
+<dd class="field-odd"><p><strong>sampleRate</strong> – The new sample rate, in Hz. </p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK on success.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success. </p>
+<dd class="field-even"><p>DEVICE_OK on success. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21SoundEmojiSynthesizer14getSampleRangeEv">
-<span id="_CPPv3N5codal21SoundEmojiSynthesizer14getSampleRangeEv"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer14getSampleRangeEv"></span><span id="codal::SoundEmojiSynthesizer::getSampleRange"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1af69b506ba202c8c85ced0e360fa71059"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSampleRange</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer14getSampleRangeEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal21SoundEmojiSynthesizer14getSampleRangeEv"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer14getSampleRangeEv"></span><span id="codal::SoundEmojiSynthesizer::getSampleRange"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1a5100b983d78a06a93dd8100291ab9dbe"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSampleRange</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer14getSampleRangeEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines the sample range used by this <a class="reference internal" href="classcodal_1_1Synthesizer.html#classcodal_1_1Synthesizer"><span class="std std-ref">Synthesizer</span></a>, </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -508,7 +491,7 @@ Class definition for a <a class="reference internal" href="classcodal_1_1Synthes
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21SoundEmojiSynthesizer14setSampleRangeE8uint16_t">
-<span id="_CPPv3N5codal21SoundEmojiSynthesizer14setSampleRangeE8uint16_t"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer14setSampleRangeE8uint16_t"></span><span id="codal::SoundEmojiSynthesizer::setSampleRange__uint16_t"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1a850c92ad2eaa97ba5f56bde4f323070a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSampleRange</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sampleRange</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer14setSampleRangeE8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal21SoundEmojiSynthesizer14setSampleRangeE8uint16_t"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer14setSampleRangeE8uint16_t"></span><span id="codal::SoundEmojiSynthesizer::setSampleRange__uint16_t"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1aec239a71be5f9779580856f59b481855"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSampleRange</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sampleRange</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer14setSampleRangeE8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Change the sample range used by this <a class="reference internal" href="classcodal_1_1Synthesizer.html#classcodal_1_1Synthesizer"><span class="std std-ref">Synthesizer</span></a>, </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -522,7 +505,7 @@ Class definition for a <a class="reference internal" href="classcodal_1_1Synthes
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21SoundEmojiSynthesizer9setOrMaskE8uint16_t">
-<span id="_CPPv3N5codal21SoundEmojiSynthesizer9setOrMaskE8uint16_t"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer9setOrMaskE8uint16_t"></span><span id="codal::SoundEmojiSynthesizer::setOrMask__uint16_t"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1abe190f02adf16c524fa5f94869255433"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setOrMask</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">mask</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer9setOrMaskE8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal21SoundEmojiSynthesizer9setOrMaskE8uint16_t"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer9setOrMaskE8uint16_t"></span><span id="codal::SoundEmojiSynthesizer::setOrMask__uint16_t"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1abbbde92cfa20b70aa071c6a5af801a66"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setOrMask</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">mask</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer9setOrMaskE8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Defines an optional bit mask to logical OR with each sample. Useful if the downstream component encodes control data within its samples.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -536,7 +519,7 @@ Class definition for a <a class="reference internal" href="classcodal_1_1Synthes
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21SoundEmojiSynthesizer17allowEmptyBuffersEb">
-<span id="_CPPv3N5codal21SoundEmojiSynthesizer17allowEmptyBuffersEb"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer17allowEmptyBuffersEb"></span><span id="codal::SoundEmojiSynthesizer::allowEmptyBuffers__b"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1af5e57d7a1a82d5a6233390464ae79fba"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">allowEmptyBuffers</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer17allowEmptyBuffersEb" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal21SoundEmojiSynthesizer17allowEmptyBuffersEb"></span><span id="_CPPv2N5codal21SoundEmojiSynthesizer17allowEmptyBuffersEb"></span><span id="codal::SoundEmojiSynthesizer::allowEmptyBuffers__b"></span><span class="target" id="classcodal_1_1SoundEmojiSynthesizer_1a372d327a156aca3dabc63d980d572d2f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">allowEmptyBuffers</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21SoundEmojiSynthesizer17allowEmptyBuffersEb" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Define how silence is treated on this components output.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

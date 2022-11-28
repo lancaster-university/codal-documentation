@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class DataStream &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class DataStream &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-types">
      Base Types
@@ -317,12 +318,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-types">
      Base Types
@@ -370,26 +371,24 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10DataStream10DataStreamER10DataSource">
-<span id="_CPPv3N5codal10DataStream10DataStreamER10DataSource"></span><span id="_CPPv2N5codal10DataStream10DataStreamER10DataSource"></span><span id="codal::DataStream::DataStream__DataSourceR"></span><span class="target" id="classcodal_1_1DataStream_1a32cff98a2139d9104de19eeeceab5721"></span><span class="sig-name descname"><span class="n"><span class="pre">DataStream</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataSource.html#_CPPv4N5codal10DataSourceE" title="codal::DataSource"><span class="n"><span class="pre">DataSource</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">upstream</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream10DataStreamER10DataSource" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10DataStream10DataStreamER10DataSource"></span><span id="_CPPv2N5codal10DataStream10DataStreamER10DataSource"></span><span id="codal::DataStream::DataStream__DataSourceR"></span><span class="target" id="classcodal_1_1DataStream_1a548578cb7888b355c91cfab36204fc46"></span><span class="sig-name descname"><span class="n"><span class="pre">DataStream</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataSource.html#_CPPv4N5codal10DataSourceE" title="codal::DataSource"><span class="n"><span class="pre">DataSource</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">upstream</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream10DataStreamER10DataSource" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Default Constructor. Creates an empty <a class="reference internal" href="#classcodal_1_1DataStream"><span class="std std-ref">DataStream</span></a>.</p>
-<p>
-Class definition for <a class="reference internal" href="#classcodal_1_1DataStream"><span class="std std-ref">DataStream</span></a>. A Datastream holds a number of <a class="reference internal" href="classcodal_1_1ManagedBuffer.html#classcodal_1_1ManagedBuffer"><span class="std std-ref">ManagedBuffer</span></a> references, provides basic flow control through a push/pull mechanism and byte level access to the datastream, even if it spans different buffers. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>upstream</strong> – the component that will normally feed this datastream with data.</p>
+<dd class="field-odd"><p><strong>upstream</strong> – the component that will normally feed this datastream with data. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10DataStreamD0Ev">
-<span id="_CPPv3N5codal10DataStreamD0Ev"></span><span id="_CPPv2N5codal10DataStreamD0Ev"></span><span id="codal::DataStream::~DataStream"></span><span class="target" id="classcodal_1_1DataStream_1ab1ab2421685bd8ee669ec94d3b0239b8"></span><span class="sig-name descname"><span class="n"><span class="pre">~DataStream</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStreamD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10DataStreamD0Ev"></span><span id="_CPPv2N5codal10DataStreamD0Ev"></span><span id="codal::DataStream::~DataStream"></span><span class="target" id="classcodal_1_1DataStream_1accc159d268b89f3df9a136c7acddd6b8"></span><span class="sig-name descname"><span class="n"><span class="pre">~DataStream</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStreamD0Ev" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Destructor. Removes all resources held by the instance. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10DataStream3getEi">
-<span id="_CPPv3N5codal10DataStream3getEi"></span><span id="_CPPv2N5codal10DataStream3getEi"></span><span id="codal::DataStream::get__i"></span><span class="target" id="classcodal_1_1DataStream_1aa7eee8cfffd769cbdd131d0669f4d365"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream3getEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10DataStream3getEi"></span><span id="_CPPv2N5codal10DataStream3getEi"></span><span id="codal::DataStream::get__i"></span><span class="target" id="classcodal_1_1DataStream_1ac997896109db0847691aec64fe6a14e3"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream3getEi" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines the value of the given byte in the buffer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -403,7 +402,7 @@ Class definition for <a class="reference internal" href="#classcodal_1_1DataStre
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10DataStream3setEi7uint8_t">
-<span id="_CPPv3N5codal10DataStream3setEi7uint8_t"></span><span id="_CPPv2N5codal10DataStream3setEi7uint8_t"></span><span id="codal::DataStream::set__i.uint8_t"></span><span class="target" id="classcodal_1_1DataStream_1a2099e3a25e95c40df90a8cb1ed390377"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream3setEi7uint8_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10DataStream3setEi7uint8_t"></span><span id="_CPPv2N5codal10DataStream3setEi7uint8_t"></span><span id="codal::DataStream::set__i.uint8_t"></span><span class="target" id="classcodal_1_1DataStream_1aee65ed3ee46f1bace7273a269b6e3ec5"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream3setEi7uint8_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Sets the byte at the given index to value provided. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -420,7 +419,7 @@ Class definition for <a class="reference internal" href="#classcodal_1_1DataStre
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10DataStream6lengthEv">
-<span id="_CPPv3N5codal10DataStream6lengthEv"></span><span id="_CPPv2N5codal10DataStream6lengthEv"></span><span id="codal::DataStream::length"></span><span class="target" id="classcodal_1_1DataStream_1a60e5c1bd6af28373d1d50fc4dcfb4b1e"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">length</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream6lengthEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10DataStream6lengthEv"></span><span id="_CPPv2N5codal10DataStream6lengthEv"></span><span id="codal::DataStream::length"></span><span class="target" id="classcodal_1_1DataStream_1ae74b93d822b8cfa99461fac3943d5dce"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">length</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream6lengthEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Gets number of bytes that are ready to be consumed in this data stream. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -431,7 +430,7 @@ Class definition for <a class="reference internal" href="#classcodal_1_1DataStre
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10DataStream10isReadOnlyEv">
-<span id="_CPPv3N5codal10DataStream10isReadOnlyEv"></span><span id="_CPPv2N5codal10DataStream10isReadOnlyEv"></span><span id="codal::DataStream::isReadOnly"></span><span class="target" id="classcodal_1_1DataStream_1a1a7c4ded585ea97c4fbb388133ba3931"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isReadOnly</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream10isReadOnlyEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10DataStream10isReadOnlyEv"></span><span id="_CPPv2N5codal10DataStream10isReadOnlyEv"></span><span id="codal::DataStream::isReadOnly"></span><span class="target" id="classcodal_1_1DataStream_1a627b0dda74a972179760708ebb003965"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isReadOnly</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream10isReadOnlyEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines if any of the data currently flowing through this stream is held in non-volatile (FLASH) memory. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -442,27 +441,27 @@ Class definition for <a class="reference internal" href="#classcodal_1_1DataStre
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10DataStream7connectER8DataSink">
-<span id="_CPPv3N5codal10DataStream7connectER8DataSink"></span><span id="_CPPv2N5codal10DataStream7connectER8DataSink"></span><span id="codal::DataStream::connect__DataSinkR"></span><span class="target" id="classcodal_1_1DataStream_1acededdc9e46c800a71b97bba4dd4768d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">connect</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataSink.html#_CPPv4N5codal8DataSinkE" title="codal::DataSink"><span class="n"><span class="pre">DataSink</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sink</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal10DataStream7connectER8DataSink" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10DataStream7connectER8DataSink"></span><span id="_CPPv2N5codal10DataStream7connectER8DataSink"></span><span id="codal::DataStream::connect__DataSinkR"></span><span class="target" id="classcodal_1_1DataStream_1a6fbe8eaa384643e4c2444bc5218e4d77"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">connect</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataSink.html#_CPPv4N5codal8DataSinkE" title="codal::DataSink"><span class="n"><span class="pre">DataSink</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sink</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal10DataStream7connectER8DataSink" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Define a downstream component for data stream.</p>
 <p>&#64;sink The component that data will be delivered to, when it is available </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10DataStream10disconnectEv">
-<span id="_CPPv3N5codal10DataStream10disconnectEv"></span><span id="_CPPv2N5codal10DataStream10disconnectEv"></span><span id="codal::DataStream::disconnect"></span><span class="target" id="classcodal_1_1DataStream_1a3babd484254a63b60082a9850425c385"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disconnect</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal10DataStream10disconnectEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10DataStream10disconnectEv"></span><span id="_CPPv2N5codal10DataStream10disconnectEv"></span><span id="codal::DataStream::disconnect"></span><span class="target" id="classcodal_1_1DataStream_1aaf10d3df107307ab33a86582b9dbb7a0"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disconnect</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal10DataStream10disconnectEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Define a downstream component for data stream.</p>
 <p>&#64;sink The component that data will be delivered to, when it is available </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10DataStream9getFormatEv">
-<span id="_CPPv3N5codal10DataStream9getFormatEv"></span><span id="_CPPv2N5codal10DataStream9getFormatEv"></span><span id="codal::DataStream::getFormat"></span><span class="target" id="classcodal_1_1DataStream_1a434b47c12a0b1b2ea2bedb8ec42206a4"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFormat</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal10DataStream9getFormatEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10DataStream9getFormatEv"></span><span id="_CPPv2N5codal10DataStream9getFormatEv"></span><span id="codal::DataStream::getFormat"></span><span class="target" id="classcodal_1_1DataStream_1a99467792179da9c819dc09ce4a15fe15"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFormat</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal10DataStream9getFormatEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determine the data format of the buffers streamed out of this component. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10DataStream22getPreferredBufferSizeEv">
-<span id="_CPPv3N5codal10DataStream22getPreferredBufferSizeEv"></span><span id="_CPPv2N5codal10DataStream22getPreferredBufferSizeEv"></span><span id="codal::DataStream::getPreferredBufferSize"></span><span class="target" id="classcodal_1_1DataStream_1a0ecdf402c5a16fea28e3eaf657f85414"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPreferredBufferSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream22getPreferredBufferSizeEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10DataStream22getPreferredBufferSizeEv"></span><span id="_CPPv2N5codal10DataStream22getPreferredBufferSizeEv"></span><span id="codal::DataStream::getPreferredBufferSize"></span><span class="target" id="classcodal_1_1DataStream_1a0606a99dd244940bc1cffc343cc474e9"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPreferredBufferSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream22getPreferredBufferSizeEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determine the number of bytes that are currnetly buffered before blocking subsequent push() operations. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -473,7 +472,7 @@ Class definition for <a class="reference internal" href="#classcodal_1_1DataStre
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10DataStream22setPreferredBufferSizeEi">
-<span id="_CPPv3N5codal10DataStream22setPreferredBufferSizeEi"></span><span id="_CPPv2N5codal10DataStream22setPreferredBufferSizeEi"></span><span id="codal::DataStream::setPreferredBufferSize__i"></span><span class="target" id="classcodal_1_1DataStream_1a6502e567bc28dd4f8871e1e742530466"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPreferredBufferSize</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream22setPreferredBufferSizeEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10DataStream22setPreferredBufferSizeEi"></span><span id="_CPPv2N5codal10DataStream22setPreferredBufferSizeEi"></span><span id="codal::DataStream::setPreferredBufferSize__i"></span><span class="target" id="classcodal_1_1DataStream_1a592d60cba50d54a2db86140deaff0ef0"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPreferredBufferSize</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream22setPreferredBufferSizeEi" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Define the number of bytes that should be buffered before blocking subsequent push() operations. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -484,14 +483,13 @@ Class definition for <a class="reference internal" href="#classcodal_1_1DataStre
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10DataStream11setBlockingEb">
-<span id="_CPPv3N5codal10DataStream11setBlockingEb"></span><span id="_CPPv2N5codal10DataStream11setBlockingEb"></span><span id="codal::DataStream::setBlocking__b"></span><span class="target" id="classcodal_1_1DataStream_1ae6dec33eed79298b2b4601205c44473a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setBlocking</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">isBlocking</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream11setBlockingEb" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Determines if this stream acts in a synchronous, blocking mode or asynchronous mode. In blocking mode, writes to a full buffer will result int he calling fiber being blocked until space is available. Downstream DataSinks will also attempt to process data immediately as it becomes available. In non-blocking asynchronpus mode, writes to a full buffer are dropped and downstream Datasinks will be processed in a new fiber.</p>
-<p>Determines if this stream acts in a synchronous, blocking mode or asynchronous mode. In blocking mode, writes to a full buffer will result in the calling fiber being blocked until space is available. Downstream DataSinks will also attempt to process data immediately as it becomes available. In non-blocking asynchronous mode, writes to a full buffer are dropped and processing of downstream Datasinks will be deferred. </p>
+<span id="_CPPv3N5codal10DataStream11setBlockingEb"></span><span id="_CPPv2N5codal10DataStream11setBlockingEb"></span><span id="codal::DataStream::setBlocking__b"></span><span class="target" id="classcodal_1_1DataStream_1a93be1db6d4ea0bb3c282db0a11ea7e1f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setBlocking</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">isBlocking</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream11setBlockingEb" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Determines if this stream acts in a synchronous, blocking mode or asynchronous mode. In blocking mode, writes to a full buffer will result int he calling fiber being blocked until space is available. Downstream DataSinks will also attempt to process data immediately as it becomes available. In non-blocking asynchronpus mode, writes to a full buffer are dropped and downstream Datasinks will be processed in a new fiber. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10DataStream7canPullEi">
-<span id="_CPPv3N5codal10DataStream7canPullEi"></span><span id="_CPPv2N5codal10DataStream7canPullEi"></span><span id="codal::DataStream::canPull__i"></span><span class="target" id="classcodal_1_1DataStream_1a083b3f83655ba098e26fa3d02184c355"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">canPull</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream7canPullEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10DataStream7canPullEi"></span><span id="_CPPv2N5codal10DataStream7canPullEi"></span><span id="codal::DataStream::canPull__i"></span><span class="target" id="classcodal_1_1DataStream_1adff8bf9e9480f9c1864807f490a1724d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">canPull</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream7canPullEi" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines if a buffer of the given size can be added to the buffer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -505,7 +503,7 @@ Class definition for <a class="reference internal" href="#classcodal_1_1DataStre
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10DataStream4fullEv">
-<span id="_CPPv3N5codal10DataStream4fullEv"></span><span id="_CPPv2N5codal10DataStream4fullEv"></span><span id="codal::DataStream::full"></span><span class="target" id="classcodal_1_1DataStream_1ac125276943934a8d2cfff6ea1cfacb2c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">full</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream4fullEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10DataStream4fullEv"></span><span id="_CPPv2N5codal10DataStream4fullEv"></span><span id="codal::DataStream::full"></span><span class="target" id="classcodal_1_1DataStream_1ada5fd8fb6396003fae38cfb19b116b67"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">full</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream4fullEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines if the <a class="reference internal" href="#classcodal_1_1DataStream"><span class="std std-ref">DataStream</span></a> can accept any more data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -516,15 +514,14 @@ Class definition for <a class="reference internal" href="#classcodal_1_1DataStre
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10DataStream4pullEv">
-<span id="_CPPv3N5codal10DataStream4pullEv"></span><span id="_CPPv2N5codal10DataStream4pullEv"></span><span id="codal::DataStream::pull"></span><span class="target" id="classcodal_1_1DataStream_1a467d1648b6745dd3d21a401330836e32"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="classcodal_1_1ManagedBuffer.html#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pull</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream4pullEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10DataStream4pullEv"></span><span id="_CPPv2N5codal10DataStream4pullEv"></span><span id="codal::DataStream::pull"></span><span class="target" id="classcodal_1_1DataStream_1a316f5209c9935eb8431260efd8bc747e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="classcodal_1_1ManagedBuffer.html#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pull</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream4pullEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Provide the next available <a class="reference internal" href="classcodal_1_1ManagedBuffer.html#classcodal_1_1ManagedBuffer"><span class="std std-ref">ManagedBuffer</span></a> to our downstream caller, if available. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10DataStream11pullRequestEv">
-<span id="_CPPv3N5codal10DataStream11pullRequestEv"></span><span id="_CPPv2N5codal10DataStream11pullRequestEv"></span><span id="codal::DataStream::pullRequest"></span><span class="target" id="classcodal_1_1DataStream_1a18afd644676e80571df4f6574b9d2740"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pullRequest</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream11pullRequestEv" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Deliver the next available <a class="reference internal" href="classcodal_1_1ManagedBuffer.html#classcodal_1_1ManagedBuffer"><span class="std std-ref">ManagedBuffer</span></a> to our downstream caller.</p>
-<p>Store the given buffer in our stream, possibly also causing a push operation on our downstream component. </p>
+<span id="_CPPv3N5codal10DataStream11pullRequestEv"></span><span id="_CPPv2N5codal10DataStream11pullRequestEv"></span><span id="codal::DataStream::pullRequest"></span><span class="target" id="classcodal_1_1DataStream_1ad0035985e08762b050f730b7471be576"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pullRequest</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10DataStream11pullRequestEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Deliver the next available <a class="reference internal" href="classcodal_1_1ManagedBuffer.html#classcodal_1_1ManagedBuffer"><span class="std std-ref">ManagedBuffer</span></a> to our downstream caller. </p>
 </dd></dl>
 
 </div>

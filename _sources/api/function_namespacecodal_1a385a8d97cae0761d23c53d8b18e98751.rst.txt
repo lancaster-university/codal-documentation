@@ -3,7 +3,7 @@
 Function codal::microbit_random
 ===============================
 
-- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitDevice.cpp`
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitDevice.h`
 
 
 Function Documentation

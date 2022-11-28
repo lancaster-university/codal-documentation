@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class NonLinearAnalogSensor &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class NonLinearAnalogSensor &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -317,12 +318,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -369,23 +370,14 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21NonLinearAnalogSensor21NonLinearAnalogSensorER3Pin8uint16_tfffff">
-<span id="_CPPv3N5codal21NonLinearAnalogSensor21NonLinearAnalogSensorER3Pin8uint16_tfffff"></span><span id="_CPPv2N5codal21NonLinearAnalogSensor21NonLinearAnalogSensorER3Pin8uint16_tfffff"></span><span id="codal::NonLinearAnalogSensor::NonLinearAnalogSensor__PinR.uint16_t.float.float.float.float.float"></span><span class="target" id="classcodal_1_1NonLinearAnalogSensor_1afbaf0d61f708fe88da1636277d3a0c46"></span><span class="sig-name descname"><span class="n"><span class="pre">NonLinearAnalogSensor</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pin</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nominalValue</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nominalReading</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">beta</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">seriesResistor</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">zeroOffset</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0f</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21NonLinearAnalogSensor21NonLinearAnalogSensorER3Pin8uint16_tfffff" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal21NonLinearAnalogSensor21NonLinearAnalogSensorER3Pin8uint16_tfffff"></span><span id="_CPPv2N5codal21NonLinearAnalogSensor21NonLinearAnalogSensorER3Pin8uint16_tfffff"></span><span id="codal::NonLinearAnalogSensor::NonLinearAnalogSensor__PinR.uint16_t.float.float.float.float.float"></span><span class="target" id="classcodal_1_1NonLinearAnalogSensor_1a093aa73add846af32c7c07d45bbd6d0b"></span><span class="sig-name descname"><span class="n"><span class="pre">NonLinearAnalogSensor</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pin</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nominalValue</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nominalReading</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">beta</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">seriesResistor</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">zeroOffset</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0f</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21NonLinearAnalogSensor21NonLinearAnalogSensorER3Pin8uint16_tfffff" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor.</p>
-<p>Creates a generic <a class="reference internal" href="classcodal_1_1AnalogSensor.html#classcodal_1_1AnalogSensor"><span class="std std-ref">AnalogSensor</span></a>.</p>
-<p>
-Constructor.</p>
 <p>Creates a generic <a class="reference internal" href="classcodal_1_1AnalogSensor.html#classcodal_1_1AnalogSensor"><span class="std std-ref">AnalogSensor</span></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>pin</strong> – The pin on which to sense </p></li>
 <li><p><strong>id</strong> – The ID of this compoenent e.g. DEVICE_ID_THERMOMETER </p></li>
-<li><p><strong>nominalValue</strong> – The value (in SI units) of a nominal position. </p></li>
-<li><p><strong>nominalReading</strong> – The raw reading from the sensor at the nominal position. </p></li>
-<li><p><strong>beta</strong> – The Steinhart-Hart Beta constant for the device </p></li>
-<li><p><strong>seriesResistor</strong> – The value (in ohms) of the resistor in series with the sensor. </p></li>
-<li><p><strong>zeroOffset</strong> – Optional zero offset applied to all SI units (e.g. 273.15 for temperature sensing in C vs Kelvin).</p></li>
-<li><p><strong>pin</strong> – The pin on which to sense </p></li>
 <li><p><strong>nominalValue</strong> – The value (in SI units) of a nominal position. </p></li>
 <li><p><strong>nominalReading</strong> – The raw reading from the sensor at the nominal position. </p></li>
 <li><p><strong>beta</strong> – The Steinhart-Hart Beta constant for the device </p></li>
@@ -398,7 +390,7 @@ Constructor.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21NonLinearAnalogSensor12updateSampleEv">
-<span id="_CPPv3N5codal21NonLinearAnalogSensor12updateSampleEv"></span><span id="_CPPv2N5codal21NonLinearAnalogSensor12updateSampleEv"></span><span id="codal::NonLinearAnalogSensor::updateSample"></span><span class="target" id="classcodal_1_1NonLinearAnalogSensor_1aa4633c8862a5254847fd3cae47107ca5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateSample</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21NonLinearAnalogSensor12updateSampleEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal21NonLinearAnalogSensor12updateSampleEv"></span><span id="_CPPv2N5codal21NonLinearAnalogSensor12updateSampleEv"></span><span id="codal::NonLinearAnalogSensor::updateSample"></span><span class="target" id="classcodal_1_1NonLinearAnalogSensor_1a7a88b7b6e3afb723bcd25289a23531c7"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateSample</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21NonLinearAnalogSensor12updateSampleEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Updates the internal reading of the sensor. Typically called periodicaly.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>

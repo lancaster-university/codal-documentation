@@ -13,12 +13,12 @@ Derived Types
 *************
 
 - ``public codal::DataStream`` (:ref:`exhale_class_classcodal_1_1DataStream`)
+- ``public codal::EffectFilter`` (:ref:`exhale_class_classcodal_1_1EffectFilter`)
 - ``public codal::FIFOStream`` (:ref:`exhale_class_classcodal_1_1FIFOStream`)
 - ``public codal::LevelDetector`` (:ref:`exhale_class_classcodal_1_1LevelDetector`)
 - ``public codal::LevelDetectorSPL`` (:ref:`exhale_class_classcodal_1_1LevelDetectorSPL`)
 - ``public codal::Mixer`` (:ref:`exhale_class_classcodal_1_1Mixer`)
 - ``public codal::MixerChannel`` (:ref:`exhale_class_classcodal_1_1MixerChannel`)
-- ``public codal::StreamFilter`` (:ref:`exhale_class_classcodal_1_1StreamFilter`)
 - ``public codal::StreamFlowTrigger`` (:ref:`exhale_class_classcodal_1_1StreamFlowTrigger`)
 - ``public codal::StreamNormalizer`` (:ref:`exhale_class_classcodal_1_1StreamNormalizer`)
 - ``public codal::StreamRecording`` (:ref:`exhale_class_classcodal_1_1StreamRecording`)

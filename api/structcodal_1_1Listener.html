@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Struct Listener &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Struct Listener &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,7 +282,7 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#struct-documentation">
    Struct Documentation
@@ -305,7 +306,7 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#struct-documentation">
    Struct Documentation
@@ -335,7 +336,7 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal8Listener8ListenerE8uint16_t8uint16_tPFv5EventE8uint16_t">
-<span id="_CPPv3N5codal8Listener8ListenerE8uint16_t8uint16_tPFv5EventE8uint16_t"></span><span id="_CPPv2N5codal8Listener8ListenerE8uint16_t8uint16_tPFv5EventE8uint16_t"></span><span class="target" id="structcodal_1_1Listener_1add7d50e1744a65ba523907170a835450"></span><span class="sig-name descname"><span class="n"><span class="pre">Listener</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">handler</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="p"><span class="pre">)</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flags</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x0010</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal8Listener8ListenerE8uint16_t8uint16_tPFv5EventE8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal8Listener8ListenerE8uint16_t8uint16_tPFv5EventE8uint16_t"></span><span id="_CPPv2N5codal8Listener8ListenerE8uint16_t8uint16_tPFv5EventE8uint16_t"></span><span class="target" id="structcodal_1_1Listener_1a1c4d91a6c0cd45cc73dba4eeb01690f4"></span><span class="sig-name descname"><span class="n"><span class="pre">Listener</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">handler</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="p"><span class="pre">)</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flags</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x0010</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal8Listener8ListenerE8uint16_t8uint16_tPFv5EventE8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor.</p>
 <p>Create a new Message Bus <a class="reference internal" href="#structcodal_1_1Listener"><span class="std std-ref">Listener</span></a>.</p>
 <dl class="field-list simple">
@@ -352,7 +353,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal8Listener8ListenerE8uint16_t8uint16_tPFv5EventPvEPv8uint16_t">
-<span id="_CPPv3N5codal8Listener8ListenerE8uint16_t8uint16_tPFv5EventPvEPv8uint16_t"></span><span id="_CPPv2N5codal8Listener8ListenerE8uint16_t8uint16_tPFv5EventPvEPv8uint16_t"></span><span class="target" id="structcodal_1_1Listener_1a7ead6f3425842bea67ec16e83222afc2"></span><span class="sig-name descname"><span class="n"><span class="pre">Listener</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">handler</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">)</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">arg</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flags</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x0010</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal8Listener8ListenerE8uint16_t8uint16_tPFv5EventPvEPv8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal8Listener8ListenerE8uint16_t8uint16_tPFv5EventPvEPv8uint16_t"></span><span id="_CPPv2N5codal8Listener8ListenerE8uint16_t8uint16_tPFv5EventPvEPv8uint16_t"></span><span class="target" id="structcodal_1_1Listener_1a8c8d8e954fdf199b3f5f3bd6974b312f"></span><span class="sig-name descname"><span class="n"><span class="pre">Listener</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">handler</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">)</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">arg</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flags</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x0010</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal8Listener8ListenerE8uint16_t8uint16_tPFv5EventPvEPv8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor.</p>
 <p>Create a new Message Bus <a class="reference internal" href="#structcodal_1_1Listener"><span class="std std-ref">Listener</span></a>, this constructor accepts an additional parameter “arg”, which is passed to the handler.</p>
 <dl class="field-list simple">
@@ -388,13 +389,13 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal8ListenerD0Ev">
-<span id="_CPPv3N5codal8ListenerD0Ev"></span><span id="_CPPv2N5codal8ListenerD0Ev"></span><span id="codal::Listener::~Listener"></span><span class="target" id="structcodal_1_1Listener_1a8946fdcfe2142e49ef4d31bd23769da0"></span><span class="sig-name descname"><span class="n"><span class="pre">~Listener</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal8ListenerD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal8ListenerD0Ev"></span><span id="_CPPv2N5codal8ListenerD0Ev"></span><span id="codal::Listener::~Listener"></span><span class="target" id="structcodal_1_1Listener_1a27416d84a3a1b12c502ea8435c0679a5"></span><span class="sig-name descname"><span class="n"><span class="pre">~Listener</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal8ListenerD0Ev" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Destructor. Ensures all resources used by this listener are freed. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal8Listener5queueE5Event">
-<span id="_CPPv3N5codal8Listener5queueE5Event"></span><span id="_CPPv2N5codal8Listener5queueE5Event"></span><span id="codal::Listener::queue__Event"></span><span class="target" id="structcodal_1_1Listener_1accf638a450fe320556742c3b4643c058"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">queue</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">e</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal8Listener5queueE5Event" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal8Listener5queueE5Event"></span><span id="_CPPv2N5codal8Listener5queueE5Event"></span><span id="codal::Listener::queue__Event"></span><span class="target" id="structcodal_1_1Listener_1af174642d50e75c57f17fbaf68f61193f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">queue</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">e</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal8Listener5queueE5Event" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Queues and event up to be processed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

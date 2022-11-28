@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class TouchSensor &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class TouchSensor &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -317,12 +318,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -370,7 +371,7 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11TouchSensor11TouchSensorER3Pin8uint16_t">
-<span id="_CPPv3N5codal11TouchSensor11TouchSensorER3Pin8uint16_t"></span><span id="_CPPv2N5codal11TouchSensor11TouchSensorER3Pin8uint16_t"></span><span id="codal::TouchSensor::TouchSensor__PinR.uint16_t"></span><span class="target" id="classcodal_1_1TouchSensor_1a14656078c558ad47883604675a87d9ae"></span><span class="sig-name descname"><span class="n"><span class="pre">TouchSensor</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pin</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_TOUCH_SENSOR</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11TouchSensor11TouchSensorER3Pin8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal11TouchSensor11TouchSensorER3Pin8uint16_t"></span><span id="_CPPv2N5codal11TouchSensor11TouchSensorER3Pin8uint16_t"></span><span id="codal::TouchSensor::TouchSensor__PinR.uint16_t"></span><span class="target" id="classcodal_1_1TouchSensor_1a9aeee411d870810196e02d970f586703"></span><span class="sig-name descname"><span class="n"><span class="pre">TouchSensor</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pin</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_TOUCH_SENSOR</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11TouchSensor11TouchSensorER3Pin8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor.</p>
 <p>Enables software controlled capacitative touch sensing on a set of pins.</p>
 <dl class="field-list simple">
@@ -382,7 +383,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11TouchSensor11TouchSensorE8uint16_t">
-<span id="_CPPv3N5codal11TouchSensor11TouchSensorE8uint16_t"></span><span id="_CPPv2N5codal11TouchSensor11TouchSensorE8uint16_t"></span><span id="codal::TouchSensor::TouchSensor__uint16_t"></span><span class="target" id="classcodal_1_1TouchSensor_1ae90b2bdd493193189110fbc30e928e31"></span><span class="sig-name descname"><span class="n"><span class="pre">TouchSensor</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11TouchSensor11TouchSensorE8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal11TouchSensor11TouchSensorE8uint16_t"></span><span id="_CPPv2N5codal11TouchSensor11TouchSensorE8uint16_t"></span><span id="codal::TouchSensor::TouchSensor__uint16_t"></span><span class="target" id="classcodal_1_1TouchSensor_1aec8558f05e812cc7f459e3ece37f58f1"></span><span class="sig-name descname"><span class="n"><span class="pre">TouchSensor</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11TouchSensor11TouchSensorE8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Default Constructor.</p>
 <p>Enables software controlled capacitative touch sensing on a set of pins. Use this default constructor when using <a class="reference internal" href="#classcodal_1_1TouchSensor"><span class="std std-ref">TouchSensor</span></a> as a base class.</p>
 <p>&#64;id The ID of this component, defaults to DEVICE_ID_TOUCH_SENSOR </p>
@@ -390,25 +391,25 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11TouchSensor14addTouchButtonEP11TouchButton">
-<span id="_CPPv3N5codal11TouchSensor14addTouchButtonEP11TouchButton"></span><span id="_CPPv2N5codal11TouchSensor14addTouchButtonEP11TouchButton"></span><span id="codal::TouchSensor::addTouchButton__TouchButtonP"></span><span class="target" id="classcodal_1_1TouchSensor_1a9518900470d9a955b888d4f0e629d580"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addTouchButton</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1TouchButton.html#_CPPv4N5codal11TouchButtonE" title="codal::TouchButton"><span class="n"><span class="pre">TouchButton</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">button</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11TouchSensor14addTouchButtonEP11TouchButton" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal11TouchSensor14addTouchButtonEP11TouchButton"></span><span id="_CPPv2N5codal11TouchSensor14addTouchButtonEP11TouchButton"></span><span id="codal::TouchSensor::addTouchButton__TouchButtonP"></span><span class="target" id="classcodal_1_1TouchSensor_1a23f9ac6a240ab0a73b2c8287b3a46900"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addTouchButton</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1TouchButton.html#_CPPv4N5codal11TouchButtonE" title="codal::TouchButton"><span class="n"><span class="pre">TouchButton</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">button</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11TouchSensor14addTouchButtonEP11TouchButton" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Begin touch sensing on the given button </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11TouchSensor17removeTouchButtonEP11TouchButton">
-<span id="_CPPv3N5codal11TouchSensor17removeTouchButtonEP11TouchButton"></span><span id="_CPPv2N5codal11TouchSensor17removeTouchButtonEP11TouchButton"></span><span id="codal::TouchSensor::removeTouchButton__TouchButtonP"></span><span class="target" id="classcodal_1_1TouchSensor_1a5a0d36865c1d48966569226505aed454"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">removeTouchButton</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1TouchButton.html#_CPPv4N5codal11TouchButtonE" title="codal::TouchButton"><span class="n"><span class="pre">TouchButton</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">button</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11TouchSensor17removeTouchButtonEP11TouchButton" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal11TouchSensor17removeTouchButtonEP11TouchButton"></span><span id="_CPPv2N5codal11TouchSensor17removeTouchButtonEP11TouchButton"></span><span id="codal::TouchSensor::removeTouchButton__TouchButtonP"></span><span class="target" id="classcodal_1_1TouchSensor_1aa3b1ed3b56b89d968e29b24012e28a0d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">removeTouchButton</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1TouchButton.html#_CPPv4N5codal11TouchButtonE" title="codal::TouchButton"><span class="n"><span class="pre">TouchButton</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">button</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11TouchSensor17removeTouchButtonEP11TouchButton" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Stop touch sensing on the given button </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11TouchSensor13onSampleEventE5Event">
-<span id="_CPPv3N5codal11TouchSensor13onSampleEventE5Event"></span><span id="_CPPv2N5codal11TouchSensor13onSampleEventE5Event"></span><span id="codal::TouchSensor::onSampleEvent__Event"></span><span class="target" id="classcodal_1_1TouchSensor_1af7d4224a5888a19586a151c7cb591a3e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">onSampleEvent</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11TouchSensor13onSampleEventE5Event" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal11TouchSensor13onSampleEventE5Event"></span><span id="_CPPv2N5codal11TouchSensor13onSampleEventE5Event"></span><span id="codal::TouchSensor::onSampleEvent__Event"></span><span class="target" id="classcodal_1_1TouchSensor_1ae0ebfd47bcf1f651e8ec80c4887905a3"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">onSampleEvent</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Event.html#_CPPv4N5codal5EventE" title="codal::Event"><span class="n"><span class="pre">Event</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11TouchSensor13onSampleEventE5Event" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Initiate a scan of the sensors. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11TouchSensorD0Ev">
-<span id="_CPPv3N5codal11TouchSensorD0Ev"></span><span id="_CPPv2N5codal11TouchSensorD0Ev"></span><span id="codal::TouchSensor::~TouchSensor"></span><span class="target" id="classcodal_1_1TouchSensor_1a9acc204e374d1d01338a903f7997f9d7"></span><span class="sig-name descname"><span class="n"><span class="pre">~TouchSensor</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11TouchSensorD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal11TouchSensorD0Ev"></span><span id="_CPPv2N5codal11TouchSensorD0Ev"></span><span id="codal::TouchSensor::~TouchSensor"></span><span class="target" id="classcodal_1_1TouchSensor_1a6ec5579127277fc62210fd13a88c554b"></span><span class="sig-name descname"><span class="n"><span class="pre">~TouchSensor</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11TouchSensorD0Ev" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Destructor. </p>
 </dd></dl>
 

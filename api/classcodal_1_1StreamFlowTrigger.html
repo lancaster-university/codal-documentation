@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class StreamFlowTrigger &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class StreamFlowTrigger &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-types">
      Base Types
@@ -317,12 +318,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-types">
      Base Types
@@ -369,48 +370,47 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal17StreamFlowTrigger17StreamFlowTriggerER10DataSource">
-<span id="_CPPv3N5codal17StreamFlowTrigger17StreamFlowTriggerER10DataSource"></span><span id="_CPPv2N5codal17StreamFlowTrigger17StreamFlowTriggerER10DataSource"></span><span id="codal::StreamFlowTrigger::StreamFlowTrigger__DataSourceR"></span><span class="target" id="classcodal_1_1StreamFlowTrigger_1a846fa5a2642866b9d6057b7cce802503"></span><span class="sig-name descname"><span class="n"><span class="pre">StreamFlowTrigger</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataSource.html#_CPPv4N5codal10DataSourceE" title="codal::DataSource"><span class="n"><span class="pre">DataSource</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">source</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal17StreamFlowTrigger17StreamFlowTriggerER10DataSource" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal17StreamFlowTrigger17StreamFlowTriggerER10DataSource"></span><span id="_CPPv2N5codal17StreamFlowTrigger17StreamFlowTriggerER10DataSource"></span><span id="codal::StreamFlowTrigger::StreamFlowTrigger__DataSourceR"></span><span class="target" id="classcodal_1_1StreamFlowTrigger_1ab3a9becfd202664f64f47e94262c28f2"></span><span class="sig-name descname"><span class="n"><span class="pre">StreamFlowTrigger</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataSource.html#_CPPv4N5codal10DataSourceE" title="codal::DataSource"><span class="n"><span class="pre">DataSource</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">source</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal17StreamFlowTrigger17StreamFlowTriggerER10DataSource" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal17StreamFlowTriggerD0Ev">
-<span id="_CPPv3N5codal17StreamFlowTriggerD0Ev"></span><span id="_CPPv2N5codal17StreamFlowTriggerD0Ev"></span><span id="codal::StreamFlowTrigger::~StreamFlowTrigger"></span><span class="target" id="classcodal_1_1StreamFlowTrigger_1a0a446f20a52d35f3b644d8a2f59d0364"></span><span class="sig-name descname"><span class="n"><span class="pre">~StreamFlowTrigger</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal17StreamFlowTriggerD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal17StreamFlowTriggerD0Ev"></span><span id="_CPPv2N5codal17StreamFlowTriggerD0Ev"></span><span id="codal::StreamFlowTrigger::~StreamFlowTrigger"></span><span class="target" id="classcodal_1_1StreamFlowTrigger_1a37ab49cf0ac40a61aca8fe54d27fdf65"></span><span class="sig-name descname"><span class="n"><span class="pre">~StreamFlowTrigger</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal17StreamFlowTriggerD0Ev" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal17StreamFlowTrigger14setDataHandlerEPFviE">
-<span id="_CPPv3N5codal17StreamFlowTrigger14setDataHandlerEPFviE"></span><span id="_CPPv2N5codal17StreamFlowTrigger14setDataHandlerEPFviE"></span><span class="target" id="classcodal_1_1StreamFlowTrigger_1a0da21f912607ad65b8c9516b0b95968f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setDataHandler</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">handler</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal17StreamFlowTrigger14setDataHandlerEPFviE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal17StreamFlowTrigger14setDataHandlerEPFviE"></span><span id="_CPPv2N5codal17StreamFlowTrigger14setDataHandlerEPFviE"></span><span class="target" id="classcodal_1_1StreamFlowTrigger_1ac56680b66f4437c185f1cc453b2c7f4a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setDataHandler</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">handler</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal17StreamFlowTrigger14setDataHandlerEPFviE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal17StreamFlowTrigger4pullEv">
-<span id="_CPPv3N5codal17StreamFlowTrigger4pullEv"></span><span id="_CPPv2N5codal17StreamFlowTrigger4pullEv"></span><span id="codal::StreamFlowTrigger::pull"></span><span class="target" id="classcodal_1_1StreamFlowTrigger_1aa58f947eaf0186af3b55af0f2326cf41"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="classcodal_1_1ManagedBuffer.html#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pull</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal17StreamFlowTrigger4pullEv" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Default implementation of <a class="reference internal" href="classcodal_1_1DataSource.html#classcodal_1_1DataSource"><span class="std std-ref">DataSource</span></a> and <a class="reference internal" href="classcodal_1_1DataSink.html#classcodal_1_1DataSink"><span class="std std-ref">DataSink</span></a> classes. </p>
-</dd></dl>
+<span id="_CPPv3N5codal17StreamFlowTrigger4pullEv"></span><span id="_CPPv2N5codal17StreamFlowTrigger4pullEv"></span><span id="codal::StreamFlowTrigger::pull"></span><span class="target" id="classcodal_1_1StreamFlowTrigger_1afed559491e09584d8e7052bd24b7baf6"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="classcodal_1_1ManagedBuffer.html#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pull</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal17StreamFlowTrigger4pullEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal17StreamFlowTrigger11pullRequestEv">
-<span id="_CPPv3N5codal17StreamFlowTrigger11pullRequestEv"></span><span id="_CPPv2N5codal17StreamFlowTrigger11pullRequestEv"></span><span id="codal::StreamFlowTrigger::pullRequest"></span><span class="target" id="classcodal_1_1StreamFlowTrigger_1a395fd03e0d656cb30340106791835cc9"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pullRequest</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal17StreamFlowTrigger11pullRequestEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal17StreamFlowTrigger11pullRequestEv"></span><span id="_CPPv2N5codal17StreamFlowTrigger11pullRequestEv"></span><span id="codal::StreamFlowTrigger::pullRequest"></span><span class="target" id="classcodal_1_1StreamFlowTrigger_1aee3546dbde7cbaaf3c9ae75c19a03fe0"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pullRequest</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal17StreamFlowTrigger11pullRequestEv" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal17StreamFlowTrigger7connectER8DataSink">
-<span id="_CPPv3N5codal17StreamFlowTrigger7connectER8DataSink"></span><span id="_CPPv2N5codal17StreamFlowTrigger7connectER8DataSink"></span><span id="codal::StreamFlowTrigger::connect__DataSinkR"></span><span class="target" id="classcodal_1_1StreamFlowTrigger_1a468049704bf4d52834848ab2b7ff46b7"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">connect</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataSink.html#_CPPv4N5codal8DataSinkE" title="codal::DataSink"><span class="n"><span class="pre">DataSink</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sink</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal17StreamFlowTrigger7connectER8DataSink" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal17StreamFlowTrigger7connectER8DataSink"></span><span id="_CPPv2N5codal17StreamFlowTrigger7connectER8DataSink"></span><span id="codal::StreamFlowTrigger::connect__DataSinkR"></span><span class="target" id="classcodal_1_1StreamFlowTrigger_1a0491b49da5cc41a500ca06f937a97871"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">connect</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataSink.html#_CPPv4N5codal8DataSinkE" title="codal::DataSink"><span class="n"><span class="pre">DataSink</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sink</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal17StreamFlowTrigger7connectER8DataSink" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal17StreamFlowTrigger10disconnectEv">
-<span id="_CPPv3N5codal17StreamFlowTrigger10disconnectEv"></span><span id="_CPPv2N5codal17StreamFlowTrigger10disconnectEv"></span><span id="codal::StreamFlowTrigger::disconnect"></span><span class="target" id="classcodal_1_1StreamFlowTrigger_1af0c8d25926a349b3afe888bd691e8bf6"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disconnect</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal17StreamFlowTrigger10disconnectEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal17StreamFlowTrigger10disconnectEv"></span><span id="_CPPv2N5codal17StreamFlowTrigger10disconnectEv"></span><span id="codal::StreamFlowTrigger::disconnect"></span><span class="target" id="classcodal_1_1StreamFlowTrigger_1aed2bc7112a4523495b389fce03c54199"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disconnect</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal17StreamFlowTrigger10disconnectEv" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal17StreamFlowTrigger9getFormatEv">
-<span id="_CPPv3N5codal17StreamFlowTrigger9getFormatEv"></span><span id="_CPPv2N5codal17StreamFlowTrigger9getFormatEv"></span><span id="codal::StreamFlowTrigger::getFormat"></span><span class="target" id="classcodal_1_1StreamFlowTrigger_1aba78a8926a779ba1250c6f138d066cf5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFormat</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal17StreamFlowTrigger9getFormatEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal17StreamFlowTrigger9getFormatEv"></span><span id="_CPPv2N5codal17StreamFlowTrigger9getFormatEv"></span><span id="codal::StreamFlowTrigger::getFormat"></span><span class="target" id="classcodal_1_1StreamFlowTrigger_1ac5a84746c7f11c862910ed49981dfd38"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFormat</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal17StreamFlowTrigger9getFormatEv" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal17StreamFlowTrigger9setFormatEi">
-<span id="_CPPv3N5codal17StreamFlowTrigger9setFormatEi"></span><span id="_CPPv2N5codal17StreamFlowTrigger9setFormatEi"></span><span id="codal::StreamFlowTrigger::setFormat__i"></span><span class="target" id="classcodal_1_1StreamFlowTrigger_1a82f6d5f13842aca371e6f6a2b623c98e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFormat</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">format</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal17StreamFlowTrigger9setFormatEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal17StreamFlowTrigger9setFormatEi"></span><span id="_CPPv2N5codal17StreamFlowTrigger9setFormatEi"></span><span id="codal::StreamFlowTrigger::setFormat__i"></span><span class="target" id="classcodal_1_1StreamFlowTrigger_1aa140161b9ac5aafcb78f4e1b6aad0a81"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFormat</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">format</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal17StreamFlowTrigger9setFormatEi" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>

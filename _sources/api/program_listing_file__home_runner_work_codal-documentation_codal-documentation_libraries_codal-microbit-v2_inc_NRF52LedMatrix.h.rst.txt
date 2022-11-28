@@ -62,6 +62,7 @@ Program Listing for File NRF52LedMatrix.h
            uint8_t timeslots;                      // The total number of timeslots used by the driver (includes light sensing).
            DisplayMode mode;                       // The currnet display mode being used.
            bool enabled;                           // Whether or not the display is enabled.
+           uint8_t rotation;                       // DisplayRotation
    
            const MatrixMap     &matrixMap;         // Data structure that maps screen x/y pixels into GPIO pins.
            NRFLowLevelTimer    &timer;             // The timer module used to drive this LEDMatrix.
@@ -72,7 +73,6 @@ Program Listing for File NRF52LedMatrix.h
            int8_t              gpiote[NRF52_LED_MATRIX_MAXIMUM_COLUMNS];            // GPIOTE channels used by output columns.
            int8_t              ppi[NRF52_LED_MATRIX_MAXIMUM_COLUMNS];               // PPI channels used by output columns.
    
-        
            public:
            void render();
    
@@ -81,6 +81,8 @@ Program Listing for File NRF52LedMatrix.h
            void setDisplayMode(DisplayMode mode);
    
            DisplayMode getDisplayMode();
+   
+           void rotateTo(DisplayRotation position);
    
            virtual void enable();
    

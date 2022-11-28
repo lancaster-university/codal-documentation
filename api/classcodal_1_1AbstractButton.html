@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class AbstractButton &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class AbstractButton &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -322,12 +323,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -388,14 +389,14 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14AbstractButton14AbstractButtonEv">
-<span id="_CPPv3N5codal14AbstractButton14AbstractButtonEv"></span><span id="_CPPv2N5codal14AbstractButton14AbstractButtonEv"></span><span id="codal::AbstractButton::AbstractButton"></span><span class="target" id="classcodal_1_1AbstractButton_1a92f1f19070cda4a8f784568ee387648f"></span><span class="sig-name descname"><span class="n"><span class="pre">AbstractButton</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14AbstractButton14AbstractButtonEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal14AbstractButton14AbstractButtonEv"></span><span id="_CPPv2N5codal14AbstractButton14AbstractButtonEv"></span><span id="codal::AbstractButton::AbstractButton"></span><span class="target" id="classcodal_1_1AbstractButton_1a5bc5fc4ac676fd6f321ce9e3d97a6a1a"></span><span class="sig-name descname"><span class="n"><span class="pre">AbstractButton</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14AbstractButton14AbstractButtonEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor.</p>
 <p>Create a abstract software representation of a button. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14AbstractButton9isPressedEv">
-<span id="_CPPv3N5codal14AbstractButton9isPressedEv"></span><span id="_CPPv2N5codal14AbstractButton9isPressedEv"></span><span id="codal::AbstractButton::isPressed"></span><span class="target" id="classcodal_1_1AbstractButton_1ab94b661a1790d27bd1273c10c6f6a02e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPressed</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14AbstractButton9isPressedEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal14AbstractButton9isPressedEv"></span><span id="_CPPv2N5codal14AbstractButton9isPressedEv"></span><span id="codal::AbstractButton::isPressed"></span><span class="target" id="classcodal_1_1AbstractButton_1a36ae0400b3cf4f7b4592d8e53f01644a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPressed</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14AbstractButton9isPressedEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Tests if this <a class="reference internal" href="classcodal_1_1Button.html#classcodal_1_1Button"><span class="std std-ref">Button</span></a> is currently pressed.</p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">buttonA</span><span class="p">.</span><span class="n">isPressed</span><span class="p">())</span><span class="w"></span>
 <span class="w">    </span><span class="n">display</span><span class="p">.</span><span class="n">scroll</span><span class="p">(</span><span class="s">&quot;Pressed!&quot;</span><span class="p">);</span><span class="w"></span>
@@ -411,7 +412,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14AbstractButton10wasPressedEv">
-<span id="_CPPv3N5codal14AbstractButton10wasPressedEv"></span><span id="_CPPv2N5codal14AbstractButton10wasPressedEv"></span><span id="codal::AbstractButton::wasPressed"></span><span class="target" id="classcodal_1_1AbstractButton_1a9035e59789a2a77ce59e400a50213324"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wasPressed</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14AbstractButton10wasPressedEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal14AbstractButton10wasPressedEv"></span><span id="_CPPv2N5codal14AbstractButton10wasPressedEv"></span><span id="codal::AbstractButton::wasPressed"></span><span class="target" id="classcodal_1_1AbstractButton_1a5ae2815b7f70b32c4817d728af518c35"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wasPressed</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14AbstractButton10wasPressedEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines if this button has been pressed.</p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">buttonA</span><span class="p">.</span><span class="n">wasPressed</span><span class="p">())</span><span class="w"></span>
 <span class="w">    </span><span class="n">display</span><span class="p">.</span><span class="n">scroll</span><span class="p">(</span><span class="s">&quot;Pressed!&quot;</span><span class="p">);</span><span class="w"></span>
@@ -420,26 +421,26 @@ title="Source repository"
 </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the number of time this button has been pressed since the last time <a class="reference internal" href="#classcodal_1_1AbstractButton_1a9035e59789a2a77ce59e400a50213324"><span class="std std-ref">wasPressed()</span></a> has been called. </p>
+<dd class="field-odd"><p>the number of time this button has been pressed since the last time <a class="reference internal" href="#classcodal_1_1AbstractButton_1a5ae2815b7f70b32c4817d728af518c35"><span class="std std-ref">wasPressed()</span></a> has been called. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14AbstractButton6enableEv">
-<span id="_CPPv3N5codal14AbstractButton6enableEv"></span><span id="_CPPv2N5codal14AbstractButton6enableEv"></span><span id="codal::AbstractButton::enable"></span><span class="target" id="classcodal_1_1AbstractButton_1a40d0d68562eee9b2efeeeab216da6c0f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enable</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14AbstractButton6enableEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal14AbstractButton6enableEv"></span><span id="_CPPv2N5codal14AbstractButton6enableEv"></span><span id="codal::AbstractButton::enable"></span><span class="target" id="classcodal_1_1AbstractButton_1a57412135029595afbf5666e872ead0a4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enable</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14AbstractButton6enableEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Enables this button. Buttons are normally created in an enabled state, but use this function to re-enable a previously disabled button. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14AbstractButton7disableEv">
-<span id="_CPPv3N5codal14AbstractButton7disableEv"></span><span id="_CPPv2N5codal14AbstractButton7disableEv"></span><span id="codal::AbstractButton::disable"></span><span class="target" id="classcodal_1_1AbstractButton_1ac866fb2972268cf7e91a383287578a0c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disable</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14AbstractButton7disableEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal14AbstractButton7disableEv"></span><span id="_CPPv2N5codal14AbstractButton7disableEv"></span><span id="codal::AbstractButton::disable"></span><span class="target" id="classcodal_1_1AbstractButton_1a11f3ea0986e07815b299e74643254d31"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disable</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14AbstractButton7disableEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Disable this button. Buttons are normally created in an enabled state. Use this function to disable this button. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14AbstractButtonD0Ev">
-<span id="_CPPv3N5codal14AbstractButtonD0Ev"></span><span id="_CPPv2N5codal14AbstractButtonD0Ev"></span><span id="codal::AbstractButton::~AbstractButton"></span><span class="target" id="classcodal_1_1AbstractButton_1ae3d97004edc96ee5ccf9719df9c2458a"></span><span class="sig-name descname"><span class="n"><span class="pre">~AbstractButton</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14AbstractButtonD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal14AbstractButtonD0Ev"></span><span id="_CPPv2N5codal14AbstractButtonD0Ev"></span><span id="codal::AbstractButton::~AbstractButton"></span><span class="target" id="classcodal_1_1AbstractButton_1af097e50ec18b1a829a0adb944049b773"></span><span class="sig-name descname"><span class="n"><span class="pre">~AbstractButton</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14AbstractButtonD0Ev" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Destructor </p>
 </dd></dl>
 

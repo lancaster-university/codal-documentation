@@ -50,6 +50,22 @@ Program Listing for File LevelDetectorSPL.h
    #define LEVEL_DETECTOR_SPL_NORMALIZE    1
    #endif
    
+   // The level (in dB) that corresponds to an 8bit value of 0.
+   #ifndef LEVEL_DETECTOR_SPL_8BIT_000_POINT
+   #define LEVEL_DETECTOR_SPL_8BIT_000_POINT                   35.0f
+   #endif
+   
+   // The level (in dB) that corresponds to an 8bit value of 255.
+   #ifndef LEVEL_DETECTOR_SPL_8BIT_255_POINT
+   #define LEVEL_DETECTOR_SPL_8BIT_255_POINT                   100.0f
+   #endif
+   
+   #define LEVEL_DETECTOR_SPL_8BIT_CONVERSION                  (255.0f/(LEVEL_DETECTOR_SPL_8BIT_255_POINT-LEVEL_DETECTOR_SPL_8BIT_000_POINT))
+   
+   #define LEVEL_DETECTOR_SPL_DB                               1
+   #define LEVEL_DETECTOR_SPL_8BIT                             2
+   
+   
    namespace codal{
        class LevelDetectorSPL : public CodalComponent, public DataSink
        {
@@ -66,6 +82,7 @@ Program Listing for File LevelDetectorSPL.h
            float           minValue;
            bool            activated;          // Has this component been connected yet
            bool            enabled;            // Is the component currently running
+           int             unit;               // The units to be returned from this level detector (e.g. dB or linear 8bit)
    
            LevelDetectorSPL(DataSource &source, float highThreshold, float lowThreshold, float gain,
                float minValue = 52,
@@ -95,8 +112,13 @@ Program Listing for File LevelDetectorSPL.h
    
            int setGain(float gain);
    
+            int setUnit(int unit);
+   
            ~LevelDetectorSPL();
    
+           private:
+           float splToUnit(float f);
+           float unitToSpl(float f);
        };
    }
    

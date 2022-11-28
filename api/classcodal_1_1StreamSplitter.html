@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class StreamSplitter &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class StreamSplitter &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-types">
      Base Types
@@ -317,12 +318,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-types">
      Base Types
@@ -370,7 +371,7 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14StreamSplitter14StreamSplitterER10DataSource8uint16_t">
-<span id="_CPPv3N5codal14StreamSplitter14StreamSplitterER10DataSource8uint16_t"></span><span id="_CPPv2N5codal14StreamSplitter14StreamSplitterER10DataSource8uint16_t"></span><span id="codal::StreamSplitter::StreamSplitter__DataSourceR.uint16_t"></span><span class="target" id="classcodal_1_1StreamSplitter_1a4a8cd046c4e05796df4a9ed6a48fcda6"></span><span class="sig-name descname"><span class="n"><span class="pre">StreamSplitter</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataSource.html#_CPPv4N5codal10DataSourceE" title="codal::DataSource"><span class="n"><span class="pre">DataSource</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">source</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_SPLITTER</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14StreamSplitter14StreamSplitterER10DataSource8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal14StreamSplitter14StreamSplitterER10DataSource8uint16_t"></span><span id="_CPPv2N5codal14StreamSplitter14StreamSplitterER10DataSource8uint16_t"></span><span id="codal::StreamSplitter::StreamSplitter__DataSourceR.uint16_t"></span><span class="target" id="classcodal_1_1StreamSplitter_1acfbcf4cbb6a2bcfac621780b4acd96ae"></span><span class="sig-name descname"><span class="n"><span class="pre">StreamSplitter</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataSource.html#_CPPv4N5codal10DataSourceE" title="codal::DataSource"><span class="n"><span class="pre">DataSource</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">source</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_SPLITTER</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14StreamSplitter14StreamSplitterER10DataSource8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Creates a component that distributes a single upstream datasource to many downstream datasinks</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -381,48 +382,42 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14StreamSplitter11pullRequestEv">
-<span id="_CPPv3N5codal14StreamSplitter11pullRequestEv"></span><span id="_CPPv2N5codal14StreamSplitter11pullRequestEv"></span><span id="codal::StreamSplitter::pullRequest"></span><span class="target" id="classcodal_1_1StreamSplitter_1a846d8183f16951221914da88754febd9"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pullRequest</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14StreamSplitter11pullRequestEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal14StreamSplitter11pullRequestEv"></span><span id="_CPPv2N5codal14StreamSplitter11pullRequestEv"></span><span id="codal::StreamSplitter::pullRequest"></span><span class="target" id="classcodal_1_1StreamSplitter_1acf30fe0df68fb1a1d8ddc6e247770bfc"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pullRequest</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14StreamSplitter11pullRequestEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Callback provided when data is ready. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14StreamSplitter4pullEv">
-<span id="_CPPv3N5codal14StreamSplitter4pullEv"></span><span id="_CPPv2N5codal14StreamSplitter4pullEv"></span><span id="codal::StreamSplitter::pull"></span><span class="target" id="classcodal_1_1StreamSplitter_1a69405efd2de243a2b20b1fa8ac8386be"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="classcodal_1_1ManagedBuffer.html#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pull</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14StreamSplitter4pullEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal14StreamSplitter4pullEv"></span><span id="_CPPv2N5codal14StreamSplitter4pullEv"></span><span id="codal::StreamSplitter::pull"></span><span class="target" id="classcodal_1_1StreamSplitter_1afdb6e16f4505a60faf97978dba3f2051"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="classcodal_1_1ManagedBuffer.html#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pull</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14StreamSplitter4pullEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Provide the next available <a class="reference internal" href="classcodal_1_1ManagedBuffer.html#classcodal_1_1ManagedBuffer"><span class="std std-ref">ManagedBuffer</span></a> to our downstream caller, if available. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14StreamSplitter7connectER8DataSink">
-<span id="_CPPv3N5codal14StreamSplitter7connectER8DataSink"></span><span id="_CPPv2N5codal14StreamSplitter7connectER8DataSink"></span><span id="codal::StreamSplitter::connect__DataSinkR"></span><span class="target" id="classcodal_1_1StreamSplitter_1ae2a2bc0eb74c754138b530091d59ba26"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">connect</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataSink.html#_CPPv4N5codal8DataSinkE" title="codal::DataSink"><span class="n"><span class="pre">DataSink</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">downstream</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14StreamSplitter7connectER8DataSink" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Register a downstream connection with splitter</p>
-<p>Called by downstream components to register this splitter as its dataSource. </p>
+<span id="_CPPv3N5codal14StreamSplitter7connectER8DataSink"></span><span id="_CPPv2N5codal14StreamSplitter7connectER8DataSink"></span><span id="codal::StreamSplitter::connect__DataSinkR"></span><span class="target" id="classcodal_1_1StreamSplitter_1aaf4e47f5d75dc1d57f19e1a6ea5a0ec1"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">connect</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataSink.html#_CPPv4N5codal8DataSinkE" title="codal::DataSink"><span class="n"><span class="pre">DataSink</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">downstream</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14StreamSplitter7connectER8DataSink" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Register a downstream connection with splitter </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14StreamSplitter9getFormatEv">
-<span id="_CPPv3N5codal14StreamSplitter9getFormatEv"></span><span id="_CPPv2N5codal14StreamSplitter9getFormatEv"></span><span id="codal::StreamSplitter::getFormat"></span><span class="target" id="classcodal_1_1StreamSplitter_1ad218170e1489daeed6af45c826acc030"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFormat</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14StreamSplitter9getFormatEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal14StreamSplitter9getFormatEv"></span><span id="_CPPv2N5codal14StreamSplitter9getFormatEv"></span><span id="codal::StreamSplitter::getFormat"></span><span class="target" id="classcodal_1_1StreamSplitter_1a0d266f475be58e1a6fc91447b2ca2eab"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFormat</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14StreamSplitter9getFormatEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determine the data format of the buffers streamed out of this component. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14StreamSplitter9setFormatEi">
-<span id="_CPPv3N5codal14StreamSplitter9setFormatEi"></span><span id="_CPPv2N5codal14StreamSplitter9setFormatEi"></span><span id="codal::StreamSplitter::setFormat__i"></span><span class="target" id="classcodal_1_1StreamSplitter_1aa1c2905e68bd1216d2c79eb32445651a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFormat</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">format</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14StreamSplitter9setFormatEi" title="Permalink to this definition">#</a><br /></dt>
-<dd><p><p>Defines the data format of the buffers streamed out of this component.</p>
-<p>Defines the data format of the buffers streamed out of this component.</p>
-</p>
+<span id="_CPPv3N5codal14StreamSplitter9setFormatEi"></span><span id="_CPPv2N5codal14StreamSplitter9setFormatEi"></span><span id="codal::StreamSplitter::setFormat__i"></span><span class="target" id="classcodal_1_1StreamSplitter_1a422c3aa1e7fcce28f8a4d5e5315ac0a1"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFormat</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">format</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14StreamSplitter9setFormatEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Defines the data format of the buffers streamed out of this component. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>format</strong> – the format to use, one of</p></li>
-<li><p><strong>format</strong> – the format to use </p></li>
-</ul>
+<dd class="field-odd"><p><strong>format</strong> – the format to use, one of </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14StreamSplitterD0Ev">
-<span id="_CPPv3N5codal14StreamSplitterD0Ev"></span><span id="_CPPv2N5codal14StreamSplitterD0Ev"></span><span id="codal::StreamSplitter::~StreamSplitter"></span><span class="target" id="classcodal_1_1StreamSplitter_1a180c1dae4448444670c94f9cf9295f23"></span><span class="sig-name descname"><span class="n"><span class="pre">~StreamSplitter</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14StreamSplitterD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal14StreamSplitterD0Ev"></span><span id="_CPPv2N5codal14StreamSplitterD0Ev"></span><span id="codal::StreamSplitter::~StreamSplitter"></span><span class="target" id="classcodal_1_1StreamSplitter_1a3518601a9b51f15d091e3a9f53eb5988"></span><span class="sig-name descname"><span class="n"><span class="pre">~StreamSplitter</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14StreamSplitterD0Ev" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Destructor. </p>
 </dd></dl>
 

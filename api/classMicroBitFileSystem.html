@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class MicroBitFileSystem &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class MicroBitFileSystem &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,7 +282,7 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-documentation">
    Class Documentation
@@ -305,7 +306,7 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-documentation">
    Class Documentation
@@ -414,32 +415,13 @@ title="Source repository"
 <span class="w">   </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;error closing file.&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</p>
-<p>Close the specified file handle. File handle resources are then made available for future <a class="reference internal" href="#classMicroBitFileSystem_1a89afb809c323b6fbdde58fe0b4cf8537"><span class="std std-ref">open()</span></a> calls.</p>
-<p><a class="reference internal" href="#classMicroBitFileSystem_1a85b7705bab1bbb267b4db0231ee30fc1"><span class="std std-ref">close()</span></a> must be called at some point to ensure the filesize in the FT is synced with the cached value in the FD.</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MicroBitFileSystem</span><span class="w"> </span><span class="nf">f</span><span class="p">();</span><span class="w"></span>
-<span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="s">&quot;test.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MB_READ</span><span class="p">);</span><span class="w"></span>
-<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">f</span><span class="p">.</span><span class="n">close</span><span class="p">(</span><span class="n">fd</span><span class="p">))</span><span class="w"></span>
-<span class="w">   </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;error closing file.&quot;</span><span class="p">);</span><span class="w"></span>
-</pre></div>
-</div>
  </p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>if <a class="reference internal" href="#classMicroBitFileSystem_1a85b7705bab1bbb267b4db0231ee30fc1"><span class="std std-ref">close()</span></a> is not called, the FT may not be correct, leading to data loss.</p>
-</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>fd</strong> – file descriptor - obtained with <a class="reference internal" href="#classMicroBitFileSystem_1a89afb809c323b6fbdde58fe0b4cf8537"><span class="std std-ref">open()</span></a>. </p></li>
-<li><p><strong>fd</strong> – file descriptor - obtained with <a class="reference internal" href="#classMicroBitFileSystem_1a89afb809c323b6fbdde58fe0b4cf8537"><span class="std std-ref">open()</span></a>. </p></li>
-</ul>
+<dd class="field-odd"><p><strong>fd</strong> – file descriptor - obtained with <a class="reference internal" href="#classMicroBitFileSystem_1a89afb809c323b6fbdde58fe0b4cf8537"><span class="std std-ref">open()</span></a>. </p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>non-zero on success, MICROBIT_NOT_SUPPORTED if the file system has not been initialised, MICROBIT_INVALID_PARAMETER if the given file handle is invalid.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>MICROBIT_OK on success, MICROBIT_NOT_SUPPORTED if the file system has not been initialised, MICROBIT_INVALID_PARAMETER if the given file handle is invalid.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -485,16 +467,6 @@ title="Source repository"
 <span class="w">   </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;error writing&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</p>
-<p>Write data to the file.</p>
-<p>Write from buffer, len bytes to the current seek position. On each invocation to write, the seek position of the file handle is incremented atomically, by the number of bytes returned.</p>
-<p>The cached filesize in the FD is updated on this call. Also, the FT file size is updated only if a new page(s) has been written too, to reduce the number of FT writes.</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MicroBitFileSystem</span><span class="w"> </span><span class="nf">f</span><span class="p">();</span><span class="w"></span>
-<span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="s">&quot;test.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MB_WRITE</span><span class="p">);</span><span class="w"></span>
-<span class="k">if</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hello!&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;error writing&quot;</span><span class="p">);</span><span class="w"></span>
-</pre></div>
-</div>
  </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -502,16 +474,10 @@ title="Source repository"
 <li><p><strong>fd</strong> – File handle </p></li>
 <li><p><strong>buffer</strong> – the buffer from which to write data </p></li>
 <li><p><strong>size</strong> – number of bytes to write </p></li>
-<li><p><strong>fd</strong> – File handle </p></li>
-<li><p><strong>buffer</strong> – the buffer from which to write data </p></li>
-<li><p><strong>len</strong> – number of bytes to write </p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>number of bytes written on success, MICROBIT_NO_RESOURCES if data did not get written to flash or the file system has not been initialised, or this file was not opened with the MB_WRITE flag set, MICROBIT_INVALID_PARAMETER if the given file handle is invalid.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>number of bytes written on success, MICROBIT_NO_RESOURCES if data did not get written to flash or the file system has not been initialised, or this file was not opened with the MB_WRITE flag set, MICROBIT_INVALID_PARAMETER if the given file handle is invalid.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -558,26 +524,13 @@ title="Source repository"
 <span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;file could not be removed&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</p>
-<p>Remove a file from the system, and free allocated assets (including assigned blocks which are returned for use by other files).</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MicroBitFileSystem</span><span class="w"> </span><span class="n">f</span><span class="p">;</span><span class="w"></span>
-<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">f</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="s">&quot;file.txt&quot;</span><span class="p">))</span><span class="w"></span>
-<span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;file could not be removed&quot;</span><span class="p">)</span><span class="w"></span>
-</pre></div>
-</div>
  </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>filename</strong> – name of the file to remove. </p></li>
-<li><p><strong>filename</strong> – null-terminated name of the file to remove. </p></li>
-</ul>
+<dd class="field-odd"><p><strong>filename</strong> – name of the file to remove. </p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>MICROBIT_OK on success, MICROBIT_INVALID_PARAMETER if the given filename does not exist, MICROBIT_CANCELLED if something went wrong</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>MICROBIT_OK on success, MICROBIT_INVALID_PARAMETER if the given filename does not exist, MICROBIT_CANCELLED if something went wrong.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -601,7 +554,7 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-attributes">Public Static Attributes</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N18MicroBitFileSystem17defaultFileSystemE">
-<span id="_CPPv3N18MicroBitFileSystem17defaultFileSystemE"></span><span id="_CPPv2N18MicroBitFileSystem17defaultFileSystemE"></span><span id="MicroBitFileSystem::defaultFileSystem__MicroBitFileSystemP"></span><span class="target" id="classMicroBitFileSystem_1adff501fc6a9b70eba2ca21d650dbc727"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv418MicroBitFileSystem" title="MicroBitFileSystem"><span class="n"><span class="pre">MicroBitFileSystem</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">defaultFileSystem</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">NULL</span></span><a class="headerlink" href="#_CPPv4N18MicroBitFileSystem17defaultFileSystemE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N18MicroBitFileSystem17defaultFileSystemE"></span><span id="_CPPv2N18MicroBitFileSystem17defaultFileSystemE"></span><span id="MicroBitFileSystem::defaultFileSystem__MicroBitFileSystemP"></span><span class="target" id="classMicroBitFileSystem_1aa5184417f245d33e3b9e094c4a0908d0"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv418MicroBitFileSystem" title="MicroBitFileSystem"><span class="n"><span class="pre">MicroBitFileSystem</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">defaultFileSystem</span></span></span><a class="headerlink" href="#_CPPv4N18MicroBitFileSystem17defaultFileSystemE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>

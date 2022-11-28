@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Namespace codal &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Namespace codal &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,7 +282,7 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#detailed-description">
    Detailed Description
@@ -335,7 +336,7 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#detailed-description">
    Detailed Description
@@ -450,7 +451,6 @@ title="Source repository"
 <li><p><a class="reference internal" href="structcodal_1_1Listener.html#exhale-struct-structcodal-1-1listener"><span class="std std-ref">Struct Listener</span></a></p></li>
 <li><p><a class="reference internal" href="structcodal_1_1MatrixMap.html#exhale-struct-structcodal-1-1matrixmap"><span class="std std-ref">Struct MatrixMap</span></a></p></li>
 <li><p><a class="reference internal" href="structcodal_1_1MatrixPoint.html#exhale-struct-structcodal-1-1matrixpoint"><span class="std std-ref">Struct MatrixPoint</span></a></p></li>
-<li><p><a class="reference internal" href="structcodal_1_1microbit__LEDMapStr.html#exhale-struct-structcodal-1-1microbit-ledmapstr"><span class="std std-ref">Struct microbit_LEDMapStr</span></a></p></li>
 <li><p><a class="reference internal" href="structcodal_1_1MicroBitLogMetaData.html#exhale-struct-structcodal-1-1microbitlogmetadata"><span class="std std-ref">Struct MicroBitLogMetaData</span></a></p></li>
 <li><p><a class="reference internal" href="structcodal_1_1PacketData.html#exhale-struct-structcodal-1-1packetdata"><span class="std std-ref">Struct PacketData</span></a></p></li>
 <li><p><a class="reference internal" href="structcodal_1_1Progression.html#exhale-struct-structcodal-1-1progression"><span class="std std-ref">Struct Progression</span></a></p></li>
@@ -458,7 +458,6 @@ title="Source repository"
 <li><p><a class="reference internal" href="structcodal_1_1Sample3D.html#exhale-struct-structcodal-1-1sample3d"><span class="std std-ref">Struct Sample3D</span></a></p></li>
 <li><p><a class="reference internal" href="structcodal_1_1ShakeHistory.html#exhale-struct-structcodal-1-1shakehistory"><span class="std std-ref">Struct ShakeHistory</span></a></p></li>
 <li><p><a class="reference internal" href="structcodal_1_1SoundEffect.html#exhale-struct-structcodal-1-1soundeffect"><span class="std std-ref">Struct SoundEffect</span></a></p></li>
-<li><p><a class="reference internal" href="structcodal_1_1ST7735WorkBuffer.html#exhale-struct-structcodal-1-1st7735workbuffer"><span class="std std-ref">Struct ST7735WorkBuffer</span></a></p></li>
 <li><p><a class="reference internal" href="structcodal_1_1StringData.html#exhale-struct-structcodal-1-1stringdata"><span class="std std-ref">Struct StringData</span></a></p></li>
 <li><p><a class="reference internal" href="structcodal_1_1TimerEvent.html#exhale-struct-structcodal-1-1timerevent"><span class="std std-ref">Struct TimerEvent</span></a></p></li>
 <li><p><a class="reference internal" href="structcodal_1_1ToneEffect.html#exhale-struct-structcodal-1-1toneeffect"><span class="std std-ref">Struct ToneEffect</span></a></p></li>
@@ -480,6 +479,7 @@ title="Source repository"
 <li><p><a class="reference internal" href="classcodal_1_1DataStream.html#exhale-class-classcodal-1-1datastream"><span class="std std-ref">Class DataStream</span></a></p></li>
 <li><p><a class="reference internal" href="classcodal_1_1Display.html#exhale-class-classcodal-1-1display"><span class="std std-ref">Class Display</span></a></p></li>
 <li><p><a class="reference internal" href="classcodal_1_1DMASingleWireSerial.html#exhale-class-classcodal-1-1dmasinglewireserial"><span class="std std-ref">Class DMASingleWireSerial</span></a></p></li>
+<li><p><a class="reference internal" href="classcodal_1_1EffectFilter.html#exhale-class-classcodal-1-1effectfilter"><span class="std std-ref">Class EffectFilter</span></a></p></li>
 <li><p><a class="reference internal" href="classcodal_1_1Event.html#exhale-class-classcodal-1-1event"><span class="std std-ref">Class Event</span></a></p></li>
 <li><p><a class="reference internal" href="classcodal_1_1EventModel.html#exhale-class-classcodal-1-1eventmodel"><span class="std std-ref">Class EventModel</span></a></p></li>
 <li><p><a class="reference internal" href="classcodal_1_1FiberLock.html#exhale-class-classcodal-1-1fiberlock"><span class="std std-ref">Class FiberLock</span></a></p></li>
@@ -498,6 +498,7 @@ title="Source repository"
 <li><p><a class="reference internal" href="classcodal_1_1LinearAnalogSensor.html#exhale-class-classcodal-1-1linearanalogsensor"><span class="std std-ref">Class LinearAnalogSensor</span></a></p></li>
 <li><p><a class="reference internal" href="classcodal_1_1LIS3DH.html#exhale-class-classcodal-1-1lis3dh"><span class="std std-ref">Class LIS3DH</span></a></p></li>
 <li><p><a class="reference internal" href="classcodal_1_1LowLevelTimer.html#exhale-class-classcodal-1-1lowleveltimer"><span class="std std-ref">Class LowLevelTimer</span></a></p></li>
+<li><p><a class="reference internal" href="classcodal_1_1LowPassFilter.html#exhale-class-classcodal-1-1lowpassfilter"><span class="std std-ref">Class LowPassFilter</span></a></p></li>
 <li><p><a class="reference internal" href="classcodal_1_1LSM303Accelerometer.html#exhale-class-classcodal-1-1lsm303accelerometer"><span class="std std-ref">Class LSM303Accelerometer</span></a></p></li>
 <li><p><a class="reference internal" href="classcodal_1_1LSM303Magnetometer.html#exhale-class-classcodal-1-1lsm303magnetometer"><span class="std std-ref">Class LSM303Magnetometer</span></a></p></li>
 <li><p><a class="reference internal" href="classcodal_1_1MAG3110.html#exhale-class-classcodal-1-1mag3110"><span class="std std-ref">Class MAG3110</span></a></p></li>
@@ -550,7 +551,6 @@ title="Source repository"
 <li><p><a class="reference internal" href="classcodal_1_1SPIScreenIO.html#exhale-class-classcodal-1-1spiscreenio"><span class="std std-ref">Class SPIScreenIO</span></a></p></li>
 <li><p><a class="reference internal" href="classcodal_1_1ST7735.html#exhale-class-classcodal-1-1st7735"><span class="std std-ref">Class ST7735</span></a></p></li>
 <li><p><a class="reference internal" href="classcodal_1_1StandardSPIFlash.html#exhale-class-classcodal-1-1standardspiflash"><span class="std std-ref">Class StandardSPIFlash</span></a></p></li>
-<li><p><a class="reference internal" href="classcodal_1_1StreamFilter.html#exhale-class-classcodal-1-1streamfilter"><span class="std std-ref">Class StreamFilter</span></a></p></li>
 <li><p><a class="reference internal" href="classcodal_1_1StreamFlowTrigger.html#exhale-class-classcodal-1-1streamflowtrigger"><span class="std std-ref">Class StreamFlowTrigger</span></a></p></li>
 <li><p><a class="reference internal" href="classcodal_1_1StreamNormalizer.html#exhale-class-classcodal-1-1streamnormalizer"><span class="std std-ref">Class StreamNormalizer</span></a></p></li>
 <li><p><a class="reference internal" href="classcodal_1_1StreamRecording.html#exhale-class-classcodal-1-1streamrecording"><span class="std std-ref">Class StreamRecording</span></a></p></li>
@@ -589,17 +589,17 @@ title="Source repository"
 <ul class="simple">
 <li><p><a class="reference internal" href="function_namespacecodal_1a2b8e9bf5fdd11d4746ac1d375171119f.html#exhale-function-namespacecodal-1a2b8e9bf5fdd11d4746ac1d375171119f"><span class="std std-ref">Function codal::allocateNotifyEvent</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a41a479204fe84822f46832e73f9d1fad.html#exhale-function-namespacecodal-1a41a479204fe84822f46832e73f9d1fad"><span class="std std-ref">Function codal::ble_running</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespacecodal_1aa08182a8151fbabc3a8b6297c059692b.html#exhale-function-namespacecodal-1aa08182a8151fbabc3a8b6297c059692b"><span class="std std-ref">Function codal::create_fiber(void(*)(void), void(*)(void))</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespacecodal_1a24cc7686409216907b58508680f07006.html#exhale-function-namespacecodal-1a24cc7686409216907b58508680f07006"><span class="std std-ref">Function codal::create_fiber(void(*)(void *), void *, void(*)(void *))</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespacecodal_1a2c9faa46e5af38b729f087388dbdce3f.html#exhale-function-namespacecodal-1a2c9faa46e5af38b729f087388dbdce3f"><span class="std std-ref">Function codal::dequeue_fiber</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1ab94994ca0d79c3191ef4252813aee2c0.html#exhale-function-namespacecodal-1ab94994ca0d79c3191ef4252813aee2c0"><span class="std std-ref">Function codal::create_fiber(void(*)(void), void(*)(void))</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a8f6dc14893952930895929da49e83260.html#exhale-function-namespacecodal-1a8f6dc14893952930895929da49e83260"><span class="std std-ref">Function codal::create_fiber(void(*)(void *), void *, void(*)(void *))</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a73f27eabf66e2b721aa470c6063316a1.html#exhale-function-namespacecodal-1a73f27eabf66e2b721aa470c6063316a1"><span class="std std-ref">Function codal::dequeue_fiber</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a31eda7875f5a8038999556662e7821a5.html#exhale-function-namespacecodal-1a31eda7875f5a8038999556662e7821a5"><span class="std std-ref">Function codal::fiber_add_idle_component</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a3f314eb211d045b62fcca8829165362c.html#exhale-function-namespacecodal-1a3f314eb211d045b62fcca8829165362c"><span class="std std-ref">Function codal::fiber_scheduler_get_deepsleep_pending</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespacecodal_1a356720646ed8ec0b5d1392503120dcfd.html#exhale-function-namespacecodal-1a356720646ed8ec0b5d1392503120dcfd"><span class="std std-ref">Function codal::fiber_scheduler_running</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a1fe8c15a04bbefa02dbe8ac38d63a3cd.html#exhale-function-namespacecodal-1a1fe8c15a04bbefa02dbe8ac38d63a3cd"><span class="std std-ref">Function codal::fiber_scheduler_running</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a2c2f8c0437504989b14ab55fc57c6171.html#exhale-function-namespacecodal-1a2c2f8c0437504989b14ab55fc57c6171"><span class="std std-ref">Function codal::fiber_scheduler_set_deepsleep_pending</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a4c0f8ade68592c64d500ee576f7c9a76.html#exhale-function-namespacecodal-1a4c0f8ade68592c64d500ee576f7c9a76"><span class="std std-ref">Function codal::fiber_sleep</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a5bc6ae64f3b21bc1deb9cc73479022dc.html#exhale-function-namespacecodal-1a5bc6ae64f3b21bc1deb9cc73479022dc"><span class="std std-ref">Function codal::fiber_wait_for_event</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a0e114ae9b9f557fab7b484053a115298.html#exhale-function-namespacecodal-1a0e114ae9b9f557fab7b484053a115298"><span class="std std-ref">Function codal::fiber_wake_on_event</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespacecodal_1a3f1c28d0f2748b1558dc1b3707860285.html#exhale-function-namespacecodal-1a3f1c28d0f2748b1558dc1b3707860285"><span class="std std-ref">Function codal::get_fiber_list</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1ad30ef8c023a055a54bb19f3386db46ac.html#exhale-function-namespacecodal-1ad30ef8c023a055a54bb19f3386db46ac"><span class="std std-ref">Function codal::get_fiber_list</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a937c993e85a6bac188faae77b35408f0.html#exhale-function-namespacecodal-1a937c993e85a6bac188faae77b35408f0"><span class="std std-ref">Function codal::high</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a52fc469a622b9f82932b4c78572bcf73.html#exhale-function-namespacecodal-1a52fc469a622b9f82932b4c78572bcf73"><span class="std std-ref">Function codal::htonl</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a81fa876da802ea3dfc88a9ea5efc2ba0.html#exhale-function-namespacecodal-1a81fa876da802ea3dfc88a9ea5efc2ba0"><span class="std std-ref">Function codal::htons</span></a></p></li>
@@ -616,15 +616,7 @@ title="Source repository"
 <li><p><a class="reference internal" href="function_namespacecodal_1a16635de84ac62b3f85dc6f7332583763.html#exhale-function-namespacecodal-1a16635de84ac62b3f85dc6f7332583763"><span class="std std-ref">Function codal::max</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1ab4b4a1b525085be79ed6b568a6bafb58.html#exhale-function-namespacecodal-1ab4b4a1b525085be79ed6b568a6bafb58"><span class="std std-ref">Function codal::memclr</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a87f56b4e1e7dcfb873ad7bd4af38caa7.html#exhale-function-namespacecodal-1a87f56b4e1e7dcfb873ad7bd4af38caa7"><span class="std std-ref">Function codal::microbit_dal_version</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespacecodal_1ab604606508a63fa13c70922558ad6abd.html#exhale-function-namespacecodal-1ab604606508a63fa13c70922558ad6abd"><span class="std std-ref">Function codal::microbit_friendly_name</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespacecodal_1aa6ccb05d4b191c32e60dd0b5b81eb650.html#exhale-function-namespacecodal-1aa6ccb05d4b191c32e60dd0b5b81eb650"><span class="std std-ref">Function codal::microbit_LEDMap_columnOff</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespacecodal_1aa10cead111d291e5967557df09dca606.html#exhale-function-namespacecodal-1aa10cead111d291e5967557df09dca606"><span class="std std-ref">Function codal::microbit_LEDMap_columnOn</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespacecodal_1a2079d63af3cbe958d7e84fb8b9acafb5.html#exhale-function-namespacecodal-1a2079d63af3cbe958d7e84fb8b9acafb5"><span class="std std-ref">Function codal::microbit_LEDMap_configure</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespacecodal_1a0bcdfb56a7b8143916d8963a585a60e7.html#exhale-function-namespacecodal-1a0bcdfb56a7b8143916d8963a585a60e7"><span class="std std-ref">Function codal::microbit_LEDMap_pinOutput</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespacecodal_1a27a5bc08ff7ce978b774057e83e7e550.html#exhale-function-namespacecodal-1a27a5bc08ff7ce978b774057e83e7e550"><span class="std std-ref">Function codal::microbit_LEDMap_RCtoX</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespacecodal_1a3604567bcf6823dab02d339171e20559.html#exhale-function-namespacecodal-1a3604567bcf6823dab02d339171e20559"><span class="std std-ref">Function codal::microbit_LEDMap_RCtoY</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespacecodal_1a354d973c675a747d46b1e2f1e1bba469.html#exhale-function-namespacecodal-1a354d973c675a747d46b1e2f1e1bba469"><span class="std std-ref">Function codal::microbit_LEDMap_rowOff</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespacecodal_1af43b7490559c2c52205093c2576372ab.html#exhale-function-namespacecodal-1af43b7490559c2c52205093c2576372ab"><span class="std std-ref">Function codal::microbit_LEDMap_rowOn</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a726e9141c3696c0fbb7fc9743c18a260.html#exhale-function-namespacecodal-1a726e9141c3696c0fbb7fc9743c18a260"><span class="std std-ref">Function codal::microbit_friendly_name</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a9aefebeee6bf073575b379d19d00a3f4.html#exhale-function-namespacecodal-1a9aefebeee6bf073575b379d19d00a3f4"><span class="std std-ref">Function codal::microbit_panic</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1aad929ae0913afefb621d909eaf94aece.html#exhale-function-namespacecodal-1aad929ae0913afefb621d909eaf94aece"><span class="std std-ref">Function codal::microbit_panic_timeout</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a385a8d97cae0761d23c53d8b18e98751.html#exhale-function-namespacecodal-1a385a8d97cae0761d23c53d8b18e98751"><span class="std std-ref">Function codal::microbit_random</span></a></p></li>
@@ -633,9 +625,9 @@ title="Source repository"
 <li><p><a class="reference internal" href="function_namespacecodal_1abfe912cf436c0ae36e5ba328af78cc33.html#exhale-function-namespacecodal-1abfe912cf436c0ae36e5ba328af78cc33"><span class="std std-ref">Function codal::microbit_seed_random()</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a83e7fe17375b41f3c7bded287324053f.html#exhale-function-namespacecodal-1a83e7fe17375b41f3c7bded287324053f"><span class="std std-ref">Function codal::microbit_serial_number</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a10f9b51de208b4de63fa18737afe219b.html#exhale-function-namespacecodal-1a10f9b51de208b4de63fa18737afe219b"><span class="std std-ref">Function codal::min</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespacecodal_1a6d670f8f5745f2dc4ddaf45d28c1594c.html#exhale-function-namespacecodal-1a6d670f8f5745f2dc4ddaf45d28c1594c"><span class="std std-ref">Function codal::queue_fiber</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1aa9f724d7838407d9a8cd63337691b123.html#exhale-function-namespacecodal-1aa9f724d7838407d9a8cd63337691b123"><span class="std std-ref">Function codal::queue_fiber</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1ace587d81c305660e933609f7d658e58b.html#exhale-function-namespacecodal-1ace587d81c305660e933609f7d658e58b"><span class="std std-ref">Function codal::random</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespacecodal_1a3a392541e538f0e1a5278c41cffccbac.html#exhale-function-namespacecodal-1a3a392541e538f0e1a5278c41cffccbac"><span class="std std-ref">Function codal::release_fiber(void)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a5ae8a97f84867ffbcdbe563d87f8afdc.html#exhale-function-namespacecodal-1a5ae8a97f84867ffbcdbe563d87f8afdc"><span class="std std-ref">Function codal::release_fiber(void)</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1add318b2ed604d6627fec8803f9ca147a.html#exhale-function-namespacecodal-1add318b2ed604d6627fec8803f9ca147a"><span class="std std-ref">Function codal::release_fiber(void *)</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a0f2267d069f5fe51ac291450908f0a12.html#exhale-function-namespacecodal-1a0f2267d069f5fe51ac291450908f0a12"><span class="std std-ref">Function codal::schedule</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a0757572bc980fb6f43f137fbc68f514f.html#exhale-function-namespacecodal-1a0757572bc980fb6f43f137fbc68f514f"><span class="std std-ref">Function codal::scheduler_event</span></a></p></li>
@@ -648,26 +640,23 @@ title="Source repository"
 <li><p><a class="reference internal" href="function_namespacecodal_1ac8c68a8dfac1d80d3e1396a1684096a4.html#exhale-function-namespacecodal-1ac8c68a8dfac1d80d3e1396a1684096a4"><span class="std std-ref">Function codal::system_timer_calibrate_cycles</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a283b1acc09d84dd3cdd65da64958b53e.html#exhale-function-namespacecodal-1a283b1acc09d84dd3cdd65da64958b53e"><span class="std std-ref">Function codal::system_timer_cancel_event</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a77ccb660b955d82e8ae448baa5de79e5.html#exhale-function-namespacecodal-1a77ccb660b955d82e8ae448baa5de79e5"><span class="std std-ref">Function codal::system_timer_current_time</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespacecodal_1a7fc1d2ff7d1b976bf603f2c9fd7f3517.html#exhale-function-namespacecodal-1a7fc1d2ff7d1b976bf603f2c9fd7f3517"><span class="std std-ref">Function codal::system_timer_current_time_us</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a8aa3bf65c48895c41d740f859f26c551.html#exhale-function-namespacecodal-1a8aa3bf65c48895c41d740f859f26c551"><span class="std std-ref">Function codal::system_timer_current_time_us</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1adc93f1c602d188647b9d1f82d4736fcd.html#exhale-function-namespacecodal-1adc93f1c602d188647b9d1f82d4736fcd"><span class="std std-ref">Function codal::system_timer_deepsleep_begin</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a5b7eb8b8c6bd50d6625c209ce2c3eb8f.html#exhale-function-namespacecodal-1a5b7eb8b8c6bd50d6625c209ce2c3eb8f"><span class="std std-ref">Function codal::system_timer_deepsleep_end</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a4471bff0f6d2cc966838241e17c5494a.html#exhale-function-namespacecodal-1a4471bff0f6d2cc966838241e17c5494a"><span class="std std-ref">Function codal::system_timer_deepsleep_wakeup_time</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1aae7936b004fca58e2d19c8e0e2eb0796.html#exhale-function-namespacecodal-1aae7936b004fca58e2d19c8e0e2eb0796"><span class="std std-ref">Function codal::system_timer_event_after</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespacecodal_1acd36098ffffc1acea0c8786d8eb3932f.html#exhale-function-namespacecodal-1acd36098ffffc1acea0c8786d8eb3932f"><span class="std std-ref">Function codal::system_timer_event_after_us</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a1c946ee0e970dad9ef6f42e79f93e45b.html#exhale-function-namespacecodal-1a1c946ee0e970dad9ef6f42e79f93e45b"><span class="std std-ref">Function codal::system_timer_event_after_us</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a6134d71b88b2bd441edfadf7cf51feb4.html#exhale-function-namespacecodal-1a6134d71b88b2bd441edfadf7cf51feb4"><span class="std std-ref">Function codal::system_timer_event_every</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1ab3dea2a097889c1e75ba49e98ab20cdd.html#exhale-function-namespacecodal-1ab3dea2a097889c1e75ba49e98ab20cdd"><span class="std std-ref">Function codal::system_timer_event_every_us</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1ad297c0ba6f9b80534a29cf24575146eb.html#exhale-function-namespacecodal-1ad297c0ba6f9b80534a29cf24575146eb"><span class="std std-ref">Function codal::system_timer_wait_cycles</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespacecodal_1a5cb0d270c533332854ee030e2efd28fc.html#exhale-function-namespacecodal-1a5cb0d270c533332854ee030e2efd28fc"><span class="std std-ref">Function codal::system_timer_wait_ms</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespacecodal_1a5a6563076bc3f635e49e2a4b34e30dc6.html#exhale-function-namespacecodal-1a5a6563076bc3f635e49e2a4b34e30dc6"><span class="std std-ref">Function codal::system_timer_wait_us</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a3b8a13c92642df554dc5124fde01dbb2.html#exhale-function-namespacecodal-1a3b8a13c92642df554dc5124fde01dbb2"><span class="std std-ref">Function codal::system_timer_wait_ms</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a52a29b3300f5fe50b3aefdb13b190b8f.html#exhale-function-namespacecodal-1a52a29b3300f5fe50b3aefdb13b190b8f"><span class="std std-ref">Function codal::system_timer_wait_us</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a2c2dc4be93b8c3ad430c735925453e0b.html#exhale-function-namespacecodal-1a2c2dc4be93b8c3ad430c735925453e0b"><span class="std std-ref">Function codal::verify_stack_size</span></a></p></li>
 </ul>
 </section>
 <section id="typedefs">
 <h2>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="typedef_namespacecodal_1a3731f47723ab9c6b2e265bc589fbf5e9.html#exhale-typedef-namespacecodal-1a3731f47723ab9c6b2e265bc589fbf5e9"><span class="std std-ref">Typedef codal::microbit_LEDMapFnRCtoXY</span></a></p></li>
-<li><p><a class="reference internal" href="typedef_namespacecodal_1a8449cf8d6a048d04f55c5ff21f33cd5b.html#exhale-typedef-namespacecodal-1a8449cf8d6a048d04f55c5ff21f33cd5b"><span class="std std-ref">Typedef codal::microbit_LEDMapPinNumber</span></a></p></li>
-<li><p><a class="reference internal" href="typedef_namespacecodal_1a3a89a267df18144b75ca7ba619ba5112.html#exhale-typedef-namespacecodal-1a3a89a267df18144b75ca7ba619ba5112"><span class="std std-ref">Typedef codal::microbit_LEDMapStr</span></a></p></li>
 <li><p><a class="reference internal" href="typedef_namespacecodal_1af89f6dece8b88bd9b5cfa895c3c02a1b.html#exhale-typedef-namespacecodal-1af89f6dece8b88bd9b5cfa895c3c02a1b"><span class="std std-ref">Typedef codal::MicroBitButtonEventConfiguration</span></a></p></li>
 <li><p><a class="reference internal" href="typedef_namespacecodal_1ac1596127a05e8b32df499e87d86b6436.html#exhale-typedef-namespacecodal-1ac1596127a05e8b32df499e87d86b6436"><span class="std std-ref">Typedef codal::PinNumber</span></a></p></li>
 <li><p><a class="reference internal" href="typedef_namespacecodal_1a5d6d303686f66955c4aa4de95512279c.html#exhale-typedef-namespacecodal-1a5d6d303686f66955c4aa4de95512279c"><span class="std std-ref">Typedef codal::PVoidCallback</span></a></p></li>
@@ -686,24 +675,9 @@ title="Source repository"
 <section id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="variable_namespacecodal_1ac832ec50590272e1274ffe935b8e2088.html#exhale-variable-namespacecodal-1ac832ec50590272e1274ffe935b8e2088"><span class="std std-ref">Variable codal::currentFiber</span></a></p></li>
-<li><p><a class="reference internal" href="variable_namespacecodal_1a875529fe3c5e7bbdd548733a4e5e1de9.html#exhale-variable-namespacecodal-1a875529fe3c5e7bbdd548733a4e5e1de9"><span class="std std-ref">Variable codal::fiber_flags</span></a></p></li>
-<li><p><a class="reference internal" href="variable_namespacecodal_1aafb289e9e5ab78b01c7f5e7bb467bb88.html#exhale-variable-namespacecodal-1aafb289e9e5ab78b01c7f5e7bb467bb88"><span class="std std-ref">Variable codal::fiberList</span></a></p></li>
-<li><p><a class="reference internal" href="variable_namespacecodal_1ab33e92569d99baa36adfbaa1c9a83ae3.html#exhale-variable-namespacecodal-1ab33e92569d99baa36adfbaa1c9a83ae3"><span class="std std-ref">Variable codal::fiberPool</span></a></p></li>
-<li><p><a class="reference internal" href="variable_namespacecodal_1a8ccfb37c12a9651b85c545a31c630913.html#exhale-variable-namespacecodal-1a8ccfb37c12a9651b85c545a31c630913"><span class="std std-ref">Variable codal::forkedFiber</span></a></p></li>
-<li><p><a class="reference internal" href="variable_namespacecodal_1a6a03c0975b4fb247c9dd3b4a2b222c4f.html#exhale-variable-namespacecodal-1a6a03c0975b4fb247c9dd3b4a2b222c4f"><span class="std std-ref">Variable codal::idleFiber</span></a></p></li>
-<li><p><a class="reference internal" href="variable_namespacecodal_1a8548039b21f185e3e3bbe4e4a365a26e.html#exhale-variable-namespacecodal-1a8548039b21f185e3e3bbe4e4a365a26e"><span class="std std-ref">Variable codal::initCmds</span></a></p></li>
-<li><p><a class="reference internal" href="variable_namespacecodal_1ad6f9a39ab738ae2bb17e15410fd343d9.html#exhale-variable-namespacecodal-1ad6f9a39ab738ae2bb17e15410fd343d9"><span class="std std-ref">Variable codal::messageBus</span></a></p></li>
-<li><p><a class="reference internal" href="variable_namespacecodal_1ad3b4768ec67808bc2ba52b4582473720.html#exhale-variable-namespacecodal-1ad3b4768ec67808bc2ba52b4582473720"><span class="std std-ref">Variable codal::microbit_LEDMap</span></a></p></li>
-<li><p><a class="reference internal" href="variable_namespacecodal_1ad8b3b7b2a628f99bde2d771ceb5d2d13.html#exhale-variable-namespacecodal-1ad8b3b7b2a628f99bde2d771ceb5d2d13"><span class="std std-ref">Variable codal::microbit_LEDMap_columnPins</span></a></p></li>
-<li><p><a class="reference internal" href="variable_namespacecodal_1a3e733810377dde17a57ef676f2a01c6e.html#exhale-variable-namespacecodal-1a3e733810377dde17a57ef676f2a01c6e"><span class="std std-ref">Variable codal::microbit_LEDMap_rowPins</span></a></p></li>
-<li><p><a class="reference internal" href="variable_namespacecodal_1a6bc4f8afa78cc2f4ced08845e37ce237.html#exhale-variable-namespacecodal-1a6bc4f8afa78cc2f4ced08845e37ce237"><span class="std std-ref">Variable codal::panic_face</span></a></p></li>
-<li><p><a class="reference internal" href="variable_namespacecodal_1a5b247a1b9c09c76d22f0e1466c82b76c.html#exhale-variable-namespacecodal-1a5b247a1b9c09c76d22f0e1466c82b76c"><span class="std std-ref">Variable codal::panic_timeout</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespacecodal_1a6b3f16aa2de21913219f4b2c05d943fb.html#exhale-variable-namespacecodal-1a6b3f16aa2de21913219f4b2c05d943fb"><span class="std std-ref">Variable codal::currentFiber</span></a></p></li>
 <li><p><a class="reference internal" href="variable_namespacecodal_1a9faece0521707b322bd008870f91b8da.html#exhale-variable-namespacecodal-1a9faece0521707b322bd008870f91b8da"><span class="std std-ref">Variable codal::rhs</span></a></p></li>
-<li><p><a class="reference internal" href="variable_namespacecodal_1a321f36a72129609bbefc8ef11f5f0594.html#exhale-variable-namespacecodal-1a321f36a72129609bbefc8ef11f5f0594"><span class="std std-ref">Variable codal::runQueue</span></a></p></li>
-<li><p><a class="reference internal" href="variable_namespacecodal_1a79d205f4fdf41a28905f91cbe67e302c.html#exhale-variable-namespacecodal-1a79d205f4fdf41a28905f91cbe67e302c"><span class="std std-ref">Variable codal::sleepQueue</span></a></p></li>
-<li><p><a class="reference internal" href="variable_namespacecodal_1a31dd81fe866b637aec4df0095428f024.html#exhale-variable-namespacecodal-1a31dd81fe866b637aec4df0095428f024"><span class="std std-ref">Variable codal::system_timer</span></a></p></li>
-<li><p><a class="reference internal" href="variable_namespacecodal_1a024441a947df7cf106c747afc1c71884.html#exhale-variable-namespacecodal-1a024441a947df7cf106c747afc1c71884"><span class="std std-ref">Variable codal::waitQueue</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespacecodal_1a2e6293e7bd26a24ce0f10bce271ce2ac.html#exhale-variable-namespacecodal-1a2e6293e7bd26a24ce0f10bce271ce2ac"><span class="std std-ref">Variable codal::system_timer</span></a></p></li>
 </ul>
 </section>
 </section>

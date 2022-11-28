@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class MicroBitSerial &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class MicroBitSerial &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -317,12 +318,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -369,36 +370,22 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14MicroBitSerial14MicroBitSerialER3PinR3Pin7uint8_t7uint8_t8uint16_t">
-<span id="_CPPv3N5codal14MicroBitSerial14MicroBitSerialER3PinR3Pin7uint8_t7uint8_t8uint16_t"></span><span id="_CPPv2N5codal14MicroBitSerial14MicroBitSerialER3PinR3Pin7uint8_t7uint8_t8uint16_t"></span><span id="codal::MicroBitSerial::MicroBitSerial__PinR.PinR.uint8_t.uint8_t.uint16_t"></span><span class="target" id="classcodal_1_1MicroBitSerial_1aedb059f78f67f0602feda2aeb417be58"></span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitSerial</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">tx</span></span>, <a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">rx</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rxBufferSize</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">CODAL_SERIAL_DEFAULT_BUFFER_SIZE</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">txBufferSize</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">CODAL_SERIAL_DEFAULT_BUFFER_SIZE</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_SERIAL</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14MicroBitSerial14MicroBitSerialER3PinR3Pin7uint8_t7uint8_t8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal14MicroBitSerial14MicroBitSerialER3PinR3Pin7uint8_t7uint8_t8uint16_t"></span><span id="_CPPv2N5codal14MicroBitSerial14MicroBitSerialER3PinR3Pin7uint8_t7uint8_t8uint16_t"></span><span id="codal::MicroBitSerial::MicroBitSerial__PinR.PinR.uint8_t.uint8_t.uint16_t"></span><span class="target" id="classcodal_1_1MicroBitSerial_1aa9a7d2ddb688313d926abd7b3ba6555c"></span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitSerial</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">tx</span></span>, <a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">rx</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rxBufferSize</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">CODAL_SERIAL_DEFAULT_BUFFER_SIZE</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">txBufferSize</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">CODAL_SERIAL_DEFAULT_BUFFER_SIZE</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_SERIAL</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14MicroBitSerial14MicroBitSerialER3PinR3Pin7uint8_t7uint8_t8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor. Create an instance of DeviceSerial</p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DeviceSerial</span><span class="w"> </span><span class="nf">serial</span><span class="p">(</span><span class="n">USBTX</span><span class="p">,</span><span class="w"> </span><span class="n">USBRX</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
- 
-Constructor. Create an instance of DeviceSerial</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DeviceSerial</span><span class="w"> </span><span class="nf">serial</span><span class="p">(</span><span class="n">USBTX</span><span class="p">,</span><span class="w"> </span><span class="n">USBRX</span><span class="p">);</span><span class="w"></span>
-</pre></div>
-</div>
- 
-Buffers aren’t allocated until the first send or receive respectively. </p>
+ </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>the default baud rate is 115200. <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span>  Buffers aren&#39;t allocated until the first send or receive respectively.
 </pre></div>
 </div>
-</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>the default baud rate is 115200. More API details can be found: -<a class="reference external" href="https://github.com/mbedmicro/mbed/blob/master/libraries/mbed/api/SerialBase.h">https://github.com/mbedmicro/mbed/blob/master/libraries/mbed/api/SerialBase.h</a> -<a class="reference external" href="https://github.com/mbedmicro/mbed/blob/master/libraries/mbed/api/RawSerial.h">https://github.com/mbedmicro/mbed/blob/master/libraries/mbed/api/RawSerial.h</a></p>
+ </p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>tx</strong> – the <a class="reference internal" href="classcodal_1_1Pin.html#classcodal_1_1Pin"><span class="std std-ref">Pin</span></a> to be used for transmission</p></li>
-<li><p><strong>rx</strong> – the <a class="reference internal" href="classcodal_1_1Pin.html#classcodal_1_1Pin"><span class="std std-ref">Pin</span></a> to be used for receiving data</p></li>
-<li><p><strong>rxBufferSize</strong> – the size of the buffer to be used for receiving bytes</p></li>
-<li><p><strong>txBufferSize</strong> – the size of the buffer to be used for transmitting bytes</p></li>
 <li><p><strong>tx</strong> – the <a class="reference internal" href="classcodal_1_1Pin.html#classcodal_1_1Pin"><span class="std std-ref">Pin</span></a> to be used for transmission</p></li>
 <li><p><strong>rx</strong> – the <a class="reference internal" href="classcodal_1_1Pin.html#classcodal_1_1Pin"><span class="std std-ref">Pin</span></a> to be used for receiving data</p></li>
 <li><p><strong>rxBufferSize</strong> – the size of the buffer to be used for receiving bytes</p></li>
@@ -410,36 +397,22 @@ Buffers aren’t allocated until the first send or receive respectively. </p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14MicroBitSerial14MicroBitSerialE7PinName7PinName7uint8_t7uint8_t8uint16_t">
-<span id="_CPPv3N5codal14MicroBitSerial14MicroBitSerialE7PinName7PinName7uint8_t7uint8_t8uint16_t"></span><span id="_CPPv2N5codal14MicroBitSerial14MicroBitSerialE7PinName7PinName7uint8_t7uint8_t8uint16_t"></span><span id="codal::MicroBitSerial::MicroBitSerial__PinName.PinName.uint8_t.uint8_t.uint16_t"></span><span class="target" id="classcodal_1_1MicroBitSerial_1a2f82da681bb46a9019be7a077be833f9"></span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitSerial</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">PinName</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">tx</span></span>, <span class="n"><span class="pre">PinName</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rx</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rxBufferSize</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">CODAL_SERIAL_DEFAULT_BUFFER_SIZE</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">txBufferSize</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">CODAL_SERIAL_DEFAULT_BUFFER_SIZE</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_SERIAL</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14MicroBitSerial14MicroBitSerialE7PinName7PinName7uint8_t7uint8_t8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal14MicroBitSerial14MicroBitSerialE7PinName7PinName7uint8_t7uint8_t8uint16_t"></span><span id="_CPPv2N5codal14MicroBitSerial14MicroBitSerialE7PinName7PinName7uint8_t7uint8_t8uint16_t"></span><span id="codal::MicroBitSerial::MicroBitSerial__PinName.PinName.uint8_t.uint8_t.uint16_t"></span><span class="target" id="classcodal_1_1MicroBitSerial_1a83694d5077553f0262abe3a84171d087"></span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitSerial</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">PinName</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">tx</span></span>, <span class="n"><span class="pre">PinName</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rx</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rxBufferSize</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">CODAL_SERIAL_DEFAULT_BUFFER_SIZE</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">txBufferSize</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">CODAL_SERIAL_DEFAULT_BUFFER_SIZE</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_SERIAL</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14MicroBitSerial14MicroBitSerialE7PinName7PinName7uint8_t7uint8_t8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor. Create an instance of DeviceSerial</p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DeviceSerial</span><span class="w"> </span><span class="nf">serial</span><span class="p">(</span><span class="n">USBTX</span><span class="p">,</span><span class="w"> </span><span class="n">USBRX</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
- 
-Constructor. Create an instance of DeviceSerial</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DeviceSerial</span><span class="w"> </span><span class="nf">serial</span><span class="p">(</span><span class="n">USBTX</span><span class="p">,</span><span class="w"> </span><span class="n">USBRX</span><span class="p">);</span><span class="w"></span>
-</pre></div>
-</div>
- 
-Buffers aren’t allocated until the first send or receive respectively. </p>
+ </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>the default baud rate is 115200. <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span>  Buffers aren&#39;t allocated until the first send or receive respectively.
 </pre></div>
 </div>
-</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>the default baud rate is 115200. More API details can be found: -<a class="reference external" href="https://github.com/mbedmicro/mbed/blob/master/libraries/mbed/api/SerialBase.h">https://github.com/mbedmicro/mbed/blob/master/libraries/mbed/api/SerialBase.h</a> -<a class="reference external" href="https://github.com/mbedmicro/mbed/blob/master/libraries/mbed/api/RawSerial.h">https://github.com/mbedmicro/mbed/blob/master/libraries/mbed/api/RawSerial.h</a></p>
+ </p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>tx</strong> – the <a class="reference internal" href="classcodal_1_1Pin.html#classcodal_1_1Pin"><span class="std std-ref">Pin</span></a> to be used for transmission</p></li>
-<li><p><strong>rx</strong> – the <a class="reference internal" href="classcodal_1_1Pin.html#classcodal_1_1Pin"><span class="std std-ref">Pin</span></a> to be used for receiving data</p></li>
-<li><p><strong>rxBufferSize</strong> – the size of the buffer to be used for receiving bytes</p></li>
-<li><p><strong>txBufferSize</strong> – the size of the buffer to be used for transmitting bytes</p></li>
 <li><p><strong>tx</strong> – the <a class="reference internal" href="classcodal_1_1Pin.html#classcodal_1_1Pin"><span class="std std-ref">Pin</span></a> to be used for transmission</p></li>
 <li><p><strong>rx</strong> – the <a class="reference internal" href="classcodal_1_1Pin.html#classcodal_1_1Pin"><span class="std std-ref">Pin</span></a> to be used for receiving data</p></li>
 <li><p><strong>rxBufferSize</strong> – the size of the buffer to be used for receiving bytes</p></li>
@@ -451,36 +424,22 @@ Buffers aren’t allocated until the first send or receive respectively. </p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14MicroBitSerial14MicroBitSerialE9PinNumber9PinNumber7uint8_t7uint8_t8uint16_t">
-<span id="_CPPv3N5codal14MicroBitSerial14MicroBitSerialE9PinNumber9PinNumber7uint8_t7uint8_t8uint16_t"></span><span id="_CPPv2N5codal14MicroBitSerial14MicroBitSerialE9PinNumber9PinNumber7uint8_t7uint8_t8uint16_t"></span><span id="codal::MicroBitSerial::MicroBitSerial__PinNumber.PinNumber.uint8_t.uint8_t.uint16_t"></span><span class="target" id="classcodal_1_1MicroBitSerial_1a7f939c0374b5d824430e1f3c6d7cff59"></span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitSerial</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespacecodal_1ac1596127a05e8b32df499e87d86b6436.html#_CPPv4N5codal9PinNumberE" title="codal::PinNumber"><span class="n"><span class="pre">PinNumber</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">tx</span></span>, <a class="reference internal" href="typedef_namespacecodal_1ac1596127a05e8b32df499e87d86b6436.html#_CPPv4N5codal9PinNumberE" title="codal::PinNumber"><span class="n"><span class="pre">PinNumber</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">rx</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rxBufferSize</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">CODAL_SERIAL_DEFAULT_BUFFER_SIZE</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">txBufferSize</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">CODAL_SERIAL_DEFAULT_BUFFER_SIZE</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_SERIAL</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14MicroBitSerial14MicroBitSerialE9PinNumber9PinNumber7uint8_t7uint8_t8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal14MicroBitSerial14MicroBitSerialE9PinNumber9PinNumber7uint8_t7uint8_t8uint16_t"></span><span id="_CPPv2N5codal14MicroBitSerial14MicroBitSerialE9PinNumber9PinNumber7uint8_t7uint8_t8uint16_t"></span><span id="codal::MicroBitSerial::MicroBitSerial__PinNumber.PinNumber.uint8_t.uint8_t.uint16_t"></span><span class="target" id="classcodal_1_1MicroBitSerial_1abeffb630a1bcd1bf2501877e076cd35e"></span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitSerial</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespacecodal_1ac1596127a05e8b32df499e87d86b6436.html#_CPPv4N5codal9PinNumberE" title="codal::PinNumber"><span class="n"><span class="pre">PinNumber</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">tx</span></span>, <a class="reference internal" href="typedef_namespacecodal_1ac1596127a05e8b32df499e87d86b6436.html#_CPPv4N5codal9PinNumberE" title="codal::PinNumber"><span class="n"><span class="pre">PinNumber</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">rx</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rxBufferSize</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">CODAL_SERIAL_DEFAULT_BUFFER_SIZE</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">txBufferSize</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">CODAL_SERIAL_DEFAULT_BUFFER_SIZE</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_SERIAL</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14MicroBitSerial14MicroBitSerialE9PinNumber9PinNumber7uint8_t7uint8_t8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor. Create an instance of DeviceSerial</p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DeviceSerial</span><span class="w"> </span><span class="nf">serial</span><span class="p">(</span><span class="n">USBTX</span><span class="p">,</span><span class="w"> </span><span class="n">USBRX</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
- 
-Constructor. Create an instance of DeviceSerial</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">DeviceSerial</span><span class="w"> </span><span class="nf">serial</span><span class="p">(</span><span class="n">USBTX</span><span class="p">,</span><span class="w"> </span><span class="n">USBRX</span><span class="p">);</span><span class="w"></span>
-</pre></div>
-</div>
- 
-Buffers aren’t allocated until the first send or receive respectively. </p>
+ </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>the default baud rate is 115200. <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span>  Buffers aren&#39;t allocated until the first send or receive respectively.
 </pre></div>
 </div>
-</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>the default baud rate is 115200. More API details can be found: -<a class="reference external" href="https://github.com/mbedmicro/mbed/blob/master/libraries/mbed/api/SerialBase.h">https://github.com/mbedmicro/mbed/blob/master/libraries/mbed/api/SerialBase.h</a> -<a class="reference external" href="https://github.com/mbedmicro/mbed/blob/master/libraries/mbed/api/RawSerial.h">https://github.com/mbedmicro/mbed/blob/master/libraries/mbed/api/RawSerial.h</a></p>
+ </p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>tx</strong> – the <a class="reference internal" href="classcodal_1_1Pin.html#classcodal_1_1Pin"><span class="std std-ref">Pin</span></a> to be used for transmission</p></li>
-<li><p><strong>rx</strong> – the <a class="reference internal" href="classcodal_1_1Pin.html#classcodal_1_1Pin"><span class="std std-ref">Pin</span></a> to be used for receiving data</p></li>
-<li><p><strong>rxBufferSize</strong> – the size of the buffer to be used for receiving bytes</p></li>
-<li><p><strong>txBufferSize</strong> – the size of the buffer to be used for transmitting bytes</p></li>
 <li><p><strong>tx</strong> – the <a class="reference internal" href="classcodal_1_1Pin.html#classcodal_1_1Pin"><span class="std std-ref">Pin</span></a> to be used for transmission</p></li>
 <li><p><strong>rx</strong> – the <a class="reference internal" href="classcodal_1_1Pin.html#classcodal_1_1Pin"><span class="std std-ref">Pin</span></a> to be used for receiving data</p></li>
 <li><p><strong>rxBufferSize</strong> – the size of the buffer to be used for receiving bytes</p></li>
@@ -492,7 +451,7 @@ Buffers aren’t allocated until the first send or receive respectively. </p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14MicroBitSerial8redirectE7PinName7PinName">
-<span id="_CPPv3N5codal14MicroBitSerial8redirectE7PinName7PinName"></span><span id="_CPPv2N5codal14MicroBitSerial8redirectE7PinName7PinName"></span><span id="codal::MicroBitSerial::redirect__PinName.PinName"></span><span class="target" id="classcodal_1_1MicroBitSerial_1a777faf05d27b24e3bea4cb2ccf9392f9"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">redirect</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">PinName</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">tx</span></span>, <span class="n"><span class="pre">PinName</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rx</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14MicroBitSerial8redirectE7PinName7PinName" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal14MicroBitSerial8redirectE7PinName7PinName"></span><span id="_CPPv2N5codal14MicroBitSerial8redirectE7PinName7PinName"></span><span id="codal::MicroBitSerial::redirect__PinName.PinName"></span><span class="target" id="classcodal_1_1MicroBitSerial_1a259d13c5c4ab61c7156669769e0f149f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">redirect</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">PinName</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">tx</span></span>, <span class="n"><span class="pre">PinName</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rx</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14MicroBitSerial8redirectE7PinName7PinName" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>A way of dynamically configuring the serial instance to use pins other than USBTX and USBRX.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -509,7 +468,7 @@ Buffers aren’t allocated until the first send or receive respectively. </p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal14MicroBitSerial8redirectE9PinNumber9PinNumber">
-<span id="_CPPv3N5codal14MicroBitSerial8redirectE9PinNumber9PinNumber"></span><span id="_CPPv2N5codal14MicroBitSerial8redirectE9PinNumber9PinNumber"></span><span id="codal::MicroBitSerial::redirect__PinNumber.PinNumber"></span><span class="target" id="classcodal_1_1MicroBitSerial_1a03fb69992a5fbcd97657170799c514a9"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">redirect</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespacecodal_1ac1596127a05e8b32df499e87d86b6436.html#_CPPv4N5codal9PinNumberE" title="codal::PinNumber"><span class="n"><span class="pre">PinNumber</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">tx</span></span>, <a class="reference internal" href="typedef_namespacecodal_1ac1596127a05e8b32df499e87d86b6436.html#_CPPv4N5codal9PinNumberE" title="codal::PinNumber"><span class="n"><span class="pre">PinNumber</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">rx</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14MicroBitSerial8redirectE9PinNumber9PinNumber" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal14MicroBitSerial8redirectE9PinNumber9PinNumber"></span><span id="_CPPv2N5codal14MicroBitSerial8redirectE9PinNumber9PinNumber"></span><span id="codal::MicroBitSerial::redirect__PinNumber.PinNumber"></span><span class="target" id="classcodal_1_1MicroBitSerial_1a43f5e2ab4c7915926690433e0eeb3c88"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">redirect</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespacecodal_1ac1596127a05e8b32df499e87d86b6436.html#_CPPv4N5codal9PinNumberE" title="codal::PinNumber"><span class="n"><span class="pre">PinNumber</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">tx</span></span>, <a class="reference internal" href="typedef_namespacecodal_1ac1596127a05e8b32df499e87d86b6436.html#_CPPv4N5codal9PinNumberE" title="codal::PinNumber"><span class="n"><span class="pre">PinNumber</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">rx</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal14MicroBitSerial8redirectE9PinNumber9PinNumber" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>A way of dynamically configuring the serial instance to use pins other than USBTX and USBRX.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

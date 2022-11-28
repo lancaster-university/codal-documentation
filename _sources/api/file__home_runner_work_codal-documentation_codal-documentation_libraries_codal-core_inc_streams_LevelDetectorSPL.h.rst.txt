@@ -42,8 +42,6 @@ Included By
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitAudio.h`
 
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_LevelDetectorSPL.cpp`
-
 
 
 
@@ -64,6 +62,16 @@ Classes
 Defines
 -------
 
+
+- :ref:`exhale_define_LevelDetectorSPL_8h_1a48f9f125255b5be097c9b30c6346e47e`
+
+- :ref:`exhale_define_LevelDetectorSPL_8h_1a97b4219f4abcce9fb45e54ebe3527e6e`
+
+- :ref:`exhale_define_LevelDetectorSPL_8h_1abde2709b3363de45d9aeda8dda2d0a7f`
+
+- :ref:`exhale_define_LevelDetectorSPL_8h_1af009f409612934c75e74586530d93f91`
+
+- :ref:`exhale_define_LevelDetectorSPL_8h_1add6b220e2903609e17dab609a8a8d0c7`
 
 - :ref:`exhale_define_LevelDetectorSPL_8h_1afb9696e8de7ba21e8f81958eb1dd3820`
 

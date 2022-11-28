@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Program Listing for File MicroBitCompat.h &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Program Listing for File MicroBitCompat.h &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -556,6 +557,14 @@ title="Source repository"
 
 <span class="c1">//#define MICROBIT_PANIC_ERROR_CHARS</span>
 
+<span class="c1">//</span>
+<span class="c1">// MBed legacy IDs - DO NOT USE</span>
+<span class="c1">// Note: These are actual integers to allow us to use __attribute__</span>
+<span class="c1">//</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">MICROBIT_ID_MBED_INTERRUPT_IN</span><span class="w"> </span><span class="n">__attribute__</span><span class="w"> </span><span class="p">((</span><span class="n">deprecated</span><span class="p">))</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">80</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">MICROBIT_ID_MBED_PWM</span><span class="w">          </span><span class="n">__attribute__</span><span class="w"> </span><span class="p">((</span><span class="n">deprecated</span><span class="p">))</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">81</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">MICROBIT_ID_MBED_TIMEOUT</span><span class="w">      </span><span class="n">__attribute__</span><span class="w"> </span><span class="p">((</span><span class="n">deprecated</span><span class="p">))</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">82</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">MICROBIT_ID_MBED_TICKER</span><span class="w">       </span><span class="n">__attribute__</span><span class="w"> </span><span class="p">((</span><span class="n">deprecated</span><span class="p">))</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">83</span><span class="p">;</span><span class="w"></span>
 
 <span class="c1">//</span>
 <span class="c1">// MICROBIT specific component IDs and event codes</span>
@@ -645,18 +654,13 @@ title="Source repository"
 <span class="cp">#define MICROBIT_ID_SERIAL                                      DEVICE_ID_SERIAL</span>
 <span class="cp">#define MICROBIT_ID_THERMOMETER                                 DEVICE_ID_THERMOMETER</span>
 
-<span class="cp">#define MICROBIT_ID_PARTIAL_FLASHING                            36</span>
-<span class="cp">#define MICROBIT_ID_POWER_MANAGER                               37</span>
-<span class="cp">#define MICROBIT_ID_USB_FLASH_MANAGER                           38</span>
+<span class="cp">#define MICROBIT_ID_POWER_MANAGER                               DEVICE_ID_POWER_MANAGER</span>
+<span class="cp">#define MICROBIT_ID_PARTIAL_FLASHING                            DEVICE_ID_PARTIAL_FLASHING</span>
+<span class="cp">#define MICROBIT_ID_USB_FLASH_MANAGER                           DEVICE_ID_USB_FLASH_MANAGER</span>
 
-<span class="cp">#define MICROBIT_ID_VIRTUAL_SPEAKER_PIN                         39</span>
+<span class="cp">#define MICROBIT_ID_VIRTUAL_SPEAKER_PIN                         DEVICE_ID_VIRTUAL_SPEAKER_PIN</span>
 
-<span class="cp">#define MICROBIT_ID_MBED_INTERRUPT_IN                           40</span>
-<span class="cp">#define MICROBIT_ID_MBED_PWM                                    41</span>
-<span class="cp">#define MICROBIT_ID_MBED_TIMEOUT                                42</span>
-<span class="cp">#define MICROBIT_ID_MBED_TICKER                                 43</span>
-
-<span class="cp">#define MICROBIT_ID_LOG                                         44</span>
+<span class="cp">#define MICROBIT_ID_LOG                                         DEVICE_ID_LOG</span>
 
 <span class="cp">#define MICROBIT_MAXIMUM_HEAPS                                  DEVICE_MAXIMUM_HEAPS</span>
 <span class="cp">#define MICROBIT_NESTED_HEAP_SIZE                               0</span>

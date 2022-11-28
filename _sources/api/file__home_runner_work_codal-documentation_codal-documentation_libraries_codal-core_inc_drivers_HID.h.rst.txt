@@ -44,13 +44,5 @@ Included By
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_HIDMouse.h`
 
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_HID.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_HIDJoystick.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_HIDKeyboard.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_HIDMouse.cpp`
-
 
 

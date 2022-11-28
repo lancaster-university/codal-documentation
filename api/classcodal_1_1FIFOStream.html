@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class FIFOStream &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class FIFOStream &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-types">
      Base Types
@@ -317,12 +318,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-types">
      Base Types
@@ -369,73 +370,72 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10FIFOStream10FIFOStreamER10DataSource">
-<span id="_CPPv3N5codal10FIFOStream10FIFOStreamER10DataSource"></span><span id="_CPPv2N5codal10FIFOStream10FIFOStreamER10DataSource"></span><span id="codal::FIFOStream::FIFOStream__DataSourceR"></span><span class="target" id="classcodal_1_1FIFOStream_1aa5922a073d25cb08931f88148c6319b0"></span><span class="sig-name descname"><span class="n"><span class="pre">FIFOStream</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataSource.html#_CPPv4N5codal10DataSourceE" title="codal::DataSource"><span class="n"><span class="pre">DataSource</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">source</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream10FIFOStreamER10DataSource" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10FIFOStream10FIFOStreamER10DataSource"></span><span id="_CPPv2N5codal10FIFOStream10FIFOStreamER10DataSource"></span><span id="codal::FIFOStream::FIFOStream__DataSourceR"></span><span class="target" id="classcodal_1_1FIFOStream_1a85770bf6322046e4267dcf813d83b80b"></span><span class="sig-name descname"><span class="n"><span class="pre">FIFOStream</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataSource.html#_CPPv4N5codal10DataSourceE" title="codal::DataSource"><span class="n"><span class="pre">DataSource</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">source</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream10FIFOStreamER10DataSource" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10FIFOStreamD0Ev">
-<span id="_CPPv3N5codal10FIFOStreamD0Ev"></span><span id="_CPPv2N5codal10FIFOStreamD0Ev"></span><span id="codal::FIFOStream::~FIFOStream"></span><span class="target" id="classcodal_1_1FIFOStream_1a9495fc2eabbac5d3298159af6dccb1c7"></span><span class="sig-name descname"><span class="n"><span class="pre">~FIFOStream</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStreamD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10FIFOStreamD0Ev"></span><span id="_CPPv2N5codal10FIFOStreamD0Ev"></span><span id="codal::FIFOStream::~FIFOStream"></span><span class="target" id="classcodal_1_1FIFOStream_1a3171459b8f705579e0b842a7b3e9da03"></span><span class="sig-name descname"><span class="n"><span class="pre">~FIFOStream</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStreamD0Ev" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10FIFOStream4pullEv">
-<span id="_CPPv3N5codal10FIFOStream4pullEv"></span><span id="_CPPv2N5codal10FIFOStream4pullEv"></span><span id="codal::FIFOStream::pull"></span><span class="target" id="classcodal_1_1FIFOStream_1a8ba95c43211ce8549b5dc0e5318a8cba"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="classcodal_1_1ManagedBuffer.html#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pull</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream4pullEv" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Default implementation of <a class="reference internal" href="classcodal_1_1DataSource.html#classcodal_1_1DataSource"><span class="std std-ref">DataSource</span></a> and <a class="reference internal" href="classcodal_1_1DataSink.html#classcodal_1_1DataSink"><span class="std std-ref">DataSink</span></a> classes. </p>
-</dd></dl>
+<span id="_CPPv3N5codal10FIFOStream4pullEv"></span><span id="_CPPv2N5codal10FIFOStream4pullEv"></span><span id="codal::FIFOStream::pull"></span><span class="target" id="classcodal_1_1FIFOStream_1a1b3681eee5d2e951aa2c728eca8d2990"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="classcodal_1_1ManagedBuffer.html#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pull</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream4pullEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10FIFOStream11pullRequestEv">
-<span id="_CPPv3N5codal10FIFOStream11pullRequestEv"></span><span id="_CPPv2N5codal10FIFOStream11pullRequestEv"></span><span id="codal::FIFOStream::pullRequest"></span><span class="target" id="classcodal_1_1FIFOStream_1a1ff5cb961e9bd7b0afea8eb17e2b28c9"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pullRequest</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream11pullRequestEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10FIFOStream11pullRequestEv"></span><span id="_CPPv2N5codal10FIFOStream11pullRequestEv"></span><span id="codal::FIFOStream::pullRequest"></span><span class="target" id="classcodal_1_1FIFOStream_1a83ce77268ceea0b07dcfdb538f5dd65f"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pullRequest</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream11pullRequestEv" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10FIFOStream7connectER8DataSink">
-<span id="_CPPv3N5codal10FIFOStream7connectER8DataSink"></span><span id="_CPPv2N5codal10FIFOStream7connectER8DataSink"></span><span id="codal::FIFOStream::connect__DataSinkR"></span><span class="target" id="classcodal_1_1FIFOStream_1adbc607fe060083532f8af808f9af27fc"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">connect</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataSink.html#_CPPv4N5codal8DataSinkE" title="codal::DataSink"><span class="n"><span class="pre">DataSink</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sink</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream7connectER8DataSink" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10FIFOStream7connectER8DataSink"></span><span id="_CPPv2N5codal10FIFOStream7connectER8DataSink"></span><span id="codal::FIFOStream::connect__DataSinkR"></span><span class="target" id="classcodal_1_1FIFOStream_1ae6b74a255365aadc10c360cadce220b1"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">connect</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataSink.html#_CPPv4N5codal8DataSinkE" title="codal::DataSink"><span class="n"><span class="pre">DataSink</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sink</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream7connectER8DataSink" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10FIFOStream10disconnectEv">
-<span id="_CPPv3N5codal10FIFOStream10disconnectEv"></span><span id="_CPPv2N5codal10FIFOStream10disconnectEv"></span><span id="codal::FIFOStream::disconnect"></span><span class="target" id="classcodal_1_1FIFOStream_1a93afe65a1a51ed90aa60083aca635eaa"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disconnect</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream10disconnectEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10FIFOStream10disconnectEv"></span><span id="_CPPv2N5codal10FIFOStream10disconnectEv"></span><span id="codal::FIFOStream::disconnect"></span><span class="target" id="classcodal_1_1FIFOStream_1a36fde88c61cede5e3141fe93f30b5bfa"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disconnect</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream10disconnectEv" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10FIFOStream9getFormatEv">
-<span id="_CPPv3N5codal10FIFOStream9getFormatEv"></span><span id="_CPPv2N5codal10FIFOStream9getFormatEv"></span><span id="codal::FIFOStream::getFormat"></span><span class="target" id="classcodal_1_1FIFOStream_1adca55ca744cd08ba634b7222e978bbc2"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFormat</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream9getFormatEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10FIFOStream9getFormatEv"></span><span id="_CPPv2N5codal10FIFOStream9getFormatEv"></span><span id="codal::FIFOStream::getFormat"></span><span class="target" id="classcodal_1_1FIFOStream_1a83db9c5236e8e2d4e7625bedcc0d6f83"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFormat</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream9getFormatEv" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10FIFOStream9setFormatEi">
-<span id="_CPPv3N5codal10FIFOStream9setFormatEi"></span><span id="_CPPv2N5codal10FIFOStream9setFormatEi"></span><span id="codal::FIFOStream::setFormat__i"></span><span class="target" id="classcodal_1_1FIFOStream_1a4e9c8822c74a64f1583745b0683d8106"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFormat</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">format</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream9setFormatEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10FIFOStream9setFormatEi"></span><span id="_CPPv2N5codal10FIFOStream9setFormatEi"></span><span id="codal::FIFOStream::setFormat__i"></span><span class="target" id="classcodal_1_1FIFOStream_1af20126f71088efce3fe9c69959c3e452"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFormat</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">format</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream9setFormatEi" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10FIFOStream6lengthEv">
-<span id="_CPPv3N5codal10FIFOStream6lengthEv"></span><span id="_CPPv2N5codal10FIFOStream6lengthEv"></span><span id="codal::FIFOStream::length"></span><span class="target" id="classcodal_1_1FIFOStream_1a0dce4e70ea1d7bcd93552db6c0dd23d9"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">length</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream6lengthEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10FIFOStream6lengthEv"></span><span id="_CPPv2N5codal10FIFOStream6lengthEv"></span><span id="codal::FIFOStream::length"></span><span class="target" id="classcodal_1_1FIFOStream_1a5c8acf4860179f87f9911a794b69c010"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">length</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream6lengthEv" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10FIFOStream9dumpStateEv">
-<span id="_CPPv3N5codal10FIFOStream9dumpStateEv"></span><span id="_CPPv2N5codal10FIFOStream9dumpStateEv"></span><span id="codal::FIFOStream::dumpState"></span><span class="target" id="classcodal_1_1FIFOStream_1a66e40ea57b9a0174ec36584e2beeb173"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dumpState</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream9dumpStateEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10FIFOStream9dumpStateEv"></span><span id="_CPPv2N5codal10FIFOStream9dumpStateEv"></span><span id="codal::FIFOStream::dumpState"></span><span class="target" id="classcodal_1_1FIFOStream_1a59c578d33efb4351388b4625af61b4a9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dumpState</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream9dumpStateEv" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10FIFOStream7canPullEv">
-<span id="_CPPv3N5codal10FIFOStream7canPullEv"></span><span id="_CPPv2N5codal10FIFOStream7canPullEv"></span><span id="codal::FIFOStream::canPull"></span><span class="target" id="classcodal_1_1FIFOStream_1a7447c0aa7c56162b5ca04221d8ab37b5"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">canPull</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream7canPullEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10FIFOStream7canPullEv"></span><span id="_CPPv2N5codal10FIFOStream7canPullEv"></span><span id="codal::FIFOStream::canPull"></span><span class="target" id="classcodal_1_1FIFOStream_1a2de49743781d45f14ce8e1f207c46247"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">canPull</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream7canPullEv" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10FIFOStream6isFullEv">
-<span id="_CPPv3N5codal10FIFOStream6isFullEv"></span><span id="_CPPv2N5codal10FIFOStream6isFullEv"></span><span id="codal::FIFOStream::isFull"></span><span class="target" id="classcodal_1_1FIFOStream_1a61b74d21ef68b2388d43ed2e4757dc40"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isFull</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream6isFullEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10FIFOStream6isFullEv"></span><span id="_CPPv2N5codal10FIFOStream6isFullEv"></span><span id="codal::FIFOStream::isFull"></span><span class="target" id="classcodal_1_1FIFOStream_1a3d641339a5c2a59710b45d2490011802"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isFull</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream6isFullEv" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10FIFOStream14setInputEnableEb">
-<span id="_CPPv3N5codal10FIFOStream14setInputEnableEb"></span><span id="_CPPv2N5codal10FIFOStream14setInputEnableEb"></span><span id="codal::FIFOStream::setInputEnable__b"></span><span class="target" id="classcodal_1_1FIFOStream_1acad82f65f935f3498395634685d7185a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setInputEnable</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream14setInputEnableEb" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10FIFOStream14setInputEnableEb"></span><span id="_CPPv2N5codal10FIFOStream14setInputEnableEb"></span><span id="codal::FIFOStream::setInputEnable__b"></span><span class="target" id="classcodal_1_1FIFOStream_1a89ed50880dfe53a61e88acb286d22f41"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setInputEnable</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream14setInputEnableEb" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal10FIFOStream15setOutputEnableEb">
-<span id="_CPPv3N5codal10FIFOStream15setOutputEnableEb"></span><span id="_CPPv2N5codal10FIFOStream15setOutputEnableEb"></span><span id="codal::FIFOStream::setOutputEnable__b"></span><span class="target" id="classcodal_1_1FIFOStream_1addc1bbe139fa3b62e9c1e52e2578934f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setOutputEnable</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream15setOutputEnableEb" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal10FIFOStream15setOutputEnableEb"></span><span id="_CPPv2N5codal10FIFOStream15setOutputEnableEb"></span><span id="codal::FIFOStream::setOutputEnable__b"></span><span class="target" id="classcodal_1_1FIFOStream_1ab4c81b29c30538334cad976566d01ad1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setOutputEnable</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal10FIFOStream15setOutputEnableEb" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>

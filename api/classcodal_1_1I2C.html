@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class I2C &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class I2C &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,7 +282,7 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-documentation">
    Class Documentation
@@ -305,7 +306,7 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-documentation">
    Class Documentation
@@ -336,12 +337,11 @@ title="Source repository"
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal3I2C3I2CER3PinR3Pin">
 <span id="_CPPv3N5codal3I2C3I2CER3PinR3Pin"></span><span id="_CPPv2N5codal3I2C3I2CER3PinR3Pin"></span><span id="codal::I2C::I2C__PinR.PinR"></span><span class="target" id="classcodal_1_1I2C_1a9dfe6077fb4c41687d37600202827698"></span><span class="sig-name descname"><span class="n"><span class="pre">I2C</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sda</span></span>, <a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">scl</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3I2C3I2CER3PinR3Pin" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Constructor. </p>
-</dd></dl>
+<dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal3I2C12setFrequencyE8uint32_t">
-<span id="_CPPv3N5codal3I2C12setFrequencyE8uint32_t"></span><span id="_CPPv2N5codal3I2C12setFrequencyE8uint32_t"></span><span id="codal::I2C::setFrequency__uint32_t"></span><span class="target" id="classcodal_1_1I2C_1aae1e099e8b277bafb1861f79f3abd6e3"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFrequency</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">frequency</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3I2C12setFrequencyE8uint32_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal3I2C12setFrequencyE8uint32_t"></span><span id="_CPPv2N5codal3I2C12setFrequencyE8uint32_t"></span><span id="codal::I2C::setFrequency__uint32_t"></span><span class="target" id="classcodal_1_1I2C_1ac351c37018cf75c2593772b8a0cdccd9"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFrequency</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">frequency</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3I2C12setFrequencyE8uint32_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Set the frequency of the <a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> interface</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -352,7 +352,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal3I2C5writeE8uint16_t7uint8_t">
-<span id="_CPPv3N5codal3I2C5writeE8uint16_t7uint8_t"></span><span id="_CPPv2N5codal3I2C5writeE8uint16_t7uint8_t"></span><span id="codal::I2C::write__uint16_t.uint8_t"></span><span class="target" id="classcodal_1_1I2C_1a199f935b9a43f13ee9c29c6586f33bda"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3I2C5writeE8uint16_t7uint8_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal3I2C5writeE8uint16_t7uint8_t"></span><span id="_CPPv2N5codal3I2C5writeE8uint16_t7uint8_t"></span><span id="codal::I2C::write__uint16_t.uint8_t"></span><span class="target" id="classcodal_1_1I2C_1a27509590cd15d96710f61dd421779821"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3I2C5writeE8uint16_t7uint8_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Issues a standard, 2 byte <a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> command write to the <a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> bus. This consists of:<ul class="simple">
 <li><p>Asserting a Start condition on the bus</p></li>
 <li><p>Selecting the Slave address (as an 8 bit address)</p></li>
@@ -376,17 +376,8 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal3I2C5writeE8uint16_tP7uint8_tib">
-<span id="_CPPv3N5codal3I2C5writeE8uint16_tP7uint8_tib"></span><span id="_CPPv2N5codal3I2C5writeE8uint16_tP7uint8_tib"></span><span id="codal::I2C::write__uint16_t.uint8_tP.i.b"></span><span class="target" id="classcodal_1_1I2C_1a94862730475cf204f25b6af6e098876d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">repeated</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3I2C5writeE8uint16_tP7uint8_tib" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal3I2C5writeE8uint16_tP7uint8_tib"></span><span id="_CPPv2N5codal3I2C5writeE8uint16_tP7uint8_tib"></span><span id="codal::I2C::write__uint16_t.uint8_tP.i.b"></span><span class="target" id="classcodal_1_1I2C_1af56ed25409a4c4a1e3bc0f377cd47fa2"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">repeated</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3I2C5writeE8uint16_tP7uint8_tib" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Issues a standard, <a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> command write to the <a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> bus. This consists of:<ul class="simple">
-<li><p>Asserting a Start condition on the bus</p></li>
-<li><p>Selecting the Slave address (as an 8 bit address)</p></li>
-<li><p>Writing a number of raw data bytes provided</p></li>
-<li><p>Asserting a Stop condition on the bus</p></li>
-</ul>
-</p>
-<p>The CPU will busy wait until the transmission is complete.</p>
-<p>
-Issues a standard, <a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> command write to the <a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> bus. This consists of:<ul class="simple">
 <li><p>Asserting a Start condition on the bus</p></li>
 <li><p>Selecting the Slave address (as an 8 bit address)</p></li>
 <li><p>Writing a number of raw data bytes provided</p></li>
@@ -401,16 +392,10 @@ Issues a standard, <a class="reference internal" href="#classcodal_1_1I2C"><span
 <li><p><strong>data</strong> – pointer to the bytes to write </p></li>
 <li><p><strong>len</strong> – the number of bytes to write </p></li>
 <li><p><strong>repeated</strong> – Suppresses the generation of a STOP condition if set. Default: false;</p></li>
-<li><p><strong>address</strong> – The 8bit <a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> address of the device to write to </p></li>
-<li><p><strong>data</strong> – pointer to the bytes to write </p></li>
-<li><p><strong>len</strong> – the number of bytes to write</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK on success, DEVICE_I2C_ERROR if the the write request failed.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success, DEVICE_I2C_ERROR if the the write request failed. </p>
+<dd class="field-even"><p>DEVICE_OK on success, DEVICE_I2C_ERROR if the the write request failed. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -422,7 +407,7 @@ Issues a standard, <a class="reference internal" href="#classcodal_1_1I2C"><span
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal3I2C13writeRegisterE8uint16_t7uint8_t7uint8_t">
-<span id="_CPPv3N5codal3I2C13writeRegisterE8uint16_t7uint8_t7uint8_t"></span><span id="_CPPv2N5codal3I2C13writeRegisterE8uint16_t7uint8_t7uint8_t"></span><span id="codal::I2C::writeRegister__uint16_t.uint8_t.uint8_t"></span><span class="target" id="classcodal_1_1I2C_1a79f39e7b6f8460a05347a7fd3b57d518"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeRegister</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">reg</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3I2C13writeRegisterE8uint16_t7uint8_t7uint8_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal3I2C13writeRegisterE8uint16_t7uint8_t7uint8_t"></span><span id="_CPPv2N5codal3I2C13writeRegisterE8uint16_t7uint8_t7uint8_t"></span><span id="codal::I2C::writeRegister__uint16_t.uint8_t.uint8_t"></span><span class="target" id="classcodal_1_1I2C_1af994c47dcf93fa0cd249cca2bf100c5e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeRegister</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">reg</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3I2C13writeRegisterE8uint16_t7uint8_t7uint8_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Performs a typical register write operation to the <a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> slave device provided. This consists of:<ul class="simple">
 <li><p>Asserting a Start condition on the bus</p></li>
 <li><p>Selecting the Slave address (as an 8 bit address)</p></li>
@@ -448,17 +433,8 @@ Issues a standard, <a class="reference internal" href="#classcodal_1_1I2C"><span
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal3I2C4readE8uint16_tP7uint8_tib">
-<span id="_CPPv3N5codal3I2C4readE8uint16_tP7uint8_tib"></span><span id="_CPPv2N5codal3I2C4readE8uint16_tP7uint8_tib"></span><span id="codal::I2C::read__uint16_t.uint8_tP.i.b"></span><span class="target" id="classcodal_1_1I2C_1ab4fe63a3497f0f7ba903e05ebff72e90"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">repeated</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3I2C4readE8uint16_tP7uint8_tib" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal3I2C4readE8uint16_tP7uint8_tib"></span><span id="_CPPv2N5codal3I2C4readE8uint16_tP7uint8_tib"></span><span id="codal::I2C::read__uint16_t.uint8_tP.i.b"></span><span class="target" id="classcodal_1_1I2C_1a6a8bbece0232000fc79c62038d328748"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">repeated</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3I2C4readE8uint16_tP7uint8_tib" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Issues a standard, 2 byte <a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> command read to the <a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> bus. This consists of:<ul class="simple">
-<li><p>Asserting a Start condition on the bus</p></li>
-<li><p>Selecting the Slave address (as an 8 bit address)</p></li>
-<li><p>reading “len” bytes of raw 8 bit data into the buffer provided</p></li>
-<li><p>Asserting a Stop condition on the bus</p></li>
-</ul>
-</p>
-<p>The CPU will busy wait until the transmission is complete.</p>
-<p>
-Issues a standard, 2 byte <a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> command read to the <a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> bus. This consists of:<ul class="simple">
 <li><p>Asserting a Start condition on the bus</p></li>
 <li><p>Selecting the Slave address (as an 8 bit address)</p></li>
 <li><p>reading “len” bytes of raw 8 bit data into the buffer provided</p></li>
@@ -473,16 +449,10 @@ Issues a standard, 2 byte <a class="reference internal" href="#classcodal_1_1I2C
 <li><p><strong>data</strong> – pointer to store the the bytes read </p></li>
 <li><p><strong>len</strong> – the number of bytes to read into the buffer </p></li>
 <li><p><strong>repeated</strong> – Suppresses the generation of a STOP condition if set. Default: false;</p></li>
-<li><p><strong>address</strong> – The 8bit <a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> address of the device to read from </p></li>
-<li><p><strong>data</strong> – pointer to store the the bytes read </p></li>
-<li><p><strong>len</strong> – the number of bytes to read into the buffer</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK on success, DEVICE_I2C_ERROR if the the read request failed.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success, DEVICE_I2C_ERROR if the the read request failed. </p>
+<dd class="field-even"><p>DEVICE_OK on success, DEVICE_I2C_ERROR if the the read request failed. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -494,7 +464,7 @@ Issues a standard, 2 byte <a class="reference internal" href="#classcodal_1_1I2C
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal3I2C12readRegisterE8uint16_t7uint8_tP7uint8_tib">
-<span id="_CPPv3N5codal3I2C12readRegisterE8uint16_t7uint8_tP7uint8_tib"></span><span id="_CPPv2N5codal3I2C12readRegisterE8uint16_t7uint8_tP7uint8_tib"></span><span id="codal::I2C::readRegister__uint16_t.uint8_t.uint8_tP.i.b"></span><span class="target" id="classcodal_1_1I2C_1a8cdd892e4b74979a87752a1c5b8d40a1"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readRegister</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">reg</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">repeated</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3I2C12readRegisterE8uint16_t7uint8_tP7uint8_tib" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal3I2C12readRegisterE8uint16_t7uint8_tP7uint8_tib"></span><span id="_CPPv2N5codal3I2C12readRegisterE8uint16_t7uint8_tP7uint8_tib"></span><span id="codal::I2C::readRegister__uint16_t.uint8_t.uint8_tP.i.b"></span><span class="target" id="classcodal_1_1I2C_1ab3879106e2b36c3d31904197be30452b"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readRegister</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">reg</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">repeated</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3I2C12readRegisterE8uint16_t7uint8_tP7uint8_tib" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Performs a typical register read operation to the <a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> slave device provided. This consists of:<ul class="simple">
 <li><p>Asserting a Start condition on the bus</p></li>
 <li><p>Selecting the Slave address (as an 8 bit address, <a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> WRITE)</p></li>
@@ -525,7 +495,7 @@ Issues a standard, 2 byte <a class="reference internal" href="#classcodal_1_1I2C
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal3I2C12readRegisterE7uint8_t7uint8_t">
-<span id="_CPPv3N5codal3I2C12readRegisterE7uint8_t7uint8_t"></span><span id="_CPPv2N5codal3I2C12readRegisterE7uint8_t7uint8_t"></span><span id="codal::I2C::readRegister__uint8_t.uint8_t"></span><span class="target" id="classcodal_1_1I2C_1aa81a5cfb9267fec8363d6ed71296a8ab"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readRegister</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">reg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3I2C12readRegisterE7uint8_t7uint8_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal3I2C12readRegisterE7uint8_t7uint8_t"></span><span id="_CPPv2N5codal3I2C12readRegisterE7uint8_t7uint8_t"></span><span id="codal::I2C::readRegister__uint8_t.uint8_t"></span><span class="target" id="classcodal_1_1I2C_1a895b18fcadda13d91d1f3b638b0143c1"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readRegister</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">reg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3I2C12readRegisterE7uint8_t7uint8_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Issues a single byte read command, and returns the value read, or an error.</p>
 <p>Blocks the calling thread until complete.</p>
 <dl class="field-list simple">
@@ -546,33 +516,29 @@ Issues a standard, 2 byte <a class="reference internal" href="#classcodal_1_1I2C
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal3I2C5startEv">
-<span id="_CPPv3N5codal3I2C5startEv"></span><span id="_CPPv2N5codal3I2C5startEv"></span><span id="codal::I2C::start"></span><span class="target" id="classcodal_1_1I2C_1a5aad1e1b764c98f558b55f7c9a07c5da"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">start</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3I2C5startEv" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Issues a START condition on the <a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a><p>bus</p>
-<p>Issues a START condition on the</p>
-<a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> bus </p>
+<span id="_CPPv3N5codal3I2C5startEv"></span><span id="_CPPv2N5codal3I2C5startEv"></span><span id="codal::I2C::start"></span><span class="target" id="classcodal_1_1I2C_1a540010e9c4f9d92af4c3aef8301b74b1"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">start</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3I2C5startEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Issues a START condition on the <a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> bus </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success, or an error code</p>
+<dd class="field-odd"><p>DEVICE_OK on success, or an error code </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal3I2C4stopEv">
-<span id="_CPPv3N5codal3I2C4stopEv"></span><span id="_CPPv2N5codal3I2C4stopEv"></span><span id="codal::I2C::stop"></span><span class="target" id="classcodal_1_1I2C_1a667c64d258e0246ec4669ba9ad860f66"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3I2C4stopEv" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Issues a STOP condition on the <a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a><p>bus</p>
-<p>Issues a STOP condition on the</p>
-<a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> bus </p>
+<span id="_CPPv3N5codal3I2C4stopEv"></span><span id="_CPPv2N5codal3I2C4stopEv"></span><span id="codal::I2C::stop"></span><span class="target" id="classcodal_1_1I2C_1a8d02e797b5a56257c43dceb591fa43df"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3I2C4stopEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Issues a STOP condition on the <a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> bus </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success, or an error code</p>
+<dd class="field-odd"><p>DEVICE_OK on success, or an error code </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal3I2C5writeE7uint8_t">
-<span id="_CPPv3N5codal3I2C5writeE7uint8_t"></span><span id="_CPPv2N5codal3I2C5writeE7uint8_t"></span><span id="codal::I2C::write__uint8_t"></span><span class="target" id="classcodal_1_1I2C_1afce8229f6334bab49ae74284c50555a7"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3I2C5writeE7uint8_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal3I2C5writeE7uint8_t"></span><span id="_CPPv2N5codal3I2C5writeE7uint8_t"></span><span id="codal::I2C::write__uint8_t"></span><span class="target" id="classcodal_1_1I2C_1a08487624b03adf3f55221cfd4866d003"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3I2C5writeE7uint8_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Writes the given byte to the <a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> bus.</p>
 <p>The CPU will busy wait until the transmission is complete.</p>
 <dl class="field-list simple">
@@ -587,7 +553,7 @@ Issues a standard, 2 byte <a class="reference internal" href="#classcodal_1_1I2C
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal3I2C4readE15AcknowledgeType">
-<span id="_CPPv3N5codal3I2C4readE15AcknowledgeType"></span><span id="_CPPv2N5codal3I2C4readE15AcknowledgeType"></span><span id="codal::I2C::read__AcknowledgeType"></span><span class="target" id="classcodal_1_1I2C_1a296f68189b761e74658499bd572a395f"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enum_namespacecodal_1ab23a2a4983ebcd94bf459968184a3fa4.html#_CPPv4N5codal15AcknowledgeTypeE" title="codal::AcknowledgeType"><span class="n"><span class="pre">AcknowledgeType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">ack</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="enum_namespacecodal_1ab23a2a4983ebcd94bf459968184a3fa4.html#_CPPv4N5codal15AcknowledgeType3ACKE" title="codal::ACK"><span class="n"><span class="pre">ACK</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3I2C4readE15AcknowledgeType" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal3I2C4readE15AcknowledgeType"></span><span id="_CPPv2N5codal3I2C4readE15AcknowledgeType"></span><span id="codal::I2C::read__AcknowledgeType"></span><span class="target" id="classcodal_1_1I2C_1aaf4b02a7b294c7522b10ec051297fba8"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enum_namespacecodal_1ab23a2a4983ebcd94bf459968184a3fa4.html#_CPPv4N5codal15AcknowledgeTypeE" title="codal::AcknowledgeType"><span class="n"><span class="pre">AcknowledgeType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">ack</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="enum_namespacecodal_1ab23a2a4983ebcd94bf459968184a3fa4.html#_CPPv4N5codal15AcknowledgeType3ACKE" title="codal::ACK"><span class="n"><span class="pre">ACK</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3I2C4readE15AcknowledgeType" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Reads a single byte from the <a class="reference internal" href="#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> bus. The CPU will busy wait until the transmission is complete.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>

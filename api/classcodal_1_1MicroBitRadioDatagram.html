@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class MicroBitRadioDatagram &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class MicroBitRadioDatagram &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,7 +282,7 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-documentation">
    Class Documentation
@@ -305,7 +306,7 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-documentation">
    Class Documentation
@@ -341,57 +342,37 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21MicroBitRadioDatagram21MicroBitRadioDatagramER13MicroBitRadio">
-<span id="_CPPv3N5codal21MicroBitRadioDatagram21MicroBitRadioDatagramER13MicroBitRadio"></span><span id="_CPPv2N5codal21MicroBitRadioDatagram21MicroBitRadioDatagramER13MicroBitRadio"></span><span id="codal::MicroBitRadioDatagram::MicroBitRadioDatagram__MicroBitRadioR"></span><span class="target" id="classcodal_1_1MicroBitRadioDatagram_1a855b5afb36f74695963cfcb8097a1d1d"></span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitRadioDatagram</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1MicroBitRadio.html#_CPPv4N5codal13MicroBitRadioE" title="codal::MicroBitRadio"><span class="n"><span class="pre">MicroBitRadio</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">r</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21MicroBitRadioDatagram21MicroBitRadioDatagramER13MicroBitRadio" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal21MicroBitRadioDatagram21MicroBitRadioDatagramER13MicroBitRadio"></span><span id="_CPPv2N5codal21MicroBitRadioDatagram21MicroBitRadioDatagramER13MicroBitRadio"></span><span id="codal::MicroBitRadioDatagram::MicroBitRadioDatagram__MicroBitRadioR"></span><span class="target" id="classcodal_1_1MicroBitRadioDatagram_1a74edf518357311a3923bb1bdfea974c6"></span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitRadioDatagram</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1MicroBitRadio.html#_CPPv4N5codal13MicroBitRadioE" title="codal::MicroBitRadio"><span class="n"><span class="pre">MicroBitRadio</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">r</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21MicroBitRadioDatagram21MicroBitRadioDatagramER13MicroBitRadio" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor.</p>
 <p>Creates an instance of a <a class="reference internal" href="#classcodal_1_1MicroBitRadioDatagram"><span class="std std-ref">MicroBitRadioDatagram</span></a> which offers the ability to broadcast simple text or binary messages to other micro:bits in the vicinity</p>
-<p>
-Provides a simple broadcast radio abstraction, built upon the raw nrf51822 RADIO module.</p>
-<p>This class provides the ability to broadcast simple text or binary messages to other micro:bits in the vicinity It is envisaged that this would provide the basis for children to experiment with building their own, simple, custom protocols.</p>
-<p>
-Creates an instance of a <a class="reference internal" href="#classcodal_1_1MicroBitRadioDatagram"><span class="std std-ref">MicroBitRadioDatagram</span></a> which offers the ability to broadcast simple text or binary messages to other micro:bits in the vicinity</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This API does not contain any form of encryption, authentication or authorisation. Its purpose is solely for use as a teaching aid to demonstrate how simple communications operates, and to provide a sandpit through which learning can take place. For serious applications, BLE should be considered a substantially more secure alternative. Constructor.</p>
-</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>r</strong> – The underlying radio module used to send and receive data.</p></li>
-<li><p><strong>r</strong> – The underlying radio module used to send and receive data. </p></li>
-</ul>
+<dd class="field-odd"><p><strong>r</strong> – The underlying radio module used to send and receive data. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21MicroBitRadioDatagram4recvEP7uint8_ti">
-<span id="_CPPv3N5codal21MicroBitRadioDatagram4recvEP7uint8_ti"></span><span id="_CPPv2N5codal21MicroBitRadioDatagram4recvEP7uint8_ti"></span><span id="codal::MicroBitRadioDatagram::recv__uint8_tP.i"></span><span class="target" id="classcodal_1_1MicroBitRadioDatagram_1ad8208628bdc828b04a76a796ffdb1cce"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">recv</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buf</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21MicroBitRadioDatagram4recvEP7uint8_ti" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal21MicroBitRadioDatagram4recvEP7uint8_ti"></span><span id="_CPPv2N5codal21MicroBitRadioDatagram4recvEP7uint8_ti"></span><span id="codal::MicroBitRadioDatagram::recv__uint8_tP.i"></span><span class="target" id="classcodal_1_1MicroBitRadioDatagram_1af9a4bcb439966ef21e842b8df95a483c"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">recv</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buf</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21MicroBitRadioDatagram4recvEP7uint8_ti" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Retrieves packet payload data into the given buffer.</p>
 <p>If a data packet is already available, then it will be returned immediately to the caller. If no data is available then MICROBIT_INVALID_PARAMETER is returned.</p>
-<p>
-Retrieves packet payload data into the given buffer.</p>
-<p>If a data packet is already available, then it will be returned immediately to the caller. If no data is available then DEVICE_INVALID_PARAMETER is returned.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>buf</strong> – A pointer to a valid memory location where the received data is to be stored</p></li>
 <li><p><strong>len</strong> – The maximum amount of data that can safely be stored in ‘buf’</p></li>
-<li><p><strong>buf</strong> – A pointer to a valid memory location where the received data is to be stored</p></li>
-<li><p><strong>len</strong> – The maximum amount of data that can safely be stored in ‘buf’</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The length of the data stored, or MICROBIT_INVALID_PARAMETER if no data is available, or the memory regions provided are invalid.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The length of the data stored, or DEVICE_INVALID_PARAMETER if no data is available, or the memory regions provided are invalid. </p>
+<dd class="field-even"><p>The length of the data stored, or MICROBIT_INVALID_PARAMETER if no data is available, or the memory regions provided are invalid. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21MicroBitRadioDatagram4recvEv">
-<span id="_CPPv3N5codal21MicroBitRadioDatagram4recvEv"></span><span id="_CPPv2N5codal21MicroBitRadioDatagram4recvEv"></span><span id="codal::MicroBitRadioDatagram::recv"></span><span class="target" id="classcodal_1_1MicroBitRadioDatagram_1a735efe9eefcc6cc7491df66ebc1462ee"></span><a class="reference internal" href="classcodal_1_1PacketBuffer.html#_CPPv4N5codal12PacketBufferE" title="codal::PacketBuffer"><span class="n"><span class="pre">PacketBuffer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">recv</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21MicroBitRadioDatagram4recvEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal21MicroBitRadioDatagram4recvEv"></span><span id="_CPPv2N5codal21MicroBitRadioDatagram4recvEv"></span><span id="codal::MicroBitRadioDatagram::recv"></span><span class="target" id="classcodal_1_1MicroBitRadioDatagram_1a0799c1098d1e6ffdc915348a8acdc40a"></span><a class="reference internal" href="classcodal_1_1PacketBuffer.html#_CPPv4N5codal12PacketBufferE" title="codal::PacketBuffer"><span class="n"><span class="pre">PacketBuffer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">recv</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21MicroBitRadioDatagram4recvEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Retreives packet payload data into the given buffer.</p>
 <p>If a data packet is already available, then it will be returned immediately to the caller in the form of a <a class="reference internal" href="classcodal_1_1PacketBuffer.html#classcodal_1_1PacketBuffer"><span class="std std-ref">PacketBuffer</span></a>.</p>
 <dl class="field-list simple">
@@ -403,81 +384,55 @@ Retrieves packet payload data into the given buffer.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21MicroBitRadioDatagram4sendEP7uint8_ti">
-<span id="_CPPv3N5codal21MicroBitRadioDatagram4sendEP7uint8_ti"></span><span id="_CPPv2N5codal21MicroBitRadioDatagram4sendEP7uint8_ti"></span><span id="codal::MicroBitRadioDatagram::send__uint8_tP.i"></span><span class="target" id="classcodal_1_1MicroBitRadioDatagram_1acc0c83be1618188977a8ae3e6e96ca12"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">send</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buffer</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21MicroBitRadioDatagram4sendEP7uint8_ti" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal21MicroBitRadioDatagram4sendEP7uint8_ti"></span><span id="_CPPv2N5codal21MicroBitRadioDatagram4sendEP7uint8_ti"></span><span id="codal::MicroBitRadioDatagram::send__uint8_tP.i"></span><span class="target" id="classcodal_1_1MicroBitRadioDatagram_1a8fdf5f4598f1be1302de5ccc19365c69"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">send</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buffer</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21MicroBitRadioDatagram4sendEP7uint8_ti" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Transmits the given buffer onto the broadcast radio.</p>
-<p>This is a synchronous call that will wait until the transmission of the packet has completed before returning.</p>
-<p>
-Transmits the given buffer onto the broadcast radio.</p>
 <p>This is a synchronous call that will wait until the transmission of the packet has completed before returning.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>buffer</strong> – The packet contents to transmit.</p></li>
 <li><p><strong>len</strong> – The number of bytes to transmit.</p></li>
-<li><p><strong>buffer</strong> – The packet contents to transmit.</p></li>
-<li><p><strong>len</strong> – The number of bytes to transmit.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>MICROBIT_OK on success, or MICROBIT_INVALID_PARAMETER if the buffer is invalid, or the number of bytes to transmit is greater than <code class="docutils literal notranslate"><span class="pre">MICROBIT_RADIO_MAX_PACKET_SIZE</span> <span class="pre">+</span> <span class="pre">MICROBIT_RADIO_HEADER_SIZE</span></code>.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success, or DEVICE_INVALID_PARAMETER if the buffer is invalid, or the number of bytes to transmit is greater than <code class="docutils literal notranslate"><span class="pre">MICROBIT_RADIO_MAX_PACKET_SIZE</span> <span class="pre">+</span> <span class="pre">MICROBIT_RADIO_HEADER_SIZE</span></code>. </p>
+<dd class="field-even"><p>MICROBIT_OK on success, or MICROBIT_INVALID_PARAMETER if the buffer is invalid, or the number of bytes to transmit is greater than <code class="docutils literal notranslate"><span class="pre">MICROBIT_RADIO_MAX_PACKET_SIZE</span> <span class="pre">+</span> <span class="pre">MICROBIT_RADIO_HEADER_SIZE</span></code>. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21MicroBitRadioDatagram4sendE12PacketBuffer">
-<span id="_CPPv3N5codal21MicroBitRadioDatagram4sendE12PacketBuffer"></span><span id="_CPPv2N5codal21MicroBitRadioDatagram4sendE12PacketBuffer"></span><span id="codal::MicroBitRadioDatagram::send__PacketBuffer"></span><span class="target" id="classcodal_1_1MicroBitRadioDatagram_1ae9856962a3666b7a034488822e1d2e7b"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">send</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1PacketBuffer.html#_CPPv4N5codal12PacketBufferE" title="codal::PacketBuffer"><span class="n"><span class="pre">PacketBuffer</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21MicroBitRadioDatagram4sendE12PacketBuffer" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal21MicroBitRadioDatagram4sendE12PacketBuffer"></span><span id="_CPPv2N5codal21MicroBitRadioDatagram4sendE12PacketBuffer"></span><span id="codal::MicroBitRadioDatagram::send__PacketBuffer"></span><span class="target" id="classcodal_1_1MicroBitRadioDatagram_1a5bcc1b8e400d7778ef527ac16dd31c7b"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">send</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1PacketBuffer.html#_CPPv4N5codal12PacketBufferE" title="codal::PacketBuffer"><span class="n"><span class="pre">PacketBuffer</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21MicroBitRadioDatagram4sendE12PacketBuffer" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Transmits the given string onto the broadcast radio.</p>
-<p>This is a synchronous call that will wait until the transmission of the packet has completed before returning.</p>
-<p>
-Transmits the given string onto the broadcast radio.</p>
 <p>This is a synchronous call that will wait until the transmission of the packet has completed before returning.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>data</strong> – The packet contents to transmit.</p></li>
-<li><p><strong>data</strong> – The packet contents to transmit.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>data</strong> – The packet contents to transmit.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>MICROBIT_OK on success, or MICROBIT_INVALID_PARAMETER if the buffer is invalid, or the number of bytes to transmit is greater than <code class="docutils literal notranslate"><span class="pre">MICROBIT_RADIO_MAX_PACKET_SIZE</span> <span class="pre">+</span> <span class="pre">MICROBIT_RADIO_HEADER_SIZE</span></code>.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success, or DEVICE_INVALID_PARAMETER if the buffer is invalid, or the number of bytes to transmit is greater than <code class="docutils literal notranslate"><span class="pre">MICROBIT_RADIO_MAX_PACKET_SIZE</span> <span class="pre">+</span> <span class="pre">MICROBIT_RADIO_HEADER_SIZE</span></code>. </p>
+<dd class="field-even"><p>MICROBIT_OK on success, or MICROBIT_INVALID_PARAMETER if the buffer is invalid, or the number of bytes to transmit is greater than <code class="docutils literal notranslate"><span class="pre">MICROBIT_RADIO_MAX_PACKET_SIZE</span> <span class="pre">+</span> <span class="pre">MICROBIT_RADIO_HEADER_SIZE</span></code>. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21MicroBitRadioDatagram4sendE13ManagedString">
-<span id="_CPPv3N5codal21MicroBitRadioDatagram4sendE13ManagedString"></span><span id="_CPPv2N5codal21MicroBitRadioDatagram4sendE13ManagedString"></span><span id="codal::MicroBitRadioDatagram::send__ManagedString"></span><span class="target" id="classcodal_1_1MicroBitRadioDatagram_1a5c643256497881e0c678b73c0841895e"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">send</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21MicroBitRadioDatagram4sendE13ManagedString" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal21MicroBitRadioDatagram4sendE13ManagedString"></span><span id="_CPPv2N5codal21MicroBitRadioDatagram4sendE13ManagedString"></span><span id="codal::MicroBitRadioDatagram::send__ManagedString"></span><span class="target" id="classcodal_1_1MicroBitRadioDatagram_1a2004ec52f951314dd4e2f5ad6bf87efd"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">send</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21MicroBitRadioDatagram4sendE13ManagedString" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Transmits the given string onto the broadcast radio.</p>
-<p>This is a synchronous call that will wait until the transmission of the packet has completed before returning.</p>
-<p>
-Transmits the given string onto the broadcast radio.</p>
 <p>This is a synchronous call that will wait until the transmission of the packet has completed before returning.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>data</strong> – The packet contents to transmit.</p></li>
-<li><p><strong>data</strong> – The packet contents to transmit.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>data</strong> – The packet contents to transmit.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>MICROBIT_OK on success, or MICROBIT_INVALID_PARAMETER if the buffer is invalid, or the number of bytes to transmit is greater than <code class="docutils literal notranslate"><span class="pre">MICROBIT_RADIO_MAX_PACKET_SIZE</span> <span class="pre">+</span> <span class="pre">MICROBIT_RADIO_HEADER_SIZE</span></code>.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success, or DEVICE_INVALID_PARAMETER if the buffer is invalid, or the number of bytes to transmit is greater than <code class="docutils literal notranslate"><span class="pre">MICROBIT_RADIO_MAX_PACKET_SIZE</span> <span class="pre">+</span> <span class="pre">MICROBIT_RADIO_HEADER_SIZE</span></code>. </p>
+<dd class="field-even"><p>MICROBIT_OK on success, or MICROBIT_INVALID_PARAMETER if the buffer is invalid, or the number of bytes to transmit is greater than <code class="docutils literal notranslate"><span class="pre">MICROBIT_RADIO_MAX_PACKET_SIZE</span> <span class="pre">+</span> <span class="pre">MICROBIT_RADIO_HEADER_SIZE</span></code>. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal21MicroBitRadioDatagram14packetReceivedEv">
-<span id="_CPPv3N5codal21MicroBitRadioDatagram14packetReceivedEv"></span><span id="_CPPv2N5codal21MicroBitRadioDatagram14packetReceivedEv"></span><span id="codal::MicroBitRadioDatagram::packetReceived"></span><span class="target" id="classcodal_1_1MicroBitRadioDatagram_1a359c4d560e7eed609eff9d4326619c3f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">packetReceived</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21MicroBitRadioDatagram14packetReceivedEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal21MicroBitRadioDatagram14packetReceivedEv"></span><span id="_CPPv2N5codal21MicroBitRadioDatagram14packetReceivedEv"></span><span id="codal::MicroBitRadioDatagram::packetReceived"></span><span class="target" id="classcodal_1_1MicroBitRadioDatagram_1a3fe7bf86164806a11eaad589fbeb6f36"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">packetReceived</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal21MicroBitRadioDatagram14packetReceivedEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Protocol handler callback. This is called when the radio receives a packet marked as a datagram.</p>
 <p>This function process this packet, and queues it for user reception. </p>
 </dd></dl>

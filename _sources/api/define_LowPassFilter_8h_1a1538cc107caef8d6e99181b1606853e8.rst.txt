@@ -1,0 +1,14 @@
+.. _exhale_define_LowPassFilter_8h_1a1538cc107caef8d6e99181b1606853e8:
+
+Define LOW_PASS_FILTER_H
+========================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_LowPassFilter.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LOW_PASS_FILTER_H
+   :project: CODAL

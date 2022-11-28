@@ -1,0 +1,69 @@
+
+.. _file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_EffectFilter.h:
+
+File EffectFilter.h
+===================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams>` (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/streams``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/home/runner/work/codal-documentation/codal-documentation/libraries/codal-core/inc/streams/EffectFilter.h``)
+--------------------------------------------------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_EffectFilter.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``DataStream.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_DataStream.h`)
+
+- ``ManagedBuffer.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_ManagedBuffer.h`)
+
+- ``StreamNormalizer.h`` (:ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_StreamNormalizer.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_LowPassFilter.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_codal`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classcodal_1_1EffectFilter`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_EffectFilter_8h_1a793dce8138aa3cb168df8317e263d884`
+

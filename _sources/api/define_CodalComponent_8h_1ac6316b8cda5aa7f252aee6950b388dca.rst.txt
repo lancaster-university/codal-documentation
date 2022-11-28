@@ -1,0 +1,14 @@
+.. _exhale_define_CodalComponent_8h_1ac6316b8cda5aa7f252aee6950b388dca:
+
+Define DEVICE_ID_LOG
+====================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalComponent.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DEVICE_ID_LOG
+   :project: CODAL

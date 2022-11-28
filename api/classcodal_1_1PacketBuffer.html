@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class PacketBuffer &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class PacketBuffer &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,7 +282,7 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-documentation">
    Class Documentation
@@ -305,7 +306,7 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-documentation">
    Class Documentation
@@ -340,7 +341,7 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal12PacketBuffer8getBytesEv">
-<span id="_CPPv3N5codal12PacketBuffer8getBytesEv"></span><span id="_CPPv2N5codal12PacketBuffer8getBytesEv"></span><span id="codal::PacketBuffer::getBytes"></span><span class="target" id="classcodal_1_1PacketBuffer_1ac37ad7b88462a3a562f4d893a533bc9d"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getBytes</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer8getBytesEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal12PacketBuffer8getBytesEv"></span><span id="_CPPv2N5codal12PacketBuffer8getBytesEv"></span><span id="codal::PacketBuffer::getBytes"></span><span class="target" id="classcodal_1_1PacketBuffer_1a6410a7f5a014944a91e63b418ab21d98"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getBytes</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer8getBytesEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Provide a pointer to a memory location containing the packet data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -351,7 +352,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal12PacketBuffer12PacketBufferEv">
-<span id="_CPPv3N5codal12PacketBuffer12PacketBufferEv"></span><span id="_CPPv2N5codal12PacketBuffer12PacketBufferEv"></span><span id="codal::PacketBuffer::PacketBuffer"></span><span class="target" id="classcodal_1_1PacketBuffer_1a00ff3408bc919a85011b39d79d71a33e"></span><span class="sig-name descname"><span class="n"><span class="pre">PacketBuffer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer12PacketBufferEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal12PacketBuffer12PacketBufferEv"></span><span id="_CPPv2N5codal12PacketBuffer12PacketBufferEv"></span><span id="codal::PacketBuffer::PacketBuffer"></span><span class="target" id="classcodal_1_1PacketBuffer_1a0924194c2a5477256441567bfd3e07b8"></span><span class="sig-name descname"><span class="n"><span class="pre">PacketBuffer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer12PacketBufferEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Default Constructor. Creates an empty Packet Buffer.</p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PacketBuffer</span><span class="w"> </span><span class="nf">p</span><span class="p">();</span><span class="w"></span>
 </pre></div>
@@ -361,7 +362,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal12PacketBuffer12PacketBufferEi">
-<span id="_CPPv3N5codal12PacketBuffer12PacketBufferEi"></span><span id="_CPPv2N5codal12PacketBuffer12PacketBufferEi"></span><span id="codal::PacketBuffer::PacketBuffer__i"></span><span class="target" id="classcodal_1_1PacketBuffer_1aecfcc4884d8f4343163072fecfbdc590"></span><span class="sig-name descname"><span class="n"><span class="pre">PacketBuffer</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer12PacketBufferEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal12PacketBuffer12PacketBufferEi"></span><span id="_CPPv2N5codal12PacketBuffer12PacketBufferEi"></span><span id="codal::PacketBuffer::PacketBuffer__i"></span><span class="target" id="classcodal_1_1PacketBuffer_1a7f42ef85d12937724976752a72efa0ab"></span><span class="sig-name descname"><span class="n"><span class="pre">PacketBuffer</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer12PacketBufferEi" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor. Creates a new <a class="reference internal" href="#classcodal_1_1PacketBuffer"><span class="std std-ref">PacketBuffer</span></a> of the given size.</p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PacketBuffer</span><span class="w"> </span><span class="nf">p</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span><span class="w">         </span><span class="c1">// Creates a PacketBuffer 16 bytes long.</span>
 </pre></div>
@@ -376,7 +377,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal12PacketBuffer12PacketBufferEP7uint8_tii">
-<span id="_CPPv3N5codal12PacketBuffer12PacketBufferEP7uint8_tii"></span><span id="_CPPv2N5codal12PacketBuffer12PacketBufferEP7uint8_tii"></span><span id="codal::PacketBuffer::PacketBuffer__uint8_tP.i.i"></span><span class="target" id="classcodal_1_1PacketBuffer_1af85d19c2b37e065354300eee26b1276f"></span><span class="sig-name descname"><span class="n"><span class="pre">PacketBuffer</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rssi</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer12PacketBufferEP7uint8_tii" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal12PacketBuffer12PacketBufferEP7uint8_tii"></span><span id="_CPPv2N5codal12PacketBuffer12PacketBufferEP7uint8_tii"></span><span id="codal::PacketBuffer::PacketBuffer__uint8_tP.i.i"></span><span class="target" id="classcodal_1_1PacketBuffer_1a3c3ec895a03973f526de216802045fe1"></span><span class="sig-name descname"><span class="n"><span class="pre">PacketBuffer</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rssi</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer12PacketBufferEP7uint8_tii" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor. Creates an empty Packet Buffer of the given size, and fills it with the data provided.</p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">buf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">13</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">};</span><span class="w"></span>
 <span class="n">PacketBuffer</span><span class="w"> </span><span class="nf">p</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w">         </span><span class="c1">// Creates a PacketBuffer 3 bytes long.</span>
@@ -396,7 +397,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal12PacketBuffer12PacketBufferERK12PacketBuffer">
-<span id="_CPPv3N5codal12PacketBuffer12PacketBufferERK12PacketBuffer"></span><span id="_CPPv2N5codal12PacketBuffer12PacketBufferERK12PacketBuffer"></span><span id="codal::PacketBuffer::PacketBuffer__PacketBufferCR"></span><span class="target" id="classcodal_1_1PacketBuffer_1af85ef87d1c59d06ed33fd029ddfc2e8d"></span><span class="sig-name descname"><span class="n"><span class="pre">PacketBuffer</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5codal12PacketBuffer12PacketBufferERK12PacketBuffer" title="codal::PacketBuffer::PacketBuffer"><span class="n"><span class="pre">PacketBuffer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">buffer</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer12PacketBufferERK12PacketBuffer" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal12PacketBuffer12PacketBufferERK12PacketBuffer"></span><span id="_CPPv2N5codal12PacketBuffer12PacketBufferERK12PacketBuffer"></span><span id="codal::PacketBuffer::PacketBuffer__PacketBufferCR"></span><span class="target" id="classcodal_1_1PacketBuffer_1a7042d1e1ce7d36372de31f0201f64a5e"></span><span class="sig-name descname"><span class="n"><span class="pre">PacketBuffer</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5codal12PacketBuffer12PacketBufferERK12PacketBuffer" title="codal::PacketBuffer::PacketBuffer"><span class="n"><span class="pre">PacketBuffer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">buffer</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer12PacketBufferERK12PacketBuffer" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Copy Constructor. Add ourselves as a reference to an existing <a class="reference internal" href="#classcodal_1_1PacketBuffer"><span class="std std-ref">PacketBuffer</span></a>.</p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PacketBuffer</span><span class="w"> </span><span class="nf">p</span><span class="p">();</span><span class="w"></span>
 <span class="n">PacketBuffer</span><span class="w"> </span><span class="nf">p2</span><span class="p">(</span><span class="n">p</span><span class="p">);</span><span class="w"> </span><span class="c1">// Refers to the same packet as p.</span>
@@ -412,7 +413,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal12PacketBuffer4initEP7uint8_tii">
-<span id="_CPPv3N5codal12PacketBuffer4initEP7uint8_tii"></span><span id="_CPPv2N5codal12PacketBuffer4initEP7uint8_tii"></span><span id="codal::PacketBuffer::init__uint8_tP.i.i"></span><span class="target" id="classcodal_1_1PacketBuffer_1ab1ad070c571a8aaffa9616fbaea4b9c4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rssi</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer4initEP7uint8_tii" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal12PacketBuffer4initEP7uint8_tii"></span><span id="_CPPv2N5codal12PacketBuffer4initEP7uint8_tii"></span><span id="codal::PacketBuffer::init__uint8_tP.i.i"></span><span class="target" id="classcodal_1_1PacketBuffer_1a348057d9b5fdf6f2fa3556e5c52a9ac8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rssi</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer4initEP7uint8_tii" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Internal constructor-initialiser.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -427,14 +428,14 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal12PacketBufferD0Ev">
-<span id="_CPPv3N5codal12PacketBufferD0Ev"></span><span id="_CPPv2N5codal12PacketBufferD0Ev"></span><span id="codal::PacketBuffer::~PacketBuffer"></span><span class="target" id="classcodal_1_1PacketBuffer_1aa8f98ef2e28bcb72ce15a0a5349f40ad"></span><span class="sig-name descname"><span class="n"><span class="pre">~PacketBuffer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBufferD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal12PacketBufferD0Ev"></span><span id="_CPPv2N5codal12PacketBufferD0Ev"></span><span id="codal::PacketBuffer::~PacketBuffer"></span><span class="target" id="classcodal_1_1PacketBuffer_1ab681598d51e91d549762f5f37e7510da"></span><span class="sig-name descname"><span class="n"><span class="pre">~PacketBuffer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBufferD0Ev" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Destructor.</p>
 <p>Removes buffer resources held by the instance. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal12PacketBufferaSERK12PacketBuffer">
-<span id="_CPPv3N5codal12PacketBufferaSERK12PacketBuffer"></span><span id="_CPPv2N5codal12PacketBufferaSERK12PacketBuffer"></span><span id="codal::PacketBuffer::assign-operator__PacketBufferCR"></span><span class="target" id="classcodal_1_1PacketBuffer_1a27768d46585ba222127e4ee54cab3f45"></span><a class="reference internal" href="#_CPPv4N5codal12PacketBufferE" title="codal::PacketBuffer"><span class="n"><span class="pre">PacketBuffer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5codal12PacketBufferE" title="codal::PacketBuffer"><span class="n"><span class="pre">PacketBuffer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBufferaSERK12PacketBuffer" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal12PacketBufferaSERK12PacketBuffer"></span><span id="_CPPv2N5codal12PacketBufferaSERK12PacketBuffer"></span><span id="codal::PacketBuffer::assign-operator__PacketBufferCR"></span><span class="target" id="classcodal_1_1PacketBuffer_1a8daf66f0f3990e22234adf3cf0ac7d63"></span><a class="reference internal" href="#_CPPv4N5codal12PacketBufferE" title="codal::PacketBuffer"><span class="n"><span class="pre">PacketBuffer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5codal12PacketBufferE" title="codal::PacketBuffer"><span class="n"><span class="pre">PacketBuffer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBufferaSERK12PacketBuffer" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Copy assign operation.</p>
 <p>Called when one <a class="reference internal" href="#classcodal_1_1PacketBuffer"><span class="std std-ref">PacketBuffer</span></a> is assigned the value of another using the ‘=’ operator.</p>
 <p>Decrements our reference count and free up the buffer as necessary.</p>
@@ -456,7 +457,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK5codal12PacketBufferixEi">
-<span id="_CPPv3NK5codal12PacketBufferixEi"></span><span id="_CPPv2NK5codal12PacketBufferixEi"></span><span id="codal::PacketBuffer::subscript-operator__iC"></span><span class="target" id="classcodal_1_1PacketBuffer_1a56f3700726b32d67a5759d2841ae11fd"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">[]</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5codal12PacketBufferixEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK5codal12PacketBufferixEi"></span><span id="_CPPv2NK5codal12PacketBufferixEi"></span><span id="codal::PacketBuffer::subscript-operator__iC"></span><span class="target" id="classcodal_1_1PacketBuffer_1ae4b1efa4573944d4ac7e8ab1efe571ce"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">[]</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5codal12PacketBufferixEi" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Array access operation (read).</p>
 <p>Called when a <a class="reference internal" href="#classcodal_1_1PacketBuffer"><span class="std std-ref">PacketBuffer</span></a> is dereferenced with a [] operation.</p>
 <p>Transparently map this through to the underlying payload for elegance of programming.</p>
@@ -469,7 +470,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal12PacketBufferixEi">
-<span id="_CPPv3N5codal12PacketBufferixEi"></span><span id="_CPPv2N5codal12PacketBufferixEi"></span><span id="codal::PacketBuffer::subscript-operator__i"></span><span class="target" id="classcodal_1_1PacketBuffer_1ab1490d5bb32d5534088137f8bbfdee94"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">[]</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBufferixEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal12PacketBufferixEi"></span><span id="_CPPv2N5codal12PacketBufferixEi"></span><span id="codal::PacketBuffer::subscript-operator__i"></span><span class="target" id="classcodal_1_1PacketBuffer_1ab1c3a1033730a01d08cdebac24bf1570"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">[]</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBufferixEi" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Array access operation (modify).</p>
 <p>Called when a <a class="reference internal" href="#classcodal_1_1PacketBuffer"><span class="std std-ref">PacketBuffer</span></a> is dereferenced with a [] operation.</p>
 <p>Transparently map this through to the underlying payload for elegance of programming.</p>
@@ -482,7 +483,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal12PacketBuffereqERK12PacketBuffer">
-<span id="_CPPv3N5codal12PacketBuffereqERK12PacketBuffer"></span><span id="_CPPv2N5codal12PacketBuffereqERK12PacketBuffer"></span><span id="codal::PacketBuffer::eq-operator__PacketBufferCR"></span><span class="target" id="classcodal_1_1PacketBuffer_1ad413a5cbdb8598555f8f75e972fa95d0"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">==</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5codal12PacketBufferE" title="codal::PacketBuffer"><span class="n"><span class="pre">PacketBuffer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffereqERK12PacketBuffer" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal12PacketBuffereqERK12PacketBuffer"></span><span id="_CPPv2N5codal12PacketBuffereqERK12PacketBuffer"></span><span id="codal::PacketBuffer::eq-operator__PacketBufferCR"></span><span class="target" id="classcodal_1_1PacketBuffer_1a67f0d146f319071f25b6823fe6797a22"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">==</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5codal12PacketBufferE" title="codal::PacketBuffer"><span class="n"><span class="pre">PacketBuffer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffereqERK12PacketBuffer" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Equality operation.</p>
 <p>Called when one <a class="reference internal" href="#classcodal_1_1PacketBuffer"><span class="std std-ref">PacketBuffer</span></a> is tested to be equal to another using the ‘==’ operator.</p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MicroBitDisplay</span><span class="w"> </span><span class="n">display</span><span class="p">;</span><span class="w"></span>
@@ -507,7 +508,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal12PacketBuffer7setByteEi7uint8_t">
-<span id="_CPPv3N5codal12PacketBuffer7setByteEi7uint8_t"></span><span id="_CPPv2N5codal12PacketBuffer7setByteEi7uint8_t"></span><span id="codal::PacketBuffer::setByte__i.uint8_t"></span><span class="target" id="classcodal_1_1PacketBuffer_1ab8dae3a32071c1d2407c5ee8d9e228fc"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setByte</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer7setByteEi7uint8_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal12PacketBuffer7setByteEi7uint8_t"></span><span id="_CPPv2N5codal12PacketBuffer7setByteEi7uint8_t"></span><span id="codal::PacketBuffer::setByte__i.uint8_t"></span><span class="target" id="classcodal_1_1PacketBuffer_1ae6a30db8c14ad46fbe88dbabd90be0b3"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setByte</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer7setByteEi7uint8_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Sets the byte at the given index to value provided.</p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PacketBuffer</span><span class="w"> </span><span class="nf">p1</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span><span class="w"></span>
 <span class="n">p1</span><span class="p">.</span><span class="n">setByte</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">);</span><span class="w">              </span><span class="c1">// Sets the first byte in the buffer to the value 255.</span>
@@ -529,7 +530,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal12PacketBuffer7getByteEi">
-<span id="_CPPv3N5codal12PacketBuffer7getByteEi"></span><span id="_CPPv2N5codal12PacketBuffer7getByteEi"></span><span id="codal::PacketBuffer::getByte__i"></span><span class="target" id="classcodal_1_1PacketBuffer_1aeafadb665f60971861799bf425a12337"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getByte</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer7getByteEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal12PacketBuffer7getByteEi"></span><span id="_CPPv2N5codal12PacketBuffer7getByteEi"></span><span id="codal::PacketBuffer::getByte__i"></span><span class="target" id="classcodal_1_1PacketBuffer_1a0f87992380a2a8768bcc86943fc3b6ea"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getByte</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer7getByteEi" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines the value of the given byte in the packet.</p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PacketBuffer</span><span class="w"> </span><span class="nf">p1</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span><span class="w"></span>
 <span class="n">p1</span><span class="p">.</span><span class="n">setByte</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">);</span><span class="w">              </span><span class="c1">// Sets the first byte in the buffer to the value 255.</span>
@@ -549,7 +550,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal12PacketBuffer6lengthEv">
-<span id="_CPPv3N5codal12PacketBuffer6lengthEv"></span><span id="_CPPv2N5codal12PacketBuffer6lengthEv"></span><span id="codal::PacketBuffer::length"></span><span class="target" id="classcodal_1_1PacketBuffer_1af1b82c7dbfc70c3ce281508cb7018e44"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">length</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer6lengthEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal12PacketBuffer6lengthEv"></span><span id="_CPPv2N5codal12PacketBuffer6lengthEv"></span><span id="codal::PacketBuffer::length"></span><span class="target" id="classcodal_1_1PacketBuffer_1a35596cebdaf7d84a7fed543bfc154f21"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">length</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer6lengthEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Gets number of bytes in this buffer</p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PacketBuffer</span><span class="w"> </span><span class="nf">p1</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span><span class="w"></span>
 <span class="n">p1</span><span class="p">.</span><span class="n">length</span><span class="p">();</span><span class="w"> </span><span class="c1">// Returns 16.</span>
@@ -565,7 +566,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal12PacketBuffer7getRSSIEv">
-<span id="_CPPv3N5codal12PacketBuffer7getRSSIEv"></span><span id="_CPPv2N5codal12PacketBuffer7getRSSIEv"></span><span id="codal::PacketBuffer::getRSSI"></span><span class="target" id="classcodal_1_1PacketBuffer_1a49a4fe72a4cc16e1ad776c20b72334ea"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRSSI</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer7getRSSIEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal12PacketBuffer7getRSSIEv"></span><span id="_CPPv2N5codal12PacketBuffer7getRSSIEv"></span><span id="codal::PacketBuffer::getRSSI"></span><span class="target" id="classcodal_1_1PacketBuffer_1ae2bf72947dfaace2b3c1e78b1be4e424"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRSSI</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer7getRSSIEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Retrieves the received signal strength of this packet.</p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PacketBuffer</span><span class="w"> </span><span class="nf">p1</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span><span class="w"></span>
 <span class="n">p1</span><span class="p">.</span><span class="n">getRSSI</span><span class="p">();</span><span class="w">                 </span><span class="c1">// Returns the received signal strength.</span>
@@ -581,7 +582,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal12PacketBuffer7setRSSIE7uint8_t">
-<span id="_CPPv3N5codal12PacketBuffer7setRSSIE7uint8_t"></span><span id="_CPPv2N5codal12PacketBuffer7setRSSIE7uint8_t"></span><span id="codal::PacketBuffer::setRSSI__uint8_t"></span><span class="target" id="classcodal_1_1PacketBuffer_1a5cdb580fdb8b933a6102104bc12218c5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRSSI</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rssi</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer7setRSSIE7uint8_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal12PacketBuffer7setRSSIE7uint8_t"></span><span id="_CPPv2N5codal12PacketBuffer7setRSSIE7uint8_t"></span><span id="codal::PacketBuffer::setRSSI__uint8_t"></span><span class="target" id="classcodal_1_1PacketBuffer_1a7246672ef0ae5dc3731614d76712633c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRSSI</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rssi</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer7setRSSIE7uint8_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Sets the received signal strength of this packet.</p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PacketBuffer</span><span class="w"> </span><span class="nf">p1</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span><span class="w"></span>
 <span class="n">p1</span><span class="p">.</span><span class="n">setRSSI</span><span class="p">(</span><span class="mi">37</span><span class="p">);</span><span class="w"></span>
@@ -595,7 +596,7 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-attributes">Public Static Attributes</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal12PacketBuffer11EmptyPacketE">
-<span id="_CPPv3N5codal12PacketBuffer11EmptyPacketE"></span><span id="_CPPv2N5codal12PacketBuffer11EmptyPacketE"></span><span id="codal::PacketBuffer::EmptyPacket__PacketBuffer"></span><span class="target" id="classcodal_1_1PacketBuffer_1a2987038bbd03ce27795204d3b5f8139e"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5codal12PacketBufferE" title="codal::PacketBuffer"><span class="n"><span class="pre">PacketBuffer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EmptyPacket</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5codal12PacketBufferE" title="codal::PacketBuffer"><span class="n"><span class="pre">PacketBuffer</span></span></a><span class="p"><span class="pre">(</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer11EmptyPacketE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal12PacketBuffer11EmptyPacketE"></span><span id="_CPPv2N5codal12PacketBuffer11EmptyPacketE"></span><span id="codal::PacketBuffer::EmptyPacket__PacketBuffer"></span><span class="target" id="classcodal_1_1PacketBuffer_1a6a36a8c7fc65984464094b3963607087"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5codal12PacketBufferE" title="codal::PacketBuffer"><span class="n"><span class="pre">PacketBuffer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EmptyPacket</span></span></span><a class="headerlink" href="#_CPPv4N5codal12PacketBuffer11EmptyPacketE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>

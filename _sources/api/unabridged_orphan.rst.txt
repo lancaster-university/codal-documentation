@@ -51,36 +51,6 @@ Directories
 .. toctree::
    :maxdepth: 5
 
-   dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_types.rst
-
-.. toctree::
-   :maxdepth: 5
-
    dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2.rst
 
 .. toctree::
@@ -98,29 +68,9 @@ Directories
 
    dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat.rst
 
-.. toctree::
-   :maxdepth: 5
-
-   dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   dir__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_compat.rst
-
 Files
 *****
 
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_AbstractButton.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -130,17 +80,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Accelerometer.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Accelerometer.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_AnalogSensor.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -150,17 +90,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_AnimatedDisplay.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_AnimatedDisplay.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_AsciiKeyMap.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -170,17 +100,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_types_BitmapFont.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_BitmapFont.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_Button.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -190,27 +110,12 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_codal_default_target_hal.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_codal_target_hal.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalCompat.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalCompat.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalComponent.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -225,17 +130,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalDevice.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalDevice.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalDmesg.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -245,17 +140,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalFiber.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalFiber.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalHeapAllocator.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -265,17 +150,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalListener.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalListener.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_CodalUSB.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -285,17 +160,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalUtil.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalUtil.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Compass.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -305,17 +170,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_types_CoordinateSystem.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_CoordinateSystem.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_DataStream.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -335,11 +190,6 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Display.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Display.h.rst
 
 .. toctree::
@@ -350,12 +200,12 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_ErrorNo.h.rst
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_EffectFilter.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_types_Event.cpp.rst
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_ErrorNo.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -380,17 +230,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_FIFOStream.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_FIFOStream.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_FSCache.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -400,17 +240,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_FXOS8700.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_FXOS8700.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_GhostFAT.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -420,17 +250,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Gyroscope.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Gyroscope.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_HID.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -440,17 +260,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_HIDJoystick.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_HIDJoystick.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_HIDKeyboard.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -460,17 +270,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_HIDMouse.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_HIDMouse.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_I2C.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -480,17 +280,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_ILI9341.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_ILI9341.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_types_Image.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -510,17 +300,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_KeyValueStorage.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_KeyValueStorage.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_LEDMatrix.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -530,17 +310,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_LevelDetector.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_LevelDetector.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_LevelDetectorSPL.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -550,17 +320,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_LinearAnalogSensor.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LinearAnalogSensor.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_LIS3DH.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -575,7 +335,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_LSM303Accelerometer.cpp.rst
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_LowPassFilter.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -585,17 +345,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_LSM303Magnetometer.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_LSM303Magnetometer.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_MAG3110.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -605,17 +355,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_types_ManagedBuffer.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_ManagedBuffer.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_types_ManagedString.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -630,22 +370,12 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_types_Matrix4.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_Matrix4.h.rst
 
 .. toctree::
    :maxdepth: 5
 
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_mbed.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_compat_MbedMemberFunctionCallback.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -660,17 +390,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_MemberFunctionCallback.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_MemberFunctionCallback.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_MemorySource.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -685,17 +405,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_MessageBus.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MessageBus.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitAccelerometer.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -705,17 +415,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitAccelerometerService.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitAccelerometerService.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitAudio.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -725,17 +425,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLEChar.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitBLEChar.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLEManager.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -745,17 +435,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLEService.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitBLEService.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLEServices.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -765,17 +445,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLETypes.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitBLETypes.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_compat_MicroBitButton.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -785,17 +455,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitButtonService.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitButtonService.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitCompass.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -805,17 +465,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitCompassCalibrator.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitCompassCalibrator.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitCompat.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -835,11 +485,6 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitDevice.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitDevice.h.rst
 
 .. toctree::
@@ -850,17 +495,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitDisplay.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitDisplay.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitEddystone.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -870,12 +505,12 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitEvent.h.rst
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitError.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitEventService.cpp.rst
+   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitEvent.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -890,17 +525,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitFile.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitFile.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitFileSystem.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -910,17 +535,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitFlash.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitFlash.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_compat_MicroBitI2C.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -935,17 +550,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitIOPinService.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitIOPinService.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitLEDService.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -955,17 +560,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitLog.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitLog.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitMagnetometerService.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -975,17 +570,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitMemoryMap.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitMemoryMap.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitPartialFlashingService.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -995,17 +580,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitPowerManager.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitPowerManager.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitRadio.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1015,27 +590,12 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitRadioDatagram.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitRadioDatagram.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitRadioEvent.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitRadioEvent.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_compat_MicroBitSerial.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1055,17 +615,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitTemperatureService.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitTemperatureService.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitThermometer.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1075,17 +625,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitUARTService.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_bluetooth_MicroBitUARTService.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitUSBFlashManager.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1100,27 +640,12 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroSynth.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroSynth.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_Mixer.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_Mixer.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_Mixer2.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1135,17 +660,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_MMA8653.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MMA8653.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_MPU6050.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1155,17 +670,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_MultiButton.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_MultiButton.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_NonLinearAnalogSensor.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1180,17 +685,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_NRF52FlashManager.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_NRF52FlashManager.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_NRF52LedMatrix.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1205,17 +700,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_PacketBuffer.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_PacketBuffer.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_PearsonHash.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1226,11 +711,6 @@ Files
    :maxdepth: 5
 
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Pin.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_PulseIn.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1250,22 +730,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_types_RefCounted.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_RefCounted.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_types_RefCountedInit.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_ScreenIO.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1275,17 +740,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Sensor.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Sensor.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Serial.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1300,17 +755,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_SoundEmojiSynthesizer.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_SoundEmojiSynthesizer.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_SoundExpressions.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1320,27 +765,12 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_SoundOutputPin.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_SoundOutputPin.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_SoundSynthesizerEffects.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_SoundSynthesizerEffects.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_SPI.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1360,17 +790,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_ST7735.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_ST7735.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_StandardSPIFlash.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1380,27 +800,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_StreamFilter.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_StreamFilter.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_StreamFlowTrigger.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_StreamFlowTrigger.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_StreamNormalizer.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1410,27 +810,12 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_StreamRecording.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_StreamRecording.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_StreamSplitter.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_StreamSplitter.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_Synthesizer.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1450,27 +835,12 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Timer.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Timer.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_TouchButton.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_TouchButton.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_TouchSensor.cpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1491,11 +861,6 @@ Files
    :maxdepth: 5
 
    file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_USBMassStorageClass.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_USBMSC.cpp.rst
 
 .. toctree::
    :maxdepth: 5

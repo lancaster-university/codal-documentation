@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class MMA8653 &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class MMA8653 &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -322,12 +323,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -387,13 +388,8 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal7MMA86537MMA8653ER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t">
-<span id="_CPPv3N5codal7MMA86537MMA8653ER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t"></span><span id="_CPPv2N5codal7MMA86537MMA8653ER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t"></span><span id="codal::MMA8653::MMA8653__I2CR.PinR.CoordinateSpaceR.uint16_t.uint16_t"></span><span class="target" id="classcodal_1_1MMA8653_1a0aaf97bdc1dada42b3d1c63614dcaff4"></span><span class="sig-name descname"><span class="n"><span class="pre">MMA8653</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1I2C.html#_CPPv4N5codal3I2CE" title="codal::I2C"><span class="n"><span class="pre">I2C</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_i2c</span></span>, <a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">int1</span></span>, <a class="reference internal" href="classcodal_1_1CoordinateSpace.html#_CPPv4N5codal15CoordinateSpaceE" title="codal::CoordinateSpace"><span class="n"><span class="pre">CoordinateSpace</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cspace</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x3A</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_ACCELEROMETER</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7MMA86537MMA8653ER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal7MMA86537MMA8653ER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t"></span><span id="_CPPv2N5codal7MMA86537MMA8653ER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t"></span><span id="codal::MMA8653::MMA8653__I2CR.PinR.CoordinateSpaceR.uint16_t.uint16_t"></span><span class="target" id="classcodal_1_1MMA8653_1a9e0a16ed6479952d4d7abbe303583821"></span><span class="sig-name descname"><span class="n"><span class="pre">MMA8653</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1I2C.html#_CPPv4N5codal3I2CE" title="codal::I2C"><span class="n"><span class="pre">I2C</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_i2c</span></span>, <a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">int1</span></span>, <a class="reference internal" href="classcodal_1_1CoordinateSpace.html#_CPPv4N5codal15CoordinateSpaceE" title="codal::CoordinateSpace"><span class="n"><span class="pre">CoordinateSpace</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cspace</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x3A</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_ACCELEROMETER</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7MMA86537MMA8653ER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor. Create a software abstraction of an accelerometer.</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MMA8653</span><span class="w"> </span><span class="n">accelerometer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MMA8653</span><span class="p">(</span><span class="n">i2c</span><span class="p">);</span><span class="w"></span>
-</pre></div>
-</div>
-</p>
-<p>Constructor. Create a software abstraction of an accelerometer.</p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MMA8653</span><span class="w"> </span><span class="n">accelerometer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MMA8653</span><span class="p">(</span><span class="n">i2c</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
@@ -404,9 +400,6 @@ title="Source repository"
 <li><p><strong>_i2c</strong> – an instance of a <a class="reference internal" href="classcodal_1_1I2C.html#classcodal_1_1I2C"><span class="std std-ref">codal::I2C</span></a> device used to communicate with the onboard accelerometer.</p></li>
 <li><p><strong>address</strong> – the default <a class="reference internal" href="classcodal_1_1I2C.html#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> address of the accelerometer. Defaults to: MMA8653_DEFAULT_ADDR.</p></li>
 <li><p><strong>id</strong> – the unique <a class="reference internal" href="classcodal_1_1EventModel.html#classcodal_1_1EventModel"><span class="std std-ref">EventModel</span></a> id of this component. Defaults to: DEVICE_ID_ACCELEROMETER</p></li>
-<li><p><strong>_i2c</strong> – an instance of <a class="reference internal" href="classcodal_1_1I2C.html#classcodal_1_1I2C"><span class="std std-ref">codal::I2C</span></a> used to communicate with the accelerometer.</p></li>
-<li><p><strong>address</strong> – the default <a class="reference internal" href="classcodal_1_1I2C.html#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> address of the accelerometer. Defaults to: MMA8653_DEFAULT_ADDR.</p></li>
-<li><p><strong>id</strong> – the unique <a class="reference internal" href="classcodal_1_1EventModel.html#classcodal_1_1EventModel"><span class="std std-ref">EventModel</span></a> id of this component. Defaults to: DEVICE_ID_ACCELEROMETER</p></li>
 </ul>
 </dd>
 </dl>
@@ -414,7 +407,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal7MMA86539configureEv">
-<span id="_CPPv3N5codal7MMA86539configureEv"></span><span id="_CPPv2N5codal7MMA86539configureEv"></span><span id="codal::MMA8653::configure"></span><span class="target" id="classcodal_1_1MMA8653_1aaa17ce5a1f85207967799029415a75d0"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configure</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal7MMA86539configureEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal7MMA86539configureEv"></span><span id="_CPPv2N5codal7MMA86539configureEv"></span><span id="codal::MMA8653::configure"></span><span class="target" id="classcodal_1_1MMA8653_1a762bef591b83900f0c29675fc3aa31da"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configure</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal7MMA86539configureEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Configures the accelerometer for G range and sample rate defined in this object. The nearest values are chosen to those defined that are supported by the hardware. The instance variables are then updated to reflect reality.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -425,7 +418,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal7MMA865313requestUpdateEv">
-<span id="_CPPv3N5codal7MMA865313requestUpdateEv"></span><span id="_CPPv2N5codal7MMA865313requestUpdateEv"></span><span id="codal::MMA8653::requestUpdate"></span><span class="target" id="classcodal_1_1MMA8653_1a5380844f20a60db9dbbdef01d97c073b"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestUpdate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal7MMA865313requestUpdateEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal7MMA865313requestUpdateEv"></span><span id="_CPPv2N5codal7MMA865313requestUpdateEv"></span><span id="codal::MMA8653::requestUpdate"></span><span class="target" id="classcodal_1_1MMA8653_1a0b0c6826cc4fe403428959c86b785a33"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestUpdate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal7MMA865313requestUpdateEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Reads the acceleration data from the accelerometer, and stores it in our buffer. This only happens if the accelerometer indicates that it has new data via int1.</p>
 <p>On first use, this member function will attempt to add this component to the list of fiber components in order to constantly update the values stored by this object.</p>
 <p>This technique is called lazy instantiation, and it means that we do not obtain the overhead from non-chalantly adding this component to fiber components.</p>
@@ -438,29 +431,18 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal7MMA86536whoAmIEv">
-<span id="_CPPv3N5codal7MMA86536whoAmIEv"></span><span id="_CPPv2N5codal7MMA86536whoAmIEv"></span><span id="codal::MMA8653::whoAmI"></span><span class="target" id="classcodal_1_1MMA8653_1a7ff4c884f2746e259f8b7e1afea660f9"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">whoAmI</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7MMA86536whoAmIEv" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Attempts to read the 8 bit ID from the accelerometer, this can be used for validation purposes.</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">accelerometer</span><span class="p">.</span><span class="n">whoAmI</span><span class="p">();</span><span class="w"></span>
-</pre></div>
-</div>
- </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the 8 bit ID returned by the accelerometer, or DEVICE_I2C_ERROR if the request fails.</p>
-</dd>
-</dl>
-</dd></dl>
+<span id="_CPPv3N5codal7MMA86536whoAmIEv"></span><span id="_CPPv2N5codal7MMA86536whoAmIEv"></span><span id="codal::MMA8653::whoAmI"></span><span class="target" id="classcodal_1_1MMA8653_1a919fdcc130aa72660e33f8ec7597c602"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">whoAmI</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7MMA86536whoAmIEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal7MMA865312idleCallbackEv">
-<span id="_CPPv3N5codal7MMA865312idleCallbackEv"></span><span id="_CPPv2N5codal7MMA865312idleCallbackEv"></span><span id="codal::MMA8653::idleCallback"></span><span class="target" id="classcodal_1_1MMA8653_1a28afc15fedb67be34330f7c3f8cd23a8"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idleCallback</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal7MMA865312idleCallbackEv" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>A periodic callback invoked by the fiber scheduler idle thread.</p>
-<p>Internally calls updateSample(). </p>
+<span id="_CPPv3N5codal7MMA865312idleCallbackEv"></span><span id="_CPPv2N5codal7MMA865312idleCallbackEv"></span><span id="codal::MMA8653::idleCallback"></span><span class="target" id="classcodal_1_1MMA8653_1ab8fae6fb15da5ec205001e09a59cbf69"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idleCallback</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal7MMA865312idleCallbackEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Implement this function to receive a callback when the device is idling. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal7MMA86538setSleepEb">
-<span id="_CPPv3N5codal7MMA86538setSleepEb"></span><span id="_CPPv2N5codal7MMA86538setSleepEb"></span><span id="codal::MMA8653::setSleep__b"></span><span class="target" id="classcodal_1_1MMA8653_1a0c158c9e209ee2ea2d3a8521a48613d2"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSleep</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sleepMode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7MMA86538setSleepEb" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal7MMA86538setSleepEb"></span><span id="_CPPv2N5codal7MMA86538setSleepEb"></span><span id="codal::MMA8653::setSleep__b"></span><span class="target" id="classcodal_1_1MMA8653_1ae461f92a43024bccfdd08cb4434303bc"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSleep</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sleepMode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7MMA86538setSleepEb" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Puts the component in (or out of) sleep (low power) mode. </p>
 </dd></dl>
 

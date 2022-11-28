@@ -54,8 +54,6 @@ Included By
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_NRF52FlashManager.h`
 
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitRadio.cpp`
-
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_EventModel.h`
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_AbstractButton.h`
@@ -101,14 +99,6 @@ Included By
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_TouchButton.h`
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_TouchSensor.h`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalComponent.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_LSM303Magnetometer.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_MMA8653.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_DataStream.cpp`
 
 
 
@@ -191,6 +181,8 @@ Defines
 
 - :ref:`exhale_define_CodalComponent_8h_1a9846cd2112e4b701c182d29ddcd18f67`
 
+- :ref:`exhale_define_CodalComponent_8h_1ac6316b8cda5aa7f252aee6950b388dca`
+
 - :ref:`exhale_define_CodalComponent_8h_1af7ef2839641353af8b0976c409a88f0c`
 
 - :ref:`exhale_define_CodalComponent_8h_1ac2d43b81e140f70b1cc3edaeaa3f1715`
@@ -200,6 +192,10 @@ Defines
 - :ref:`exhale_define_CodalComponent_8h_1a463ef08f665feb7b7b27617269574d90`
 
 - :ref:`exhale_define_CodalComponent_8h_1ac24cc78a9fad3da40ed397fdfbd3f926`
+
+- :ref:`exhale_define_CodalComponent_8h_1a9ef9dd56d76f57775d7c33cfb08ed73a`
+
+- :ref:`exhale_define_CodalComponent_8h_1ae959f32c3aa92010a03f3e201a03d559`
 
 - :ref:`exhale_define_CodalComponent_8h_1a77c8bec1d7f73edaac65896db823eaaa`
 
@@ -238,4 +234,8 @@ Defines
 - :ref:`exhale_define_CodalComponent_8h_1a4b00c6feb3ab08314364eddbb20a6eee`
 
 - :ref:`exhale_define_CodalComponent_8h_1a7d8fc87680ceab6f29a3960d34648886`
+
+- :ref:`exhale_define_CodalComponent_8h_1a0b0e3bbb3704ba1cff19764d3ad2a688`
+
+- :ref:`exhale_define_CodalComponent_8h_1a02f94426e9f1198b3eac3dc9e9748488`
 

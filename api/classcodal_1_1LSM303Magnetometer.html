@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class LSM303Magnetometer &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class LSM303Magnetometer &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -317,12 +318,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -368,17 +369,13 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal18LSM303Magnetometer18LSM303MagnetometerER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t">
-<span id="_CPPv3N5codal18LSM303Magnetometer18LSM303MagnetometerER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t"></span><span id="_CPPv2N5codal18LSM303Magnetometer18LSM303MagnetometerER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t"></span><span id="codal::LSM303Magnetometer::LSM303Magnetometer__I2CR.PinR.CoordinateSpaceR.uint16_t.uint16_t"></span><span class="target" id="classcodal_1_1LSM303Magnetometer_1aaea3bb735080bb051555b5a7fff99bb7"></span><span class="sig-name descname"><span class="n"><span class="pre">LSM303Magnetometer</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1I2C.html#_CPPv4N5codal3I2CE" title="codal::I2C"><span class="n"><span class="pre">I2C</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_i2c</span></span>, <a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_int1</span></span>, <a class="reference internal" href="classcodal_1_1CoordinateSpace.html#_CPPv4N5codal15CoordinateSpaceE" title="codal::CoordinateSpace"><span class="n"><span class="pre">CoordinateSpace</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">coordinateSpace</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x3C</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_COMPASS</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal18LSM303Magnetometer18LSM303MagnetometerER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal18LSM303Magnetometer18LSM303MagnetometerER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t"></span><span id="_CPPv2N5codal18LSM303Magnetometer18LSM303MagnetometerER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t"></span><span id="codal::LSM303Magnetometer::LSM303Magnetometer__I2CR.PinR.CoordinateSpaceR.uint16_t.uint16_t"></span><span class="target" id="classcodal_1_1LSM303Magnetometer_1a502ed5882ef80a78fdc6456a262bcd62"></span><span class="sig-name descname"><span class="n"><span class="pre">LSM303Magnetometer</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1I2C.html#_CPPv4N5codal3I2CE" title="codal::I2C"><span class="n"><span class="pre">I2C</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_i2c</span></span>, <a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_int1</span></span>, <a class="reference internal" href="classcodal_1_1CoordinateSpace.html#_CPPv4N5codal15CoordinateSpaceE" title="codal::CoordinateSpace"><span class="n"><span class="pre">CoordinateSpace</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">coordinateSpace</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x3C</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_COMPASS</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal18LSM303Magnetometer18LSM303MagnetometerER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor. Create a software abstraction of an compass.</p>
-<p>
-Constructor. Create a software abstraction of an FXSO8700 combined magnetometer/magnetometer</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>coordinateSpace</strong> – The orientation of the sensor. Defaults to: SIMPLE_CARTESIAN </p></li>
-<li><p><strong>id</strong> – The unique <a class="reference internal" href="classcodal_1_1EventModel.html#classcodal_1_1EventModel"><span class="std std-ref">EventModel</span></a> id of this component. Defaults to: DEVICE_ID_ACCELEROMETER</p></li>
-<li><p><strong>_i2c</strong> – an instance of <a class="reference internal" href="classcodal_1_1I2C.html#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> used to communicate with the device.</p></li>
-<li><p><strong>address</strong> – the default <a class="reference internal" href="classcodal_1_1I2C.html#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> address of the magnetometer. Defaults to: FXS8700_DEFAULT_ADDR. </p></li>
+<li><p><strong>id</strong> – The unique <a class="reference internal" href="classcodal_1_1EventModel.html#classcodal_1_1EventModel"><span class="std std-ref">EventModel</span></a> id of this component. Defaults to: DEVICE_ID_ACCELEROMETER </p></li>
 </ul>
 </dd>
 </dl>
@@ -386,34 +383,23 @@ Constructor. Create a software abstraction of an FXSO8700 combined magnetometer/
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal18LSM303Magnetometer9configureEv">
-<span id="_CPPv3N5codal18LSM303Magnetometer9configureEv"></span><span id="_CPPv2N5codal18LSM303Magnetometer9configureEv"></span><span id="codal::LSM303Magnetometer::configure"></span><span class="target" id="classcodal_1_1LSM303Magnetometer_1ac481f46bf7e8b435c14a183879e49966"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configure</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal18LSM303Magnetometer9configureEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal18LSM303Magnetometer9configureEv"></span><span id="_CPPv2N5codal18LSM303Magnetometer9configureEv"></span><span id="codal::LSM303Magnetometer::configure"></span><span class="target" id="classcodal_1_1LSM303Magnetometer_1a0c579bf28e1e6d6377c3ee388b97e793"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configure</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal18LSM303Magnetometer9configureEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Configures the magnetometer for the sample rate defined in this object. The nearest values are chosen to those defined that are supported by the hardware. The instance variables are then updated to reflect reality.</p>
-<p>
-Configures the compass for the sample rate defined in this object. The nearest values are chosen to those defined that are supported by the hardware. The instance variables are then updated to reflect reality.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This method should be overidden by the hardware driver to implement the requested changes in hardware.</p>
+<p>This method should be overidden by the hardware driver to implement the requested changes in hardware. </p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>DEVICE_OK on success, DEVICE_I2C_ERROR if the magnetometer could not be configured.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK on success, DEVICE_I2C_ERROR if the compass could not be configured. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal18LSM303Magnetometer13requestUpdateEv">
-<span id="_CPPv3N5codal18LSM303Magnetometer13requestUpdateEv"></span><span id="_CPPv2N5codal18LSM303Magnetometer13requestUpdateEv"></span><span id="codal::LSM303Magnetometer::requestUpdate"></span><span class="target" id="classcodal_1_1LSM303Magnetometer_1a03ad7ca1944737fc85688d2dce2c37d5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestUpdate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal18LSM303Magnetometer13requestUpdateEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal18LSM303Magnetometer13requestUpdateEv"></span><span id="_CPPv2N5codal18LSM303Magnetometer13requestUpdateEv"></span><span id="codal::LSM303Magnetometer::requestUpdate"></span><span class="target" id="classcodal_1_1LSM303Magnetometer_1a042f7bb68c2b7d6f040139f46a55cc77"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestUpdate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal18LSM303Magnetometer13requestUpdateEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Poll to see if new data is available from the hardware. If so, update it. n.b. it is not necessary to explicitly call this function to update data (it normally happens in the background when the scheduler is idle), but a check is performed if the user explicitly requests up to date data.</p>
-<p>
-Poll to see if new data is available from the hardware. If so, update it. n.b. it is not necessary to explicitly call this funciton to update data (it normally happens in the background when the scheduler is idle), but a check is performed if the user explicitly requests up to date data.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This method should be overidden by the hardware driver to implement the requested changes in hardware.</p>
-</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This method should be overidden by the hardware driver to implement the requested changes in hardware. </p>
@@ -422,30 +408,26 @@ Poll to see if new data is available from the hardware. If so, update it. n.b. i
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>DEVICE_OK on success, DEVICE_I2C_ERROR if the update fails.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK on success, DEVICE_I2C_ERROR if the update fails.</p>
-</dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal18LSM303Magnetometer12idleCallbackEv">
-<span id="_CPPv3N5codal18LSM303Magnetometer12idleCallbackEv"></span><span id="_CPPv2N5codal18LSM303Magnetometer12idleCallbackEv"></span><span id="codal::LSM303Magnetometer::idleCallback"></span><span class="target" id="classcodal_1_1LSM303Magnetometer_1a9741104db4469bc97394f971065f8870"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idleCallback</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal18LSM303Magnetometer12idleCallbackEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal18LSM303Magnetometer12idleCallbackEv"></span><span id="_CPPv2N5codal18LSM303Magnetometer12idleCallbackEv"></span><span id="codal::LSM303Magnetometer::idleCallback"></span><span class="target" id="classcodal_1_1LSM303Magnetometer_1ac9df24bc08c0b1990ad5555ecd555309"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idleCallback</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal18LSM303Magnetometer12idleCallbackEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>A periodic callback invoked by the fiber scheduler idle thread.</p>
 <p>Internally calls updateSample(). </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal18LSM303Magnetometer8setSleepEb">
-<span id="_CPPv3N5codal18LSM303Magnetometer8setSleepEb"></span><span id="_CPPv2N5codal18LSM303Magnetometer8setSleepEb"></span><span id="codal::LSM303Magnetometer::setSleep__b"></span><span class="target" id="classcodal_1_1LSM303Magnetometer_1a41ead6b77aee22fce8d94762b2861ef8"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSleep</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">doSleep</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal18LSM303Magnetometer8setSleepEb" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal18LSM303Magnetometer8setSleepEb"></span><span id="_CPPv2N5codal18LSM303Magnetometer8setSleepEb"></span><span id="codal::LSM303Magnetometer::setSleep__b"></span><span class="target" id="classcodal_1_1LSM303Magnetometer_1a09ff511bfd5b11a03d08848b017660ed"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSleep</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">doSleep</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal18LSM303Magnetometer8setSleepEb" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Puts the component in (or out of) sleep (low power) mode. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal18LSM303MagnetometerD0Ev">
-<span id="_CPPv3N5codal18LSM303MagnetometerD0Ev"></span><span id="_CPPv2N5codal18LSM303MagnetometerD0Ev"></span><span id="codal::LSM303Magnetometer::~LSM303Magnetometer"></span><span class="target" id="classcodal_1_1LSM303Magnetometer_1a8327240cfa844f39e85d9fd23667c8e7"></span><span class="sig-name descname"><span class="n"><span class="pre">~LSM303Magnetometer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal18LSM303MagnetometerD0Ev" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Destructor.</p>
-<p>Destructor for FXS8700, where we deregister from the array of fiber components. </p>
+<span id="_CPPv3N5codal18LSM303MagnetometerD0Ev"></span><span id="_CPPv2N5codal18LSM303MagnetometerD0Ev"></span><span id="codal::LSM303Magnetometer::~LSM303Magnetometer"></span><span class="target" id="classcodal_1_1LSM303Magnetometer_1a2b4782ef849248d2759270ab816c8cc4"></span><span class="sig-name descname"><span class="n"><span class="pre">~LSM303Magnetometer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal18LSM303MagnetometerD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Destructor. </p>
 </dd></dl>
 
 </div>
@@ -453,7 +435,7 @@ Poll to see if new data is available from the hardware. If so, update it. n.b. i
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal18LSM303Magnetometer10isDetectedER3I2C8uint16_t">
-<span id="_CPPv3N5codal18LSM303Magnetometer10isDetectedER3I2C8uint16_t"></span><span id="_CPPv2N5codal18LSM303Magnetometer10isDetectedER3I2C8uint16_t"></span><span id="codal::LSM303Magnetometer::isDetected__I2CR.uint16_t"></span><span class="target" id="classcodal_1_1LSM303Magnetometer_1a7fd975e06c1b4eedcc12c4b9f76de03c"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isDetected</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1I2C.html#_CPPv4N5codal3I2CE" title="codal::I2C"><span class="n"><span class="pre">I2C</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">i2c</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x3C</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal18LSM303Magnetometer10isDetectedER3I2C8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal18LSM303Magnetometer10isDetectedER3I2C8uint16_t"></span><span id="_CPPv2N5codal18LSM303Magnetometer10isDetectedER3I2C8uint16_t"></span><span id="codal::LSM303Magnetometer::isDetected__I2CR.uint16_t"></span><span class="target" id="classcodal_1_1LSM303Magnetometer_1a84beac4f2deaef322d2ff3d18ed21e7a"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isDetected</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1I2C.html#_CPPv4N5codal3I2CE" title="codal::I2C"><span class="n"><span class="pre">I2C</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">i2c</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x3C</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal18LSM303Magnetometer10isDetectedER3I2C8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Attempts to read the 8 bit WHO_AM_I value from the accelerometer</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>

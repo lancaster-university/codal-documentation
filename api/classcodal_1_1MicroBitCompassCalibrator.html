@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class MicroBitCompassCalibrator &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class MicroBitCompassCalibrator &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,7 +282,7 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-documentation">
    Class Documentation
@@ -305,7 +306,7 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-documentation">
    Class Documentation
@@ -339,7 +340,7 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal25MicroBitCompassCalibrator25MicroBitCompassCalibratorER7CompassR13AccelerometerR15MicroBitDisplay">
-<span id="_CPPv3N5codal25MicroBitCompassCalibrator25MicroBitCompassCalibratorER7CompassR13AccelerometerR15MicroBitDisplay"></span><span id="_CPPv2N5codal25MicroBitCompassCalibrator25MicroBitCompassCalibratorER7CompassR13AccelerometerR15MicroBitDisplay"></span><span id="codal::MicroBitCompassCalibrator::MicroBitCompassCalibrator__CompassR.AccelerometerR.MicroBitDisplayR"></span><span class="target" id="classcodal_1_1MicroBitCompassCalibrator_1a32757a1d60d185b3525b56d301c1eae1"></span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitCompassCalibrator</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Compass.html#_CPPv4N5codal7CompassE" title="codal::Compass"><span class="n"><span class="pre">Compass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_compass</span></span>, <a class="reference internal" href="classcodal_1_1Accelerometer.html#_CPPv4N5codal13AccelerometerE" title="codal::Accelerometer"><span class="n"><span class="pre">Accelerometer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_accelerometer</span></span>, <a class="reference internal" href="classcodal_1_1MicroBitDisplay.html#_CPPv4N5codal15MicroBitDisplayE" title="codal::MicroBitDisplay"><span class="n"><span class="pre">MicroBitDisplay</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_display</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal25MicroBitCompassCalibrator25MicroBitCompassCalibratorER7CompassR13AccelerometerR15MicroBitDisplay" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal25MicroBitCompassCalibrator25MicroBitCompassCalibratorER7CompassR13AccelerometerR15MicroBitDisplay"></span><span id="_CPPv2N5codal25MicroBitCompassCalibrator25MicroBitCompassCalibratorER7CompassR13AccelerometerR15MicroBitDisplay"></span><span id="codal::MicroBitCompassCalibrator::MicroBitCompassCalibrator__CompassR.AccelerometerR.MicroBitDisplayR"></span><span class="target" id="classcodal_1_1MicroBitCompassCalibrator_1ae38e76b6169b51827c5eb89dfa77eb05"></span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitCompassCalibrator</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Compass.html#_CPPv4N5codal7CompassE" title="codal::Compass"><span class="n"><span class="pre">Compass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_compass</span></span>, <a class="reference internal" href="classcodal_1_1Accelerometer.html#_CPPv4N5codal13AccelerometerE" title="codal::Accelerometer"><span class="n"><span class="pre">Accelerometer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_accelerometer</span></span>, <a class="reference internal" href="classcodal_1_1MicroBitDisplay.html#_CPPv4N5codal15MicroBitDisplayE" title="codal::MicroBitDisplay"><span class="n"><span class="pre">MicroBitDisplay</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_display</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal25MicroBitCompassCalibrator25MicroBitCompassCalibratorER7CompassR13AccelerometerR15MicroBitDisplay" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor.</p>
 <p>Create an object capable of calibrating the compass.</p>
 <p>The algorithm uses an accelerometer to ensure that a broad range of sample data has been gathered from the compass module, then performs a least mean squares optimisation of the results to determine the calibration data for the compass.</p>
@@ -357,7 +358,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal25MicroBitCompassCalibrator25MicroBitCompassCalibratorER7CompassR13AccelerometerR15MicroBitDisplayR15MicroBitStorage">
-<span id="_CPPv3N5codal25MicroBitCompassCalibrator25MicroBitCompassCalibratorER7CompassR13AccelerometerR15MicroBitDisplayR15MicroBitStorage"></span><span id="_CPPv2N5codal25MicroBitCompassCalibrator25MicroBitCompassCalibratorER7CompassR13AccelerometerR15MicroBitDisplayR15MicroBitStorage"></span><span id="codal::MicroBitCompassCalibrator::MicroBitCompassCalibrator__CompassR.AccelerometerR.MicroBitDisplayR.MicroBitStorageR"></span><span class="target" id="classcodal_1_1MicroBitCompassCalibrator_1aaf307e50bc0a36f031c867cf197f9d11"></span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitCompassCalibrator</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Compass.html#_CPPv4N5codal7CompassE" title="codal::Compass"><span class="n"><span class="pre">Compass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_compass</span></span>, <a class="reference internal" href="classcodal_1_1Accelerometer.html#_CPPv4N5codal13AccelerometerE" title="codal::Accelerometer"><span class="n"><span class="pre">Accelerometer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_accelerometer</span></span>, <a class="reference internal" href="classcodal_1_1MicroBitDisplay.html#_CPPv4N5codal15MicroBitDisplayE" title="codal::MicroBitDisplay"><span class="n"><span class="pre">MicroBitDisplay</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_display</span></span>, <a class="reference internal" href="typedef_MicroBitCompat_8h_1a5528ff96a60f11d121459d5c0cfe52fc.html#_CPPv415MicroBitStorage" title="MicroBitStorage"><span class="n"><span class="pre">MicroBitStorage</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">storage</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal25MicroBitCompassCalibrator25MicroBitCompassCalibratorER7CompassR13AccelerometerR15MicroBitDisplayR15MicroBitStorage" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal25MicroBitCompassCalibrator25MicroBitCompassCalibratorER7CompassR13AccelerometerR15MicroBitDisplayR15MicroBitStorage"></span><span id="_CPPv2N5codal25MicroBitCompassCalibrator25MicroBitCompassCalibratorER7CompassR13AccelerometerR15MicroBitDisplayR15MicroBitStorage"></span><span id="codal::MicroBitCompassCalibrator::MicroBitCompassCalibrator__CompassR.AccelerometerR.MicroBitDisplayR.MicroBitStorageR"></span><span class="target" id="classcodal_1_1MicroBitCompassCalibrator_1ab956c09dafd707bd69fbe7856e5b3f2a"></span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitCompassCalibrator</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Compass.html#_CPPv4N5codal7CompassE" title="codal::Compass"><span class="n"><span class="pre">Compass</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_compass</span></span>, <a class="reference internal" href="classcodal_1_1Accelerometer.html#_CPPv4N5codal13AccelerometerE" title="codal::Accelerometer"><span class="n"><span class="pre">Accelerometer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_accelerometer</span></span>, <a class="reference internal" href="classcodal_1_1MicroBitDisplay.html#_CPPv4N5codal15MicroBitDisplayE" title="codal::MicroBitDisplay"><span class="n"><span class="pre">MicroBitDisplay</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_display</span></span>, <a class="reference internal" href="typedef_MicroBitCompat_8h_1a5528ff96a60f11d121459d5c0cfe52fc.html#_CPPv415MicroBitStorage" title="MicroBitStorage"><span class="n"><span class="pre">MicroBitStorage</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">storage</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal25MicroBitCompassCalibrator25MicroBitCompassCalibratorER7CompassR13AccelerometerR15MicroBitDisplayR15MicroBitStorage" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor.</p>
 <p>Create an object capable of calibrating the compass.</p>
 <p>The algorithm uses an accelerometer to ensure that a broad range of sample data has been gathered from the compass module, then performs a least mean squares optimisation of the results to determine the calibration data for the compass.</p>
@@ -376,7 +377,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal25MicroBitCompassCalibrator11calibrateUXE13MicroBitEvent">
-<span id="_CPPv3N5codal25MicroBitCompassCalibrator11calibrateUXE13MicroBitEvent"></span><span id="_CPPv2N5codal25MicroBitCompassCalibrator11calibrateUXE13MicroBitEvent"></span><span id="codal::MicroBitCompassCalibrator::calibrateUX__MicroBitEvent"></span><span class="target" id="classcodal_1_1MicroBitCompassCalibrator_1a532721dfd5e51b0352c5cf808697897e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calibrateUX</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_MicroBitCompat_8h_1ab2b8aad33ff526d5a6ecdcfb57db7f1e.html#_CPPv413MicroBitEvent" title="MicroBitEvent"><span class="n"><span class="pre">MicroBitEvent</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal25MicroBitCompassCalibrator11calibrateUXE13MicroBitEvent" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal25MicroBitCompassCalibrator11calibrateUXE13MicroBitEvent"></span><span id="_CPPv2N5codal25MicroBitCompassCalibrator11calibrateUXE13MicroBitEvent"></span><span id="codal::MicroBitCompassCalibrator::calibrateUX__MicroBitEvent"></span><span class="target" id="classcodal_1_1MicroBitCompassCalibrator_1a4be24ed13001ac845a18ac4a120afa7b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calibrateUX</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_MicroBitCompat_8h_1ab2b8aad33ff526d5a6ecdcfb57db7f1e.html#_CPPv413MicroBitEvent" title="MicroBitEvent"><span class="n"><span class="pre">MicroBitEvent</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal25MicroBitCompassCalibrator11calibrateUXE13MicroBitEvent" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Performs a simple game that in parallel, calibrates the compass.</p>
 <p>This function is executed automatically when the user requests a compass bearing, and compass calibration is required.</p>
 <p>This function is, by design, synchronous and only returns once calibration is complete. </p>
@@ -387,7 +388,7 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal25MicroBitCompassCalibrator9calibrateEP8Sample3Di">
-<span id="_CPPv3N5codal25MicroBitCompassCalibrator9calibrateEP8Sample3Di"></span><span id="_CPPv2N5codal25MicroBitCompassCalibrator9calibrateEP8Sample3Di"></span><span id="codal::MicroBitCompassCalibrator::calibrate__Sample3DP.i"></span><span class="target" id="classcodal_1_1MicroBitCompassCalibrator_1a9c27647ad618c52a05eb159938c8476f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="structcodal_1_1CompassCalibration.html#_CPPv4N5codal18CompassCalibrationE" title="codal::CompassCalibration"><span class="n"><span class="pre">CompassCalibration</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calibrate</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structcodal_1_1Sample3D.html#_CPPv4N5codal8Sample3DE" title="codal::Sample3D"><span class="n"><span class="pre">Sample3D</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">samples</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal25MicroBitCompassCalibrator9calibrateEP8Sample3Di" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal25MicroBitCompassCalibrator9calibrateEP8Sample3Di"></span><span id="_CPPv2N5codal25MicroBitCompassCalibrator9calibrateEP8Sample3Di"></span><span id="codal::MicroBitCompassCalibrator::calibrate__Sample3DP.i"></span><span class="target" id="classcodal_1_1MicroBitCompassCalibrator_1a0c76970297382e4f621b01e81ac50483"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="structcodal_1_1CompassCalibration.html#_CPPv4N5codal18CompassCalibrationE" title="codal::CompassCalibration"><span class="n"><span class="pre">CompassCalibration</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calibrate</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structcodal_1_1Sample3D.html#_CPPv4N5codal8Sample3DE" title="codal::Sample3D"><span class="n"><span class="pre">Sample3D</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">samples</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal25MicroBitCompassCalibrator9calibrateEP8Sample3Di" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Calculates an independent X, Y, Z scale factor and centre for a given set of data points, assumed to be on a bounding sphere</p>
 <p>
 This algorithm should be called with no fewer than 12 points, but testing has indicated &gt;21 points provides a more robust calculation.</p>

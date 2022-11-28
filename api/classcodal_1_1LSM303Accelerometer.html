@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class LSM303Accelerometer &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class LSM303Accelerometer &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -317,12 +318,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -369,7 +370,7 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal19LSM303Accelerometer19LSM303AccelerometerER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t">
-<span id="_CPPv3N5codal19LSM303Accelerometer19LSM303AccelerometerER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t"></span><span id="_CPPv2N5codal19LSM303Accelerometer19LSM303AccelerometerER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t"></span><span id="codal::LSM303Accelerometer::LSM303Accelerometer__I2CR.PinR.CoordinateSpaceR.uint16_t.uint16_t"></span><span class="target" id="classcodal_1_1LSM303Accelerometer_1a43e17b3fd03516552ddfa207bea0e619"></span><span class="sig-name descname"><span class="n"><span class="pre">LSM303Accelerometer</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1I2C.html#_CPPv4N5codal3I2CE" title="codal::I2C"><span class="n"><span class="pre">I2C</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_i2c</span></span>, <a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_int1</span></span>, <a class="reference internal" href="classcodal_1_1CoordinateSpace.html#_CPPv4N5codal15CoordinateSpaceE" title="codal::CoordinateSpace"><span class="n"><span class="pre">CoordinateSpace</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">coordinateSpace</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x32</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_ACCELEROMETER</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal19LSM303Accelerometer19LSM303AccelerometerER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal19LSM303Accelerometer19LSM303AccelerometerER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t"></span><span id="_CPPv2N5codal19LSM303Accelerometer19LSM303AccelerometerER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t"></span><span id="codal::LSM303Accelerometer::LSM303Accelerometer__I2CR.PinR.CoordinateSpaceR.uint16_t.uint16_t"></span><span class="target" id="classcodal_1_1LSM303Accelerometer_1a15fa71c652c6c2cd00412f5648461126"></span><span class="sig-name descname"><span class="n"><span class="pre">LSM303Accelerometer</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1I2C.html#_CPPv4N5codal3I2CE" title="codal::I2C"><span class="n"><span class="pre">I2C</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_i2c</span></span>, <a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_int1</span></span>, <a class="reference internal" href="classcodal_1_1CoordinateSpace.html#_CPPv4N5codal15CoordinateSpaceE" title="codal::CoordinateSpace"><span class="n"><span class="pre">CoordinateSpace</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">coordinateSpace</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x32</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_ACCELEROMETER</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal19LSM303Accelerometer19LSM303AccelerometerER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor. Create a software abstraction of an accelerometer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -383,7 +384,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal19LSM303Accelerometer9configureEv">
-<span id="_CPPv3N5codal19LSM303Accelerometer9configureEv"></span><span id="_CPPv2N5codal19LSM303Accelerometer9configureEv"></span><span id="codal::LSM303Accelerometer::configure"></span><span class="target" id="classcodal_1_1LSM303Accelerometer_1a7883414a4bde7b73fc7f37122d36ec70"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configure</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal19LSM303Accelerometer9configureEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal19LSM303Accelerometer9configureEv"></span><span id="_CPPv2N5codal19LSM303Accelerometer9configureEv"></span><span id="codal::LSM303Accelerometer::configure"></span><span class="target" id="classcodal_1_1LSM303Accelerometer_1ada50651fba6057708039635a135a402a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configure</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal19LSM303Accelerometer9configureEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Configures the accelerometer for G range and sample rate defined in this object. The nearest values are chosen to those defined that are supported by the hardware. The instance variables are then updated to reflect reality.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -398,14 +399,8 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal19LSM303Accelerometer13requestUpdateEv">
-<span id="_CPPv3N5codal19LSM303Accelerometer13requestUpdateEv"></span><span id="_CPPv2N5codal19LSM303Accelerometer13requestUpdateEv"></span><span id="codal::LSM303Accelerometer::requestUpdate"></span><span class="target" id="classcodal_1_1LSM303Accelerometer_1acc013b5c58e7619738c13b2a12d9a92e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestUpdate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal19LSM303Accelerometer13requestUpdateEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal19LSM303Accelerometer13requestUpdateEv"></span><span id="_CPPv2N5codal19LSM303Accelerometer13requestUpdateEv"></span><span id="codal::LSM303Accelerometer::requestUpdate"></span><span class="target" id="classcodal_1_1LSM303Accelerometer_1af08339685e0d6020cf02f40e6adf5ac5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestUpdate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal19LSM303Accelerometer13requestUpdateEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Poll to see if new data is available from the hardware. If so, update it. n.b. it is not necessary to explicitly call this function to update data (it normally happens in the background when the scheduler is idle), but a check is performed if the user explicitly requests up to date data.</p>
-<p>
-Poll to see if new data is available from the hardware. If so, update it. n.b. it is not necessary to explicitly call this funciton to update data (it normally happens in the background when the scheduler is idle), but a check is performed if the user explicitly requests up to date data.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This method should be overidden by the hardware driver to implement the requested changes in hardware.</p>
-</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This method should be overidden by the hardware driver to implement the requested changes in hardware. </p>
@@ -414,28 +409,25 @@ Poll to see if new data is available from the hardware. If so, update it. n.b. i
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>DEVICE_OK on success, DEVICE_I2C_ERROR if the update fails.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK on success, DEVICE_I2C_ERROR if the update fails.</p>
-</dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal19LSM303Accelerometer12idleCallbackEv">
-<span id="_CPPv3N5codal19LSM303Accelerometer12idleCallbackEv"></span><span id="_CPPv2N5codal19LSM303Accelerometer12idleCallbackEv"></span><span id="codal::LSM303Accelerometer::idleCallback"></span><span class="target" id="classcodal_1_1LSM303Accelerometer_1ae3221b237e8aedab69e7b43a2fd13b08"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idleCallback</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal19LSM303Accelerometer12idleCallbackEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal19LSM303Accelerometer12idleCallbackEv"></span><span id="_CPPv2N5codal19LSM303Accelerometer12idleCallbackEv"></span><span id="codal::LSM303Accelerometer::idleCallback"></span><span class="target" id="classcodal_1_1LSM303Accelerometer_1a28e5d8852b5d7e35b54d3cbd10f35d70"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idleCallback</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal19LSM303Accelerometer12idleCallbackEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>A periodic callback invoked by the fiber scheduler idle thread.</p>
 <p>Internally calls updateSample(). </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal19LSM303Accelerometer8setSleepEb">
-<span id="_CPPv3N5codal19LSM303Accelerometer8setSleepEb"></span><span id="_CPPv2N5codal19LSM303Accelerometer8setSleepEb"></span><span id="codal::LSM303Accelerometer::setSleep__b"></span><span class="target" id="classcodal_1_1LSM303Accelerometer_1ad19ba71dd3d77218dcf01f06644e0961"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSleep</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">doSleep</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal19LSM303Accelerometer8setSleepEb" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal19LSM303Accelerometer8setSleepEb"></span><span id="_CPPv2N5codal19LSM303Accelerometer8setSleepEb"></span><span id="codal::LSM303Accelerometer::setSleep__b"></span><span class="target" id="classcodal_1_1LSM303Accelerometer_1a818c465f9aca59d92a2b0c8f903d5064"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSleep</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">doSleep</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal19LSM303Accelerometer8setSleepEb" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Puts the component in (or out of) sleep (low power) mode. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal19LSM303AccelerometerD0Ev">
-<span id="_CPPv3N5codal19LSM303AccelerometerD0Ev"></span><span id="_CPPv2N5codal19LSM303AccelerometerD0Ev"></span><span id="codal::LSM303Accelerometer::~LSM303Accelerometer"></span><span class="target" id="classcodal_1_1LSM303Accelerometer_1ae787d5561f11cfc1a77979965b044a19"></span><span class="sig-name descname"><span class="n"><span class="pre">~LSM303Accelerometer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal19LSM303AccelerometerD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal19LSM303AccelerometerD0Ev"></span><span id="_CPPv2N5codal19LSM303AccelerometerD0Ev"></span><span id="codal::LSM303Accelerometer::~LSM303Accelerometer"></span><span class="target" id="classcodal_1_1LSM303Accelerometer_1a78b55876e82ae00580aad9a77054f52f"></span><span class="sig-name descname"><span class="n"><span class="pre">~LSM303Accelerometer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal19LSM303AccelerometerD0Ev" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Destructor. </p>
 </dd></dl>
 
@@ -444,7 +436,7 @@ Poll to see if new data is available from the hardware. If so, update it. n.b. i
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal19LSM303Accelerometer10isDetectedER3I2C8uint16_t">
-<span id="_CPPv3N5codal19LSM303Accelerometer10isDetectedER3I2C8uint16_t"></span><span id="_CPPv2N5codal19LSM303Accelerometer10isDetectedER3I2C8uint16_t"></span><span id="codal::LSM303Accelerometer::isDetected__I2CR.uint16_t"></span><span class="target" id="classcodal_1_1LSM303Accelerometer_1a56b3050a2f203d72b52df8b898a5228e"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isDetected</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1I2C.html#_CPPv4N5codal3I2CE" title="codal::I2C"><span class="n"><span class="pre">I2C</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">i2c</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x32</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal19LSM303Accelerometer10isDetectedER3I2C8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal19LSM303Accelerometer10isDetectedER3I2C8uint16_t"></span><span id="_CPPv2N5codal19LSM303Accelerometer10isDetectedER3I2C8uint16_t"></span><span id="codal::LSM303Accelerometer::isDetected__I2CR.uint16_t"></span><span class="target" id="classcodal_1_1LSM303Accelerometer_1add6826cf9129b41825810b69007d4316"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isDetected</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1I2C.html#_CPPv4N5codal3I2CE" title="codal::I2C"><span class="n"><span class="pre">I2C</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">i2c</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x32</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal19LSM303Accelerometer10isDetectedER3I2C8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Attempts to read the 8 bit WHO_AM_I value from the accelerometer</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>

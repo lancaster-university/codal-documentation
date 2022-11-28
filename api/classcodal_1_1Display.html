@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class Display &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class Display &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -322,12 +323,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -387,7 +388,7 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal7Display7DisplayEii8uint16_t">
-<span id="_CPPv3N5codal7Display7DisplayEii8uint16_t"></span><span id="_CPPv2N5codal7Display7DisplayEii8uint16_t"></span><span id="codal::Display::Display__i.i.uint16_t"></span><span class="target" id="classcodal_1_1Display_1aef1c3fbfd29e0512f17956321e06a134"></span><span class="sig-name descname"><span class="n"><span class="pre">Display</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">width</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">height</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_DISPLAY</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7Display7DisplayEii8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal7Display7DisplayEii8uint16_t"></span><span id="_CPPv2N5codal7Display7DisplayEii8uint16_t"></span><span id="codal::Display::Display__i.i.uint16_t"></span><span class="target" id="classcodal_1_1Display_1a25468415053f7eb8710a8537a9bd6a01"></span><span class="sig-name descname"><span class="n"><span class="pre">Display</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">width</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">height</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_DISPLAY</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7Display7DisplayEii8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor.</p>
 <p>Create a software representation an abstract display. The display is initially blank.</p>
 <dl class="field-list simple">
@@ -399,7 +400,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal7Display8getWidthEv">
-<span id="_CPPv3N5codal7Display8getWidthEv"></span><span id="_CPPv2N5codal7Display8getWidthEv"></span><span id="codal::Display::getWidth"></span><span class="target" id="classcodal_1_1Display_1a21f911c50d86975ed8a3db38d207bf46"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getWidth</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7Display8getWidthEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal7Display8getWidthEv"></span><span id="_CPPv2N5codal7Display8getWidthEv"></span><span id="codal::Display::getWidth"></span><span class="target" id="classcodal_1_1Display_1add9ce52952184b5a83c80ab85e32c5f8"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getWidth</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7Display8getWidthEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Returns the width of the display</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -410,7 +411,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal7Display9getHeightEv">
-<span id="_CPPv3N5codal7Display9getHeightEv"></span><span id="_CPPv2N5codal7Display9getHeightEv"></span><span id="codal::Display::getHeight"></span><span class="target" id="classcodal_1_1Display_1a5539572d61db5efc6519a3b16c9c3ccb"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getHeight</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7Display9getHeightEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal7Display9getHeightEv"></span><span id="_CPPv2N5codal7Display9getHeightEv"></span><span id="codal::Display::getHeight"></span><span class="target" id="classcodal_1_1Display_1a5d348eb4843e9ef3d290e340ecec5a02"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getHeight</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7Display9getHeightEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Returns the height of the display</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -421,7 +422,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal7Display13setBrightnessEi">
-<span id="_CPPv3N5codal7Display13setBrightnessEi"></span><span id="_CPPv2N5codal7Display13setBrightnessEi"></span><span id="codal::Display::setBrightness__i"></span><span class="target" id="classcodal_1_1Display_1aeea825aa75a008e568692b56941bef4f"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setBrightness</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">b</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7Display13setBrightnessEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal7Display13setBrightnessEi"></span><span id="_CPPv2N5codal7Display13setBrightnessEi"></span><span id="codal::Display::setBrightness__i"></span><span class="target" id="classcodal_1_1Display_1ac3b48b6239301b3f0c46567665e2c1a6"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setBrightness</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">b</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7Display13setBrightnessEi" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Configures the brightness of the display.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -435,7 +436,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal7Display13getBrightnessEv">
-<span id="_CPPv3N5codal7Display13getBrightnessEv"></span><span id="_CPPv2N5codal7Display13getBrightnessEv"></span><span id="codal::Display::getBrightness"></span><span class="target" id="classcodal_1_1Display_1a0bdcda0e79ba7d0fcf25c6e31256ce02"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getBrightness</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7Display13getBrightnessEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal7Display13getBrightnessEv"></span><span id="_CPPv2N5codal7Display13getBrightnessEv"></span><span id="codal::Display::getBrightness"></span><span class="target" id="classcodal_1_1Display_1aef0ff166b116491ecee4e2450eb40ffa"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getBrightness</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7Display13getBrightnessEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Fetches the current brightness of this display.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -446,39 +447,31 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal7Display6enableEv">
-<span id="_CPPv3N5codal7Display6enableEv"></span><span id="_CPPv2N5codal7Display6enableEv"></span><span id="codal::Display::enable"></span><span class="target" id="classcodal_1_1Display_1a8e65b2c2741a47ab33602be4aafa62dd"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enable</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7Display6enableEv" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Enables the display, should only be called if the display is disabled.</p>
-<p>Enable the display. </p>
+<span id="_CPPv3N5codal7Display6enableEv"></span><span id="_CPPv2N5codal7Display6enableEv"></span><span id="codal::Display::enable"></span><span class="target" id="classcodal_1_1Display_1a213cb39a8c9110602c096083f78596fc"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enable</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7Display6enableEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Enables the display, should only be called if the display is disabled. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal7Display7disableEv">
-<span id="_CPPv3N5codal7Display7disableEv"></span><span id="_CPPv2N5codal7Display7disableEv"></span><span id="codal::Display::disable"></span><span class="target" id="classcodal_1_1Display_1a232190cf7f187bd0f010fc6c03c76d10"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disable</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7Display7disableEv" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Disables the display.</p>
-<p>Disable the display. </p>
+<span id="_CPPv3N5codal7Display7disableEv"></span><span id="_CPPv2N5codal7Display7disableEv"></span><span id="codal::Display::disable"></span><span class="target" id="classcodal_1_1Display_1a35f7aa05ff3851ce9c31852c8dad2294"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disable</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7Display7disableEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Disables the display. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal7Display10screenShotEv">
-<span id="_CPPv3N5codal7Display10screenShotEv"></span><span id="_CPPv2N5codal7Display10screenShotEv"></span><span id="codal::Display::screenShot"></span><span class="target" id="classcodal_1_1Display_1a6b56f8663549021e66846dfc5a854620"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="classcodal_1_1Image.html#_CPPv4N5codal5ImageE" title="codal::Image"><span class="n"><span class="pre">Image</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">screenShot</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7Display10screenShotEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal7Display10screenShotEv"></span><span id="_CPPv2N5codal7Display10screenShotEv"></span><span id="codal::Display::screenShot"></span><span class="target" id="classcodal_1_1Display_1a4cfacfba496a0c6daac73d8aa442f09c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="classcodal_1_1Image.html#_CPPv4N5codal5ImageE" title="codal::Image"><span class="n"><span class="pre">Image</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">screenShot</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7Display10screenShotEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Captures the bitmap currently being rendered on the display.</p>
-<p>
-Captures the bitmap currently being rendered on the display.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>a <a class="reference internal" href="classcodal_1_1Image.html#classcodal_1_1Image"><span class="std std-ref">Image</span></a> containing the captured data.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>an <a class="reference internal" href="classcodal_1_1Image.html#classcodal_1_1Image"><span class="std std-ref">Image</span></a> containing the captured data. </p>
+<dd class="field-odd"><p>a <a class="reference internal" href="classcodal_1_1Image.html#classcodal_1_1Image"><span class="std std-ref">Image</span></a> containing the captured data. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal7DisplayD0Ev">
-<span id="_CPPv3N5codal7DisplayD0Ev"></span><span id="_CPPv2N5codal7DisplayD0Ev"></span><span id="codal::Display::~Display"></span><span class="target" id="classcodal_1_1Display_1ac2607a6bb236c55547a4223d40d85d1f"></span><span class="sig-name descname"><span class="n"><span class="pre">~Display</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7DisplayD0Ev" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Destructor for CodalDisplay, where we deregister this instance from the array of system components.</p>
-<p>Destructor. </p>
+<span id="_CPPv3N5codal7DisplayD0Ev"></span><span id="_CPPv2N5codal7DisplayD0Ev"></span><span id="codal::Display::~Display"></span><span class="target" id="classcodal_1_1Display_1ae2fb7664c6df71fa6aad074fffa72298"></span><span class="sig-name descname"><span class="n"><span class="pre">~Display</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal7DisplayD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Destructor for CodalDisplay, where we deregister this instance from the array of system components. </p>
 </dd></dl>
 
 </div>

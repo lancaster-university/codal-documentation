@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class MicroBitAudio &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class MicroBitAudio &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -317,12 +318,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -369,79 +370,71 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13MicroBitAudio13MicroBitAudioER8NRF52PinR8NRF52PinR8NRF52ADCR8NRF52PinR8NRF52Pin">
-<span id="_CPPv3N5codal13MicroBitAudio13MicroBitAudioER8NRF52PinR8NRF52PinR8NRF52ADCR8NRF52PinR8NRF52Pin"></span><span id="_CPPv2N5codal13MicroBitAudio13MicroBitAudioER8NRF52PinR8NRF52PinR8NRF52ADCR8NRF52PinR8NRF52Pin"></span><span id="codal::MicroBitAudio::MicroBitAudio__NRF52PinR.NRF52PinR.NRF52ADCR.NRF52PinR.NRF52PinR"></span><span class="target" id="classcodal_1_1MicroBitAudio_1ac5bf6549bfbe7beec588e961d4208064"></span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitAudio</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">NRF52Pin</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pin</span></span>, <span class="n"><span class="pre">NRF52Pin</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">speaker</span></span>, <span class="n"><span class="pre">NRF52ADC</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">adc</span></span>, <span class="n"><span class="pre">NRF52Pin</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">microphone</span></span>, <span class="n"><span class="pre">NRF52Pin</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">runmic</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio13MicroBitAudioER8NRF52PinR8NRF52PinR8NRF52ADCR8NRF52PinR8NRF52Pin" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Constructor.</p>
-<p>Default Constructor. </p>
+<span id="_CPPv3N5codal13MicroBitAudio13MicroBitAudioER8NRF52PinR8NRF52PinR8NRF52ADCR8NRF52PinR8NRF52Pin"></span><span id="_CPPv2N5codal13MicroBitAudio13MicroBitAudioER8NRF52PinR8NRF52PinR8NRF52ADCR8NRF52PinR8NRF52Pin"></span><span id="codal::MicroBitAudio::MicroBitAudio__NRF52PinR.NRF52PinR.NRF52ADCR.NRF52PinR.NRF52PinR"></span><span class="target" id="classcodal_1_1MicroBitAudio_1aa11496c59e8b66e1cb13e4db9e3464cf"></span><span class="sig-name descname"><span class="n"><span class="pre">MicroBitAudio</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">NRF52Pin</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pin</span></span>, <span class="n"><span class="pre">NRF52Pin</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">speaker</span></span>, <span class="n"><span class="pre">NRF52ADC</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">adc</span></span>, <span class="n"><span class="pre">NRF52Pin</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">microphone</span></span>, <span class="n"><span class="pre">NRF52Pin</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">runmic</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio13MicroBitAudioER8NRF52PinR8NRF52PinR8NRF52ADCR8NRF52PinR8NRF52Pin" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Constructor. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13MicroBitAudioD0Ev">
-<span id="_CPPv3N5codal13MicroBitAudioD0Ev"></span><span id="_CPPv2N5codal13MicroBitAudioD0Ev"></span><span id="codal::MicroBitAudio::~MicroBitAudio"></span><span class="target" id="classcodal_1_1MicroBitAudio_1ac0989e3db5d9b505fc30f166f1b5bff2"></span><span class="sig-name descname"><span class="n"><span class="pre">~MicroBitAudio</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudioD0Ev" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Destructor.</p>
-<p>Destructor.</p>
-<p>Removes resources held by the instance. </p>
+<span id="_CPPv3N5codal13MicroBitAudioD0Ev"></span><span id="_CPPv2N5codal13MicroBitAudioD0Ev"></span><span id="codal::MicroBitAudio::~MicroBitAudio"></span><span class="target" id="classcodal_1_1MicroBitAudio_1a536aea89cecc311afe677d2af84f0b9f"></span><span class="sig-name descname"><span class="n"><span class="pre">~MicroBitAudio</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudioD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Destructor. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13MicroBitAudio15onSplitterEventE13MicroBitEvent">
-<span id="_CPPv3N5codal13MicroBitAudio15onSplitterEventE13MicroBitEvent"></span><span id="_CPPv2N5codal13MicroBitAudio15onSplitterEventE13MicroBitEvent"></span><span id="codal::MicroBitAudio::onSplitterEvent__MicroBitEvent"></span><span class="target" id="classcodal_1_1MicroBitAudio_1aca560daeb30fb7014846cb049a46e90c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">onSplitterEvent</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_MicroBitCompat_8h_1ab2b8aad33ff526d5a6ecdcfb57db7f1e.html#_CPPv413MicroBitEvent" title="MicroBitEvent"><span class="n"><span class="pre">MicroBitEvent</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio15onSplitterEventE13MicroBitEvent" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13MicroBitAudio15onSplitterEventE13MicroBitEvent"></span><span id="_CPPv2N5codal13MicroBitAudio15onSplitterEventE13MicroBitEvent"></span><span id="codal::MicroBitAudio::onSplitterEvent__MicroBitEvent"></span><span class="target" id="classcodal_1_1MicroBitAudio_1a0efa786535d2dba2d4e5fc7c5656d80d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">onSplitterEvent</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_MicroBitCompat_8h_1ab2b8aad33ff526d5a6ecdcfb57db7f1e.html#_CPPv413MicroBitEvent" title="MicroBitEvent"><span class="n"><span class="pre">MicroBitEvent</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio15onSplitterEventE13MicroBitEvent" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Catch events from the splitter </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>MicroBitEvent</strong> – Handle events from splitter </p>
+<dd class="field-odd"><p><strong>MicroBitEvent</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13MicroBitAudio11activateMicEv">
-<span id="_CPPv3N5codal13MicroBitAudio11activateMicEv"></span><span id="_CPPv2N5codal13MicroBitAudio11activateMicEv"></span><span id="codal::MicroBitAudio::activateMic"></span><span class="target" id="classcodal_1_1MicroBitAudio_1aa72d28ab491291b310a0fac42895f634"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">activateMic</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio11activateMicEv" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Activate Mic</p>
-<p>Activate Mic and Input Channel </p>
+<span id="_CPPv3N5codal13MicroBitAudio11activateMicEv"></span><span id="_CPPv2N5codal13MicroBitAudio11activateMicEv"></span><span id="codal::MicroBitAudio::activateMic"></span><span class="target" id="classcodal_1_1MicroBitAudio_1ad6d2a46cbd30fde6fb707e39d009ad97"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">activateMic</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio11activateMicEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Activate Mic </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13MicroBitAudio13deactivateMicEv">
-<span id="_CPPv3N5codal13MicroBitAudio13deactivateMicEv"></span><span id="_CPPv2N5codal13MicroBitAudio13deactivateMicEv"></span><span id="codal::MicroBitAudio::deactivateMic"></span><span class="target" id="classcodal_1_1MicroBitAudio_1a96497dd51cd220f30157552e5443b273"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deactivateMic</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio13deactivateMicEv" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Dectivate Mic</p>
-<p>Dectivate Mic and Input Channel </p>
+<span id="_CPPv3N5codal13MicroBitAudio13deactivateMicEv"></span><span id="_CPPv2N5codal13MicroBitAudio13deactivateMicEv"></span><span id="codal::MicroBitAudio::deactivateMic"></span><span class="target" id="classcodal_1_1MicroBitAudio_1a1f0aa555ce06c6b534f5307bc179027d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deactivateMic</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio13deactivateMicEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Dectivate Mic </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13MicroBitAudio18deactivateLevelSPLEv">
-<span id="_CPPv3N5codal13MicroBitAudio18deactivateLevelSPLEv"></span><span id="_CPPv2N5codal13MicroBitAudio18deactivateLevelSPLEv"></span><span id="codal::MicroBitAudio::deactivateLevelSPL"></span><span class="target" id="classcodal_1_1MicroBitAudio_1aabd4a1aea2bdaea331b4fecebc1c20f7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deactivateLevelSPL</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio18deactivateLevelSPLEv" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Dectivate level detector SPL</p>
-<p>Dectivate Mic and Input Channel </p>
+<span id="_CPPv3N5codal13MicroBitAudio18deactivateLevelSPLEv"></span><span id="_CPPv2N5codal13MicroBitAudio18deactivateLevelSPLEv"></span><span id="codal::MicroBitAudio::deactivateLevelSPL"></span><span class="target" id="classcodal_1_1MicroBitAudio_1a74bd4618816819f883e04a2dd0c6df77"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deactivateLevelSPL</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio18deactivateLevelSPLEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Dectivate level detector SPL </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13MicroBitAudio17setMicrophoneGainEi">
-<span id="_CPPv3N5codal13MicroBitAudio17setMicrophoneGainEi"></span><span id="_CPPv2N5codal13MicroBitAudio17setMicrophoneGainEi"></span><span id="codal::MicroBitAudio::setMicrophoneGain__i"></span><span class="target" id="classcodal_1_1MicroBitAudio_1a42e82d609666ed4998abf8ba46b20d88"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setMicrophoneGain</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">gain</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio17setMicrophoneGainEi" title="Permalink to this definition">#</a><br /></dt>
-<dd><p><p>Set normaliser gain</p>
-<p>Set normaliser gain</p>
-</p>
+<span id="_CPPv3N5codal13MicroBitAudio17setMicrophoneGainEi"></span><span id="_CPPv2N5codal13MicroBitAudio17setMicrophoneGainEi"></span><span id="codal::MicroBitAudio::setMicrophoneGain__i"></span><span class="target" id="classcodal_1_1MicroBitAudio_1ac4c68166be71e99d6d7aba0b5523f77e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setMicrophoneGain</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">gain</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio17setMicrophoneGainEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Set normaliser gain </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>gain</strong> – value to set the microphone gain to</p>
+<dd class="field-odd"><p><strong>gain</strong> – value to set the microphone gain to </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13MicroBitAudio6enableEv">
-<span id="_CPPv3N5codal13MicroBitAudio6enableEv"></span><span id="_CPPv2N5codal13MicroBitAudio6enableEv"></span><span id="codal::MicroBitAudio::enable"></span><span class="target" id="classcodal_1_1MicroBitAudio_1a1583c578815903d9a6d155333b125a36"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enable</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio6enableEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13MicroBitAudio6enableEv"></span><span id="_CPPv2N5codal13MicroBitAudio6enableEv"></span><span id="codal::MicroBitAudio::enable"></span><span class="target" id="classcodal_1_1MicroBitAudio_1a185b0bed5d6f98d50fc23bb8c67760de"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enable</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio6enableEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>post-constructor initialisation method </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13MicroBitAudio7disableEv">
-<span id="_CPPv3N5codal13MicroBitAudio7disableEv"></span><span id="_CPPv2N5codal13MicroBitAudio7disableEv"></span><span id="codal::MicroBitAudio::disable"></span><span class="target" id="classcodal_1_1MicroBitAudio_1a55e25e3205aa40192962d36a396330de"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disable</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio7disableEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13MicroBitAudio7disableEv"></span><span id="_CPPv2N5codal13MicroBitAudio7disableEv"></span><span id="codal::MicroBitAudio::disable"></span><span class="target" id="classcodal_1_1MicroBitAudio_1a9cac5a210246520e552985128c95124c"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disable</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio7disableEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Shut down the audio pipeline </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13MicroBitAudio9getVolumeEv">
-<span id="_CPPv3N5codal13MicroBitAudio9getVolumeEv"></span><span id="_CPPv2N5codal13MicroBitAudio9getVolumeEv"></span><span id="codal::MicroBitAudio::getVolume"></span><span class="target" id="classcodal_1_1MicroBitAudio_1a6bfcc983e1b1c8d21d2f7e0f950771d3"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getVolume</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio9getVolumeEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13MicroBitAudio9getVolumeEv"></span><span id="_CPPv2N5codal13MicroBitAudio9getVolumeEv"></span><span id="codal::MicroBitAudio::getVolume"></span><span class="target" id="classcodal_1_1MicroBitAudio_1a59747f7a87ec6d4e12aa1ad2b7f2f69a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getVolume</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio9getVolumeEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Get the current volume. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -452,7 +445,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13MicroBitAudio9setVolumeEi">
-<span id="_CPPv3N5codal13MicroBitAudio9setVolumeEi"></span><span id="_CPPv2N5codal13MicroBitAudio9setVolumeEi"></span><span id="codal::MicroBitAudio::setVolume__i"></span><span class="target" id="classcodal_1_1MicroBitAudio_1aa7c9a1856b6245003ab7c187163079a1"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setVolume</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">volume</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio9setVolumeEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13MicroBitAudio9setVolumeEi"></span><span id="_CPPv2N5codal13MicroBitAudio9setVolumeEi"></span><span id="codal::MicroBitAudio::setVolume__i"></span><span class="target" id="classcodal_1_1MicroBitAudio_1ac614abee2f68668994d3ac0406888078"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setVolume</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">volume</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio9setVolumeEi" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Define the volume. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -466,7 +459,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13MicroBitAudio17setSpeakerEnabledEb">
-<span id="_CPPv3N5codal13MicroBitAudio17setSpeakerEnabledEb"></span><span id="_CPPv2N5codal13MicroBitAudio17setSpeakerEnabledEb"></span><span id="codal::MicroBitAudio::setSpeakerEnabled__b"></span><span class="target" id="classcodal_1_1MicroBitAudio_1ae48d67d274b72dd1b00f8a1a41127ddb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSpeakerEnabled</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">on</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio17setSpeakerEnabledEb" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13MicroBitAudio17setSpeakerEnabledEb"></span><span id="_CPPv2N5codal13MicroBitAudio17setSpeakerEnabledEb"></span><span id="codal::MicroBitAudio::setSpeakerEnabled__b"></span><span class="target" id="classcodal_1_1MicroBitAudio_1a3e6b9ae480a4378e9290282e9151318a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSpeakerEnabled</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">on</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio17setSpeakerEnabledEb" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Enable or disable use of the on-board speaker. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -477,7 +470,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13MicroBitAudio16isSpeakerEnabledEv">
-<span id="_CPPv3N5codal13MicroBitAudio16isSpeakerEnabledEv"></span><span id="_CPPv2N5codal13MicroBitAudio16isSpeakerEnabledEv"></span><span id="codal::MicroBitAudio::isSpeakerEnabled"></span><span class="target" id="classcodal_1_1MicroBitAudio_1a74e51302b41a7383db941fa23213c024"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isSpeakerEnabled</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio16isSpeakerEnabledEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13MicroBitAudio16isSpeakerEnabledEv"></span><span id="_CPPv2N5codal13MicroBitAudio16isSpeakerEnabledEv"></span><span id="codal::MicroBitAudio::isSpeakerEnabled"></span><span class="target" id="classcodal_1_1MicroBitAudio_1a2b737897a5db5b8eafb77778d432315e"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isSpeakerEnabled</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio16isSpeakerEnabledEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Query whether the speaker is enabled. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -488,7 +481,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13MicroBitAudio6setPinER8NRF52Pin">
-<span id="_CPPv3N5codal13MicroBitAudio6setPinER8NRF52Pin"></span><span id="_CPPv2N5codal13MicroBitAudio6setPinER8NRF52Pin"></span><span id="codal::MicroBitAudio::setPin__NRF52PinR"></span><span class="target" id="classcodal_1_1MicroBitAudio_1abdbfc00d7658eb1ab7920dfcfe9dc9dd"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPin</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">NRF52Pin</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pin</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio6setPinER8NRF52Pin" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13MicroBitAudio6setPinER8NRF52Pin"></span><span id="_CPPv2N5codal13MicroBitAudio6setPinER8NRF52Pin"></span><span id="codal::MicroBitAudio::setPin__NRF52PinR"></span><span class="target" id="classcodal_1_1MicroBitAudio_1ac79d1d584ab16faca1d2cbe6a07617ac"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPin</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">NRF52Pin</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pin</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio6setPinER8NRF52Pin" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Define which pin on the edge connector is used for audio. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -499,7 +492,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13MicroBitAudio13setPinEnabledEb">
-<span id="_CPPv3N5codal13MicroBitAudio13setPinEnabledEb"></span><span id="_CPPv2N5codal13MicroBitAudio13setPinEnabledEb"></span><span id="codal::MicroBitAudio::setPinEnabled__b"></span><span class="target" id="classcodal_1_1MicroBitAudio_1abe2a1924adee7638b4fa16b460d001f3"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPinEnabled</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">on</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio13setPinEnabledEb" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13MicroBitAudio13setPinEnabledEb"></span><span id="_CPPv2N5codal13MicroBitAudio13setPinEnabledEb"></span><span id="codal::MicroBitAudio::setPinEnabled__b"></span><span class="target" id="classcodal_1_1MicroBitAudio_1a5e5febacbd9a21c99cbf45f5d89fd4ad"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPinEnabled</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">on</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio13setPinEnabledEb" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Define if audio is enabled on the edge connector pin. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -510,7 +503,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13MicroBitAudio12isPinEnabledEv">
-<span id="_CPPv3N5codal13MicroBitAudio12isPinEnabledEv"></span><span id="_CPPv2N5codal13MicroBitAudio12isPinEnabledEv"></span><span id="codal::MicroBitAudio::isPinEnabled"></span><span class="target" id="classcodal_1_1MicroBitAudio_1aa621c52d97416235cec20d93578aadb1"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPinEnabled</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio12isPinEnabledEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13MicroBitAudio12isPinEnabledEv"></span><span id="_CPPv2N5codal13MicroBitAudio12isPinEnabledEv"></span><span id="codal::MicroBitAudio::isPinEnabled"></span><span class="target" id="classcodal_1_1MicroBitAudio_1a1d4f92188720754952704bca98375647"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPinEnabled</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio12isPinEnabledEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Query whether the audio is enabled on the edge connector. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -521,7 +514,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13MicroBitAudio8setSleepEb">
-<span id="_CPPv3N5codal13MicroBitAudio8setSleepEb"></span><span id="_CPPv2N5codal13MicroBitAudio8setSleepEb"></span><span id="codal::MicroBitAudio::setSleep__b"></span><span class="target" id="classcodal_1_1MicroBitAudio_1a5860ce80448174b9324c8f64b115650c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSleep</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">doSleep</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio8setSleepEb" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13MicroBitAudio8setSleepEb"></span><span id="_CPPv2N5codal13MicroBitAudio8setSleepEb"></span><span id="codal::MicroBitAudio::setSleep__b"></span><span class="target" id="classcodal_1_1MicroBitAudio_1a75668b335347a1e4858ee4631529ec1d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSleep</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">doSleep</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio8setSleepEb" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Puts the component in (or out of) sleep (low power) mode. </p>
 </dd></dl>
 
@@ -549,6 +542,11 @@ title="Source repository"
 <dd></dd></dl>
 
 <dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal13MicroBitAudio11rawSplitterE">
+<span id="_CPPv3N5codal13MicroBitAudio11rawSplitterE"></span><span id="_CPPv2N5codal13MicroBitAudio11rawSplitterE"></span><span id="codal::MicroBitAudio::rawSplitter__StreamSplitterP"></span><span class="target" id="classcodal_1_1MicroBitAudio_1ab4aa20eb85e1b4b78e6da3f31349daf0"></span><a class="reference internal" href="classcodal_1_1StreamSplitter.html#_CPPv4N5codal14StreamSplitterE" title="codal::StreamSplitter"><span class="n"><span class="pre">StreamSplitter</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">rawSplitter</span></span></span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio11rawSplitterE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13MicroBitAudio5levelE">
 <span id="_CPPv3N5codal13MicroBitAudio5levelE"></span><span id="_CPPv2N5codal13MicroBitAudio5levelE"></span><span id="codal::MicroBitAudio::level__LevelDetectorP"></span><span class="target" id="classcodal_1_1MicroBitAudio_1aea2728bd4cda180a691ccd46850ea477"></span><a class="reference internal" href="classcodal_1_1LevelDetector.html#_CPPv4N5codal13LevelDetectorE" title="codal::LevelDetector"><span class="n"><span class="pre">LevelDetector</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">level</span></span></span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio5levelE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
@@ -556,6 +554,11 @@ title="Source repository"
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13MicroBitAudio8levelSPLE">
 <span id="_CPPv3N5codal13MicroBitAudio8levelSPLE"></span><span id="_CPPv2N5codal13MicroBitAudio8levelSPLE"></span><span id="codal::MicroBitAudio::levelSPL__LevelDetectorSPLP"></span><span class="target" id="classcodal_1_1MicroBitAudio_1ac54abefcc7a26388212993ce496c6bfd"></span><a class="reference internal" href="classcodal_1_1LevelDetectorSPL.html#_CPPv4N5codal16LevelDetectorSPLE" title="codal::LevelDetectorSPL"><span class="n"><span class="pre">LevelDetectorSPL</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">levelSPL</span></span></span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio8levelSPLE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal13MicroBitAudio9micFilterE">
+<span id="_CPPv3N5codal13MicroBitAudio9micFilterE"></span><span id="_CPPv2N5codal13MicroBitAudio9micFilterE"></span><span id="codal::MicroBitAudio::micFilter__LowPassFilterP"></span><span class="target" id="classcodal_1_1MicroBitAudio_1a561a41d1a4d2f58109f214b3f7ad1838"></span><a class="reference internal" href="classcodal_1_1LowPassFilter.html#_CPPv4N5codal13LowPassFilterE" title="codal::LowPassFilter"><span class="n"><span class="pre">LowPassFilter</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">micFilter</span></span></span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio9micFilterE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
@@ -573,7 +576,7 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13MicroBitAudio17requestActivationEv">
-<span id="_CPPv3N5codal13MicroBitAudio17requestActivationEv"></span><span id="_CPPv2N5codal13MicroBitAudio17requestActivationEv"></span><span id="codal::MicroBitAudio::requestActivation"></span><span class="target" id="classcodal_1_1MicroBitAudio_1adce4de3bee9cecd27a842f0010be4cb3"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestActivation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio17requestActivationEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13MicroBitAudio17requestActivationEv"></span><span id="_CPPv2N5codal13MicroBitAudio17requestActivationEv"></span><span id="codal::MicroBitAudio::requestActivation"></span><span class="target" id="classcodal_1_1MicroBitAudio_1a83fec10c6bc7347365c800e74645594b"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestActivation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio17requestActivationEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Demand request from a component to enable the default instance of this audio pipeline </p>
 </dd></dl>
 
@@ -582,7 +585,7 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-attributes">Public Static Attributes</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13MicroBitAudio8instanceE">
-<span id="_CPPv3N5codal13MicroBitAudio8instanceE"></span><span id="_CPPv2N5codal13MicroBitAudio8instanceE"></span><span id="codal::MicroBitAudio::instance__MicroBitAudioP"></span><span class="target" id="classcodal_1_1MicroBitAudio_1acd640a81478483320c4b896210dbac12"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5codal13MicroBitAudioE" title="codal::MicroBitAudio"><span class="n"><span class="pre">MicroBitAudio</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">instance</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">NULL</span></span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio8instanceE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13MicroBitAudio8instanceE"></span><span id="_CPPv2N5codal13MicroBitAudio8instanceE"></span><span id="codal::MicroBitAudio::instance__MicroBitAudioP"></span><span class="target" id="classcodal_1_1MicroBitAudio_1a27e4b51105815ef32db9f61e5232016e"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5codal13MicroBitAudioE" title="codal::MicroBitAudio"><span class="n"><span class="pre">MicroBitAudio</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">instance</span></span></span><a class="headerlink" href="#_CPPv4N5codal13MicroBitAudio8instanceE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class MicroBitCompass &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class MicroBitCompass &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -317,12 +318,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -390,20 +391,10 @@ title="Source repository"
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">compass</span><span class="p">.</span><span class="n">heading</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
-</p>
-<p>Gets the current heading of the device, relative to magnetic north.</p>
-<p>If the compass is not calibrated, it will raise the MICROBIT_COMPASS_EVT_CALIBRATE event.</p>
-<p>Users wishing to implement their own calibration algorithms should listen for this event, using MESSAGE_BUS_LISTENER_IMMEDIATE model. This ensures that calibration is complete before the user program continues.</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">compass</span><span class="p">.</span><span class="n">heading</span><span class="p">();</span><span class="w"></span>
-</pre></div>
-</div>
  </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>the current heading, in degrees. Or CALIBRATION_IN_PROGRESS if the compass is calibrating.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the current heading, in degrees. Or CALIBRATION_IN_PROGRESS if the compass is calibrating.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -480,13 +471,12 @@ title="Source repository"
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N15MicroBitCompass16clearCalibrationEv">
 <span id="_CPPv3N15MicroBitCompass16clearCalibrationEv"></span><span id="_CPPv2N15MicroBitCompass16clearCalibrationEv"></span><span id="MicroBitCompass::clearCalibration"></span><span class="target" id="classMicroBitCompass_1a3065bbdf9a95d5d2b11ec1f2a102c97a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clearCalibration</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15MicroBitCompass16clearCalibrationEv" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Clears the calibration held in persistent storage, and sets the calibrated flag to zero.</p>
-<p>Clears the calibration held in memory storage, and sets the calibrated flag to zero. </p>
+<dd><p>Clears the calibration held in persistent storage, and sets the calibrated flag to zero. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N15MicroBitCompass9configureEv">
-<span id="_CPPv3N15MicroBitCompass9configureEv"></span><span id="_CPPv2N15MicroBitCompass9configureEv"></span><span id="MicroBitCompass::configure"></span><span class="target" id="classMicroBitCompass_1aac359a35c0c032e5dae9fcef564068e7"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configure</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15MicroBitCompass9configureEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N15MicroBitCompass9configureEv"></span><span id="_CPPv2N15MicroBitCompass9configureEv"></span><span id="MicroBitCompass::configure"></span><span class="target" id="classMicroBitCompass_1aaec99b2ad6c1b058b378f7263e0c644c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configure</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15MicroBitCompass9configureEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Configures the device for the sample rate defined in this object. The nearest values are chosen to those defined that are supported by the hardware. The instance variables are then updated to reflect reality.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -650,17 +640,11 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N15MicroBitCompass10autoDetectER11MicroBitI2C">
-<span id="_CPPv3N15MicroBitCompass10autoDetectER11MicroBitI2C"></span><span id="_CPPv2N15MicroBitCompass10autoDetectER11MicroBitI2C"></span><span id="MicroBitCompass::autoDetect__MicroBitI2CR"></span><span class="target" id="classMicroBitCompass_1a44febf3ca13a59a979ac6a16a5deca94"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">Compass</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">autoDetect</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">MicroBitI2C</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">i2c</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15MicroBitCompass10autoDetectER11MicroBitI2C" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N15MicroBitCompass10autoDetectER11MicroBitI2C"></span><span id="_CPPv2N15MicroBitCompass10autoDetectER11MicroBitI2C"></span><span id="MicroBitCompass::autoDetect__MicroBitI2CR"></span><span class="target" id="classMicroBitCompass_1a3e1591d4db7eb57720a8a922ccfce474"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">Compass</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">autoDetect</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">MicroBitI2C</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">i2c</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15MicroBitCompass10autoDetectER11MicroBitI2C" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Device autodetection. Scans the given I2C bus for supported compass devices. if found, constructs an appropriate driver and returns it.</p>
-<p>
-Device autodetection. Scans the given I2C bus for supported accelerometer devices. if found, constructs an appropriate driver and returns it.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>i2c</strong> – the bus to scan.</p></li>
-<li><p><strong>i2c</strong> – the bus to scan. </p></li>
-<li><p><strong>id</strong> – the unique EventModel id of this component. Defaults to: MICROBIT_ID_ACCELEROMETER </p></li>
-</ul>
+<dd class="field-odd"><p><strong>i2c</strong> – the bus to scan. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -670,7 +654,7 @@ Device autodetection. Scans the given I2C bus for supported accelerometer device
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-attributes">Public Static Attributes</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N15MicroBitCompass6driverE">
-<span id="_CPPv3N15MicroBitCompass6driverE"></span><span id="_CPPv2N15MicroBitCompass6driverE"></span><span id="MicroBitCompass::driver__CompassP"></span><span class="target" id="classMicroBitCompass_1a5f2b64390a8f98ebbd0d356f213d16e8"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">Compass</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">driver</span></span></span><a class="headerlink" href="#_CPPv4N15MicroBitCompass6driverE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N15MicroBitCompass6driverE"></span><span id="_CPPv2N15MicroBitCompass6driverE"></span><span id="MicroBitCompass::driver__CompassP"></span><span class="target" id="classMicroBitCompass_1a93a57ea1cbe9992ba4376cebb9525b66"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">Compass</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">driver</span></span></span><a class="headerlink" href="#_CPPv4N15MicroBitCompass6driverE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>

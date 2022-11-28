@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class KeyValueStorage &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class KeyValueStorage &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,7 +282,7 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-documentation">
    Class Documentation
@@ -305,7 +306,7 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-documentation">
    Class Documentation
@@ -340,19 +341,14 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal15KeyValueStorage15KeyValueStorageER13NVMControlleri">
-<span id="_CPPv3N5codal15KeyValueStorage15KeyValueStorageER13NVMControlleri"></span><span id="_CPPv2N5codal15KeyValueStorage15KeyValueStorageER13NVMControlleri"></span><span id="codal::KeyValueStorage::KeyValueStorage__NVMControllerR.i"></span><span class="target" id="classcodal_1_1KeyValueStorage_1a4cc1fe26b1394f5579eea978c4ae8f2a"></span><span class="sig-name descname"><span class="n"><span class="pre">KeyValueStorage</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1NVMController.html#_CPPv4N5codal13NVMControllerE" title="codal::NVMController"><span class="n"><span class="pre">NVMController</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">controller</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pageNumber</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">4</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15KeyValueStorage15KeyValueStorageER13NVMControlleri" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal15KeyValueStorage15KeyValueStorageER13NVMControlleri"></span><span id="_CPPv2N5codal15KeyValueStorage15KeyValueStorageER13NVMControlleri"></span><span id="codal::KeyValueStorage::KeyValueStorage__NVMControllerR.i"></span><span class="target" id="classcodal_1_1KeyValueStorage_1a9f99feb58032a6be5fa7b195baf3e56a"></span><span class="sig-name descname"><span class="n"><span class="pre">KeyValueStorage</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1NVMController.html#_CPPv4N5codal13NVMControllerE" title="codal::NVMController"><span class="n"><span class="pre">NVMController</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">controller</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pageNumber</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">4</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15KeyValueStorage15KeyValueStorageER13NVMControlleri" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor.</p>
-<p>Creates an instance of <a class="reference internal" href="#classcodal_1_1KeyValueStorage"><span class="std std-ref">KeyValueStorage</span></a> which acts like a <a class="reference internal" href="structcodal_1_1KeyValueStore.html#structcodal_1_1KeyValueStore"><span class="std std-ref">KeyValueStore</span></a> that allows the retrieval, addition and deletion of KeyValuePairs.</p>
-<p>
-Constructor.</p>
 <p>Creates an instance of <a class="reference internal" href="#classcodal_1_1KeyValueStorage"><span class="std std-ref">KeyValueStorage</span></a> which acts like a <a class="reference internal" href="structcodal_1_1KeyValueStore.html#structcodal_1_1KeyValueStore"><span class="std std-ref">KeyValueStore</span></a> that allows the retrieval, addition and deletion of KeyValuePairs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>controller</strong> – The non-volatile storage controller to use </p></li>
-<li><p><strong>pageNumber</strong> – The logical page number for this <a class="reference internal" href="#classcodal_1_1KeyValueStorage"><span class="std std-ref">KeyValueStorage</span></a>. Optionally use negative number to count from end of address space.</p></li>
-<li><p><strong>controller</strong> – The non-volatile storage controller to use </p></li>
-<li><p><strong>pageNumber</strong> – The logical page number for this <a class="reference internal" href="#classcodal_1_1KeyValueStorage"><span class="std std-ref">KeyValueStorage</span></a> Optionally use negative number to count from end of address space. </p></li>
+<li><p><strong>pageNumber</strong> – The logical page number for this <a class="reference internal" href="#classcodal_1_1KeyValueStorage"><span class="std std-ref">KeyValueStorage</span></a>. Optionally use negative number to count from end of address space. </p></li>
 </ul>
 </dd>
 </dl>
@@ -360,59 +356,43 @@ Constructor.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal15KeyValueStorage3putEPKcP7uint8_ti">
-<span id="_CPPv3N5codal15KeyValueStorage3putEPKcP7uint8_ti"></span><span id="_CPPv2N5codal15KeyValueStorage3putEPKcP7uint8_ti"></span><span id="codal::KeyValueStorage::put__cCP.uint8_tP.i"></span><span class="target" id="classcodal_1_1KeyValueStorage_1a92f147e6db7350073e979ffec3bb02db"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">put</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">key</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dataSize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15KeyValueStorage3putEPKcP7uint8_ti" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal15KeyValueStorage3putEPKcP7uint8_ti"></span><span id="_CPPv2N5codal15KeyValueStorage3putEPKcP7uint8_ti"></span><span id="codal::KeyValueStorage::put__cCP.uint8_tP.i"></span><span class="target" id="classcodal_1_1KeyValueStorage_1a7be2d7f8c5d5b11b2eeea7305d1ab66e"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">put</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">key</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dataSize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15KeyValueStorage3putEPKcP7uint8_ti" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Places a given key, and it’s corresponding value into flash at the earliest available point.</p>
-<p>
-Places a given key, and it’s corresponding value into flash at the earliest available point.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>key</strong> – the unique name that should be used as an identifier for the given data. The key is presumed to be null terminated.</p></li>
 <li><p><strong>data</strong> – a pointer to the beginning of the data to be persisted.</p></li>
 <li><p><strong>dataSize</strong> – the size of the data to be persisted</p></li>
-<li><p><strong>key</strong> – the unique name that should be used as an identifier for the given data. The key is presumed to be null terminated.</p></li>
-<li><p><strong>data</strong> – a pointer to the beginning of the data to be persisted.</p></li>
-<li><p><strong>dataSize</strong> – the size of the data to be persisted</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>KEY_VALUE_OK on success, KEY_VALUE_INVALID_PARAMETER if the key or size is too large, KEY_VALUE_NO_RESOURCES if the storage page is full</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success, KEY_VALUE_INVALID_PARAMETER if the key or size is too large, KEY_VALUE_NO_RESOURCES if the storage page is full </p>
+<dd class="field-even"><p>KEY_VALUE_OK on success, KEY_VALUE_INVALID_PARAMETER if the key or size is too large, KEY_VALUE_NO_RESOURCES if the storage page is full </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal15KeyValueStorage3putE13ManagedStringP7uint8_ti">
-<span id="_CPPv3N5codal15KeyValueStorage3putE13ManagedStringP7uint8_ti"></span><span id="_CPPv2N5codal15KeyValueStorage3putE13ManagedStringP7uint8_ti"></span><span id="codal::KeyValueStorage::put__ManagedString.uint8_tP.i"></span><span class="target" id="classcodal_1_1KeyValueStorage_1ad8e9ef2c405553017ef29c454cc06a8b"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">put</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">key</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dataSize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15KeyValueStorage3putE13ManagedStringP7uint8_ti" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal15KeyValueStorage3putE13ManagedStringP7uint8_ti"></span><span id="_CPPv2N5codal15KeyValueStorage3putE13ManagedStringP7uint8_ti"></span><span id="codal::KeyValueStorage::put__ManagedString.uint8_tP.i"></span><span class="target" id="classcodal_1_1KeyValueStorage_1a76173abe0f73bc74a5694dfe8f37fa6a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">put</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">key</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dataSize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15KeyValueStorage3putE13ManagedStringP7uint8_ti" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Places a given key, and it’s corresponding value into flash at the earliest available point.</p>
-<p>
-Places a given key, and it’s corresponding value into flash at the earliest available point.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>key</strong> – the unique name that should be used as an identifier for the given data.</p></li>
 <li><p><strong>data</strong> – a pointer to the beginning of the data to be persisted.</p></li>
 <li><p><strong>dataSize</strong> – the size of the data to be persisted</p></li>
-<li><p><strong>key</strong> – the unique name that should be used as an identifier for the given data.</p></li>
-<li><p><strong>data</strong> – a pointer to the beginning of the data to be persisted.</p></li>
-<li><p><strong>dataSize</strong> – the size of the data to be persisted</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>KEY_VALUE_OK on success, KEY_VALUE_INVALID_PARAMETER if the key or size is too large, KEY_VALUE_NO_RESOURCES if the storage page is full</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success, KEY_VALUE_INVALID_PARAMETER if the key or size is too large, KEY_VALUE_NO_RESOURCES if the storage page is full </p>
+<dd class="field-even"><p>KEY_VALUE_OK on success, KEY_VALUE_INVALID_PARAMETER if the key or size is too large, KEY_VALUE_NO_RESOURCES if the storage page is full </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal15KeyValueStorage3getEPKc">
-<span id="_CPPv3N5codal15KeyValueStorage3getEPKc"></span><span id="_CPPv2N5codal15KeyValueStorage3getEPKc"></span><span id="codal::KeyValueStorage::get__cCP"></span><span class="target" id="classcodal_1_1KeyValueStorage_1a73d3069df56e745b596704b7dfba426c"></span><a class="reference internal" href="structcodal_1_1KeyValuePair.html#_CPPv4N5codal12KeyValuePairE" title="codal::KeyValuePair"><span class="n"><span class="pre">KeyValuePair</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">key</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15KeyValueStorage3getEPKc" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal15KeyValueStorage3getEPKc"></span><span id="_CPPv2N5codal15KeyValueStorage3getEPKc"></span><span id="codal::KeyValueStorage::get__cCP"></span><span class="target" id="classcodal_1_1KeyValueStorage_1a30417bab0de40d4e4c42d5cbd41a33d8"></span><a class="reference internal" href="structcodal_1_1KeyValuePair.html#_CPPv4N5codal12KeyValuePairE" title="codal::KeyValuePair"><span class="n"><span class="pre">KeyValuePair</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">key</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15KeyValueStorage3getEPKc" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Retreives a <a class="reference internal" href="structcodal_1_1KeyValuePair.html#structcodal_1_1KeyValuePair"><span class="std std-ref">KeyValuePair</span></a> identified by a given key.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -430,7 +410,7 @@ Places a given key, and it’s corresponding value into flash at the earliest av
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal15KeyValueStorage3getE13ManagedString">
-<span id="_CPPv3N5codal15KeyValueStorage3getE13ManagedString"></span><span id="_CPPv2N5codal15KeyValueStorage3getE13ManagedString"></span><span id="codal::KeyValueStorage::get__ManagedString"></span><span class="target" id="classcodal_1_1KeyValueStorage_1aee8f5990a2c7e65c9cce24db6a5bc5e4"></span><a class="reference internal" href="structcodal_1_1KeyValuePair.html#_CPPv4N5codal12KeyValuePairE" title="codal::KeyValuePair"><span class="n"><span class="pre">KeyValuePair</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">key</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15KeyValueStorage3getE13ManagedString" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal15KeyValueStorage3getE13ManagedString"></span><span id="_CPPv2N5codal15KeyValueStorage3getE13ManagedString"></span><span id="codal::KeyValueStorage::get__ManagedString"></span><span class="target" id="classcodal_1_1KeyValueStorage_1a7f818203bbd1cae5871b54bddf7802ac"></span><a class="reference internal" href="structcodal_1_1KeyValuePair.html#_CPPv4N5codal12KeyValuePairE" title="codal::KeyValuePair"><span class="n"><span class="pre">KeyValuePair</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">key</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15KeyValueStorage3getE13ManagedString" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Retreives a <a class="reference internal" href="structcodal_1_1KeyValuePair.html#structcodal_1_1KeyValuePair"><span class="std std-ref">KeyValuePair</span></a> identified by a given key.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -448,51 +428,35 @@ Places a given key, and it’s corresponding value into flash at the earliest av
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal15KeyValueStorage6removeEPKc">
-<span id="_CPPv3N5codal15KeyValueStorage6removeEPKc"></span><span id="_CPPv2N5codal15KeyValueStorage6removeEPKc"></span><span id="codal::KeyValueStorage::remove__cCP"></span><span class="target" id="classcodal_1_1KeyValueStorage_1a16b0e9251eee4515ba56bd29705db5cf"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">remove</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">key</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15KeyValueStorage6removeEPKc" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal15KeyValueStorage6removeEPKc"></span><span id="_CPPv2N5codal15KeyValueStorage6removeEPKc"></span><span id="codal::KeyValueStorage::remove__cCP"></span><span class="target" id="classcodal_1_1KeyValueStorage_1a6b2c1421c149d50a648f31f524669609"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">remove</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">key</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15KeyValueStorage6removeEPKc" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Removes a <a class="reference internal" href="structcodal_1_1KeyValuePair.html#structcodal_1_1KeyValuePair"><span class="std std-ref">KeyValuePair</span></a> identified by a given key.</p>
-<p>
-Removes a <a class="reference internal" href="structcodal_1_1KeyValuePair.html#structcodal_1_1KeyValuePair"><span class="std std-ref">KeyValuePair</span></a> identified by a given key.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>key</strong> – the unique name used to identify a <a class="reference internal" href="structcodal_1_1KeyValuePair.html#structcodal_1_1KeyValuePair"><span class="std std-ref">KeyValuePair</span></a> in flash.</p></li>
-<li><p><strong>key</strong> – the unique name used to identify a <a class="reference internal" href="structcodal_1_1KeyValuePair.html#structcodal_1_1KeyValuePair"><span class="std std-ref">KeyValuePair</span></a> in flash.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>key</strong> – the unique name used to identify a <a class="reference internal" href="structcodal_1_1KeyValuePair.html#structcodal_1_1KeyValuePair"><span class="std std-ref">KeyValuePair</span></a> in flash.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>KEY_VALUE_OK on success, or KEY_VALUE_NO_DATA if the given key was not found in flash.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success, or DEVICE_NO_DATA if the given key was not found in flash. </p>
+<dd class="field-even"><p>KEY_VALUE_OK on success, or KEY_VALUE_NO_DATA if the given key was not found in flash. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal15KeyValueStorage6removeE13ManagedString">
-<span id="_CPPv3N5codal15KeyValueStorage6removeE13ManagedString"></span><span id="_CPPv2N5codal15KeyValueStorage6removeE13ManagedString"></span><span id="codal::KeyValueStorage::remove__ManagedString"></span><span class="target" id="classcodal_1_1KeyValueStorage_1af44f14e56abcecd606f15fe369574920"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">remove</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">key</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15KeyValueStorage6removeE13ManagedString" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal15KeyValueStorage6removeE13ManagedString"></span><span id="_CPPv2N5codal15KeyValueStorage6removeE13ManagedString"></span><span id="codal::KeyValueStorage::remove__ManagedString"></span><span class="target" id="classcodal_1_1KeyValueStorage_1a37c4da6d9e64cc3f328ee4f15d763e18"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">remove</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">key</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15KeyValueStorage6removeE13ManagedString" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Removes a <a class="reference internal" href="structcodal_1_1KeyValuePair.html#structcodal_1_1KeyValuePair"><span class="std std-ref">KeyValuePair</span></a> identified by a given key.</p>
-<p>
-Removes a <a class="reference internal" href="structcodal_1_1KeyValuePair.html#structcodal_1_1KeyValuePair"><span class="std std-ref">KeyValuePair</span></a> identified by a given key.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>key</strong> – the unique name used to identify a <a class="reference internal" href="structcodal_1_1KeyValuePair.html#structcodal_1_1KeyValuePair"><span class="std std-ref">KeyValuePair</span></a> in flash.</p></li>
-<li><p><strong>key</strong> – the unique name used to identify a <a class="reference internal" href="structcodal_1_1KeyValuePair.html#structcodal_1_1KeyValuePair"><span class="std std-ref">KeyValuePair</span></a> in flash.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>key</strong> – the unique name used to identify a <a class="reference internal" href="structcodal_1_1KeyValuePair.html#structcodal_1_1KeyValuePair"><span class="std std-ref">KeyValuePair</span></a> in flash.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>KEY_VALUE_OK on success, or KEY_VALUE_NO_DATA if the given key was not found in flash.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success, or DEVICE_NO_DATA if the given key was not found in flash. </p>
+<dd class="field-even"><p>KEY_VALUE_OK on success, or KEY_VALUE_NO_DATA if the given key was not found in flash. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal15KeyValueStorage4sizeEv">
-<span id="_CPPv3N5codal15KeyValueStorage4sizeEv"></span><span id="_CPPv2N5codal15KeyValueStorage4sizeEv"></span><span id="codal::KeyValueStorage::size"></span><span class="target" id="classcodal_1_1KeyValueStorage_1a73ac0739ef946f679770f28aaccb2a6d"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">size</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15KeyValueStorage4sizeEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal15KeyValueStorage4sizeEv"></span><span id="_CPPv2N5codal15KeyValueStorage4sizeEv"></span><span id="codal::KeyValueStorage::size"></span><span class="target" id="classcodal_1_1KeyValueStorage_1a9ec97cec76cc80082b4c94fd14053b22"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">size</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15KeyValueStorage4sizeEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>The size of the flash based <a class="reference internal" href="structcodal_1_1KeyValueStore.html#structcodal_1_1KeyValueStore"><span class="std std-ref">KeyValueStore</span></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -503,7 +467,7 @@ Removes a <a class="reference internal" href="structcodal_1_1KeyValuePair.html#s
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal15KeyValueStorage4wipeEv">
-<span id="_CPPv3N5codal15KeyValueStorage4wipeEv"></span><span id="_CPPv2N5codal15KeyValueStorage4wipeEv"></span><span id="codal::KeyValueStorage::wipe"></span><span class="target" id="classcodal_1_1KeyValueStorage_1afcd09d1999627385a6ee4e49d6f0c2d5"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wipe</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15KeyValueStorage4wipeEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal15KeyValueStorage4wipeEv"></span><span id="_CPPv2N5codal15KeyValueStorage4wipeEv"></span><span id="codal::KeyValueStorage::wipe"></span><span class="target" id="classcodal_1_1KeyValueStorage_1a375318d03ea979b2679001b1550eaaa4"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wipe</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal15KeyValueStorage4wipeEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Erase all contents of this KeyValue store </p>
 </dd></dl>
 

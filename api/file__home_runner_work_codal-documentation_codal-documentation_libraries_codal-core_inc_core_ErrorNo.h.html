@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>File ErrorNo.h &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>File ErrorNo.h &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,7 +282,7 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-errorno-h">
    Definition (
@@ -326,7 +327,7 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-errorno-h">
    Definition (
@@ -393,16 +394,8 @@ title="Source repository"
 <h2>Included By<a class="headerlink" href="#included-by" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-compat-microbitcompat-h"><span class="std std-ref">File MicroBitCompat.h</span></a></p></li>
+<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitError.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbiterror-h"><span class="std std-ref">File MicroBitError.h</span></a></p></li>
 <li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitMemoryMap.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitmemorymap-h"><span class="std std-ref">File MicroBitMemoryMap.h</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitCompass.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-microbitcompass-cpp"><span class="std std-ref">File MicroBitCompass.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitFile.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-microbitfile-cpp"><span class="std std-ref">File MicroBitFile.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitFileSystem.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-microbitfilesystem-cpp"><span class="std std-ref">File MicroBitFileSystem.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitFlash.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-microbitflash-cpp"><span class="std std-ref">File MicroBitFlash.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitRadio.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-microbitradio-cpp"><span class="std std-ref">File MicroBitRadio.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_Mixer2.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-mixer2-cpp"><span class="std std-ref">File Mixer2.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_NRF52LedMatrix.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-nrf52ledmatrix-cpp"><span class="std std-ref">File NRF52LedMatrix.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_PacketBuffer.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-packetbuffer-cpp"><span class="std std-ref">File PacketBuffer.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_SoundEmojiSynthesizer.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-soundemojisynthesizer-cpp"><span class="std std-ref">File SoundEmojiSynthesizer.cpp</span></a></p></li>
 <li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalComponent.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-codalcomponent-h"><span class="std std-ref">File CodalComponent.h</span></a></p></li>
 <li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalDevice.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-codaldevice-h"><span class="std std-ref">File CodalDevice.h</span></a></p></li>
 <li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_EventModel.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-core-eventmodel-h"><span class="std std-ref">File EventModel.h</span></a></p></li>
@@ -412,35 +405,6 @@ title="Source repository"
 <li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Timer.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-driver-models-timer-h"><span class="std std-ref">File Timer.h</span></a></p></li>
 <li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_AsciiKeyMap.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-drivers-asciikeymap-h"><span class="std std-ref">File AsciiKeyMap.h</span></a></p></li>
 <li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_KeyValueStorage.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-drivers-keyvaluestorage-h"><span class="std std-ref">File KeyValueStorage.h</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalCompat.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-core-codalcompat-cpp"><span class="std std-ref">File CodalCompat.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_core_CodalHeapAllocator.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-core-codalheapallocator-cpp"><span class="std std-ref">File CodalHeapAllocator.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Accelerometer.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-driver-models-accelerometer-cpp"><span class="std std-ref">File Accelerometer.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Compass.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-driver-models-compass-cpp"><span class="std std-ref">File Compass.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Display.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-driver-models-display-cpp"><span class="std std-ref">File Display.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Gyroscope.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-driver-models-gyroscope-cpp"><span class="std std-ref">File Gyroscope.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_I2C.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-driver-models-i2c-cpp"><span class="std std-ref">File I2C.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Sensor.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-driver-models-sensor-cpp"><span class="std std-ref">File Sensor.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_SPI.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-driver-models-spi-cpp"><span class="std std-ref">File SPI.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_driver-models_Timer.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-driver-models-timer-cpp"><span class="std std-ref">File Timer.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_FXOS8700.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-fxos8700-cpp"><span class="std std-ref">File FXOS8700.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_LEDMatrix.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-ledmatrix-cpp"><span class="std std-ref">File LEDMatrix.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_LIS3DH.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-lis3dh-cpp"><span class="std std-ref">File LIS3DH.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_LSM303Accelerometer.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-lsm303accelerometer-cpp"><span class="std std-ref">File LSM303Accelerometer.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_LSM303Magnetometer.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-lsm303magnetometer-cpp"><span class="std std-ref">File LSM303Magnetometer.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_MAG3110.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-mag3110-cpp"><span class="std std-ref">File MAG3110.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_MessageBus.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-messagebus-cpp"><span class="std std-ref">File MessageBus.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_MMA8653.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-mma8653-cpp"><span class="std std-ref">File MMA8653.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_drivers_MPU6050.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-drivers-mpu6050-cpp"><span class="std std-ref">File MPU6050.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_DataStream.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-streams-datastream-cpp"><span class="std std-ref">File DataStream.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_FIFOStream.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-streams-fifostream-cpp"><span class="std std-ref">File FIFOStream.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_LevelDetector.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-streams-leveldetector-cpp"><span class="std std-ref">File LevelDetector.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_LevelDetectorSPL.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-streams-leveldetectorspl-cpp"><span class="std std-ref">File LevelDetectorSPL.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_Mixer.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-streams-mixer-cpp"><span class="std std-ref">File Mixer.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_StreamNormalizer.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-streams-streamnormalizer-cpp"><span class="std std-ref">File StreamNormalizer.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_StreamRecording.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-streams-streamrecording-cpp"><span class="std std-ref">File StreamRecording.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_StreamSplitter.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-streams-streamsplitter-cpp"><span class="std std-ref">File StreamSplitter.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_Synthesizer.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-streams-synthesizer-cpp"><span class="std std-ref">File Synthesizer.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_types_Image.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-source-types-image-cpp"><span class="std std-ref">File Image.cpp</span></a></p></li>
 </ul>
 </section>
 <section id="enums">

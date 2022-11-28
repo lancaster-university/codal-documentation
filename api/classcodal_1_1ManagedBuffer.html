@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class ManagedBuffer &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class ManagedBuffer &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,7 +282,7 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-documentation">
    Class Documentation
@@ -305,7 +306,7 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-documentation">
    Class Documentation
@@ -336,13 +337,8 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13ManagedBuffer13ManagedBufferEv">
-<span id="_CPPv3N5codal13ManagedBuffer13ManagedBufferEv"></span><span id="_CPPv2N5codal13ManagedBuffer13ManagedBufferEv"></span><span id="codal::ManagedBuffer::ManagedBuffer"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a46677ddf5e3b29628335e978a3b4cf22"></span><span class="sig-name descname"><span class="n"><span class="pre">ManagedBuffer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer13ManagedBufferEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13ManagedBuffer13ManagedBufferEv"></span><span id="_CPPv2N5codal13ManagedBuffer13ManagedBufferEv"></span><span id="codal::ManagedBuffer::ManagedBuffer"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a2d492b12746f5b2075506ed240e31034"></span><span class="sig-name descname"><span class="n"><span class="pre">ManagedBuffer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer13ManagedBufferEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Default Constructor. Creates an empty <a class="reference internal" href="#classcodal_1_1ManagedBuffer"><span class="std std-ref">ManagedBuffer</span></a>. The ‘ptr’ field in all empty buffers is shared.</p>
-<p>Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">p</span><span class="p">();</span><span class="w"></span>
-</pre></div>
-</div>
-</p>
-<p>Default Constructor. Creates an empty <a class="reference internal" href="#classcodal_1_1ManagedBuffer"><span class="std std-ref">ManagedBuffer</span></a>.</p>
 <p>Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">p</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
@@ -351,14 +347,8 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13ManagedBuffer13ManagedBufferEi16BufferInitialize">
-<span id="_CPPv3N5codal13ManagedBuffer13ManagedBufferEi16BufferInitialize"></span><span id="_CPPv2N5codal13ManagedBuffer13ManagedBufferEi16BufferInitialize"></span><span id="codal::ManagedBuffer::ManagedBuffer__i.BufferInitialize"></span><span class="target" id="classcodal_1_1ManagedBuffer_1af20b1304d47818ce2b63bc3e9e4d42a6"></span><span class="sig-name descname"><span class="n"><span class="pre">ManagedBuffer</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span>, <a class="reference internal" href="enum_namespacecodal_1a23d0a998bb434e4720c04f2fc411ccb1.html#_CPPv4N5codal16BufferInitializeE" title="codal::BufferInitialize"><span class="n"><span class="pre">BufferInitialize</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">initialize</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="enum_namespacecodal_1a23d0a998bb434e4720c04f2fc411ccb1.html#_CPPv4N5codal16BufferInitializeE" title="codal::BufferInitialize"><span class="n"><span class="pre">BufferInitialize</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="enum_namespacecodal_1a23d0a998bb434e4720c04f2fc411ccb1.html#_CPPv4N5codal16BufferInitialize4ZeroE" title="codal::BufferInitialize::Zero"><span class="n"><span class="pre">Zero</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer13ManagedBufferEi16BufferInitialize" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13ManagedBuffer13ManagedBufferEi16BufferInitialize"></span><span id="_CPPv2N5codal13ManagedBuffer13ManagedBufferEi16BufferInitialize"></span><span id="codal::ManagedBuffer::ManagedBuffer__i.BufferInitialize"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a9268ac5d7080f0bf408804f01a1fe519"></span><span class="sig-name descname"><span class="n"><span class="pre">ManagedBuffer</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span>, <a class="reference internal" href="enum_namespacecodal_1a23d0a998bb434e4720c04f2fc411ccb1.html#_CPPv4N5codal16BufferInitializeE" title="codal::BufferInitialize"><span class="n"><span class="pre">BufferInitialize</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">initialize</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="enum_namespacecodal_1a23d0a998bb434e4720c04f2fc411ccb1.html#_CPPv4N5codal16BufferInitializeE" title="codal::BufferInitialize"><span class="n"><span class="pre">BufferInitialize</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="enum_namespacecodal_1a23d0a998bb434e4720c04f2fc411ccb1.html#_CPPv4N5codal16BufferInitialize4ZeroE" title="codal::BufferInitialize::Zero"><span class="n"><span class="pre">Zero</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer13ManagedBufferEi16BufferInitialize" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor. Creates a new <a class="reference internal" href="#classcodal_1_1ManagedBuffer"><span class="std std-ref">ManagedBuffer</span></a> of the given size.</p>
-<p>
-Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">p</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span><span class="w">         </span><span class="c1">// Creates a ManagedBuffer 16 bytes long.</span>
-</pre></div>
-</div>
-</p>
-<p>Constructor. Creates an empty <a class="reference internal" href="#classcodal_1_1ManagedBuffer"><span class="std std-ref">ManagedBuffer</span></a> of the given size.</p>
 <p>
 Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">p</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span><span class="w">         </span><span class="c1">// Creates a ManagedBuffer 16 bytes long.</span>
 </pre></div>
@@ -366,27 +356,17 @@ Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><spa
  </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>length</strong> – The length of the buffer to create.</p></li>
-<li><p><strong>length</strong> – The length of the buffer to create.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>length</strong> – The length of the buffer to create.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13ManagedBuffer13ManagedBufferEP7uint8_ti">
-<span id="_CPPv3N5codal13ManagedBuffer13ManagedBufferEP7uint8_ti"></span><span id="_CPPv2N5codal13ManagedBuffer13ManagedBufferEP7uint8_ti"></span><span id="codal::ManagedBuffer::ManagedBuffer__uint8_tP.i"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a076a2224395e2733ac2f675dadf855e1"></span><span class="sig-name descname"><span class="n"><span class="pre">ManagedBuffer</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer13ManagedBufferEP7uint8_ti" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13ManagedBuffer13ManagedBufferEP7uint8_ti"></span><span id="_CPPv2N5codal13ManagedBuffer13ManagedBufferEP7uint8_ti"></span><span id="codal::ManagedBuffer::ManagedBuffer__uint8_tP.i"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a3a6e07e09134359af70e423c0616834a"></span><span class="sig-name descname"><span class="n"><span class="pre">ManagedBuffer</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer13ManagedBufferEP7uint8_ti" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor. Creates an empty <a class="reference internal" href="#classcodal_1_1ManagedBuffer"><span class="std std-ref">ManagedBuffer</span></a> of the given size, and fills it with the data provided.</p>
 <p>
 Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">buf</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">13</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">};</span><span class="w"></span>
-<span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">p</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w">         </span><span class="c1">// Creates a ManagedBuffer 3 bytes long.</span>
-</pre></div>
-</div>
-</p>
-<p>Constructor. Creates a new <a class="reference internal" href="#classcodal_1_1ManagedBuffer"><span class="std std-ref">ManagedBuffer</span></a> of the given size, and fills it with the data provided.</p>
-<p>
-Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">buf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">13</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">};</span><span class="w"></span>
 <span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">p</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w">         </span><span class="c1">// Creates a ManagedBuffer 3 bytes long.</span>
 </pre></div>
 </div>
@@ -394,8 +374,6 @@ Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><spa
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>data</strong> – The data with which to fill the buffer. </p></li>
-<li><p><strong>length</strong> – The length of the buffer to create.</p></li>
 <li><p><strong>data</strong> – The data with which to fill the buffer. </p></li>
 <li><p><strong>length</strong> – The length of the buffer to create.</p></li>
 </ul>
@@ -405,7 +383,7 @@ Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><spa
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13ManagedBuffer13ManagedBufferERK13ManagedBuffer">
-<span id="_CPPv3N5codal13ManagedBuffer13ManagedBufferERK13ManagedBuffer"></span><span id="_CPPv2N5codal13ManagedBuffer13ManagedBufferERK13ManagedBuffer"></span><span id="codal::ManagedBuffer::ManagedBuffer__ManagedBufferCR"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a2bfafcca9d9f44fd0c4d7a3773038316"></span><span class="sig-name descname"><span class="n"><span class="pre">ManagedBuffer</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5codal13ManagedBuffer13ManagedBufferERK13ManagedBuffer" title="codal::ManagedBuffer::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">buffer</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer13ManagedBufferERK13ManagedBuffer" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13ManagedBuffer13ManagedBufferERK13ManagedBuffer"></span><span id="_CPPv2N5codal13ManagedBuffer13ManagedBufferERK13ManagedBuffer"></span><span id="codal::ManagedBuffer::ManagedBuffer__ManagedBufferCR"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a92c3b645c9ad196f3309cd6d55a8f55c"></span><span class="sig-name descname"><span class="n"><span class="pre">ManagedBuffer</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5codal13ManagedBuffer13ManagedBufferERK13ManagedBuffer" title="codal::ManagedBuffer::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">buffer</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer13ManagedBufferERK13ManagedBuffer" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Copy Constructor. Add ourselves as a reference to an existing <a class="reference internal" href="#classcodal_1_1ManagedBuffer"><span class="std std-ref">ManagedBuffer</span></a>.</p>
 <p>
 Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">p</span><span class="p">();</span><span class="w"></span>
@@ -422,7 +400,7 @@ Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><spa
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13ManagedBuffer13ManagedBufferEP10BufferData">
-<span id="_CPPv3N5codal13ManagedBuffer13ManagedBufferEP10BufferData"></span><span id="_CPPv2N5codal13ManagedBuffer13ManagedBufferEP10BufferData"></span><span id="codal::ManagedBuffer::ManagedBuffer__BufferDataP"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a284a1570d4d81404ab178cffcb4e152b"></span><span class="sig-name descname"><span class="n"><span class="pre">ManagedBuffer</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structcodal_1_1BufferData.html#_CPPv4N5codal10BufferDataE" title="codal::BufferData"><span class="n"><span class="pre">BufferData</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">p</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer13ManagedBufferEP10BufferData" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13ManagedBuffer13ManagedBufferEP10BufferData"></span><span id="_CPPv2N5codal13ManagedBuffer13ManagedBufferEP10BufferData"></span><span id="codal::ManagedBuffer::ManagedBuffer__BufferDataP"></span><span class="target" id="classcodal_1_1ManagedBuffer_1ab79d63c383973fcb012ef1c36dd865de"></span><span class="sig-name descname"><span class="n"><span class="pre">ManagedBuffer</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structcodal_1_1BufferData.html#_CPPv4N5codal10BufferDataE" title="codal::BufferData"><span class="n"><span class="pre">BufferData</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">p</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer13ManagedBufferEP10BufferData" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor. Create a buffer from a raw <a class="reference internal" href="structcodal_1_1BufferData.html#structcodal_1_1BufferData"><span class="std std-ref">BufferData</span></a> pointer. It will ptr-&gt;incr(). This is to be used by specialized runtimes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -433,13 +411,13 @@ Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><spa
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13ManagedBuffer9initEmptyEv">
-<span id="_CPPv3N5codal13ManagedBuffer9initEmptyEv"></span><span id="_CPPv2N5codal13ManagedBuffer9initEmptyEv"></span><span id="codal::ManagedBuffer::initEmpty"></span><span class="target" id="classcodal_1_1ManagedBuffer_1af309603d359a3631695347a7231c56a1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initEmpty</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer9initEmptyEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13ManagedBuffer9initEmptyEv"></span><span id="_CPPv2N5codal13ManagedBuffer9initEmptyEv"></span><span id="codal::ManagedBuffer::initEmpty"></span><span class="target" id="classcodal_1_1ManagedBuffer_1aa59f8ef92052a1589c635726d50c48a6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initEmpty</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer9initEmptyEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Internal constructor helper. Configures this <a class="reference internal" href="#classcodal_1_1ManagedBuffer"><span class="std std-ref">ManagedBuffer</span></a> to refer to the static empty buffer. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13ManagedBuffer4initEP7uint8_ti16BufferInitialize">
-<span id="_CPPv3N5codal13ManagedBuffer4initEP7uint8_ti16BufferInitialize"></span><span id="_CPPv2N5codal13ManagedBuffer4initEP7uint8_ti16BufferInitialize"></span><span id="codal::ManagedBuffer::init__uint8_tP.i.BufferInitialize"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a273f5dc2d2696c75aa00cf9a066019d5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span>, <a class="reference internal" href="enum_namespacecodal_1a23d0a998bb434e4720c04f2fc411ccb1.html#_CPPv4N5codal16BufferInitializeE" title="codal::BufferInitialize"><span class="n"><span class="pre">BufferInitialize</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">initialize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer4initEP7uint8_ti16BufferInitialize" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13ManagedBuffer4initEP7uint8_ti16BufferInitialize"></span><span id="_CPPv2N5codal13ManagedBuffer4initEP7uint8_ti16BufferInitialize"></span><span id="codal::ManagedBuffer::init__uint8_tP.i.BufferInitialize"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a39f312828f045ed6ca1f062917e62568"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span>, <a class="reference internal" href="enum_namespacecodal_1a23d0a998bb434e4720c04f2fc411ccb1.html#_CPPv4N5codal16BufferInitializeE" title="codal::BufferInitialize"><span class="n"><span class="pre">BufferInitialize</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">initialize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer4initEP7uint8_ti16BufferInitialize" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Internal constructor-initialiser.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -454,7 +432,7 @@ Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><spa
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13ManagedBufferD0Ev">
-<span id="_CPPv3N5codal13ManagedBufferD0Ev"></span><span id="_CPPv2N5codal13ManagedBufferD0Ev"></span><span id="codal::ManagedBuffer::~ManagedBuffer"></span><span class="target" id="classcodal_1_1ManagedBuffer_1ae2b38f567f435c077943edbe9d50412a"></span><span class="sig-name descname"><span class="n"><span class="pre">~ManagedBuffer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBufferD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13ManagedBufferD0Ev"></span><span id="_CPPv2N5codal13ManagedBufferD0Ev"></span><span id="codal::ManagedBuffer::~ManagedBuffer"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a1d0aa0878a987a102fda01ed3f3d2d75"></span><span class="sig-name descname"><span class="n"><span class="pre">~ManagedBuffer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBufferD0Ev" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Destructor. Removes buffer resources held by the instance. </p>
 </dd></dl>
 
@@ -471,13 +449,13 @@ Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><spa
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13ManagedBuffer8leakDataEv">
-<span id="_CPPv3N5codal13ManagedBuffer8leakDataEv"></span><span id="_CPPv2N5codal13ManagedBuffer8leakDataEv"></span><span id="codal::ManagedBuffer::leakData"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a7bc269ebb6da0324c9a03744397d796e"></span><a class="reference internal" href="structcodal_1_1BufferData.html#_CPPv4N5codal10BufferDataE" title="codal::BufferData"><span class="n"><span class="pre">BufferData</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">leakData</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer8leakDataEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13ManagedBuffer8leakDataEv"></span><span id="_CPPv2N5codal13ManagedBuffer8leakDataEv"></span><span id="codal::ManagedBuffer::leakData"></span><span class="target" id="classcodal_1_1ManagedBuffer_1abef8fc8e3b23b484e49f51a1a8a44b8a"></span><a class="reference internal" href="structcodal_1_1BufferData.html#_CPPv4N5codal10BufferDataE" title="codal::BufferData"><span class="n"><span class="pre">BufferData</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">leakData</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer8leakDataEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Get current ptr, do not decr() it, and set the current instance to an empty buffer. This is to be used by specialized runtimes which pass <a class="reference internal" href="structcodal_1_1BufferData.html#structcodal_1_1BufferData"><span class="std std-ref">BufferData</span></a> around. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13ManagedBufferaSERK13ManagedBuffer">
-<span id="_CPPv3N5codal13ManagedBufferaSERK13ManagedBuffer"></span><span id="_CPPv2N5codal13ManagedBufferaSERK13ManagedBuffer"></span><span id="codal::ManagedBuffer::assign-operator__ManagedBufferCR"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a2919d36d1cd9c59de8895b2b888b958b"></span><a class="reference internal" href="#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBufferaSERK13ManagedBuffer" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13ManagedBufferaSERK13ManagedBuffer"></span><span id="_CPPv2N5codal13ManagedBufferaSERK13ManagedBuffer"></span><span id="codal::ManagedBuffer::assign-operator__ManagedBufferCR"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a41d8886f783ace8df90e1eafa1dcc6f0"></span><a class="reference internal" href="#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBufferaSERK13ManagedBuffer" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Copy assign operation.</p>
 <p>Called when one <a class="reference internal" href="#classcodal_1_1ManagedBuffer"><span class="std std-ref">ManagedBuffer</span></a> is assigned the value of another using the ‘=’ operator. Decrements our reference count and free up the buffer as necessary. Then, update our buffer to refer to that of the supplied <a class="reference internal" href="#classcodal_1_1ManagedBuffer"><span class="std std-ref">ManagedBuffer</span></a>, and increase its reference count.</p>
 <p>
@@ -522,7 +500,7 @@ Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><spa
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13ManagedBuffereqERK13ManagedBuffer">
-<span id="_CPPv3N5codal13ManagedBuffereqERK13ManagedBuffer"></span><span id="_CPPv2N5codal13ManagedBuffereqERK13ManagedBuffer"></span><span id="codal::ManagedBuffer::eq-operator__ManagedBufferCR"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a0c1aa6217ad39df72eb6516eb10bc1e3"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">==</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffereqERK13ManagedBuffer" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13ManagedBuffereqERK13ManagedBuffer"></span><span id="_CPPv2N5codal13ManagedBuffereqERK13ManagedBuffer"></span><span id="codal::ManagedBuffer::eq-operator__ManagedBufferCR"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a5c01d8481d792b265810c0f550c8ca68"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">==</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffereqERK13ManagedBuffer" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Equality operation.</p>
 <p>Called when one <a class="reference internal" href="#classcodal_1_1ManagedBuffer"><span class="std std-ref">ManagedBuffer</span></a> is tested to be equal to another using the ‘==’ operator.</p>
 <p>
@@ -547,26 +525,17 @@ Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><spa
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13ManagedBuffer7setByteEi7uint8_t">
-<span id="_CPPv3N5codal13ManagedBuffer7setByteEi7uint8_t"></span><span id="_CPPv2N5codal13ManagedBuffer7setByteEi7uint8_t"></span><span id="codal::ManagedBuffer::setByte__i.uint8_t"></span><span class="target" id="classcodal_1_1ManagedBuffer_1aff4bede23be77b435ea303e7f0a441e1"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setByte</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer7setByteEi7uint8_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13ManagedBuffer7setByteEi7uint8_t"></span><span id="_CPPv2N5codal13ManagedBuffer7setByteEi7uint8_t"></span><span id="codal::ManagedBuffer::setByte__i.uint8_t"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a2581e271524a18fa230846a98c8616aa"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setByte</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer7setByteEi7uint8_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p><p>Sets the byte at the given index to value provided.</p>
 <p>Example:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">p1</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span><span class="w"></span>
 <span class="n">p1</span><span class="p">.</span><span class="n">setByte</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">);</span><span class="w">              </span><span class="c1">// Sets the first byte in the buffer to the value 255.</span>
 </pre></div>
 </div>
-</p>
-<p><p>Sets the byte at the given index to value provided.</p>
-<p>Example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">p1</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span><span class="w"></span>
-<span class="n">p1</span><span class="p">.</span><span class="n">setByte</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">);</span><span class="w">              </span><span class="c1">// Sets the firts byte in the buffer to the value 255.</span>
-</pre></div>
-</div>
  </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>position</strong> – The index of the byte to change. </p></li>
-<li><p><strong>value</strong> – The new value of the byte (0-255). </p></li>
 <li><p><strong>position</strong> – The index of the byte to change. </p></li>
 <li><p><strong>value</strong> – The new value of the byte (0-255). </p></li>
 </ul>
@@ -574,15 +543,12 @@ Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><spa
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>DEVICE_OK, or DEVICE_INVALID_PARAMETER.</p>
 </dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK, or DEVICE_INVALID_PARAMETER.</p>
-</dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13ManagedBuffer7getByteEi">
-<span id="_CPPv3N5codal13ManagedBuffer7getByteEi"></span><span id="_CPPv2N5codal13ManagedBuffer7getByteEi"></span><span id="codal::ManagedBuffer::getByte__i"></span><span class="target" id="classcodal_1_1ManagedBuffer_1afae00fe02fbbff0106a7413cba61e0d7"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getByte</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer7getByteEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13ManagedBuffer7getByteEi"></span><span id="_CPPv2N5codal13ManagedBuffer7getByteEi"></span><span id="codal::ManagedBuffer::getByte__i"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a4e6a7d2ad71a5f7b8fcf267aa134d205"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getByte</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer7getByteEi" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines the value of the given byte in the buffer.</p>
 <p>
 Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">p1</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span><span class="w"></span>
@@ -590,27 +556,13 @@ Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><spa
 <span class="n">p1</span><span class="p">.</span><span class="n">getByte</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">                  </span><span class="c1">// Returns 255.</span>
 </pre></div>
 </div>
-</p>
-<p>Determines the value of the given byte in the buffer.</p>
-<p>
-Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">p1</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span><span class="w"></span>
-<span class="n">p1</span><span class="p">.</span><span class="n">setByte</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">);</span><span class="w">              </span><span class="c1">// Sets the firts byte in the buffer to the value 255.</span>
-<span class="n">p1</span><span class="p">.</span><span class="n">getByte</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">                  </span><span class="c1">// Returns 255.</span>
-</pre></div>
-</div>
  </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>position</strong> – The index of the byte to read. </p></li>
-<li><p><strong>position</strong> – The index of the byte to read. </p></li>
-</ul>
+<dd class="field-odd"><p><strong>position</strong> – The index of the byte to read. </p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The value of the byte at the given position, or DEVICE_INVALID_PARAMETER.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The value of the byte at the given position, or DEVICE_INVALID_PARAMETER.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -634,37 +586,37 @@ Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><spa
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13ManagedBuffer4fillE7uint8_tii">
-<span id="_CPPv3N5codal13ManagedBuffer4fillE7uint8_tii"></span><span id="_CPPv2N5codal13ManagedBuffer4fillE7uint8_tii"></span><span id="codal::ManagedBuffer::fill__uint8_t.i.i"></span><span class="target" id="classcodal_1_1ManagedBuffer_1af47a6ba6a647aee26ecce7eb36a7dc87"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fill</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">offset</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer4fillE7uint8_tii" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13ManagedBuffer4fillE7uint8_tii"></span><span id="_CPPv2N5codal13ManagedBuffer4fillE7uint8_tii"></span><span id="codal::ManagedBuffer::fill__uint8_t.i.i"></span><span class="target" id="classcodal_1_1ManagedBuffer_1aa4553950c2789337732cda61282d8754"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fill</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">offset</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer4fillE7uint8_tii" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK5codal13ManagedBuffer5sliceEii">
-<span id="_CPPv3NK5codal13ManagedBuffer5sliceEii"></span><span id="_CPPv2NK5codal13ManagedBuffer5sliceEii"></span><span id="codal::ManagedBuffer::slice__i.iC"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a4274aeca42cb2bbc98ba9f9041abf229"></span><a class="reference internal" href="#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">slice</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">offset</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5codal13ManagedBuffer5sliceEii" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK5codal13ManagedBuffer5sliceEii"></span><span id="_CPPv2NK5codal13ManagedBuffer5sliceEii"></span><span id="codal::ManagedBuffer::slice__i.iC"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a089244ca1574cd7792bb8a6733d69987"></span><a class="reference internal" href="#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">slice</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">offset</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5codal13ManagedBuffer5sliceEii" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13ManagedBuffer5shiftEiii">
-<span id="_CPPv3N5codal13ManagedBuffer5shiftEiii"></span><span id="_CPPv2N5codal13ManagedBuffer5shiftEiii"></span><span id="codal::ManagedBuffer::shift__i.i.i"></span><span class="target" id="classcodal_1_1ManagedBuffer_1ad04fe342e2ad61928bbb1292efea81cd"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">shift</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">offset</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">start</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer5shiftEiii" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13ManagedBuffer5shiftEiii"></span><span id="_CPPv2N5codal13ManagedBuffer5shiftEiii"></span><span id="codal::ManagedBuffer::shift__i.i.i"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a14af058d341ef31c41dbab3630a8ce6f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">shift</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">offset</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">start</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer5shiftEiii" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13ManagedBuffer6rotateEiii">
-<span id="_CPPv3N5codal13ManagedBuffer6rotateEiii"></span><span id="_CPPv2N5codal13ManagedBuffer6rotateEiii"></span><span id="codal::ManagedBuffer::rotate__i.i.i"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a9b8d89351262d80de627857643bb3862"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rotate</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">offset</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">start</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer6rotateEiii" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13ManagedBuffer6rotateEiii"></span><span id="_CPPv2N5codal13ManagedBuffer6rotateEiii"></span><span id="codal::ManagedBuffer::rotate__i.i.i"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a57d7c5d3c7d752150b691e208abe1482"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rotate</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">offset</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">start</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer6rotateEiii" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK5codal13ManagedBuffer9readBytesEP7uint8_tiib">
-<span id="_CPPv3NK5codal13ManagedBuffer9readBytesEP7uint8_tiib"></span><span id="_CPPv2NK5codal13ManagedBuffer9readBytesEP7uint8_tiib"></span><span id="codal::ManagedBuffer::readBytes__uint8_tP.i.i.bC"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a0c91bb29d9d31f06c5ea04a581a6af22"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readBytes</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">dst</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">offset</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">swapBytes</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5codal13ManagedBuffer9readBytesEP7uint8_tiib" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK5codal13ManagedBuffer9readBytesEP7uint8_tiib"></span><span id="_CPPv2NK5codal13ManagedBuffer9readBytesEP7uint8_tiib"></span><span id="codal::ManagedBuffer::readBytes__uint8_tP.i.i.bC"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a5a7df238e56d6391ab338c0043fcece2"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readBytes</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">dst</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">offset</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">swapBytes</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5codal13ManagedBuffer9readBytesEP7uint8_tiib" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13ManagedBuffer10writeBytesEiP7uint8_tib">
-<span id="_CPPv3N5codal13ManagedBuffer10writeBytesEiP7uint8_tib"></span><span id="_CPPv2N5codal13ManagedBuffer10writeBytesEiP7uint8_tib"></span><span id="codal::ManagedBuffer::writeBytes__i.uint8_tP.i.b"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a286f8fd69e9b87afbce0509ccda2a1e9"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeBytes</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dstOffset</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">src</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">swapBytes</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer10writeBytesEiP7uint8_tib" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13ManagedBuffer10writeBytesEiP7uint8_tib"></span><span id="_CPPv2N5codal13ManagedBuffer10writeBytesEiP7uint8_tib"></span><span id="codal::ManagedBuffer::writeBytes__i.uint8_tP.i.b"></span><span class="target" id="classcodal_1_1ManagedBuffer_1aeb4615e154c734f9c0585a6c32ad9a44"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeBytes</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dstOffset</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">src</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">swapBytes</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer10writeBytesEiP7uint8_tib" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13ManagedBuffer11writeBufferEiRK13ManagedBufferii">
-<span id="_CPPv3N5codal13ManagedBuffer11writeBufferEiRK13ManagedBufferii"></span><span id="_CPPv2N5codal13ManagedBuffer11writeBufferEiRK13ManagedBufferii"></span><span id="codal::ManagedBuffer::writeBuffer__i.ManagedBufferCR.i.i"></span><span class="target" id="classcodal_1_1ManagedBuffer_1ae6b54c1f579b09b5117f52ab34724c0a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeBuffer</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dstOffset</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">src</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">srcOffset</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer11writeBufferEiRK13ManagedBufferii" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13ManagedBuffer11writeBufferEiRK13ManagedBufferii"></span><span id="_CPPv2N5codal13ManagedBuffer11writeBufferEiRK13ManagedBufferii"></span><span id="codal::ManagedBuffer::writeBuffer__i.ManagedBufferCR.i.i"></span><span class="target" id="classcodal_1_1ManagedBuffer_1a7d8cd38ce309db0473a590d5d77af6c8"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeBuffer</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dstOffset</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">src</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">srcOffset</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer11writeBufferEiRK13ManagedBufferii" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -674,7 +626,7 @@ Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><spa
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13ManagedBuffer8truncateEi">
-<span id="_CPPv3N5codal13ManagedBuffer8truncateEi"></span><span id="_CPPv2N5codal13ManagedBuffer8truncateEi"></span><span id="codal::ManagedBuffer::truncate__i"></span><span class="target" id="classcodal_1_1ManagedBuffer_1aa5f2b448ffc045b42cedc3f54e352722"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">truncate</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer8truncateEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13ManagedBuffer8truncateEi"></span><span id="_CPPv2N5codal13ManagedBuffer8truncateEi"></span><span id="codal::ManagedBuffer::truncate__i"></span><span class="target" id="classcodal_1_1ManagedBuffer_1ac7d03bfde9624279427a897067d19b32"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">truncate</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13ManagedBuffer8truncateEi" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>

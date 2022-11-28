@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class StreamNormalizer &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class StreamNormalizer &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-types">
      Base Types
@@ -317,12 +318,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-types">
      Base Types
@@ -369,7 +370,7 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal16StreamNormalizer16StreamNormalizerER10DataSourcefbii">
-<span id="_CPPv3N5codal16StreamNormalizer16StreamNormalizerER10DataSourcefbii"></span><span id="_CPPv2N5codal16StreamNormalizer16StreamNormalizerER10DataSourcefbii"></span><span id="codal::StreamNormalizer::StreamNormalizer__DataSourceR.float.b.i.i"></span><span class="target" id="classcodal_1_1StreamNormalizer_1a5c93104b675c74cbf2aeb1d95698cacc"></span><span class="sig-name descname"><span class="n"><span class="pre">StreamNormalizer</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataSource.html#_CPPv4N5codal10DataSourceE" title="codal::DataSource"><span class="n"><span class="pre">DataSource</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">source</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">gain</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.0f</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">normalize</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">format</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">stabilisation</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer16StreamNormalizerER10DataSourcefbii" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal16StreamNormalizer16StreamNormalizerER10DataSourcefbii"></span><span id="_CPPv2N5codal16StreamNormalizer16StreamNormalizerER10DataSourcefbii"></span><span id="codal::StreamNormalizer::StreamNormalizer__DataSourceR.float.b.i.i"></span><span class="target" id="classcodal_1_1StreamNormalizer_1a303bb1fe630ac8c05cb76fefb065704c"></span><span class="sig-name descname"><span class="n"><span class="pre">StreamNormalizer</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataSource.html#_CPPv4N5codal10DataSourceE" title="codal::DataSource"><span class="n"><span class="pre">DataSource</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">source</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">gain</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.0f</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">normalize</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">format</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">stabilisation</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer16StreamNormalizerER10DataSourcefbii" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Creates a component capable of translating one data representation format into another</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -386,19 +387,19 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal16StreamNormalizer11pullRequestEv">
-<span id="_CPPv3N5codal16StreamNormalizer11pullRequestEv"></span><span id="_CPPv2N5codal16StreamNormalizer11pullRequestEv"></span><span id="codal::StreamNormalizer::pullRequest"></span><span class="target" id="classcodal_1_1StreamNormalizer_1a9ca5be4ee298167690cb52af5a44fdc2"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pullRequest</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer11pullRequestEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal16StreamNormalizer11pullRequestEv"></span><span id="_CPPv2N5codal16StreamNormalizer11pullRequestEv"></span><span id="codal::StreamNormalizer::pullRequest"></span><span class="target" id="classcodal_1_1StreamNormalizer_1a0d7e3245ae69016624911e254c148fd1"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pullRequest</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer11pullRequestEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Callback provided when data is ready. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal16StreamNormalizer4pullEv">
-<span id="_CPPv3N5codal16StreamNormalizer4pullEv"></span><span id="_CPPv2N5codal16StreamNormalizer4pullEv"></span><span id="codal::StreamNormalizer::pull"></span><span class="target" id="classcodal_1_1StreamNormalizer_1ad543e8d814ed97707a8a45461eb709c6"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="classcodal_1_1ManagedBuffer.html#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pull</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer4pullEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal16StreamNormalizer4pullEv"></span><span id="_CPPv2N5codal16StreamNormalizer4pullEv"></span><span id="codal::StreamNormalizer::pull"></span><span class="target" id="classcodal_1_1StreamNormalizer_1a09f8e79e26330f562e195d40959a5839"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="classcodal_1_1ManagedBuffer.html#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pull</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer4pullEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Provide the next available <a class="reference internal" href="classcodal_1_1ManagedBuffer.html#classcodal_1_1ManagedBuffer"><span class="std std-ref">ManagedBuffer</span></a> to our downstream caller, if available. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal16StreamNormalizer12setNormalizeEb">
-<span id="_CPPv3N5codal16StreamNormalizer12setNormalizeEb"></span><span id="_CPPv2N5codal16StreamNormalizer12setNormalizeEb"></span><span id="codal::StreamNormalizer::setNormalize__b"></span><span class="target" id="classcodal_1_1StreamNormalizer_1a219432190f014fba074e03654b8ce2c6"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setNormalize</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">normalize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer12setNormalizeEb" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal16StreamNormalizer12setNormalizeEb"></span><span id="_CPPv2N5codal16StreamNormalizer12setNormalizeEb"></span><span id="codal::StreamNormalizer::setNormalize__b"></span><span class="target" id="classcodal_1_1StreamNormalizer_1a794cee5215b33ebbcac7213265b624f8"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setNormalize</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">normalize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer12setNormalizeEb" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Defines whether this input stream will be normalized based on its mean average value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -412,7 +413,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal16StreamNormalizer12getNormalizeEv">
-<span id="_CPPv3N5codal16StreamNormalizer12getNormalizeEv"></span><span id="_CPPv2N5codal16StreamNormalizer12getNormalizeEv"></span><span id="codal::StreamNormalizer::getNormalize"></span><span class="target" id="classcodal_1_1StreamNormalizer_1a3fad0a3cd6cb01bc4cb23bd99dc5affd"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNormalize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer12getNormalizeEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal16StreamNormalizer12getNormalizeEv"></span><span id="_CPPv2N5codal16StreamNormalizer12getNormalizeEv"></span><span id="codal::StreamNormalizer::getNormalize"></span><span class="target" id="classcodal_1_1StreamNormalizer_1a8298d61bc409b17d4c31811f1dd55524"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNormalize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer12getNormalizeEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines whether normalization is being applied . </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -423,30 +424,26 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal16StreamNormalizer9getFormatEv">
-<span id="_CPPv3N5codal16StreamNormalizer9getFormatEv"></span><span id="_CPPv2N5codal16StreamNormalizer9getFormatEv"></span><span id="codal::StreamNormalizer::getFormat"></span><span class="target" id="classcodal_1_1StreamNormalizer_1af3fc17111086fd8a68a68f1fb3d2056d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFormat</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer9getFormatEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal16StreamNormalizer9getFormatEv"></span><span id="_CPPv2N5codal16StreamNormalizer9getFormatEv"></span><span id="codal::StreamNormalizer::getFormat"></span><span class="target" id="classcodal_1_1StreamNormalizer_1ad68e72283dca13b78ecfd678f24623eb"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFormat</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer9getFormatEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determine the data format of the buffers streamed out of this component. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal16StreamNormalizer9setFormatEi">
-<span id="_CPPv3N5codal16StreamNormalizer9setFormatEi"></span><span id="_CPPv2N5codal16StreamNormalizer9setFormatEi"></span><span id="codal::StreamNormalizer::setFormat__i"></span><span class="target" id="classcodal_1_1StreamNormalizer_1a6f806f0926239fce3210d030dd975032"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFormat</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">format</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer9setFormatEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal16StreamNormalizer9setFormatEi"></span><span id="_CPPv2N5codal16StreamNormalizer9setFormatEi"></span><span id="codal::StreamNormalizer::setFormat__i"></span><span class="target" id="classcodal_1_1StreamNormalizer_1a3fabd010ac76e172e580b685622a42e2"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFormat</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">format</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer9setFormatEi" title="Permalink to this definition">#</a><br /></dt>
 <dd><p><p>Defines the data format of the buffers streamed out of this component.</p>
 <p>DATASTREAM_FORMAT_8BIT_UNSIGNED DATASTREAM_FORMAT_8BIT_SIGNED DATASTREAM_FORMAT_16BIT_UNSIGNED DATASTREAM_FORMAT_16BIT_SIGNED DATASTREAM_FORMAT_24BIT_UNSIGNED DATASTREAM_FORMAT_24BIT_SIGNED DATASTREAM_FORMAT_32BIT_UNSIGNED DATASTREAM_FORMAT_32BIT_SIGNED</p>
 </p>
-<p>Defines the data format of the buffers streamed out of this component. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>format</strong> – valid values include:</p></li>
-<li><p><strong>format</strong> – the format to use, one of </p></li>
-</ul>
+<dd class="field-odd"><p><strong>format</strong> – valid values include:</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal16StreamNormalizer7setGainEf">
-<span id="_CPPv3N5codal16StreamNormalizer7setGainEf"></span><span id="_CPPv2N5codal16StreamNormalizer7setGainEf"></span><span id="codal::StreamNormalizer::setGain__float"></span><span class="target" id="classcodal_1_1StreamNormalizer_1a8a8417f06f7589e2bd1aecd992a432b0"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setGain</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">gain</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer7setGainEf" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal16StreamNormalizer7setGainEf"></span><span id="_CPPv2N5codal16StreamNormalizer7setGainEf"></span><span id="codal::StreamNormalizer::setGain__float"></span><span class="target" id="classcodal_1_1StreamNormalizer_1a2cc2df1b0d4165b036f90a64f2c479f1"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setGain</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">gain</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer7setGainEf" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Defines an optional gain to apply to the input, as afloating point multiple.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -460,7 +457,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal16StreamNormalizer7getGainEv">
-<span id="_CPPv3N5codal16StreamNormalizer7getGainEv"></span><span id="_CPPv2N5codal16StreamNormalizer7getGainEv"></span><span id="codal::StreamNormalizer::getGain"></span><span class="target" id="classcodal_1_1StreamNormalizer_1acbbf89518269450ab3044db0b6f6b103"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getGain</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer7getGainEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal16StreamNormalizer7getGainEv"></span><span id="_CPPv2N5codal16StreamNormalizer7getGainEv"></span><span id="codal::StreamNormalizer::getGain"></span><span class="target" id="classcodal_1_1StreamNormalizer_1aed91db64469471d699122a35d530b0de"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getGain</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer7getGainEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines the gain being applied to the input, as a floating point multiple. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -471,7 +468,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal16StreamNormalizer9setOrMaskE8uint32_t">
-<span id="_CPPv3N5codal16StreamNormalizer9setOrMaskE8uint32_t"></span><span id="_CPPv2N5codal16StreamNormalizer9setOrMaskE8uint32_t"></span><span id="codal::StreamNormalizer::setOrMask__uint32_t"></span><span class="target" id="classcodal_1_1StreamNormalizer_1aec6f5dec8dc3c84cab10f9e6ed5b51f1"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setOrMask</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">mask</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer9setOrMaskE8uint32_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal16StreamNormalizer9setOrMaskE8uint32_t"></span><span id="_CPPv2N5codal16StreamNormalizer9setOrMaskE8uint32_t"></span><span id="codal::StreamNormalizer::setOrMask__uint32_t"></span><span class="target" id="classcodal_1_1StreamNormalizer_1af5288b2901f65ac75349202a7f545a3c"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setOrMask</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">mask</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer9setOrMaskE8uint32_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Defines an optional bit mask to logical OR with each sample. Useful if the downstream component encodes control data within its samples.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -485,7 +482,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal16StreamNormalizerD0Ev">
-<span id="_CPPv3N5codal16StreamNormalizerD0Ev"></span><span id="_CPPv2N5codal16StreamNormalizerD0Ev"></span><span id="codal::StreamNormalizer::~StreamNormalizer"></span><span class="target" id="classcodal_1_1StreamNormalizer_1a5df98a1f95afe7ddc555cbf48cc6c1a4"></span><span class="sig-name descname"><span class="n"><span class="pre">~StreamNormalizer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizerD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal16StreamNormalizerD0Ev"></span><span id="_CPPv2N5codal16StreamNormalizerD0Ev"></span><span id="codal::StreamNormalizer::~StreamNormalizer"></span><span class="target" id="classcodal_1_1StreamNormalizer_1aed57e7077aa5501d48a05e71bc864d99"></span><span class="sig-name descname"><span class="n"><span class="pre">~StreamNormalizer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizerD0Ev" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Destructor. </p>
 </dd></dl>
 
@@ -552,12 +549,12 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-attributes">Public Static Attributes</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal16StreamNormalizer10readSampleE">
-<span id="_CPPv3N5codal16StreamNormalizer10readSampleE"></span><span id="_CPPv2N5codal16StreamNormalizer10readSampleE"></span><span id="codal::StreamNormalizer::readSample__SampleReadFnA"></span><span class="target" id="classcodal_1_1StreamNormalizer_1adc08213e5c6ec7afae8cc605a15dcb92"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="typedef_StreamNormalizer_8h_1a2a957487d56e2d5551eaa52b5da13566.html#_CPPv412SampleReadFn" title="SampleReadFn"><span class="n"><span class="pre">SampleReadFn</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readSample</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">9</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="n"><span class="pre">read_sample_1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">read_sample_1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">read_sample_2</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">read_sample_3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">read_sample_4</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">read_sample_5</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">read_sample_6</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">read_sample_7</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">read_sample_8</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer10readSampleE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal16StreamNormalizer10readSampleE"></span><span id="_CPPv2N5codal16StreamNormalizer10readSampleE"></span><span id="codal::StreamNormalizer::readSample__SampleReadFnA"></span><span class="target" id="classcodal_1_1StreamNormalizer_1af8e3bb2d51f4eef97c1400afd6f40221"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="typedef_StreamNormalizer_8h_1a2a957487d56e2d5551eaa52b5da13566.html#_CPPv412SampleReadFn" title="SampleReadFn"><span class="n"><span class="pre">SampleReadFn</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readSample</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">9</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer10readSampleE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal16StreamNormalizer11writeSampleE">
-<span id="_CPPv3N5codal16StreamNormalizer11writeSampleE"></span><span id="_CPPv2N5codal16StreamNormalizer11writeSampleE"></span><span id="codal::StreamNormalizer::writeSample__SampleWriteFnA"></span><span class="target" id="classcodal_1_1StreamNormalizer_1a1135e84f55df93a6aa1fc70f56afc2dd"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="typedef_StreamNormalizer_8h_1a5ad890d48e67d7771769197ddcf58531.html#_CPPv413SampleWriteFn" title="SampleWriteFn"><span class="n"><span class="pre">SampleWriteFn</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeSample</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">9</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="n"><span class="pre">write_sample_1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">write_sample_1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">write_sample_2</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">write_sample_3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">write_sample_4</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">write_sample_5_6</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">write_sample_5_6</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">write_sample_7</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">write_sample_8</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer11writeSampleE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal16StreamNormalizer11writeSampleE"></span><span id="_CPPv2N5codal16StreamNormalizer11writeSampleE"></span><span id="codal::StreamNormalizer::writeSample__SampleWriteFnA"></span><span class="target" id="classcodal_1_1StreamNormalizer_1a91402a39d4239c32d7cd78b063cef2a5"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="typedef_StreamNormalizer_8h_1a5ad890d48e67d7771769197ddcf58531.html#_CPPv413SampleWriteFn" title="SampleWriteFn"><span class="n"><span class="pre">SampleWriteFn</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeSample</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">9</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N5codal16StreamNormalizer11writeSampleE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>

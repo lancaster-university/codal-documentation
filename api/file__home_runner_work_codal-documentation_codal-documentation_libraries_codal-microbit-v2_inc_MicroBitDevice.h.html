@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>File MicroBitDevice.h &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>File MicroBitDevice.h &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,7 +282,7 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitdevice-h">
    Definition (
@@ -296,11 +297,6 @@ title="Source repository"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#includes">
    Includes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#included-by">
-   Included By
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -346,7 +342,7 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitdevice-h">
    Definition (
@@ -361,11 +357,6 @@ title="Source repository"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#includes">
    Includes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#included-by">
-   Included By
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -411,12 +402,11 @@ title="Source repository"
 <ul class="simple">
 <li><p><a class="reference internal" href="#definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitdevice-h" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">/home/runner/work/codal-documentation/codal-documentation/libraries/codal-microbit-v2/inc/MicroBitDevice.h</span></code>)</a></p></li>
 <li><p><a class="reference internal" href="#includes" id="id2">Includes</a></p></li>
-<li><p><a class="reference internal" href="#included-by" id="id3">Included By</a></p></li>
-<li><p><a class="reference internal" href="#namespaces" id="id4">Namespaces</a></p></li>
-<li><p><a class="reference internal" href="#classes" id="id5">Classes</a></p></li>
-<li><p><a class="reference internal" href="#functions" id="id6">Functions</a></p></li>
-<li><p><a class="reference internal" href="#defines" id="id7">Defines</a></p></li>
-<li><p><a class="reference internal" href="#variables" id="id8">Variables</a></p></li>
+<li><p><a class="reference internal" href="#namespaces" id="id3">Namespaces</a></p></li>
+<li><p><a class="reference internal" href="#classes" id="id4">Classes</a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id5">Functions</a></p></li>
+<li><p><a class="reference internal" href="#defines" id="id6">Defines</a></p></li>
+<li><p><a class="reference internal" href="#variables" id="id7">Variables</a></p></li>
 </ul>
 </div>
 <section id="definition-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-inc-microbitdevice-h">
@@ -435,16 +425,6 @@ title="Source repository"
 <li><p><code class="docutils literal notranslate"><span class="pre">codal-core/inc/types/Event.h</span></code> (<a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_Event.h.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-core-inc-types-event-h"><span class="std std-ref">File Event.h</span></a>)</p></li>
 </ul>
 </section>
-<section id="included-by">
-<h2>Included By<a class="headerlink" href="#included-by" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitAccelerometer.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-microbitaccelerometer-cpp"><span class="std std-ref">File MicroBitAccelerometer.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitCompass.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-microbitcompass-cpp"><span class="std std-ref">File MicroBitCompass.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitDevice.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-microbitdevice-cpp"><span class="std std-ref">File MicroBitDevice.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitFlash.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-microbitflash-cpp"><span class="std std-ref">File MicroBitFlash.cpp</span></a></p></li>
-<li><p><a class="reference internal" href="file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitRadio.cpp.html#file-home-runner-work-codal-documentation-codal-documentation-libraries-codal-microbit-v2-source-microbitradio-cpp"><span class="std std-ref">File MicroBitRadio.cpp</span></a></p></li>
-</ul>
-</section>
 <section id="namespaces">
 <h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
@@ -460,7 +440,16 @@ title="Source repository"
 <section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
+<li><p><a class="reference internal" href="function_namespacecodal_1a41a479204fe84822f46832e73f9d1fad.html#exhale-function-namespacecodal-1a41a479204fe84822f46832e73f9d1fad"><span class="std std-ref">Function codal::ble_running</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespacecodal_1a87f56b4e1e7dcfb873ad7bd4af38caa7.html#exhale-function-namespacecodal-1a87f56b4e1e7dcfb873ad7bd4af38caa7"><span class="std std-ref">Function codal::microbit_dal_version</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a726e9141c3696c0fbb7fc9743c18a260.html#exhale-function-namespacecodal-1a726e9141c3696c0fbb7fc9743c18a260"><span class="std std-ref">Function codal::microbit_friendly_name</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a9aefebeee6bf073575b379d19d00a3f4.html#exhale-function-namespacecodal-1a9aefebeee6bf073575b379d19d00a3f4"><span class="std std-ref">Function codal::microbit_panic</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1aad929ae0913afefb621d909eaf94aece.html#exhale-function-namespacecodal-1aad929ae0913afefb621d909eaf94aece"><span class="std std-ref">Function codal::microbit_panic_timeout</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a385a8d97cae0761d23c53d8b18e98751.html#exhale-function-namespacecodal-1a385a8d97cae0761d23c53d8b18e98751"><span class="std std-ref">Function codal::microbit_random</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1af7d82336f01f39fb77f3c1ac581b4b3c.html#exhale-function-namespacecodal-1af7d82336f01f39fb77f3c1ac581b4b3c"><span class="std std-ref">Function codal::microbit_reset</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1abfe912cf436c0ae36e5ba328af78cc33.html#exhale-function-namespacecodal-1abfe912cf436c0ae36e5ba328af78cc33"><span class="std std-ref">Function codal::microbit_seed_random()</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a5750ff11e8d04023b682a014d99b901b.html#exhale-function-namespacecodal-1a5750ff11e8d04023b682a014d99b901b"><span class="std std-ref">Function codal::microbit_seed_random(uint32_t)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespacecodal_1a83e7fe17375b41f3c7bded287324053f.html#exhale-function-namespacecodal-1a83e7fe17375b41f3c7bded287324053f"><span class="std std-ref">Function codal::microbit_serial_number</span></a></p></li>
 </ul>
 </section>
 <section id="defines">

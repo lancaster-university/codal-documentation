@@ -86,46 +86,6 @@ Included By
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitMemoryMap.h`
 
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitAccelerometerService.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLEChar.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLEManager.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLEService.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLEServices.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLETypes.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitButtonService.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitEddystone.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitEventService.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitIOPinService.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitLEDService.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitMagnetometerService.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitPartialFlashingService.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitTemperatureService.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_bluetooth_MicroBitUARTService.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitCompassCalibrator.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitDevice.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitFileSystem.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitFlash.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_source_MicroBitMemoryMap.cpp`
-
 
 
 
@@ -208,6 +168,8 @@ Defines
 - :ref:`exhale_define_MicroBitConfig_8h_1a6043e686582c4ee81d024c17ad9725dd`
 
 - :ref:`exhale_define_MicroBitConfig_8h_1aa0ee0fb2d2539c03a6dce6e75401bb71`
+
+- :ref:`exhale_define_MicroBitConfig_8h_1ae26aac0e885832ba059b096da1d43aec`
 
 - :ref:`exhale_define_MicroBitConfig_8h_1a7d467c1d283fdfa1f2081ba1e0d01b6e`
 

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class DataSink &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class DataSink &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#derived-types">
      Derived Types
@@ -317,12 +318,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#derived-types">
      Derived Types
@@ -356,12 +357,12 @@ title="Source repository"
 <h3>Derived Types<a class="headerlink" href="#derived-types" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::DataStream</span></code> (<a class="reference internal" href="classcodal_1_1DataStream.html#exhale-class-classcodal-1-1datastream"><span class="std std-ref">Class DataStream</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::EffectFilter</span></code> (<a class="reference internal" href="classcodal_1_1EffectFilter.html#exhale-class-classcodal-1-1effectfilter"><span class="std std-ref">Class EffectFilter</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::FIFOStream</span></code> (<a class="reference internal" href="classcodal_1_1FIFOStream.html#exhale-class-classcodal-1-1fifostream"><span class="std std-ref">Class FIFOStream</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::LevelDetector</span></code> (<a class="reference internal" href="classcodal_1_1LevelDetector.html#exhale-class-classcodal-1-1leveldetector"><span class="std std-ref">Class LevelDetector</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::LevelDetectorSPL</span></code> (<a class="reference internal" href="classcodal_1_1LevelDetectorSPL.html#exhale-class-classcodal-1-1leveldetectorspl"><span class="std std-ref">Class LevelDetectorSPL</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::Mixer</span></code> (<a class="reference internal" href="classcodal_1_1Mixer.html#exhale-class-classcodal-1-1mixer"><span class="std std-ref">Class Mixer</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::MixerChannel</span></code> (<a class="reference internal" href="classcodal_1_1MixerChannel.html#exhale-class-classcodal-1-1mixerchannel"><span class="std std-ref">Class MixerChannel</span></a>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::StreamFilter</span></code> (<a class="reference internal" href="classcodal_1_1StreamFilter.html#exhale-class-classcodal-1-1streamfilter"><span class="std std-ref">Class StreamFilter</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::StreamFlowTrigger</span></code> (<a class="reference internal" href="classcodal_1_1StreamFlowTrigger.html#exhale-class-classcodal-1-1streamflowtrigger"><span class="std std-ref">Class StreamFlowTrigger</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::StreamNormalizer</span></code> (<a class="reference internal" href="classcodal_1_1StreamNormalizer.html#exhale-class-classcodal-1-1streamnormalizer"><span class="std std-ref">Class StreamNormalizer</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::StreamRecording</span></code> (<a class="reference internal" href="classcodal_1_1StreamRecording.html#exhale-class-classcodal-1-1streamrecording"><span class="std std-ref">Class StreamRecording</span></a>)</p></li>
@@ -375,12 +376,12 @@ title="Source repository"
 <dt class="sig sig-object cpp" id="_CPPv4N5codal8DataSinkE">
 <span id="_CPPv3N5codal8DataSinkE"></span><span id="_CPPv2N5codal8DataSinkE"></span><span id="codal::DataSink"></span><span class="target" id="classcodal_1_1DataSink"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DataSink</span></span></span><a class="headerlink" href="#_CPPv4N5codal8DataSinkE" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Interface definition for a <a class="reference internal" href="classcodal_1_1DataSource.html#classcodal_1_1DataSource"><span class="std std-ref">DataSource</span></a>. </p>
-<p>Subclassed by <a class="reference internal" href="classcodal_1_1DataStream.html#classcodal_1_1DataStream"><span class="std std-ref">codal::DataStream</span></a>, <a class="reference internal" href="classcodal_1_1FIFOStream.html#classcodal_1_1FIFOStream"><span class="std std-ref">codal::FIFOStream</span></a>, <a class="reference internal" href="classcodal_1_1LevelDetector.html#classcodal_1_1LevelDetector"><span class="std std-ref">codal::LevelDetector</span></a>, <a class="reference internal" href="classcodal_1_1LevelDetectorSPL.html#classcodal_1_1LevelDetectorSPL"><span class="std std-ref">codal::LevelDetectorSPL</span></a>, <a class="reference internal" href="classcodal_1_1Mixer.html#classcodal_1_1Mixer"><span class="std std-ref">codal::Mixer</span></a>, <a class="reference internal" href="classcodal_1_1MixerChannel.html#classcodal_1_1MixerChannel"><span class="std std-ref">codal::MixerChannel</span></a>, <a class="reference internal" href="classcodal_1_1StreamFilter.html#classcodal_1_1StreamFilter"><span class="std std-ref">codal::StreamFilter</span></a>, <a class="reference internal" href="classcodal_1_1StreamFlowTrigger.html#classcodal_1_1StreamFlowTrigger"><span class="std std-ref">codal::StreamFlowTrigger</span></a>, <a class="reference internal" href="classcodal_1_1StreamNormalizer.html#classcodal_1_1StreamNormalizer"><span class="std std-ref">codal::StreamNormalizer</span></a>, <a class="reference internal" href="classcodal_1_1StreamRecording.html#classcodal_1_1StreamRecording"><span class="std std-ref">codal::StreamRecording</span></a>, <a class="reference internal" href="classcodal_1_1StreamSplitter.html#classcodal_1_1StreamSplitter"><span class="std std-ref">codal::StreamSplitter</span></a></p>
+<p>Subclassed by <a class="reference internal" href="classcodal_1_1DataStream.html#classcodal_1_1DataStream"><span class="std std-ref">codal::DataStream</span></a>, <a class="reference internal" href="classcodal_1_1EffectFilter.html#classcodal_1_1EffectFilter"><span class="std std-ref">codal::EffectFilter</span></a>, <a class="reference internal" href="classcodal_1_1FIFOStream.html#classcodal_1_1FIFOStream"><span class="std std-ref">codal::FIFOStream</span></a>, <a class="reference internal" href="classcodal_1_1LevelDetector.html#classcodal_1_1LevelDetector"><span class="std std-ref">codal::LevelDetector</span></a>, <a class="reference internal" href="classcodal_1_1LevelDetectorSPL.html#classcodal_1_1LevelDetectorSPL"><span class="std std-ref">codal::LevelDetectorSPL</span></a>, <a class="reference internal" href="classcodal_1_1Mixer.html#classcodal_1_1Mixer"><span class="std std-ref">codal::Mixer</span></a>, <a class="reference internal" href="classcodal_1_1MixerChannel.html#classcodal_1_1MixerChannel"><span class="std std-ref">codal::MixerChannel</span></a>, <a class="reference internal" href="classcodal_1_1StreamFlowTrigger.html#classcodal_1_1StreamFlowTrigger"><span class="std std-ref">codal::StreamFlowTrigger</span></a>, <a class="reference internal" href="classcodal_1_1StreamNormalizer.html#classcodal_1_1StreamNormalizer"><span class="std std-ref">codal::StreamNormalizer</span></a>, <a class="reference internal" href="classcodal_1_1StreamRecording.html#classcodal_1_1StreamRecording"><span class="std std-ref">codal::StreamRecording</span></a>, <a class="reference internal" href="classcodal_1_1StreamSplitter.html#classcodal_1_1StreamSplitter"><span class="std std-ref">codal::StreamSplitter</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal8DataSink11pullRequestEv">
-<span id="_CPPv3N5codal8DataSink11pullRequestEv"></span><span id="_CPPv2N5codal8DataSink11pullRequestEv"></span><span id="codal::DataSink::pullRequest"></span><span class="target" id="classcodal_1_1DataSink_1ac277a7e5edd9bc33a5aa33e8957d1ea7"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pullRequest</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal8DataSink11pullRequestEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal8DataSink11pullRequestEv"></span><span id="_CPPv2N5codal8DataSink11pullRequestEv"></span><span id="codal::DataSink::pullRequest"></span><span class="target" id="classcodal_1_1DataSink_1ad7d4c1b969025ebe69893c03b124b9d5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pullRequest</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal8DataSink11pullRequestEv" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>

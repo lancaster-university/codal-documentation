@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class Mixer &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class Mixer &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-types">
      Base Types
@@ -317,12 +318,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-types">
      Base Types
@@ -369,36 +370,36 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal5Mixer5MixerEv">
-<span id="_CPPv3N5codal5Mixer5MixerEv"></span><span id="_CPPv2N5codal5Mixer5MixerEv"></span><span id="codal::Mixer::Mixer"></span><span class="target" id="classcodal_1_1Mixer_1aedb32c0b9d526c8c3565311bab44a0fb"></span><span class="sig-name descname"><span class="n"><span class="pre">Mixer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal5Mixer5MixerEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal5Mixer5MixerEv"></span><span id="_CPPv2N5codal5Mixer5MixerEv"></span><span id="codal::Mixer::Mixer"></span><span class="target" id="classcodal_1_1Mixer_1ab127f67654abf3f8ae017d1317fe0b6e"></span><span class="sig-name descname"><span class="n"><span class="pre">Mixer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal5Mixer5MixerEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Default Constructor. Creates an empty <a class="reference internal" href="#classcodal_1_1Mixer"><span class="std std-ref">Mixer</span></a>. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal5MixerD0Ev">
-<span id="_CPPv3N5codal5MixerD0Ev"></span><span id="_CPPv2N5codal5MixerD0Ev"></span><span id="codal::Mixer::~Mixer"></span><span class="target" id="classcodal_1_1Mixer_1a85026e8a94b704a13e65445b80fc7821"></span><span class="sig-name descname"><span class="n"><span class="pre">~Mixer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal5MixerD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal5MixerD0Ev"></span><span id="_CPPv2N5codal5MixerD0Ev"></span><span id="codal::Mixer::~Mixer"></span><span class="target" id="classcodal_1_1Mixer_1a65a0e01d40345468f9c71b92d1389b7a"></span><span class="sig-name descname"><span class="n"><span class="pre">~Mixer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal5MixerD0Ev" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Destructor. Removes all resources held by the instance. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal5Mixer10addChannelER10DataStream">
-<span id="_CPPv3N5codal5Mixer10addChannelER10DataStream"></span><span id="_CPPv2N5codal5Mixer10addChannelER10DataStream"></span><span id="codal::Mixer::addChannel__DataStreamR"></span><span class="target" id="classcodal_1_1Mixer_1a6b24f7ef8f1856cfbc15b187e3f1639e"></span><a class="reference internal" href="classcodal_1_1MixerChannel.html#_CPPv4N5codal12MixerChannelE" title="codal::MixerChannel"><span class="n"><span class="pre">MixerChannel</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">addChannel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataStream.html#_CPPv4N5codal10DataStreamE" title="codal::DataStream"><span class="n"><span class="pre">DataStream</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">stream</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal5Mixer10addChannelER10DataStream" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal5Mixer10addChannelER10DataStream"></span><span id="_CPPv2N5codal5Mixer10addChannelER10DataStream"></span><span id="codal::Mixer::addChannel__DataStreamR"></span><span class="target" id="classcodal_1_1Mixer_1a7c92176ac70fb728d6c0a9c18b0b5cd0"></span><a class="reference internal" href="classcodal_1_1MixerChannel.html#_CPPv4N5codal12MixerChannelE" title="codal::MixerChannel"><span class="n"><span class="pre">MixerChannel</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">addChannel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataStream.html#_CPPv4N5codal10DataStreamE" title="codal::DataStream"><span class="n"><span class="pre">DataStream</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">stream</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal5Mixer10addChannelER10DataStream" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal5Mixer4pullEv">
-<span id="_CPPv3N5codal5Mixer4pullEv"></span><span id="_CPPv2N5codal5Mixer4pullEv"></span><span id="codal::Mixer::pull"></span><span class="target" id="classcodal_1_1Mixer_1a3a26865264bbfbba4e6cf1a2742230a6"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="classcodal_1_1ManagedBuffer.html#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pull</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal5Mixer4pullEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal5Mixer4pullEv"></span><span id="_CPPv2N5codal5Mixer4pullEv"></span><span id="codal::Mixer::pull"></span><span class="target" id="classcodal_1_1Mixer_1a656a4259334e33cdccbbf0cd81efd16b"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="classcodal_1_1ManagedBuffer.html#_CPPv4N5codal13ManagedBufferE" title="codal::ManagedBuffer"><span class="n"><span class="pre">ManagedBuffer</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pull</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal5Mixer4pullEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Provide the next available <a class="reference internal" href="classcodal_1_1ManagedBuffer.html#classcodal_1_1ManagedBuffer"><span class="std std-ref">ManagedBuffer</span></a> to our downstream caller, if available. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal5Mixer11pullRequestEv">
-<span id="_CPPv3N5codal5Mixer11pullRequestEv"></span><span id="_CPPv2N5codal5Mixer11pullRequestEv"></span><span id="codal::Mixer::pullRequest"></span><span class="target" id="classcodal_1_1Mixer_1aaee156e5b61e38f32afa625000952c31"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pullRequest</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal5Mixer11pullRequestEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal5Mixer11pullRequestEv"></span><span id="_CPPv2N5codal5Mixer11pullRequestEv"></span><span id="codal::Mixer::pullRequest"></span><span class="target" id="classcodal_1_1Mixer_1a50518b67bdeb036549289a01e1d8fd0d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pullRequest</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal5Mixer11pullRequestEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Deliver the next available <a class="reference internal" href="classcodal_1_1ManagedBuffer.html#classcodal_1_1ManagedBuffer"><span class="std std-ref">ManagedBuffer</span></a> to our downstream caller. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal5Mixer7connectER8DataSink">
-<span id="_CPPv3N5codal5Mixer7connectER8DataSink"></span><span id="_CPPv2N5codal5Mixer7connectER8DataSink"></span><span id="codal::Mixer::connect__DataSinkR"></span><span class="target" id="classcodal_1_1Mixer_1a4fe6c56baa9a62ebb5f61a95b3906f47"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">connect</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataSink.html#_CPPv4N5codal8DataSinkE" title="codal::DataSink"><span class="n"><span class="pre">DataSink</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sink</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal5Mixer7connectER8DataSink" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal5Mixer7connectER8DataSink"></span><span id="_CPPv2N5codal5Mixer7connectER8DataSink"></span><span id="codal::Mixer::connect__DataSinkR"></span><span class="target" id="classcodal_1_1Mixer_1aade2e33c4834330707a0504b49abb06a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">connect</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1DataSink.html#_CPPv4N5codal8DataSinkE" title="codal::DataSink"><span class="n"><span class="pre">DataSink</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sink</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal5Mixer7connectER8DataSink" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Define a downstream component for data stream.</p>
 <p>&#64;sink The component that data will be delivered to, when it is available </p>
 </dd></dl>

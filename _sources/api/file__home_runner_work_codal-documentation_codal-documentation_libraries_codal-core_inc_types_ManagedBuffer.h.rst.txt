@@ -44,25 +44,17 @@ Included By
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_DataStream.h`
 
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_EffectFilter.h`
+
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_FIFOStream.h`
 
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_StreamFilter.h`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_LowPassFilter.h`
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_StreamFlowTrigger.h`
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_StreamRecording.h`
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_ManagedString.h`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_FIFOStream.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_StreamFilter.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_StreamFlowTrigger.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_streams_StreamRecording.cpp`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_source_types_ManagedBuffer.cpp`
 
 
 

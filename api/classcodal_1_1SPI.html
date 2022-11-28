@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class SPI &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class SPI &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,7 +282,7 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-documentation">
    Class Documentation
@@ -305,7 +306,7 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-documentation">
    Class Documentation
@@ -385,14 +386,14 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal3SPI8transferEPK7uint8_t8uint32_tP7uint8_t8uint32_t">
-<span id="_CPPv3N5codal3SPI8transferEPK7uint8_t8uint32_tP7uint8_t8uint32_t"></span><span id="_CPPv2N5codal3SPI8transferEPK7uint8_t8uint32_tP7uint8_t8uint32_t"></span><span id="codal::SPI::transfer__uint8_tCP.uint32_t.uint8_tP.uint32_t"></span><span class="target" id="classcodal_1_1SPI_1a890d95f3477542fd668f31719c5c93db"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">transfer</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">txBuffer</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">txSize</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">rxBuffer</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rxSize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3SPI8transferEPK7uint8_t8uint32_tP7uint8_t8uint32_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal3SPI8transferEPK7uint8_t8uint32_tP7uint8_t8uint32_t"></span><span id="_CPPv2N5codal3SPI8transferEPK7uint8_t8uint32_tP7uint8_t8uint32_t"></span><span id="codal::SPI::transfer__uint8_tCP.uint32_t.uint8_tP.uint32_t"></span><span class="target" id="classcodal_1_1SPI_1aeae4875afa96df861dea711977400fda"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">transfer</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">txBuffer</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">txSize</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">rxBuffer</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rxSize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3SPI8transferEPK7uint8_t8uint32_tP7uint8_t8uint32_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Writes and reads from the <a class="reference internal" href="#classcodal_1_1SPI"><span class="std std-ref">SPI</span></a> bus concurrently. Waits (possibly un-scheduled) for transfer to finish.</p>
 <p>Either buffer can be NULL. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal3SPI13startTransferEPK7uint8_t8uint32_tP7uint8_t8uint32_t13PVoidCallbackPv">
-<span id="_CPPv3N5codal3SPI13startTransferEPK7uint8_t8uint32_tP7uint8_t8uint32_t13PVoidCallbackPv"></span><span id="_CPPv2N5codal3SPI13startTransferEPK7uint8_t8uint32_tP7uint8_t8uint32_t13PVoidCallbackPv"></span><span id="codal::SPI::startTransfer__uint8_tCP.uint32_t.uint8_tP.uint32_t.PVoidCallback.voidP"></span><span class="target" id="classcodal_1_1SPI_1a666c2d64fca777c8dccbee45693699eb"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">startTransfer</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">txBuffer</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">txSize</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">rxBuffer</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rxSize</span></span>, <a class="reference internal" href="typedef_namespacecodal_1a5d6d303686f66955c4aa4de95512279c.html#_CPPv4N5codal13PVoidCallbackE" title="codal::PVoidCallback"><span class="n"><span class="pre">PVoidCallback</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">doneHandler</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">arg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3SPI13startTransferEPK7uint8_t8uint32_tP7uint8_t8uint32_t13PVoidCallbackPv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal3SPI13startTransferEPK7uint8_t8uint32_tP7uint8_t8uint32_t13PVoidCallbackPv"></span><span id="_CPPv2N5codal3SPI13startTransferEPK7uint8_t8uint32_tP7uint8_t8uint32_t13PVoidCallbackPv"></span><span id="codal::SPI::startTransfer__uint8_tCP.uint32_t.uint8_tP.uint32_t.PVoidCallback.voidP"></span><span class="target" id="classcodal_1_1SPI_1a375f5896610fdfc2c666eb9495b492ce"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">startTransfer</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">txBuffer</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">txSize</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">rxBuffer</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rxSize</span></span>, <a class="reference internal" href="typedef_namespacecodal_1a5d6d303686f66955c4aa4de95512279c.html#_CPPv4N5codal13PVoidCallbackE" title="codal::PVoidCallback"><span class="n"><span class="pre">PVoidCallback</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">doneHandler</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">arg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal3SPI13startTransferEPK7uint8_t8uint32_tP7uint8_t8uint32_t13PVoidCallbackPv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Writes and reads from the <a class="reference internal" href="#classcodal_1_1SPI"><span class="std std-ref">SPI</span></a> bus concurrently. Finally, calls doneHandler (possibly in IRQ context).</p>
 <p>Either buffer can be NULL. </p>
 </dd></dl>

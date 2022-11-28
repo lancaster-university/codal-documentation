@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class FXOS8700 &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class FXOS8700 &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-types">
      Base Types
@@ -317,12 +318,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-types">
      Base Types
@@ -370,19 +371,15 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal8FXOS87008FXOS8700ER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t8uint16_t">
-<span id="_CPPv3N5codal8FXOS87008FXOS8700ER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t8uint16_t"></span><span id="_CPPv2N5codal8FXOS87008FXOS8700ER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t8uint16_t"></span><span id="codal::FXOS8700::FXOS8700__I2CR.PinR.CoordinateSpaceR.uint16_t.uint16_t.uint16_t"></span><span class="target" id="classcodal_1_1FXOS8700_1a5d0548e8e5eeb2dcc7ee12b4a8495031"></span><span class="sig-name descname"><span class="n"><span class="pre">FXOS8700</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1I2C.html#_CPPv4N5codal3I2CE" title="codal::I2C"><span class="n"><span class="pre">I2C</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_i2c</span></span>, <a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_int1</span></span>, <a class="reference internal" href="classcodal_1_1CoordinateSpace.html#_CPPv4N5codal15CoordinateSpaceE" title="codal::CoordinateSpace"><span class="n"><span class="pre">CoordinateSpace</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">coordinateSpace</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x3C</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">aid</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_ACCELEROMETER</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">cid</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_COMPASS</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal8FXOS87008FXOS8700ER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal8FXOS87008FXOS8700ER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t8uint16_t"></span><span id="_CPPv2N5codal8FXOS87008FXOS8700ER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t8uint16_t"></span><span id="codal::FXOS8700::FXOS8700__I2CR.PinR.CoordinateSpaceR.uint16_t.uint16_t.uint16_t"></span><span class="target" id="classcodal_1_1FXOS8700_1ab146b8a49869568d6acdecaa6c678fe9"></span><span class="sig-name descname"><span class="n"><span class="pre">FXOS8700</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1I2C.html#_CPPv4N5codal3I2CE" title="codal::I2C"><span class="n"><span class="pre">I2C</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_i2c</span></span>, <a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">_int1</span></span>, <a class="reference internal" href="classcodal_1_1CoordinateSpace.html#_CPPv4N5codal15CoordinateSpaceE" title="codal::CoordinateSpace"><span class="n"><span class="pre">CoordinateSpace</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">coordinateSpace</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x3C</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">aid</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_ACCELEROMETER</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">cid</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_COMPASS</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal8FXOS87008FXOS8700ER3I2CR3PinR15CoordinateSpace8uint16_t8uint16_t8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor. Create a software abstraction of an <a class="reference internal" href="#classcodal_1_1FXOS8700"><span class="std std-ref">FXOS8700</span></a> sensor.</p>
-<p>
-Constructor. Create a software abstraction of an FXSO8700 combined accelerometer/magnetometer</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>_i2c</strong> – an instance of <a class="reference internal" href="classcodal_1_1I2C.html#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> used to communicate with the onboard accelerometer. </p></li>
 <li><p><strong>_int1</strong> – a pin connected to the INT1 interrupt source of the sensor. </p></li>
 <li><p><strong>coordinateSpace</strong> – The orientation of the sensor. Defaults to: SIMPLE_CARTESIAN. </p></li>
-<li><p><strong>address</strong> – the default <a class="reference internal" href="classcodal_1_1I2C.html#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> address of the accelerometer. Defaults to: FXOS8700_DEFAULT_ADDR.</p></li>
-<li><p><strong>_i2c</strong> – an instance of <a class="reference internal" href="classcodal_1_1I2C.html#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> used to communicate with the device.</p></li>
-<li><p><strong>address</strong> – the default <a class="reference internal" href="classcodal_1_1I2C.html#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> address of the accelerometer. Defaults to: FXS8700_DEFAULT_ADDR. </p></li>
+<li><p><strong>address</strong> – the default <a class="reference internal" href="classcodal_1_1I2C.html#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> address of the accelerometer. Defaults to: FXOS8700_DEFAULT_ADDR. </p></li>
 </ul>
 </dd>
 </dl>
@@ -390,7 +387,7 @@ Constructor. Create a software abstraction of an FXSO8700 combined accelerometer
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal8FXOS87009configureEv">
-<span id="_CPPv3N5codal8FXOS87009configureEv"></span><span id="_CPPv2N5codal8FXOS87009configureEv"></span><span id="codal::FXOS8700::configure"></span><span class="target" id="classcodal_1_1FXOS8700_1a67d8f93c00dcc9e288828fe0d0cf478c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configure</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal8FXOS87009configureEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal8FXOS87009configureEv"></span><span id="_CPPv2N5codal8FXOS87009configureEv"></span><span id="codal::FXOS8700::configure"></span><span class="target" id="classcodal_1_1FXOS8700_1adc13fe7fc969984076da0f58c91161f8"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configure</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal8FXOS87009configureEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Configures the accelerometer for G range and sample rate defined in this object. The nearest values are chosen to those defined that are supported by the hardware. The instance variables are then updated to reflect reality.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -401,36 +398,28 @@ Constructor. Create a software abstraction of an FXSO8700 combined accelerometer
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal8FXOS870013requestUpdateEv">
-<span id="_CPPv3N5codal8FXOS870013requestUpdateEv"></span><span id="_CPPv2N5codal8FXOS870013requestUpdateEv"></span><span id="codal::FXOS8700::requestUpdate"></span><span class="target" id="classcodal_1_1FXOS8700_1a1f8db690dfccffead24bcc1a8a765e2f"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestUpdate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal8FXOS870013requestUpdateEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal8FXOS870013requestUpdateEv"></span><span id="_CPPv2N5codal8FXOS870013requestUpdateEv"></span><span id="codal::FXOS8700::requestUpdate"></span><span class="target" id="classcodal_1_1FXOS8700_1adbd0af1c08c1b5129d85b9e3b06003fa"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestUpdate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal8FXOS870013requestUpdateEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Reads the acceleration data from the accelerometer, and stores it in our buffer. This only happens if the accelerometer indicates that it has new data via int1.</p>
 <p>On first use, this member function will attempt to add this component to the list of fiber components in order to constantly update the values stored by this object.</p>
 <p>This technique is called lazy instantiation, and it means that we do not obtain the overhead from non-chalantly adding this component to fiber components.</p>
-<p>
-Reads the sensor ata from the FXSO8700, and stores it in our buffer. This only happens if the device indicates that it has new data via int1.</p>
-<p>On first use, this member function will attempt to add this component to the list of fiber components in order to constantly update the values stored by this object.</p>
-<p>This lazy instantiation means that we do not obtain the overhead from non-chalantly adding this component to fiber components.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success, DEVICE_I2C_ERROR if the read request fails.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK on success, DEVICE_I2C_ERROR if the read request fails. </p>
+<dd class="field-odd"><p>DEVICE_OK on success, DEVICE_I2C_ERROR if the read request fails. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal8FXOS870012idleCallbackEv">
-<span id="_CPPv3N5codal8FXOS870012idleCallbackEv"></span><span id="_CPPv2N5codal8FXOS870012idleCallbackEv"></span><span id="codal::FXOS8700::idleCallback"></span><span class="target" id="classcodal_1_1FXOS8700_1aab62040631588544fc73e73aacdf6d58"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idleCallback</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal8FXOS870012idleCallbackEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal8FXOS870012idleCallbackEv"></span><span id="_CPPv2N5codal8FXOS870012idleCallbackEv"></span><span id="codal::FXOS8700::idleCallback"></span><span class="target" id="classcodal_1_1FXOS8700_1ad61ddd15b74308d17b52de38cce18abf"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idleCallback</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal8FXOS870012idleCallbackEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>A periodic callback invoked by the fiber scheduler idle thread.</p>
 <p>Internally calls updateSample(). </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal8FXOS8700D0Ev">
-<span id="_CPPv3N5codal8FXOS8700D0Ev"></span><span id="_CPPv2N5codal8FXOS8700D0Ev"></span><span id="codal::FXOS8700::~FXOS8700"></span><span class="target" id="classcodal_1_1FXOS8700_1ad525b86b5351a752fd688d9a7c4655e9"></span><span class="sig-name descname"><span class="n"><span class="pre">~FXOS8700</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal8FXOS8700D0Ev" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Destructor.</p>
-<p>Destructor for FXS8700, where we deregister from the array of fiber components. </p>
+<span id="_CPPv3N5codal8FXOS8700D0Ev"></span><span id="_CPPv2N5codal8FXOS8700D0Ev"></span><span id="codal::FXOS8700::~FXOS8700"></span><span class="target" id="classcodal_1_1FXOS8700_1ac9034ee1a3982978a9a48749bc74d438"></span><span class="sig-name descname"><span class="n"><span class="pre">~FXOS8700</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal8FXOS8700D0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Destructor. </p>
 </dd></dl>
 
 </div>
@@ -438,7 +427,7 @@ Reads the sensor ata from the FXSO8700, and stores it in our buffer. This only h
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal8FXOS870010isDetectedER3I2C8uint16_t">
-<span id="_CPPv3N5codal8FXOS870010isDetectedER3I2C8uint16_t"></span><span id="_CPPv2N5codal8FXOS870010isDetectedER3I2C8uint16_t"></span><span id="codal::FXOS8700::isDetected__I2CR.uint16_t"></span><span class="target" id="classcodal_1_1FXOS8700_1ab66df00f693cfa4822004be023451cb7"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isDetected</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1I2C.html#_CPPv4N5codal3I2CE" title="codal::I2C"><span class="n"><span class="pre">I2C</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">i2c</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x3C</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal8FXOS870010isDetectedER3I2C8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal8FXOS870010isDetectedER3I2C8uint16_t"></span><span id="_CPPv2N5codal8FXOS870010isDetectedER3I2C8uint16_t"></span><span id="codal::FXOS8700::isDetected__I2CR.uint16_t"></span><span class="target" id="classcodal_1_1FXOS8700_1a2e65ac4fffa6e6209c79eaad0f371118"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isDetected</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1I2C.html#_CPPv4N5codal3I2CE" title="codal::I2C"><span class="n"><span class="pre">I2C</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">i2c</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0x3C</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal8FXOS870010isDetectedER3I2C8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Attempts to read the 8 bit WHO_AM_I value from the accelerometer</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>

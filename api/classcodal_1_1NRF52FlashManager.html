@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class NRF52FlashManager &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class NRF52FlashManager &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -317,12 +318,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -369,7 +370,7 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal17NRF52FlashManager17NRF52FlashManagerE8uint32_t8uint32_t8uint32_t">
-<span id="_CPPv3N5codal17NRF52FlashManager17NRF52FlashManagerE8uint32_t8uint32_t8uint32_t"></span><span id="_CPPv2N5codal17NRF52FlashManager17NRF52FlashManagerE8uint32_t8uint32_t8uint32_t"></span><span id="codal::NRF52FlashManager::NRF52FlashManager__uint32_t.uint32_t.uint32_t"></span><span class="target" id="classcodal_1_1NRF52FlashManager_1a7c1476be72428970285b3ed4913ff28f"></span><span class="sig-name descname"><span class="n"><span class="pre">NRF52FlashManager</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">startAddress</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pageCount</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pageSize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal17NRF52FlashManager17NRF52FlashManagerE8uint32_t8uint32_t8uint32_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal17NRF52FlashManager17NRF52FlashManagerE8uint32_t8uint32_t8uint32_t"></span><span id="_CPPv2N5codal17NRF52FlashManager17NRF52FlashManagerE8uint32_t8uint32_t8uint32_t"></span><span id="codal::NRF52FlashManager::NRF52FlashManager__uint32_t.uint32_t.uint32_t"></span><span class="target" id="classcodal_1_1NRF52FlashManager_1a921afb34cede91c45cf2490f7a5c24f0"></span><span class="sig-name descname"><span class="n"><span class="pre">NRF52FlashManager</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">startAddress</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pageCount</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pageSize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal17NRF52FlashManager17NRF52FlashManagerE8uint32_t8uint32_t8uint32_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor. Create a software abstraction of an <a class="reference internal" href="#classcodal_1_1NRF52FlashManager"><span class="std std-ref">NRF52FlashManager</span></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -384,7 +385,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal17NRF52FlashManager4readEP8uint32_t8uint32_t8uint32_t">
-<span id="_CPPv3N5codal17NRF52FlashManager4readEP8uint32_t8uint32_t8uint32_t"></span><span id="_CPPv2N5codal17NRF52FlashManager4readEP8uint32_t8uint32_t8uint32_t"></span><span id="codal::NRF52FlashManager::read__uint32_tP.uint32_t.uint32_t"></span><span class="target" id="classcodal_1_1NRF52FlashManager_1ac88667fa004305786c2894de610d67ea"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">dest</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal17NRF52FlashManager4readEP8uint32_t8uint32_t8uint32_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal17NRF52FlashManager4readEP8uint32_t8uint32_t8uint32_t"></span><span id="_CPPv2N5codal17NRF52FlashManager4readEP8uint32_t8uint32_t8uint32_t"></span><span id="codal::NRF52FlashManager::read__uint32_tP.uint32_t.uint32_t"></span><span class="target" id="classcodal_1_1NRF52FlashManager_1a4af369ed2256967bbfb07e355492a1b0"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">dest</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal17NRF52FlashManager4readEP8uint32_t8uint32_t8uint32_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Reads a block of memory from non-volatile memory into RAM</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -399,7 +400,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal17NRF52FlashManager5writeE8uint32_tP8uint32_t8uint32_t">
-<span id="_CPPv3N5codal17NRF52FlashManager5writeE8uint32_tP8uint32_t8uint32_t"></span><span id="_CPPv2N5codal17NRF52FlashManager5writeE8uint32_tP8uint32_t8uint32_t"></span><span id="codal::NRF52FlashManager::write__uint32_t.uint32_tP.uint32_t"></span><span class="target" id="classcodal_1_1NRF52FlashManager_1a092de935e249ff3dcf35798f998957b9"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal17NRF52FlashManager5writeE8uint32_tP8uint32_t8uint32_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal17NRF52FlashManager5writeE8uint32_tP8uint32_t8uint32_t"></span><span id="_CPPv2N5codal17NRF52FlashManager5writeE8uint32_tP8uint32_t8uint32_t"></span><span id="codal::NRF52FlashManager::write__uint32_t.uint32_tP.uint32_t"></span><span class="target" id="classcodal_1_1NRF52FlashManager_1a237830bdaa13114c93cb67e1f1b883f3"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal17NRF52FlashManager5writeE8uint32_tP8uint32_t8uint32_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Writes data to the specified location in the USB file staorage area.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -417,7 +418,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal17NRF52FlashManager5eraseE8uint32_t">
-<span id="_CPPv3N5codal17NRF52FlashManager5eraseE8uint32_t"></span><span id="_CPPv2N5codal17NRF52FlashManager5eraseE8uint32_t"></span><span id="codal::NRF52FlashManager::erase__uint32_t"></span><span class="target" id="classcodal_1_1NRF52FlashManager_1a279c67547ae8021a5791af8eeae8a713"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">erase</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">page</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal17NRF52FlashManager5eraseE8uint32_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal17NRF52FlashManager5eraseE8uint32_t"></span><span id="_CPPv2N5codal17NRF52FlashManager5eraseE8uint32_t"></span><span id="codal::NRF52FlashManager::erase__uint32_t"></span><span class="target" id="classcodal_1_1NRF52FlashManager_1ad724f400462510c1fb5aa573b41e6db0"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">erase</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">page</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal17NRF52FlashManager5eraseE8uint32_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Erases a given page in non-volatile memory.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -428,7 +429,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal17NRF52FlashManager13getFlashStartEv">
-<span id="_CPPv3N5codal17NRF52FlashManager13getFlashStartEv"></span><span id="_CPPv2N5codal17NRF52FlashManager13getFlashStartEv"></span><span id="codal::NRF52FlashManager::getFlashStart"></span><span class="target" id="classcodal_1_1NRF52FlashManager_1addd3a009644adb1bcadfd1d867b7f46f"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFlashStart</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal17NRF52FlashManager13getFlashStartEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal17NRF52FlashManager13getFlashStartEv"></span><span id="_CPPv2N5codal17NRF52FlashManager13getFlashStartEv"></span><span id="codal::NRF52FlashManager::getFlashStart"></span><span class="target" id="classcodal_1_1NRF52FlashManager_1ab9f7694af96267489c5b5316757f7d74"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFlashStart</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal17NRF52FlashManager13getFlashStartEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines the logical address of the start of non-volatile memory region</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -439,7 +440,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal17NRF52FlashManager11getFlashEndEv">
-<span id="_CPPv3N5codal17NRF52FlashManager11getFlashEndEv"></span><span id="_CPPv2N5codal17NRF52FlashManager11getFlashEndEv"></span><span id="codal::NRF52FlashManager::getFlashEnd"></span><span class="target" id="classcodal_1_1NRF52FlashManager_1a50a8175bc9905a870c0a567f69aed458"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFlashEnd</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal17NRF52FlashManager11getFlashEndEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal17NRF52FlashManager11getFlashEndEv"></span><span id="_CPPv2N5codal17NRF52FlashManager11getFlashEndEv"></span><span id="codal::NRF52FlashManager::getFlashEnd"></span><span class="target" id="classcodal_1_1NRF52FlashManager_1a0002eef43bf4a83e6cf0f4cf55a58dce"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFlashEnd</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal17NRF52FlashManager11getFlashEndEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines the logical address of the end of the non-volatile memory region</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -450,7 +451,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal17NRF52FlashManager11getPageSizeEv">
-<span id="_CPPv3N5codal17NRF52FlashManager11getPageSizeEv"></span><span id="_CPPv2N5codal17NRF52FlashManager11getPageSizeEv"></span><span id="codal::NRF52FlashManager::getPageSize"></span><span class="target" id="classcodal_1_1NRF52FlashManager_1afddee2a085710882ff36251a8b83d8a0"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPageSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal17NRF52FlashManager11getPageSizeEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal17NRF52FlashManager11getPageSizeEv"></span><span id="_CPPv2N5codal17NRF52FlashManager11getPageSizeEv"></span><span id="codal::NRF52FlashManager::getPageSize"></span><span class="target" id="classcodal_1_1NRF52FlashManager_1a85e61406c9c5bbbced82399774db21b1"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPageSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal17NRF52FlashManager11getPageSizeEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines the size of a non-volatile memory page. A page is defined as the block of memory the can be efficiently erased without impacted on other regions of memory.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -461,7 +462,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal17NRF52FlashManager12getFlashSizeEv">
-<span id="_CPPv3N5codal17NRF52FlashManager12getFlashSizeEv"></span><span id="_CPPv2N5codal17NRF52FlashManager12getFlashSizeEv"></span><span id="codal::NRF52FlashManager::getFlashSize"></span><span class="target" id="classcodal_1_1NRF52FlashManager_1a3db759685ab9719e2728626315a11984"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFlashSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal17NRF52FlashManager12getFlashSizeEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal17NRF52FlashManager12getFlashSizeEv"></span><span id="_CPPv2N5codal17NRF52FlashManager12getFlashSizeEv"></span><span id="codal::NRF52FlashManager::getFlashSize"></span><span class="target" id="classcodal_1_1NRF52FlashManager_1ad28d556399ae5f8b2425121941f65770"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFlashSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal17NRF52FlashManager12getFlashSizeEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines the amount of available storage.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -472,7 +473,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal17NRF52FlashManagerD0Ev">
-<span id="_CPPv3N5codal17NRF52FlashManagerD0Ev"></span><span id="_CPPv2N5codal17NRF52FlashManagerD0Ev"></span><span id="codal::NRF52FlashManager::~NRF52FlashManager"></span><span class="target" id="classcodal_1_1NRF52FlashManager_1a327e8120c662740f3d30eb42bf7aaf11"></span><span class="sig-name descname"><span class="n"><span class="pre">~NRF52FlashManager</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal17NRF52FlashManagerD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal17NRF52FlashManagerD0Ev"></span><span id="_CPPv2N5codal17NRF52FlashManagerD0Ev"></span><span id="codal::NRF52FlashManager::~NRF52FlashManager"></span><span class="target" id="classcodal_1_1NRF52FlashManager_1a0f43cdfe3185698d20762ec1fef9d08e"></span><span class="sig-name descname"><span class="n"><span class="pre">~NRF52FlashManager</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal17NRF52FlashManagerD0Ev" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Destructor. </p>
 </dd></dl>
 

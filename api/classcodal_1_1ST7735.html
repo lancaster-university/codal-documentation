@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class ST7735 &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class ST7735 &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -322,12 +323,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -390,7 +391,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6ST77354initEv">
-<span id="_CPPv3N5codal6ST77354initEv"></span><span id="_CPPv2N5codal6ST77354initEv"></span><span id="codal::ST7735::init"></span><span class="target" id="classcodal_1_1ST7735_1a2554231cd920b689320e0c1ed75461c7"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6ST77354initEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6ST77354initEv"></span><span id="_CPPv2N5codal6ST77354initEv"></span><span id="codal::ST7735::init"></span><span class="target" id="classcodal_1_1ST7735_1adc7ed5ead404cdb996a595547ea3c31b"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6ST77354initEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Implement this function to receive a function call after the devices’ device model has been instantiated. </p>
 </dd></dl>
 
@@ -428,7 +429,7 @@ title="Source repository"
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6ST77358setSleepEb">
-<span id="_CPPv3N5codal6ST77358setSleepEb"></span><span id="_CPPv2N5codal6ST77358setSleepEb"></span><span id="codal::ST7735::setSleep__b"></span><span class="target" id="classcodal_1_1ST7735_1ad1526f855b1168ee13a69626428c2f30"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSleep</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sleepMode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6ST77358setSleepEb" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6ST77358setSleepEb"></span><span id="_CPPv2N5codal6ST77358setSleepEb"></span><span id="codal::ST7735::setSleep__b"></span><span class="target" id="classcodal_1_1ST7735_1a1475373a68081bf6799f6004721afdc1"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSleep</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sleepMode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6ST77358setSleepEb" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Puts the display in (or out of) sleep mode. </p>
 </dd></dl>
 
@@ -515,7 +516,7 @@ title="Source repository"
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6ST77354workE">
-<span id="_CPPv3N5codal6ST77354workE"></span><span id="_CPPv2N5codal6ST77354workE"></span><span id="codal::ST7735::work__ST7735WorkBufferP"></span><span class="target" id="classcodal_1_1ST7735_1aa5d9c7002df8b0bafaddd6bf59393539"></span><a class="reference internal" href="structcodal_1_1ST7735WorkBuffer.html#_CPPv4N5codal16ST7735WorkBufferE" title="codal::ST7735WorkBuffer"><span class="n"><span class="pre">ST7735WorkBuffer</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">work</span></span></span><a class="headerlink" href="#_CPPv4N5codal6ST77354workE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6ST77354workE"></span><span id="_CPPv2N5codal6ST77354workE"></span><span id="codal::ST7735::work__ST7735WorkBufferP"></span><span class="target" id="classcodal_1_1ST7735_1aa5d9c7002df8b0bafaddd6bf59393539"></span><span class="n"><span class="pre">ST7735WorkBuffer</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">work</span></span></span><a class="headerlink" href="#_CPPv4N5codal6ST77354workE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
@@ -533,7 +534,7 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-static-functions">Protected Static Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6ST773514sendColorsStepEP6ST7735">
-<span id="_CPPv3N5codal6ST773514sendColorsStepEP6ST7735"></span><span id="_CPPv2N5codal6ST773514sendColorsStepEP6ST7735"></span><span id="codal::ST7735::sendColorsStep__ST7735P"></span><span class="target" id="classcodal_1_1ST7735_1ac6835a325689462ee7f96d3e5bd02dd6"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sendColorsStep</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5codal6ST7735E" title="codal::ST7735"><span class="n"><span class="pre">ST7735</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">st</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6ST773514sendColorsStepEP6ST7735" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6ST773514sendColorsStepEP6ST7735"></span><span id="_CPPv2N5codal6ST773514sendColorsStepEP6ST7735"></span><span id="codal::ST7735::sendColorsStep__ST7735P"></span><span class="target" id="classcodal_1_1ST7735_1a894071d2e7b089735680c8ba71c9c44a"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sendColorsStep</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5codal6ST7735E" title="codal::ST7735"><span class="n"><span class="pre">ST7735</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">st</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal6ST773514sendColorsStepEP6ST7735" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>

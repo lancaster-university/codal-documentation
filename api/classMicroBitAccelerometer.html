@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class MicroBitAccelerometer &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class MicroBitAccelerometer &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -317,12 +318,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -385,37 +386,20 @@ title="Source repository"
 <dt class="sig sig-object cpp" id="_CPPv4N21MicroBitAccelerometer9setPeriodEi">
 <span id="_CPPv3N21MicroBitAccelerometer9setPeriodEi"></span><span id="_CPPv2N21MicroBitAccelerometer9setPeriodEi"></span><span id="MicroBitAccelerometer::setPeriod__i"></span><span class="target" id="classMicroBitAccelerometer_1a759df79c8b19be97439d4bd6d05296f5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPeriod</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">period</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21MicroBitAccelerometer9setPeriodEi" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Attempts to set the sample rate of the accelerometer to the specified value (in ms).</p>
-<p>
-Attempts to set the sample rate of the accelerometer to the specified value (in ms).</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// sample rate is now 20 ms.</span>
-<span class="n">accelerometer</span><span class="p">.</span><span class="n">setPeriod</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span><span class="w"></span>
-</pre></div>
-</div>
-</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The requested rate may not be possible on the hardware. In this case, the nearest lower rate is chosen.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This method should be overriden (if supported) by specific accelerometer device drivers.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The requested rate may not be possible on the hardware. In this case, the nearest lower rate is chosen. </p>
+<p>This method should be overriden (if supported) by specific accelerometer device drivers. </p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>period</strong> – the requested time between samples, in milliseconds. </p></li>
-<li><p><strong>period</strong> – the requested time between samples, in milliseconds.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>period</strong> – the requested time between samples, in milliseconds. </p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>MICROBIT_OK on success, MICROBIT_I2C_ERROR is the request fails.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>MICROBIT_OK on success, MICROBIT_I2C_ERROR is the request fails.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -435,37 +419,20 @@ Attempts to set the sample rate of the accelerometer to the specified value (in 
 <dt class="sig sig-object cpp" id="_CPPv4N21MicroBitAccelerometer8setRangeEi">
 <span id="_CPPv3N21MicroBitAccelerometer8setRangeEi"></span><span id="_CPPv2N21MicroBitAccelerometer8setRangeEi"></span><span id="MicroBitAccelerometer::setRange__i"></span><span class="target" id="classMicroBitAccelerometer_1a99ed45986cdef648e3a87aa240c65e31"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRange</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">range</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21MicroBitAccelerometer8setRangeEi" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Attempts to set the sample range of the accelerometer to the specified value (in g).</p>
-<p>
-Attempts to set the sample range of the accelerometer to the specified value (in g).</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// the sample range of the accelerometer is now 8G.</span>
-<span class="n">accelerometer</span><span class="p">.</span><span class="n">setRange</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span><span class="w"></span>
-</pre></div>
-</div>
-</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The requested range may not be possible on the hardware. In this case, the nearest lower range is chosen.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This method should be overriden (if supported) by specific accelerometer device drivers.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The requested range may not be possible on the hardware. In this case, the nearest lower range is chosen. </p>
+<p>This method should be overriden (if supported) by specific accelerometer device drivers. </p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>range</strong> – The requested sample range of samples, in g.</p></li>
-<li><p><strong>range</strong> – The requested sample range of samples, in g.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>range</strong> – The requested sample range of samples, in g.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>MICROBIT_OK on success, MICROBIT_I2C_ERROR is the request fails.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>MICROBIT_OK on success, MICROBIT_I2C_ERROR is the request fails.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -540,14 +507,9 @@ Attempts to set the sample range of the accelerometer to the specified value (in
 <dt class="sig sig-object cpp" id="_CPPv4N21MicroBitAccelerometer4getXEv">
 <span id="_CPPv3N21MicroBitAccelerometer4getXEv"></span><span id="_CPPv2N21MicroBitAccelerometer4getXEv"></span><span id="MicroBitAccelerometer::getX"></span><span class="target" id="classMicroBitAccelerometer_1aeff4dcdbbc4cf7cc6d5c5d871114d3b2"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getX</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21MicroBitAccelerometer4getXEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>reads the value of the x axis from the latest update retrieved from the accelerometer, using the default coordinate system as specified in the constructor.</p>
-<p>
-reads the value of the x axis from the latest update retrieved from the accelerometer, usingthe default coordinate system as specified in the constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the force measured in the x axis, in milli-g.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the force measured in the x axis, in milli-g. </p>
+<dd class="field-odd"><p>the force measured in the x axis, in milli-g. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -556,14 +518,9 @@ reads the value of the x axis from the latest update retrieved from the accelero
 <dt class="sig sig-object cpp" id="_CPPv4N21MicroBitAccelerometer4getYEv">
 <span id="_CPPv3N21MicroBitAccelerometer4getYEv"></span><span id="_CPPv2N21MicroBitAccelerometer4getYEv"></span><span id="MicroBitAccelerometer::getY"></span><span class="target" id="classMicroBitAccelerometer_1a9eda45f816cf32fdf6bc748f1f56a366"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getY</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21MicroBitAccelerometer4getYEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>reads the value of the y axis from the latest update retrieved from the accelerometer, using the default coordinate system as specified in the constructor.</p>
-<p>
-reads the value of the y axis from the latest update retrieved from the accelerometer, usingthe default coordinate system as specified in the constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the force measured in the y axis, in milli-g.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the force measured in the y axis, in milli-g. </p>
+<dd class="field-odd"><p>the force measured in the y axis, in milli-g. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -572,14 +529,9 @@ reads the value of the y axis from the latest update retrieved from the accelero
 <dt class="sig sig-object cpp" id="_CPPv4N21MicroBitAccelerometer4getZEv">
 <span id="_CPPv3N21MicroBitAccelerometer4getZEv"></span><span id="_CPPv2N21MicroBitAccelerometer4getZEv"></span><span id="MicroBitAccelerometer::getZ"></span><span class="target" id="classMicroBitAccelerometer_1aadc3b0829109cc38680cfebdb8b3cf3d"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getZ</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21MicroBitAccelerometer4getZEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>reads the value of the z axis from the latest update retrieved from the accelerometer, using the default coordinate system as specified in the constructor.</p>
-<p>
-reads the value of the z axis from the latest update retrieved from the accelerometer, usingthe default coordinate system as specified in the constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the force measured in the z axis, in milli-g.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the force measured in the z axis, in milli-g. </p>
+<dd class="field-odd"><p>the force measured in the z axis, in milli-g. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -672,17 +624,11 @@ Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><spa
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N21MicroBitAccelerometer10autoDetectER11MicroBitI2C">
-<span id="_CPPv3N21MicroBitAccelerometer10autoDetectER11MicroBitI2C"></span><span id="_CPPv2N21MicroBitAccelerometer10autoDetectER11MicroBitI2C"></span><span id="MicroBitAccelerometer::autoDetect__MicroBitI2CR"></span><span class="target" id="classMicroBitAccelerometer_1ab2a0fe24d1f102617bbb82c505ec2dd6"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">Accelerometer</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">autoDetect</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">MicroBitI2C</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">i2c</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21MicroBitAccelerometer10autoDetectER11MicroBitI2C" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N21MicroBitAccelerometer10autoDetectER11MicroBitI2C"></span><span id="_CPPv2N21MicroBitAccelerometer10autoDetectER11MicroBitI2C"></span><span id="MicroBitAccelerometer::autoDetect__MicroBitI2CR"></span><span class="target" id="classMicroBitAccelerometer_1a900e93683a8f2edb424d3508b4caf1f4"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">Accelerometer</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">autoDetect</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">MicroBitI2C</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">i2c</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21MicroBitAccelerometer10autoDetectER11MicroBitI2C" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Device autodetection. Scans the given I2C bus for supported accelerometer devices. if found, constructs an appropriate driver and returns it.</p>
-<p>
-Device autodetection. Scans the given I2C bus for supported accelerometer devices. if found, constructs an appropriate driver and returns it.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>i2c</strong> – the bus to scan.</p></li>
-<li><p><strong>i2c</strong> – the bus to scan. </p></li>
-<li><p><strong>id</strong> – the unique EventModel id of this component. Defaults to: MICROBIT_ID_ACCELEROMETER </p></li>
-</ul>
+<dd class="field-odd"><p><strong>i2c</strong> – the bus to scan. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -692,7 +638,7 @@ Device autodetection. Scans the given I2C bus for supported accelerometer device
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-attributes">Public Static Attributes</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N21MicroBitAccelerometer6driverE">
-<span id="_CPPv3N21MicroBitAccelerometer6driverE"></span><span id="_CPPv2N21MicroBitAccelerometer6driverE"></span><span id="MicroBitAccelerometer::driver__AccelerometerP"></span><span class="target" id="classMicroBitAccelerometer_1a9eb457c91f6714c20b2fecc5c5f1087e"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">Accelerometer</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">driver</span></span></span><a class="headerlink" href="#_CPPv4N21MicroBitAccelerometer6driverE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N21MicroBitAccelerometer6driverE"></span><span id="_CPPv2N21MicroBitAccelerometer6driverE"></span><span id="MicroBitAccelerometer::driver__AccelerometerP"></span><span class="target" id="classMicroBitAccelerometer_1a258985d7dd678113f66daaadc67df2e5"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">Accelerometer</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">driver</span></span></span><a class="headerlink" href="#_CPPv4N21MicroBitAccelerometer6driverE" title="Permalink to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">

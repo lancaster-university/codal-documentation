@@ -228,6 +228,8 @@ Program Listing for File MicroBitPowerManager.h
    
            void deepSleep(uint32_t milliSeconds);
    
+           bool deepSleep(uint32_t milliSeconds, bool interruptable );
+   
            void deepSleepAsync();
    
            void powerDownEnable();

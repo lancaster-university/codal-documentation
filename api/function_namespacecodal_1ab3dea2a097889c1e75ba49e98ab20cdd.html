@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Function codal::system_timer_event_every_us &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Function codal::system_timer_event_every_us &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,7 +282,7 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#function-documentation">
    Function Documentation
@@ -305,7 +306,7 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#function-documentation">
    Function Documentation
@@ -332,24 +333,16 @@ title="Source repository"
 <dt class="sig sig-object cpp" id="_CPPv4N5codal27system_timer_event_every_usE15CODAL_TIMESTAMP8uint16_t8uint16_t8uint32_t">
 <span id="_CPPv3N5codal27system_timer_event_every_usE15CODAL_TIMESTAMP8uint16_t8uint16_t8uint32_t"></span><span id="_CPPv2N5codal27system_timer_event_every_usE15CODAL_TIMESTAMP8uint16_t8uint16_t8uint32_t"></span><span id="codal::system_timer_event_every_us__CODAL_TIMESTAMP.uint16_t.uint16_t.uint32_t"></span><span class="target" id="namespacecodal_1ab3dea2a097889c1e75ba49e98ab20cdd"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">system_timer_event_every_us</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">CODAL_TIMESTAMP</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">period</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flags</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal27system_timer_event_every_usE15CODAL_TIMESTAMP8uint16_t8uint16_t8uint32_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Configure an event to occur every given number of microseconds.</p>
-<p>
-Configure an event to occur every period us.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>period</strong> – the interval between events</p></li>
 <li><p><strong>the</strong> – value to fire against the current system_timer id.</p></li>
 <li><p><strong>flags</strong> – CODAL_TIMER_EVENT_FLAGS_WAKEUP for event to trigger deep sleep wake-up.</p></li>
-<li><p><strong>period</strong> – the interval between events</p></li>
-<li><p><strong>the</strong> – value to fire against the current system_timer id.</p></li>
-<li><p><strong>flags</strong> – CODAL_TIMER_EVENT_FLAGS_WAKEUP for event to trigger deep sleep wake-up.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK or DEVICE_NOT_SUPPORTED if no timer has been registered.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK or DEVICE_NOT_SUPPORTED if no timer has been registered. </p>
+<dd class="field-even"><p>DEVICE_OK or DEVICE_NOT_SUPPORTED if no timer has been registered. </p>
 </dd>
 </dl>
 </dd></dl>

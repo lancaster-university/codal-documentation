@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Class Accelerometer &#8212; CODAL v0.2.40-1-gb587d9c documentation</title>
+    <title>Class Accelerometer &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,7 +74,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">CODAL v0.2.40-1-gb587d9c documentation</h1>
+      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -96,8 +97,8 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../components/index.html">
-   Components
+  <a class="reference internal" href="../ubit/index.html">
+   The uBit Object
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -106,27 +107,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../components/display.html">
+    <a class="reference internal" href="../ubit/display.html">
      Display
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/mic-and-speaker.html">
+    <a class="reference internal" href="../ubit/buttons.html">
+     Buttons and Touch Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubit/mic-and-speaker.html">
      Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/edge-connector.html">
+    <a class="reference internal" href="../ubit/edge-connector.html">
      Edge Connector
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../components/sensors.html">
+    <a class="reference internal" href="../ubit/sensors.html">
      Sensors
     </a>
    </li>
@@ -281,12 +282,12 @@ title="Source repository"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+        <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -322,12 +323,12 @@ title="Source repository"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
+                            <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inheritance-relationships">
    Inheritance Relationships
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#base-type">
      Base Type
@@ -391,17 +392,13 @@ title="Source repository"
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13Accelerometer13AccelerometerER15CoordinateSpace8uint16_t">
-<span id="_CPPv3N5codal13Accelerometer13AccelerometerER15CoordinateSpace8uint16_t"></span><span id="_CPPv2N5codal13Accelerometer13AccelerometerER15CoordinateSpace8uint16_t"></span><span id="codal::Accelerometer::Accelerometer__CoordinateSpaceR.uint16_t"></span><span class="target" id="classcodal_1_1Accelerometer_1acc9c774c305c8c9a2dcfc5709661cbf0"></span><span class="sig-name descname"><span class="n"><span class="pre">Accelerometer</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1CoordinateSpace.html#_CPPv4N5codal15CoordinateSpaceE" title="codal::CoordinateSpace"><span class="n"><span class="pre">CoordinateSpace</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">coordinateSpace</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_ACCELEROMETER</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer13AccelerometerER15CoordinateSpace8uint16_t" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13Accelerometer13AccelerometerER15CoordinateSpace8uint16_t"></span><span id="_CPPv2N5codal13Accelerometer13AccelerometerER15CoordinateSpace8uint16_t"></span><span id="codal::Accelerometer::Accelerometer__CoordinateSpaceR.uint16_t"></span><span class="target" id="classcodal_1_1Accelerometer_1ae3dca6c8f25d43d4b3af164f3ff0ba61"></span><span class="sig-name descname"><span class="n"><span class="pre">Accelerometer</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1CoordinateSpace.html#_CPPv4N5codal15CoordinateSpaceE" title="codal::CoordinateSpace"><span class="n"><span class="pre">CoordinateSpace</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">coordinateSpace</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DEVICE_ID_ACCELEROMETER</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer13AccelerometerER15CoordinateSpace8uint16_t" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Constructor. Create a software abstraction of an accelerometer.</p>
-<p>
-Constructor. Create a software abstraction of an FXSO8700 combined accelerometer/magnetometer</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>coordinateSpace</strong> – the orientation of the sensor. Defaults to: SIMPLE_CARTESIAN </p></li>
-<li><p><strong>id</strong> – the unique <a class="reference internal" href="classcodal_1_1EventModel.html#classcodal_1_1EventModel"><span class="std std-ref">EventModel</span></a> id of this component. Defaults to: DEVICE_ID_ACCELEROMETER</p></li>
-<li><p><strong>_i2c</strong> – an instance of <a class="reference internal" href="classcodal_1_1I2C.html#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> used to communicate with the device.</p></li>
-<li><p><strong>address</strong> – the default <a class="reference internal" href="classcodal_1_1I2C.html#classcodal_1_1I2C"><span class="std std-ref">I2C</span></a> address of the accelerometer. Defaults to: FXS8700_DEFAULT_ADDR. </p></li>
+<li><p><strong>id</strong> – the unique <a class="reference internal" href="classcodal_1_1EventModel.html#classcodal_1_1EventModel"><span class="std std-ref">EventModel</span></a> id of this component. Defaults to: DEVICE_ID_ACCELEROMETER </p></li>
 </ul>
 </dd>
 </dl>
@@ -409,46 +406,29 @@ Constructor. Create a software abstraction of an FXSO8700 combined accelerometer
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13Accelerometer9setPeriodEi">
-<span id="_CPPv3N5codal13Accelerometer9setPeriodEi"></span><span id="_CPPv2N5codal13Accelerometer9setPeriodEi"></span><span id="codal::Accelerometer::setPeriod__i"></span><span class="target" id="classcodal_1_1Accelerometer_1a5c9b755116effbede06ad229a11ebd6a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPeriod</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">period</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer9setPeriodEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13Accelerometer9setPeriodEi"></span><span id="_CPPv2N5codal13Accelerometer9setPeriodEi"></span><span id="codal::Accelerometer::setPeriod__i"></span><span class="target" id="classcodal_1_1Accelerometer_1afd57e5747f03dd0079466fdde395d9f7"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPeriod</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">period</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer9setPeriodEi" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Attempts to set the sample rate of the accelerometer to the specified value (in ms).</p>
-<p>
-Attempts to set the sample rate of the accelerometer to the specified value (in ms).</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// sample rate is now 20 ms.</span>
-<span class="n">accelerometer</span><span class="p">.</span><span class="n">setPeriod</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span><span class="w"></span>
-</pre></div>
-</div>
-</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The requested rate may not be possible on the hardware. In this case, the nearest lower rate is chosen.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This method should be overriden (if supported) by specific accelerometer device drivers.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The requested rate may not be possible on the hardware. In this case, the nearest lower rate is chosen. </p>
+<p>This method should be overriden (if supported) by specific accelerometer device drivers. </p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>period</strong> – the requested time between samples, in milliseconds. </p></li>
-<li><p><strong>period</strong> – the requested time between samples, in milliseconds.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>period</strong> – the requested time between samples, in milliseconds. </p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>DEVICE_OK on success, DEVICE_I2C_ERROR is the request fails.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success, DEVICE_I2C_ERROR is the request fails.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13Accelerometer9getPeriodEv">
-<span id="_CPPv3N5codal13Accelerometer9getPeriodEv"></span><span id="_CPPv2N5codal13Accelerometer9getPeriodEv"></span><span id="codal::Accelerometer::getPeriod"></span><span class="target" id="classcodal_1_1Accelerometer_1a5a0c10457793b8f9d0b672d4f5d60b16"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPeriod</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer9getPeriodEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13Accelerometer9getPeriodEv"></span><span id="_CPPv2N5codal13Accelerometer9getPeriodEv"></span><span id="codal::Accelerometer::getPeriod"></span><span class="target" id="classcodal_1_1Accelerometer_1a547d3bc8d27b9f1301ad3147bda4e438"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPeriod</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer9getPeriodEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Reads the currently configured sample rate of the accelerometer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -459,46 +439,29 @@ Attempts to set the sample rate of the accelerometer to the specified value (in 
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13Accelerometer8setRangeEi">
-<span id="_CPPv3N5codal13Accelerometer8setRangeEi"></span><span id="_CPPv2N5codal13Accelerometer8setRangeEi"></span><span id="codal::Accelerometer::setRange__i"></span><span class="target" id="classcodal_1_1Accelerometer_1ae38553530d59fa58757f85026900e6d8"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRange</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">range</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer8setRangeEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13Accelerometer8setRangeEi"></span><span id="_CPPv2N5codal13Accelerometer8setRangeEi"></span><span id="codal::Accelerometer::setRange__i"></span><span class="target" id="classcodal_1_1Accelerometer_1a95ee78fea332f09c84f161e9cf5bd3bb"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRange</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">range</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer8setRangeEi" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Attempts to set the sample range of the accelerometer to the specified value (in g).</p>
-<p>
-Attempts to set the sample range of the accelerometer to the specified value (in g).</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// the sample range of the accelerometer is now 8G.</span>
-<span class="n">accelerometer</span><span class="p">.</span><span class="n">setRange</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span><span class="w"></span>
-</pre></div>
-</div>
-</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The requested range may not be possible on the hardware. In this case, the nearest lower range is chosen.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This method should be overriden (if supported) by specific accelerometer device drivers.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The requested range may not be possible on the hardware. In this case, the nearest lower range is chosen. </p>
+<p>This method should be overriden (if supported) by specific accelerometer device drivers. </p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>range</strong> – The requested sample range of samples, in g.</p></li>
-<li><p><strong>range</strong> – The requested sample range of samples, in g.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>range</strong> – The requested sample range of samples, in g.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>DEVICE_OK on success, DEVICE_I2C_ERROR is the request fails.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>DEVICE_OK on success, DEVICE_I2C_ERROR is the request fails.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13Accelerometer8getRangeEv">
-<span id="_CPPv3N5codal13Accelerometer8getRangeEv"></span><span id="_CPPv2N5codal13Accelerometer8getRangeEv"></span><span id="codal::Accelerometer::getRange"></span><span class="target" id="classcodal_1_1Accelerometer_1ad3c18c717413ecb2de6e99c5f76cc25f"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRange</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer8getRangeEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13Accelerometer8getRangeEv"></span><span id="_CPPv2N5codal13Accelerometer8getRangeEv"></span><span id="codal::Accelerometer::getRange"></span><span class="target" id="classcodal_1_1Accelerometer_1a0fc7da6028da2523fc5d5f6c65506dd1"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRange</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer8getRangeEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Reads the currently configured sample range of the accelerometer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -509,7 +472,7 @@ Attempts to set the sample range of the accelerometer to the specified value (in
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13Accelerometer9configureEv">
-<span id="_CPPv3N5codal13Accelerometer9configureEv"></span><span id="_CPPv2N5codal13Accelerometer9configureEv"></span><span id="codal::Accelerometer::configure"></span><span class="target" id="classcodal_1_1Accelerometer_1ac15d8a41959f3021141b493039a18374"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configure</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer9configureEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13Accelerometer9configureEv"></span><span id="_CPPv2N5codal13Accelerometer9configureEv"></span><span id="codal::Accelerometer::configure"></span><span class="target" id="classcodal_1_1Accelerometer_1a1df7a935c18d967bb9346beb9f6bf0aa"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configure</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer9configureEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Configures the accelerometer for G range and sample rate defined in this object. The nearest values are chosen to those defined that are supported by the hardware. The instance variables are then updated to reflect reality.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -524,7 +487,7 @@ Attempts to set the sample range of the accelerometer to the specified value (in
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13Accelerometer13requestUpdateEv">
-<span id="_CPPv3N5codal13Accelerometer13requestUpdateEv"></span><span id="_CPPv2N5codal13Accelerometer13requestUpdateEv"></span><span id="codal::Accelerometer::requestUpdate"></span><span class="target" id="classcodal_1_1Accelerometer_1ae3bc8bcddb9dc7767b5c068ff46e4f32"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestUpdate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer13requestUpdateEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13Accelerometer13requestUpdateEv"></span><span id="_CPPv2N5codal13Accelerometer13requestUpdateEv"></span><span id="codal::Accelerometer::requestUpdate"></span><span class="target" id="classcodal_1_1Accelerometer_1a890a61c92ac3bd965ed8d9989ddd6813"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requestUpdate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer13requestUpdateEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Poll to see if new data is available from the hardware. If so, update it. n.b. it is not necessary to explicitly call this function to update data (it normally happens in the background when the scheduler is idle), but a check is performed if the user explicitly requests up to date data.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -539,7 +502,7 @@ Attempts to set the sample range of the accelerometer to the specified value (in
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13Accelerometer6updateEv">
-<span id="_CPPv3N5codal13Accelerometer6updateEv"></span><span id="_CPPv2N5codal13Accelerometer6updateEv"></span><span id="codal::Accelerometer::update"></span><span class="target" id="classcodal_1_1Accelerometer_1ad4a4011cc615734250a386e3ebe4cb4f"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer6updateEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13Accelerometer6updateEv"></span><span id="_CPPv2N5codal13Accelerometer6updateEv"></span><span id="codal::Accelerometer::update"></span><span class="target" id="classcodal_1_1Accelerometer_1ab8d0ec601de3bb9afc86f7d47a5cc003"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer6updateEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Stores data from the accelerometer sensor in our buffer, and perform gesture tracking.</p>
 <p>On first use, this member function will attempt to add this component to the list of fiber components in order to constantly update the values stored by this object.</p>
 <p>This lazy instantiation means that we do not obtain the overhead from non-chalantly adding this component to fiber components.</p>
@@ -552,7 +515,7 @@ Attempts to set the sample range of the accelerometer to the specified value (in
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13Accelerometer9getSampleE16CoordinateSystem">
-<span id="_CPPv3N5codal13Accelerometer9getSampleE16CoordinateSystem"></span><span id="_CPPv2N5codal13Accelerometer9getSampleE16CoordinateSystem"></span><span id="codal::Accelerometer::getSample__CoordinateSystem"></span><span class="target" id="classcodal_1_1Accelerometer_1ae928dfe78e0020f51a745a8f371895e1"></span><a class="reference internal" href="structcodal_1_1Sample3D.html#_CPPv4N5codal8Sample3DE" title="codal::Sample3D"><span class="n"><span class="pre">Sample3D</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSample</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enum_namespacecodal_1ab60ee69ed382592e3346140d07480ac6.html#_CPPv4N5codal16CoordinateSystemE" title="codal::CoordinateSystem"><span class="n"><span class="pre">CoordinateSystem</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">coordinateSystem</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer9getSampleE16CoordinateSystem" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13Accelerometer9getSampleE16CoordinateSystem"></span><span id="_CPPv2N5codal13Accelerometer9getSampleE16CoordinateSystem"></span><span id="codal::Accelerometer::getSample__CoordinateSystem"></span><span class="target" id="classcodal_1_1Accelerometer_1a5edbb4d08712ed5573a9b164a1a9620e"></span><a class="reference internal" href="structcodal_1_1Sample3D.html#_CPPv4N5codal8Sample3DE" title="codal::Sample3D"><span class="n"><span class="pre">Sample3D</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSample</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enum_namespacecodal_1ab60ee69ed382592e3346140d07480ac6.html#_CPPv4N5codal16CoordinateSystemE" title="codal::CoordinateSystem"><span class="n"><span class="pre">CoordinateSystem</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">coordinateSystem</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer9getSampleE16CoordinateSystem" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Reads the last accelerometer value stored, and provides it in the coordinate system requested.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -566,7 +529,7 @@ Attempts to set the sample range of the accelerometer to the specified value (in
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13Accelerometer9getSampleEv">
-<span id="_CPPv3N5codal13Accelerometer9getSampleEv"></span><span id="_CPPv2N5codal13Accelerometer9getSampleEv"></span><span id="codal::Accelerometer::getSample"></span><span class="target" id="classcodal_1_1Accelerometer_1abc2af92c8153b63ac0d505bd017e8935"></span><a class="reference internal" href="structcodal_1_1Sample3D.html#_CPPv4N5codal8Sample3DE" title="codal::Sample3D"><span class="n"><span class="pre">Sample3D</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSample</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer9getSampleEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13Accelerometer9getSampleEv"></span><span id="_CPPv2N5codal13Accelerometer9getSampleEv"></span><span id="codal::Accelerometer::getSample"></span><span class="target" id="classcodal_1_1Accelerometer_1a91d5b6684ac83739bca19d0a1ebef0e7"></span><a class="reference internal" href="structcodal_1_1Sample3D.html#_CPPv4N5codal8Sample3DE" title="codal::Sample3D"><span class="n"><span class="pre">Sample3D</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSample</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer9getSampleEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Reads the last accelerometer value stored, and in the coordinate system defined in the constructor. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -577,55 +540,40 @@ Attempts to set the sample range of the accelerometer to the specified value (in
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13Accelerometer4getXEv">
-<span id="_CPPv3N5codal13Accelerometer4getXEv"></span><span id="_CPPv2N5codal13Accelerometer4getXEv"></span><span id="codal::Accelerometer::getX"></span><span class="target" id="classcodal_1_1Accelerometer_1a8da819cb41b7f24dff9efcaa3781a070"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getX</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer4getXEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13Accelerometer4getXEv"></span><span id="_CPPv2N5codal13Accelerometer4getXEv"></span><span id="codal::Accelerometer::getX"></span><span class="target" id="classcodal_1_1Accelerometer_1ab456e3067dedba6d02f0b8e767923c77"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getX</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer4getXEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>reads the value of the x axis from the latest update retrieved from the accelerometer, using the default coordinate system as specified in the constructor.</p>
-<p>
-reads the value of the x axis from the latest update retrieved from the accelerometer, usingthe default coordinate system as specified in the constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the force measured in the x axis, in milli-g.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the force measured in the x axis, in milli-g. </p>
+<dd class="field-odd"><p>the force measured in the x axis, in milli-g. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13Accelerometer4getYEv">
-<span id="_CPPv3N5codal13Accelerometer4getYEv"></span><span id="_CPPv2N5codal13Accelerometer4getYEv"></span><span id="codal::Accelerometer::getY"></span><span class="target" id="classcodal_1_1Accelerometer_1a937a645700053b39d0cd6345c7624ef6"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getY</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer4getYEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13Accelerometer4getYEv"></span><span id="_CPPv2N5codal13Accelerometer4getYEv"></span><span id="codal::Accelerometer::getY"></span><span class="target" id="classcodal_1_1Accelerometer_1afe304286f69a261c0429bc75442c4dfb"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getY</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer4getYEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>reads the value of the y axis from the latest update retrieved from the accelerometer, using the default coordinate system as specified in the constructor.</p>
-<p>
-reads the value of the y axis from the latest update retrieved from the accelerometer, usingthe default coordinate system as specified in the constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the force measured in the y axis, in milli-g.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the force measured in the y axis, in milli-g. </p>
+<dd class="field-odd"><p>the force measured in the y axis, in milli-g. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13Accelerometer4getZEv">
-<span id="_CPPv3N5codal13Accelerometer4getZEv"></span><span id="_CPPv2N5codal13Accelerometer4getZEv"></span><span id="codal::Accelerometer::getZ"></span><span class="target" id="classcodal_1_1Accelerometer_1acc240e7ab2293492ede70953d921fd69"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getZ</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer4getZEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13Accelerometer4getZEv"></span><span id="_CPPv2N5codal13Accelerometer4getZEv"></span><span id="codal::Accelerometer::getZ"></span><span class="target" id="classcodal_1_1Accelerometer_1ac5e7687e99e854a5b67d58ec82dc9e0e"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getZ</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer4getZEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>reads the value of the z axis from the latest update retrieved from the accelerometer, using the default coordinate system as specified in the constructor.</p>
-<p>
-reads the value of the z axis from the latest update retrieved from the accelerometer, usingthe default coordinate system as specified in the constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the force measured in the z axis, in milli-g.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the force measured in the z axis, in milli-g. </p>
+<dd class="field-odd"><p>the force measured in the z axis, in milli-g. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13Accelerometer8getPitchEv">
-<span id="_CPPv3N5codal13Accelerometer8getPitchEv"></span><span id="_CPPv2N5codal13Accelerometer8getPitchEv"></span><span id="codal::Accelerometer::getPitch"></span><span class="target" id="classcodal_1_1Accelerometer_1aa46097f8a95b8b53fe43db407bde0357"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPitch</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer8getPitchEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13Accelerometer8getPitchEv"></span><span id="_CPPv2N5codal13Accelerometer8getPitchEv"></span><span id="codal::Accelerometer::getPitch"></span><span class="target" id="classcodal_1_1Accelerometer_1a400256f8ae694a41fdac5af39aff75f3"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPitch</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer8getPitchEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Provides a rotation compensated pitch of the device, based on the latest update retrieved from the accelerometer.</p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">accelerometer</span><span class="p">.</span><span class="n">getPitch</span><span class="p">();</span><span class="w"></span>
 </pre></div>
@@ -640,7 +588,7 @@ reads the value of the z axis from the latest update retrieved from the accelero
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13Accelerometer15getPitchRadiansEv">
-<span id="_CPPv3N5codal13Accelerometer15getPitchRadiansEv"></span><span id="_CPPv2N5codal13Accelerometer15getPitchRadiansEv"></span><span id="codal::Accelerometer::getPitchRadians"></span><span class="target" id="classcodal_1_1Accelerometer_1ab0da2bcf717a0836e9c125f720eb19db"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPitchRadians</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer15getPitchRadiansEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13Accelerometer15getPitchRadiansEv"></span><span id="_CPPv2N5codal13Accelerometer15getPitchRadiansEv"></span><span id="codal::Accelerometer::getPitchRadians"></span><span class="target" id="classcodal_1_1Accelerometer_1ae90f30f01618ac1c377849e1414fc8d1"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPitchRadians</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer15getPitchRadiansEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Provides a rotation compensated pitch of the device, based on the latest update retrieved from the accelerometer.</p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">accelerometer</span><span class="p">.</span><span class="n">getPitchRadians</span><span class="p">();</span><span class="w"></span>
 </pre></div>
@@ -655,7 +603,7 @@ reads the value of the z axis from the latest update retrieved from the accelero
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13Accelerometer7getRollEv">
-<span id="_CPPv3N5codal13Accelerometer7getRollEv"></span><span id="_CPPv2N5codal13Accelerometer7getRollEv"></span><span id="codal::Accelerometer::getRoll"></span><span class="target" id="classcodal_1_1Accelerometer_1ad82fbb34782b89b8aed602d750edc72c"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRoll</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer7getRollEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13Accelerometer7getRollEv"></span><span id="_CPPv2N5codal13Accelerometer7getRollEv"></span><span id="codal::Accelerometer::getRoll"></span><span class="target" id="classcodal_1_1Accelerometer_1a254fffc2c4b5d363102c3d4307ccec32"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRoll</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer7getRollEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Provides a rotation compensated roll of the device, based on the latest update retrieved from the accelerometer.</p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">accelerometer</span><span class="p">.</span><span class="n">getRoll</span><span class="p">();</span><span class="w"></span>
 </pre></div>
@@ -670,7 +618,7 @@ reads the value of the z axis from the latest update retrieved from the accelero
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13Accelerometer14getRollRadiansEv">
-<span id="_CPPv3N5codal13Accelerometer14getRollRadiansEv"></span><span id="_CPPv2N5codal13Accelerometer14getRollRadiansEv"></span><span id="codal::Accelerometer::getRollRadians"></span><span class="target" id="classcodal_1_1Accelerometer_1ac91acd828626acdad37f41e4cc73c337"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRollRadians</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer14getRollRadiansEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13Accelerometer14getRollRadiansEv"></span><span id="_CPPv2N5codal13Accelerometer14getRollRadiansEv"></span><span id="codal::Accelerometer::getRollRadians"></span><span class="target" id="classcodal_1_1Accelerometer_1ad6e3a296d9ebd69c62879d39b2c464f8"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRollRadians</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer14getRollRadiansEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Provides a rotation compensated roll of the device, based on the latest update retrieved from the accelerometer.</p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">accelerometer</span><span class="p">.</span><span class="n">getRollRadians</span><span class="p">();</span><span class="w"></span>
 </pre></div>
@@ -685,7 +633,7 @@ reads the value of the z axis from the latest update retrieved from the accelero
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13Accelerometer10getGestureEv">
-<span id="_CPPv3N5codal13Accelerometer10getGestureEv"></span><span id="_CPPv2N5codal13Accelerometer10getGestureEv"></span><span id="codal::Accelerometer::getGesture"></span><span class="target" id="classcodal_1_1Accelerometer_1a8f05e06c7229621867809aed98b838c7"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getGesture</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer10getGestureEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal13Accelerometer10getGestureEv"></span><span id="_CPPv2N5codal13Accelerometer10getGestureEv"></span><span id="codal::Accelerometer::getGesture"></span><span class="target" id="classcodal_1_1Accelerometer_1ad179d8e6e4beb072c16983c1b081aff4"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getGesture</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13Accelerometer10getGestureEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Retrieves the last recorded gesture.</p>
 <p>
 Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">accelerometer</span><span class="p">.</span><span class="n">getGesture</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">SHAKE</span><span class="p">)</span><span class="w"></span>
@@ -702,9 +650,8 @@ Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><spa
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal13AccelerometerD0Ev">
-<span id="_CPPv3N5codal13AccelerometerD0Ev"></span><span id="_CPPv2N5codal13AccelerometerD0Ev"></span><span id="codal::Accelerometer::~Accelerometer"></span><span class="target" id="classcodal_1_1Accelerometer_1acb6a7d9c61f2084ec4aec4a8ff35d622"></span><span class="sig-name descname"><span class="n"><span class="pre">~Accelerometer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13AccelerometerD0Ev" title="Permalink to this definition">#</a><br /></dt>
-<dd><p>Destructor.</p>
-<p>Destructor for FXS8700, where we deregister from the array of fiber components. </p>
+<span id="_CPPv3N5codal13AccelerometerD0Ev"></span><span id="_CPPv2N5codal13AccelerometerD0Ev"></span><span id="codal::Accelerometer::~Accelerometer"></span><span class="target" id="classcodal_1_1Accelerometer_1af25b475629f78651890eca54bb2587a1"></span><span class="sig-name descname"><span class="n"><span class="pre">~Accelerometer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal13AccelerometerD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Destructor. </p>
 </dd></dl>
 
 </div>
