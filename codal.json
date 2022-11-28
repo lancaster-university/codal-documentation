@@ -8,5 +8,15 @@
         "type": "git",
         "test_ignore": true,
         "dev": true
+    },
+    "config":{
+        "DEVICE_DMESG": 1,
+        "DMESG_SERIAL_DEBUG": 1,
+        "CODAL_DEBUG": 1,
+        "NO_BLE": 1,
+        "SOFTDEVICE_PRESENT": 1,
+        "MICROBIT_BLE_ENABLED" : 0,
+        "MICROBIT_BLE_PAIRING_MODE": 0,
+        "CONFIG_MICROBIT_ERASE_USER_DATA_ON_REFLASH": 1
     }
 }

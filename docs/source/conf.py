@@ -22,7 +22,7 @@ def genInputString( libraries ):
     buffer = []
     for lib in libraries:
         buffer.append( F"\"{os.path.join( '..', '..', 'libraries', lib, 'inc' )}\"" )
-        buffer.append( F"\"{os.path.join( '..', '..', 'libraries', lib, 'source' )}\"" ) # This will complain if we have duplicated documentation!
+        #buffer.append( F"\"{os.path.join( '..', '..', 'libraries', lib, 'source' )}\"" ) # This will complain if we have duplicated documentation!
     return ' '.join(buffer)
 
 def getGitVersion( library ):
@@ -43,6 +43,8 @@ author = 'Microbit Foundation, Lancaster University'
 
 # The full version, including alpha/beta/rc tags
 release = getGitVersion( 'codal-microbit-v2' )
+
+html_title = F'{project} {release}'
 
 
 # -- General configuration ---------------------------------------------------
@@ -110,7 +112,7 @@ html_theme_options = {
     "repository_url": "https://github.com/lancaster-university/codal-documentation",
     "use_repository_button": True,
     "home_page_in_toc": True,
-    "show_toc_level": 4,
+    "show_toc_level": 0,
     "use_download_button": False
 }
 
@@ -122,3 +124,7 @@ html_sidebars = {
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = [ 'static' ]
+
+html_css_files = [
+    'theme_mods.css',
+]

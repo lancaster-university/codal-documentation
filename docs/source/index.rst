@@ -12,9 +12,10 @@ This some of this content is generated from the source code directly, so may dev
    :maxdepth: 2
 
    getting-started
-   components/index
+   ubit/index
    guides/index
    projects/index
    codal-api
+   libraries/index
 
    :ref:`genindex`
