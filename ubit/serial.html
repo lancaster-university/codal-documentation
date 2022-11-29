@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Microphone and Speaker &#8212; CODAL v0.2.44</title>
+    <title>uBit.serial &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -36,8 +36,8 @@
     <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Edge Connector" href="edge-connector.html" />
-    <link rel="prev" title="Buttons and Touch Input" href="buttons.html" />
+    <link rel="next" title="uBit.storage" href="storage.html" />
+    <link rel="prev" title="uBit.display" href="display.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -57,7 +57,7 @@
     <div class="visually-hidden">Toggle in-page Table of Contents</div>
 </label>
 <!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
+<div class="announcement header-item noprint">We're currently porting the DAL documentation over to CODAL. The information on here may be outdated or incorrect!</div>
 <div class="header header-item noprint"></div>
 
     
@@ -109,18 +109,8 @@
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="display.html">
-     Display
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="buttons.html">
      Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
@@ -129,8 +119,38 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="sensors.html">
-     Sensors
+    <a class="reference internal" href="accelerometer.html">
+     uBit.accelerometer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="audio.html">
+     uBit.audio
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="compass.html">
+     uBit.compass
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="display.html">
+     uBit.display
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     uBit.serial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="storage.html">
+     uBit.storage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thermometer.html">
+     uBit.thermometer
     </a>
    </li>
   </ul>
@@ -263,23 +283,70 @@ title="Source repository"
   </span>
 
 </a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#serial-modes">
+   Serial Modes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#serial-debug">
+   Serial Debug
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Microphone and Speaker</h1>
+                <h1>uBit.serial</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#serial-modes">
+   Serial Modes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#serial-debug">
+   Serial Debug
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -287,9 +354,46 @@ title="Source repository"
                 
               <div>
                 
-  <section id="microphone-and-speaker">
-<h1>Microphone and Speaker<a class="headerlink" href="#microphone-and-speaker" title="Permalink to this headline">#</a></h1>
-<p>ToDo</p>
+  <section id="ubit-serial">
+<h1>uBit.serial<a class="headerlink" href="#ubit-serial" title="Permalink to this headline">#</a></h1>
+<p>Serial communication provides a simple way to exchange a series of bytes between one computer and another.  The runtime’s implementation of serial is general purpose and supports a number of different modes. It has a circular buffer for both the reception and transmission of data, and provides notifications to the user through the MessageBus.</p>
+<p>By default, the baud rate for MicroBitSerial is <cite>115200</cite> and has very little overhead up until
+it is used to <cite>send()</cite> or <cite>read()</cite>, at which point buffers are allocated in order
+to accommodate incoming or outgoing data.</p>
+<p>MicroBitSerial inherits from mbeds’ [<cite>RawSerial</cite>](<a class="reference external" href="https://developer.mbed.org/users/mbed_official/code/mbed/docs/252557024ec3/classmbed_1_1RawSerial.html">https://developer.mbed.org/users/mbed_official/code/mbed/docs/252557024ec3/classmbed_1_1RawSerial.html</a>)
+class, which exposes a lightweight version of <cite>printf()</cite> and incurs minimal overhead
+as MicroBitSerial’s buffers will not be allocated.</p>
+<p>The MicroBitSerial class supports multithreaded operation, ensuring that only
+one fiber can access the Serial port at a time.</p>
+<p>The USB interface on the micro:bit is the [KL26Z](https://www.mbed.com/en/development/hardware/prototyping-production/daplink/daplink-on-kl26z/#Updating_your_DAPLink_firmware).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On Mac OSX and Linux Serial communication works out of the box, however on Windows an additional
+<strong>[driver](https://developer.mbed.org/handbook/Windows-serial-configuration)</strong> is required.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The baud rate is shared across all instances of MicroBitSerial (this is enforced in hardware).</p>
+</div>
+<section id="serial-modes">
+<h2>Serial Modes<a class="headerlink" href="#serial-modes" title="Permalink to this headline">#</a></h2>
+<p>There are three modes of operation for all <cite>send()</cite> or <cite>read()</cite> calls:</p>
+<dl class="simple">
+<dt>ASYNC</dt><dd><p>Returns immediately after fetching any available data for a given call</p>
+</dd>
+<dt>SYNC_SPINWAIT</dt><dd><p>Synchronously access the serial port until the selected operation is complete.
+This mode will lock up the processor, and isn’t recommended if multiple fibers are in use.</p>
+</dd>
+<dt>SYNC_SLEEP</dt><dd><p>Blocks the current fiber until the selected operation is complete. This mode cooperates with the
+Fiber scheduler, and should be used in a multi-fiber program.</p>
+</dd>
+</dl>
+</section>
+<section id="serial-debug">
+<h2>Serial Debug<a class="headerlink" href="#serial-debug" title="Permalink to this headline">#</a></h2>
+<p>In MicroBitConfig.h, the configuration option <cite>MICROBIT_DEBUG</cite> can be used to activate serial debugging
+for many of the components in the runtime.</p>
+</section>
 </section>
 
 
@@ -300,17 +404,17 @@ title="Source repository"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="buttons.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="display.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Buttons and Touch Input</p>
+            <p class="prev-next-title">uBit.display</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="edge-connector.html" title="next page">
+    <a class='right-next' id="next-link" href="storage.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Edge Connector</p>
+        <p class="prev-next-title">uBit.storage</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

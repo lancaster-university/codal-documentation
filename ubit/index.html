@@ -36,7 +36,7 @@
     <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Display" href="display.html" />
+    <link rel="next" title="Buttons and Touch Input" href="buttons.html" />
     <link rel="prev" title="Getting Started with CODAL" href="../getting-started.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -57,7 +57,7 @@
     <div class="visually-hidden">Toggle in-page Table of Contents</div>
 </label>
 <!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
+<div class="announcement header-item noprint">We're currently porting the DAL documentation over to CODAL. The information on here may be outdated or incorrect!</div>
 <div class="header header-item noprint"></div>
 
     
@@ -109,18 +109,8 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="display.html">
-     Display
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="buttons.html">
      Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="mic-and-speaker.html">
-     Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
@@ -129,8 +119,38 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="sensors.html">
-     Sensors
+    <a class="reference internal" href="accelerometer.html">
+     uBit.accelerometer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="audio.html">
+     uBit.audio
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="compass.html">
+     uBit.compass
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="display.html">
+     uBit.display
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="serial.html">
+     uBit.serial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="storage.html">
+     uBit.storage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thermometer.html">
+     uBit.thermometer
     </a>
    </li>
   </ul>
@@ -344,20 +364,51 @@ programs (delays and sleep, for example).</p>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">uBit Components</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="display.html">Display</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="display.html#capabilities">Capabilities</a></li>
-<li class="toctree-l2"><a class="reference internal" href="display.html#using-the-display">Using the Display</a></li>
-<li class="toctree-l2"><a class="reference internal" href="display.html#useful-methods">Useful Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="buttons.html">Buttons and Touch Input</a></li>
+<li class="toctree-l1"><a class="reference internal" href="edge-connector.html">Edge Connector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="accelerometer.html">uBit.accelerometer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="accelerometer.html#real-time-updates">Real-Time Updates</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="buttons.html">Buttons and Touch Input</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mic-and-speaker.html">Microphone and Speaker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="edge-connector.html">Edge Connector</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sensors.html">Sensors</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sensors.html#gyro">Gyro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sensors.html#accelerometer-and-magnetometer">Accelerometer and Magnetometer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sensors.html#temperature">Temperature</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sensors.html#light-sensor">Light Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio.html">uBit.audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compass.html">uBit.compass</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="compass.html#real-time-updates">Real-Time Updates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compass.html#read-current-values">Read Current Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compass.html#calibration">Calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compass.html#requesting-data">Requesting Data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="display.html">uBit.display</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="display.html#capabilities">Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="display.html#using-the-display">Using the Display</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="display.html#scrolling-text">Scrolling Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="display.html#printing-text">Printing Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="display.html#showing-images">Showing Images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="display.html#running-in-the-background">Running in the Background…</a></li>
+<li class="toctree-l3"><a class="reference internal" href="display.html#changing-display-mode">Changing Display Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="display.html#accessing-the-display-buffer">Accessing the Display Buffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="display.html#other-useful-functions">Other Useful Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="display.html#useful-methods">Useful Methods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="display.html#synchronous-methods">Synchronous Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="display.html#asynchronous-methods">Asynchronous Methods</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="serial.html">uBit.serial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="serial.html#serial-modes">Serial Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serial.html#serial-debug">Serial Debug</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="storage.html">uBit.storage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="storage.html#what-is-flash-memory">What is flash memory?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage.html#operations">Operations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="thermometer.html">uBit.thermometer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="thermometer.html#real-time-updates">Real time updates</a></li>
 </ul>
 </li>
 </ul>
@@ -379,10 +430,10 @@ programs (delays and sleep, for example).</p>
             <p class="prev-next-title">Getting Started with CODAL</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="display.html" title="next page">
+    <a class='right-next' id="next-link" href="buttons.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Display</p>
+        <p class="prev-next-title">Buttons and Touch Input</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

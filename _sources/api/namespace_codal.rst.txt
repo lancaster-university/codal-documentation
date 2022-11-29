@@ -451,9 +451,9 @@ Functions
 
 - :ref:`exhale_function_namespacecodal_1af7d82336f01f39fb77f3c1ac581b4b3c`
 
-- :ref:`exhale_function_namespacecodal_1a5750ff11e8d04023b682a014d99b901b`
-
 - :ref:`exhale_function_namespacecodal_1abfe912cf436c0ae36e5ba328af78cc33`
+
+- :ref:`exhale_function_namespacecodal_1a5750ff11e8d04023b682a014d99b901b`
 
 - :ref:`exhale_function_namespacecodal_1a83e7fe17375b41f3c7bded287324053f`
 

@@ -1,4 +1,4 @@
-Display
+uBit.display
 =======
 
 The `codal::Display` class is a general purpose device driver for controlling LED matrix displays.

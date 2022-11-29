@@ -1,4 +1,0 @@
-Microphone and Speaker
-======================
-
-ToDo

@@ -1,4 +1,4 @@
-body > div { max-width: 90% !important; }
+body > .container-xl { max-width: 90% !important; }
 #main-content { max-width: 100% !important; }
 .footer-article { max-width: 100% !important; }
 .prev-next-area { max-width: 100% !important; }
@@ -20,3 +20,5 @@ body > div { max-width: 90% !important; }
 }
 
 #site-title { color: white !important; }
+
+.sig-prename { display: none; }

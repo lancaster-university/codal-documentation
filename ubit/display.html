@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Display &#8212; CODAL v0.2.44</title>
+    <title>uBit.display &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -36,8 +36,8 @@
     <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Buttons and Touch Input" href="buttons.html" />
-    <link rel="prev" title="The uBit Object" href="index.html" />
+    <link rel="next" title="uBit.serial" href="serial.html" />
+    <link rel="prev" title="uBit.compass" href="compass.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -57,7 +57,7 @@
     <div class="visually-hidden">Toggle in-page Table of Contents</div>
 </label>
 <!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
+<div class="announcement header-item noprint">We're currently porting the DAL documentation over to CODAL. The information on here may be outdated or incorrect!</div>
 <div class="header header-item noprint"></div>
 
     
@@ -108,19 +108,9 @@
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Display
-    </a>
-   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="buttons.html">
      Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="mic-and-speaker.html">
-     Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
@@ -129,8 +119,38 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="sensors.html">
-     Sensors
+    <a class="reference internal" href="accelerometer.html">
+     uBit.accelerometer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="audio.html">
+     uBit.audio
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="compass.html">
+     uBit.compass
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     uBit.display
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="serial.html">
+     uBit.serial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="storage.html">
+     uBit.storage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thermometer.html">
+     uBit.thermometer
     </a>
    </li>
   </ul>
@@ -358,7 +378,7 @@ title="Source repository"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Display</h1>
+                <h1>uBit.display</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -442,8 +462,8 @@ title="Source repository"
                 
               <div>
                 
-  <section id="display">
-<h1>Display<a class="headerlink" href="#display" title="Permalink to this headline">#</a></h1>
+  <section id="ubit-display">
+<h1>uBit.display<a class="headerlink" href="#ubit-display" title="Permalink to this headline">#</a></h1>
 <p>The <cite>codal::Display</cite> class is a general purpose device driver for controlling LED matrix displays.
 LED matrix displays are simple, inexpensive devices that use a single LED as a display pixel. They therefore
 tend to be of relatively low resolution, but often provide visually attractive displays due to the high coherence and brightness
@@ -897,17 +917,17 @@ so here are a collection of hand-picked methods you might find as the most inter
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="compass.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">The uBit Object</p>
+            <p class="prev-next-title">uBit.compass</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="buttons.html" title="next page">
+    <a class='right-next' id="next-link" href="serial.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Buttons and Touch Input</p>
+        <p class="prev-next-title">uBit.serial</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -54,7 +54,7 @@
     <div class="visually-hidden">Toggle in-page Table of Contents</div>
 </label>
 <!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
+<div class="announcement header-item noprint">We're currently porting the DAL documentation over to CODAL. The information on here may be outdated or incorrect!</div>
 <div class="header header-item noprint"></div>
 
     
@@ -106,18 +106,8 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="ubit/display.html">
-     Display
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="ubit/buttons.html">
      Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ubit/mic-and-speaker.html">
-     Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
@@ -126,8 +116,38 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="ubit/sensors.html">
-     Sensors
+    <a class="reference internal" href="ubit/accelerometer.html">
+     uBit.accelerometer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ubit/audio.html">
+     uBit.audio
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ubit/compass.html">
+     uBit.compass
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ubit/display.html">
+     uBit.display
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ubit/serial.html">
+     uBit.serial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ubit/storage.html">
+     uBit.storage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ubit/thermometer.html">
+     uBit.thermometer
     </a>
    </li>
   </ul>
@@ -849,11 +869,13 @@ title="Source repository"
 </li>
       <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass13accelerometerE">codal::Compass::accelerometer (C++ member)</a>
 </li>
-      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass9calibrateEv">codal::Compass::calibrate (C++ function)</a>
+      <li><a href="ubit/compass.html#_CPPv4N5codal7Compass12basicBearingEv">codal::Compass::basicBearing (C++ function)</a>
+</li>
+      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass9calibrateEv">codal::Compass::calibrate (C++ function)</a>, <a href="ubit/compass.html#_CPPv4N5codal7Compass9calibrateEv">[1]</a>
 </li>
       <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass11calibrationE">codal::Compass::calibration (C++ member)</a>
 </li>
-      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass16clearCalibrationEv">codal::Compass::clearCalibration (C++ function)</a>
+      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass16clearCalibrationEv">codal::Compass::clearCalibration (C++ function)</a>, <a href="ubit/compass.html#_CPPv4N5codal7Compass16clearCalibrationEv">[1]</a>
 </li>
       <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass7CompassER13AccelerometerR15CoordinateSpace8uint16_t">codal::Compass::Compass (C++ function)</a>, <a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass7CompassER15CoordinateSpace8uint16_t">[1]</a>
 </li>
@@ -863,25 +885,25 @@ title="Source repository"
 </li>
       <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass14getCalibrationEv">codal::Compass::getCalibration (C++ function)</a>
 </li>
-      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass16getFieldStrengthEv">codal::Compass::getFieldStrength (C++ function)</a>
+      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass16getFieldStrengthEv">codal::Compass::getFieldStrength (C++ function)</a>, <a href="ubit/compass.html#_CPPv4N5codal7Compass16getFieldStrengthEv">[1]</a>
 </li>
-      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass9getPeriodEv">codal::Compass::getPeriod (C++ function)</a>
+      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass9getPeriodEv">codal::Compass::getPeriod (C++ function)</a>, <a href="ubit/compass.html#_CPPv4N5codal7Compass9getPeriodEv">[1]</a>
 </li>
-      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass9getSampleE16CoordinateSystem">codal::Compass::getSample (C++ function)</a>, <a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass9getSampleEv">[1]</a>
+      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass9getSampleE16CoordinateSystem">codal::Compass::getSample (C++ function)</a>, <a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass9getSampleEv">[1]</a>, <a href="ubit/compass.html#_CPPv4N5codal7Compass9getSampleEv">[2]</a>
 </li>
-      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass4getXEv">codal::Compass::getX (C++ function)</a>
+      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass4getXEv">codal::Compass::getX (C++ function)</a>, <a href="ubit/compass.html#_CPPv4N5codal7Compass4getXEv">[1]</a>
 </li>
-      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass4getYEv">codal::Compass::getY (C++ function)</a>
+      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass4getYEv">codal::Compass::getY (C++ function)</a>, <a href="ubit/compass.html#_CPPv4N5codal7Compass4getYEv">[1]</a>
 </li>
-      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass4getZEv">codal::Compass::getZ (C++ function)</a>
+      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass4getZEv">codal::Compass::getZ (C++ function)</a>, <a href="ubit/compass.html#_CPPv4N5codal7Compass4getZEv">[1]</a>
 </li>
-      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass7headingEv">codal::Compass::heading (C++ function)</a>
+      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass7headingEv">codal::Compass::heading (C++ function)</a>, <a href="ubit/compass.html#_CPPv4N5codal7Compass7headingEv">[1]</a>
 </li>
       <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass12isCalibratedEv">codal::Compass::isCalibrated (C++ function)</a>
 </li>
-      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass13isCalibratingEv">codal::Compass::isCalibrating (C++ function)</a>
+      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass13isCalibratingEv">codal::Compass::isCalibrating (C++ function)</a>, <a href="ubit/compass.html#_CPPv4N5codal7Compass13isCalibratingEv">[1]</a>
 </li>
-      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass13requestUpdateEv">codal::Compass::requestUpdate (C++ function)</a>
+      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass13requestUpdateEv">codal::Compass::requestUpdate (C++ function)</a>, <a href="ubit/compass.html#_CPPv4N5codal7Compass13requestUpdateEv">[1]</a>
 </li>
       <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass6sampleE">codal::Compass::sample (C++ member)</a>
 </li>
@@ -893,9 +915,11 @@ title="Source repository"
 </li>
       <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass14setCalibrationE18CompassCalibration">codal::Compass::setCalibration (C++ function)</a>
 </li>
-      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass9setPeriodEi">codal::Compass::setPeriod (C++ function)</a>
+      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass9setPeriodEi">codal::Compass::setPeriod (C++ function)</a>, <a href="ubit/compass.html#_CPPv4N5codal7Compass9setPeriodEi">[1]</a>
 </li>
-      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass6updateEv">codal::Compass::update (C++ function)</a>
+      <li><a href="ubit/compass.html#_CPPv4N5codal7Compass22tiltCompensatedBearingEv">codal::Compass::tiltCompensatedBearing (C++ function)</a>
+</li>
+      <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7Compass6updateEv">codal::Compass::update (C++ function)</a>, <a href="ubit/compass.html#_CPPv4N5codal7Compass6updateEv">[1]</a>
 </li>
       <li><a href="api/classcodal_1_1Compass.html#_CPPv4N5codal7CompassD0Ev">codal::Compass::~Compass (C++ function)</a>
 </li>
@@ -2097,10 +2121,10 @@ title="Source repository"
 </li>
       <li><a href="api/classcodal_1_1MicroBitCompassCalibrator.html#_CPPv4N5codal25MicroBitCompassCalibratorE">codal::MicroBitCompassCalibrator (C++ class)</a>
 </li>
-      <li><a href="api/classcodal_1_1MicroBitCompassCalibrator.html#_CPPv4N5codal25MicroBitCompassCalibrator9calibrateEP8Sample3Di">codal::MicroBitCompassCalibrator::calibrate (C++ function)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/classcodal_1_1MicroBitCompassCalibrator.html#_CPPv4N5codal25MicroBitCompassCalibrator9calibrateEP8Sample3Di">codal::MicroBitCompassCalibrator::calibrate (C++ function)</a>
+</li>
       <li><a href="api/classcodal_1_1MicroBitCompassCalibrator.html#_CPPv4N5codal25MicroBitCompassCalibrator11calibrateUXE13MicroBitEvent">codal::MicroBitCompassCalibrator::calibrateUX (C++ function)</a>
 </li>
       <li><a href="api/classcodal_1_1MicroBitCompassCalibrator.html#_CPPv4N5codal25MicroBitCompassCalibrator25MicroBitCompassCalibratorER7CompassR13AccelerometerR15MicroBitDisplay">codal::MicroBitCompassCalibrator::MicroBitCompassCalibrator (C++ function)</a>, <a href="api/classcodal_1_1MicroBitCompassCalibrator.html#_CPPv4N5codal25MicroBitCompassCalibrator25MicroBitCompassCalibratorER7CompassR13AccelerometerR15MicroBitDisplayR15MicroBitStorage">[1]</a>

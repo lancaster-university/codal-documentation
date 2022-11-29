@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Sensors &#8212; CODAL v0.2.44</title>
+    <title>uBit.accelerometer &#8212; CODAL v0.2.44</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -36,7 +36,7 @@
     <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Guides" href="../guides/index.html" />
+    <link rel="next" title="uBit.audio" href="audio.html" />
     <link rel="prev" title="Edge Connector" href="edge-connector.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -57,7 +57,7 @@
     <div class="visually-hidden">Toggle in-page Table of Contents</div>
 </label>
 <!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
+<div class="announcement header-item noprint">We're currently porting the DAL documentation over to CODAL. The information on here may be outdated or incorrect!</div>
 <div class="header header-item noprint"></div>
 
     
@@ -109,18 +109,8 @@
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="display.html">
-     Display
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="buttons.html">
      Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="mic-and-speaker.html">
-     Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
@@ -130,7 +120,37 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Sensors
+     uBit.accelerometer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="audio.html">
+     uBit.audio
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="compass.html">
+     uBit.compass
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="display.html">
+     uBit.display
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="serial.html">
+     uBit.serial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="storage.html">
+     uBit.storage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thermometer.html">
+     uBit.thermometer
     </a>
    </li>
   </ul>
@@ -286,23 +306,8 @@ title="Source repository"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gyro">
-   Gyro
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#accelerometer-and-magnetometer">
-   Accelerometer and Magnetometer
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#temperature">
-   Temperature
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#light-sensor">
-   Light Sensor
+  <a class="reference internal nav-link" href="#real-time-updates">
+   Real-Time Updates
   </a>
  </li>
 </ul>
@@ -314,7 +319,7 @@ title="Source repository"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Sensors</h1>
+                <h1>uBit.accelerometer</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -325,23 +330,8 @@ title="Source repository"
                         <nav aria-label="Page">
                             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gyro">
-   Gyro
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#accelerometer-and-magnetometer">
-   Accelerometer and Magnetometer
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#temperature">
-   Temperature
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#light-sensor">
-   Light Sensor
+  <a class="reference internal nav-link" href="#real-time-updates">
+   Real-Time Updates
   </a>
  </li>
 </ul>
@@ -354,24 +344,35 @@ title="Source repository"
                 
               <div>
                 
-  <section id="sensors">
-<h1>Sensors<a class="headerlink" href="#sensors" title="Permalink to this headline">#</a></h1>
-<p>ToDo</p>
-<section id="gyro">
-<h2>Gyro<a class="headerlink" href="#gyro" title="Permalink to this headline">#</a></h2>
-<p>ToDo</p>
-</section>
-<section id="accelerometer-and-magnetometer">
-<h2>Accelerometer and Magnetometer<a class="headerlink" href="#accelerometer-and-magnetometer" title="Permalink to this headline">#</a></h2>
-<p>ToDo</p>
-</section>
-<section id="temperature">
-<h2>Temperature<a class="headerlink" href="#temperature" title="Permalink to this headline">#</a></h2>
-<p>ToDo</p>
-</section>
-<section id="light-sensor">
-<h2>Light Sensor<a class="headerlink" href="#light-sensor" title="Permalink to this headline">#</a></h2>
-<p>ToDo</p>
+  <section id="ubit-accelerometer">
+<h1>uBit.accelerometer<a class="headerlink" href="#ubit-accelerometer" title="Permalink to this headline">#</a></h1>
+<p>Onboard the micro:bit is an accelerometer, and it is linked to the
+[i2c](i2c.md) bus which is used to read data from the accelerometer.</p>
+<p>The accelerometer on the micro:bit detects the acceleration (<em>in milli-g</em>) in 3 planes: x and y
+(<em>the horizontal planes</em>), and z (<em>the vertical plane</em>).</p>
+<p>As well as detecting acceleration, accelerometers can also detect orientation, which
+is used in smart phones and tablets to rotate content as you tilt the device. This means
+that the micro:bit can infer its own orientation as well!</p>
+<p>As well as being used to detect acceleration, accelerometers are also used to detect
+the rate of deceleration. A great example of an application of accelerometers are
+airbags in modern vehicles, where an accelerometer is used to detect the rapid deceleration
+of a vehicle. If rapid deceleration were to occur, the airbags are deployed.</p>
+<p>Accelerometers can also be used to detect when an object is in free fall, which is
+when only the force gravity is acting upon an object. If you were to throw a ball directly
+into the air, free fall would begin as soon as the ball begins its decent after the
+acceleration from your throw has subsided.</p>
+<p>There are [two variants of the micro:bit](https://tech.microbit.org/hardware/)
+, one uses the [MMA8653](../resources/datasheets/MMA8653.pdf) and the other a uses the
+[LSM303](https://www.st.com/resource/en/datasheet/lsm303agr.pdf) combined accelerometer and
+magnetometer.</p>
+<section id="real-time-updates">
+<h2>Real-Time Updates<a class="headerlink" href="#real-time-updates" title="Permalink to this headline">#</a></h2>
+<p>When using the standard uBit presentation, the accelerometer is continuously updated
+in the background using an idle thread (after it is first used), which is executed
+whenever the micro:bit has no other tasks to perform..</p>
+<p>If there is no scheduler running, the values are synchronously read on <cite>get[X,Y,Z]()</cite>
+calls. Additionally, if you would like to drive accelerometer updates manually <cite>updateSample()</cite>
+can be used.</p>
 </section>
 </section>
 
@@ -390,10 +391,10 @@ title="Source repository"
             <p class="prev-next-title">Edge Connector</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../guides/index.html" title="next page">
+    <a class='right-next' id="next-link" href="audio.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Guides</p>
+        <p class="prev-next-title">uBit.audio</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -36,8 +36,8 @@
     <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Microphone and Speaker" href="mic-and-speaker.html" />
-    <link rel="prev" title="Display" href="display.html" />
+    <link rel="next" title="Edge Connector" href="edge-connector.html" />
+    <link rel="prev" title="The uBit Object" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -57,7 +57,7 @@
     <div class="visually-hidden">Toggle in-page Table of Contents</div>
 </label>
 <!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
+<div class="announcement header-item noprint">We're currently porting the DAL documentation over to CODAL. The information on here may be outdated or incorrect!</div>
 <div class="header header-item noprint"></div>
 
     
@@ -108,19 +108,9 @@
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="display.html">
-     Display
-    </a>
-   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="mic-and-speaker.html">
-     Microphone and Speaker
     </a>
    </li>
    <li class="toctree-l2">
@@ -129,8 +119,38 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="sensors.html">
-     Sensors
+    <a class="reference internal" href="accelerometer.html">
+     uBit.accelerometer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="audio.html">
+     uBit.audio
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="compass.html">
+     uBit.compass
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="display.html">
+     uBit.display
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="serial.html">
+     uBit.serial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="storage.html">
+     uBit.storage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thermometer.html">
+     uBit.thermometer
     </a>
    </li>
   </ul>
@@ -289,7 +309,21 @@ title="Source repository"
                 
   <section id="buttons-and-touch-input">
 <h1>Buttons and Touch Input<a class="headerlink" href="#buttons-and-touch-input" title="Permalink to this headline">#</a></h1>
-<p>ToDo</p>
+<p>The micro:bit has two forward facing buttons either side of the display, <cite>buttonA</cite>
+and <cite>buttonB</cite>. These are intuitively exposed on the [<cite>MicroBit</cite>](../ubit.md) object as <cite>uBit.buttonA</cite>
+and <cite>uBit.buttonB</cite>. A third button, <cite>uBit.buttonAB</cite> is used to detect the combined
+input of <cite>buttonA</cite> and <cite>buttonB</cite>, and is an instance of the class [<cite>MicroBitMultiButton</cite>](multibutton.md).</p>
+<p>Hardware buttons are notoriously renowned for generating multiple open/close transitions
+for what a user perceives as a single press, which can make depending on the raw input
+of a button unreliable. To combat this, a technique called ‘debouncing’ is used, which
+periodically polls the state of the button, when a transition from open to close
+(and vice versa) is detected. Through periodically polling the button, we get a
+more accurate representation of the state of a button.</p>
+<p><cite>MicroBitButton`s and [`MicroBitMultiButton</cite>](multibutton.md)s are debounced in
+software and provide a number of events that can be used to detect different
+variations of presses.</p>
+<p>The <cite>MicroBitButton</cite> debouncing mechanism is used to provide resistive touch sensing on [<cite>MicroBitPin</cite>](io.md)s
+and could also be used on external ‘button-like’ input if required.</p>
 </section>
 
 
@@ -300,17 +334,17 @@ title="Source repository"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="display.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Display</p>
+            <p class="prev-next-title">The uBit Object</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="mic-and-speaker.html" title="next page">
+    <a class='right-next' id="next-link" href="edge-connector.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Microphone and Speaker</p>
+        <p class="prev-next-title">Edge Connector</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
