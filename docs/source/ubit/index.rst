@@ -63,11 +63,15 @@ programs (delays and sleep, for example).
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: uBit Components
 
-   display
    buttons
-   mic-and-speaker
    edge-connector
-   sensors
+   accelerometer
+   audio
+   compass
+   display
+   serial
+   storage
+   thermometer

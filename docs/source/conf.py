@@ -113,7 +113,8 @@ html_theme_options = {
     "use_repository_button": True,
     "home_page_in_toc": True,
     "show_toc_level": 0,
-    "use_download_button": False
+    "use_download_button": False,
+    "announcement": "We're currently porting the DAL documentation over to CODAL. The information on here may be outdated or incorrect!",
 }
 
 html_sidebars = {
