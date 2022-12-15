@@ -17,5 +17,6 @@ This some of this content is generated from the source code directly, so may dev
    projects/index
    codal-api
    libraries/index
+   glossary
 
    :ref:`genindex`
