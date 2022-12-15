@@ -291,6 +291,8 @@ Classes
 
 - :ref:`exhale_class_classcodal_1_1Pin`
 
+- :ref:`exhale_class_classcodal_1_1PinPeripheral`
+
 - :ref:`exhale_class_classcodal_1_1PulseIn`
 
 - :ref:`exhale_class_classcodal_1_1Radio`

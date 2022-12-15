@@ -18,12 +18,12 @@ Base Type
 Derived Types
 *************
 
+- ``public MicroBitAccelerometer`` (:ref:`exhale_class_classMicroBitAccelerometer`)
 - ``public codal::FXOS8700`` (:ref:`exhale_class_classcodal_1_1FXOS8700`)
 - ``public codal::LIS3DH`` (:ref:`exhale_class_classcodal_1_1LIS3DH`)
 - ``public codal::LSM303Accelerometer`` (:ref:`exhale_class_classcodal_1_1LSM303Accelerometer`)
 - ``public codal::MMA8653`` (:ref:`exhale_class_classcodal_1_1MMA8653`)
 - ``public codal::MPU6050`` (:ref:`exhale_class_classcodal_1_1MPU6050`)
-- ``public MicroBitAccelerometer`` (:ref:`exhale_class_classMicroBitAccelerometer`)
 
 
 Class Documentation

@@ -38,57 +38,55 @@ Included By
 -----------
 
 
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
-
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MbedMemberFunctionCallback.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_compat_MicroBitCompat.h`
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitAccelerometer.h`
 
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_SoundOutputPin.h`
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitCompassCalibrator.h`
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitConfig.h`
 
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitCompassCalibrator.h`
-
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitDisplay.h`
 
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_NRF52LedMatrix.h`
-
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitRadio.h`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_PacketBuffer.h`
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitRadioDatagram.h`
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_MicroBitThermometer.h`
 
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_NRF52LedMatrix.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_PacketBuffer.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-microbit-v2_inc_SoundOutputPin.h`
+
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalCompat.h`
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalComponent.h`
 
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_ErrorNo.h`
-
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalDevice.h`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalFiber.h`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_EventModel.h`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalListener.h`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_MemberFunctionCallback.h`
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalDmesg.h`
 
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalFiber.h`
+
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalHeapAllocator.h`
 
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalListener.h`
+
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalUtil.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_ErrorNo.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_EventModel.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_MemberFunctionCallback.h`
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_AbstractButton.h`
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Accelerometer.h`
-
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Pin.h`
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_CodalUSB.h`
 
@@ -103,6 +101,10 @@ Included By
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_LowLevelTimer.h`
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_NVMController.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_Pin.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_PinPeripheral.h`
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_driver-models_ScreenIO.h`
 
@@ -148,13 +150,13 @@ Included By
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_drivers_TouchSensor.h`
 
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_StreamNormalizer.h`
-
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_LevelDetector.h`
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_LevelDetectorSPL.h`
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_MemorySource.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_StreamNormalizer.h`
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_streams_StreamSplitter.h`
 
@@ -168,11 +170,11 @@ Included By
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_ManagedString.h`
 
-- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_RefCounted.h`
-
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_ManagedType.h`
 
 - :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_Matrix4.h`
+
+- :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_types_RefCounted.h`
 
 
 

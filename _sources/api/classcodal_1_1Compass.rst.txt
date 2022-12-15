@@ -18,10 +18,10 @@ Base Type
 Derived Types
 *************
 
+- ``public MicroBitCompass`` (:ref:`exhale_class_classMicroBitCompass`)
 - ``public codal::FXOS8700`` (:ref:`exhale_class_classcodal_1_1FXOS8700`)
 - ``public codal::LSM303Magnetometer`` (:ref:`exhale_class_classcodal_1_1LSM303Magnetometer`)
 - ``public codal::MAG3110`` (:ref:`exhale_class_classcodal_1_1MAG3110`)
-- ``public MicroBitCompass`` (:ref:`exhale_class_classMicroBitCompass`)
 
 
 Class Documentation

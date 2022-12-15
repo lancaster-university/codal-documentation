@@ -46,7 +46,7 @@ Program Listing for File PulseIn.h
    namespace codal
    {
    
-   class PulseIn
+   class PulseIn : public PinPeripheral
    {
        Pin             &pin;
        uint32_t        lastPeriod;
@@ -68,7 +68,12 @@ Program Listing for File PulseIn.h
        void
        onTimeout(Event e);
    
-       ~PulseIn();
+       virtual int releasePin(Pin &pin) override;
+   
+       virtual ~PulseIn();
+   
+       private:
+       void disable();
    };
    
    }

@@ -221,6 +221,11 @@
    </li>
   </ul>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary.html">
+   Glossary of Terms
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -387,12 +392,12 @@ title="Source repository"
 <span class="w">        </span><span class="n">TxInterrupt</span><span class="w"></span>
 <span class="w">    </span><span class="p">};</span><span class="w"></span>
 
-<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Serial</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">CodalComponent</span><span class="w"></span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Serial</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">PinPeripheral</span><span class="p">,</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">CodalComponent</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="k">protected</span><span class="o">:</span><span class="w"></span>
 
-<span class="w">        </span><span class="n">Pin</span><span class="o">&amp;</span><span class="w"> </span><span class="n">tx</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="n">Pin</span><span class="o">&amp;</span><span class="w"> </span><span class="n">rx</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">Pin</span><span class="o">*</span><span class="w"> </span><span class="n">tx</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">Pin</span><span class="o">*</span><span class="w"> </span><span class="n">rx</span><span class="p">;</span><span class="w"></span>
 
 <span class="w">        </span><span class="c1">//delimeters used for matching on receive.</span>
 <span class="w">        </span><span class="n">ManagedString</span><span class="w"> </span><span class="n">delimeters</span><span class="p">;</span><span class="w"></span>

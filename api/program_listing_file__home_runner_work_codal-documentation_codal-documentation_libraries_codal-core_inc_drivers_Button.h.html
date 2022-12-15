@@ -221,6 +221,11 @@
    </li>
   </ul>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary.html">
+   Glossary of Terms
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -360,7 +365,7 @@ title="Source repository"
 
 <span class="k">namespace</span><span class="w"> </span><span class="nn">codal</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Button</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">AbstractButton</span><span class="w"></span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Button</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">AbstractButton</span><span class="p">,</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">PinPeripheral</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">downStartTime</span><span class="p">;</span><span class="w">                            </span><span class="c1">// used to store the current system clock when a button down event occurs</span>
 <span class="w">        </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">sigma</span><span class="p">;</span><span class="w">                                          </span><span class="c1">// integration of samples over time. We use this for debouncing, and noise tolerance for touch sensing</span>
@@ -387,6 +392,8 @@ title="Source repository"
 <span class="w">        </span><span class="p">{</span><span class="w"></span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">_pin</span><span class="p">.</span><span class="n">isWakeOnActive</span><span class="p">();</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">virtual</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">releasePin</span><span class="p">(</span><span class="n">Pin</span><span class="w"> </span><span class="o">&amp;</span><span class="n">pin</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span><span class="w"></span>
 
 <span class="w">        </span><span class="o">~</span><span class="n">Button</span><span class="p">();</span><span class="w"></span>
 

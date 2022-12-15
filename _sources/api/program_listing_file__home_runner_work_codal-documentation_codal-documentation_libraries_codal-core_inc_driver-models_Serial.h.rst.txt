@@ -72,12 +72,12 @@ Program Listing for File Serial.h
            TxInterrupt
        };
    
-       class Serial : public CodalComponent
+       class Serial : public PinPeripheral, public CodalComponent
        {
            protected:
    
-           Pin& tx;
-           Pin& rx;
+           Pin* tx;
+           Pin* rx;
    
            //delimeters used for matching on receive.
            ManagedString delimeters;

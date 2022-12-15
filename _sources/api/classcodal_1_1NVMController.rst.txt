@@ -12,8 +12,8 @@ Inheritance Relationships
 Derived Types
 *************
 
-- ``public codal::NRF52FlashManager`` (:ref:`exhale_class_classcodal_1_1NRF52FlashManager`)
 - ``public MicroBitUSBFlashManager`` (:ref:`exhale_class_classMicroBitUSBFlashManager`)
+- ``public codal::NRF52FlashManager`` (:ref:`exhale_class_classcodal_1_1NRF52FlashManager`)
 
 
 Class Documentation

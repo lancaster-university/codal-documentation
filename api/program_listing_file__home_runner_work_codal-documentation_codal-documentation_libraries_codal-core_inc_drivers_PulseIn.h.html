@@ -221,6 +221,11 @@
    </li>
   </ul>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary.html">
+   Glossary of Terms
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -361,7 +366,7 @@ title="Source repository"
 <span class="k">namespace</span><span class="w"> </span><span class="nn">codal</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">PulseIn</span><span class="w"></span>
+<span class="k">class</span><span class="w"> </span><span class="nc">PulseIn</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">PinPeripheral</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">Pin</span><span class="w">             </span><span class="o">&amp;</span><span class="n">pin</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="kt">uint32_t</span><span class="w">        </span><span class="n">lastPeriod</span><span class="p">;</span><span class="w"></span>
@@ -383,7 +388,12 @@ title="Source repository"
 <span class="w">    </span><span class="kt">void</span><span class="w"></span>
 <span class="w">    </span><span class="nf">onTimeout</span><span class="p">(</span><span class="n">Event</span><span class="w"> </span><span class="n">e</span><span class="p">);</span><span class="w"></span>
 
-<span class="w">    </span><span class="o">~</span><span class="n">PulseIn</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">releasePin</span><span class="p">(</span><span class="n">Pin</span><span class="w"> </span><span class="o">&amp;</span><span class="n">pin</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">PulseIn</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">disable</span><span class="p">();</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
 <span class="p">}</span><span class="w"></span>

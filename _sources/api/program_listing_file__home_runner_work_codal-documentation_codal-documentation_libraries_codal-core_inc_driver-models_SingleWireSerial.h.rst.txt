@@ -34,7 +34,7 @@ Program Listing for File SingleWireSerial.h
            SingleWireDisconnected
        };
    
-       class SingleWireSerial : public CodalComponent
+       class SingleWireSerial : public PinPeripheral, public CodalComponent
        {
            protected:
            virtual void configureRxInterrupt(int enable) = 0;
@@ -51,6 +51,7 @@ Program Listing for File SingleWireSerial.h
            {
                this->id = id;
                this->cb = NULL;
+               p.connect(*this);
            }
    
            virtual int setIRQ(void (*cb) (uint16_t errCode))

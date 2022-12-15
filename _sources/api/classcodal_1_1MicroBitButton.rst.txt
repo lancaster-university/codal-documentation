@@ -12,7 +12,7 @@ Inheritance Relationships
 Base Types
 **********
 
-- ``public NRF52Pin``
+- ``public codal::NRF52Pin``
 - ``public codal::Button`` (:ref:`exhale_class_classcodal_1_1Button`)
 
 

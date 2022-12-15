@@ -9,10 +9,11 @@ Class Button
 Inheritance Relationships
 -------------------------
 
-Base Type
-*********
+Base Types
+**********
 
 - ``public codal::AbstractButton`` (:ref:`exhale_class_classcodal_1_1AbstractButton`)
+- ``public codal::PinPeripheral`` (:ref:`exhale_class_classcodal_1_1PinPeripheral`)
 
 
 Derived Types

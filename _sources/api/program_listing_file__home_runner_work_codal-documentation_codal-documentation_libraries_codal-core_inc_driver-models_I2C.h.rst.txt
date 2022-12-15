@@ -45,7 +45,7 @@ Program Listing for File I2C.h
    {
    enum AcknowledgeType {ACK, NACK};
    
-   class I2C
+   class I2C : public PinPeripheral
    {
    public:
        I2C(Pin &sda, Pin &scl);
@@ -62,6 +62,8 @@ Program Listing for File I2C.h
        virtual int read(AcknowledgeType ack = ACK);
    
    public:
+       virtual int redirect(Pin &sda, Pin &scl);
+   
        virtual int write(uint16_t address, uint8_t data);
    
        virtual int write(uint16_t address, uint8_t *data, int len, bool repeated = false);

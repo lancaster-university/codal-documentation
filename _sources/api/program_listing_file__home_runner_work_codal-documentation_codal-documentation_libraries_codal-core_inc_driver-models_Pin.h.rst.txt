@@ -39,6 +39,7 @@ Program Listing for File Pin.h
    
    #include "CodalConfig.h"
    #include "CodalComponent.h"
+   #include "PinPeripheral.h"
                                                              // Status Field flags...
    #define IO_STATUS_DIGITAL_IN                0x0001        // Pin is configured as a digital input, with no pull up.
    #define IO_STATUS_DIGITAL_OUT               0x0002        // Pin is configured as a digital output
@@ -71,6 +72,7 @@ Program Listing for File Pin.h
    namespace codal
    {
        using namespace codal;
+   
        enum PinCapability: uint8_t
        {
            PIN_CAPABILITY_DIGITAL = 0x01,
@@ -269,6 +271,10 @@ Program Listing for File Pin.h
                return (status & IO_STATUS_WAKE_ON_ACTIVE) ? 1 : 0;
            }
    
+           virtual void connect(PinPeripheral &p, bool deleteOnRelease = false)
+           {
+               p.deleteOnRelease = deleteOnRelease;
+           }
            virtual void disconnect()
            {
            }

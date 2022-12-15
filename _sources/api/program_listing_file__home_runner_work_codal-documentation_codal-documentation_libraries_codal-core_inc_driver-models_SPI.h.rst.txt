@@ -48,9 +48,12 @@ Program Listing for File SPI.h
    typedef void (*PVoidCallback)(void *);
    
    
-   class SPI
+   class SPI : public PinPeripheral
    {
    public:
+   
+       virtual int redirect(Pin &mosi, Pin &miso, Pin &sclk);
+   
        virtual int setFrequency(uint32_t frequency) = 0;
    
        virtual int setMode(int mode, int bits = 8) = 0;

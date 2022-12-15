@@ -1,0 +1,14 @@
+.. _exhale_define_CodalComponent_8h_1aa508cfc7309a252006b8aba52e7a0996:
+
+Define DEVICE_ID_DYNAMIC_MAX
+============================
+
+- Defined in :ref:`file__home_runner_work_codal-documentation_codal-documentation_libraries_codal-core_inc_core_CodalComponent.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DEVICE_ID_DYNAMIC_MAX
+   :project: CODAL

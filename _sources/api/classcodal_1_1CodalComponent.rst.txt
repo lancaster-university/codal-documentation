@@ -22,6 +22,8 @@ Inheritance Relationships
 Derived Types
 *************
 
+- ``public MicroBitPowerManager`` (:ref:`exhale_class_classMicroBitPowerManager`)
+- ``public MicroBitUSBFlashManager`` (:ref:`exhale_class_classMicroBitUSBFlashManager`)
 - ``public codal::AbstractButton`` (:ref:`exhale_class_classcodal_1_1AbstractButton`)
 - ``public codal::Accelerometer`` (:ref:`exhale_class_classcodal_1_1Accelerometer`)
 - ``public codal::AnimatedDisplay`` (:ref:`exhale_class_classcodal_1_1AnimatedDisplay`)
@@ -36,17 +38,15 @@ Derived Types
 - ``private codal::MicroBitRadio`` (:ref:`exhale_class_classcodal_1_1MicroBitRadio`)
 - ``public codal::MicroBitThermometer`` (:ref:`exhale_class_classcodal_1_1MicroBitThermometer`)
 - ``public codal::Radio`` (:ref:`exhale_class_classcodal_1_1Radio`)
+- ``public codal::ST7735`` (:ref:`exhale_class_classcodal_1_1ST7735`)
 - ``public codal::Sensor`` (:ref:`exhale_class_classcodal_1_1Sensor`)
 - ``public codal::Serial`` (:ref:`exhale_class_classcodal_1_1Serial`)
 - ``public codal::SingleWireSerial`` (:ref:`exhale_class_classcodal_1_1SingleWireSerial`)
 - ``public codal::SoundEmojiSynthesizer`` (:ref:`exhale_class_classcodal_1_1SoundEmojiSynthesizer`)
 - ``public codal::SoundOutputPin`` (:ref:`exhale_class_classcodal_1_1SoundOutputPin`)
-- ``public codal::ST7735`` (:ref:`exhale_class_classcodal_1_1ST7735`)
 - ``public codal::StreamSplitter`` (:ref:`exhale_class_classcodal_1_1StreamSplitter`)
 - ``public codal::Synthesizer`` (:ref:`exhale_class_classcodal_1_1Synthesizer`)
 - ``private codal::TouchSensor`` (:ref:`exhale_class_classcodal_1_1TouchSensor`)
-- ``public MicroBitPowerManager`` (:ref:`exhale_class_classMicroBitPowerManager`)
-- ``public MicroBitUSBFlashManager`` (:ref:`exhale_class_classMicroBitUSBFlashManager`)
 
 
 Class Documentation

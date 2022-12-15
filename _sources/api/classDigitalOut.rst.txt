@@ -12,7 +12,7 @@ Inheritance Relationships
 Base Type
 *********
 
-- ``public NRF52Pin``
+- ``public codal::NRF52Pin``
 
 
 Class Documentation

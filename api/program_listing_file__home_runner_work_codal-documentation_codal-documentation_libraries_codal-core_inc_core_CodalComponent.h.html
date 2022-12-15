@@ -221,6 +221,11 @@
    </li>
   </ul>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary.html">
+   Glossary of Terms
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -409,6 +414,8 @@ title="Source repository"
 <span class="c1">// Suggested range for device-specific IDs: 50-79</span>
 <span class="c1">// NOTE - not final, just suggested currently.</span>
 
+<span class="c1">// Range 80-99 - RESERVED (deprecated space, do not use!)</span>
+
 <span class="cp">#define DEVICE_ID_IO_P0               100                       </span><span class="c1">// IDs 100-227 are reserved for I/O Pin IDs.</span>
 
 <span class="cp">#define DEVICE_ID_MESSAGE_BUS_LISTENER            1021          </span><span class="c1">// Message bus indication that a handler for a given ID has been registered.</span>
@@ -423,6 +430,9 @@ title="Source repository"
 <span class="c1">// jacadac reserved from 3000 - 4000</span>
 <span class="cp">#define DEVICE_ID_JD_DYNAMIC_ID 3000</span>
 
+<span class="c1">// Range 64000-65000 RESERVED (dynamic ID space)</span>
+<span class="cp">#define DEVICE_ID_DYNAMIC_MIN 64000</span>
+<span class="cp">#define DEVICE_ID_DYNAMIC_MAX 65000</span>
 
 <span class="c1">// Universal flags used as part of the status field</span>
 <span class="cp">#define DEVICE_COMPONENT_RUNNING                0x1000</span>
@@ -441,7 +451,9 @@ title="Source repository"
 <span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">configuration</span><span class="p">;</span><span class="w"></span>
 
 <span class="w">        </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
-<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">addComponent</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">generateDynamicID</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="nf">addComponent</span><span class="p">();</span><span class="w"></span>
 
 <span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="nf">removeComponent</span><span class="p">();</span><span class="w"></span>
 

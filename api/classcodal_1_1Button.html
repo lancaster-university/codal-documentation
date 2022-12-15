@@ -221,6 +221,11 @@
    </li>
   </ul>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary.html">
+   Glossary of Terms
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -326,8 +331,8 @@ title="Source repository"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#base-type">
-     Base Type
+    <a class="reference internal nav-link" href="#base-types">
+     Base Types
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -367,8 +372,8 @@ title="Source repository"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#base-type">
-     Base Type
+    <a class="reference internal nav-link" href="#base-types">
+     Base Types
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -400,10 +405,11 @@ title="Source repository"
 </ul>
 <section id="inheritance-relationships">
 <h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">#</a></h2>
-<section id="base-type">
-<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">#</a></h3>
+<section id="base-types">
+<h3>Base Types<a class="headerlink" href="#base-types" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::AbstractButton</span></code> (<a class="reference internal" href="classcodal_1_1AbstractButton.html#exhale-class-classcodal-1-1abstractbutton"><span class="std std-ref">Class AbstractButton</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">codal::PinPeripheral</span></code> (<a class="reference internal" href="classcodal_1_1PinPeripheral.html#exhale-class-classcodal-1-1pinperipheral"><span class="std std-ref">Class PinPeripheral</span></a>)</p></li>
 </ul>
 </section>
 <section id="derived-types">
@@ -418,7 +424,7 @@ title="Source repository"
 <h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">#</a></h2>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N5codal6ButtonE">
-<span id="_CPPv3N5codal6ButtonE"></span><span id="_CPPv2N5codal6ButtonE"></span><span id="codal::Button"></span><span class="target" id="classcodal_1_1Button"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Button</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classcodal_1_1AbstractButton.html#_CPPv4N5codal14AbstractButtonE" title="codal::AbstractButton"><span class="n"><span class="pre">AbstractButton</span></span></a><a class="headerlink" href="#_CPPv4N5codal6ButtonE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N5codal6ButtonE"></span><span id="_CPPv2N5codal6ButtonE"></span><span id="codal::Button"></span><span class="target" id="classcodal_1_1Button"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Button</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classcodal_1_1AbstractButton.html#_CPPv4N5codal14AbstractButtonE" title="codal::AbstractButton"><span class="n"><span class="pre">AbstractButton</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classcodal_1_1PinPeripheral.html#_CPPv4N5codal13PinPeripheralE" title="codal::PinPeripheral"><span class="n"><span class="pre">PinPeripheral</span></span></a><a class="headerlink" href="#_CPPv4N5codal6ButtonE" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Class definition for Device <a class="reference internal" href="#classcodal_1_1Button"><span class="std std-ref">Button</span></a>.</p>
 <p>Represents a single, generic button on the device. </p>
 <p>Subclassed by <a class="reference internal" href="classcodal_1_1MicroBitButton.html#classcodal_1_1MicroBitButton"><span class="std std-ref">codal::MicroBitButton</span></a>, <a class="reference internal" href="classcodal_1_1TouchButton.html#classcodal_1_1TouchButton"><span class="std std-ref">codal::TouchButton</span></a></p>
@@ -507,6 +513,17 @@ Example: <div class="highlight-cpp notranslate"><div class="highlight"><pre><spa
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>wake</strong> – The action of the button - either 1 to trigger wake up or 0 for no </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal6Button10releasePinER3Pin">
+<span id="_CPPv3N5codal6Button10releasePinER3Pin"></span><span id="_CPPv2N5codal6Button10releasePinER3Pin"></span><span id="codal::Button::releasePin__PinR"></span><span class="target" id="classcodal_1_1Button_1a8fe2664fe361dff9ec47ab0005903104"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">releasePin</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classcodal_1_1Pin.html#_CPPv4N5codal3PinE" title="codal::Pin"><span class="n"><span class="pre">Pin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pin</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5codal6Button10releasePinER3Pin" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Method to release the given pin from a peripheral, if already bound. Device drivers should override this method to disconnect themselves from the give pin to allow it to be used by a different peripheral.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pin</strong> – the <a class="reference internal" href="classcodal_1_1Pin.html#classcodal_1_1Pin"><span class="std std-ref">Pin</span></a> to be released </p>
 </dd>
 </dl>
 </dd></dl>

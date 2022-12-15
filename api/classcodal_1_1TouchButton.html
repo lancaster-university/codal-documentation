@@ -221,6 +221,11 @@
    </li>
   </ul>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary.html">
+   Glossary of Terms
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -471,6 +476,28 @@ title="Source repository"
 <dt class="sig sig-object cpp" id="_CPPv4N5codal11TouchButton12buttonActiveEv">
 <span id="_CPPv3N5codal11TouchButton12buttonActiveEv"></span><span id="_CPPv2N5codal11TouchButton12buttonActiveEv"></span><span id="codal::TouchButton::buttonActive"></span><span class="target" id="classcodal_1_1TouchButton_1aa558d4c8105d9da35170c25914a3c1a6"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">buttonActive</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11TouchButton12buttonActiveEv" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Determines if this button is instantenously active (i.e. pressed). Internal method, use before debouncing. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11TouchButton11getPinValueEv">
+<span id="_CPPv3N5codal11TouchButton11getPinValueEv"></span><span id="_CPPv2N5codal11TouchButton11getPinValueEv"></span><span id="codal::TouchButton::getPinValue"></span><span class="target" id="classcodal_1_1TouchButton_1aa4c710b8886d159f0a02f1af9200f5d2"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPinValue</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11TouchButton11getPinValueEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Determines the instantneous digital value of the pin associated with this <a class="reference internal" href="#classcodal_1_1TouchButton"><span class="std std-ref">TouchButton</span></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>true if a digital read of the attached pin is a logic 1, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5codal11TouchButton11setPinValueEi">
+<span id="_CPPv3N5codal11TouchButton11setPinValueEi"></span><span id="_CPPv2N5codal11TouchButton11setPinValueEi"></span><span id="codal::TouchButton::setPinValue__i"></span><span class="target" id="classcodal_1_1TouchButton_1a7786ceed8af1d89cc75a8275836fa47a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPinValue</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">v</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5codal11TouchButton11setPinValueEi" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Drives a given digital value to the pin associated with this <a class="reference internal" href="#classcodal_1_1TouchButton"><span class="std std-ref">TouchButton</span></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>v</strong> – the digital value to write to the pin associated with this <a class="reference internal" href="#classcodal_1_1TouchButton"><span class="std std-ref">TouchButton</span></a>. </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="cpp function">

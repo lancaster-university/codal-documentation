@@ -45,7 +45,7 @@ Program Listing for File Button.h
    
    namespace codal
    {
-       class Button : public AbstractButton
+       class Button : public AbstractButton, public PinPeripheral
        {
            unsigned long downStartTime;                            // used to store the current system clock when a button down event occurs
            uint8_t sigma;                                          // integration of samples over time. We use this for debouncing, and noise tolerance for touch sensing
@@ -72,6 +72,8 @@ Program Listing for File Button.h
            {
                return _pin.isWakeOnActive();
            }
+   
+           virtual int releasePin(Pin &pin) override;
    
            ~Button();
    

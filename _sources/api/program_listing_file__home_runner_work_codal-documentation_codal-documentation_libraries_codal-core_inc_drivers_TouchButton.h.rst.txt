@@ -91,6 +91,10 @@ Program Listing for File TouchButton.h
    
            int buttonActive();
    
+            int getPinValue();
+   
+            void setPinValue(int v);
+   
            ~TouchButton();
    
        };

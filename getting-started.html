@@ -223,6 +223,11 @@
    </li>
   </ul>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   Glossary of Terms
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -300,12 +305,68 @@ title="Source repository"
   </span>
 
 </a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-codal">
+   What is CODAL?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-a-device-abstraction">
+     What is a device abstraction?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-a-component">
+     What is a “Component”?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-for-the-micro-bit">
+     C++ for the micro:bit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#build-tools">
+     Build Tools
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#projects-and-guides">
+     Projects and Guides
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#holding-zone-temp">
+   Holding Zone (Temp)
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -317,6 +378,51 @@ title="Source repository"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-codal">
+   What is CODAL?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-a-device-abstraction">
+     What is a device abstraction?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-a-component">
+     What is a “Component”?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-for-the-micro-bit">
+     C++ for the micro:bit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#build-tools">
+     Build Tools
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#projects-and-guides">
+     Projects and Guides
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#holding-zone-temp">
+   Holding Zone (Temp)
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -325,9 +431,265 @@ title="Source repository"
               <div>
                 
   <section id="getting-started-with-codal">
-<h1>Getting Started with CODAL<a class="headerlink" href="#getting-started-with-codal" title="Permalink to this headline">#</a></h1>
+<h1><a class="toc-backref" href="#id2">Getting Started with CODAL</a><a class="headerlink" href="#getting-started-with-codal" title="Permalink to this headline">#</a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#getting-started-with-codal" id="id2">Getting Started with CODAL</a></p>
+<ul>
+<li><p><a class="reference internal" href="#what-is-codal" id="id3">What is CODAL?</a></p>
+<ul>
+<li><p><a class="reference internal" href="#what-is-a-device-abstraction" id="id4">What is a device abstraction?</a></p></li>
+<li><p><a class="reference internal" href="#what-is-a-component" id="id5">What is a “Component”?</a></p></li>
+<li><p><a class="reference internal" href="#c-for-the-micro-bit" id="id6">C++ for the micro:bit</a></p></li>
+<li><p><a class="reference internal" href="#build-tools" id="id7">Build Tools</a></p></li>
+<li><p><a class="reference internal" href="#projects-and-guides" id="id8">Projects and Guides</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#holding-zone-temp" id="id9">Holding Zone (Temp)</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
 <p>To start developing in C++ with CODAL and the Micro:bit you’ll first need to ensure that you have followed the steps in <a class="reference internal" href="guides/prerequisites.html"><span class="doc">Installation - Tools</span></a> for
 your operating system, and that you have a new project set up by following the steps in <a class="reference internal" href="guides/codal-projects.html"><span class="doc">CODAL Projects</span></a></p>
+<section id="what-is-codal">
+<h2><a class="toc-backref" href="#id3">What is CODAL?</a><a class="headerlink" href="#what-is-codal" title="Permalink to this headline">#</a></h2>
+<p>CODAL is the <cite>Component Oriented Device Abstraction Layer</cite> and is the set of controls through which you drive the micro:bit v2 devices (and friends!).
+It sits in the slightly fuzzy zone between an Application Programming Interface (API) and an Operating System (OS) and shares some functions with both.</p>
+<p>Traditional operating systems, such as those you would find on your compter, tablet, phone, and other devices run the show and present a nicely isolated
+way for programs to interact with the user, hiding the complexity of running the system itself.
+Programs run in a sort of fantasy world, where they own all the hardware and can do whatever they like with it (within reason) but in reality the OS is
+hiding everything from them (except through special methods).</p>
+<p>By contrast, a pure API would simply be a library which is compiled in with the applications themselves and becomes a part of the application during run
+time.
+Often these would then use OS methods to actually perform any useful task (although purely application-level APIs do exist in abundance!)</p>
+<section id="what-is-a-device-abstraction">
+<h3><a class="toc-backref" href="#id4">What is a device abstraction?</a><a class="headerlink" href="#what-is-a-device-abstraction" title="Permalink to this headline">#</a></h3>
+<p>Rather than having to write code for each and every specific device, it is often useful to hide the complexity of the actual device specifics
+by wrapping or ‘layering’ it under a much more simple interface.
+CODAL does this for most (if not all) of its devices, allowing programs written for one target, such as the micro:bit v2, also execute on other
+CODAL-running platforms.</p>
+<p>In general, this means that developers are presented with a set of functions, methods and classes which describe the functional operation of a device
+rather than the required steps to actually realise these functions.
+An extremely common case for this would be initialisation code; whereby from the application developers perspective, the device comes pre-initialised
+and ready to go, but under this layer, the CODAL component (or components, for exceptionally complex hardware) are actually configuring the serial busses,
+memory mappings, and maintenance tasks required to make this possible, all without the developer having to know.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Naturally, if a developer is porting CODAL to a new platform, they are much more likely to encounter the lower level parts of the system, but for just
+using CODAL, development is simplified.</p>
+</div>
+<figure class="align-center" id="id1">
+<img alt="_images/missing-image.jpg" src="_images/missing-image.jpg" />
+<figcaption>
+<p><span class="caption-text">The micro:bit v2 CODAL architecture, as a set of conceptual layers</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Device ‘drivers’ are therefore composed of two parts; one which does the heavy lifting on the device to actually run the hardware, and another which presents
+this device or class of devices to the application developer.
+One good example of this is the <a class="reference internal" href="api/classcodal_1_1Serial.html#_CPPv4N5codal6SerialE" title="codal::Serial"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::Serial</span></code></a> class, as it neatly hides if this is a hardware-backed serial device (with hardware-based buffering and
+management circuitry) or if this is a software-based serial device, handled entirely within CODAL itself; or indeed, if this is a more exotic serial device, such
+as the one we use for communication with a computer through the KL27 (See <span class="xref std std-doc">/hardware/kl27</span> for info on the KL27) over our internal I2C connection, or the
+line-based serial link in the Field Testing library for NMEA uBlox GPS devices (See <span class="xref std std-doc">/libraries/codal-field-testing.rst</span>).</p>
+</section>
+<section id="what-is-a-component">
+<h3><a class="toc-backref" href="#id5">What is a “Component”?</a><a class="headerlink" href="#what-is-a-component" title="Permalink to this headline">#</a></h3>
+<p>Components in CODAL devide up specific blocks of functionality, and these informally take on one or more of the following three aspects:</p>
+<dl class="simple">
+<dt>Device Drivers</dt><dd><p>Whereby the function is that of configuring, running and responding to events for a specific piece of hardware.</p>
+</dd>
+<dt>Function Abstraction</dt><dd><p>These</p>
+</dd>
+<dt>Utility-based Grouping</dt><dd><p>These components group together a set of co-useful functions such that developers have all the relevant tools within a handful of objects or classes.
+This is the most pragmatic form of Component, whereby the decisions for what compose these groupings</p>
+</dd>
+</dl>
+<p>This might take the form of a <cite>device driver</cite>, whereby the function is that of running a piece of hardware, or may be a more logical seperation of function, such
+as splitting or mixing audio.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Bounded areas of function</dt><dd><ul>
+<li><p>A pragramatic approach</p></li>
+<li><p>Where do C++ classes and objects fit in?</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="c-for-the-micro-bit">
+<h3><a class="toc-backref" href="#id6">C++ for the micro:bit</a><a class="headerlink" href="#c-for-the-micro-bit" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Programming model</dt><dd><ul>
+<li><p>Sync vs. Async calls</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Example minimal working app</p></li>
+<li><dl class="simple">
+<dt>The ubit Object as an API</dt><dd><ul>
+<li><p>Reference diagram</p></li>
+<li><p>List of common components</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Thread / Fiber model</dt><dd><ul>
+<li><p>Cooperative multi-tasking</p></li>
+<li><dl class="simple">
+<dt>Events, IDs and Messages</dt><dd><ul>
+<li><p>Handles and Callbacks</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>C-like C++ coding style</dt><dd><ul>
+<li><p>Reference to Arduino</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Memory and Storage</dt><dd><ul>
+<li><p>Heap vs Stack</p></li>
+<li><p>Managed objects</p></li>
+<li><p>Key/value Storage</p></li>
+<li><p>micro:bit virtual disk</p></li>
+<li><p>Persistent storage options</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="build-tools">
+<h3><a class="toc-backref" href="#id7">Build Tools</a><a class="headerlink" href="#build-tools" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>CMake, python, make, etc.</p></li>
+<li><dl class="simple">
+<dt>build.py or codal.py</dt><dd><ul>
+<li><p>List of useful flags and options</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Libraries and project structure</dt><dd><ul>
+<li><p>Custom extra targets</p></li>
+<li><p>Custom user libraries</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Running applications on real hardware</dt><dd><ul>
+<li><p>Flashing code to a board</p></li>
+<li><p>Debugging via pyOCD or OpenOCD</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Build configurations</dt><dd><ul>
+<li><p>codal.json</p></li>
+<li><p>target.json</p></li>
+<li><p>Set/Unset syntax for <cite>config{}</cite> blocks</p></li>
+<li><dl class="simple">
+<dt>Common/known config variables</dt><dd><ul>
+<li><dl class="simple">
+<dt>Examples for common cases</dt><dd><ul>
+<li><p>DMESG settings</p></li>
+<li><p>Flash erase settings</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>The Edge Connector</dt><dd><ul>
+<li><dl class="simple">
+<dt>GPIO access via the uBit object</dt><dd><ul>
+<li><p>Digital / Analog / PWM</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Serial Communication</dt><dd><ul>
+<li><p>UART / Serial -&gt; Software vs. Hardware</p></li>
+<li><p>SPI</p></li>
+<li><dl class="simple">
+<dt>I2C -&gt; Internal vs External busses</dt><dd><ul>
+<li><p>On-board devices</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>The Radio</dt><dd><ul>
+<li><p>2.4Ghz packet radio -&gt; protocol options</p></li>
+<li><p>Bluetooth radio</p></li>
+<li><p>BLE bluetooth mode</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="projects-and-guides">
+<h3><a class="toc-backref" href="#id8">Projects and Guides</a><a class="headerlink" href="#projects-and-guides" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>“Disco Lights” -&gt; audio pipeline and display</p></li>
+<li><p>“Hot Potato” -&gt; accelerometer, timers and audio</p></li>
+<li><p>“Alien Scanner” -&gt; radio, display, buttons, audio</p></li>
+</ul>
+</section>
+</section>
+<section id="holding-zone-temp">
+<h2><a class="toc-backref" href="#id9">Holding Zone (Temp)</a><a class="headerlink" href="#holding-zone-temp" title="Permalink to this headline">#</a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MicroBit.h&quot;</span><span class="cp"></span>
+
+<span class="c1">// The Micro:bit control object</span>
+<span class="n">MicroBit</span><span class="w"> </span><span class="n">uBit</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Our main function, run at startup</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Set up the uBit object (needs only to be done once on startup)</span>
+<span class="w">    </span><span class="n">uBit</span><span class="p">.</span><span class="n">init</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Scroll some text on the display</span>
+<span class="w">    </span><span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">scroll</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Hello, World!&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// By calling this we allow CODAL to continue to run when we&#39;ve exited</span>
+<span class="w">    </span><span class="n">release_fiber</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
 </section>
 
 

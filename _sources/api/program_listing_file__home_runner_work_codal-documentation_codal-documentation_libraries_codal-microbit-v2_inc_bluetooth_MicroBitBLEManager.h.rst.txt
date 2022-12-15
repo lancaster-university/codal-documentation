@@ -115,14 +115,12 @@ Program Listing for File MicroBitBLEManager.h
        bool getConnected();
    
    #if CONFIG_ENABLED(MICROBIT_BLE_EDDYSTONE_URL)
-   
        int advertiseEddystoneUrl(const char *url, int8_t calibratedPower = MICROBIT_BLE_EDDYSTONE_DEFAULT_POWER, bool connectable = true, uint16_t interval = MICROBIT_BLE_EDDYSTONE_ADV_INTERVAL);
    
        int advertiseEddystoneUrl(ManagedString url, int8_t calibratedPower = MICROBIT_BLE_EDDYSTONE_DEFAULT_POWER, bool connectable = true, uint16_t interval = MICROBIT_BLE_EDDYSTONE_ADV_INTERVAL);
    #endif
    
    #if CONFIG_ENABLED(MICROBIT_BLE_EDDYSTONE_UID)
-   
        int advertiseEddystoneUid(const char* uid_namespace, const char* uid_instance, int8_t calibratedPower = MICROBIT_BLE_EDDYSTONE_DEFAULT_POWER, bool connectable = true, uint16_t interval = MICROBIT_BLE_EDDYSTONE_ADV_INTERVAL);
    #endif
    

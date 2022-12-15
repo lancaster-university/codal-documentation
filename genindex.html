@@ -220,6 +220,11 @@
    </li>
   </ul>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   Glossary of Terms
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -776,6 +781,8 @@ title="Source repository"
 </li>
       <li><a href="api/classcodal_1_1Button.html#_CPPv4N5codal6Button16periodicCallbackEv">codal::Button::periodicCallback (C++ function)</a>
 </li>
+      <li><a href="api/classcodal_1_1Button.html#_CPPv4N5codal6Button10releasePinER3Pin">codal::Button::releasePin (C++ function)</a>
+</li>
       <li><a href="api/classcodal_1_1Button.html#_CPPv4N5codal6Button21setEventConfigurationE24ButtonEventConfiguration">codal::Button::setEventConfiguration (C++ function)</a>
 </li>
       <li><a href="api/classcodal_1_1Button.html#_CPPv4N5codal6Button8setSleepEb">codal::Button::setSleep (C++ function)</a>
@@ -837,6 +844,8 @@ title="Source repository"
       <li><a href="api/classcodal_1_1CodalComponent.html#_CPPv4N5codal14CodalComponent23deepSleepCallbackReason31deepSleepCallbackEndWithWakeUpsE">codal::CodalComponent::deepSleepCallbackReason::deepSleepCallbackEndWithWakeUps (C++ enumerator)</a>
 </li>
       <li><a href="api/classcodal_1_1CodalComponent.html#_CPPv4N5codal14CodalComponent23deepSleepCallbackReason24deepSleepCallbackPrepareE">codal::CodalComponent::deepSleepCallbackReason::deepSleepCallbackPrepare (C++ enumerator)</a>
+</li>
+      <li><a href="api/classcodal_1_1CodalComponent.html#_CPPv4N5codal14CodalComponent17generateDynamicIDEv">codal::CodalComponent::generateDynamicID (C++ function)</a>
 </li>
       <li><a href="api/classcodal_1_1CodalComponent.html#_CPPv4N5codal14CodalComponent2idE">codal::CodalComponent::id (C++ member)</a>
 </li>
@@ -1423,6 +1432,8 @@ title="Source repository"
       <li><a href="api/classcodal_1_1I2C.html#_CPPv4N5codal3I2C4readE15AcknowledgeType">codal::I2C::read (C++ function)</a>, <a href="api/classcodal_1_1I2C.html#_CPPv4N5codal3I2C4readE8uint16_tP7uint8_tib">[1]</a>, <a href="api/classcodal_1_1I2C.html#_CPPv4N5codal3I2C4readEiPcib">[2]</a>
 </li>
       <li><a href="api/classcodal_1_1I2C.html#_CPPv4N5codal3I2C12readRegisterE7uint8_t7uint8_t">codal::I2C::readRegister (C++ function)</a>, <a href="api/classcodal_1_1I2C.html#_CPPv4N5codal3I2C12readRegisterE8uint16_t7uint8_tP7uint8_tib">[1]</a>
+</li>
+      <li><a href="api/classcodal_1_1I2C.html#_CPPv4N5codal3I2C8redirectER3PinR3Pin">codal::I2C::redirect (C++ function)</a>
 </li>
       <li><a href="api/classcodal_1_1I2C.html#_CPPv4N5codal3I2C12setFrequencyE8uint32_t">codal::I2C::setFrequency (C++ function)</a>
 </li>
@@ -2138,8 +2149,6 @@ title="Source repository"
 </li>
       <li><a href="api/classcodal_1_1MicroBitCompassCalibrator.html#_CPPv4N5codal25MicroBitCompassCalibratorE">codal::MicroBitCompassCalibrator (C++ class)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/classcodal_1_1MicroBitCompassCalibrator.html#_CPPv4N5codal25MicroBitCompassCalibrator9calibrateEP8Sample3Di">codal::MicroBitCompassCalibrator::calibrate (C++ function)</a>
 </li>
       <li><a href="api/classcodal_1_1MicroBitCompassCalibrator.html#_CPPv4N5codal25MicroBitCompassCalibrator11calibrateUXE13MicroBitEvent">codal::MicroBitCompassCalibrator::calibrateUX (C++ function)</a>
@@ -2148,6 +2157,8 @@ title="Source repository"
 </li>
       <li><a href="api/classcodal_1_1MicroBitDevice.html#_CPPv4N5codal14MicroBitDeviceE">codal::MicroBitDevice (C++ class)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/classcodal_1_1MicroBitDevice.html#_CPPv4N5codal14MicroBitDevice14MicroBitDeviceEv">codal::MicroBitDevice::MicroBitDevice (C++ function)</a>
 </li>
       <li><a href="api/classcodal_1_1MicroBitDevice.html#_CPPv4N5codal14MicroBitDevice13schedulerIdleEv">codal::MicroBitDevice::schedulerIdle (C++ function)</a>
@@ -2550,6 +2561,8 @@ title="Source repository"
 </li>
       <li><a href="api/classcodal_1_1Pin.html#_CPPv4N5codal3Pin10capabilityE">codal::Pin::capability (C++ member)</a>
 </li>
+      <li><a href="api/classcodal_1_1Pin.html#_CPPv4N5codal3Pin7connectER13PinPeripheralb">codal::Pin::connect (C++ function)</a>
+</li>
       <li><a href="api/classcodal_1_1Pin.html#_CPPv4N5codal3Pin10disconnectEv">codal::Pin::disconnect (C++ function)</a>
 </li>
       <li><a href="api/classcodal_1_1Pin.html#_CPPv4N5codal3Pin8drainPinEv">codal::Pin::drainPin (C++ function)</a>
@@ -2634,6 +2647,20 @@ title="Source repository"
 </li>
       <li><a href="api/typedef_namespacecodal_1ac1596127a05e8b32df499e87d86b6436.html#_CPPv4N5codal9PinNumberE">codal::PinNumber (C++ type)</a>
 </li>
+      <li><a href="api/classcodal_1_1PinPeripheral.html#_CPPv4N5codal13PinPeripheralE">codal::PinPeripheral (C++ class)</a>
+</li>
+      <li><a href="api/classcodal_1_1PinPeripheral.html#_CPPv4N5codal13PinPeripheral15deleteOnReleaseE">codal::PinPeripheral::deleteOnRelease (C++ member)</a>
+</li>
+      <li><a href="api/classcodal_1_1PinPeripheral.html#_CPPv4N5codal13PinPeripheral11isPinLockedEv">codal::PinPeripheral::isPinLocked (C++ function)</a>
+</li>
+      <li><a href="api/classcodal_1_1PinPeripheral.html#_CPPv4N5codal13PinPeripheral7pinLockE">codal::PinPeripheral::pinLock (C++ member)</a>
+</li>
+      <li><a href="api/classcodal_1_1PinPeripheral.html#_CPPv4N5codal13PinPeripheral11reassignPinEPvP3Pin">codal::PinPeripheral::reassignPin (C++ function)</a>
+</li>
+      <li><a href="api/classcodal_1_1PinPeripheral.html#_CPPv4N5codal13PinPeripheral10releasePinER3Pin">codal::PinPeripheral::releasePin (C++ function)</a>
+</li>
+      <li><a href="api/classcodal_1_1PinPeripheral.html#_CPPv4N5codal13PinPeripheral10setPinLockEb">codal::PinPeripheral::setPinLock (C++ function)</a>
+</li>
       <li><a href="api/structcodal_1_1Progression.html#_CPPv4N5codal11ProgressionE">codal::Progression (C++ struct)</a>
 </li>
       <li><a href="api/structcodal_1_1Progression.html#_CPPv4N5codal11Progression8intervalE">codal::Progression::interval (C++ member)</a>
@@ -2659,6 +2686,8 @@ title="Source repository"
       <li><a href="api/classcodal_1_1PulseIn.html#_CPPv4N5codal7PulseIn9onTimeoutE5Event">codal::PulseIn::onTimeout (C++ function)</a>
 </li>
       <li><a href="api/classcodal_1_1PulseIn.html#_CPPv4N5codal7PulseIn7PulseInER3Pin">codal::PulseIn::PulseIn (C++ function)</a>
+</li>
+      <li><a href="api/classcodal_1_1PulseIn.html#_CPPv4N5codal7PulseIn10releasePinER3Pin">codal::PulseIn::releasePin (C++ function)</a>
 </li>
       <li><a href="api/classcodal_1_1PulseIn.html#_CPPv4N5codal7PulseInD0Ev">codal::PulseIn::~PulseIn (C++ function)</a>
 </li>
@@ -3105,6 +3134,8 @@ title="Source repository"
       <li><a href="api/classcodal_1_1SoundSynthesizerEffects.html#_CPPv4N5codal23SoundSynthesizerEffects19warbleInterpolationEP21SoundEmojiSynthesizerP10ToneEffect">codal::SoundSynthesizerEffects::warbleInterpolation (C++ function)</a>
 </li>
       <li><a href="api/classcodal_1_1SPI.html#_CPPv4N5codal3SPIE">codal::SPI (C++ class)</a>
+</li>
+      <li><a href="api/classcodal_1_1SPI.html#_CPPv4N5codal3SPI8redirectER3PinR3PinR3Pin">codal::SPI::redirect (C++ function)</a>
 </li>
       <li><a href="api/classcodal_1_1SPI.html#_CPPv4N5codal3SPI12setFrequencyE8uint32_t">codal::SPI::setFrequency (C++ function)</a>
 </li>
@@ -3590,11 +3621,15 @@ title="Source repository"
 </li>
       <li><a href="api/classcodal_1_1TouchButton.html#_CPPv4N5codal11TouchButton9calibrateEv">codal::TouchButton::calibrate (C++ function)</a>
 </li>
+      <li><a href="api/classcodal_1_1TouchButton.html#_CPPv4N5codal11TouchButton11getPinValueEv">codal::TouchButton::getPinValue (C++ function)</a>
+</li>
       <li><a href="api/classcodal_1_1TouchButton.html#_CPPv4N5codal11TouchButton12getThresholdEv">codal::TouchButton::getThreshold (C++ function)</a>
 </li>
       <li><a href="api/classcodal_1_1TouchButton.html#_CPPv4N5codal11TouchButton8getValueEv">codal::TouchButton::getValue (C++ function)</a>
 </li>
       <li><a href="api/classcodal_1_1TouchButton.html#_CPPv4N5codal11TouchButton7readingE">codal::TouchButton::reading (C++ member)</a>
+</li>
+      <li><a href="api/classcodal_1_1TouchButton.html#_CPPv4N5codal11TouchButton11setPinValueEi">codal::TouchButton::setPinValue (C++ function)</a>
 </li>
       <li><a href="api/classcodal_1_1TouchButton.html#_CPPv4N5codal11TouchButton12setThresholdEi">codal::TouchButton::setThreshold (C++ function)</a>
 </li>
@@ -3916,6 +3951,10 @@ title="Source repository"
 </li>
       <li><a href="api/define_CodalComponent_8h_1a59e642f68621b9b423957cbc64e7fd0a.html#c.DEVICE_ID_DISTANCE">DEVICE_ID_DISTANCE (C macro)</a>
 </li>
+      <li><a href="api/define_CodalComponent_8h_1aa508cfc7309a252006b8aba52e7a0996.html#c.DEVICE_ID_DYNAMIC_MAX">DEVICE_ID_DYNAMIC_MAX (C macro)</a>
+</li>
+      <li><a href="api/define_CodalComponent_8h_1ad1fe6a772e44bf7ffa1b925b1ad28a11.html#c.DEVICE_ID_DYNAMIC_MIN">DEVICE_ID_DYNAMIC_MIN (C macro)</a>
+</li>
       <li><a href="api/define_CodalComponent_8h_1a1c7921cfc2dfe5487761daeecab58228.html#c.DEVICE_ID_GESTURE">DEVICE_ID_GESTURE (C macro)</a>
 </li>
       <li><a href="api/define_CodalComponent_8h_1a9e34b6c648a6814d2ef04819f1873e40.html#c.DEVICE_ID_GYROSCOPE">DEVICE_ID_GYROSCOPE (C macro)</a>
@@ -3954,10 +3993,10 @@ title="Source repository"
 </li>
       <li><a href="api/define_CodalComponent_8h_1ae959f32c3aa92010a03f3e201a03d559.html#c.DEVICE_ID_POWER_MANAGER">DEVICE_ID_POWER_MANAGER (C macro)</a>
 </li>
-      <li><a href="api/define_CodalComponent_8h_1a77c8bec1d7f73edaac65896db823eaaa.html#c.DEVICE_ID_PRESSURE">DEVICE_ID_PRESSURE (C macro)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/define_CodalComponent_8h_1a77c8bec1d7f73edaac65896db823eaaa.html#c.DEVICE_ID_PRESSURE">DEVICE_ID_PRESSURE (C macro)</a>
+</li>
       <li><a href="api/define_CodalComponent_8h_1ac0a0dd5ed7e0c47440f9a65ac0ec40fa.html#c.DEVICE_ID_PULSE_IN">DEVICE_ID_PULSE_IN (C macro)</a>
 </li>
       <li><a href="api/define_CodalComponent_8h_1a498263930329634155e773876e7528fd.html#c.DEVICE_ID_RADIO">DEVICE_ID_RADIO (C macro)</a>
@@ -6681,6 +6720,8 @@ title="Source repository"
       <li><a href="api/enum_ErrorNo_8h_1af44a3dad0434f5c810337b39ddfe69c6.html#_CPPv4N9PanicCode10DEVICE_OOME">PanicCode::DEVICE_OOM (C++ enumerator)</a>
 </li>
       <li><a href="api/enum_ErrorNo_8h_1af44a3dad0434f5c810337b39ddfe69c6.html#_CPPv4N9PanicCode23DEVICE_PERIPHERAL_ERRORE">PanicCode::DEVICE_PERIPHERAL_ERROR (C++ enumerator)</a>
+</li>
+      <li><a href="api/enum_ErrorNo_8h_1af44a3dad0434f5c810337b39ddfe69c6.html#_CPPv4N9PanicCode26DEVICE_RESORUCES_EXHAUSTEDE">PanicCode::DEVICE_RESORUCES_EXHAUSTED (C++ enumerator)</a>
 </li>
       <li><a href="api/struct____attribute____.html#_CPPv4N19PhonyNameDueToError16AdditionalLengthE">PhonyNameDueToError::AdditionalLength (C++ member)</a>
 </li>

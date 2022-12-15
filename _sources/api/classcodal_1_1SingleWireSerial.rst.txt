@@ -9,9 +9,10 @@ Class SingleWireSerial
 Inheritance Relationships
 -------------------------
 
-Base Type
-*********
+Base Types
+**********
 
+- ``public codal::PinPeripheral`` (:ref:`exhale_class_classcodal_1_1PinPeripheral`)
 - ``public codal::CodalComponent`` (:ref:`exhale_class_classcodal_1_1CodalComponent`)
 
 
