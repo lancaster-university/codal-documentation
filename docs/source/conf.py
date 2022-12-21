@@ -55,8 +55,11 @@ html_title = F'{project} {release}'
 extensions = [
     'breathe',
     'exhale',
-    'sphinx.ext.githubpages'
+    'sphinx.ext.githubpages',
+    'sphinx.ext.todo'
 ]
+
+todo_include_todos = True
 
 # Breathe Configuration (paths from the source/ subpath context)
 breathe_projects = { "CODAL": "./_doxygen/xml" }
