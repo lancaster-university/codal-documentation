@@ -156,11 +156,38 @@
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="guides/index.html">
-   Guides
+  <a class="reference internal" href="memory-and-storage/index.html">
+   Memory and Storage
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="memory-and-storage/managedstring.html">
+     ManagedString
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="memory-and-storage/packetbuffer.html">
+     PacketBuffer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="memory-and-storage/microbitimage.html">
+     MicroBitImage
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -181,8 +208,8 @@
   <a class="reference internal" href="projects/index.html">
    Projects
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -198,8 +225,8 @@
   <a class="reference internal" href="codal-api.html">
    The Complete CODAL API
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -210,8 +237,8 @@
   <a class="reference internal" href="libraries/index.html">
    Libraries
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -346,6 +373,30 @@ title="Source repository"
     <a class="reference internal nav-link" href="#c-for-the-micro-bit">
      C++ for the micro:bit
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#concurrency">
+       Concurrency
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#events">
+       Events
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#creating-events">
+         Creating Events
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#detecting-events">
+         Detecting Events
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#build-tools">
@@ -402,6 +453,30 @@ title="Source repository"
     <a class="reference internal nav-link" href="#c-for-the-micro-bit">
      C++ for the micro:bit
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#concurrency">
+       Concurrency
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#events">
+       Events
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#creating-events">
+         Creating Events
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#detecting-events">
+         Detecting Events
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#build-tools">
@@ -431,22 +506,32 @@ title="Source repository"
               <div>
                 
   <section id="getting-started-with-codal">
-<h1><a class="toc-backref" href="#id2">Getting Started with CODAL</a><a class="headerlink" href="#getting-started-with-codal" title="Permalink to this headline">#</a></h1>
+<h1><a class="toc-backref" href="#id7">Getting Started with CODAL</a><a class="headerlink" href="#getting-started-with-codal" title="Permalink to this headline">#</a></h1>
 <div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#getting-started-with-codal" id="id2">Getting Started with CODAL</a></p>
+<li><p><a class="reference internal" href="#getting-started-with-codal" id="id7">Getting Started with CODAL</a></p>
 <ul>
-<li><p><a class="reference internal" href="#what-is-codal" id="id3">What is CODAL?</a></p>
+<li><p><a class="reference internal" href="#what-is-codal" id="id8">What is CODAL?</a></p>
 <ul>
-<li><p><a class="reference internal" href="#what-is-a-device-abstraction" id="id4">What is a device abstraction?</a></p></li>
-<li><p><a class="reference internal" href="#what-is-a-component" id="id5">What is a “Component”?</a></p></li>
-<li><p><a class="reference internal" href="#c-for-the-micro-bit" id="id6">C++ for the micro:bit</a></p></li>
-<li><p><a class="reference internal" href="#build-tools" id="id7">Build Tools</a></p></li>
-<li><p><a class="reference internal" href="#projects-and-guides" id="id8">Projects and Guides</a></p></li>
+<li><p><a class="reference internal" href="#what-is-a-device-abstraction" id="id9">What is a device abstraction?</a></p></li>
+<li><p><a class="reference internal" href="#what-is-a-component" id="id10">What is a “Component”?</a></p></li>
+<li><p><a class="reference internal" href="#c-for-the-micro-bit" id="id11">C++ for the micro:bit</a></p>
+<ul>
+<li><p><a class="reference internal" href="#concurrency" id="id12">Concurrency</a></p></li>
+<li><p><a class="reference internal" href="#events" id="id13">Events</a></p>
+<ul>
+<li><p><a class="reference internal" href="#creating-events" id="id14">Creating Events</a></p></li>
+<li><p><a class="reference internal" href="#detecting-events" id="id15">Detecting Events</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#holding-zone-temp" id="id9">Holding Zone (Temp)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#build-tools" id="id16">Build Tools</a></p></li>
+<li><p><a class="reference internal" href="#projects-and-guides" id="id17">Projects and Guides</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#holding-zone-temp" id="id18">Holding Zone (Temp)</a></p></li>
 </ul>
 </li>
 </ul>
@@ -454,7 +539,7 @@ title="Source repository"
 <p>To start developing in C++ with CODAL and the Micro:bit you’ll first need to ensure that you have followed the steps in <a class="reference internal" href="guides/prerequisites.html"><span class="doc">Installation - Tools</span></a> for
 your operating system, and that you have a new project set up by following the steps in <a class="reference internal" href="guides/codal-projects.html"><span class="doc">CODAL Projects</span></a></p>
 <section id="what-is-codal">
-<h2><a class="toc-backref" href="#id3">What is CODAL?</a><a class="headerlink" href="#what-is-codal" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id8">What is CODAL?</a><a class="headerlink" href="#what-is-codal" title="Permalink to this headline">#</a></h2>
 <p>CODAL is the <cite>Component Oriented Device Abstraction Layer</cite> and is the set of controls through which you drive the micro:bit v2 devices (and friends!).
 It sits in the slightly fuzzy zone between an Application Programming Interface (API) and an Operating System (OS) and shares some functions with both.</p>
 <p>Traditional operating systems, such as those you would find on your compter, tablet, phone, and other devices run the show and present a nicely isolated
@@ -465,7 +550,7 @@ hiding everything from them (except through special methods).</p>
 time.
 Often these would then use OS methods to actually perform any useful task (although purely application-level APIs do exist in abundance!)</p>
 <section id="what-is-a-device-abstraction">
-<h3><a class="toc-backref" href="#id4">What is a device abstraction?</a><a class="headerlink" href="#what-is-a-device-abstraction" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id9">What is a device abstraction?</a><a class="headerlink" href="#what-is-a-device-abstraction" title="Permalink to this headline">#</a></h3>
 <p>Rather than having to write code for each and every specific device, it is often useful to hide the complexity of the actual device specifics
 by wrapping or ‘layering’ it under a much more simple interface.
 CODAL does this for most (if not all) of its devices, allowing programs written for one target, such as the micro:bit v2, also execute on other
@@ -480,10 +565,10 @@ memory mappings, and maintenance tasks required to make this possible, all witho
 <p>Naturally, if a developer is porting CODAL to a new platform, they are much more likely to encounter the lower level parts of the system, but for just
 using CODAL, development is simplified.</p>
 </div>
-<figure class="align-center" id="id1">
+<figure class="align-center" id="id6">
 <img alt="_images/missing-image.jpg" src="_images/missing-image.jpg" />
 <figcaption>
-<p><span class="caption-text">The micro:bit v2 CODAL architecture, as a set of conceptual layers</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">The micro:bit v2 CODAL architecture, as a set of conceptual layers</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Device ‘drivers’ are therefore composed of two parts; one which does the heavy lifting on the device to actually run the hardware, and another which presents
@@ -494,7 +579,7 @@ as the one we use for communication with a computer through the KL27 (See <span 
 line-based serial link in the Field Testing library for NMEA uBlox GPS devices (See <span class="xref std std-doc">/libraries/codal-field-testing.rst</span>).</p>
 </section>
 <section id="what-is-a-component">
-<h3><a class="toc-backref" href="#id5">What is a “Component”?</a><a class="headerlink" href="#what-is-a-component" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id10">What is a “Component”?</a><a class="headerlink" href="#what-is-a-component" title="Permalink to this headline">#</a></h3>
 <p>Components in CODAL devide up specific blocks of functionality, and these informally take on one or more of the following three aspects:</p>
 <dl class="simple">
 <dt>Device Drivers</dt><dd><p>Whereby the function is that of configuring, running and responding to events for a specific piece of hardware.</p>
@@ -519,16 +604,8 @@ as splitting or mixing audio.</p>
 </ul>
 </section>
 <section id="c-for-the-micro-bit">
-<h3><a class="toc-backref" href="#id6">C++ for the micro:bit</a><a class="headerlink" href="#c-for-the-micro-bit" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id11">C++ for the micro:bit</a><a class="headerlink" href="#c-for-the-micro-bit" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
-<li><dl class="simple">
-<dt>Programming model</dt><dd><ul>
-<li><p>Sync vs. Async calls</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><p>Example minimal working app</p></li>
 <li><dl class="simple">
 <dt>The ubit Object as an API</dt><dd><ul>
 <li><p>Reference diagram</p></li>
@@ -537,6 +614,71 @@ as splitting or mixing audio.</p>
 </dd>
 </dl>
 </li>
+<li><p>Example minimal working app</p></li>
+<li><dl class="simple">
+<dt>Programming model</dt><dd><ul>
+<li><p>Sync vs. Async calls</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<section id="concurrency">
+<h4><a class="toc-backref" href="#id12">Concurrency</a><a class="headerlink" href="#concurrency" title="Permalink to this headline">#</a></h4>
+<p>It is not uncommon to want to write programs that can do more than one thing at a time. For example, it takes quite a long time to scroll a message over the LED
+matrix, so what if you want your program to do something else while this is happening?</p>
+<p>Programs that do more than one thing at a time are called concurrent programs.</p>
+<p>The runtime provides two ways you can achieve concurrency in your programs:</p>
+<ul class="simple">
+<li><p>Functions that may take a very long time to complete (e.g. <a href="#id1"><span class="problematic" id="id2">:method:`codal::AnimatedDisplay.scroll`</span></a>) often have “Async” versions
+(e.g. <a href="#id3"><span class="problematic" id="id4">:method:`codal::AnimatedDisplay.scrollAsync`</span></a>).
+These functions have the exact same behaviour as their counterparts, but don’t wait for the effect to finish before allowing the user’s program to continue.
+Instead, as soon as the function is called, the user’s program carries on executing (and can go an do something else while the task is running in the background).</p></li>
+<li><p>Users can also make use of the runtime fiber scheduler. This lets you run parts of your program in the background, and share the processor on your micro:bit
+between those parts as they need it.
+In fact, whenever you write an event handler, the runtime will normally execute your handler in the background in this way, so that it reduces the impact on the
+rest of your program!
+The scheduler is a type of non-preemptive scheduler. This means that the runtime will never take control away from your program - it will wait for it to make a
+call to a runtime function that is blocking.
+All the functions that are blocking are listed as such in their documentation. You can create fibers at any time.</p></li>
+</ul>
+</section>
+<section id="events">
+<h4><a class="toc-backref" href="#id13">Events</a><a class="headerlink" href="#events" title="Permalink to this headline">#</a></h4>
+<p>Computer programs execute sequentially - one line after another, following the logic of the program you have written. Sometimes though, we want to be able to determine
+when something has happened, and write some code to decide what should happen in that case. For example, maybe you want to know when a button has been pressed, when
+your micro:bit has been shaken, or when some data has been sent to you over the micro:bit radio. For these sorts of cases, we create a MicroBitEvent.</p>
+<section id="creating-events">
+<h5><a class="toc-backref" href="#id14">Creating Events</a><a class="headerlink" href="#creating-events" title="Permalink to this headline">#</a></h5>
+<p>Many components will raise events when interesting things occur. For example, ‘MicroBitAccelerometer’ will raise events to indicate that the micro:bit has be been shaken,
+or is in freefall and ‘MicroBitButton’ will send events on a range of button up, down, click and hold events. Programmers are also free to send their own events whenever
+they feel it would be useful. MicroBitEvents are very simple, and consist of only two numbers:</p>
+<ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">source</span></code> - A number identifying the component that created the event.</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">value</span></code> - A number unique to the source that identifies the event.</p></li>
+</ul>
+<p>The documentation for each component defines its event source, and all the events it may generate, and also gives a name to these event values. For example, take a look
+at the button documentation to see that the source MICROBIT_ID_BUTTON_A has the value ‘1’, and an event MICROBIT_BUTTON_EVT_CLICK with the value ‘3’ is generated when a
+button is clicked.</p>
+<p>Creating an event is easy - just create a MicroBitEvent with the source and value you need, and the runtime takes care of the rest:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MicroBitEvent</span><span class="p">(</span><span class="n">MICROBIT_ID_BUTTON_A</span><span class="p">,</span><span class="w"> </span><span class="n">MICROBIT_BUTTON_EVT_CLICK</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Feel free to create your own events lke this too. Just try to avoid using any source ID that is already used by the runtime! :-) See the messageBus page for a complete
+table of the reserved source IDs.</p>
+</section>
+<section id="detecting-events">
+<h5><a class="toc-backref" href="#id15">Detecting Events</a><a class="headerlink" href="#detecting-events" title="Permalink to this headline">#</a></h5>
+<p>The micro:bit runtime has a component called the MicroBitMessageBus, and its job is remember which events your program is interested in, and to deliver MicroBitEvents to
+your program as they occur.</p>
+<p>To find out when an event happens, you need to create a function in your program, then tell the message bus which event you want to attach this function to. This is known
+as writing an event handler.</p>
+<p>You write an event handler through the MicroBitMessageBus listen function.</p>
+<div class="admonition-todo admonition" id="id5">
+<p class="admonition-title">Todo</p>
+<p>Needs a set of examples here. Also some mention of dynamic component IDs under some kind of ‘advanced topics’ section.</p>
+</div>
+<ul class="simple">
 <li><dl class="simple">
 <dt>Thread / Fiber model</dt><dd><ul>
 <li><p>Cooperative multi-tasking</p></li>
@@ -561,7 +703,8 @@ as splitting or mixing audio.</p>
 <li><dl class="simple">
 <dt>Memory and Storage</dt><dd><ul>
 <li><p>Heap vs Stack</p></li>
-<li><p>Managed objects</p></li>
+<li><p>Managed objects
+- Strings <a class="reference internal" href="memory-and-storage/managedstring.html"><span class="doc">ManagedString</span></a></p></li>
 <li><p>Key/value Storage</p></li>
 <li><p>micro:bit virtual disk</p></li>
 <li><p>Persistent storage options</p></li>
@@ -571,13 +714,26 @@ as splitting or mixing audio.</p>
 </li>
 </ul>
 </section>
+</section>
+</section>
 <section id="build-tools">
-<h3><a class="toc-backref" href="#id7">Build Tools</a><a class="headerlink" href="#build-tools" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id16">Build Tools</a><a class="headerlink" href="#build-tools" title="Permalink to this headline">#</a></h3>
+<p>Under ‘the hood’, CODAL uses <a class="reference external" href="https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/downloads">arm-gcc</a> to compile source code into the binary we write to the board, and this compiler suite is driven by <cite>GNU make_</cite> from makefiles
+created by <a class="reference external" href="https://cmake.org/">CMake</a>.
+However, the developer interface to this (and many other functions) is <cite>build.py</cite>, which is a <a class="reference external" href="https://www.python.org/">Python</a> script designed to launch CMake and other tools for you, greatly
+simplifying the build, deployment and management of your CODAL projects.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The build script <cite>build.py</cite> may be replaced by an updated <cite>codal.py</cite> script in the future, as there are plans to merge <a class="reference external" href="https://github.com/lancaster-university/codal-bootstrap">codal-bootstrap</a> into the main <cite>codal</cite> repository,
+to provide developers with a more streamlined build system, and an easy way to update local tooling with updates from The Foundation.
+While the timeline for this is not yet fixed, the changes from a developers perspective should be minimal, as <cite>codal.py</cite> is intended to replicate the functions and features
+available currently in <cite>build.py</cite>, and will just require some slight alterations in workflows to migrate.</p>
+</div>
 <ul class="simple">
-<li><p>CMake, python, make, etc.</p></li>
+<li><p>CMake, python, make, etc. [x]</p></li>
 <li><dl class="simple">
-<dt>build.py or codal.py</dt><dd><ul>
-<li><p>List of useful flags and options</p></li>
+<dt>build.py or codal.py [x]</dt><dd><ul>
+<li><p>List of useful flags and options [x]</p></li>
 </ul>
 </dd>
 </dl>
@@ -661,7 +817,7 @@ as splitting or mixing audio.</p>
 </ul>
 </section>
 <section id="projects-and-guides">
-<h3><a class="toc-backref" href="#id8">Projects and Guides</a><a class="headerlink" href="#projects-and-guides" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id17">Projects and Guides</a><a class="headerlink" href="#projects-and-guides" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>“Disco Lights” -&gt; audio pipeline and display</p></li>
 <li><p>“Hot Potato” -&gt; accelerometer, timers and audio</p></li>
@@ -670,7 +826,7 @@ as splitting or mixing audio.</p>
 </section>
 </section>
 <section id="holding-zone-temp">
-<h2><a class="toc-backref" href="#id9">Holding Zone (Temp)</a><a class="headerlink" href="#holding-zone-temp" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id18">Holding Zone (Temp)</a><a class="headerlink" href="#holding-zone-temp" title="Permalink to this headline">#</a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MicroBit.h&quot;</span><span class="cp"></span>
 
 <span class="c1">// The Micro:bit control object</span>

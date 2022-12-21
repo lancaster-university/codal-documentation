@@ -51,14 +51,14 @@ Simply use the scroll function to specify the message you want to scroll, and si
 If you take a look at the documentation for the scroll function in the API below, you will notice that you can also specify the speed of the scroll as an optional final parameter. The lower the delay, the
 faster your text will scroll across the screen.
 
-::
+.. code-block:: c++
 
     uBit.display.scroll("HELLO!");
     uBit.display.scroll("HELLO!", 100);
 
 Notice that you can also scroll numbers (either constants of variables).
 
-::
+.. code-block:: c++
 
     int c = 42;
     uBit.display.scroll(c);
@@ -68,14 +68,16 @@ Printing Text
 Sometimes it is better to show the letters/numbers in turn on the screen rather than scrolling them. If you want to do this, the 'print' function has exactly the same parameters as 'scroll', but
 with this behaviour.  e.g
 
-::
+.. code-block:: c++
 
     uBit.display.print("HELLO!");
     uBit.display.print("HELLO!", 100);
     uBit.display.print(42);
 
 Do notice that print behaves slightly differently if you provide a single character or numeric digit though. if you do this, the value you provide will stay on the screen until you explicitly
-change the screen. If you ask the runtime to print a string with two or more characters, then each will appear in turn, then disappear. e.g. try this and you will find it stays on the screen::
+change the screen. If you ask the runtime to print a string with two or more characters, then each will appear in turn, then disappear. e.g. try this and you will find it stays on the screen
+
+.. code-block:: c++
 
     uBit.display.print(7);
 
@@ -86,13 +88,13 @@ you create any variable. Once created, you can then provide them as a parameter 
 where in the screen you would like the image to appear - and you can even treat pixel values of zero as transparent if you like!
 See the [MicroBitImage page](../data-types/image.md) for more details on images, but here are a few simple examples
 
-::
+.. code-block:: c++
 
     // show your smiley on the screen...
     MicroBitImage smiley("0,255,0,255, 0\n0,255,0,255,0\n0,0,0,0,0\n255,0,0,0,255\n0,255,255,255,0\n");
     uBit.display.print(smiley);
 
-::
+.. code-block:: c++
 
     // make your smiley peep up from the bottom of the screen...
     MicroBitImage smiley("0,255,0,255, 0\n0,255,0,255,0\n0,0,0,0,0\n255,0,0,0,255\n0,255,255,255,0\n");
@@ -102,8 +104,8 @@ See the [MicroBitImage page](../data-types/image.md) for more details on images,
         uBit.sleep(500);
     }
 
-::
-    
+.. code-block:: c++
+
     // scroll your smiley across the screen...
     MicroBitImage smiley("0,255,0,255, 0\n0,255,0,255,0\n0,0,0,0,0\n255,0,0,0,255\n0,255,255,255,0\n");
     uBit.display.scroll(smiley);
@@ -115,7 +117,7 @@ By now you have probably noticed that the scroll, print and animate functions al
 However, sometimes you want to launch an effect, and let it run in the background while your program does something else. For this, you can use the *Async* variations of the scroll, print and animate functions.
 These all have identical parameters and capabilities, but will return immediately. Try some of the examples above with their Async equivalents to understand this different behaviour.  For example:
 
-::
+.. code-block:: c++
 
     // scroll your smiley across the screen, without waiting for it to finish...
     MicroBitImage smiley("0,255,0,255, 0\n0,255,0,255,0\n0,0,0,0,0\n255,0,0,0,255\n0,255,255,255,0\n");
@@ -139,7 +141,7 @@ DISPLAY_MODE_GREYSCALE
 
 For example:
 
-::
+.. code-block:: c++
 
     // show a smiley with bright eyes!
     MicroBitImage smiley("0,255,0,255, 0\n0,255,0,255,0\n0,0,0,0,0\n32,0,0,0,32\n0,32,32,32,0\n");
@@ -152,7 +154,7 @@ Accessing the Display Buffer
 The memory buffer that is used to drive the LEDs is itself a [MicroBitImage](../data-types/image.md). This means that you can also access and call any of the functions listed in the [MicroBitImage API documentation](../data-types/image.md)
 directly on the display buffer. Examples here include setPixelValue, as illustrated below, but read the above documentation link for full details.
 
-::
+.. code-block:: c++
 
     // set a single pixel by co-ordinate
     uBit.display.image.setPixelValue(2,2,255);

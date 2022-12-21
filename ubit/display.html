@@ -156,11 +156,38 @@
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../guides/index.html">
-   Guides
+  <a class="reference internal" href="../memory-and-storage/index.html">
+   Memory and Storage
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../memory-and-storage/managedstring.html">
+     ManagedString
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../memory-and-storage/packetbuffer.html">
+     PacketBuffer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../memory-and-storage/microbitimage.html">
+     MicroBitImage
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../guides/index.html">
+   Guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -181,8 +208,8 @@
   <a class="reference internal" href="../projects/index.html">
    Projects
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -198,8 +225,8 @@
   <a class="reference internal" href="../codal-api.html">
    The Complete CODAL API
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -210,8 +237,8 @@
   <a class="reference internal" href="../libraries/index.html">
    Libraries
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -529,12 +556,12 @@ LED display. Here are a few examples to get you started though!</p>
 <p>Simply use the scroll function to specify the message you want to scroll, and sit back and watch the result. The message you provide will be scrolled, pixel by pixel across the display from right to left.
 If you take a look at the documentation for the scroll function in the API below, you will notice that you can also specify the speed of the scroll as an optional final parameter. The lower the delay, the
 faster your text will scroll across the screen.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">scroll</span><span class="p">(</span><span class="s">&quot;HELLO!&quot;</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">scroll</span><span class="p">(</span><span class="s">&quot;HELLO!&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">scroll</span><span class="p">(</span><span class="s">&quot;HELLO!&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Notice that you can also scroll numbers (either constants of variables).</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span><span class="w"></span>
 <span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">scroll</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
@@ -543,14 +570,14 @@ faster your text will scroll across the screen.</p>
 <h3>Printing Text<a class="headerlink" href="#printing-text" title="Permalink to this headline">#</a></h3>
 <p>Sometimes it is better to show the letters/numbers in turn on the screen rather than scrolling them. If you want to do this, the ‘print’ function has exactly the same parameters as ‘scroll’, but
 with this behaviour.  e.g</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;HELLO!&quot;</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;HELLO!&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;HELLO!&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
 <span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Do notice that print behaves slightly differently if you provide a single character or numeric digit though. if you do this, the value you provide will stay on the screen until you explicitly
-change the screen. If you ask the runtime to print a string with two or more characters, then each will appear in turn, then disappear. e.g. try this and you will find it stays on the screen:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span><span class="w"></span>
+change the screen. If you ask the runtime to print a string with two or more characters, then each will appear in turn, then disappear. e.g. try this and you will find it stays on the screen</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -560,12 +587,12 @@ change the screen. If you ask the runtime to print a string with two or more cha
 you create any variable. Once created, you can then provide them as a parameter to the scroll and print functions. Unlike the text based animation functions, you can also specify exactly
 where in the screen you would like the image to appear - and you can even treat pixel values of zero as transparent if you like!
 See the [MicroBitImage page](../data-types/image.md) for more details on images, but here are a few simple examples</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// show your smiley on the screen...</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// show your smiley on the screen...</span>
 <span class="n">MicroBitImage</span><span class="w"> </span><span class="n">smiley</span><span class="p">(</span><span class="s">&quot;0,255,0,255, 0</span><span class="se">\n</span><span class="s">0,255,0,255,0</span><span class="se">\n</span><span class="s">0,0,0,0,0</span><span class="se">\n</span><span class="s">255,0,0,0,255</span><span class="se">\n</span><span class="s">0,255,255,255,0</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">smiley</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// make your smiley peep up from the bottom of the screen...</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// make your smiley peep up from the bottom of the screen...</span>
 <span class="n">MicroBitImage</span><span class="w"> </span><span class="n">smiley</span><span class="p">(</span><span class="s">&quot;0,255,0,255, 0</span><span class="se">\n</span><span class="s">0,255,0,255,0</span><span class="se">\n</span><span class="s">0,0,0,0,0</span><span class="se">\n</span><span class="s">255,0,0,0,255</span><span class="se">\n</span><span class="s">0,255,255,255,0</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="o">--</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
@@ -574,7 +601,7 @@ See the [MicroBitImage page](../data-types/image.md) for more details on images,
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// scroll your smiley across the screen...</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// scroll your smiley across the screen...</span>
 <span class="n">MicroBitImage</span><span class="w"> </span><span class="n">smiley</span><span class="p">(</span><span class="s">&quot;0,255,0,255, 0</span><span class="se">\n</span><span class="s">0,255,0,255,0</span><span class="se">\n</span><span class="s">0,0,0,0,0</span><span class="se">\n</span><span class="s">255,0,0,0,255</span><span class="se">\n</span><span class="s">0,255,255,255,0</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">scroll</span><span class="p">(</span><span class="n">smiley</span><span class="p">);</span><span class="w"></span>
 </pre></div>
@@ -585,7 +612,7 @@ See the [MicroBitImage page](../data-types/image.md) for more details on images,
 <p>By now you have probably noticed that the scroll, print and animate functions all wait for the effect requested to finishes before returning. This is by design, to allow you to easily synchronise your programs.
 However, sometimes you want to launch an effect, and let it run in the background while your program does something else. For this, you can use the <em>Async</em> variations of the scroll, print and animate functions.
 These all have identical parameters and capabilities, but will return immediately. Try some of the examples above with their Async equivalents to understand this different behaviour.  For example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// scroll your smiley across the screen, without waiting for it to finish...</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// scroll your smiley across the screen, without waiting for it to finish...</span>
 <span class="n">MicroBitImage</span><span class="w"> </span><span class="n">smiley</span><span class="p">(</span><span class="s">&quot;0,255,0,255, 0</span><span class="se">\n</span><span class="s">0,255,0,255,0</span><span class="se">\n</span><span class="s">0,0,0,0,0</span><span class="se">\n</span><span class="s">255,0,0,0,255</span><span class="se">\n</span><span class="s">0,255,255,255,0</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">scrollAsync</span><span class="p">(</span><span class="n">smiley</span><span class="p">);</span><span class="w"></span>
 </pre></div>
@@ -604,7 +631,7 @@ operate, so it is the default. The latter does provide more useful effects thoug
 </dd>
 </dl>
 <p>For example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// show a smiley with bright eyes!</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// show a smiley with bright eyes!</span>
 <span class="n">MicroBitImage</span><span class="w"> </span><span class="n">smiley</span><span class="p">(</span><span class="s">&quot;0,255,0,255, 0</span><span class="se">\n</span><span class="s">0,255,0,255,0</span><span class="se">\n</span><span class="s">0,0,0,0,0</span><span class="se">\n</span><span class="s">32,0,0,0,32</span><span class="se">\n</span><span class="s">0,32,32,32,0</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">setDisplayMode</span><span class="p">(</span><span class="n">DISPLAY_MODE_GREYSCALE</span><span class="p">);</span><span class="w"></span>
 <span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">smiley</span><span class="p">);</span><span class="w"></span>
@@ -615,7 +642,7 @@ operate, so it is the default. The latter does provide more useful effects thoug
 <h3>Accessing the Display Buffer<a class="headerlink" href="#accessing-the-display-buffer" title="Permalink to this headline">#</a></h3>
 <p>The memory buffer that is used to drive the LEDs is itself a [MicroBitImage](../data-types/image.md). This means that you can also access and call any of the functions listed in the [MicroBitImage API documentation](../data-types/image.md)
 directly on the display buffer. Examples here include setPixelValue, as illustrated below, but read the above documentation link for full details.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// set a single pixel by co-ordinate</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// set a single pixel by co-ordinate</span>
 <span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">image</span><span class="p">.</span><span class="n">setPixelValue</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">255</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>

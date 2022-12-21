@@ -13,6 +13,7 @@ This some of this content is generated from the source code directly, so may dev
 
    getting-started
    ubit/index
+   memory-and-storage/index
    guides/index
    projects/index
    codal-api
