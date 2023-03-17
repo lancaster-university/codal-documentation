@@ -3,25 +3,17 @@
 set -e
 
 echo "!!! MOVING TO VIRTUAL ENV !!!"
-python3 -m venv env
-source env/bin/activate
+python3 -m venv _env
+source _env/bin/activate
 
-python3 -m pip install --upgrade pip
-
-#pip install --no-cache-dir docutils==0.18.1
-
-echo "!!! BUILDING NEW BREATHE !!!"
-if [ ! -d lib ]; then
-    mkdir -p lib
-    git clone https://github.com/JohnVidler/breathe.git lib/breathe
-    cd lib/breathe
-    python3 setup.py install
-    cd ../../
-fi
-
-echo "!!! INSTALLING REQUIREMENTS !!!"
-#pip install -r requirements.txt
-pip install --no-cache-dir Sphinx exhale sphinx-book-theme
+#echo "!!! BUILDING NEW BREATHE !!!"
+#if [ ! -d lib ]; then
+#    mkdir -p _lib
+#    git clone https://github.com/JohnVidler/breathe.git _lib/breathe
+#    cd _lib/breathe
+#    python3 setup.py install
+#    cd ../../
+#fi
 
 echo "!!! BUILDING DOCUMENTATION !!!"
 make html
