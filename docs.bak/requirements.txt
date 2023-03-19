@@ -1,4 +1,0 @@
-sphinx
-breathe
-exhale
-sphinx-book-theme

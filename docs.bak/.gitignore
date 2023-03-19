@@ -1,8 +1,0 @@
-env
-lib
-node_modules
-package.json
-package-lock.json
-build
-source/_doxygen
-source/api
