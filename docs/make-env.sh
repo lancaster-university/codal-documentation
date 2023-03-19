@@ -6,6 +6,9 @@ echo "!!! MOVING TO VIRTUAL ENV !!!"
 python3 -m venv _env
 source _env/bin/activate
 
+python3 -m pip install --upgrade pip
+python3 -m pip install -r requirements.txt
+
 #echo "!!! BUILDING NEW BREATHE !!!"
 #if [ ! -d lib ]; then
 #    mkdir -p _lib

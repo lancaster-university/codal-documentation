@@ -5,13 +5,14 @@
 
 import subprocess
 import os
+import textwrap
 
 # Utility Functions
 def genInputString( libraries ):
     buffer = []
     for lib in libraries:
-        buffer.append( F"\"{os.path.join( '..', 'libraries', lib, 'inc' )}\"" )
-        #buffer.append( F"\"{os.path.join( '..', '..', 'libraries', lib, 'source' )}\"" ) # This will complain if we have duplicated documentation!
+        #buffer.append( F"\"{os.path.join( '..', 'libraries', lib, 'inc' )}\"" )
+        buffer.append( F"\"{os.path.join( '..', 'libraries', lib, 'source' )}\"" ) # This will complain if we have duplicated documentation!
     return ' '.join(buffer)
 
 def getGitVersion( library ):
@@ -64,8 +65,17 @@ exhale_args = {
     # TIP: if using the sphinx-bootstrap-theme, you need
     "treeViewIsBootstrap": True,
     "exhaleExecutesDoxygen": True,
+    # Set to true to see the doxygen commands in the build log
+    "verboseBuild": False,
     #"exhaleDoxygenStdin":    "INPUT = ../../libraries/codal-microbit-v2 ../../libraries/codal-core",
-    "exhaleDoxygenStdin":    F"INPUT = {genInputString(codal_libraries)}",
+    "exhaleDoxygenStdin":    textwrap.dedent(F'''
+        INPUT = {genInputString(codal_libraries)}
+        ENABLE_PREPROCESSING   = YES
+        MACRO_EXPANSION        = YES
+        SEARCH_INCLUDES        = YES
+        SKIP_FUNCTION_MACROS   = YES
+        PREDEFINED += DOXYGEN_SHOULD_SKIP_THIS
+    '''),
 }
 
 # Tell sphinx what the primary language being documented is.
@@ -74,16 +84,8 @@ primary_domain = 'cpp'
 # Tell sphinx what the pygments highlight language should be.
 highlight_language = 'cpp'
 
-# Add any paths that contain templates here, relative to this directory.
-templates_path = [ 'templates' ]
-
-# List of patterns, relative to source directory, that match files and
-# directories to ignore when looking for source files.
-# This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = []
-
-templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+#templates_path = ['_templates']
+exclude_patterns = ['_doxygen', '_env', '_build', 'Thumbs.db', '.DS_Store']
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
@@ -97,9 +99,10 @@ html_theme_options = {
     "home_page_in_toc": True,
     "show_toc_level": 0,
     "use_download_button": False,
+    "default_mode": "light",
     "announcement": "We're currently porting the DAL documentation over to CODAL. The information on here may be outdated or incorrect!",
 }
 
-html_sidebars = {
-    "**": ["sidebar-logo.html", "search-field.html", "sbt-sidebar-nav.html"]
-}
+#html_sidebars = {
+#    "**": ["sidebar-logo.html", "search-field.html", "sbt-sidebar-nav.html"]
+#}
