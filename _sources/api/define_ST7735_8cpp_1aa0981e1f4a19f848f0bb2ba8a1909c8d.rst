@@ -1,0 +1,13 @@
+.. _exhale_define_ST7735_8cpp_1aa0981e1f4a19f848f0bb2ba8a1909c8d:
+
+Define DATABUFSIZE
+==================
+
+- Defined in :ref:`file_libraries_codal-core_source_drivers_ST7735.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DATABUFSIZE

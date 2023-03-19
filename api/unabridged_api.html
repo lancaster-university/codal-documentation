@@ -1,0 +1,3470 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Full API &#8212; CODAL Documentation v0.2.49-4-g300bcb4</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/unabridged_api';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">We're currently porting the DAL documentation over to CODAL. The information on here may be outdated or incorrect!</div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">CODAL Documentation v0.2.49-4-g300bcb4</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL Documentation
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started with CODAL</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ubit/index.html">The uBit Object</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/buttons.html">Buttons and Touch Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/edge-connector.html">Edge Connector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/accelerometer.html">uBit.accelerometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/audio.html">uBit.audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/compass.html">uBit.compass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/display.html">uBit.display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/serial.html">uBit.serial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/storage.html">uBit.storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/thermometer.html">uBit.thermometer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../memory-and-storage/index.html">Memory and Storage</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/managedstring.html">ManagedString</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/packetbuffer.html">PacketBuffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/microbitimage.html">MicroBitImage</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../guides/index.html">Guides</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../guides/prerequisites.html">Installation - Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/codal-projects.html">CODAL Projects</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../projects/index.html">Projects</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/disco-lights.html">Disco Lights</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../codal-api.html">The Complete CODAL API</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary of Terms</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/lancaster-university/codal-documentation" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Full API</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#namespaces">Namespaces</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes-and-structs">Classes and Structs</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defines">Defines</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#typedefs">Typedefs</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="full-api">
+<h1>Full API<a class="headerlink" href="#full-api" title="Permalink to this heading">#</a></h1>
+<section id="namespaces">
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="namespace_codal.html">Namespace codal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="namespace_codal.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_codal.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_codal.html#typedefs">Typedefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_codal.html#variables">Variables</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="namespace_std.html">Namespace std</a></li>
+</ul>
+</div>
+</section>
+<section id="classes-and-structs">
+<h2>Classes and Structs<a class="headerlink" href="#classes-and-structs" title="Permalink to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structcodal_1_1microbit__LEDMapStr.html">Struct microbit_LEDMapStr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structcodal_1_1microbit__LEDMapStr.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structcodal_1_1ST7735WorkBuffer.html">Struct ST7735WorkBuffer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structcodal_1_1ST7735WorkBuffer.html#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_codal__default__target__hal_8cpp_1a71d29209e89161a64a01c9f594a7361e.html">Function __attribute__((weak))</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_codal__default__target__hal_8cpp_1a71d29209e89161a64a01c9f594a7361e.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a716df9dd0189726d393ff5f7a72bc367.html">Function __attribute__((weak))</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a716df9dd0189726d393ff5f7a72bc367.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_CodalFiber_8cpp_1ad7170c0dd03753b0ba186c8e30e70f1d.html">Function __create_fiber</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_CodalFiber_8cpp_1ad7170c0dd03753b0ba186c8e30e70f1d.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_AsciiKeyMap_8cpp_1a76d0e7b8cc98a5de2959103a26d1588f.html">Function asciiKeyMap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_AsciiKeyMap_8cpp_1a76d0e7b8cc98a5de2959103a26d1588f.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MessageBus_8cpp_1afa2476ad8ba85ca333908c560f1da40f.html">Function async_callback</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MessageBus_8cpp_1afa2476ad8ba85ca333908c560f1da40f.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_Synthesizer_8cpp_1a5b1f1699568e7455dfd56ab98c7d4898.html">Function begin_playback</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_Synthesizer_8cpp_1a5b1f1699568e7455dfd56ab98c7d4898.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitFlash_8cpp_1a50350adb4d21c98f05795d4864b7a9b6.html">Function btle_set_user_evt_handler(void(*)(uint32_t))</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitFlash_8cpp_1a50350adb4d21c98f05795d4864b7a9b6.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_NRF52FlashManager_8cpp_1a50350adb4d21c98f05795d4864b7a9b6.html">Function btle_set_user_evt_handler(void(*)(uint32_t))</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_NRF52FlashManager_8cpp_1a50350adb4d21c98f05795d4864b7a9b6.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_SoundSynthesizerEffects_8cpp_1a04f6b0874d1214d6ccb10cab0c2570a4.html">Function calculateFrequencyFromProgression</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_SoundSynthesizerEffects_8cpp_1a04f6b0874d1214d6ccb10cab0c2570a4.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MessageBus_8cpp_1a2b8e9bf5fdd11d4746ac1d375171119f.html">Function codal::allocateNotifyEvent</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MessageBus_8cpp_1a2b8e9bf5fdd11d4746ac1d375171119f.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a41a479204fe84822f46832e73f9d1fad.html">Function codal::ble_running</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a41a479204fe84822f46832e73f9d1fad.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a726e9141c3696c0fbb7fc9743c18a260.html">Function codal::microbit_friendly_name</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a726e9141c3696c0fbb7fc9743c18a260.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitDevice_8cpp_1aa6ccb05d4b191c32e60dd0b5b81eb650.html">Function codal::microbit_LEDMap_columnOff</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitDevice_8cpp_1aa6ccb05d4b191c32e60dd0b5b81eb650.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitDevice_8cpp_1aa10cead111d291e5967557df09dca606.html">Function codal::microbit_LEDMap_columnOn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitDevice_8cpp_1aa10cead111d291e5967557df09dca606.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a2079d63af3cbe958d7e84fb8b9acafb5.html">Function codal::microbit_LEDMap_configure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a2079d63af3cbe958d7e84fb8b9acafb5.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a0bcdfb56a7b8143916d8963a585a60e7.html">Function codal::microbit_LEDMap_pinOutput</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a0bcdfb56a7b8143916d8963a585a60e7.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a27a5bc08ff7ce978b774057e83e7e550.html">Function codal::microbit_LEDMap_RCtoX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a27a5bc08ff7ce978b774057e83e7e550.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a3604567bcf6823dab02d339171e20559.html">Function codal::microbit_LEDMap_RCtoY</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a3604567bcf6823dab02d339171e20559.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a354d973c675a747d46b1e2f1e1bba469.html">Function codal::microbit_LEDMap_rowOff</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a354d973c675a747d46b1e2f1e1bba469.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitDevice_8cpp_1af43b7490559c2c52205093c2576372ab.html">Function codal::microbit_LEDMap_rowOn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitDevice_8cpp_1af43b7490559c2c52205093c2576372ab.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a9aefebeee6bf073575b379d19d00a3f4.html">Function codal::microbit_panic</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a9aefebeee6bf073575b379d19d00a3f4.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitDevice_8cpp_1aad929ae0913afefb621d909eaf94aece.html">Function codal::microbit_panic_timeout</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitDevice_8cpp_1aad929ae0913afefb621d909eaf94aece.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a385a8d97cae0761d23c53d8b18e98751.html">Function codal::microbit_random</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a385a8d97cae0761d23c53d8b18e98751.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitDevice_8cpp_1af7d82336f01f39fb77f3c1ac581b4b3c.html">Function codal::microbit_reset</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitDevice_8cpp_1af7d82336f01f39fb77f3c1ac581b4b3c.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitDevice_8cpp_1abfe912cf436c0ae36e5ba328af78cc33.html">Function codal::microbit_seed_random()</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitDevice_8cpp_1abfe912cf436c0ae36e5ba328af78cc33.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a5750ff11e8d04023b682a014d99b901b.html">Function codal::microbit_seed_random(uint32_t)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a5750ff11e8d04023b682a014d99b901b.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a83e7fe17375b41f3c7bded287324053f.html">Function codal::microbit_serial_number</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitDevice_8cpp_1a83e7fe17375b41f3c7bded287324053f.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_CodalComponent_8cpp_1aeb0a751e1f21f3e88eff5e7c1f2e6b48.html">Function component_callback</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_CodalComponent_8cpp_1aeb0a751e1f21f3e88eff5e7c1f2e6b48.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_FXOS8700_8cpp_1a36a971ec52ae8c2dbf51b944d8cefaa6.html">Function CREATE_KEY_VALUE_TABLE(accelerometerRange, accelerometerRangeData)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_FXOS8700_8cpp_1a36a971ec52ae8c2dbf51b944d8cefaa6.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_FXOS8700_8cpp_1a292563457da80677c6ddc2f2ebf9591b.html">Function CREATE_KEY_VALUE_TABLE(accelerometerPeriod, accelerometerPeriodData)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_FXOS8700_8cpp_1a292563457da80677c6ddc2f2ebf9591b.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_LIS3DH_8cpp_1a36a971ec52ae8c2dbf51b944d8cefaa6.html">Function CREATE_KEY_VALUE_TABLE(accelerometerRange, accelerometerRangeData)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_LIS3DH_8cpp_1a36a971ec52ae8c2dbf51b944d8cefaa6.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_LIS3DH_8cpp_1a292563457da80677c6ddc2f2ebf9591b.html">Function CREATE_KEY_VALUE_TABLE(accelerometerPeriod, accelerometerPeriodData)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_LIS3DH_8cpp_1a292563457da80677c6ddc2f2ebf9591b.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_LSM303Accelerometer_8cpp_1a36a971ec52ae8c2dbf51b944d8cefaa6.html">Function CREATE_KEY_VALUE_TABLE(accelerometerRange, accelerometerRangeData)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_LSM303Accelerometer_8cpp_1a36a971ec52ae8c2dbf51b944d8cefaa6.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_LSM303Accelerometer_8cpp_1a292563457da80677c6ddc2f2ebf9591b.html">Function CREATE_KEY_VALUE_TABLE(accelerometerPeriod, accelerometerPeriodData)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_LSM303Accelerometer_8cpp_1a292563457da80677c6ddc2f2ebf9591b.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_LSM303Magnetometer_8cpp_1a543384816157ff7f48397eeefffdb177.html">Function CREATE_KEY_VALUE_TABLE(magnetometerPeriod, magnetometerPeriodData)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_LSM303Magnetometer_8cpp_1a543384816157ff7f48397eeefffdb177.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitPowerManager_8cpp_1a5a52267ab568b498e7108aa9007eee14.html">Function CREATE_KEY_VALUE_TABLE(uipmPropertyLengths, uipmPropertyLengthData)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitPowerManager_8cpp_1a5a52267ab568b498e7108aa9007eee14.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitUSBFlashManager_8cpp_1ad382041038a6cbbda868e1d2391d5598.html">Function CREATE_KEY_VALUE_TABLE(usbFlashPropertyLength, usbFlashPropertyLengthData)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitUSBFlashManager_8cpp_1ad382041038a6cbbda868e1d2391d5598.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_NRF52LedMatrix_8cpp_1a8012d7c41a5acdf7fe59142bcbe34a16.html">Function display_irq</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_NRF52LedMatrix_8cpp_1a8012d7c41a5acdf7fe59142bcbe34a16.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_PearsonHash_8cpp_1abb822fb4d187abf0db02c994fdd9f766.html">Function eightBitHash</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_PearsonHash_8cpp_1abb822fb4d187abf0db02c994fdd9f766.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_CodalFiber_8cpp_1ab77e72715a41198c2d51657c6db83d6d.html">Function getFiberContext</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_CodalFiber_8cpp_1ab77e72715a41198c2d51657c6db83d6d.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitButton_8cpp_1acb8ed0e02a210c233dbda46534d3e3a4.html">Function getPullModeFronPinMode</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitButton_8cpp_1acb8ed0e02a210c233dbda46534d3e3a4.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_SoundExpressions_8cpp_1a1dd7d700f4a293bb9daf8a7de076e55c.html">Function giggle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_SoundExpressions_8cpp_1a1dd7d700f4a293bb9daf8a7de076e55c.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_SoundExpressions_8cpp_1ad1e71d611192867e84bb32678692333f.html">Function giggleData</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_SoundExpressions_8cpp_1ad1e71d611192867e84bb32678692333f.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_CodalFiber_8cpp_1af3d1b60f406670c52c55d24be993b5e3.html">Function handle_fob</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_CodalFiber_8cpp_1af3d1b60f406670c52c55d24be993b5e3.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_SoundExpressions_8cpp_1aa8a2d09598a654bcb7da4db7277fc5d6.html">Function happy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_SoundExpressions_8cpp_1aa8a2d09598a654bcb7da4db7277fc5d6.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_SoundExpressions_8cpp_1a88744faf53b8387c7ecf729bc57e107e.html">Function happyData</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_SoundExpressions_8cpp_1a88744faf53b8387c7ecf729bc57e107e.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_SoundExpressions_8cpp_1a287f5e4af8618ae9c853500384497500.html">Function hello</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_SoundExpressions_8cpp_1a287f5e4af8618ae9c853500384497500.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_SoundExpressions_8cpp_1aef045ebf30c64cdae75745af970c9578.html">Function helloData</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_SoundExpressions_8cpp_1aef045ebf30c64cdae75745af970c9578.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_ManagedString_8cpp_1a65aa33eff2e664e696fdbe3d3e4bcd9a.html">Function if</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_ManagedString_8cpp_1a65aa33eff2e664e696fdbe3d3e4bcd9a.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_RefCounted_8cpp_1ad48348232972a5840883c91559c19ce3.html">Function isReadOnlyInline</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_RefCounted_8cpp_1ad48348232972a5840883c91559c19ce3.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_ManagedString_8cpp_1a69ba288f0b720c3f6d9de722ff424409.html">Function ManagedString(codal::operator+)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_ManagedString_8cpp_1a69ba288f0b720c3f6d9de722ff424409.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_ManagedString_8cpp_1a992f6bf1a5d6c2c04001658f20671e9a.html">Function ManagedString(lhs, rhs)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_ManagedString_8cpp_1a992f6bf1a5d6c2c04001658f20671e9a.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_SoundExpressions_8cpp_1a864709e2962d0f6829cf8c76dd7a62d2.html">Function mysterious</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_SoundExpressions_8cpp_1a864709e2962d0f6829cf8c76dd7a62d2.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_SoundExpressions_8cpp_1ae5f03b8c1a686c58cbc6b0fd25bd7781.html">Function mysteriousData</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_SoundExpressions_8cpp_1ae5f03b8c1a686c58cbc6b0fd25bd7781.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitLog_8cpp_1a311793d343de16396ce97934e3a0141d.html">Function padString</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitLog_8cpp_1a311793d343de16396ce97934e3a0141d.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitRadio_8cpp_1a069017076901874ae563e04dbd958d9b.html">Function RADIO_IRQHandler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitRadio_8cpp_1a069017076901874ae563e04dbd958d9b.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a97c2b2b813a16085cb7ecb3b2bf64c9e.html">Function read_sample_1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a97c2b2b813a16085cb7ecb3b2bf64c9e.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a0a604b84aadf81c44fb9ab6b655930d5.html">Function read_sample_2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a0a604b84aadf81c44fb9ab6b655930d5.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a1362b198826646d727e732920d2dda3c.html">Function read_sample_3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a1362b198826646d727e732920d2dda3c.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_StreamNormalizer_8cpp_1aee105453936d06e1b957f05c4407af9a.html">Function read_sample_4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_StreamNormalizer_8cpp_1aee105453936d06e1b957f05c4407af9a.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a1805414585f15ce45f9aab2dbe2fdc57.html">Function read_sample_5</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a1805414585f15ce45f9aab2dbe2fdc57.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a52e03ea7b759df939c767f9c52dac697.html">Function read_sample_6</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a52e03ea7b759df939c767f9c52dac697.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a09cb725f6c3a99b8c803b26e02926264.html">Function read_sample_7</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a09cb725f6c3a99b8c803b26e02926264.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a7db885f5688c5048cc64df6b62d950b0.html">Function read_sample_8</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a7db885f5688c5048cc64df6b62d950b0.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_SoundExpressions_8cpp_1adefa5f8e3d4de3471d3781611b3b200b.html">Function sad</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_SoundExpressions_8cpp_1adefa5f8e3d4de3471d3781611b3b200b.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_SoundExpressions_8cpp_1a4e5c3f878b31725aa82b12d508092405.html">Function sadData</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_SoundExpressions_8cpp_1a4e5c3f878b31725aa82b12d508092405.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_SoundExpressions_8cpp_1a5f66898c419c88513f2764a3009dc63c.html">Function slide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_SoundExpressions_8cpp_1a5f66898c419c88513f2764a3009dc63c.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_SoundExpressions_8cpp_1a309a867ad2f668d180dd091f7372e45d.html">Function slideData</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_SoundExpressions_8cpp_1a309a867ad2f668d180dd091f7372e45d.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_SoundExpressions_8cpp_1a70ed5118959990d80a28c4035b86c05d.html">Function soaring</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_SoundExpressions_8cpp_1a70ed5118959990d80a28c4035b86c05d.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_SoundExpressions_8cpp_1a60737a45759863c0e620ae760c3b553f.html">Function soaringData</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_SoundExpressions_8cpp_1a60737a45759863c0e620ae760c3b553f.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_SoundExpressions_8cpp_1afd892011bbd7fea7bd36e739db0c57ea.html">Function spring</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_SoundExpressions_8cpp_1afd892011bbd7fea7bd36e739db0c57ea.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_SoundExpressions_8cpp_1ad11e25a6c6ba4d0f68e6a13767025b71.html">Function springData</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_SoundExpressions_8cpp_1ad11e25a6c6ba4d0f68e6a13767025b71.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_Timer_8cpp_1af4ec1b65c8a502592715146e478fb443.html">Function timer_callback</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_Timer_8cpp_1af4ec1b65c8a502592715146e478fb443.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_SoundExpressions_8cpp_1aa4e8a4ec723446eda4d8553b8ff060f6.html">Function twinkle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_SoundExpressions_8cpp_1aa4e8a4ec723446eda4d8553b8ff060f6.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_SoundExpressions_8cpp_1aa0d8a18e215ec42c08fcd66989234f0f.html">Function twinkleData</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_SoundExpressions_8cpp_1aa0d8a18e215ec42c08fcd66989234f0f.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_StreamNormalizer_8cpp_1adce48dc157ea7ba3a50edff16d940f90.html">Function write_sample_1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_StreamNormalizer_8cpp_1adce48dc157ea7ba3a50edff16d940f90.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a549be96b19d706afed3f7b2abbf4965f.html">Function write_sample_2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a549be96b19d706afed3f7b2abbf4965f.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_StreamNormalizer_8cpp_1aded6f3a9d9cf4359cc1c59f77ca920c2.html">Function write_sample_3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_StreamNormalizer_8cpp_1aded6f3a9d9cf4359cc1c59f77ca920c2.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a02252cb4291db6ef8db6b2ece6a475a0.html">Function write_sample_4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a02252cb4291db6ef8db6b2ece6a475a0.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a4f75b9e7025573b11001d1b5a87f1668.html">Function write_sample_5_6</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a4f75b9e7025573b11001d1b5a87f1668.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a1d7f9563b4a2aa717fc2d6103f1a5123.html">Function write_sample_7</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a1d7f9563b4a2aa717fc2d6103f1a5123.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a2a413989037d761dbc6486b3614e8160.html">Function write_sample_8</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_StreamNormalizer_8cpp_1a2a413989037d761dbc6486b3614e8160.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_MicroBitLog_8cpp_1a828fd59fd198ee012b05d3e079dc9f2b.html">Function writeNum</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_MicroBitLog_8cpp_1a828fd59fd198ee012b05d3e079dc9f2b.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_SoundExpressions_8cpp_1afb41c29c4d22a0f03fdb9b429f9ea1be.html">Function yawn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_SoundExpressions_8cpp_1afb41c29c4d22a0f03fdb9b429f9ea1be.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_SoundExpressions_8cpp_1aad9fd68724d233828e2eddc00cd37c92.html">Function yawnData</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_SoundExpressions_8cpp_1aad9fd68724d233828e2eddc00cd37c92.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_SoundSynthesizerEffects_8cpp_1ae8e6a6b19633e7e8e7d1ec8c2f2b79f2.html">Variable _chromatic</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_SoundSynthesizerEffects_8cpp_1ae8e6a6b19633e7e8e7d1ec8c2f2b79f2.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_SoundSynthesizerEffects_8cpp_1a99d0c90424c212e5d13b8d82684600de.html">Variable _diminished</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_SoundSynthesizerEffects_8cpp_1a99d0c90424c212e5d13b8d82684600de.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_SoundSynthesizerEffects_8cpp_1a58f8237bcc62039cd6a821dfb281854f.html">Variable _majorScale</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_SoundSynthesizerEffects_8cpp_1a58f8237bcc62039cd6a821dfb281854f.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_SoundSynthesizerEffects_8cpp_1aab135d05b36c0ac09643fdbbb4d14a01.html">Variable _majorTriad</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_SoundSynthesizerEffects_8cpp_1aab135d05b36c0ac09643fdbbb4d14a01.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_SoundSynthesizerEffects_8cpp_1adaf55f5737ae946154150213ed3206f1.html">Variable _minorScale</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_SoundSynthesizerEffects_8cpp_1adaf55f5737ae946154150213ed3206f1.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_SoundSynthesizerEffects_8cpp_1a96a134c607ad3c3feae7936bd1d16eab.html">Variable _minorTriad</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_SoundSynthesizerEffects_8cpp_1a96a134c607ad3c3feae7936bd1d16eab.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_SoundSynthesizerEffects_8cpp_1a919d3356f404c818e4b1a3ff0d2b6db9.html">Variable _pentatonicScale</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_SoundSynthesizerEffects_8cpp_1a919d3356f404c818e4b1a3ff0d2b6db9.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_SoundSynthesizerEffects_8cpp_1abc1725500a39372298b25dc70c1d4ae5.html">Variable _wholeTone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_SoundSynthesizerEffects_8cpp_1abc1725500a39372298b25dc70c1d4ae5.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_FXOS8700_8cpp_1ae1f31e8793a543459b039ef0decad1ad.html">Variable accelerometerPeriodData</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_FXOS8700_8cpp_1ae1f31e8793a543459b039ef0decad1ad.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_LIS3DH_8cpp_1ae1f31e8793a543459b039ef0decad1ad.html">Variable accelerometerPeriodData</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_LIS3DH_8cpp_1ae1f31e8793a543459b039ef0decad1ad.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_LSM303Accelerometer_8cpp_1ae1f31e8793a543459b039ef0decad1ad.html">Variable accelerometerPeriodData</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_LSM303Accelerometer_8cpp_1ae1f31e8793a543459b039ef0decad1ad.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_FXOS8700_8cpp_1a71103c9f99262747c9a498efd5e54ec2.html">Variable accelerometerRangeData</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_FXOS8700_8cpp_1a71103c9f99262747c9a498efd5e54ec2.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_LIS3DH_8cpp_1a71103c9f99262747c9a498efd5e54ec2.html">Variable accelerometerRangeData</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_LIS3DH_8cpp_1a71103c9f99262747c9a498efd5e54ec2.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_LSM303Accelerometer_8cpp_1a71103c9f99262747c9a498efd5e54ec2.html">Variable accelerometerRangeData</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_LSM303Accelerometer_8cpp_1a71103c9f99262747c9a498efd5e54ec2.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1afab36d7c93b12105e316dd2814a31bdd.html">Variable ascii_keymap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1afab36d7c93b12105e316dd2814a31bdd.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_CodalFiber_8cpp_1a6b3f16aa2de21913219f4b2c05d943fb.html">Variable codal::currentFiber</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_CodalFiber_8cpp_1a6b3f16aa2de21913219f4b2c05d943fb.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_CodalFiber_8cpp_1a875529fe3c5e7bbdd548733a4e5e1de9.html">Variable codal::fiber_flags</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_CodalFiber_8cpp_1a875529fe3c5e7bbdd548733a4e5e1de9.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_CodalFiber_8cpp_1aafb289e9e5ab78b01c7f5e7bb467bb88.html">Variable codal::fiberList</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_CodalFiber_8cpp_1aafb289e9e5ab78b01c7f5e7bb467bb88.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_CodalFiber_8cpp_1ab33e92569d99baa36adfbaa1c9a83ae3.html">Variable codal::fiberPool</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_CodalFiber_8cpp_1ab33e92569d99baa36adfbaa1c9a83ae3.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_CodalFiber_8cpp_1a8ccfb37c12a9651b85c545a31c630913.html">Variable codal::forkedFiber</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_CodalFiber_8cpp_1a8ccfb37c12a9651b85c545a31c630913.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_CodalFiber_8cpp_1a6a03c0975b4fb247c9dd3b4a2b222c4f.html">Variable codal::idleFiber</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_CodalFiber_8cpp_1a6a03c0975b4fb247c9dd3b4a2b222c4f.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_ST7735_8cpp_1a8548039b21f185e3e3bbe4e4a365a26e.html">Variable codal::initCmds</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_ST7735_8cpp_1a8548039b21f185e3e3bbe4e4a365a26e.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_CodalFiber_8cpp_1ad6f9a39ab738ae2bb17e15410fd343d9.html">Variable codal::messageBus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_CodalFiber_8cpp_1ad6f9a39ab738ae2bb17e15410fd343d9.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_MicroBitDevice_8cpp_1ad3b4768ec67808bc2ba52b4582473720.html">Variable codal::microbit_LEDMap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_MicroBitDevice_8cpp_1ad3b4768ec67808bc2ba52b4582473720.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_MicroBitDevice_8cpp_1ad8b3b7b2a628f99bde2d771ceb5d2d13.html">Variable codal::microbit_LEDMap_columnPins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_MicroBitDevice_8cpp_1ad8b3b7b2a628f99bde2d771ceb5d2d13.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_MicroBitDevice_8cpp_1a3e733810377dde17a57ef676f2a01c6e.html">Variable codal::microbit_LEDMap_rowPins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_MicroBitDevice_8cpp_1a3e733810377dde17a57ef676f2a01c6e.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_MicroBitDevice_8cpp_1a6bc4f8afa78cc2f4ced08845e37ce237.html">Variable codal::panic_face</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_MicroBitDevice_8cpp_1a6bc4f8afa78cc2f4ced08845e37ce237.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_MicroBitDevice_8cpp_1a5b247a1b9c09c76d22f0e1466c82b76c.html">Variable codal::panic_timeout</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_MicroBitDevice_8cpp_1a5b247a1b9c09c76d22f0e1466c82b76c.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_CodalFiber_8cpp_1a321f36a72129609bbefc8ef11f5f0594.html">Variable codal::runQueue</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_CodalFiber_8cpp_1a321f36a72129609bbefc8ef11f5f0594.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_CodalFiber_8cpp_1a79d205f4fdf41a28905f91cbe67e302c.html">Variable codal::sleepQueue</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_CodalFiber_8cpp_1a79d205f4fdf41a28905f91cbe67e302c.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_CodalFiber_8cpp_1a024441a947df7cf106c747afc1c71884.html">Variable codal::waitQueue</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_CodalFiber_8cpp_1a024441a947df7cf106c747afc1c71884.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_Timer_8cpp_1aa7f770e117e3a2d7911f18fefcdbb462.html">Variable cycleScale</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_Timer_8cpp_1aa7f770e117e3a2d7911f18fefcdbb462.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_MicroBitFileSystem_8cpp_1a5e0a2c7c0c374fb50703be0dbd817ed6.html">Variable defaultScratchPage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_MicroBitFileSystem_8cpp_1a5e0a2c7c0c374fb50703be0dbd817ed6.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_MicroBitFlash_8cpp_1a94a1c7bf5b9e170ed004a6f774428eae.html">Variable flash_op_complete</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_MicroBitFlash_8cpp_1a94a1c7bf5b9e170ed004a6f774428eae.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_NRF52FlashManager_8cpp_1a94a1c7bf5b9e170ed004a6f774428eae.html">Variable flash_op_complete</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_NRF52FlashManager_8cpp_1a94a1c7bf5b9e170ed004a6f774428eae.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_MicroBitDevice_8cpp_1affa4a9c43eed32f048354199021ac08c.html">Variable friendly_name</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_MicroBitDevice_8cpp_1affa4a9c43eed32f048354199021ac08c.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_LEDMatrix_8cpp_1a7b407c11f267d3fb302453361e8a99ec.html">Variable greyScaleTimings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_LEDMatrix_8cpp_1a7b407c11f267d3fb302453361e8a99ec.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_PearsonHash_8cpp_1acffaf01df4ac6fa7c559ab1a27710684.html">Variable hashTable</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_PearsonHash_8cpp_1acffaf01df4ac6fa7c559ab1a27710684.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_ILI9341_8cpp_1a12a5e81ac4690592cac1fb6c8e9485ba.html">Variable initcmd</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_ILI9341_8cpp_1a12a5e81ac4690592cac1fb6c8e9485ba.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_NRF52LedMatrix_8cpp_1a87fff697cb02bf4ad1ef95f65b5bf868.html">Variable instance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_NRF52LedMatrix_8cpp_1a87fff697cb02bf4ad1ef95f65b5bf868.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_MAG3110_8cpp_1aaef161739390d90c05343a840c6606e4.html">Variable MAG3110SampleRate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_MAG3110_8cpp_1aaef161739390d90c05343a840c6606e4.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_LSM303Magnetometer_8cpp_1a4dd3f5e563a05b8b4539fa75300d2538.html">Variable magnetometerPeriodData</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_LSM303Magnetometer_8cpp_1a4dd3f5e563a05b8b4539fa75300d2538.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_MicroBitDevice_8cpp_1aca4cf1dfeab2fc47ee0436aca7c829f1.html">Variable microbit_device_instance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_MicroBitDevice_8cpp_1aca4cf1dfeab2fc47ee0436aca7c829f1.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_MicroBitRadio_8cpp_1a73d5f8bde09d544a39a35a0eb88482fe.html">Variable MICROBIT_RADIO_POWER_LEVEL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_MicroBitRadio_8cpp_1a73d5f8bde09d544a39a35a0eb88482fe.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_MMA8653_8cpp_1ad89aacfd8c9a434a00090ec41892c632.html">Variable MMA8653SampleRange</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_MMA8653_8cpp_1ad89aacfd8c9a434a00090ec41892c632.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_MMA8653_8cpp_1afec87b4f9eab482fd5d01be8b98be135.html">Variable MMA8653SampleRate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_MMA8653_8cpp_1afec87b4f9eab482fd5d01be8b98be135.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_codal__default__target__hal_8cpp_1a0fff774d9819726afed87bb8849a77a6.html">Variable old</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_codal__default__target__hal_8cpp_1a0fff774d9819726afed87bb8849a77a6.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_codal__default__target__hal_8cpp_1a04c74f4e114fccbc00eb4c0e5b4e4462.html">Variable p</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_codal__default__target__hal_8cpp_1a04c74f4e114fccbc00eb4c0e5b4e4462.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_BitmapFont_8cpp_1a27f21ff1f40f4a1d2ed52fcdb03f4187.html">Variable pendolino3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_BitmapFont_8cpp_1a27f21ff1f40f4a1d2ed52fcdb03f4187.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_CodalCompat_8cpp_1a758c3372d6cee09fdcdd519d7cce550e.html">Variable random_value</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_CodalCompat_8cpp_1a758c3372d6cee09fdcdd519d7cce550e.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_ManagedString_8cpp_1af7ca2d5d9b84fa4a9b208538d3c4329f.html">Variable rhs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_ManagedString_8cpp_1af7ca2d5d9b84fa4a9b208538d3c4329f.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ae6c459f9d61d4e731bfa07bf4a7bb484.html">Variable seq_0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ae6c459f9d61d4e731bfa07bf4a7bb484.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a8dc5eb08cb39a1754cf4283bd7d2d080.html">Variable seq_1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a8dc5eb08cb39a1754cf4283bd7d2d080.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1aee24f29fc75e69a4e8e04aea2396e320.html">Variable seq_2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1aee24f29fc75e69a4e8e04aea2396e320.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1afb33c1f0369db53db75e5725c2beeefb.html">Variable seq_3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1afb33c1f0369db53db75e5725c2beeefb.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a93be0be4a648db81962cb4c2e9bb5052.html">Variable seq_4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a93be0be4a648db81962cb4c2e9bb5052.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a0849db89482f8c3e68b33046619d0352.html">Variable seq_5</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a0849db89482f8c3e68b33046619d0352.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1af3ef6971f764029893aee40256475632.html">Variable seq_6</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1af3ef6971f764029893aee40256475632.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a0f99d1bfee2c2ed0538d6422972c0b35.html">Variable seq_7</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a0f99d1bfee2c2ed0538d6422972c0b35.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a51bbfe91e599596b9e00ac7a1e0722fe.html">Variable seq_8</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a51bbfe91e599596b9e00ac7a1e0722fe.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a197ebf8474aadaf55731c65f0f5f3897.html">Variable seq_9</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a197ebf8474aadaf55731c65f0f5f3897.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a02cf225055a2c4d2b8273fc06a7e4022.html">Variable seq_A</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a02cf225055a2c4d2b8273fc06a7e4022.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ab3fa4abcea4908ccb52e08ab5ff20154.html">Variable seq_a</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ab3fa4abcea4908ccb52e08ab5ff20154.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a26db20801683db3224f28bc7f194e30a.html">Variable seq_amp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a26db20801683db3224f28bc7f194e30a.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1aaf605b6dc3a4fdf3cc8b785fe5bdf8cb.html">Variable seq_angle_left</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1aaf605b6dc3a4fdf3cc8b785fe5bdf8cb.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a3d83a7b58827778d71c3f3def97121fd.html">Variable seq_angle_right</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a3d83a7b58827778d71c3f3def97121fd.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a1539e45b60c8bb7baf0f828461da1a74.html">Variable seq_apostrophe</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a1539e45b60c8bb7baf0f828461da1a74.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a47a8c6f83bafc4410413f7881a063191.html">Variable seq_ast</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a47a8c6f83bafc4410413f7881a063191.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a94b60cc7be2fb25c92965a71a5a7cb66.html">Variable seq_at</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a94b60cc7be2fb25c92965a71a5a7cb66.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a7bde965dbab331a9ff4c68e9e36fc391.html">Variable seq_B</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a7bde965dbab331a9ff4c68e9e36fc391.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a2cd31f0c3ea8807460e09abb9dd82d9e.html">Variable seq_b</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a2cd31f0c3ea8807460e09abb9dd82d9e.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a21485161c53faa5bb4086f23f05096bf.html">Variable seq_backslash</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a21485161c53faa5bb4086f23f05096bf.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a4450bc80c9cca966920443fce5002eb4.html">Variable seq_backspace</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a4450bc80c9cca966920443fce5002eb4.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a5830886602e5ddad66ff7824b5bf90a6.html">Variable seq_brace_left</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a5830886602e5ddad66ff7824b5bf90a6.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1abd53571d7a16fe028e28d001c4703eb4.html">Variable seq_brace_right</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1abd53571d7a16fe028e28d001c4703eb4.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ac936ddf84b6ea4fe3b5d7d4cf48046f4.html">Variable seq_C</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ac936ddf84b6ea4fe3b5d7d4cf48046f4.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a7d96dfb3b746034c44d2ae4c0adf4594.html">Variable seq_c</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a7d96dfb3b746034c44d2ae4c0adf4594.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1aa79671e799df152361df0ba5b982f619.html">Variable seq_colon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1aa79671e799df152361df0ba5b982f619.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1acbd5eb85205e6649876142b6f955c52c.html">Variable seq_comma</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1acbd5eb85205e6649876142b6f955c52c.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ace1504e827436f295eab82f9a57ea975.html">Variable seq_curly_left</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ace1504e827436f295eab82f9a57ea975.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1af4284f0ff3348bbb93e1f421145e957d.html">Variable seq_curly_right</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1af4284f0ff3348bbb93e1f421145e957d.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a627f6b5f3d13fe24821ce1446582d01f.html">Variable seq_D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a627f6b5f3d13fe24821ce1446582d01f.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1abe258ffe4dc9babdc901a2d05de47989.html">Variable seq_d</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1abe258ffe4dc9babdc901a2d05de47989.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a834446caedea1efb54291a09ea2a1ac2.html">Variable seq_del</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a834446caedea1efb54291a09ea2a1ac2.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ab80002f723395f6df8151ee846bad804.html">Variable seq_dollar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ab80002f723395f6df8151ee846bad804.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a96a4a4d3c2cbb4d795aa687ee716c554.html">Variable seq_dot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a96a4a4d3c2cbb4d795aa687ee716c554.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a09691c54996060ab0c57d9626743cb47.html">Variable seq_E</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a09691c54996060ab0c57d9626743cb47.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ab7129d06eb53bf293424b3daa10f8c3e.html">Variable seq_e</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ab7129d06eb53bf293424b3daa10f8c3e.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a52d6cd92b9c35e57a1dd5a4a43b9eead.html">Variable seq_equal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a52d6cd92b9c35e57a1dd5a4a43b9eead.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ae8ffb741139f4c0fd86f22a525febba0.html">Variable seq_exclamation_point</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ae8ffb741139f4c0fd86f22a525febba0.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a8350f9b0271a68dbf980c4dc381108e8.html">Variable seq_F</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a8350f9b0271a68dbf980c4dc381108e8.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1acdf9401dd361834dfb745c23fc1963d0.html">Variable seq_f</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1acdf9401dd361834dfb745c23fc1963d0.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a2c9f629c0a7dceb3b390ea45faaa42de.html">Variable seq_G</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a2c9f629c0a7dceb3b390ea45faaa42de.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a0b25b4989e24edc841d8bfedecbfcf9b.html">Variable seq_g</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a0b25b4989e24edc841d8bfedecbfcf9b.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1aef75616e66ca4e05789229f5493c3d62.html">Variable seq_grave</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1aef75616e66ca4e05789229f5493c3d62.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a13e7c0cb3a316f7293fb5f5e0ca54b4d.html">Variable seq_H</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a13e7c0cb3a316f7293fb5f5e0ca54b4d.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1affbf81e909a241f61ae86a641d3342c1.html">Variable seq_h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1affbf81e909a241f61ae86a641d3342c1.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ae71a0d88fed76cb30fa8e967c70dccfa.html">Variable seq_hat</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ae71a0d88fed76cb30fa8e967c70dccfa.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a94da320ceed9c9513635523c16d73350.html">Variable seq_I</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a94da320ceed9c9513635523c16d73350.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ab0b7985ce48b012634302ed52ed1a6c4.html">Variable seq_i</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ab0b7985ce48b012634302ed52ed1a6c4.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a423a546d3388419df8463c5b71836d86.html">Variable seq_J</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a423a546d3388419df8463c5b71836d86.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ab85628fd5a75d853f4523e6e3b7a04b4.html">Variable seq_j</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ab85628fd5a75d853f4523e6e3b7a04b4.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a06c33ab4ee5c5df5d8100d8a5fca29c7.html">Variable seq_K</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a06c33ab4ee5c5df5d8100d8a5fca29c7.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a4a9842c383c40b5078e68bc748fd7039.html">Variable seq_k</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a4a9842c383c40b5078e68bc748fd7039.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a2264130dd88363cfff6f8601e8a610ba.html">Variable seq_L</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a2264130dd88363cfff6f8601e8a610ba.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ac6e5618ff993b4bce08473ab119a8a8e.html">Variable seq_l</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ac6e5618ff993b4bce08473ab119a8a8e.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a8ed92f9d04e15edf35d47aee702e866c.html">Variable seq_left_paren</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a8ed92f9d04e15edf35d47aee702e866c.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1acb59fd5128860547716a02e388c33126.html">Variable seq_M</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1acb59fd5128860547716a02e388c33126.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a2974521be47ef52a8283da21058d7854.html">Variable seq_m</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a2974521be47ef52a8283da21058d7854.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1aaf9e54190bac70fd28e14f6ff57ab69a.html">Variable seq_minus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1aaf9e54190bac70fd28e14f6ff57ab69a.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a6d980fa0446413da2eb70687559614d1.html">Variable seq_N</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a6d980fa0446413da2eb70687559614d1.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1aa63a85eff0f1d2883b0744cdf1604db3.html">Variable seq_n</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1aa63a85eff0f1d2883b0744cdf1604db3.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a628c3838b7a5133d41ce42bfb0506c2f.html">Variable seq_newline</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a628c3838b7a5133d41ce42bfb0506c2f.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a895d8c856a1b5099fab86df83ab6d6c1.html">Variable seq_O</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a895d8c856a1b5099fab86df83ab6d6c1.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1af56c44d42e9b42a5a5896c1d8fd637df.html">Variable seq_o</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1af56c44d42e9b42a5a5896c1d8fd637df.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a66581b690b5584a128cd5b4c4c755641.html">Variable seq_P</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a66581b690b5584a128cd5b4c4c755641.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1aba7cbcf5f5dd1d5f0b0c252b000f131f.html">Variable seq_p</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1aba7cbcf5f5dd1d5f0b0c252b000f131f.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a38c4424d77303d4c669611ca0a40b394.html">Variable seq_percent</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a38c4424d77303d4c669611ca0a40b394.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a7d9b24e360f1005da61ce8ef4db85ed1.html">Variable seq_pipe</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a7d9b24e360f1005da61ce8ef4db85ed1.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a428043778bdc4c1627e5c0e51544474e.html">Variable seq_plus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a428043778bdc4c1627e5c0e51544474e.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a7bb901859beff79ca3b285df54df6bf0.html">Variable seq_pound</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a7bb901859beff79ca3b285df54df6bf0.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1aa024919a5345a5ff7bbf12c090891472.html">Variable seq_Q</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1aa024919a5345a5ff7bbf12c090891472.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a370fd0970310b963357207af6755d8a0.html">Variable seq_q</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a370fd0970310b963357207af6755d8a0.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a23546d73b7c7e837e9440710ffa7cbfc.html">Variable seq_question</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a23546d73b7c7e837e9440710ffa7cbfc.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a4f1a0567502aebb40665f13726f0cde3.html">Variable seq_quote</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a4f1a0567502aebb40665f13726f0cde3.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a6b669f02be6d376661d45b34c47c06f9.html">Variable seq_R</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a6b669f02be6d376661d45b34c47c06f9.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1aedcbd7651ed42e9e98194f72d159d70f.html">Variable seq_r</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1aedcbd7651ed42e9e98194f72d159d70f.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a3392e907e3e3902bf0da44142cb0dcda.html">Variable seq_right_paren</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a3392e907e3e3902bf0da44142cb0dcda.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a08965ae121c69472ee61d638a94a164d.html">Variable seq_S</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a08965ae121c69472ee61d638a94a164d.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a679c6634da2986be67ec5f874ad325e2.html">Variable seq_s</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a679c6634da2986be67ec5f874ad325e2.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a61515aaef7f8c2fe1a9cd66cddf11012.html">Variable seq_semicolon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a61515aaef7f8c2fe1a9cd66cddf11012.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a060f9fdff99889ffb40ca1d0af660446.html">Variable seq_slash</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a060f9fdff99889ffb40ca1d0af660446.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a0c417630140c2fd983a3b70fb418092e.html">Variable seq_space</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a0c417630140c2fd983a3b70fb418092e.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1af15d0c6d0be055aab2f5a17b69544ab9.html">Variable seq_T</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1af15d0c6d0be055aab2f5a17b69544ab9.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ad01065bd6a3d99d70d9aa714d93831a2.html">Variable seq_t</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ad01065bd6a3d99d70d9aa714d93831a2.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ae1db93cae32137c378f5bbb90a6683a0.html">Variable seq_tab</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ae1db93cae32137c378f5bbb90a6683a0.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a27c67c147badb36e6f7f1a47ecf17124.html">Variable seq_tilda</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a27c67c147badb36e6f7f1a47ecf17124.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ac6969350973a2a194c082d7d84bccf81.html">Variable seq_U</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ac6969350973a2a194c082d7d84bccf81.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1afd7ab3e42f8ed9f81015dda0005efd23.html">Variable seq_u</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1afd7ab3e42f8ed9f81015dda0005efd23.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1acd5e83c9d0e633eadf5ac352a9f544bb.html">Variable seq_underscore</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1acd5e83c9d0e633eadf5ac352a9f544bb.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a56080806274770d0f1ceb2dadf68627a.html">Variable seq_V</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a56080806274770d0f1ceb2dadf68627a.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ad132e594b9a2639bde5e4f6fe422f36f.html">Variable seq_v</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1ad132e594b9a2639bde5e4f6fe422f36f.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a9753c6f3e624772f123b59ba5b978fef.html">Variable seq_W</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a9753c6f3e624772f123b59ba5b978fef.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a36bf86b113daaf75f7b230018379762c.html">Variable seq_w</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a36bf86b113daaf75f7b230018379762c.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a66d56da69b84dfb4793eebac43521e9f.html">Variable seq_X</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a66d56da69b84dfb4793eebac43521e9f.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a11c5ecf63cddaf0405badd022938bd87.html">Variable seq_x</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a11c5ecf63cddaf0405badd022938bd87.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1adac008576fd4c9fff289bef492b03a72.html">Variable seq_Y</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1adac008576fd4c9fff289bef492b03a72.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a035e7b13022af652ce68d5069d2e2e70.html">Variable seq_y</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a035e7b13022af652ce68d5069d2e2e70.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a30c3b290181146964d1345f2fa9fa175.html">Variable seq_Z</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a30c3b290181146964d1345f2fa9fa175.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a95e32d54db661406cc25c16a4cd4d72e.html">Variable seq_z</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a95e32d54db661406cc25c16a4cd4d72e.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_Synthesizer_8cpp_1a9a05778a3f22c7bf79aef01133278e3d.html">Variable sineTone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_Synthesizer_8cpp_1a9a05778a3f22c7bf79aef01133278e3d.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_MicroBitPowerManager_8cpp_1a2de8e061450f2d67d2af29294c926918.html">Variable UIPM_I2C_NOP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_MicroBitPowerManager_8cpp_1a2de8e061450f2d67d2af29294c926918.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_MicroBitPowerManager_8cpp_1a9a0001a09c0fccb67648eb648cdc1b24.html">Variable uipmPropertyLengthData</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_MicroBitPowerManager_8cpp_1a9a0001a09c0fccb67648eb648cdc1b24.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a0706f30e64990b9c56a950486366c55b.html">Variable unmapped</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_AsciiKeyMap_8cpp_1a0706f30e64990b9c56a950486366c55b.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_MicroBitUSBFlashManager_8cpp_1a1dcf62e2f8b6064eae30bee84eb43707.html">Variable usbFlashPropertyLengthData</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_MicroBitUSBFlashManager_8cpp_1a1dcf62e2f8b6064eae30bee84eb43707.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_MessageBus_8cpp_1ae827326cb3657a61e58b1d0c40cef12b.html">Variable userNotifyId</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_MessageBus_8cpp_1ae827326cb3657a61e58b1d0c40cef12b.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="variable_codal__default__target__hal_8cpp_1a72cce251f881b457edf43fe08ac1e251.html">Variable value</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_codal__default__target__hal_8cpp_1a72cce251f881b457edf43fe08ac1e251.html#variable-documentation">Variable Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="defines">
+<h2>Defines<a class="headerlink" href="#defines" title="Permalink to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitLog_8cpp_1a44c876c78e2fc722c001dfc1a36b638f.html">Define ARRAY_LEN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitLog_8cpp_1a44c876c78e2fc722c001dfc1a36b638f.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a3153a272f18d0f805028fce7e4337b53.html">Define assert</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a3153a272f18d0f805028fce7e4337b53.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_Compass_8cpp_1ac69088477cbf6be32811abd3d31e9ea5.html">Define CALIBRATED_SAMPLE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_Compass_8cpp_1ac69088477cbf6be32811abd3d31e9ea5.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitCompassCalibrator_8cpp_1a45714559e1d332a79c006d42ef299f6a.html">Define CALIBRATION_INCREMENT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitCompassCalibrator_8cpp_1a45714559e1d332a79c006d42ef299f6a.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_StandardSPIFlash_8cpp_1a9b7ee5bbb263671ca310a70e0d1526e9.html">Define check</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_StandardSPIFlash_8cpp_1a9b7ee5bbb263671ca310a70e0d1526e9.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_SoundExpressions_8cpp_1a919c3f752b8d51ddf16c8b61661818a6.html">Define CLAMP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_SoundExpressions_8cpp_1a919c3f752b8d51ddf16c8b61661818a6.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1aa0981e1f4a19f848f0bb2ba8a1909c8d.html">Define DATABUFSIZE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1aa0981e1f4a19f848f0bb2ba8a1909c8d.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a62249e384b997229a3e2ae74ade334e2.html">Define DELAY</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a62249e384b997229a3e2ae74ade334e2.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_Image_8cpp_1a172012a40abd7130cea4483e3509d549.html">Define EMPTY_DATA</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_Image_8cpp_1a172012a40abd7130cea4483e3509d549.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ManagedBuffer_8cpp_1a172012a40abd7130cea4483e3509d549.html">Define EMPTY_DATA</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ManagedBuffer_8cpp_1a172012a40abd7130cea4483e3509d549.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ManagedString_8cpp_1a172012a40abd7130cea4483e3509d549.html">Define EMPTY_DATA</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ManagedString_8cpp_1a172012a40abd7130cea4483e3509d549.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a18838093de54eca56aa97ead2a587280.html">Define ENC16</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a18838093de54eca56aa97ead2a587280.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_CodalFiber_8cpp_1a3458bfe88b083b7a76125b02abe25898.html">Define HAS_THREAD_USER_DATA</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_CodalFiber_8cpp_1a3458bfe88b083b7a76125b02abe25898.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a0735e9a5ee316588f5430559b56074c4.html">Define ILI9341_CASET</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a0735e9a5ee316588f5430559b56074c4.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a808fd63764a8bf4de696d11e897e68de.html">Define ILI9341_DFUNCTR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a808fd63764a8bf4de696d11e897e68de.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a96cd1f1e426827243075de8477439222.html">Define ILI9341_DISPOFF</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a96cd1f1e426827243075de8477439222.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a278999b9f435340e6a689165c860050a.html">Define ILI9341_DISPON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a278999b9f435340e6a689165c860050a.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a086515b5e792ce35f8cd0b875bd1f16e.html">Define ILI9341_FRMCTR1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a086515b5e792ce35f8cd0b875bd1f16e.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a144a76fa56427d7e38c99708fa42e47f.html">Define ILI9341_FRMCTR2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a144a76fa56427d7e38c99708fa42e47f.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a1be5fe675d09e59287ef886e11c87bcb.html">Define ILI9341_FRMCTR3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a1be5fe675d09e59287ef886e11c87bcb.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a37d467e2a578e59844315ee76621fecb.html">Define ILI9341_GAMMASET</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a37d467e2a578e59844315ee76621fecb.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1aa2c11f3421fe0cfd04de4afc144145ae.html">Define ILI9341_GMCTRN1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1aa2c11f3421fe0cfd04de4afc144145ae.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a5e137029ba159bd4a942dbe44fbb45bd.html">Define ILI9341_GMCTRP1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a5e137029ba159bd4a942dbe44fbb45bd.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1ac499cd0e0c7f17006dcc2e6998915d57.html">Define ILI9341_INVCTR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1ac499cd0e0c7f17006dcc2e6998915d57.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1aa373acfd567ed1ab59f04d44fe1e5b6f.html">Define ILI9341_INVOFF</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1aa373acfd567ed1ab59f04d44fe1e5b6f.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a310ca5d5d75b141c72e36a14e8b2bb8a.html">Define ILI9341_INVON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a310ca5d5d75b141c72e36a14e8b2bb8a.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a3788bc35c2adfe007f3b6a03b85d2071.html">Define ILI9341_MADCTL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a3788bc35c2adfe007f3b6a03b85d2071.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a58488419649441aec5166d08b1160837.html">Define ILI9341_NOP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a58488419649441aec5166d08b1160837.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1ac657aed4eab33cf9ba9c3a44919218ab.html">Define ILI9341_NORON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1ac657aed4eab33cf9ba9c3a44919218ab.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1acc4a8ed569a4c04d4ef11e6a458fc2e0.html">Define ILI9341_PASET</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1acc4a8ed569a4c04d4ef11e6a458fc2e0.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1ae22acdf8d6ceb5710050b7a1b8bfcefc.html">Define ILI9341_PIXFMT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1ae22acdf8d6ceb5710050b7a1b8bfcefc.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a9d46802e696356cd1b7625d36c20e8dd.html">Define ILI9341_PTLAR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a9d46802e696356cd1b7625d36c20e8dd.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a9960c17c0ec3f5adde7cf7fa94f27220.html">Define ILI9341_PTLON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a9960c17c0ec3f5adde7cf7fa94f27220.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a2429382736b6d514ab4085a8ea5951d4.html">Define ILI9341_PWCTR1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a2429382736b6d514ab4085a8ea5951d4.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1ae6bf550a370a529b19263c6e05649b07.html">Define ILI9341_PWCTR2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1ae6bf550a370a529b19263c6e05649b07.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1ace7ad088cfc571e05a4066a9dd8a0049.html">Define ILI9341_PWCTR3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1ace7ad088cfc571e05a4066a9dd8a0049.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a44774f69e5dfc0d7b87f5a8bf5cad0e9.html">Define ILI9341_PWCTR4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a44774f69e5dfc0d7b87f5a8bf5cad0e9.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1af606a5acf671a097da5af39f83091fd6.html">Define ILI9341_PWCTR5</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1af606a5acf671a097da5af39f83091fd6.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a1380e18775e66a698eb0120f64af8d27.html">Define ILI9341_RAMRD</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a1380e18775e66a698eb0120f64af8d27.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a7130c62347e51a4bafb7070ba393ee39.html">Define ILI9341_RAMWR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a7130c62347e51a4bafb7070ba393ee39.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a97969fc9b0fb77e372d895f647387207.html">Define ILI9341_RDDID</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a97969fc9b0fb77e372d895f647387207.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a85532e0077d505687036b92bd7e70989.html">Define ILI9341_RDDST</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a85532e0077d505687036b92bd7e70989.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a9e00fc41e2ce41f264f7f19a01bd6b41.html">Define ILI9341_RDID1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a9e00fc41e2ce41f264f7f19a01bd6b41.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a18b8144a0ab0fce95e1873102b72da8a.html">Define ILI9341_RDID2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a18b8144a0ab0fce95e1873102b72da8a.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a31b7dff5fc8d6affa4f328a4de46ce9f.html">Define ILI9341_RDID3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a31b7dff5fc8d6affa4f328a4de46ce9f.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a2866fa67540c7099f2c5d724196f430e.html">Define ILI9341_RDID4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a2866fa67540c7099f2c5d724196f430e.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a4e4b9406383c20af1be6e0e05f319abf.html">Define ILI9341_RDIMGFMT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a4e4b9406383c20af1be6e0e05f319abf.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1aa9692e6f195c64bf7ffbdf1c37e2a473.html">Define ILI9341_RDMADCTL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1aa9692e6f195c64bf7ffbdf1c37e2a473.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1ad9996d51efbffc39bd2909a46dcb443b.html">Define ILI9341_RDMODE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1ad9996d51efbffc39bd2909a46dcb443b.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1aaa8ea7376d8942dded4e00bfe006c9bd.html">Define ILI9341_RDPIXFMT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1aaa8ea7376d8942dded4e00bfe006c9bd.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1ada2055b1b89e10dd1a854d98022ce40c.html">Define ILI9341_RDSELFDIAG</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1ada2055b1b89e10dd1a854d98022ce40c.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a91c32c640e65f7e890fdbb5aed29077b.html">Define ILI9341_SLPIN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a91c32c640e65f7e890fdbb5aed29077b.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a2183eaeed3b4f2e82f1f1a5aed9cf8e1.html">Define ILI9341_SLPOUT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a2183eaeed3b4f2e82f1f1a5aed9cf8e1.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a05c1fbaa5809b6e45dd1da9fd0c05fc0.html">Define ILI9341_SWRESET</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a05c1fbaa5809b6e45dd1da9fd0c05fc0.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1a3ac0bad81e82dca703ea78d9f1ad8cd1.html">Define ILI9341_VMCTR1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1a3ac0bad81e82dca703ea78d9f1ad8cd1.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1ae2d100e90910bf4aedb20fb88b3f582c.html">Define ILI9341_VMCTR2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1ae2d100e90910bf4aedb20fb88b3f582c.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ILI9341_8cpp_1aed59201f8eb2291e618d3b3151adc497.html">Define ILI9341_VSCRSADD</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ILI9341_8cpp_1aed59201f8eb2291e618d3b3151adc497.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_CodalFiber_8cpp_1a6896ce0afdd797b310514d053b2cb07e.html">Define INITIAL_STACK_DEPTH</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_CodalFiber_8cpp_1a6896ce0afdd797b310514d053b2cb07e.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a659f0d6f0c258a3d91f882a59dfa76f5.html">Define MADCTL_BGR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a659f0d6f0c258a3d91f882a59dfa76f5.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a6f8b9fad1b5db52b70960b389056f0dd.html">Define MADCTL_MH</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a6f8b9fad1b5db52b70960b389056f0dd.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a9ecee6d3131d3b4f750b94d5766b998a.html">Define MADCTL_ML</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a9ecee6d3131d3b4f750b94d5766b998a.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1adc23a239d2b6976d53254ef4fc5d1713.html">Define MADCTL_MV</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1adc23a239d2b6976d53254ef4fc5d1713.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a6d18ed48efb3186877a07d0e81155453.html">Define MADCTL_MX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a6d18ed48efb3186877a07d0e81155453.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1ab30e6bd24448245df1d60a3e1c4ddbdf.html">Define MADCTL_MY</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1ab30e6bd24448245df1d60a3e1c4ddbdf.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1acc1e55b52f8a56b7719ab147308a1668.html">Define MADCTL_RGB</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1acc1e55b52f8a56b7719ab147308a1668.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitMemoryMap_8cpp_1a6789ebc0df71a8ef76bfbb4fb5f74aad.html">Define MAX_STRING_LENGTH</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitMemoryMap_8cpp_1a6789ebc0df71a8ef76bfbb4fb5f74aad.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitDevice_8cpp_1aab583ad320c18a7c944fcd155956c537.html">Define microbit_LEDMap_COLS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitDevice_8cpp_1aab583ad320c18a7c944fcd155956c537.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitDevice_8cpp_1aa8a91e4911de7546f53b7642adb34e5a.html">Define microbit_LEDMap_HEIGHT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitDevice_8cpp_1aa8a91e4911de7546f53b7642adb34e5a.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitDevice_8cpp_1a03c99dbdc9c762a6b12e0c370c5e10b0.html">Define microbit_LEDMap_PINCOL0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitDevice_8cpp_1a03c99dbdc9c762a6b12e0c370c5e10b0.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitDevice_8cpp_1a040d7964cb1f1003b12bda1392e5d18b.html">Define microbit_LEDMap_PINCOL1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitDevice_8cpp_1a040d7964cb1f1003b12bda1392e5d18b.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitDevice_8cpp_1aad850f0d10f39de3d9765493ab57465c.html">Define microbit_LEDMap_PINCOL2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitDevice_8cpp_1aad850f0d10f39de3d9765493ab57465c.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitDevice_8cpp_1a690f62edbcb939fb56711e1ec97b8fa3.html">Define microbit_LEDMap_PINCOL3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitDevice_8cpp_1a690f62edbcb939fb56711e1ec97b8fa3.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitDevice_8cpp_1acf62070a59a779770869ce9830a9e0e8.html">Define microbit_LEDMap_PINCOL4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitDevice_8cpp_1acf62070a59a779770869ce9830a9e0e8.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitDevice_8cpp_1a888f13cd0d771a728fec662a923a708e.html">Define microbit_LEDMap_PINROW0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitDevice_8cpp_1a888f13cd0d771a728fec662a923a708e.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitDevice_8cpp_1a01b9cdf1035ea65e9a2940d637703742.html">Define microbit_LEDMap_PINROW1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitDevice_8cpp_1a01b9cdf1035ea65e9a2940d637703742.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitDevice_8cpp_1a9029e86eea8fe6b3d62ebec9d44853e8.html">Define microbit_LEDMap_PINROW2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitDevice_8cpp_1a9029e86eea8fe6b3d62ebec9d44853e8.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitDevice_8cpp_1a6337141e65af4ed0c0b79f9d0117427f.html">Define microbit_LEDMap_PINROW3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitDevice_8cpp_1a6337141e65af4ed0c0b79f9d0117427f.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitDevice_8cpp_1aa0f6f2a537dae5f40320c36e5cf92609.html">Define microbit_LEDMap_PINROW4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitDevice_8cpp_1aa0f6f2a537dae5f40320c36e5cf92609.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitDevice_8cpp_1ab5d90ce911a150ca764b693f20ac1bbd.html">Define microbit_LEDMap_ROWS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitDevice_8cpp_1ab5d90ce911a150ca764b693f20ac1bbd.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitDevice_8cpp_1a8e05f71e1d766578f1914291bb0c94fe.html">Define microbit_LEDMap_WIDTH</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitDevice_8cpp_1a8e05f71e1d766578f1914291bb0c94fe.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MbedMemberFunctionCallback_8cpp_1a2b988eeae7db937762da7844ec775c68.html">Define MICROBIT_MBED_MEMBER_FUNCTION_CALLBACK_CPP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MbedMemberFunctionCallback_8cpp_1a2b988eeae7db937762da7844ec775c68.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitDevice_8cpp_1ab9598967bd70e7048f577e9c61d4ec43.html">Define microbit_panic_CLEARSCANS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitDevice_8cpp_1ab9598967bd70e7048f577e9c61d4ec43.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitDevice_8cpp_1a45d611e4a0befc1e0b61584917b1a409.html">Define microbit_panic_DIVBASE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitDevice_8cpp_1a45d611e4a0befc1e0b61584917b1a409.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitDevice_8cpp_1ad16f1366a7e7744477e4b9a944d99cfc.html">Define microbit_panic_DIVMAX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitDevice_8cpp_1ad16f1366a7e7744477e4b9a944d99cfc.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitDevice_8cpp_1aab9e21d469d9928bede29dbd44bc2ff5.html">Define microbit_panic_MSG1STDIGIT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitDevice_8cpp_1aab9e21d469d9928bede29dbd44bc2ff5.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitDevice_8cpp_1abfc88b6cad088445a618a74da20002da.html">Define microbit_panic_MSGLEN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitDevice_8cpp_1abfc88b6cad088445a618a74da20002da.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitDevice_8cpp_1a9663b00d0a822e59f33069806c0d4214.html">Define microbit_panic_ROWDELAY</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitDevice_8cpp_1a9663b00d0a822e59f33069806c0d4214.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitDevice_8cpp_1afae4028709cd8da63dc52bbe784e6fa6.html">Define microbit_panic_SCANS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitDevice_8cpp_1afae4028709cd8da63dc52bbe784e6fa6.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitFlash_8cpp_1a3acffbd305ee72dcd4593c0d8af64a4f.html">Define MIN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitFlash_8cpp_1a3acffbd305ee72dcd4593c0d8af64a4f.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_Image_8cpp_1a2e03803dbc104b96673147ccc7b5e28a.html">Define REF_TAG</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_Image_8cpp_1a2e03803dbc104b96673147ccc7b5e28a.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ManagedBuffer_8cpp_1a2e03803dbc104b96673147ccc7b5e28a.html">Define REF_TAG</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ManagedBuffer_8cpp_1a2e03803dbc104b96673147ccc7b5e28a.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ManagedString_8cpp_1a2e03803dbc104b96673147ccc7b5e28a.html">Define REF_TAG</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ManagedString_8cpp_1a2e03803dbc104b96673147ccc7b5e28a.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a484d38defdf6303f4a8d19f994d0593d.html">Define ST7735_CASET</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a484d38defdf6303f4a8d19f994d0593d.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a9caf06c78cdaba66cea553668103b759.html">Define ST7735_COLMOD</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a9caf06c78cdaba66cea553668103b759.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a1f9701dd8594cc2fb7c6f783b05d2f65.html">Define ST7735_DISPOFF</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a1f9701dd8594cc2fb7c6f783b05d2f65.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a1afa532348b3d081b7b1ecdfa9ba17e0.html">Define ST7735_DISPON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a1afa532348b3d081b7b1ecdfa9ba17e0.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1ace47a845775310352dc7e2fae3e1586a.html">Define ST7735_DISSET5</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1ace47a845775310352dc7e2fae3e1586a.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1aeb5c49fcdd239ab153f5d9b15304ca9c.html">Define ST7735_FRMCTR1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1aeb5c49fcdd239ab153f5d9b15304ca9c.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a3b416f231bb6eedec8cfcf277c6d36d3.html">Define ST7735_FRMCTR2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a3b416f231bb6eedec8cfcf277c6d36d3.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a4afe2b326d709aaeb70c657f8210ea2b.html">Define ST7735_FRMCTR3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a4afe2b326d709aaeb70c657f8210ea2b.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1aad3c0783af31cd4c4e33bf8748e961fa.html">Define ST7735_GMCTRN1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1aad3c0783af31cd4c4e33bf8748e961fa.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1ad90bd9bbed9c95192a2b44b8f63f86e5.html">Define ST7735_GMCTRP1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1ad90bd9bbed9c95192a2b44b8f63f86e5.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1addfb44b70c2b60a0d04e3d22611d54ee.html">Define ST7735_INVCTR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1addfb44b70c2b60a0d04e3d22611d54ee.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1ad66cc531ec897ce0465ff21d152b756a.html">Define ST7735_INVOFF</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1ad66cc531ec897ce0465ff21d152b756a.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1ae670a3d34e887559366735ca999e80d3.html">Define ST7735_INVON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1ae670a3d34e887559366735ca999e80d3.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a74afa388731002f70e250770901f90a2.html">Define ST7735_MADCTL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a74afa388731002f70e250770901f90a2.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a1b574de2db49ecfa63ce0216112903cc.html">Define ST7735_NOP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a1b574de2db49ecfa63ce0216112903cc.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a9e059398ac81ef081169997c28f908cb.html">Define ST7735_NORON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a9e059398ac81ef081169997c28f908cb.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a057611dfe567fd9095f27d40087e4948.html">Define ST7735_PTLAR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a057611dfe567fd9095f27d40087e4948.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1aac679645f819d98761965299f19620f6.html">Define ST7735_PTLON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1aac679645f819d98761965299f19620f6.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1ab4294b48d705690347bf0fed4af82697.html">Define ST7735_PWCTR1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1ab4294b48d705690347bf0fed4af82697.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1aef4c5d9e00b07b6fc601f8ad2dbbb101.html">Define ST7735_PWCTR2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1aef4c5d9e00b07b6fc601f8ad2dbbb101.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1ac69d092c9c2693807a2a992dbf297f24.html">Define ST7735_PWCTR3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1ac69d092c9c2693807a2a992dbf297f24.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a95b55308b48e83b1a3e2cf51393030f1.html">Define ST7735_PWCTR4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a95b55308b48e83b1a3e2cf51393030f1.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a91cc0e141903ca80ad7fc6f108988184.html">Define ST7735_PWCTR5</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a91cc0e141903ca80ad7fc6f108988184.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a13453718ec9240ae7966d0d8995d0c8a.html">Define ST7735_PWCTR6</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a13453718ec9240ae7966d0d8995d0c8a.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a5cbfe14163815f14aea1a4a89ea2fffc.html">Define ST7735_RAMRD</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a5cbfe14163815f14aea1a4a89ea2fffc.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1aa9a60c99890ac51b71eb799b68d5c6d5.html">Define ST7735_RAMWR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1aa9a60c99890ac51b71eb799b68d5c6d5.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1ae879d0b7f5639d5ecd3d265d9971c979.html">Define ST7735_RASET</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1ae879d0b7f5639d5ecd3d265d9971c979.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1aec4c29f7c63a6c6f168764b2bcec50cf.html">Define ST7735_RDDID</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1aec4c29f7c63a6c6f168764b2bcec50cf.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1acb42f35cd7e667ba514f8b6022d0dac5.html">Define ST7735_RDDST</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1acb42f35cd7e667ba514f8b6022d0dac5.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a904eaad54b53eec42bec05f81baee26f.html">Define ST7735_RDID1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a904eaad54b53eec42bec05f81baee26f.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1aef8a3757b39dd1bf1d79920be09511ae.html">Define ST7735_RDID2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1aef8a3757b39dd1bf1d79920be09511ae.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a8a827d3b90198c117f3d744cc4201c68.html">Define ST7735_RDID3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a8a827d3b90198c117f3d744cc4201c68.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a1ca62118c4ce1ed1d288c6958004188e.html">Define ST7735_RDID4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a1ca62118c4ce1ed1d288c6958004188e.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a5656049de5d79e5a77260b69042179af.html">Define ST7735_SLPIN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a5656049de5d79e5a77260b69042179af.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1aa061cfc0b8f0fea3e70b59d72f6e1caa.html">Define ST7735_SLPOUT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1aa061cfc0b8f0fea3e70b59d72f6e1caa.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1a2816f2fce9a937ced8567b2c2797767b.html">Define ST7735_SWRESET</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1a2816f2fce9a937ced8567b2c2797767b.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1aa4d4dfc0e9e5b75add3eb42fd7987c29.html">Define ST7735_VMCTR1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1aa4d4dfc0e9e5b75add3eb42fd7987c29.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_ST7735_8cpp_1aac9b57651bcead0a7564efe6460e5310.html">Define SWAP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_ST7735_8cpp_1aac9b57651bcead0a7564efe6460e5310.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_MicroBitFlash_8cpp_1a651143349b2328e0836362ca3dd9d864.html">Define WORD_ADDR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_MicroBitFlash_8cpp_1a651143349b2328e0836362ca3dd9d864.html#define-documentation">Define Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="typedefs">
+<h2>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_MicroBitDevice_8cpp_1a3731f47723ab9c6b2e265bc589fbf5e9.html">Typedef codal::microbit_LEDMapFnRCtoXY</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_MicroBitDevice_8cpp_1a3731f47723ab9c6b2e265bc589fbf5e9.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_MicroBitDevice_8cpp_1a8449cf8d6a048d04f55c5ff21f33cd5b.html">Typedef codal::microbit_LEDMapPinNumber</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_MicroBitDevice_8cpp_1a8449cf8d6a048d04f55c5ff21f33cd5b.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_MicroBitDevice_8cpp_1a3a89a267df18144b75ca7ba619ba5112.html">Typedef codal::microbit_LEDMapStr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_MicroBitDevice_8cpp_1a3a89a267df18144b75ca7ba619ba5112.html#typedef-documentation">Typedef Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#namespaces">Namespaces</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes-and-structs">Classes and Structs</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defines">Defines</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#typedefs">Typedefs</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By John Vidler
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, John Vidler.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

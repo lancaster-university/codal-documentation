@@ -1,0 +1,887 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Program Listing for File MicroBitUSBFlashManager.cpp &#8212; CODAL Documentation v0.2.49-4-g300bcb4</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/program_listing_file_libraries_codal-microbit-v2_source_MicroBitUSBFlashManager.cpp';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">We're currently porting the DAL documentation over to CODAL. The information on here may be outdated or incorrect!</div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">CODAL Documentation v0.2.49-4-g300bcb4</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL Documentation
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started with CODAL</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ubit/index.html">The uBit Object</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/buttons.html">Buttons and Touch Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/edge-connector.html">Edge Connector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/accelerometer.html">uBit.accelerometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/audio.html">uBit.audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/compass.html">uBit.compass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/display.html">uBit.display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/serial.html">uBit.serial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/storage.html">uBit.storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/thermometer.html">uBit.thermometer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../memory-and-storage/index.html">Memory and Storage</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/managedstring.html">ManagedString</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/packetbuffer.html">PacketBuffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/microbitimage.html">MicroBitImage</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../guides/index.html">Guides</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../guides/prerequisites.html">Installation - Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/codal-projects.html">CODAL Projects</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../projects/index.html">Projects</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/disco-lights.html">Disco Lights</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../codal-api.html">The Complete CODAL API</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary of Terms</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/lancaster-university/codal-documentation" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Program Listing for File MicroBitUSBFlashManager.cpp</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="program-listing-for-file-microbitusbflashmanager-cpp">
+<span id="program-listing-file-libraries-codal-microbit-v2-source-microbitusbflashmanager-cpp"></span><h1>Program Listing for File MicroBitUSBFlashManager.cpp<a class="headerlink" href="#program-listing-for-file-microbitusbflashmanager-cpp" title="Permalink to this heading">#</a></h1>
+<p>↰ <a class="reference internal" href="file_libraries_codal-microbit-v2_source_MicroBitUSBFlashManager.cpp.html#file-libraries-codal-microbit-v2-source-microbitusbflashmanager-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">libraries/codal-microbit-v2/source/MicroBitUSBFlashManager.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm">The MIT License (MIT)</span>
+
+<span class="cm">Copyright (c) 2020 Lancaster University.</span>
+
+<span class="cm">Permission is hereby granted, free of charge, to any person obtaining a</span>
+<span class="cm">copy of this software and associated documentation files (the &quot;Software&quot;),</span>
+<span class="cm">to deal in the Software without restriction, including without limitation</span>
+<span class="cm">the rights to use, copy, modify, merge, publish, distribute, sublicense,</span>
+<span class="cm">and/or sell copies of the Software, and to permit persons to whom the</span>
+<span class="cm">Software is furnished to do so, subject to the following conditions:</span>
+
+<span class="cm">The above copyright notice and this permission notice shall be included in</span>
+<span class="cm">all copies or substantial portions of the Software.</span>
+
+<span class="cm">THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<span class="cm">IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
+<span class="cm">FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL</span>
+<span class="cm">THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span>
+<span class="cm">LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING</span>
+<span class="cm">FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER</span>
+<span class="cm">DEALINGS IN THE SOFTWARE.</span>
+<span class="cm">*/</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MicroBitUSBFlashManager.h&quot;</span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">KeyValueTableEntry</span><span class="w"> </span><span class="n">usbFlashPropertyLengthData</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">{</span><span class="n">MICROBIT_USB_FLASH_FILENAME_CMD</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="n">MICROBIT_USB_FLASH_FILESIZE_CMD</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="n">MICROBIT_USB_FLASH_VISIBILITY_CMD</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="n">MICROBIT_USB_FLASH_WRITE_CONFIG_CMD</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="n">MICROBIT_USB_FLASH_ERASE_CONFIG_CMD</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="n">MICROBIT_USB_FLASH_DISK_SIZE_CMD</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="n">MICROBIT_USB_FLASH_SECTOR_SIZE_CMD</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="n">MICROBIT_USB_FLASH_REMOUNT_CMD</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">}</span>
+<span class="p">};</span>
+<span class="n">CREATE_KEY_VALUE_TABLE</span><span class="p">(</span><span class="n">usbFlashPropertyLength</span><span class="p">,</span><span class="w"> </span><span class="n">usbFlashPropertyLengthData</span><span class="p">);</span>
+
+<span class="n">MicroBitUSBFlashManager</span><span class="o">::</span><span class="n">MicroBitUSBFlashManager</span><span class="p">(</span><span class="n">MicroBitI2C</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i2c</span><span class="p">,</span><span class="w"> </span><span class="n">MicroBitIO</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ioPins</span><span class="p">,</span><span class="w"> </span><span class="n">MicroBitPowerManager</span><span class="w"> </span><span class="o">&amp;</span><span class="n">powerManager</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">i2cBus</span><span class="p">(</span><span class="n">i2c</span><span class="p">),</span><span class="w"> </span><span class="n">io</span><span class="p">(</span><span class="n">ioPins</span><span class="p">),</span><span class="w"> </span><span class="n">power</span><span class="p">(</span><span class="n">powerManager</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">maxWriteLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">64</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Be pessimistic about the interface chip in use, until we obtain version information.</span>
+<span class="w">    </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">MICROBIT_USB_FLASH_SINGLE_PAGE_ERASE_ONLY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_USE_NULL_TRANSACTION</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">MicroBitUSBFlashConfig</span><span class="w"> </span><span class="n">MicroBitUSBFlashManager</span><span class="o">::</span><span class="n">getConfiguration</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// We cache the config, as it can only be changed by the nrf52...</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_CONFIG_LOADED</span><span class="p">))</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">response</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Load the configured filename</span>
+<span class="w">        </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transact</span><span class="p">(</span><span class="n">MICROBIT_USB_FLASH_FILENAME_CMD</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="n">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="mi">-1</span><span class="p">);</span>
+<span class="w">            </span><span class="n">n</span><span class="p">[</span><span class="n">n</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="mi">-4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;.&#39;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">config</span><span class="p">.</span><span class="n">fileName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Load the filesize</span>
+<span class="w">        </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transact</span><span class="p">(</span><span class="n">MICROBIT_USB_FLASH_FILESIZE_CMD</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+<span class="w">        </span><span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">response</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+<span class="w">        </span><span class="n">config</span><span class="p">.</span><span class="n">fileSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htonl</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Sanity check that the filesize isnt longer than the possible block count</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">config</span><span class="p">.</span><span class="n">fileSize</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_MAX_FLASH_STORAGE</span><span class="w"> </span><span class="p">)</span>
+<span class="w">            </span><span class="n">config</span><span class="p">.</span><span class="n">fileSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_MAX_FLASH_STORAGE</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Load the visibility status</span>
+<span class="w">        </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transact</span><span class="p">(</span><span class="n">MICROBIT_USB_FLASH_VISIBILITY_CMD</span><span class="p">);</span>
+<span class="w">        </span><span class="n">config</span><span class="p">.</span><span class="n">visible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">response</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">status</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_CONFIG_LOADED</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">config</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span><span class="w"> </span><span class="n">MicroBitUSBFlashManager</span><span class="o">::</span><span class="n">isValidChar</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">((</span><span class="n">c</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39;9&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39;Z&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="o">&gt;=</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">c</span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39;z&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;-&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">c</span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;_&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitUSBFlashManager</span><span class="o">::</span><span class="n">setConfiguration</span><span class="p">(</span><span class="n">MicroBitUSBFlashConfig</span><span class="w"> </span><span class="n">config</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">persist</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">fname</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">fsize</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">fvisible</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">dots</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">invalidChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Ensure we know the device geometry</span>
+<span class="w">    </span><span class="n">getGeometry</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// If the requested file is too long/short, we can&#39;t proceed.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">config</span><span class="p">.</span><span class="n">fileSize</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">config</span><span class="p">.</span><span class="n">fileSize</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">blockSize</span><span class="o">*</span><span class="n">geometry</span><span class="p">.</span><span class="n">blockCount</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_INVALID_PARAMETER</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Validate filename as fixed length 8.3 format, as required by USB interface chip.</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">config</span><span class="p">.</span><span class="n">fileName</span><span class="p">.</span><span class="n">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">config</span><span class="p">.</span><span class="n">fileName</span><span class="p">.</span><span class="n">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="sc">&#39;.&#39;</span><span class="p">)</span>
+<span class="w">            </span><span class="n">dots</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">isValidChar</span><span class="p">(</span><span class="n">config</span><span class="p">.</span><span class="n">fileName</span><span class="p">.</span><span class="n">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">)))</span>
+<span class="w">            </span><span class="n">invalidChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Blimey 8.3 is complex. :)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">config</span><span class="p">.</span><span class="n">fileName</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">5</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">config</span><span class="p">.</span><span class="n">fileName</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">dots</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">dots</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">invalidChar</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">config</span><span class="p">.</span><span class="n">fileName</span><span class="p">.</span><span class="n">charAt</span><span class="p">(</span><span class="n">config</span><span class="p">.</span><span class="n">fileName</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="mi">-4</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">&#39;.&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">DMESG</span><span class="p">(</span><span class="s">&quot;INVALID FILENAME&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_INVALID_PARAMETER</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// We have a valid filename. Encode it as needed.</span>
+<span class="w">    </span><span class="c1">// First, ensure unused characters are ASCII spaces</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">fname</span><span class="p">.</span><span class="n">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="n">fname</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Now copy in the filename and extension (right justified extension)</span>
+<span class="w">    </span><span class="n">fname</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_FILENAME_CMD</span><span class="p">;</span>
+<span class="w">    </span><span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fname</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">config</span><span class="p">.</span><span class="n">fileName</span><span class="p">.</span><span class="n">toCharArray</span><span class="p">(),</span><span class="w"> </span><span class="n">config</span><span class="p">.</span><span class="n">fileName</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+<span class="w">    </span><span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fname</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span><span class="w"> </span><span class="n">config</span><span class="p">.</span><span class="n">fileName</span><span class="p">.</span><span class="n">toCharArray</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">config</span><span class="p">.</span><span class="n">fileName</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Encode file size command.</span>
+<span class="w">    </span><span class="n">fsize</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_FILESIZE_CMD</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htonl</span><span class="p">(</span><span class="n">config</span><span class="p">.</span><span class="n">fileSize</span><span class="p">);</span>
+<span class="w">    </span><span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fsize</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Encode visibility command</span>
+<span class="w">    </span><span class="n">fvisible</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_VISIBILITY_CMD</span><span class="p">;</span>
+<span class="w">    </span><span class="n">fvisible</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="p">.</span><span class="n">visible</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Write out each of the parameters in turn.</span>
+<span class="w">    </span><span class="n">transact</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">);</span>
+<span class="w">    </span><span class="n">transact</span><span class="p">(</span><span class="n">fsize</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+<span class="w">    </span><span class="n">transact</span><span class="p">(</span><span class="n">fvisible</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">persist</span><span class="p">)</span>
+<span class="w">        </span><span class="n">transact</span><span class="p">(</span><span class="n">MICROBIT_USB_FLASH_WRITE_CONFIG_CMD</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Cache for later.</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">MicroBitUSBFlashGeometry</span><span class="w"> </span><span class="n">MicroBitUSBFlashManager</span><span class="o">::</span><span class="n">getGeometry</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">valid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// We cache the config, as it can only be changed by the nrf52...</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_GEOMETRY_LOADED</span><span class="p">))</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">response</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Load the block size data</span>
+<span class="w">        </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transact</span><span class="p">(</span><span class="n">MICROBIT_USB_FLASH_SECTOR_SIZE_CMD</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">            </span><span class="n">geometry</span><span class="p">.</span><span class="n">blockSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htons</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="n">response</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">            </span><span class="n">valid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Load the number of blocks</span>
+<span class="w">        </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transact</span><span class="p">(</span><span class="n">MICROBIT_USB_FLASH_DISK_SIZE_CMD</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">            </span><span class="n">geometry</span><span class="p">.</span><span class="n">blockCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="n">response</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">            </span><span class="n">valid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Optimize behaviour for the interface chip version in use.</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">valid</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Apply FLASH storage limiting policy to align V2.0 and V2.2 device capabilities.</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">geometry</span><span class="p">.</span><span class="n">blockCount</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">blockSize</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_MAX_FLASH_STORAGE</span><span class="p">)</span>
+<span class="w">                </span><span class="n">geometry</span><span class="p">.</span><span class="n">blockCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_MAX_FLASH_STORAGE</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">blockSize</span><span class="p">;</span>
+
+<span class="w">            </span><span class="n">MicroBitVersion</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">power</span><span class="p">.</span><span class="n">getVersion</span><span class="p">();</span>
+<span class="w">            </span><span class="k">switch</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">i2c</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
+<span class="w">                    </span><span class="c1">// Apply workarounds for V2.00 KL27 release, and V2.2 NRF528xx rev1 release.</span>
+<span class="w">                    </span><span class="n">maxWriteLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">64</span><span class="p">;</span>
+<span class="w">                    </span><span class="n">status</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="p">(</span><span class="n">MICROBIT_USB_FLASH_SINGLE_PAGE_ERASE_ONLY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_USE_NULL_TRANSACTION</span><span class="p">);</span>
+<span class="w">                    </span><span class="k">break</span><span class="p">;</span>
+
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span>
+<span class="w">                </span><span class="k">default</span><span class="o">:</span>
+<span class="w">                    </span><span class="c1">// Apply/disable workarounds for KL27/NRF528xx rev2 release.</span>
+<span class="w">                    </span><span class="n">maxWriteLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">64</span><span class="p">;</span>
+<span class="w">                    </span><span class="n">status</span><span class="w"> </span><span class="o">&amp;=</span><span class="w"> </span><span class="o">~</span><span class="n">MICROBIT_USB_FLASH_USE_NULL_TRANSACTION</span><span class="p">;</span>
+<span class="w">                    </span><span class="n">status</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_BUSY_FLAG_SUPPORTED</span><span class="p">;</span>
+<span class="w">                    </span><span class="n">status</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_SINGLE_PAGE_ERASE_ONLY</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="c1">// If we have a V2.2 NRF52 based DAPLink revision, apply an additional 100ms delay following a FLASH_ERASE command.</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">board</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">0x9905</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">board</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">0x9906</span><span class="p">)</span>
+<span class="w">                </span><span class="n">status</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_100MS_AFTER_ERASE</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Ensure we don&#39;t cache invalid state.</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">valid</span><span class="p">)</span>
+<span class="w">            </span><span class="n">status</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_GEOMETRY_LOADED</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">geometry</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitUSBFlashManager</span><span class="o">::</span><span class="n">remount</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">cmd</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">cmd</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_REMOUNT_CMD</span><span class="p">;</span>
+<span class="w">    </span><span class="n">transact</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitUSBFlashManager</span><span class="o">::</span><span class="n">eraseConfig</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">cmd</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">cmd</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_ERASE_CONFIG_CMD</span><span class="p">;</span>
+<span class="w">    </span><span class="n">transact</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">ManagedBuffer</span>
+<span class="n">MicroBitUSBFlashManager</span><span class="o">::</span><span class="n">read</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">address</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">length</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">request</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">response</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Convert length parameter from 32-bit count to a byte count.</span>
+<span class="w">    </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">uint32_t</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="n">request</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">    </span><span class="o">*</span><span class="n">p</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htonl</span><span class="p">((</span><span class="kt">uint32_t</span><span class="p">)</span><span class="w"> </span><span class="n">address</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">MICROBIT_USB_FLASH_READ_CMD</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">24</span><span class="p">));</span>
+<span class="w">    </span><span class="o">*</span><span class="n">p</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htonl</span><span class="p">(</span><span class="n">length</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transact</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// If we have a valid repsonse, strip off the KL27 I2C Header</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">response</span><span class="p">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+<span class="w">        </span><span class="n">response</span><span class="p">.</span><span class="n">truncate</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ManagedBuffer</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">response</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span>
+<span class="n">MicroBitUSBFlashManager</span><span class="o">::</span><span class="n">read</span><span class="p">(</span><span class="kt">uint32_t</span><span class="o">*</span><span class="w"> </span><span class="n">dest</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">address</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">length</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read</span><span class="p">(</span><span class="n">address</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_NO_DATA</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">memcpy</span><span class="p">(</span><span class="n">dest</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">uint32_t</span><span class="p">));</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitUSBFlashManager</span><span class="o">::</span><span class="n">write</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">address</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">length</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// Convert length parameter from 32-bit count to a byte count.</span>
+<span class="w">    </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">uint32_t</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">response</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">request</span><span class="p">(</span><span class="n">min</span><span class="p">(</span><span class="n">maxWriteLength</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
+<span class="w">    </span><span class="n">request</span><span class="p">.</span><span class="n">fill</span><span class="p">(</span><span class="mh">0xFF</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">address</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">length</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">bytesWritten</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">segmentLength</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">end</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">segmentLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">maxWriteLength</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="o">-</span><span class="n">bytesWritten</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="n">request</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">        </span><span class="o">*</span><span class="n">ptr</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htonl</span><span class="p">(</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">MICROBIT_USB_FLASH_WRITE_CMD</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">24</span><span class="p">));</span>
+<span class="w">        </span><span class="o">*</span><span class="n">ptr</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htonl</span><span class="p">(</span><span class="n">segmentLength</span><span class="p">);</span>
+<span class="w">        </span><span class="n">memcpy</span><span class="p">(</span><span class="n">ptr</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bytesWritten</span><span class="o">/</span><span class="mi">4</span><span class="p">),</span><span class="w"> </span><span class="n">segmentLength</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">request</span><span class="p">.</span><span class="n">truncate</span><span class="p">(</span><span class="n">segmentLength</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
+<span class="w">        </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transact</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_I2C_ERROR</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">bytesWritten</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">segmentLength</span><span class="p">;</span>
+<span class="w">        </span><span class="n">p</span><span class="o">+=</span><span class="w"> </span><span class="n">segmentLength</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitUSBFlashManager</span><span class="o">::</span><span class="n">write</span><span class="p">(</span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">address</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">write</span><span class="p">(</span><span class="n">address</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="o">/</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">uint32_t</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitUSBFlashManager</span><span class="o">::</span><span class="n">erase</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">address</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">length</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">request</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">response</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">restoreBuffer1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">restoreBuffer2</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Ensure we know the device geometry</span>
+<span class="w">    </span><span class="n">getGeometry</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Convert length parameter from 32-bit count to a byte count.</span>
+<span class="w">    </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">uint32_t</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Ensure we have a valid request</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">address</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">blockSize</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">blockCount</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">length</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">uint32_t</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_INVALID_PARAMETER</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Calculcate block aligned start and end addresses for the erase operation, taking into account that he KL27</span>
+<span class="w">    </span><span class="c1">// uses INCLUSIVE end addresses.</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">eraseStart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">address</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">blockSize</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">blockSize</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">eraseEnd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(((</span><span class="n">address</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">length</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">blockSize</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">blockSize</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">((((</span><span class="n">address</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">length</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">blockSize</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">blockSize</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Determine if we need to undertake a &quot;partial erase&quot; of any blocks</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">eraseStart</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">address</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="p">(</span><span class="n">eraseEnd</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">eraseStart</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">blockSize</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// We need to take the slow path, and save/restore some data...</span>
+<span class="w">        </span><span class="c1">// We also need to ensure our data is on a 32 bit boundary.</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">restoreLength1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">address</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">eraseStart</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">restoreLength2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">geometry</span><span class="p">.</span><span class="n">blockSize</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">((</span><span class="n">address</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">length</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">blockSize</span><span class="p">))</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">blockSize</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">restoreLength1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">            </span><span class="n">restoreBuffer1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read</span><span class="p">(</span><span class="n">eraseStart</span><span class="p">,</span><span class="w"> </span><span class="n">restoreLength1</span><span class="o">/</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">uint32_t</span><span class="p">));</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">restoreLength2</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">            </span><span class="n">restoreBuffer2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read</span><span class="p">(</span><span class="n">address</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">length</span><span class="p">,</span><span class="w"> </span><span class="n">restoreLength2</span><span class="o">/</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">uint32_t</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_SINGLE_PAGE_ERASE_ONLY</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eraseStart</span><span class="p">;</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">eraseEnd</span><span class="p">;</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">blockSize</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="n">request</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">            </span><span class="o">*</span><span class="n">p</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htonl</span><span class="p">(</span><span class="n">page</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">MICROBIT_USB_FLASH_ERASE_CMD</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">24</span><span class="p">));</span>
+<span class="w">            </span><span class="o">*</span><span class="n">p</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htonl</span><span class="p">(</span><span class="n">page</span><span class="p">);</span>
+
+<span class="w">            </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transact</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">DMESG</span><span class="p">(</span><span class="s">&quot;ERROR ERASING&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_I2C_ERROR</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="n">request</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">        </span><span class="o">*</span><span class="n">p</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htonl</span><span class="p">(</span><span class="n">eraseStart</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">MICROBIT_USB_FLASH_ERASE_CMD</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">24</span><span class="p">));</span>
+<span class="w">        </span><span class="o">*</span><span class="n">p</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htonl</span><span class="p">(</span><span class="n">eraseEnd</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transact</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DMESG</span><span class="p">(</span><span class="s">&quot;ERROR ERASING&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_I2C_ERROR</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Restore any saved data if necessary</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">restoreBuffer1</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">write</span><span class="p">(</span><span class="n">restoreBuffer1</span><span class="p">,</span><span class="w"> </span><span class="n">eraseStart</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">restoreBuffer2</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">write</span><span class="p">(</span><span class="n">restoreBuffer2</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">address</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">length</span><span class="p">));</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span>
+<span class="n">MicroBitUSBFlashManager</span><span class="o">::</span><span class="n">erase</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">page</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">getGeometry</span><span class="p">();</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">erase</span><span class="p">(</span><span class="n">page</span><span class="p">,</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">blockSize</span><span class="o">/</span><span class="mi">4</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">uint32_t</span>
+<span class="n">MicroBitUSBFlashManager</span><span class="o">::</span><span class="n">getFlashStart</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// We index from logival address zero.</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+<span class="kt">uint32_t</span>
+<span class="n">MicroBitUSBFlashManager</span><span class="o">::</span><span class="n">getFlashEnd</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">getGeometry</span><span class="p">();</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">blockSize</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">blockCount</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">uint32_t</span>
+<span class="n">MicroBitUSBFlashManager</span><span class="o">::</span><span class="n">getPageSize</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">getGeometry</span><span class="p">();</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">blockSize</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">uint32_t</span>
+<span class="n">MicroBitUSBFlashManager</span><span class="o">::</span><span class="n">getFlashSize</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">getFlashEnd</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">MicroBitUSBFlashManager</span><span class="o">::</span><span class="n">transact</span><span class="p">(</span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">responseLength</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">power</span><span class="p">.</span><span class="n">nop</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_USE_NULL_TRANSACTION</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">nop_request</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">nop_request</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_VISIBILITY_CMD</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_DISK_SIZE_CMD</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_VISIBILITY_CMD</span><span class="p">;</span>
+<span class="w">        </span><span class="n">_transact</span><span class="p">(</span><span class="n">nop_request</span><span class="p">,</span><span class="w"> </span><span class="n">usbFlashPropertyLength</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">MICROBIT_USB_FLASH_VISIBILITY_CMD</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">_transact</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">responseLength</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">MicroBitUSBFlashManager</span><span class="o">::</span><span class="n">_transact</span><span class="p">(</span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">responseLength</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">tx_attempts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">rx_attempts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">b</span><span class="p">(</span><span class="n">max</span><span class="p">(</span><span class="n">responseLength</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span>
+
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">tx_attempts</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_MAX_TX_RETRIES</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">rx_attempts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">tx_attempts</span><span class="o">++</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">power</span><span class="p">.</span><span class="n">awaitingPacket</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i2cBus</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">MICROBIT_USB_FLASH_I2C_ADDRESS</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">request</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="n">length</span><span class="p">(),</span><span class="w"> </span><span class="nb">false</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DMESG</span><span class="p">(</span><span class="s">&quot;TRANSACT: [I2C WRITE ERROR]&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">fiber_sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">            </span><span class="k">continue</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// if we have an erase request, ensure sufficient time is left to process it before checking for a response.</span>
+<span class="w">        </span><span class="c1">// (DAPLink workaround)</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">request</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_ERASE_CMD</span><span class="p">)</span>
+<span class="w">            </span><span class="n">fiber_sleep</span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_100MS_AFTER_ERASE</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">            </span><span class="n">fiber_sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">rx_attempts</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_MAX_RX_RETRIES</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">rx_attempts</span><span class="o">++</span><span class="p">;</span>
+
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">io</span><span class="p">.</span><span class="n">irq1</span><span class="p">.</span><span class="n">isActive</span><span class="p">())</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">b</span><span class="p">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i2cBus</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="n">MICROBIT_USB_FLASH_I2C_ADDRESS</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">length</span><span class="p">(),</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MICROBIT_OK</span><span class="p">)</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">request</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="w">                    </span><span class="p">{</span>
+<span class="w">                        </span><span class="c1">// We have a valid response. Consume it, and we&#39;re done.</span>
+<span class="w">                        </span><span class="n">power</span><span class="p">.</span><span class="n">awaitingPacket</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+<span class="w">                        </span><span class="n">b</span><span class="p">.</span><span class="n">truncate</span><span class="p">(</span><span class="n">responseLength</span><span class="p">);</span>
+<span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                    </span><span class="k">else</span>
+<span class="w">                    </span><span class="p">{</span>
+<span class="w">                        </span><span class="c1">// We have a negative response. If it&#39;s not a FAIL case, treat this as &quot;NOT READY&quot;</span>
+<span class="w">                        </span><span class="c1">// reset RX timeout, as the peripheral is active on our transaction.</span>
+<span class="w">                        </span><span class="c1">// some revisions report busy status explicitly, others do not and we must infer...</span>
+<span class="w">                        </span><span class="kt">bool</span><span class="w"> </span><span class="n">busy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MICROBIT_USB_FLASH_BUSY_FLAG_SUPPORTED</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">0x20</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">0x39</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">0x00</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">0x20</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">request</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">0x00</span><span class="p">));</span>
+
+<span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">busy</span><span class="p">)</span>
+<span class="w">                            </span><span class="n">rx_attempts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">                        </span><span class="k">else</span>
+<span class="w">                            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="k">else</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">DMESG</span><span class="p">(</span><span class="s">&quot;TRANSACT: [I2C READ ERROR: %d]&quot;</span><span class="p">,</span><span class="n">r</span><span class="p">);</span>
+<span class="w">                    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="n">fiber_sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">DMESG</span><span class="p">(</span><span class="s">&quot;USB_FLASH: Transaction Failed.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">power</span><span class="p">.</span><span class="n">awaitingPacket</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ManagedBuffer</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">MicroBitUSBFlashManager</span><span class="o">::</span><span class="n">transact</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">command</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="nf">request</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">request</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">command</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">transact</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">usbFlashPropertyLength</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">command</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="n">MicroBitUSBFlashManager</span><span class="o">::~</span><span class="n">MicroBitUSBFlashManager</span><span class="p">()</span>
+<span class="p">{</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By John Vidler
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, John Vidler.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

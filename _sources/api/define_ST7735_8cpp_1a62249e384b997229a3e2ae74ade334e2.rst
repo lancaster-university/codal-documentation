@@ -1,0 +1,13 @@
+.. _exhale_define_ST7735_8cpp_1a62249e384b997229a3e2ae74ade334e2:
+
+Define DELAY
+============
+
+- Defined in :ref:`file_libraries_codal-core_source_drivers_ST7735.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DELAY

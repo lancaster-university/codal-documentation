@@ -1,0 +1,13 @@
+.. _exhale_define_ST7735_8cpp_1a3153a272f18d0f805028fce7e4337b53:
+
+Define assert
+=============
+
+- Defined in :ref:`file_libraries_codal-core_source_drivers_ST7735.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: assert

@@ -1,0 +1,558 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Program Listing for File HIDJoystick.cpp &#8212; CODAL Documentation v0.2.49-4-g300bcb4</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/program_listing_file_libraries_codal-core_source_drivers_HIDJoystick.cpp';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">We're currently porting the DAL documentation over to CODAL. The information on here may be outdated or incorrect!</div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">CODAL Documentation v0.2.49-4-g300bcb4</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL Documentation
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started with CODAL</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ubit/index.html">The uBit Object</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/buttons.html">Buttons and Touch Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/edge-connector.html">Edge Connector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/accelerometer.html">uBit.accelerometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/audio.html">uBit.audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/compass.html">uBit.compass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/display.html">uBit.display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/serial.html">uBit.serial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/storage.html">uBit.storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/thermometer.html">uBit.thermometer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../memory-and-storage/index.html">Memory and Storage</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/managedstring.html">ManagedString</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/packetbuffer.html">PacketBuffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/microbitimage.html">MicroBitImage</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../guides/index.html">Guides</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../guides/prerequisites.html">Installation - Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/codal-projects.html">CODAL Projects</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../projects/index.html">Projects</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/disco-lights.html">Disco Lights</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../codal-api.html">The Complete CODAL API</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary of Terms</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/lancaster-university/codal-documentation" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Program Listing for File HIDJoystick.cpp</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="program-listing-for-file-hidjoystick-cpp">
+<span id="program-listing-file-libraries-codal-core-source-drivers-hidjoystick-cpp"></span><h1>Program Listing for File HIDJoystick.cpp<a class="headerlink" href="#program-listing-for-file-hidjoystick-cpp" title="Permalink to this heading">#</a></h1>
+<p>↰ <a class="reference internal" href="file_libraries_codal-core_source_drivers_HIDJoystick.cpp.html#file-libraries-codal-core-source-drivers-hidjoystick-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">libraries/codal-core/source/drivers/HIDJoystick.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm">The MIT License (MIT)</span>
+
+<span class="cm">Copyright (c) 2017 Lancaster University.</span>
+
+<span class="cm">Permission is hereby granted, free of charge, to any person obtaining a</span>
+<span class="cm">copy of this software and associated documentation files (the &quot;Software&quot;),</span>
+<span class="cm">to deal in the Software without restriction, including without limitation</span>
+<span class="cm">the rights to use, copy, modify, merge, publish, distribute, sublicense,</span>
+<span class="cm">and/or sell copies of the Software, and to permit persons to whom the</span>
+<span class="cm">Software is furnished to do so, subject to the following conditions:</span>
+
+<span class="cm">The above copyright notice and this permission notice shall be included in</span>
+<span class="cm">all copies or substantial portions of the Software.</span>
+
+<span class="cm">THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<span class="cm">IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
+<span class="cm">FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL</span>
+<span class="cm">THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span>
+<span class="cm">LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING</span>
+<span class="cm">FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER</span>
+<span class="cm">DEALINGS IN THE SOFTWARE.</span>
+<span class="cm">*/</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;HIDJoystick.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;HID.h&quot;</span>
+
+<span class="cp">#if CONFIG_ENABLED(DEVICE_USB)</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">codal</span><span class="p">;</span>
+
+<span class="c1">//this descriptor must be stored in RAM</span>
+<span class="k">static</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">HIDJoystickDescriptor</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="mh">0x05</span><span class="p">,</span><span class="w"> </span><span class="mh">0x01</span><span class="p">,</span><span class="w"> </span><span class="c1">// USAGE_PAGE (Generic Desktop)</span>
+<span class="w">     </span><span class="mh">0x09</span><span class="p">,</span><span class="w"> </span><span class="mh">0x05</span><span class="p">,</span><span class="w"> </span><span class="c1">// USAGE (Game Pad)</span>
+<span class="w">     </span><span class="mh">0xa1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x01</span><span class="p">,</span><span class="w"> </span><span class="c1">// COLLECTION (Application)</span>
+<span class="w">     </span><span class="mh">0x05</span><span class="p">,</span><span class="w"> </span><span class="mh">0x02</span><span class="p">,</span><span class="w"> </span><span class="c1">// USAGE_PAGE (Simulation Controls)</span>
+<span class="w">     </span><span class="mh">0x09</span><span class="p">,</span><span class="w"> </span><span class="mh">0xbb</span><span class="p">,</span><span class="w"> </span><span class="c1">// USAGE (Throttle)</span>
+<span class="w">     </span><span class="mh">0x15</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="c1">// LOGICAL_MINIMUM (0)</span>
+<span class="w">     </span><span class="mh">0x25</span><span class="p">,</span><span class="w"> </span><span class="mh">0x1f</span><span class="p">,</span><span class="w"> </span><span class="c1">// LOGICAL_MAXIMUM (31)</span>
+<span class="w">     </span><span class="mh">0x75</span><span class="p">,</span><span class="w"> </span><span class="mh">0x08</span><span class="p">,</span><span class="w"> </span><span class="c1">// REPORT_SIZE (8)</span>
+<span class="w">     </span><span class="mh">0x95</span><span class="p">,</span><span class="w"> </span><span class="mh">0x01</span><span class="p">,</span><span class="w"> </span><span class="c1">// REPORT_COUNT (1)</span>
+<span class="w">     </span><span class="mh">0x81</span><span class="p">,</span><span class="w"> </span><span class="mh">0x02</span><span class="p">,</span><span class="w"> </span><span class="c1">// INPUT (Data,Var,Abs)</span>
+<span class="w">     </span><span class="mh">0x05</span><span class="p">,</span><span class="w"> </span><span class="mh">0x02</span><span class="p">,</span><span class="w"> </span><span class="c1">// USAGE_PAGE (Simulation Controls)</span>
+<span class="w">     </span><span class="mh">0x09</span><span class="p">,</span><span class="w"> </span><span class="mh">0xb0</span><span class="p">,</span><span class="w"> </span><span class="c1">// USAGE (Rudder)</span>
+<span class="w">     </span><span class="mh">0x15</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="c1">// LOGICAL_MINIMUM (0)</span>
+<span class="w">     </span><span class="mh">0x25</span><span class="p">,</span><span class="w"> </span><span class="mh">0x1f</span><span class="p">,</span><span class="w"> </span><span class="c1">// LOGICAL_MAXIMUM (31)</span>
+<span class="w">     </span><span class="mh">0x75</span><span class="p">,</span><span class="w"> </span><span class="mh">0x08</span><span class="p">,</span><span class="w"> </span><span class="c1">// REPORT_SIZE (8)</span>
+<span class="w">     </span><span class="mh">0x95</span><span class="p">,</span><span class="w"> </span><span class="mh">0x01</span><span class="p">,</span><span class="w"> </span><span class="c1">// REPORT_COUNT (1)</span>
+<span class="w">     </span><span class="mh">0x81</span><span class="p">,</span><span class="w"> </span><span class="mh">0x02</span><span class="p">,</span><span class="w"> </span><span class="c1">// INPUT (Data,Var,Abs)</span>
+<span class="w">     </span><span class="mh">0x05</span><span class="p">,</span><span class="w"> </span><span class="mh">0x01</span><span class="p">,</span><span class="w"> </span><span class="c1">// USAGE_PAGE (Generic Desktop)</span>
+<span class="w">     </span><span class="mh">0xa1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="c1">// COLLECTION (Physical)</span>
+<span class="w">     </span><span class="mh">0x09</span><span class="p">,</span><span class="w"> </span><span class="mh">0x30</span><span class="p">,</span><span class="w"> </span><span class="c1">// USAGE (X)</span>
+<span class="w">     </span><span class="mh">0x09</span><span class="p">,</span><span class="w"> </span><span class="mh">0x31</span><span class="p">,</span><span class="w"> </span><span class="c1">// USAGE (Y)</span>
+<span class="w">     </span><span class="mh">0x09</span><span class="p">,</span><span class="w"> </span><span class="mh">0x32</span><span class="p">,</span><span class="w"> </span><span class="c1">// USAGE (Z)</span>
+<span class="w">     </span><span class="mh">0x09</span><span class="p">,</span><span class="w"> </span><span class="mh">0x35</span><span class="p">,</span><span class="w"> </span><span class="c1">// USAGE (Rz)</span>
+<span class="w">     </span><span class="mh">0x15</span><span class="p">,</span><span class="w"> </span><span class="mh">0x81</span><span class="p">,</span><span class="w"> </span><span class="c1">// LOGICAL_MINIMUM (-127)</span>
+<span class="w">     </span><span class="mh">0x25</span><span class="p">,</span><span class="w"> </span><span class="mh">0x7f</span><span class="p">,</span><span class="w"> </span><span class="c1">// LOGICAL_MAXIMUM (127)</span>
+<span class="w">     </span><span class="mh">0x75</span><span class="p">,</span><span class="w"> </span><span class="mh">0x08</span><span class="p">,</span><span class="w"> </span><span class="c1">// REPORT_SIZE (8)</span>
+<span class="w">     </span><span class="mh">0x95</span><span class="p">,</span><span class="w"> </span><span class="mh">0x04</span><span class="p">,</span><span class="w"> </span><span class="c1">// REPORT_COUNT (4)</span>
+<span class="w">     </span><span class="mh">0x81</span><span class="p">,</span><span class="w"> </span><span class="mh">0x02</span><span class="p">,</span><span class="w"> </span><span class="c1">// INPUT (Data,Var,Abs)</span>
+<span class="w">     </span><span class="mh">0x05</span><span class="p">,</span><span class="w"> </span><span class="mh">0x09</span><span class="p">,</span><span class="w"> </span><span class="c1">// USAGE_PAGE (Button)</span>
+<span class="w">     </span><span class="mh">0x19</span><span class="p">,</span><span class="w"> </span><span class="mh">0x01</span><span class="p">,</span><span class="w"> </span><span class="c1">// USAGE_MINIMUM (Button 1)</span>
+<span class="w">     </span><span class="mh">0x29</span><span class="p">,</span><span class="w"> </span><span class="mh">0x10</span><span class="p">,</span><span class="w"> </span><span class="c1">// USAGE_MAXIMUM (Button 16)</span>
+<span class="w">     </span><span class="mh">0x15</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="c1">// LOGICAL_MINIMUM (0)</span>
+<span class="w">     </span><span class="mh">0x25</span><span class="p">,</span><span class="w"> </span><span class="mh">0x01</span><span class="p">,</span><span class="w"> </span><span class="c1">// LOGICAL_MAXIMUM (1)</span>
+<span class="w">     </span><span class="mh">0x75</span><span class="p">,</span><span class="w"> </span><span class="mh">0x01</span><span class="p">,</span><span class="w"> </span><span class="c1">// REPORT_SIZE (1)</span>
+<span class="w">     </span><span class="mh">0x95</span><span class="p">,</span><span class="w"> </span><span class="mh">0x10</span><span class="p">,</span><span class="w"> </span><span class="c1">// REPORT_COUNT (16)</span>
+<span class="w">     </span><span class="mh">0x81</span><span class="p">,</span><span class="w"> </span><span class="mh">0x02</span><span class="p">,</span><span class="w"> </span><span class="c1">// INPUT (Data,Var,Abs)</span>
+<span class="w">     </span><span class="mh">0xc0</span><span class="p">,</span><span class="w"> </span><span class="c1">// END_COLLECTION</span>
+<span class="w">     </span><span class="mh">0xc0</span><span class="w"> </span><span class="c1">// END_COLLECTION</span>
+<span class="p">};</span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">HIDReportDescriptor</span><span class="w"> </span><span class="n">reportDesc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="mi">9</span><span class="p">,</span>
+<span class="w">    </span><span class="mh">0x21</span><span class="p">,</span><span class="w">                  </span><span class="c1">// HID</span>
+<span class="w">    </span><span class="mh">0x101</span><span class="p">,</span><span class="w">                 </span><span class="c1">// hidbcd 1.01</span>
+<span class="w">    </span><span class="mh">0x00</span><span class="p">,</span><span class="w">                  </span><span class="c1">// country code</span>
+<span class="w">    </span><span class="mh">0x01</span><span class="p">,</span><span class="w">                  </span><span class="c1">// num desc</span>
+<span class="w">    </span><span class="mh">0x22</span><span class="p">,</span><span class="w">                  </span><span class="c1">// report desc type</span>
+<span class="w">    </span><span class="k">sizeof</span><span class="p">(</span><span class="n">HIDJoystickDescriptor</span><span class="p">),</span>
+<span class="p">};</span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">InterfaceInfo</span><span class="w"> </span><span class="n">ifaceInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="o">&amp;</span><span class="n">reportDesc</span><span class="p">,</span>
+<span class="w">    </span><span class="k">sizeof</span><span class="p">(</span><span class="n">reportDesc</span><span class="p">),</span>
+<span class="w">    </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="mi">1</span><span class="p">,</span><span class="w">    </span><span class="c1">// numEndpoints</span>
+<span class="w">        </span><span class="mh">0x03</span><span class="p">,</span>
+<span class="w">        </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="c1">// subclass - none</span>
+<span class="w">        </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="c1">// protocol - none (there isn&#39;t a protocol defined for gamepad/joystick)</span>
+<span class="w">        </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="c1">//</span>
+<span class="w">        </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="c1">//</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="n">USB_EP_TYPE_INTERRUPT</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="n">USB_EP_TYPE_INTERRUPT</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span>
+<span class="p">};</span>
+
+<span class="k">static</span><span class="w"> </span><span class="n">HIDJoystickState</span><span class="w"> </span><span class="n">joystickState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="n">USBHIDJoystick</span><span class="o">::</span><span class="n">USBHIDJoystick</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">USBHID</span><span class="p">()</span>
+<span class="p">{</span>
+
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">USBHIDJoystick</span><span class="o">::</span><span class="n">stdRequest</span><span class="p">(</span><span class="n">UsbEndpointIn</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ctrl</span><span class="p">,</span><span class="w"> </span><span class="n">USBSetup</span><span class="w"> </span><span class="o">&amp;</span><span class="n">setup</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">setup</span><span class="p">.</span><span class="n">bRequest</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">USB_REQ_GET_DESCRIPTOR</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">setup</span><span class="p">.</span><span class="n">wValueH</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">0x21</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">InterfaceDescriptor</span><span class="w"> </span><span class="n">tmp</span><span class="p">;</span>
+<span class="w">            </span><span class="n">fillInterfaceInfo</span><span class="p">(</span><span class="o">&amp;</span><span class="n">tmp</span><span class="p">);</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">ctrl</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="o">&amp;</span><span class="n">tmp</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">tmp</span><span class="p">));</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">setup</span><span class="p">.</span><span class="n">wValueH</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">0x22</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">ctrl</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">HIDJoystickDescriptor</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">HIDJoystickDescriptor</span><span class="p">));</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_NOT_SUPPORTED</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">const</span><span class="w"> </span><span class="n">InterfaceInfo</span><span class="w"> </span><span class="o">*</span><span class="n">USBHIDJoystick</span><span class="o">::</span><span class="n">getInterfaceInfo</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ifaceInfo</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">USBHIDJoystick</span><span class="o">::</span><span class="n">buttonDown</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1UL</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">joystickState</span><span class="p">.</span><span class="n">buttons</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">btn</span><span class="w"> </span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span>
+<span class="w">    </span><span class="k">else</span><span class="p">{</span>
+<span class="w">        </span><span class="n">joystickState</span><span class="p">.</span><span class="n">buttons</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">btn</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">sendReport</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">USBHIDJoystick</span><span class="o">::</span><span class="n">buttonUp</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1UL</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="n">joystickState</span><span class="p">.</span><span class="n">buttons</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">btn</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span>
+<span class="w">    </span><span class="k">else</span><span class="p">{</span>
+<span class="w">        </span><span class="n">joystickState</span><span class="p">.</span><span class="n">buttons</span><span class="w"> </span><span class="o">&amp;=</span><span class="w"> </span><span class="o">~</span><span class="p">(</span><span class="n">btn</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">sendReport</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">USBHIDJoystick</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="kt">int8_t</span><span class="w"> </span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="kt">int8_t</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int8_t</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">switch</span><span class="p">(</span><span class="n">num</span><span class="p">){</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span>
+<span class="w">            </span><span class="n">joystickState</span><span class="p">.</span><span class="n">x0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="w">            </span><span class="n">joystickState</span><span class="p">.</span><span class="n">y0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
+<span class="w">            </span><span class="n">joystickState</span><span class="p">.</span><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="w">            </span><span class="n">joystickState</span><span class="p">.</span><span class="n">y1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="k">default</span><span class="o">:</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_INVALID_PARAMETER</span><span class="p">;</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">sendReport</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">USBHIDJoystick</span><span class="o">::</span><span class="n">setThrottle</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">val</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">val</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">31</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_INVALID_PARAMETER</span><span class="p">;</span>
+<span class="w">    </span><span class="k">switch</span><span class="p">(</span><span class="n">num</span><span class="p">){</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span>
+<span class="w">            </span><span class="n">joystickState</span><span class="p">.</span><span class="n">throttle0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">val</span><span class="p">;</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
+<span class="w">            </span><span class="n">joystickState</span><span class="p">.</span><span class="n">throttle1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">val</span><span class="p">;</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="k">default</span><span class="o">:</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_INVALID_PARAMETER</span><span class="p">;</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">sendReport</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">USBHIDJoystick</span><span class="o">::</span><span class="n">sendReport</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">in</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_INVALID_STATE</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">report</span><span class="p">[</span><span class="k">sizeof</span><span class="p">(</span><span class="n">HIDJoystickState</span><span class="p">)];</span>
+<span class="w">    </span><span class="n">memcpy</span><span class="p">(</span><span class="n">report</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">joystickState</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">HIDJoystickState</span><span class="p">));</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">in</span><span class="o">-&gt;</span><span class="n">write</span><span class="p">(</span><span class="n">report</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">report</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</section>
+
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By John Vidler
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, John Vidler.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

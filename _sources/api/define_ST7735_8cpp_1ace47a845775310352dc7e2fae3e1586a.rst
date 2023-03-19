@@ -1,0 +1,13 @@
+.. _exhale_define_ST7735_8cpp_1ace47a845775310352dc7e2fae3e1586a:
+
+Define ST7735_DISSET5
+=====================
+
+- Defined in :ref:`file_libraries_codal-core_source_drivers_ST7735.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: ST7735_DISSET5

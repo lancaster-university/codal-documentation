@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>File Hierarchy &#8212; CODAL Documentation v0.2.49-4-g300bcb4</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/file_view_hierarchy';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">We're currently porting the DAL documentation over to CODAL. The information on here may be outdated or incorrect!</div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">CODAL Documentation v0.2.49-4-g300bcb4</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL Documentation
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started with CODAL</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ubit/index.html">The uBit Object</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/buttons.html">Buttons and Touch Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/edge-connector.html">Edge Connector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/accelerometer.html">uBit.accelerometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/audio.html">uBit.audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/compass.html">uBit.compass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/display.html">uBit.display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/serial.html">uBit.serial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/storage.html">uBit.storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/thermometer.html">uBit.thermometer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../memory-and-storage/index.html">Memory and Storage</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/managedstring.html">ManagedString</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/packetbuffer.html">PacketBuffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/microbitimage.html">MicroBitImage</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../guides/index.html">Guides</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../guides/prerequisites.html">Installation - Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/codal-projects.html">CODAL Projects</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../projects/index.html">Projects</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/disco-lights.html">Disco Lights</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../codal-api.html">The Complete CODAL API</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary of Terms</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/lancaster-university/codal-documentation" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>File Hierarchy</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="file-hierarchy">
+<h1>File Hierarchy<a class="headerlink" href="#file-hierarchy" title="Permalink to this heading">#</a></h1>
+<div id="file-treeView"></div>
+<script type="text/javascript">
+  function getFileHierarchyTree() {
+     return [
+      {text:"<span class=\"text-muted\">Directory</span> libraries",href:"dir_libraries.html#dir-libraries",selectable:false,tags:['2'],nodes:[{text:"<span class=\"text-muted\">Directory</span> codal-core",href:"dir_libraries_codal-core.html#dir-libraries-codal-core",selectable:false,tags:['1'],nodes:[{text:"<span class=\"text-muted\">Directory</span> source",href:"dir_libraries_codal-core_source.html#dir-libraries-codal-core-source",selectable:false,tags:['5'],nodes:[{text:"<span class=\"text-muted\">Directory</span> core",href:"dir_libraries_codal-core_source_core.html#dir-libraries-codal-core-source-core",selectable:false,tags:['10'],nodes:[{text:"<span class=\"text-muted\">File</span> codal_default_target_hal.cpp",href:"file_libraries_codal-core_source_core_codal_default_target_hal.cpp.html#file-libraries-codal-core-source-core-codal-default-target-hal.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> CodalCompat.cpp",href:"file_libraries_codal-core_source_core_CodalCompat.cpp.html#file-libraries-codal-core-source-core-CodalCompat.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> CodalComponent.cpp",href:"file_libraries_codal-core_source_core_CodalComponent.cpp.html#file-libraries-codal-core-source-core-CodalComponent.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> CodalDevice.cpp",href:"file_libraries_codal-core_source_core_CodalDevice.cpp.html#file-libraries-codal-core-source-core-CodalDevice.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> CodalDmesg.cpp",href:"file_libraries_codal-core_source_core_CodalDmesg.cpp.html#file-libraries-codal-core-source-core-CodalDmesg.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> CodalFiber.cpp",href:"file_libraries_codal-core_source_core_CodalFiber.cpp.html#file-libraries-codal-core-source-core-CodalFiber.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> CodalHeapAllocator.cpp",href:"file_libraries_codal-core_source_core_CodalHeapAllocator.cpp.html#file-libraries-codal-core-source-core-CodalHeapAllocator.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> CodalListener.cpp",href:"file_libraries_codal-core_source_core_CodalListener.cpp.html#file-libraries-codal-core-source-core-CodalListener.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> CodalUtil.cpp",href:"file_libraries_codal-core_source_core_CodalUtil.cpp.html#file-libraries-codal-core-source-core-CodalUtil.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MemberFunctionCallback.cpp",href:"file_libraries_codal-core_source_core_MemberFunctionCallback.cpp.html#file-libraries-codal-core-source-core-MemberFunctionCallback.cpp",selectable:false}]},{text:"<span class=\"text-muted\">Directory</span> driver-models",href:"dir_libraries_codal-core_source_driver-models.html#dir-libraries-codal-core-source-driver-models",selectable:false,tags:['12'],nodes:[{text:"<span class=\"text-muted\">File</span> AbstractButton.cpp",href:"file_libraries_codal-core_source_driver-models_AbstractButton.cpp.html#file-libraries-codal-core-source-driver-models-AbstractButton.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> Accelerometer.cpp",href:"file_libraries_codal-core_source_driver-models_Accelerometer.cpp.html#file-libraries-codal-core-source-driver-models-Accelerometer.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> CodalUSB.cpp",href:"file_libraries_codal-core_source_driver-models_CodalUSB.cpp.html#file-libraries-codal-core-source-driver-models-CodalUSB.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> Compass.cpp",href:"file_libraries_codal-core_source_driver-models_Compass.cpp.html#file-libraries-codal-core-source-driver-models-Compass.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> Display.cpp",href:"file_libraries_codal-core_source_driver-models_Display.cpp.html#file-libraries-codal-core-source-driver-models-Display.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> Gyroscope.cpp",href:"file_libraries_codal-core_source_driver-models_Gyroscope.cpp.html#file-libraries-codal-core-source-driver-models-Gyroscope.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> I2C.cpp",href:"file_libraries_codal-core_source_driver-models_I2C.cpp.html#file-libraries-codal-core-source-driver-models-I2C.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> PinPeripheral.cpp",href:"file_libraries_codal-core_source_driver-models_PinPeripheral.cpp.html#file-libraries-codal-core-source-driver-models-PinPeripheral.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> Sensor.cpp",href:"file_libraries_codal-core_source_driver-models_Sensor.cpp.html#file-libraries-codal-core-source-driver-models-Sensor.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> Serial.cpp",href:"file_libraries_codal-core_source_driver-models_Serial.cpp.html#file-libraries-codal-core-source-driver-models-Serial.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> SPI.cpp",href:"file_libraries_codal-core_source_driver-models_SPI.cpp.html#file-libraries-codal-core-source-driver-models-SPI.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> Timer.cpp",href:"file_libraries_codal-core_source_driver-models_Timer.cpp.html#file-libraries-codal-core-source-driver-models-Timer.cpp",selectable:false}]},{text:"<span class=\"text-muted\">Directory</span> drivers",href:"dir_libraries_codal-core_source_drivers.html#dir-libraries-codal-core-source-drivers",selectable:false,tags:['31'],nodes:[{text:"<span class=\"text-muted\">File</span> AnalogSensor.cpp",href:"file_libraries_codal-core_source_drivers_AnalogSensor.cpp.html#file-libraries-codal-core-source-drivers-AnalogSensor.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> AnimatedDisplay.cpp",href:"file_libraries_codal-core_source_drivers_AnimatedDisplay.cpp.html#file-libraries-codal-core-source-drivers-AnimatedDisplay.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> AsciiKeyMap.cpp",href:"file_libraries_codal-core_source_drivers_AsciiKeyMap.cpp.html#file-libraries-codal-core-source-drivers-AsciiKeyMap.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> Button.cpp",href:"file_libraries_codal-core_source_drivers_Button.cpp.html#file-libraries-codal-core-source-drivers-Button.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> FXOS8700.cpp",href:"file_libraries_codal-core_source_drivers_FXOS8700.cpp.html#file-libraries-codal-core-source-drivers-FXOS8700.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> GhostFAT.cpp",href:"file_libraries_codal-core_source_drivers_GhostFAT.cpp.html#file-libraries-codal-core-source-drivers-GhostFAT.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> HID.cpp",href:"file_libraries_codal-core_source_drivers_HID.cpp.html#file-libraries-codal-core-source-drivers-HID.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> HIDJoystick.cpp",href:"file_libraries_codal-core_source_drivers_HIDJoystick.cpp.html#file-libraries-codal-core-source-drivers-HIDJoystick.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> HIDKeyboard.cpp",href:"file_libraries_codal-core_source_drivers_HIDKeyboard.cpp.html#file-libraries-codal-core-source-drivers-HIDKeyboard.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> HIDMouse.cpp",href:"file_libraries_codal-core_source_drivers_HIDMouse.cpp.html#file-libraries-codal-core-source-drivers-HIDMouse.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> ILI9341.cpp",href:"file_libraries_codal-core_source_drivers_ILI9341.cpp.html#file-libraries-codal-core-source-drivers-ILI9341.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> KeyValueStorage.cpp",href:"file_libraries_codal-core_source_drivers_KeyValueStorage.cpp.html#file-libraries-codal-core-source-drivers-KeyValueStorage.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> LEDMatrix.cpp",href:"file_libraries_codal-core_source_drivers_LEDMatrix.cpp.html#file-libraries-codal-core-source-drivers-LEDMatrix.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> LinearAnalogSensor.cpp",href:"file_libraries_codal-core_source_drivers_LinearAnalogSensor.cpp.html#file-libraries-codal-core-source-drivers-LinearAnalogSensor.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> LIS3DH.cpp",href:"file_libraries_codal-core_source_drivers_LIS3DH.cpp.html#file-libraries-codal-core-source-drivers-LIS3DH.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> LSM303Accelerometer.cpp",href:"file_libraries_codal-core_source_drivers_LSM303Accelerometer.cpp.html#file-libraries-codal-core-source-drivers-LSM303Accelerometer.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> LSM303Magnetometer.cpp",href:"file_libraries_codal-core_source_drivers_LSM303Magnetometer.cpp.html#file-libraries-codal-core-source-drivers-LSM303Magnetometer.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MAG3110.cpp",href:"file_libraries_codal-core_source_drivers_MAG3110.cpp.html#file-libraries-codal-core-source-drivers-MAG3110.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MessageBus.cpp",href:"file_libraries_codal-core_source_drivers_MessageBus.cpp.html#file-libraries-codal-core-source-drivers-MessageBus.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MMA8653.cpp",href:"file_libraries_codal-core_source_drivers_MMA8653.cpp.html#file-libraries-codal-core-source-drivers-MMA8653.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MPU6050.cpp",href:"file_libraries_codal-core_source_drivers_MPU6050.cpp.html#file-libraries-codal-core-source-drivers-MPU6050.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MultiButton.cpp",href:"file_libraries_codal-core_source_drivers_MultiButton.cpp.html#file-libraries-codal-core-source-drivers-MultiButton.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> NonLinearAnalogSensor.cpp",href:"file_libraries_codal-core_source_drivers_NonLinearAnalogSensor.cpp.html#file-libraries-codal-core-source-drivers-NonLinearAnalogSensor.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> PearsonHash.cpp",href:"file_libraries_codal-core_source_drivers_PearsonHash.cpp.html#file-libraries-codal-core-source-drivers-PearsonHash.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> PulseIn.cpp",href:"file_libraries_codal-core_source_drivers_PulseIn.cpp.html#file-libraries-codal-core-source-drivers-PulseIn.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> ScreenIO.cpp",href:"file_libraries_codal-core_source_drivers_ScreenIO.cpp.html#file-libraries-codal-core-source-drivers-ScreenIO.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> ST7735.cpp",href:"file_libraries_codal-core_source_drivers_ST7735.cpp.html#file-libraries-codal-core-source-drivers-ST7735.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> StandardSPIFlash.cpp",href:"file_libraries_codal-core_source_drivers_StandardSPIFlash.cpp.html#file-libraries-codal-core-source-drivers-StandardSPIFlash.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> TouchButton.cpp",href:"file_libraries_codal-core_source_drivers_TouchButton.cpp.html#file-libraries-codal-core-source-drivers-TouchButton.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> TouchSensor.cpp",href:"file_libraries_codal-core_source_drivers_TouchSensor.cpp.html#file-libraries-codal-core-source-drivers-TouchSensor.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> USBMSC.cpp",href:"file_libraries_codal-core_source_drivers_USBMSC.cpp.html#file-libraries-codal-core-source-drivers-USBMSC.cpp",selectable:false}]},{text:"<span class=\"text-muted\">Directory</span> streams",href:"dir_libraries_codal-core_source_streams.html#dir-libraries-codal-core-source-streams",selectable:false,tags:['13'],nodes:[{text:"<span class=\"text-muted\">File</span> DataStream.cpp",href:"file_libraries_codal-core_source_streams_DataStream.cpp.html#file-libraries-codal-core-source-streams-DataStream.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> EffectFilter.cpp",href:"file_libraries_codal-core_source_streams_EffectFilter.cpp.html#file-libraries-codal-core-source-streams-EffectFilter.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> FIFOStream.cpp",href:"file_libraries_codal-core_source_streams_FIFOStream.cpp.html#file-libraries-codal-core-source-streams-FIFOStream.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> LevelDetector.cpp",href:"file_libraries_codal-core_source_streams_LevelDetector.cpp.html#file-libraries-codal-core-source-streams-LevelDetector.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> LevelDetectorSPL.cpp",href:"file_libraries_codal-core_source_streams_LevelDetectorSPL.cpp.html#file-libraries-codal-core-source-streams-LevelDetectorSPL.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> LowPassFilter.cpp",href:"file_libraries_codal-core_source_streams_LowPassFilter.cpp.html#file-libraries-codal-core-source-streams-LowPassFilter.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MemorySource.cpp",href:"file_libraries_codal-core_source_streams_MemorySource.cpp.html#file-libraries-codal-core-source-streams-MemorySource.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> Mixer.cpp",href:"file_libraries_codal-core_source_streams_Mixer.cpp.html#file-libraries-codal-core-source-streams-Mixer.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> StreamFlowTrigger.cpp",href:"file_libraries_codal-core_source_streams_StreamFlowTrigger.cpp.html#file-libraries-codal-core-source-streams-StreamFlowTrigger.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> StreamNormalizer.cpp",href:"file_libraries_codal-core_source_streams_StreamNormalizer.cpp.html#file-libraries-codal-core-source-streams-StreamNormalizer.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> StreamRecording.cpp",href:"file_libraries_codal-core_source_streams_StreamRecording.cpp.html#file-libraries-codal-core-source-streams-StreamRecording.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> StreamSplitter.cpp",href:"file_libraries_codal-core_source_streams_StreamSplitter.cpp.html#file-libraries-codal-core-source-streams-StreamSplitter.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> Synthesizer.cpp",href:"file_libraries_codal-core_source_streams_Synthesizer.cpp.html#file-libraries-codal-core-source-streams-Synthesizer.cpp",selectable:false}]},{text:"<span class=\"text-muted\">Directory</span> types",href:"dir_libraries_codal-core_source_types.html#dir-libraries-codal-core-source-types",selectable:false,tags:['9'],nodes:[{text:"<span class=\"text-muted\">File</span> BitmapFont.cpp",href:"file_libraries_codal-core_source_types_BitmapFont.cpp.html#file-libraries-codal-core-source-types-BitmapFont.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> CoordinateSystem.cpp",href:"file_libraries_codal-core_source_types_CoordinateSystem.cpp.html#file-libraries-codal-core-source-types-CoordinateSystem.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> Event.cpp",href:"file_libraries_codal-core_source_types_Event.cpp.html#file-libraries-codal-core-source-types-Event.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> Image.cpp",href:"file_libraries_codal-core_source_types_Image.cpp.html#file-libraries-codal-core-source-types-Image.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> ManagedBuffer.cpp",href:"file_libraries_codal-core_source_types_ManagedBuffer.cpp.html#file-libraries-codal-core-source-types-ManagedBuffer.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> ManagedString.cpp",href:"file_libraries_codal-core_source_types_ManagedString.cpp.html#file-libraries-codal-core-source-types-ManagedString.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> Matrix4.cpp",href:"file_libraries_codal-core_source_types_Matrix4.cpp.html#file-libraries-codal-core-source-types-Matrix4.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> RefCounted.cpp",href:"file_libraries_codal-core_source_types_RefCounted.cpp.html#file-libraries-codal-core-source-types-RefCounted.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> RefCountedInit.cpp",href:"file_libraries_codal-core_source_types_RefCountedInit.cpp.html#file-libraries-codal-core-source-types-RefCountedInit.cpp",selectable:false}]}]}]},{text:"<span class=\"text-muted\">Directory</span> codal-microbit-v2",href:"dir_libraries_codal-microbit-v2.html#dir-libraries-codal-microbit-v2",selectable:false,tags:['1'],nodes:[{text:"<span class=\"text-muted\">Directory</span> source",href:"dir_libraries_codal-microbit-v2_source.html#dir-libraries-codal-microbit-v2-source",selectable:false,tags:['30'],nodes:[{text:"<span class=\"text-muted\">Directory</span> bluetooth",href:"dir_libraries_codal-microbit-v2_source_bluetooth.html#dir-libraries-codal-microbit-v2-source-bluetooth",selectable:false,tags:['15'],nodes:[{text:"<span class=\"text-muted\">File</span> MicroBitAccelerometerService.cpp",href:"file_libraries_codal-microbit-v2_source_bluetooth_MicroBitAccelerometerService.cpp.html#file-libraries-codal-microbit-v2-source-bluetooth-MicroBitAccelerometerService.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitBLEChar.cpp",href:"file_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLEChar.cpp.html#file-libraries-codal-microbit-v2-source-bluetooth-MicroBitBLEChar.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitBLEManager.cpp",href:"file_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLEManager.cpp.html#file-libraries-codal-microbit-v2-source-bluetooth-MicroBitBLEManager.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitBLEService.cpp",href:"file_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLEService.cpp.html#file-libraries-codal-microbit-v2-source-bluetooth-MicroBitBLEService.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitBLEServices.cpp",href:"file_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLEServices.cpp.html#file-libraries-codal-microbit-v2-source-bluetooth-MicroBitBLEServices.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitBLETypes.cpp",href:"file_libraries_codal-microbit-v2_source_bluetooth_MicroBitBLETypes.cpp.html#file-libraries-codal-microbit-v2-source-bluetooth-MicroBitBLETypes.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitButtonService.cpp",href:"file_libraries_codal-microbit-v2_source_bluetooth_MicroBitButtonService.cpp.html#file-libraries-codal-microbit-v2-source-bluetooth-MicroBitButtonService.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitEddystone.cpp",href:"file_libraries_codal-microbit-v2_source_bluetooth_MicroBitEddystone.cpp.html#file-libraries-codal-microbit-v2-source-bluetooth-MicroBitEddystone.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitEventService.cpp",href:"file_libraries_codal-microbit-v2_source_bluetooth_MicroBitEventService.cpp.html#file-libraries-codal-microbit-v2-source-bluetooth-MicroBitEventService.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitIOPinService.cpp",href:"file_libraries_codal-microbit-v2_source_bluetooth_MicroBitIOPinService.cpp.html#file-libraries-codal-microbit-v2-source-bluetooth-MicroBitIOPinService.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitLEDService.cpp",href:"file_libraries_codal-microbit-v2_source_bluetooth_MicroBitLEDService.cpp.html#file-libraries-codal-microbit-v2-source-bluetooth-MicroBitLEDService.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitMagnetometerService.cpp",href:"file_libraries_codal-microbit-v2_source_bluetooth_MicroBitMagnetometerService.cpp.html#file-libraries-codal-microbit-v2-source-bluetooth-MicroBitMagnetometerService.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitPartialFlashingService.cpp",href:"file_libraries_codal-microbit-v2_source_bluetooth_MicroBitPartialFlashingService.cpp.html#file-libraries-codal-microbit-v2-source-bluetooth-MicroBitPartialFlashingService.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitTemperatureService.cpp",href:"file_libraries_codal-microbit-v2_source_bluetooth_MicroBitTemperatureService.cpp.html#file-libraries-codal-microbit-v2-source-bluetooth-MicroBitTemperatureService.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitUARTService.cpp",href:"file_libraries_codal-microbit-v2_source_bluetooth_MicroBitUARTService.cpp.html#file-libraries-codal-microbit-v2-source-bluetooth-MicroBitUARTService.cpp",selectable:false}]},{text:"<span class=\"text-muted\">Directory</span> compat",href:"dir_libraries_codal-microbit-v2_source_compat.html#dir-libraries-codal-microbit-v2-source-compat",selectable:false,tags:['4'],nodes:[{text:"<span class=\"text-muted\">File</span> MbedMemberFunctionCallback.cpp",href:"file_libraries_codal-microbit-v2_source_compat_MbedMemberFunctionCallback.cpp.html#file-libraries-codal-microbit-v2-source-compat-MbedMemberFunctionCallback.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitButton.cpp",href:"file_libraries_codal-microbit-v2_source_compat_MicroBitButton.cpp.html#file-libraries-codal-microbit-v2-source-compat-MicroBitButton.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitI2C.cpp",href:"file_libraries_codal-microbit-v2_source_compat_MicroBitI2C.cpp.html#file-libraries-codal-microbit-v2-source-compat-MicroBitI2C.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitSerial.cpp",href:"file_libraries_codal-microbit-v2_source_compat_MicroBitSerial.cpp.html#file-libraries-codal-microbit-v2-source-compat-MicroBitSerial.cpp",selectable:false}]},{text:"<span class=\"text-muted\">File</span> FSCache.cpp",href:"file_libraries_codal-microbit-v2_source_FSCache.cpp.html#file-libraries-codal-microbit-v2-source-FSCache.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitAccelerometer.cpp",href:"file_libraries_codal-microbit-v2_source_MicroBitAccelerometer.cpp.html#file-libraries-codal-microbit-v2-source-MicroBitAccelerometer.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitAudio.cpp",href:"file_libraries_codal-microbit-v2_source_MicroBitAudio.cpp.html#file-libraries-codal-microbit-v2-source-MicroBitAudio.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitCompass.cpp",href:"file_libraries_codal-microbit-v2_source_MicroBitCompass.cpp.html#file-libraries-codal-microbit-v2-source-MicroBitCompass.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitCompassCalibrator.cpp",href:"file_libraries_codal-microbit-v2_source_MicroBitCompassCalibrator.cpp.html#file-libraries-codal-microbit-v2-source-MicroBitCompassCalibrator.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitCompat.cpp",href:"file_libraries_codal-microbit-v2_source_MicroBitCompat.cpp.html#file-libraries-codal-microbit-v2-source-MicroBitCompat.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitDevice.cpp",href:"file_libraries_codal-microbit-v2_source_MicroBitDevice.cpp.html#file-libraries-codal-microbit-v2-source-MicroBitDevice.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitDisplay.cpp",href:"file_libraries_codal-microbit-v2_source_MicroBitDisplay.cpp.html#file-libraries-codal-microbit-v2-source-MicroBitDisplay.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitFile.cpp",href:"file_libraries_codal-microbit-v2_source_MicroBitFile.cpp.html#file-libraries-codal-microbit-v2-source-MicroBitFile.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitFileSystem.cpp",href:"file_libraries_codal-microbit-v2_source_MicroBitFileSystem.cpp.html#file-libraries-codal-microbit-v2-source-MicroBitFileSystem.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitFlash.cpp",href:"file_libraries_codal-microbit-v2_source_MicroBitFlash.cpp.html#file-libraries-codal-microbit-v2-source-MicroBitFlash.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitLog.cpp",href:"file_libraries_codal-microbit-v2_source_MicroBitLog.cpp.html#file-libraries-codal-microbit-v2-source-MicroBitLog.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitMemoryMap.cpp",href:"file_libraries_codal-microbit-v2_source_MicroBitMemoryMap.cpp.html#file-libraries-codal-microbit-v2-source-MicroBitMemoryMap.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitPowerManager.cpp",href:"file_libraries_codal-microbit-v2_source_MicroBitPowerManager.cpp.html#file-libraries-codal-microbit-v2-source-MicroBitPowerManager.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitRadio.cpp",href:"file_libraries_codal-microbit-v2_source_MicroBitRadio.cpp.html#file-libraries-codal-microbit-v2-source-MicroBitRadio.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitRadioDatagram.cpp",href:"file_libraries_codal-microbit-v2_source_MicroBitRadioDatagram.cpp.html#file-libraries-codal-microbit-v2-source-MicroBitRadioDatagram.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitRadioEvent.cpp",href:"file_libraries_codal-microbit-v2_source_MicroBitRadioEvent.cpp.html#file-libraries-codal-microbit-v2-source-MicroBitRadioEvent.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitThermometer.cpp",href:"file_libraries_codal-microbit-v2_source_MicroBitThermometer.cpp.html#file-libraries-codal-microbit-v2-source-MicroBitThermometer.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroBitUSBFlashManager.cpp",href:"file_libraries_codal-microbit-v2_source_MicroBitUSBFlashManager.cpp.html#file-libraries-codal-microbit-v2-source-MicroBitUSBFlashManager.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> MicroSynth.cpp",href:"file_libraries_codal-microbit-v2_source_MicroSynth.cpp.html#file-libraries-codal-microbit-v2-source-MicroSynth.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> Mixer2.cpp",href:"file_libraries_codal-microbit-v2_source_Mixer2.cpp.html#file-libraries-codal-microbit-v2-source-Mixer2.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> NRF52FlashManager.cpp",href:"file_libraries_codal-microbit-v2_source_NRF52FlashManager.cpp.html#file-libraries-codal-microbit-v2-source-NRF52FlashManager.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> NRF52LedMatrix.cpp",href:"file_libraries_codal-microbit-v2_source_NRF52LedMatrix.cpp.html#file-libraries-codal-microbit-v2-source-NRF52LedMatrix.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> PacketBuffer.cpp",href:"file_libraries_codal-microbit-v2_source_PacketBuffer.cpp.html#file-libraries-codal-microbit-v2-source-PacketBuffer.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> SoundEmojiSynthesizer.cpp",href:"file_libraries_codal-microbit-v2_source_SoundEmojiSynthesizer.cpp.html#file-libraries-codal-microbit-v2-source-SoundEmojiSynthesizer.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> SoundExpressions.cpp",href:"file_libraries_codal-microbit-v2_source_SoundExpressions.cpp.html#file-libraries-codal-microbit-v2-source-SoundExpressions.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> SoundOutputPin.cpp",href:"file_libraries_codal-microbit-v2_source_SoundOutputPin.cpp.html#file-libraries-codal-microbit-v2-source-SoundOutputPin.cpp",selectable:false},{text:"<span class=\"text-muted\">File</span> SoundSynthesizerEffects.cpp",href:"file_libraries_codal-microbit-v2_source_SoundSynthesizerEffects.cpp.html#file-libraries-codal-microbit-v2-source-SoundSynthesizerEffects.cpp",selectable:false}]}]}]},
+     ]
+  }
+</script><!-- end getFileHierarchyTree() function --></section>
+
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By John Vidler
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, John Vidler.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

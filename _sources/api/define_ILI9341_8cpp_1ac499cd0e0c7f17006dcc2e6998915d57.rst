@@ -1,0 +1,13 @@
+.. _exhale_define_ILI9341_8cpp_1ac499cd0e0c7f17006dcc2e6998915d57:
+
+Define ILI9341_INVCTR
+=====================
+
+- Defined in :ref:`file_libraries_codal-core_source_drivers_ILI9341.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: ILI9341_INVCTR

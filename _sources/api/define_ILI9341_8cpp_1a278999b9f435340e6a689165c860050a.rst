@@ -1,0 +1,13 @@
+.. _exhale_define_ILI9341_8cpp_1a278999b9f435340e6a689165c860050a:
+
+Define ILI9341_DISPON
+=====================
+
+- Defined in :ref:`file_libraries_codal-core_source_drivers_ILI9341.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: ILI9341_DISPON

@@ -1,0 +1,822 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Program Listing for File MessageBus.cpp &#8212; CODAL Documentation v0.2.49-4-g300bcb4</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/program_listing_file_libraries_codal-core_source_drivers_MessageBus.cpp';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">We're currently porting the DAL documentation over to CODAL. The information on here may be outdated or incorrect!</div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">CODAL Documentation v0.2.49-4-g300bcb4</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL Documentation
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started with CODAL</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ubit/index.html">The uBit Object</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/buttons.html">Buttons and Touch Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/edge-connector.html">Edge Connector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/accelerometer.html">uBit.accelerometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/audio.html">uBit.audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/compass.html">uBit.compass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/display.html">uBit.display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/serial.html">uBit.serial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/storage.html">uBit.storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/thermometer.html">uBit.thermometer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../memory-and-storage/index.html">Memory and Storage</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/managedstring.html">ManagedString</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/packetbuffer.html">PacketBuffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/microbitimage.html">MicroBitImage</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../guides/index.html">Guides</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../guides/prerequisites.html">Installation - Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/codal-projects.html">CODAL Projects</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../projects/index.html">Projects</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/disco-lights.html">Disco Lights</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../codal-api.html">The Complete CODAL API</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary of Terms</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/lancaster-university/codal-documentation" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Program Listing for File MessageBus.cpp</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="program-listing-for-file-messagebus-cpp">
+<span id="program-listing-file-libraries-codal-core-source-drivers-messagebus-cpp"></span><h1>Program Listing for File MessageBus.cpp<a class="headerlink" href="#program-listing-for-file-messagebus-cpp" title="Permalink to this heading">#</a></h1>
+<p>↰ <a class="reference internal" href="file_libraries_codal-core_source_drivers_MessageBus.cpp.html#file-libraries-codal-core-source-drivers-messagebus-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">libraries/codal-core/source/drivers/MessageBus.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm">The MIT License (MIT)</span>
+
+<span class="cm">Copyright (c) 2017 Lancaster University.</span>
+
+<span class="cm">Permission is hereby granted, free of charge, to any person obtaining a</span>
+<span class="cm">copy of this software and associated documentation files (the &quot;Software&quot;),</span>
+<span class="cm">to deal in the Software without restriction, including without limitation</span>
+<span class="cm">the rights to use, copy, modify, merge, publish, distribute, sublicense,</span>
+<span class="cm">and/or sell copies of the Software, and to permit persons to whom the</span>
+<span class="cm">Software is furnished to do so, subject to the following conditions:</span>
+
+<span class="cm">The above copyright notice and this permission notice shall be included in</span>
+<span class="cm">all copies or substantial portions of the Software.</span>
+
+<span class="cm">THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<span class="cm">IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
+<span class="cm">FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL</span>
+<span class="cm">THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span>
+<span class="cm">LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING</span>
+<span class="cm">FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER</span>
+<span class="cm">DEALINGS IN THE SOFTWARE.</span>
+<span class="cm">*/</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CodalConfig.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MessageBus.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CodalFiber.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CodalDmesg.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ErrorNo.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;NotifyEvents.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;codal_target_hal.h&quot;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">codal</span><span class="p">;</span>
+
+<span class="k">static</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">userNotifyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DEVICE_NOTIFY_USER_EVENT_BASE</span><span class="p">;</span>
+
+<span class="n">MessageBus</span><span class="o">::</span><span class="n">MessageBus</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">listeners</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">evt_queue_head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">evt_queue_tail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">queueLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// ANY listeners for scheduler events MUST be immediate, or else they will not be registered.</span>
+<span class="w">    </span><span class="n">listen</span><span class="p">(</span><span class="n">DEVICE_ID_SCHEDULER</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_SCHEDULER_EVT_IDLE</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">MessageBus</span><span class="o">::</span><span class="n">idle</span><span class="p">,</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_IMMEDIATE</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">EventModel</span><span class="o">::</span><span class="n">defaultEventBus</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">        </span><span class="n">EventModel</span><span class="o">::</span><span class="n">defaultEventBus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">REAL_TIME_FUNC</span>
+<span class="kt">void</span><span class="w"> </span><span class="n">async_callback</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">param</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">Listener</span><span class="w"> </span><span class="o">*</span><span class="n">listener</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Listener</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">param</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// OK, now we need to decide how to behave depending on our configuration.</span>
+<span class="w">    </span><span class="c1">// If this a fiber f already active within this listener then check our</span>
+<span class="w">    </span><span class="c1">// configuration to determine the correct course of action.</span>
+<span class="w">    </span><span class="c1">//</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_BUSY</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Drop this event, if that&#39;s how we&#39;ve been configured.</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_DROP_IF_BUSY</span><span class="p">)</span>
+<span class="w">            </span><span class="k">return</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Queue this event up for later, if that&#39;s how we&#39;ve been configured.</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_QUEUE_IF_BUSY</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">queue</span><span class="p">(</span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">evt</span><span class="p">);</span>
+<span class="w">            </span><span class="k">return</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Determine the calling convention for the callback, and invoke...</span>
+<span class="w">    </span><span class="c1">// C++ is really bad at this! Especially as the ARM compiler is yet to support C++ 11 :-/</span>
+
+<span class="w">    </span><span class="c1">// Record that we have a fiber going into this listener...</span>
+<span class="w">    </span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_BUSY</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Firstly, check for a method callback into an object.</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_METHOD</span><span class="p">)</span>
+<span class="w">            </span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">cb_method</span><span class="o">-&gt;</span><span class="n">fire</span><span class="p">(</span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">evt</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Now a parameterised C function</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_PARAMETERISED</span><span class="p">)</span>
+<span class="w">            </span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">cb_param</span><span class="p">(</span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">evt</span><span class="p">,</span><span class="w"> </span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">cb_arg</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// We must have a plain C function</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">            </span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">cb</span><span class="p">(</span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">evt</span><span class="p">);</span>
+
+
+<span class="w">        </span><span class="c1">// If there are more events to process, dequeue the next one and process it.</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_QUEUE_IF_BUSY</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">evt_queue</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">EventQueueItem</span><span class="w"> </span><span class="o">*</span><span class="n">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">evt_queue</span><span class="p">;</span>
+
+<span class="w">            </span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">evt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">item</span><span class="o">-&gt;</span><span class="n">evt</span><span class="p">;</span>
+<span class="w">            </span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">evt_queue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">evt_queue</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<span class="w">            </span><span class="k">delete</span><span class="w"> </span><span class="n">item</span><span class="p">;</span>
+
+<span class="w">            </span><span class="c1">// We spin the scheduler here, to preven any particular event handler from continuously holding onto resources.</span>
+<span class="w">            </span><span class="n">schedule</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// The fiber of exiting... clear our state.</span>
+<span class="w">    </span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;=</span><span class="w"> </span><span class="o">~</span><span class="n">MESSAGE_BUS_LISTENER_BUSY</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">REAL_TIME_FUNC</span>
+<span class="kt">void</span><span class="w"> </span><span class="n">MessageBus</span><span class="o">::</span><span class="n">queueEvent</span><span class="p">(</span><span class="n">Event</span><span class="w"> </span><span class="o">&amp;</span><span class="n">evt</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">processingComplete</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">EventQueueItem</span><span class="w"> </span><span class="o">*</span><span class="n">prev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">evt_queue_tail</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Now process all handler regsitered as URGENT.</span>
+<span class="w">    </span><span class="c1">// These pre-empt the queue, and are useful for fast, high priority services.</span>
+<span class="w">    </span><span class="n">processingComplete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">process</span><span class="p">(</span><span class="n">evt</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// If we&#39;ve already processed all event handlers, we&#39;re all done.</span>
+<span class="w">    </span><span class="c1">// No need to queue the event.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">processingComplete</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// If we need to queue, but there is no space, then there&#39;s nothg we can do.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">queueLength</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_MAX_QUEUE_DEPTH</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Note that this can lead to strange lockups, where we await an event that never arrives.</span>
+<span class="w">        </span><span class="n">DMESG</span><span class="p">(</span><span class="s">&quot;evt %d/%d: overflow!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">evt</span><span class="p">.</span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="n">evt</span><span class="p">.</span><span class="n">value</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Otherwise, we need to queue this event for later processing...</span>
+<span class="w">    </span><span class="c1">// We queue this event at the tail of the queue at the point where we entered queueEvent()</span>
+<span class="w">    </span><span class="c1">// This is important as the processing above *may* have generated further events, and</span>
+<span class="w">    </span><span class="c1">// we want to maintain ordering of events.</span>
+<span class="w">    </span><span class="n">EventQueueItem</span><span class="w"> </span><span class="o">*</span><span class="n">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EventQueueItem</span><span class="p">(</span><span class="n">evt</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// The queue was empty when we entered this function, so queue our event at the start of the queue.</span>
+<span class="w">    </span><span class="n">target_disable_irq</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">prev</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">item</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">evt_queue_head</span><span class="p">;</span>
+<span class="w">        </span><span class="n">evt_queue_head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">item</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">item</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prev</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<span class="w">        </span><span class="n">prev</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">item</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">        </span><span class="n">evt_queue_tail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">item</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">queueLength</span><span class="o">++</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">target_enable_irq</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="n">REAL_TIME_FUNC</span>
+<span class="n">EventQueueItem</span><span class="o">*</span><span class="w"> </span><span class="n">MessageBus</span><span class="o">::</span><span class="n">dequeueEvent</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">EventQueueItem</span><span class="w"> </span><span class="o">*</span><span class="n">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">target_disable_irq</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">evt_queue_head</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">evt_queue_head</span><span class="p">;</span>
+<span class="w">        </span><span class="n">evt_queue_head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">item</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">evt_queue_head</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">            </span><span class="n">evt_queue_tail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">queueLength</span><span class="o">--</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">target_enable_irq</span><span class="p">();</span>
+
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">item</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MessageBus</span><span class="o">::</span><span class="n">deleteMarkedListeners</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">Listener</span><span class="w"> </span><span class="o">*</span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">removed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listeners</span><span class="p">;</span>
+<span class="w">    </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Walk this list of event handlers. Delete any that match the given listener.</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">l</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_DELETING</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="n">l</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_BUSY</span><span class="p">))</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">                </span><span class="n">listeners</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<span class="w">            </span><span class="k">else</span>
+<span class="w">                </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+
+<span class="w">            </span><span class="c1">// delete the listener.</span>
+<span class="w">            </span><span class="n">Listener</span><span class="w"> </span><span class="o">*</span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="p">;</span>
+<span class="w">            </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+
+<span class="w">            </span><span class="k">delete</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+<span class="w">            </span><span class="n">removed</span><span class="o">++</span><span class="p">;</span>
+
+<span class="w">            </span><span class="k">continue</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="p">;</span>
+<span class="w">        </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">removed</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">MessageBus</span><span class="o">::</span><span class="n">idle</span><span class="p">(</span><span class="n">Event</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// Clear out any listeners marked for deletion</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">deleteMarkedListeners</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">EventQueueItem</span><span class="w"> </span><span class="o">*</span><span class="n">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">dequeueEvent</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Whilst there are events to process and we have no useful other work to do, pull them off the queue and process them.</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// send the event to all standard event listeners.</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">process</span><span class="p">(</span><span class="n">item</span><span class="o">-&gt;</span><span class="n">evt</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Free the queue item.</span>
+<span class="w">        </span><span class="k">delete</span><span class="w"> </span><span class="n">item</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// If we have created some useful work to do, we stop processing.</span>
+<span class="w">        </span><span class="c1">// This helps to minimise the number of blocked fibers we create at any point in time, therefore</span>
+<span class="w">        </span><span class="c1">// also reducing the RAM footprint.</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">scheduler_runqueue_empty</span><span class="p">())</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Pull the next event to process, if there is one.</span>
+<span class="w">        </span><span class="n">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">dequeueEvent</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">REAL_TIME_FUNC</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">MessageBus</span><span class="o">::</span><span class="n">send</span><span class="p">(</span><span class="n">Event</span><span class="w"> </span><span class="n">evt</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// We simply queue processing of the event until we&#39;re scheduled in normal thread context.</span>
+<span class="w">    </span><span class="c1">// We do this to avoid the possibility of executing event handler code in IRQ context, which may bring</span>
+<span class="w">    </span><span class="c1">// hidden race conditions to kids code. Queuing all events ensures causal ordering (total ordering in fact).</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">queueEvent</span><span class="p">(</span><span class="n">evt</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">REAL_TIME_FUNC</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">MessageBus</span><span class="o">::</span><span class="n">process</span><span class="p">(</span><span class="n">Event</span><span class="w"> </span><span class="o">&amp;</span><span class="n">evt</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">urgent</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">Listener</span><span class="w"> </span><span class="o">*</span><span class="n">l</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">complete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">listenerUrgent</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listeners</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="p">((</span><span class="n">l</span><span class="o">-&gt;</span><span class="n">id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">evt</span><span class="p">.</span><span class="n">source</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DEVICE_ID_ANY</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="o">-&gt;</span><span class="n">value</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">evt</span><span class="p">.</span><span class="n">value</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">value</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DEVICE_EVT_ANY</span><span class="p">))</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// If we&#39;re running under the fiber scheduler, then derive the THREADING_MODE for the callback based on the</span>
+<span class="w">            </span><span class="c1">// metadata in the listener itself.</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fiber_scheduler_running</span><span class="p">())</span>
+<span class="w">                </span><span class="n">listenerUrgent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_IMMEDIATE</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_IMMEDIATE</span><span class="p">;</span>
+<span class="w">            </span><span class="k">else</span>
+<span class="w">                </span><span class="n">listenerUrgent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+
+<span class="w">            </span><span class="c1">// If we should process this event hander in this pass, then activate the listener.</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">listenerUrgent</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">urgent</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="n">l</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_DELETING</span><span class="p">))</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">evt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">evt</span><span class="p">;</span>
+
+<span class="w">                </span><span class="c1">// OK, if this handler has regisitered itself as non-blocking, we just execute it directly...</span>
+<span class="w">                </span><span class="c1">// This is normally only done for trusted system components.</span>
+<span class="w">                </span><span class="c1">// Otherwise, we invoke it in a &#39;fork on block&#39; context, that will automatically create a fiber</span>
+<span class="w">                </span><span class="c1">// should the event handler attempt a blocking operation, but doesn&#39;t have the overhead</span>
+<span class="w">                </span><span class="c1">// of creating a fiber needlessly. (cool huh?)</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_NONBLOCKING</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="n">fiber_scheduler_running</span><span class="p">())</span>
+<span class="w">                    </span><span class="n">async_callback</span><span class="p">(</span><span class="n">l</span><span class="p">);</span>
+<span class="w">                </span><span class="k">else</span>
+<span class="w">                    </span><span class="n">invoke</span><span class="p">(</span><span class="n">async_callback</span><span class="p">,</span><span class="w"> </span><span class="n">l</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">else</span>
+<span class="w">                </span><span class="n">complete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//Serial.println(&quot;EXIT&quot;);</span>
+<span class="w">    </span><span class="c1">//while (!(UCSR0A &amp; _BV(TXC0)));</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">complete</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MessageBus</span><span class="o">::</span><span class="n">add</span><span class="p">(</span><span class="n">Listener</span><span class="w"> </span><span class="o">*</span><span class="n">newListener</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">Listener</span><span class="w"> </span><span class="o">*</span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">methodCallback</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//handler can&#39;t be NULL!</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">newListener</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_INVALID_PARAMETER</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listeners</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Firstly, we treat a listener as an idempotent operation. Ensure we don&#39;t already have this handler</span>
+<span class="w">    </span><span class="c1">// registered in a that will already capture these events. If we do, silently ignore.</span>
+
+<span class="w">    </span><span class="c1">// We always check the ID, VALUE and CB_METHOD fields.</span>
+<span class="w">    </span><span class="c1">// If we have a callback to a method, check the cb_method class. Otherwise, the cb function point is sufficient.</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">methodCallback</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">newListener</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_METHOD</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_METHOD</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="o">-&gt;</span><span class="n">id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">newListener</span><span class="o">-&gt;</span><span class="n">id</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">value</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">newListener</span><span class="o">-&gt;</span><span class="n">value</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">methodCallback</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="o">*</span><span class="n">l</span><span class="o">-&gt;</span><span class="n">cb_method</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">*</span><span class="n">newListener</span><span class="o">-&gt;</span><span class="n">cb_method</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">cb</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">newListener</span><span class="o">-&gt;</span><span class="n">cb</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">newListener</span><span class="o">-&gt;</span><span class="n">cb_arg</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">cb_arg</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// We have a perfect match for this event listener already registered.</span>
+<span class="w">            </span><span class="c1">// If it&#39;s marked for deletion, we simply resurrect the listener, and we&#39;re done.</span>
+<span class="w">            </span><span class="c1">// Either way, we return an error code, as the *new* listener should be released...</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">l</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_DELETING</span><span class="p">)</span>
+<span class="w">                </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;=</span><span class="w"> </span><span class="o">~</span><span class="n">MESSAGE_BUS_LISTENER_DELETING</span><span class="p">;</span>
+
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_NOT_SUPPORTED</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// We have a valid, new event handler. Add it to the list.</span>
+<span class="w">    </span><span class="c1">// if listeners is null - we can automatically add this listener to the list at the beginning...</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">listeners</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">listeners</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newListener</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Event</span><span class="p">(</span><span class="n">DEVICE_ID_MESSAGE_BUS_LISTENER</span><span class="p">,</span><span class="w"> </span><span class="n">newListener</span><span class="o">-&gt;</span><span class="n">id</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// We maintain an ordered list of listeners.</span>
+<span class="w">    </span><span class="c1">// The chain is held stictly in increasing order of ID (first level), then value code (second level).</span>
+<span class="w">    </span><span class="c1">// Find the correct point in the chain for this event.</span>
+<span class="w">    </span><span class="c1">// Adding a listener is a rare occurance, so we just walk the list...</span>
+
+<span class="w">    </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listeners</span><span class="p">;</span>
+<span class="w">    </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listeners</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">id</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">newListener</span><span class="o">-&gt;</span><span class="n">id</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="p">;</span>
+<span class="w">        </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">newListener</span><span class="o">-&gt;</span><span class="n">id</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">value</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">newListener</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="p">;</span>
+<span class="w">        </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//add at front of list</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">listeners</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">newListener</span><span class="o">-&gt;</span><span class="n">id</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">id</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">newListener</span><span class="o">-&gt;</span><span class="n">id</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">value</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">newListener</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">)))</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">newListener</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">//this new listener is now the front!</span>
+<span class="w">        </span><span class="n">listeners</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newListener</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">//add after p</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">newListener</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<span class="w">        </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newListener</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">Event</span><span class="p">(</span><span class="n">DEVICE_ID_MESSAGE_BUS_LISTENER</span><span class="p">,</span><span class="w"> </span><span class="n">newListener</span><span class="o">-&gt;</span><span class="n">id</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MessageBus</span><span class="o">::</span><span class="n">remove</span><span class="p">(</span><span class="n">Listener</span><span class="w"> </span><span class="o">*</span><span class="n">listener</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">Listener</span><span class="w"> </span><span class="o">*</span><span class="n">l</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">removed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//handler can&#39;t be NULL!</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">listener</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_INVALID_PARAMETER</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listeners</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Walk this list of event handlers. Delete any that match the given listener.</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_METHOD</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_METHOD</span><span class="p">))</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(((</span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_METHOD</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">l</span><span class="o">-&gt;</span><span class="n">cb_method</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">*</span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">cb_method</span><span class="p">))</span><span class="w"> </span><span class="o">||</span>
+<span class="w">              </span><span class="p">((</span><span class="o">!</span><span class="p">(</span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_METHOD</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">cb</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">cb</span><span class="p">)))</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DEVICE_ID_ANY</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">value</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DEVICE_EVT_ANY</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">listener</span><span class="o">-&gt;</span><span class="n">value</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">))</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="c1">// If notification of deletion has been requested, invoke the listener deletion callback.</span>
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">listener_deletion_callback</span><span class="p">)</span>
+<span class="w">                        </span><span class="n">listener_deletion_callback</span><span class="p">(</span><span class="n">l</span><span class="p">);</span>
+
+<span class="w">                    </span><span class="c1">// Found a match. mark this to be removed from the list.</span>
+<span class="w">                    </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_DELETING</span><span class="p">;</span>
+<span class="w">                    </span><span class="n">removed</span><span class="o">++</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">removed</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_INVALID_PARAMETER</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">Listener</span><span class="o">*</span><span class="w"> </span><span class="n">MessageBus</span><span class="o">::</span><span class="n">elementAt</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">Listener</span><span class="w"> </span><span class="o">*</span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listeners</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">n</span><span class="o">--</span><span class="p">;</span>
+<span class="w">        </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">l</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">codal</span><span class="w"> </span><span class="p">{</span>
+
+<span class="kt">uint16_t</span><span class="w"> </span><span class="nf">allocateNotifyEvent</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">userNotifyId</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="n">MessageBus</span><span class="o">::~</span><span class="n">MessageBus</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">ignore</span><span class="p">(</span><span class="n">DEVICE_ID_SCHEDULER</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_EVT_ANY</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">MessageBus</span><span class="o">::</span><span class="n">idle</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By John Vidler
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, John Vidler.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

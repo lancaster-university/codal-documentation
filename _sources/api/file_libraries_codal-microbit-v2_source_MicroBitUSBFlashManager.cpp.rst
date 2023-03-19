@@ -1,0 +1,51 @@
+
+.. _file_libraries_codal-microbit-v2_source_MicroBitUSBFlashManager.cpp:
+
+File MicroBitUSBFlashManager.cpp
+================================
+
+|exhale_lsh| :ref:`Parent directory <dir_libraries_codal-microbit-v2_source>` (``libraries/codal-microbit-v2/source``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``libraries/codal-microbit-v2/source/MicroBitUSBFlashManager.cpp``)
+-------------------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_libraries_codal-microbit-v2_source_MicroBitUSBFlashManager.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``MicroBitUSBFlashManager.h``
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_MicroBitUSBFlashManager_8cpp_1ad382041038a6cbbda868e1d2391d5598`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_MicroBitUSBFlashManager_8cpp_1a1dcf62e2f8b6064eae30bee84eb43707`
+

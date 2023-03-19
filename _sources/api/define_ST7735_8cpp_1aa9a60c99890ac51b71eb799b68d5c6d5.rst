@@ -1,0 +1,13 @@
+.. _exhale_define_ST7735_8cpp_1aa9a60c99890ac51b71eb799b68d5c6d5:
+
+Define ST7735_RAMWR
+===================
+
+- Defined in :ref:`file_libraries_codal-core_source_drivers_ST7735.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: ST7735_RAMWR

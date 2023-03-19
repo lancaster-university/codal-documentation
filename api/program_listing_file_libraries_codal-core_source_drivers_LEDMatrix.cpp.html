@@ -1,0 +1,640 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Program Listing for File LEDMatrix.cpp &#8212; CODAL Documentation v0.2.49-4-g300bcb4</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/program_listing_file_libraries_codal-core_source_drivers_LEDMatrix.cpp';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">We're currently porting the DAL documentation over to CODAL. The information on here may be outdated or incorrect!</div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">CODAL Documentation v0.2.49-4-g300bcb4</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL Documentation
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started with CODAL</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ubit/index.html">The uBit Object</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/buttons.html">Buttons and Touch Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/edge-connector.html">Edge Connector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/accelerometer.html">uBit.accelerometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/audio.html">uBit.audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/compass.html">uBit.compass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/display.html">uBit.display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/serial.html">uBit.serial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/storage.html">uBit.storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/thermometer.html">uBit.thermometer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../memory-and-storage/index.html">Memory and Storage</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/managedstring.html">ManagedString</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/packetbuffer.html">PacketBuffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/microbitimage.html">MicroBitImage</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../guides/index.html">Guides</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../guides/prerequisites.html">Installation - Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/codal-projects.html">CODAL Projects</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../projects/index.html">Projects</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/disco-lights.html">Disco Lights</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../codal-api.html">The Complete CODAL API</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary of Terms</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/lancaster-university/codal-documentation" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Program Listing for File LEDMatrix.cpp</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="program-listing-for-file-ledmatrix-cpp">
+<span id="program-listing-file-libraries-codal-core-source-drivers-ledmatrix-cpp"></span><h1>Program Listing for File LEDMatrix.cpp<a class="headerlink" href="#program-listing-for-file-ledmatrix-cpp" title="Permalink to this heading">#</a></h1>
+<p>↰ <a class="reference internal" href="file_libraries_codal-core_source_drivers_LEDMatrix.cpp.html#file-libraries-codal-core-source-drivers-ledmatrix-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">libraries/codal-core/source/drivers/LEDMatrix.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm">The MIT License (MIT)</span>
+
+<span class="cm">Copyright (c) 2017 Lancaster University.</span>
+
+<span class="cm">Permission is hereby granted, free of charge, to any person obtaining a</span>
+<span class="cm">copy of this software and associated documentation files (the &quot;Software&quot;),</span>
+<span class="cm">to deal in the Software without restriction, including without limitation</span>
+<span class="cm">the rights to use, copy, modify, merge, publish, distribute, sublicense,</span>
+<span class="cm">and/or sell copies of the Software, and to permit persons to whom the</span>
+<span class="cm">Software is furnished to do so, subject to the following conditions:</span>
+
+<span class="cm">The above copyright notice and this permission notice shall be included in</span>
+<span class="cm">all copies or substantial portions of the Software.</span>
+
+<span class="cm">THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<span class="cm">IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
+<span class="cm">FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL</span>
+<span class="cm">THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span>
+<span class="cm">LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING</span>
+<span class="cm">FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER</span>
+<span class="cm">DEALINGS IN THE SOFTWARE.</span>
+<span class="cm">*/</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;LEDMatrix.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CodalFiber.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CodalDmesg.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ErrorNo.h&quot;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">codal</span><span class="p">;</span>
+
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">greyScaleTimings</span><span class="p">[</span><span class="n">LED_MATRIX_GREYSCALE_BIT_DEPTH</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w"> </span><span class="mi">70</span><span class="p">,</span><span class="w"> </span><span class="mi">163</span><span class="p">,</span><span class="w"> </span><span class="mi">351</span><span class="p">,</span><span class="w"> </span><span class="mi">726</span><span class="p">,</span><span class="w"> </span><span class="mi">1476</span><span class="p">,</span><span class="w"> </span><span class="mi">2976</span><span class="p">};</span>
+
+<span class="n">LEDMatrix</span><span class="o">::</span><span class="n">LEDMatrix</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">MatrixMap</span><span class="w"> </span><span class="o">&amp;</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">Display</span><span class="p">(</span><span class="n">map</span><span class="p">.</span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">map</span><span class="p">.</span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">),</span><span class="w"> </span><span class="n">matrixMap</span><span class="p">(</span><span class="n">map</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">rotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MATRIX_DISPLAY_ROTATION_0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">greyscaleBitMsk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x01</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">timingCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">setBrightness</span><span class="p">(</span><span class="n">LED_MATRIX_DEFAULT_BRIGHTNESS</span><span class="p">);</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DISPLAY_MODE_BLACK_AND_WHITE</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">strobeRow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">EventModel</span><span class="o">::</span><span class="n">defaultEventBus</span><span class="p">)</span>
+<span class="w">        </span><span class="n">EventModel</span><span class="o">::</span><span class="n">defaultEventBus</span><span class="o">-&gt;</span><span class="n">listen</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">LED_MATRIX_EVT_FRAME_TIMEOUT</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">LEDMatrix</span><span class="o">::</span><span class="n">onTimeoutEvent</span><span class="p">,</span><span class="w"> </span><span class="n">MESSAGE_BUS_LISTENER_IMMEDIATE</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">status</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">DEVICE_COMPONENT_STATUS_SYSTEM_TICK</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">status</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">DEVICE_COMPONENT_RUNNING</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">LEDMatrix</span><span class="o">::</span><span class="n">periodicCallback</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">DEVICE_COMPONENT_RUNNING</span><span class="p">))</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">mode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DISPLAY_MODE_BLACK_AND_WHITE_LIGHT_SENSE</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">renderWithLightSense</span><span class="p">();</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">mode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DISPLAY_MODE_BLACK_AND_WHITE</span><span class="p">)</span>
+<span class="w">        </span><span class="n">render</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">mode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DISPLAY_MODE_GREYSCALE</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">greyscaleBitMsk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x01</span><span class="p">;</span>
+<span class="w">        </span><span class="n">timingCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">renderGreyscale</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">LEDMatrix</span><span class="o">::</span><span class="n">renderFinish</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">matrixMap</span><span class="p">.</span><span class="n">rowPins</span><span class="p">[</span><span class="n">strobeRow</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">setDigitalValue</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">LEDMatrix</span><span class="o">::</span><span class="n">onTimeoutEvent</span><span class="p">(</span><span class="n">Event</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">renderFinish</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">LEDMatrix</span><span class="o">::</span><span class="n">render</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// Simple optimisation.</span>
+<span class="w">    </span><span class="c1">// If display is at zero brightness, there&#39;s nothing to do.</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">brightness</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Turn off the previous row</span>
+<span class="w">    </span><span class="n">matrixMap</span><span class="p">.</span><span class="n">rowPins</span><span class="p">[</span><span class="n">strobeRow</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">setDigitalValue</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="n">matrixMap</span><span class="p">.</span><span class="n">rowPins</span><span class="p">[</span><span class="n">strobeRow</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">getDigitalValue</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Move on to the next row.</span>
+<span class="w">    </span><span class="n">strobeRow</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">strobeRow</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">matrixMap</span><span class="p">.</span><span class="n">rows</span><span class="p">)</span>
+<span class="w">        </span><span class="n">strobeRow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Calculate the bitpattern to write.</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">matrixMap</span><span class="p">.</span><span class="n">columns</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">matrixMap</span><span class="p">.</span><span class="n">rows</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">strobeRow</span><span class="p">;</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">matrixMap</span><span class="p">.</span><span class="n">map</span><span class="p">[</span><span class="n">index</span><span class="p">].</span><span class="n">x</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">matrixMap</span><span class="p">.</span><span class="n">map</span><span class="p">[</span><span class="n">index</span><span class="p">].</span><span class="n">y</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">rotation</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MATRIX_DISPLAY_ROTATION_90</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">                </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="w">                </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">rotation</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MATRIX_DISPLAY_ROTATION_180</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">                </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="w">                </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">rotation</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MATRIX_DISPLAY_ROTATION_270</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">                </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="w">                </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">image</span><span class="p">.</span><span class="n">getBitmap</span><span class="p">()[</span><span class="n">y</span><span class="o">*</span><span class="n">width</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">])</span>
+<span class="w">            </span><span class="n">matrixMap</span><span class="p">.</span><span class="n">columnPins</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">setDigitalValue</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">            </span><span class="n">matrixMap</span><span class="p">.</span><span class="n">columnPins</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">setDigitalValue</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Turn off the previous row</span>
+<span class="w">    </span><span class="n">matrixMap</span><span class="p">.</span><span class="n">rowPins</span><span class="p">[</span><span class="n">strobeRow</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">setDigitalValue</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//timer does not have enough resolution for brightness of 1. 23.53 us</span>
+<span class="w">    </span><span class="cp">#pragma GCC diagnostic push</span>
+<span class="w">    </span><span class="cp">#pragma GCC diagnostic ignored &quot;-Wtype-limits&quot;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">brightness</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">LED_MATRIX_MAXIMUM_BRIGHTNESS</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">brightness</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">LED_MATRIX_MINIMUM_BRIGHTNESS</span><span class="p">)</span>
+<span class="w">        </span><span class="n">system_timer_event_after_us</span><span class="p">(</span><span class="n">frameTimeout</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">LED_MATRIX_EVT_FRAME_TIMEOUT</span><span class="p">);</span>
+<span class="w">    </span><span class="cp">#pragma GCC diagnostic pop</span>
+
+<span class="w">    </span><span class="c1">//this will take around 23us to execute</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">brightness</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">LED_MATRIX_MINIMUM_BRIGHTNESS</span><span class="p">)</span>
+<span class="w">        </span><span class="n">renderFinish</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">LEDMatrix</span><span class="o">::</span><span class="n">renderWithLightSense</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">//reset the row counts and bit mask when we have hit the max.</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">strobeRow</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">matrixMap</span><span class="p">.</span><span class="n">rows</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Event</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">LED_MATRIX_EVT_LIGHT_SENSE</span><span class="p">);</span>
+<span class="w">        </span><span class="n">strobeRow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">render</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">LEDMatrix</span><span class="o">::</span><span class="n">renderGreyscale</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="cm">/*</span>
+<span class="cm">    uint32_t row_data = 0x01 &lt;&lt; (matrixMap.rowStart + strobeRow);</span>
+<span class="cm">    uint32_t col_data = 0;</span>
+
+<span class="cm">    // Calculate the bitpattern to write.</span>
+<span class="cm">    for (int i = 0; i &lt; matrixMap.columns; i++)</span>
+<span class="cm">    {</span>
+<span class="cm">        int index = (i * matrixMap.rows) + strobeRow;</span>
+
+<span class="cm">        int x = matrixMap.map[index].x;</span>
+<span class="cm">        int y = matrixMap.map[index].y;</span>
+<span class="cm">        int t = x;</span>
+
+<span class="cm">        if(rotation == MATRIX_DISPLAY_ROTATION_90)</span>
+<span class="cm">        {</span>
+<span class="cm">                x = width - 1 - y;</span>
+<span class="cm">                y = t;</span>
+<span class="cm">        }</span>
+
+<span class="cm">        if(rotation == MATRIX_DISPLAY_ROTATION_180)</span>
+<span class="cm">        {</span>
+<span class="cm">                x = width - 1 - x;</span>
+<span class="cm">                y = height - 1 - y;</span>
+<span class="cm">        }</span>
+
+<span class="cm">        if(rotation == MATRIX_DISPLAY_ROTATION_270)</span>
+<span class="cm">        {</span>
+<span class="cm">                x = y;</span>
+<span class="cm">                y = height - 1 - t;</span>
+<span class="cm">        }</span>
+
+<span class="cm">        if(min(image.getBitmap()[y * width + x],brightness) &amp; greyscaleBitMsk)</span>
+<span class="cm">            col_data |= (1 &lt;&lt; i);</span>
+<span class="cm">    }</span>
+
+<span class="cm">    // Invert column bits (as we&#39;re sinking not sourcing power), and mask off any unused bits.</span>
+<span class="cm">    col_data = ~col_data &lt;&lt; matrixMap.columnStart &amp; col_mask;</span>
+
+<span class="cm">    // Write the new bit pattern</span>
+<span class="cm">    *LEDMatrix = col_data | row_data;</span>
+
+<span class="cm">    if(timingCount &gt; CODAL_DISPLAY_GREYSCALE_BIT_DEPTH-1)</span>
+<span class="cm">        return;</span>
+
+<span class="cm">    greyscaleBitMsk &lt;&lt;= 1;</span>
+
+<span class="cm">    if(timingCount &lt; 3)</span>
+<span class="cm">    {</span>
+<span class="cm">        wait_us(greyScaleTimings[timingCount++]);</span>
+<span class="cm">        renderGreyscale();</span>
+<span class="cm">        return;</span>
+<span class="cm">    }</span>
+<span class="cm">    renderTimer.attach_us(this,&amp;LEDMatrix::renderGreyscale, greyScaleTimings[timingCount++]);</span>
+<span class="cm">*/</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">LEDMatrix</span><span class="o">::</span><span class="n">setDisplayMode</span><span class="p">(</span><span class="n">DisplayMode</span><span class="w"> </span><span class="n">mode</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mode</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">LEDMatrix</span><span class="o">::</span><span class="n">getDisplayMode</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">mode</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">LEDMatrix</span><span class="o">::</span><span class="n">rotateTo</span><span class="p">(</span><span class="n">DisplayRotation</span><span class="w"> </span><span class="n">rotation</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">rotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rotation</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">LEDMatrix</span><span class="o">::</span><span class="n">setEnable</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">enableDisplay</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// If we&#39;re already in the correct state, then there&#39;s nothing to do.</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(((</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">DEVICE_COMPONENT_RUNNING</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">enableDisplay</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">DEVICE_COMPONENT_RUNNING</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">enableDisplay</span><span class="p">))</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Turn off the currently live row row</span>
+<span class="w">    </span><span class="n">matrixMap</span><span class="p">.</span><span class="n">rowPins</span><span class="p">[</span><span class="n">strobeRow</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">getDigitalValue</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">enableDisplay</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">status</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">DEVICE_COMPONENT_RUNNING</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">status</span><span class="w"> </span><span class="o">&amp;=</span><span class="w"> </span><span class="o">~</span><span class="n">DEVICE_COMPONENT_RUNNING</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">LEDMatrix</span><span class="o">::</span><span class="n">enable</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">setEnable</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">LEDMatrix</span><span class="o">::</span><span class="n">disable</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">setEnable</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">LEDMatrix</span><span class="o">::</span><span class="n">clear</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">image</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">LEDMatrix</span><span class="o">::</span><span class="n">setBrightness</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Display</span><span class="o">::</span><span class="n">setBrightness</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Precalculate the per frame &quot;on&quot; time for this brightness level.</span>
+<span class="w">    </span><span class="n">frameTimeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(((</span><span class="kt">int</span><span class="p">)</span><span class="n">brightness</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">SCHEDULER_TICK_PERIOD_US</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">255</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1024</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">LEDMatrix</span><span class="o">::~</span><span class="n">LEDMatrix</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;=</span><span class="w"> </span><span class="o">~</span><span class="n">DEVICE_COMPONENT_STATUS_SYSTEM_TICK</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By John Vidler
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, John Vidler.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

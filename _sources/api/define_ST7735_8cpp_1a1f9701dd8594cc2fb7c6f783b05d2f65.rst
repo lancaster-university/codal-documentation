@@ -1,0 +1,13 @@
+.. _exhale_define_ST7735_8cpp_1a1f9701dd8594cc2fb7c6f783b05d2f65:
+
+Define ST7735_DISPOFF
+=====================
+
+- Defined in :ref:`file_libraries_codal-core_source_drivers_ST7735.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: ST7735_DISPOFF

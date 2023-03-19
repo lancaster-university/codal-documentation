@@ -1,0 +1,13 @@
+.. _exhale_variable_ST7735_8cpp_1a8548039b21f185e3e3bbe4e4a365a26e:
+
+Variable codal::initCmds
+========================
+
+- Defined in :ref:`file_libraries_codal-core_source_drivers_ST7735.cpp`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: codal::initCmds

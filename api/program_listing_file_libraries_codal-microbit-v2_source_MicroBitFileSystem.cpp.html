@@ -1,0 +1,1405 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Program Listing for File MicroBitFileSystem.cpp &#8212; CODAL Documentation v0.2.49-4-g300bcb4</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/program_listing_file_libraries_codal-microbit-v2_source_MicroBitFileSystem.cpp';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">We're currently porting the DAL documentation over to CODAL. The information on here may be outdated or incorrect!</div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">CODAL Documentation v0.2.49-4-g300bcb4</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL Documentation
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started with CODAL</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ubit/index.html">The uBit Object</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/buttons.html">Buttons and Touch Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/edge-connector.html">Edge Connector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/accelerometer.html">uBit.accelerometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/audio.html">uBit.audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/compass.html">uBit.compass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/display.html">uBit.display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/serial.html">uBit.serial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/storage.html">uBit.storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/thermometer.html">uBit.thermometer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../memory-and-storage/index.html">Memory and Storage</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/managedstring.html">ManagedString</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/packetbuffer.html">PacketBuffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/microbitimage.html">MicroBitImage</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../guides/index.html">Guides</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../guides/prerequisites.html">Installation - Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/codal-projects.html">CODAL Projects</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../projects/index.html">Projects</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/disco-lights.html">Disco Lights</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../codal-api.html">The Complete CODAL API</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary of Terms</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/lancaster-university/codal-documentation" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Program Listing for File MicroBitFileSystem.cpp</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="program-listing-for-file-microbitfilesystem-cpp">
+<span id="program-listing-file-libraries-codal-microbit-v2-source-microbitfilesystem-cpp"></span><h1>Program Listing for File MicroBitFileSystem.cpp<a class="headerlink" href="#program-listing-for-file-microbitfilesystem-cpp" title="Permalink to this heading">#</a></h1>
+<p>↰ <a class="reference internal" href="file_libraries_codal-microbit-v2_source_MicroBitFileSystem.cpp.html#file-libraries-codal-microbit-v2-source-microbitfilesystem-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">libraries/codal-microbit-v2/source/MicroBitFileSystem.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm">The MIT License (MIT)</span>
+<span class="cm">Copyright (c) 2016 British Broadcasting Corporation.</span>
+<span class="cm">This software is provided by Lancaster University by arrangement with the BBC.</span>
+<span class="cm">Permission is hereby granted, free of charge, to any person obtaining a</span>
+<span class="cm">copy of this software and associated documentation files (the &quot;Software&quot;),</span>
+<span class="cm">to deal in the Software without restriction, including without limitation</span>
+<span class="cm">the rights to use, copy, modify, merge, publish, distribute, sublicense,</span>
+<span class="cm">and/or sell copies of the Software, and to permit persons to whom the</span>
+<span class="cm">Software is furnished to do so, subject to the following conditions:</span>
+<span class="cm">The above copyright notice and this permission notice shall be included in</span>
+<span class="cm">all copies or substantial portions of the Software.</span>
+<span class="cm">THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<span class="cm">IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
+<span class="cm">FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL</span>
+<span class="cm">THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span>
+<span class="cm">LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING</span>
+<span class="cm">FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER</span>
+<span class="cm">DEALINGS IN THE SOFTWARE.</span>
+<span class="cm">*/</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MicroBitConfig.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MicroBitFileSystem.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MicroBitFlash.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MicroBitStorage.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MicroBitCompat.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ErrorNo.h&quot;</span>
+
+<span class="k">static</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">defaultScratchPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">MICROBIT_DEFAULT_SCRATCH_PAGE</span><span class="p">;</span>
+
+<span class="n">MicroBitFileSystem</span><span class="o">*</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">defaultFileSystem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+
+<span class="kt">uint16_t</span><span class="w"> </span><span class="nf">MicroBitFileSystem::getFreeBlock</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// Walk the File Table and allocate the first free block - starting immediately after the last block allocated,</span>
+<span class="w">    </span><span class="c1">// and wrapping around the filesystem space if we reach the end.</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">block</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">deletedBlock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">lastBlockAllocated</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">fileSystemSize</span><span class="p">;</span><span class="w"> </span><span class="n">block</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">lastBlockAllocated</span><span class="p">;</span><span class="w"> </span><span class="n">block</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fileSystemTable</span><span class="p">[</span><span class="n">block</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MBFS_UNUSED</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">lastBlockAllocated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">block</span><span class="p">;</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">block</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fileSystemTable</span><span class="p">[</span><span class="n">block</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MBFS_DELETED</span><span class="p">)</span>
+<span class="w">            </span><span class="n">deletedBlock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">block</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// if no UNUSED blocks are available, try to recycle one marked as DELETED.</span>
+<span class="w">    </span><span class="n">block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">deletedBlock</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// If no blocks are available - either UNUSED or marked as DELETED, then we&#39;re out of space and there&#39;s nothing we can do.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">block</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// recycle the FileTable, such that we can mark all previously deleted blocks as re-usable.</span>
+<span class="w">        </span><span class="c1">// Better to do this in bulk, rather than on a block by block basis to improve efficiency.</span>
+<span class="w">        </span><span class="n">recycleFileTable</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Record the block we just allocated, so we can round-robin around blocks for load balancing.</span>
+<span class="w">        </span><span class="n">lastBlockAllocated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">block</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">block</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">uint32_t</span><span class="o">*</span><span class="w"> </span><span class="nf">MicroBitFileSystem::getFreePage</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// Walk the file table, starting at the last allocated block, looking for an unused page.</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">blocksPerPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">MICROBIT_CODEPAGESIZE</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">MBFS_BLOCK_SIZE</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// get a handle on the next physical page.</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">currentPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getBlockNumber</span><span class="p">(</span><span class="n">getPage</span><span class="p">(</span><span class="n">lastBlockAllocated</span><span class="p">));</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">currentPage</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">blocksPerPage</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">fileSystemSize</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">recyclablePage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Walk around the file table, looking for a free page.</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">page</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">currentPage</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">empty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">deleted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">next</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">blocksPerPage</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getNextFileBlock</span><span class="p">(</span><span class="n">page</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">next</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MBFS_DELETED</span><span class="p">)</span>
+<span class="w">                </span><span class="n">deleted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+
+<span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">next</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">MBFS_UNUSED</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">empty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// See if we found one...</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">empty</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">lastBlockAllocated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">page</span><span class="p">;</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">getBlock</span><span class="p">(</span><span class="n">page</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// make note of the first unused but un-erased page we find (if any).</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">deleted</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">recyclablePage</span><span class="p">)</span>
+<span class="w">            </span><span class="n">recyclablePage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">page</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">page</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">page</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">blocksPerPage</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">fileSystemSize</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// No empty pages are available, but we may be able to recycle one.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">recyclablePage</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">address</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getBlock</span><span class="p">(</span><span class="n">recyclablePage</span><span class="p">);</span>
+<span class="w">        </span><span class="n">flash</span><span class="p">.</span><span class="n">erase_page</span><span class="p">(</span><span class="n">address</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">address</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Nothing available at all. Use the default.</span>
+<span class="w">    </span><span class="n">flash</span><span class="p">.</span><span class="n">erase_page</span><span class="p">(</span><span class="n">defaultScratchPage</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">defaultScratchPage</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">MicroBitFileSystem</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">flashStart</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">flashPages</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// Initialise status flags to default value</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Attempt tp load an existing filesystem, if it exisits</span>
+<span class="w">    </span><span class="n">init</span><span class="p">(</span><span class="n">flashStart</span><span class="p">,</span><span class="w"> </span><span class="n">flashPages</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// If this is the first FileSystem created, so it as the default.</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">defaultFileSystem</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">        </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">defaultFileSystem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">flashStart</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">flashPages</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// Protect against accidental re-initialisation</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MBFS_STATUS_INITIALISED</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_NOT_SUPPORTED</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Validate parameters</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">flashPages</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_INVALID_PARAMETER</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Zero initialise default parameters (mbed/ARMCC does not permit this is the class definition).</span>
+<span class="w">    </span><span class="n">fileSystemTable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">    </span><span class="n">lastBlockAllocated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">rootDirectory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">    </span><span class="n">openFiles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// If we have a zero length, then dynamically determine our geometry.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">flashStart</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Flash start is on the first page after the programmed ROM contents.</span>
+<span class="w">        </span><span class="c1">// This is: __etext (program code) for GCC and Image$$RO$$Limit for ARMCC.</span>
+<span class="w">        </span><span class="n">flashStart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FLASH_PROGRAM_END</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Round up to the nearest free page.</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">flashStart</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">MICROBIT_CODEPAGESIZE</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">            </span><span class="n">flashStart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="kt">uint32_t</span><span class="p">)</span><span class="n">flashStart</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">~</span><span class="p">(</span><span class="n">MICROBIT_CODEPAGESIZE</span><span class="mi">-1</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">MICROBIT_CODEPAGESIZE</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">flashPages</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="n">flashPages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">MICROBIT_APP_REGION_END</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">flashStart</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">MICROBIT_CODEPAGESIZE</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// The FileTable alays resides at the start of the file system.</span>
+<span class="w">    </span><span class="n">fileSystemTable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">flashStart</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// First, try to load an existing file system at this location.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">load</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">MICROBIT_OK</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// No file system was found, so format a fresh one.</span>
+<span class="w">        </span><span class="c1">// Bring up a freshly formatted file system here.</span>
+<span class="w">        </span><span class="n">fileSystemSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">flashPages</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">MICROBIT_CODEPAGESIZE</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">MBFS_BLOCK_SIZE</span><span class="p">);</span>
+<span class="w">        </span><span class="n">fileSystemTableSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calculateFileTableSize</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">format</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// indicate that we have a valid FileSystem</span>
+<span class="w">    </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MBFS_STATUS_INITIALISED</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_OK</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">load</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">rootOffset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fileSystemTable</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+
+<span class="w">    </span><span class="c1">// A valid MBFS has the first &#39;N&#39; blocks set to the value &#39;N&#39; followed by a valid root directory block with magic signature.</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">rootOffset</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fileSystemTable</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">MBFS_EOF</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">fileSystemTable</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">rootOffset</span><span class="p">)</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_NO_DATA</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Check for a valid signature at the start of the root directory</span>
+<span class="w">    </span><span class="n">DirectoryEntry</span><span class="w"> </span><span class="o">*</span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">DirectoryEntry</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">getBlock</span><span class="p">(</span><span class="n">rootOffset</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">file_name</span><span class="p">,</span><span class="w"> </span><span class="n">MBFS_MAGIC</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_NO_DATA</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">rootDirectory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">root</span><span class="p">;</span>
+<span class="w">    </span><span class="n">fileSystemSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">root</span><span class="o">-&gt;</span><span class="n">length</span><span class="p">;</span>
+<span class="w">    </span><span class="n">fileSystemTableSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calculateFileTableSize</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_OK</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">format</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fileSystemTableSize</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Mark the FileTable blocks themselves as used.</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">block</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">fileSystemTableSize</span><span class="p">;</span><span class="w"> </span><span class="n">block</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="n">flash</span><span class="p">.</span><span class="n">flash_write</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fileSystemTable</span><span class="p">[</span><span class="n">block</span><span class="p">],</span><span class="w"> </span><span class="o">&amp;</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Create a root directory</span>
+<span class="w">    </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MBFS_EOF</span><span class="p">;</span>
+<span class="w">    </span><span class="n">flash</span><span class="p">.</span><span class="n">flash_write</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fileSystemTable</span><span class="p">[</span><span class="n">fileSystemTableSize</span><span class="p">],</span><span class="w"> </span><span class="o">&amp;</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Store a MAGIC value in the first root directory entry.</span>
+<span class="w">    </span><span class="c1">// This will let us identify a valid File System later.</span>
+<span class="w">    </span><span class="n">DirectoryEntry</span><span class="w"> </span><span class="n">magic</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">strcpy</span><span class="p">(</span><span class="n">magic</span><span class="p">.</span><span class="n">file_name</span><span class="p">,</span><span class="w"> </span><span class="n">MBFS_MAGIC</span><span class="p">);</span>
+<span class="w">    </span><span class="n">magic</span><span class="p">.</span><span class="n">first_block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fileSystemTableSize</span><span class="p">;</span>
+<span class="w">    </span><span class="n">magic</span><span class="p">.</span><span class="n">flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MBFS_DIRECTORY_ENTRY_VALID</span><span class="p">;</span>
+<span class="w">    </span><span class="n">magic</span><span class="p">.</span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fileSystemSize</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Cache the root directory entry for later use.</span>
+<span class="w">    </span><span class="n">rootDirectory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">DirectoryEntry</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">getBlock</span><span class="p">(</span><span class="n">fileSystemTableSize</span><span class="p">);</span>
+<span class="w">    </span><span class="n">flash</span><span class="p">.</span><span class="n">flash_write</span><span class="p">(</span><span class="n">rootDirectory</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">magic</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">DirectoryEntry</span><span class="p">));</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_OK</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">DirectoryEntry</span><span class="o">*</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">getDirectoryEntry</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">DirectoryEntry</span><span class="w"> </span><span class="o">*</span><span class="n">directory</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">Directory</span><span class="w"> </span><span class="o">*</span><span class="n">dir</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="n">file</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">block</span><span class="p">;</span>
+<span class="w">    </span><span class="n">DirectoryEntry</span><span class="w"> </span><span class="o">*</span><span class="n">dirent</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Determine the filename from the (potentially) fully qualified filename.</span>
+<span class="w">    </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">*</span><span class="n">file</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">&#39;/&#39;</span><span class="p">)</span>
+<span class="w">        </span><span class="n">file</span><span class="o">--</span><span class="p">;</span>
+<span class="w">    </span><span class="n">file</span><span class="o">++</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Obtain a handle on the directory to search.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">directory</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">        </span><span class="n">directory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rootDirectory</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">directory</span><span class="o">-&gt;</span><span class="n">first_block</span><span class="p">;</span>
+<span class="w">    </span><span class="n">dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Directory</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">getBlock</span><span class="p">(</span><span class="n">block</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dirent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">dir</span><span class="o">-&gt;</span><span class="n">entry</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+
+<span class="w">    </span><span class="c1">// Iterate through the directory entries until we find our file, or run out of space.</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="kt">uint32_t</span><span class="p">)(</span><span class="n">dirent</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="p">)</span><span class="n">dir</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">MBFS_BLOCK_SIZE</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getNextFileBlock</span><span class="p">(</span><span class="n">block</span><span class="p">);</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">block</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MBFS_EOF</span><span class="p">)</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+
+<span class="w">            </span><span class="n">dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Directory</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">getBlock</span><span class="p">(</span><span class="n">block</span><span class="p">);</span>
+<span class="w">            </span><span class="n">dirent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">dir</span><span class="o">-&gt;</span><span class="n">entry</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Check for a valid match</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dirent</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MBFS_DIRECTORY_ENTRY_VALID</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">strcmp</span><span class="p">(</span><span class="n">dirent</span><span class="o">-&gt;</span><span class="n">file_name</span><span class="p">,</span><span class="w"> </span><span class="n">file</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">dirent</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Move onto the next entry.</span>
+<span class="w">        </span><span class="n">dirent</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">uint16_t</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">calculateFileTableSize</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">fileSystemSize</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">MBFS_BLOCK_SIZE</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">fileSystemSize</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">MBFS_BLOCK_SIZE</span><span class="p">)</span>
+<span class="w">        </span><span class="n">size</span><span class="o">++</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">size</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">getPage</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">block</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">address</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="p">)</span><span class="w"> </span><span class="n">getBlock</span><span class="p">(</span><span class="n">block</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">address</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">address</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">MICROBIT_CODEPAGESIZE</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">getBlock</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">block</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)((</span><span class="kt">uint32_t</span><span class="p">)</span><span class="n">fileSystemTable</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">block</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">MBFS_BLOCK_SIZE</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">uint16_t</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">getNextFileBlock</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">block</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">fileSystemTable</span><span class="p">[</span><span class="n">block</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">uint16_t</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">getBlockNumber</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">address</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(((</span><span class="kt">uint32_t</span><span class="p">)</span><span class="w"> </span><span class="n">address</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="p">)</span><span class="w"> </span><span class="n">fileSystemTable</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">MBFS_BLOCK_SIZE</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">fileTableWrite</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">block</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">flash</span><span class="p">.</span><span class="n">flash_write</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fileSystemTable</span><span class="p">[</span><span class="n">block</span><span class="p">],</span><span class="w"> </span><span class="o">&amp;</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_OK</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+
+<span class="n">DirectoryEntry</span><span class="o">*</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">getDirectoryOf</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">filename</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">DirectoryEntry</span><span class="o">*</span><span class="w"> </span><span class="n">directory</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// If not path is provided, return the root diretory.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">filename</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">filename</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">rootDirectory</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">MBFS_FILENAME_LENGTH</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
+
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">directory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rootDirectory</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">filename</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">&#39;\0&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">filename</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;/&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;\0&#39;</span><span class="p">;</span>
+
+<span class="w">            </span><span class="c1">// Ensure each level of the filename is valid</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">MBFS_FILENAME_LENGTH</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+
+<span class="w">            </span><span class="c1">// Extract the relevant entry from the directory.</span>
+<span class="w">            </span><span class="n">directory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getDirectoryEntry</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">directory</span><span class="p">);</span>
+
+<span class="w">            </span><span class="c1">// If file / directory does not exist, then there&#39;s nothing more we can do.</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">directory</span><span class="p">)</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+
+<span class="w">            </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">            </span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">++</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">filename</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">filename</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">directory</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">recycleBlock</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">block</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">type</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="n">page</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getPage</span><span class="p">(</span><span class="n">block</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="o">*</span><span class="w"> </span><span class="n">scratch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getFreePage</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">write</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">scratch</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getBlockNumber</span><span class="p">(</span><span class="n">page</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="w"> </span><span class="n">MICROBIT_CODEPAGESIZE</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">MBFS_BLOCK_SIZE</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// If we have an unused or deleted block, there&#39;s nothing to do - allow the block to be recycled.</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fileSystemTable</span><span class="p">[</span><span class="n">b</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MBFS_DELETED</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">fileSystemTable</span><span class="p">[</span><span class="n">b</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MBFS_UNUSED</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{}</span>
+
+<span class="w">        </span><span class="c1">// If we have been asked to recycle a valid directory block, recycle individual entries where possible.</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">block</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MBFS_BLOCK_TYPE_DIRECTORY</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DirectoryEntry</span><span class="w"> </span><span class="o">*</span><span class="n">direntIn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">DirectoryEntry</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">getBlock</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+<span class="w">            </span><span class="n">DirectoryEntry</span><span class="w"> </span><span class="o">*</span><span class="n">direntOut</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">DirectoryEntry</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">write</span><span class="p">;</span>
+
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">entry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">entry</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MBFS_BLOCK_SIZE</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">DirectoryEntry</span><span class="p">);</span><span class="w"> </span><span class="n">entry</span><span class="o">++</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">direntIn</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MBFS_DIRECTORY_ENTRY_VALID</span><span class="p">)</span>
+<span class="w">                    </span><span class="n">flash</span><span class="p">.</span><span class="n">flash_write</span><span class="p">((</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">direntOut</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">direntIn</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">DirectoryEntry</span><span class="p">));</span>
+
+<span class="w">                </span><span class="n">direntIn</span><span class="o">++</span><span class="p">;</span>
+<span class="w">                </span><span class="n">direntOut</span><span class="o">++</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// All blocks before the root directory are the FileTable.</span>
+<span class="w">        </span><span class="c1">// Recycle any entries marked as DELETED to UNUSED.</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">getBlock</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">rootDirectory</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">uint16_t</span><span class="w"> </span><span class="o">*</span><span class="n">tableIn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">getBlock</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+<span class="w">            </span><span class="kt">uint16_t</span><span class="w"> </span><span class="o">*</span><span class="n">tableOut</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">write</span><span class="p">;</span>
+
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">entry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">entry</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MBFS_BLOCK_SIZE</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">entry</span><span class="o">++</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">tableIn</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">MBFS_DELETED</span><span class="p">)</span>
+<span class="w">                    </span><span class="n">flash</span><span class="p">.</span><span class="n">flash_write</span><span class="p">(</span><span class="n">tableOut</span><span class="p">,</span><span class="w"> </span><span class="n">tableIn</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+
+<span class="w">                </span><span class="n">tableIn</span><span class="o">++</span><span class="p">;</span>
+<span class="w">                </span><span class="n">tableOut</span><span class="o">++</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Copy all other VALID blocks directly into the scratch page.</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">            </span><span class="n">flash</span><span class="p">.</span><span class="n">flash_write</span><span class="p">(</span><span class="n">write</span><span class="p">,</span><span class="w"> </span><span class="n">getBlock</span><span class="p">(</span><span class="n">b</span><span class="p">),</span><span class="w"> </span><span class="n">MBFS_BLOCK_SIZE</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// move on to next block.</span>
+<span class="w">        </span><span class="n">write</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">MBFS_BLOCK_SIZE</span><span class="p">;</span>
+<span class="w">        </span><span class="n">b</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Now refresh the page originally holding the block.</span>
+<span class="w">    </span><span class="n">flash</span><span class="p">.</span><span class="n">erase_page</span><span class="p">(</span><span class="n">page</span><span class="p">);</span>
+<span class="w">    </span><span class="n">flash</span><span class="p">.</span><span class="n">flash_write</span><span class="p">(</span><span class="n">page</span><span class="p">,</span><span class="w"> </span><span class="n">scratch</span><span class="p">,</span><span class="w"> </span><span class="n">MICROBIT_CODEPAGESIZE</span><span class="p">);</span>
+<span class="w">    </span><span class="n">flash</span><span class="p">.</span><span class="n">erase_page</span><span class="p">(</span><span class="n">scratch</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_OK</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">recycleFileTable</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">pageRecycled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">block</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">fileSystemSize</span><span class="p">;</span><span class="w"> </span><span class="n">block</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// if we just crossed a page boundary, reset pageRecycled.</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">block</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="n">MICROBIT_CODEPAGESIZE</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">MBFS_BLOCK_SIZE</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">            </span><span class="n">pageRecycled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fileSystemTable</span><span class="p">[</span><span class="n">block</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MBFS_DELETED</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">pageRecycled</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">recycleBlock</span><span class="p">(</span><span class="n">block</span><span class="p">);</span>
+<span class="w">            </span><span class="n">pageRecycled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// now, recycle the FileSystemTable itself, upcycling entries marked as DELETED to UNUSED as we go.</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">getPage</span><span class="p">(</span><span class="n">block</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">rootDirectory</span><span class="p">;</span><span class="w"> </span><span class="n">block</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">MICROBIT_CODEPAGESIZE</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">MBFS_BLOCK_SIZE</span><span class="p">)</span>
+<span class="w">        </span><span class="n">recycleBlock</span><span class="p">(</span><span class="n">block</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_OK</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="n">DirectoryEntry</span><span class="o">*</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">createDirectoryEntry</span><span class="p">(</span><span class="n">DirectoryEntry</span><span class="w"> </span><span class="o">*</span><span class="n">directory</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">Directory</span><span class="w"> </span><span class="o">*</span><span class="n">dir</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">block</span><span class="p">;</span>
+<span class="w">    </span><span class="n">DirectoryEntry</span><span class="w"> </span><span class="o">*</span><span class="n">dirent</span><span class="p">;</span>
+<span class="w">    </span><span class="n">DirectoryEntry</span><span class="w"> </span><span class="o">*</span><span class="n">empty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">    </span><span class="n">DirectoryEntry</span><span class="w"> </span><span class="o">*</span><span class="n">invalid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Try to find an unused entry in the directory.</span>
+<span class="w">    </span><span class="n">block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">directory</span><span class="o">-&gt;</span><span class="n">first_block</span><span class="p">;</span>
+<span class="w">    </span><span class="n">dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Directory</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">getBlock</span><span class="p">(</span><span class="n">block</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dirent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">dir</span><span class="o">-&gt;</span><span class="n">entry</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+
+<span class="w">    </span><span class="c1">// Iterate through the directory entries until we find and unused entry, or run out of space.</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Scan through each of the blocks in the directory</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="kt">uint32_t</span><span class="p">)(</span><span class="n">dirent</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="p">)</span><span class="n">dir</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">MBFS_BLOCK_SIZE</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getNextFileBlock</span><span class="p">(</span><span class="n">block</span><span class="p">);</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">block</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MBFS_EOF</span><span class="p">)</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+
+<span class="w">            </span><span class="n">dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Directory</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">getBlock</span><span class="p">(</span><span class="n">block</span><span class="p">);</span>
+<span class="w">            </span><span class="n">dirent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">dir</span><span class="o">-&gt;</span><span class="n">entry</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// If we find an empty slot, use that.</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dirent</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MBFS_DIRECTORY_ENTRY_FREE</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">empty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dirent</span><span class="p">;</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Record the first invalid block we find (used, but then deleted).</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">dirent</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MBFS_DIRECTORY_ENTRY_VALID</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">invalid</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">            </span><span class="n">invalid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dirent</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Move onto the next entry.</span>
+<span class="w">        </span><span class="n">dirent</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="c1">// Now choose the best available slot, giving preference to entries that would avoid a FLASH page erase opreation.</span>
+<span class="w">    </span><span class="n">dirent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Ideally, choose an unused entry within an existing block.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">empty</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">dirent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empty</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// if not possible, try to re-use a second-hand block that has been freed. This will result in an erase operation of the block,</span>
+<span class="w">    </span><span class="c1">// but will not consume any more resources.</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">invalid</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">dirent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">invalid</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getBlockNumber</span><span class="p">(</span><span class="n">dirent</span><span class="p">);</span>
+<span class="w">        </span><span class="n">recycleBlock</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">MBFS_BLOCK_TYPE_DIRECTORY</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// If nothing is available, extend the directory with a new block.</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Allocate a new logical block</span>
+<span class="w">        </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">newBlock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getFreeBlock</span><span class="p">();</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">newBlock</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Append this to the directory</span>
+<span class="w">        </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">lastBlock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">directory</span><span class="o">-&gt;</span><span class="n">first_block</span><span class="p">;</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">getNextFileBlock</span><span class="p">(</span><span class="n">lastBlock</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">MBFS_EOF</span><span class="p">)</span>
+<span class="w">            </span><span class="n">lastBlock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getNextFileBlock</span><span class="p">(</span><span class="n">lastBlock</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Append the block.</span>
+<span class="w">        </span><span class="n">fileTableWrite</span><span class="p">(</span><span class="n">lastBlock</span><span class="p">,</span><span class="w"> </span><span class="n">newBlock</span><span class="p">);</span>
+<span class="w">        </span><span class="n">fileTableWrite</span><span class="p">(</span><span class="n">newBlock</span><span class="p">,</span><span class="w"> </span><span class="n">MBFS_EOF</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">dirent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">DirectoryEntry</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">getBlock</span><span class="p">(</span><span class="n">newBlock</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">dirent</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">DirectoryEntry</span><span class="o">*</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">createFile</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">DirectoryEntry</span><span class="w"> </span><span class="o">*</span><span class="n">directory</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isDirectory</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="n">file</span><span class="p">;</span>
+<span class="w">    </span><span class="n">DirectoryEntry</span><span class="w"> </span><span class="o">*</span><span class="n">dirent</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Determine the filename from the (potentially) fully qualified filename.</span>
+<span class="w">    </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">*</span><span class="n">file</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">&#39;/&#39;</span><span class="p">)</span>
+<span class="w">        </span><span class="n">file</span><span class="o">--</span><span class="p">;</span>
+<span class="w">    </span><span class="n">file</span><span class="o">++</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Allocate a directory entry for our new file.</span>
+<span class="w">    </span><span class="n">dirent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">createDirectoryEntry</span><span class="p">(</span><span class="n">directory</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dirent</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Create a new block to represent the file.</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">newBlock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getFreeBlock</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">newBlock</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Populate our assigned Directory Entry.</span>
+<span class="w">    </span><span class="n">DirectoryEntry</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
+<span class="w">    </span><span class="n">strcpy</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">file_name</span><span class="p">,</span><span class="w"> </span><span class="n">file</span><span class="p">);</span>
+<span class="w">    </span><span class="n">d</span><span class="p">.</span><span class="n">first_block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newBlock</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isDirectory</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Mark as a directory, and set a zero length (special case for directories, to minimize unecessary FLASH erases).</span>
+<span class="w">        </span><span class="n">d</span><span class="p">.</span><span class="n">flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MBFS_DIRECTORY_ENTRY_VALID</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">MBFS_DIRECTORY_ENTRY_DIRECTORY</span><span class="p">;</span>
+<span class="w">        </span><span class="n">d</span><span class="p">.</span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// We leave the file size as unwritten for regular files - pending a possible forthcoming write/close operation.</span>
+<span class="w">        </span><span class="n">d</span><span class="p">.</span><span class="n">flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MBFS_DIRECTORY_ENTRY_NEW</span><span class="p">;</span>
+<span class="w">        </span><span class="n">d</span><span class="p">.</span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xffffffff</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Push the new data back to FLASH memory</span>
+<span class="w">    </span><span class="n">flash</span><span class="p">.</span><span class="n">flash_write</span><span class="p">(</span><span class="n">dirent</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">DirectoryEntry</span><span class="p">));</span>
+<span class="w">    </span><span class="n">fileTableWrite</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">first_block</span><span class="p">,</span><span class="w"> </span><span class="n">MBFS_EOF</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">dirent</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">FileDescriptor</span><span class="o">*</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">getFileDescriptor</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">remove</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">FileDescriptor</span><span class="w"> </span><span class="o">*</span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">openFiles</span><span class="p">;</span>
+<span class="w">    </span><span class="n">FileDescriptor</span><span class="w"> </span><span class="o">*</span><span class="n">prev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">fd</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">remove</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">prev</span><span class="p">)</span>
+<span class="w">                    </span><span class="n">prev</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<span class="w">                </span><span class="k">else</span>
+<span class="w">                    </span><span class="n">openFiles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">file</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">prev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="p">;</span>
+<span class="w">        </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">createDirectory</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="n">name</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">DirectoryEntry</span><span class="o">*</span><span class="w"> </span><span class="n">directory</span><span class="p">;</span><span class="w">        </span><span class="c1">// Directory holding this file.</span>
+<span class="w">    </span><span class="n">DirectoryEntry</span><span class="o">*</span><span class="w"> </span><span class="n">dirent</span><span class="p">;</span><span class="w">            </span><span class="c1">// Entry in the direcoty of this file.</span>
+
+<span class="w">    </span><span class="c1">// Protect against accidental re-initialisation</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MBFS_STATUS_INITIALISED</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_NOT_SUPPORTED</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Reject invalid filenames.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">isValidFilename</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_INVALID_PARAMETER</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Determine the directory for this file.</span>
+<span class="w">    </span><span class="n">directory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getDirectoryOf</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">directory</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_INVALID_PARAMETER</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Find the DirectoryEntry associated with the given name (if it exists).</span>
+<span class="w">    </span><span class="c1">// We don&#39;t permit files or directories with the same name.</span>
+<span class="w">    </span><span class="n">dirent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getDirectoryEntry</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">directory</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dirent</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_INVALID_PARAMETER</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">dirent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">createFile</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">directory</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dirent</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_NO_RESOURCES</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_OK</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">open</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">flags</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">FileDescriptor</span><span class="w"> </span><span class="o">*</span><span class="n">file</span><span class="p">;</span><span class="w">               </span><span class="c1">// File Descriptor of this file.</span>
+<span class="w">    </span><span class="n">DirectoryEntry</span><span class="o">*</span><span class="w"> </span><span class="n">directory</span><span class="p">;</span><span class="w">          </span><span class="c1">// Directory holding this file.</span>
+<span class="w">    </span><span class="n">DirectoryEntry</span><span class="o">*</span><span class="w"> </span><span class="n">dirent</span><span class="p">;</span><span class="w">             </span><span class="c1">// Entry in the direcoty of this file.</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="w">                             </span><span class="c1">// FileDescriptor id to be return to the caller.</span>
+
+<span class="w">    </span><span class="c1">// Protect against accidental re-initialisation</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MBFS_STATUS_INITIALISED</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_NOT_SUPPORTED</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Reject invalid filenames.</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">isValidFilename</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_INVALID_PARAMETER</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Determine the directory for this file.</span>
+<span class="w">    </span><span class="n">directory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getDirectoryOf</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">directory</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_INVALID_PARAMETER</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Find the DirectoryEntry assoviate with the given file (if it exists).</span>
+<span class="w">    </span><span class="n">dirent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getDirectoryEntry</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">directory</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Only permit files to be opened once...</span>
+<span class="w">    </span><span class="c1">// also, detemrine a valid ID for this open file as we go.</span>
+<span class="w">    </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">openFiles</span><span class="p">;</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">dirent</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">dirent</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">dirent</span><span class="p">)</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_NOT_SUPPORTED</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">id</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">id</span><span class="o">++</span><span class="p">;</span>
+<span class="w">            </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">openFiles</span><span class="p">;</span>
+<span class="w">            </span><span class="k">continue</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dirent</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// If the file doesn&#39;t exist, and we haven&#39;t been asked to create it, then there&#39;s nothing we can do.</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MB_CREAT</span><span class="p">))</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_INVALID_PARAMETER</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">dirent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">createFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">directory</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dirent</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_NO_RESOURCES</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Try to add a new FileDescriptor into this directory.</span>
+<span class="w">    </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileDescriptor</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_NO_RESOURCES</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Populate the FileDescriptor</span>
+<span class="w">    </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">~</span><span class="p">(</span><span class="n">MB_CREAT</span><span class="p">));</span>
+<span class="w">    </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<span class="w">    </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dirent</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MBFS_DIRECTORY_ENTRY_NEW</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">dirent</span><span class="o">-&gt;</span><span class="n">length</span><span class="p">;</span>
+<span class="w">    </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">seek</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MB_APPEND</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">length</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">dirent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dirent</span><span class="p">;</span>
+<span class="w">    </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">directory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">directory</span><span class="p">;</span>
+<span class="w">    </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">cacheLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Add the file descriptor to the chain of open files.</span>
+<span class="w">    </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">openFiles</span><span class="p">;</span>
+<span class="w">    </span><span class="n">openFiles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Return the FileDescriptor id to the user</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">id</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">flush</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// Protect against accidental re-initialisation</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MBFS_STATUS_INITIALISED</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_NOT_SUPPORTED</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">FileDescriptor</span><span class="w"> </span><span class="o">*</span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getFileDescriptor</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Ensure the file is open.</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_INVALID_PARAMETER</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Flush any data in the writeback cache.</span>
+<span class="w">    </span><span class="n">writeBack</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// If the file has changed size, create an updated directory entry for the file, reflecting it&#39;s new length.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">dirent</span><span class="o">-&gt;</span><span class="n">length</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">length</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">DirectoryEntry</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">dirent</span><span class="p">;</span>
+<span class="w">        </span><span class="n">d</span><span class="p">.</span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">length</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Do some optimising to reduce FLASH churn if this is the first write to a file. No need then to create a new dirent...</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">dirent</span><span class="o">-&gt;</span><span class="n">flags</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MBFS_DIRECTORY_ENTRY_NEW</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">d</span><span class="p">.</span><span class="n">flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MBFS_DIRECTORY_ENTRY_VALID</span><span class="p">;</span>
+<span class="w">            </span><span class="n">flash</span><span class="p">.</span><span class="n">flash_write</span><span class="p">(</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">dirent</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">DirectoryEntry</span><span class="p">));</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Otherwise, replace the dirent with a freshly allocated one, and mark the other as INVALID.</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DirectoryEntry</span><span class="w"> </span><span class="o">*</span><span class="n">newDirent</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MBFS_DELETED</span><span class="p">;</span>
+
+<span class="w">            </span><span class="c1">// invalidate the old directory entry and create a new one with the updated data.</span>
+<span class="w">            </span><span class="n">flash</span><span class="p">.</span><span class="n">flash_write</span><span class="p">(</span><span class="o">&amp;</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">dirent</span><span class="o">-&gt;</span><span class="n">flags</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<span class="w">            </span><span class="n">newDirent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">createDirectoryEntry</span><span class="p">(</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">directory</span><span class="p">);</span>
+<span class="w">            </span><span class="n">flash</span><span class="p">.</span><span class="n">flash_write</span><span class="p">(</span><span class="n">newDirent</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">DirectoryEntry</span><span class="p">));</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_OK</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">close</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// Firstly, ensure all unwritten data is flushed.</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">flush</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// If the flush called failed on validation, pass the error code onto the caller.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">MICROBIT_OK</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">r</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Remove the file descriptor from the list of open files, and free it.</span>
+<span class="w">    </span><span class="c1">// n.b. we know this is safe, as flush() validates this.</span>
+<span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="n">getFileDescriptor</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_OK</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">seek</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">offset</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">flags</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">FileDescriptor</span><span class="w"> </span><span class="o">*</span><span class="n">file</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">position</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Protect against accidental re-initialisation</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MBFS_STATUS_INITIALISED</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_NOT_SUPPORTED</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Ensure the file is open.</span>
+<span class="w">    </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getFileDescriptor</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_INVALID_PARAMETER</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Flush any data in the writeback cache.</span>
+<span class="w">    </span><span class="n">writeBack</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">seek</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">flags</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MB_SEEK_SET</span><span class="p">)</span>
+<span class="w">        </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">offset</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">flags</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MB_SEEK_END</span><span class="p">)</span>
+<span class="w">        </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">length</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">offset</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">flags</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MB_SEEK_CUR</span><span class="p">)</span>
+<span class="w">        </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">seek</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">offset</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">position</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="p">)</span><span class="n">position</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">length</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_INVALID_PARAMETER</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">seek</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">position</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">position</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">read</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">FileDescriptor</span><span class="w"> </span><span class="o">*</span><span class="n">file</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">block</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">readPointer</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">writePointer</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">offset</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">bytesCopied</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">segmentLength</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Protect against accidental re-initialisation</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MBFS_STATUS_INITIALISED</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_NOT_SUPPORTED</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Ensure the file is open.</span>
+<span class="w">    </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getFileDescriptor</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">buffer</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_INVALID_PARAMETER</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Flush any data in the writeback cache before we change the seek pointer.</span>
+<span class="w">    </span><span class="n">writeBack</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Validate the read length.</span>
+<span class="w">    </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">seek</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Find the read position.</span>
+<span class="w">    </span><span class="n">block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">dirent</span><span class="o">-&gt;</span><span class="n">first_block</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Walk the file table until we reach the start block</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">seek</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">position</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">MBFS_BLOCK_SIZE</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getNextFileBlock</span><span class="p">(</span><span class="n">block</span><span class="p">);</span>
+<span class="w">        </span><span class="n">position</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">MBFS_BLOCK_SIZE</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Once we have the correct start block, handle the byte offset.</span>
+<span class="w">    </span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">seek</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">position</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Now, start copying bytes into the requested buffer.</span>
+<span class="w">    </span><span class="n">writePointer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buffer</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">bytesCopied</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">size</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// First, determine if we need to write a partial block.</span>
+<span class="w">        </span><span class="n">readPointer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">getBlock</span><span class="p">(</span><span class="n">block</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">offset</span><span class="p">;</span>
+<span class="w">        </span><span class="n">segmentLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">bytesCopied</span><span class="p">,</span><span class="w"> </span><span class="n">MBFS_BLOCK_SIZE</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">offset</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">segmentLength</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">            </span><span class="n">memcpy</span><span class="p">(</span><span class="n">writePointer</span><span class="p">,</span><span class="w"> </span><span class="n">readPointer</span><span class="p">,</span><span class="w"> </span><span class="n">segmentLength</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">bytesCopied</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">segmentLength</span><span class="p">;</span>
+<span class="w">        </span><span class="n">writePointer</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">segmentLength</span><span class="p">;</span>
+<span class="w">        </span><span class="n">offset</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">segmentLength</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">offset</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MBFS_BLOCK_SIZE</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getNextFileBlock</span><span class="p">(</span><span class="n">block</span><span class="p">);</span>
+<span class="w">            </span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">seek</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">bytesCopied</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">bytesCopied</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">writeBack</span><span class="p">(</span><span class="n">FileDescriptor</span><span class="w"> </span><span class="o">*</span><span class="n">file</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">cacheLength</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">writeBuffer</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">cache</span><span class="p">,</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">cacheLength</span><span class="p">);</span>
+<span class="w">        </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">cacheLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">r</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">writeBuffer</span><span class="p">(</span><span class="n">FileDescriptor</span><span class="w"> </span><span class="o">*</span><span class="n">file</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">block</span><span class="p">,</span><span class="w"> </span><span class="n">newBlock</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">readPointer</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">writePointer</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">offset</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">bytesCopied</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">segmentLength</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Find the read position.</span>
+<span class="w">    </span><span class="n">block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">dirent</span><span class="o">-&gt;</span><span class="n">first_block</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Walk the file table until we reach the start block</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">seek</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">position</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">MBFS_BLOCK_SIZE</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getNextFileBlock</span><span class="p">(</span><span class="n">block</span><span class="p">);</span>
+<span class="w">        </span><span class="n">position</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">MBFS_BLOCK_SIZE</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Once we have the correct start block, handle the byte offset.</span>
+<span class="w">    </span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">seek</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">position</span><span class="p">;</span>
+<span class="w">    </span><span class="n">writePointer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">getBlock</span><span class="p">(</span><span class="n">block</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">offset</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Now, start copying bytes from the requested buffer.</span>
+<span class="w">    </span><span class="n">readPointer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buffer</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">bytesCopied</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">size</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// First, determine if we need to write a partial block.</span>
+<span class="w">        </span><span class="n">segmentLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">bytesCopied</span><span class="p">,</span><span class="w"> </span><span class="n">MBFS_BLOCK_SIZE</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">offset</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">segmentLength</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">            </span><span class="n">flash</span><span class="p">.</span><span class="n">flash_write</span><span class="p">(</span><span class="n">writePointer</span><span class="p">,</span><span class="w"> </span><span class="n">readPointer</span><span class="p">,</span><span class="w"> </span><span class="n">segmentLength</span><span class="p">,</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">seek</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">bytesCopied</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">length</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">getFreePage</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">offset</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">segmentLength</span><span class="p">;</span>
+<span class="w">        </span><span class="n">bytesCopied</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">segmentLength</span><span class="p">;</span>
+<span class="w">        </span><span class="n">readPointer</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">segmentLength</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">offset</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MBFS_BLOCK_SIZE</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">bytesCopied</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">size</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">newBlock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getFreeBlock</span><span class="p">();</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">newBlock</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+
+<span class="w">            </span><span class="n">fileTableWrite</span><span class="p">(</span><span class="n">newBlock</span><span class="p">,</span><span class="w"> </span><span class="n">MBFS_EOF</span><span class="p">);</span>
+<span class="w">            </span><span class="n">fileTableWrite</span><span class="p">(</span><span class="n">block</span><span class="p">,</span><span class="w"> </span><span class="n">newBlock</span><span class="p">);</span>
+
+<span class="w">            </span><span class="n">block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newBlock</span><span class="p">;</span>
+
+<span class="w">            </span><span class="n">writePointer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">getBlock</span><span class="p">(</span><span class="n">block</span><span class="p">);</span>
+<span class="w">            </span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// update the filelength metadata and seek position such that multiple writes are sequential.</span>
+<span class="w">    </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">length</span><span class="p">,</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">seek</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">bytesCopied</span><span class="p">);</span>
+<span class="w">    </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">seek</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">bytesCopied</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">bytesCopied</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">isValidFilename</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">name</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">strlen</span><span class="p">(</span><span class="n">name</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">name</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">32</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">name</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">126</span><span class="p">)</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">write</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">FileDescriptor</span><span class="w"> </span><span class="o">*</span><span class="n">file</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">bytesCopied</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">segmentSize</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Protect against accidental re-initialisation</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">MBFS_STATUS_INITIALISED</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_NOT_SUPPORTED</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Ensure the file is open.</span>
+<span class="w">    </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getFileDescriptor</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">buffer</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_INVALID_PARAMETER</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Determine how to handle the write. If the buffer size is less than our cache size,</span>
+<span class="w">    </span><span class="c1">// write the data via the cache. Otherwise, a direct write through is likely more efficient.</span>
+<span class="w">    </span><span class="c1">// This may take a few iterations if the cache is already quite full.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MBFS_CACHE_SIZE</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">bytesCopied</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">size</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">segmentSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="n">MBFS_CACHE_SIZE</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">cacheLength</span><span class="p">);</span>
+<span class="w">            </span><span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">cache</span><span class="p">[</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">cacheLength</span><span class="p">],</span><span class="w"> </span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="n">segmentSize</span><span class="p">);</span>
+
+<span class="w">            </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">cacheLength</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">segmentSize</span><span class="p">;</span>
+<span class="w">            </span><span class="n">bytesCopied</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">segmentSize</span><span class="p">;</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">cacheLength</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MBFS_CACHE_SIZE</span><span class="p">)</span>
+<span class="w">                </span><span class="n">writeBack</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
+
+
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">bytesCopied</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// If we have a relatively large block, then write it directly (</span>
+<span class="w">    </span><span class="n">writeBack</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">writeBuffer</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="w"> </span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">MicroBitFileSystem</span><span class="o">::</span><span class="n">remove</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">filename</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">MB_READ</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">block</span><span class="p">,</span><span class="w"> </span><span class="n">nextBlock</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// If the file can&#39;t be opened, then it is impossible to delete. Pass through any error codes.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fd</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">fd</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">FileDescriptor</span><span class="w"> </span><span class="o">*</span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getFileDescriptor</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// To erase a file, all we need to do is mark its directory entry and data blocks as INVALID.</span>
+<span class="w">    </span><span class="c1">// First mark the file table</span>
+<span class="w">    </span><span class="n">block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">-&gt;</span><span class="n">dirent</span><span class="o">-&gt;</span><span class="n">first_block</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">block</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">MBFS_EOF</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">nextBlock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fileSystemTable</span><span class="p">[</span><span class="n">block</span><span class="p">];</span>
+<span class="w">        </span><span class="n">fileTableWrite</span><span class="p">(</span><span class="n">block</span><span class="p">,</span><span class="w"> </span><span class="n">MBFS_DELETED</span><span class="p">);</span>
+<span class="w">        </span><span class="n">block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nextBlock</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Mark the directory entry of this file as invalid.</span>
+<span class="w">    </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MBFS_DIRECTORY_ENTRY_DELETED</span><span class="p">;</span>
+<span class="w">    </span><span class="n">flash</span><span class="p">.</span><span class="n">flash_write</span><span class="p">(</span><span class="o">&amp;</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">dirent</span><span class="o">-&gt;</span><span class="n">flags</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// release file metadata</span>
+<span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="n">file</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">MICROBIT_OK</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By John Vidler
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, John Vidler.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,89 +1,134 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>uBit.display &#8212; CODAL v0.2.44</title>
-    
+    <title>uBit.display &#8212; CODAL Documentation v0.2.49-4-g300bcb4</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/theme_mods.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
-    
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ubit/display';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="uBit.serial" href="serial.html" />
     <link rel="prev" title="uBit.compass" href="compass.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint">We're currently porting the DAL documentation over to CODAL. The information on here may be outdated or incorrect!</div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">We're currently porting the DAL documentation over to CODAL. The information on here may be outdated or incorrect!</div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">CODAL v0.2.44</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">CODAL Documentation v0.2.49-4-g300bcb4</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -93,426 +138,180 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../getting-started.html">
-   Getting Started with CODAL
-  </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="index.html">
-   The uBit Object
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="buttons.html">
-     Buttons and Touch Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="edge-connector.html">
-     Edge Connector
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="accelerometer.html">
-     uBit.accelerometer
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="audio.html">
-     uBit.audio
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="compass.html">
-     uBit.compass
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     uBit.display
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="serial.html">
-     uBit.serial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="storage.html">
-     uBit.storage
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="thermometer.html">
-     uBit.thermometer
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../memory-and-storage/index.html">
-   Memory and Storage
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../memory-and-storage/managedstring.html">
-     ManagedString
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../memory-and-storage/packetbuffer.html">
-     PacketBuffer
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../memory-and-storage/microbitimage.html">
-     MicroBitImage
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../guides/index.html">
-   Guides
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../guides/prerequisites.html">
-     Installation - Tools
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../guides/codal-projects.html">
-     CODAL Projects
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../projects/index.html">
-   Projects
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../projects/disco-lights.html">
-     Disco Lights
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../codal-api.html">
-   The Complete CODAL API
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="simple">
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../libraries/index.html">
-   Libraries
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../libraries/codal-field-testing.html">
-     CODAL Field Testing
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../glossary.html">
-   Glossary of Terms
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started with CODAL</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">The uBit Object</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="buttons.html">Buttons and Touch Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="edge-connector.html">Edge Connector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="accelerometer.html">uBit.accelerometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio.html">uBit.audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compass.html">uBit.compass</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">uBit.display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serial.html">uBit.serial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage.html">uBit.storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thermometer.html">uBit.thermometer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../memory-and-storage/index.html">Memory and Storage</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/managedstring.html">ManagedString</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/packetbuffer.html">PacketBuffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/microbitimage.html">MicroBitImage</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../guides/index.html">Guides</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../guides/prerequisites.html">Installation - Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/codal-projects.html">CODAL Projects</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../projects/index.html">Projects</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/disco-lights.html">Disco Lights</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../codal-api.html">The Complete CODAL API</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary of Terms</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/lancaster-university/codal-documentation" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-<a href="https://github.com/lancaster-university/codal-documentation"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="bottom"
-title="Source repository"
->
-  
-
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fab fa-github"></i>
   </span>
 
 </a>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
   </span>
 
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#capabilities">
-   Capabilities
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-the-display">
-   Using the Display
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#scrolling-text">
-     Scrolling Text
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#printing-text">
-     Printing Text
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#showing-images">
-     Showing Images
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#running-in-the-background">
-     Running in the Background…
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#changing-display-mode">
-     Changing Display Mode
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#accessing-the-display-buffer">
-     Accessing the Display Buffer
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#other-useful-functions">
-     Other Useful Functions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#useful-methods">
-   Useful Methods
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#synchronous-methods">
-     Synchronous Methods
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#asynchronous-methods">
-     Asynchronous Methods
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>uBit.display</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#capabilities">
-   Capabilities
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-the-display">
-   Using the Display
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#scrolling-text">
-     Scrolling Text
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#printing-text">
-     Printing Text
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#showing-images">
-     Showing Images
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#running-in-the-background">
-     Running in the Background…
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#changing-display-mode">
-     Changing Display Mode
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#accessing-the-display-buffer">
-     Accessing the Display Buffer
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#other-useful-functions">
-     Other Useful Functions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#useful-methods">
-   Useful Methods
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#synchronous-methods">
-     Synchronous Methods
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#asynchronous-methods">
-     Asynchronous Methods
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>uBit.display</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities">Capabilities</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-display">Using the Display</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scrolling-text">Scrolling Text</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#printing-text">Printing Text</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#showing-images">Showing Images</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-in-the-background">Running in the Background…</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-display-mode">Changing Display Mode</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-the-display-buffer">Accessing the Display Buffer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-useful-functions">Other Useful Functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-methods">Useful Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#synchronous-methods">Synchronous Methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asynchronous-methods">Asynchronous Methods</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section id="ubit-display">
-<h1>uBit.display<a class="headerlink" href="#ubit-display" title="Permalink to this headline">#</a></h1>
+<h1>uBit.display<a class="headerlink" href="#ubit-display" title="Permalink to this heading">#</a></h1>
 <p>The <cite>codal::Display</cite> class is a general purpose device driver for controlling LED matrix displays.
 LED matrix displays are simple, inexpensive devices that use a single LED as a display pixel. They therefore
 tend to be of relatively low resolution, but often provide visually attractive displays due to the high coherence and brightness
@@ -535,7 +334,7 @@ Moreover, if we scan through the different rows fast enough - faster than the ey
 known as <em>persistence of vision</em>… and was also the same basis of the very first TV sets (although that did not use LEDs!).</p>
 <p>In it’s normal mode, the display will update every 18ms (55 Hz). If the display is in light saving mode the period is changed to 15ms (66 Hz).</p>
 <section id="capabilities">
-<h2>Capabilities<a class="headerlink" href="#capabilities" title="Permalink to this headline">#</a></h2>
+<h2>Capabilities<a class="headerlink" href="#capabilities" title="Permalink to this heading">#</a></h2>
 <p>The MicroBitDisplay class provides a driver for a general purpose matrix display, and also several high level features that make creating animations and visual effects on the
 micro:bit LED display easy and fun! This class lets you:</p>
 <ul class="simple">
@@ -548,78 +347,78 @@ micro:bit LED display easy and fun! This class lets you:</p>
 </ul>
 </section>
 <section id="using-the-display">
-<h2>Using the Display<a class="headerlink" href="#using-the-display" title="Permalink to this headline">#</a></h2>
+<h2>Using the Display<a class="headerlink" href="#using-the-display" title="Permalink to this heading">#</a></h2>
 <p>When using the uBit object, the display is automatically set up, and ready for you to use. Use any or all of the functions listed in the API section below to create effects on the
 LED display. Here are a few examples to get you started though!</p>
 <section id="scrolling-text">
-<h3>Scrolling Text<a class="headerlink" href="#scrolling-text" title="Permalink to this headline">#</a></h3>
+<h3>Scrolling Text<a class="headerlink" href="#scrolling-text" title="Permalink to this heading">#</a></h3>
 <p>Simply use the scroll function to specify the message you want to scroll, and sit back and watch the result. The message you provide will be scrolled, pixel by pixel across the display from right to left.
 If you take a look at the documentation for the scroll function in the API below, you will notice that you can also specify the speed of the scroll as an optional final parameter. The lower the delay, the
 faster your text will scroll across the screen.</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">scroll</span><span class="p">(</span><span class="s">&quot;HELLO!&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">scroll</span><span class="p">(</span><span class="s">&quot;HELLO!&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">scroll</span><span class="p">(</span><span class="s">&quot;HELLO!&quot;</span><span class="p">);</span>
+<span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">scroll</span><span class="p">(</span><span class="s">&quot;HELLO!&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Notice that you can also scroll numbers (either constants of variables).</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span><span class="w"></span>
-<span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">scroll</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span>
+<span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">scroll</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
 </pre></div>
 </div>
 </section>
 <section id="printing-text">
-<h3>Printing Text<a class="headerlink" href="#printing-text" title="Permalink to this headline">#</a></h3>
+<h3>Printing Text<a class="headerlink" href="#printing-text" title="Permalink to this heading">#</a></h3>
 <p>Sometimes it is better to show the letters/numbers in turn on the screen rather than scrolling them. If you want to do this, the ‘print’ function has exactly the same parameters as ‘scroll’, but
 with this behaviour.  e.g</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;HELLO!&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;HELLO!&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
-<span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;HELLO!&quot;</span><span class="p">);</span>
+<span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;HELLO!&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+<span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Do notice that print behaves slightly differently if you provide a single character or numeric digit though. if you do this, the value you provide will stay on the screen until you explicitly
 change the screen. If you ask the runtime to print a string with two or more characters, then each will appear in turn, then disappear. e.g. try this and you will find it stays on the screen</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
 </pre></div>
 </div>
 </section>
 <section id="showing-images">
-<h3>Showing Images<a class="headerlink" href="#showing-images" title="Permalink to this headline">#</a></h3>
+<h3>Showing Images<a class="headerlink" href="#showing-images" title="Permalink to this heading">#</a></h3>
 <p>It is also possible to print and scroll bitmap images on the display. Images are represented in the runtime by using a [MicroBitImage](../data-types/image.md). These can easily be created, just as
 you create any variable. Once created, you can then provide them as a parameter to the scroll and print functions. Unlike the text based animation functions, you can also specify exactly
 where in the screen you would like the image to appear - and you can even treat pixel values of zero as transparent if you like!
 See the [MicroBitImage page](../data-types/image.md) for more details on images, but here are a few simple examples</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// show your smiley on the screen...</span>
-<span class="n">MicroBitImage</span><span class="w"> </span><span class="n">smiley</span><span class="p">(</span><span class="s">&quot;0,255,0,255, 0</span><span class="se">\n</span><span class="s">0,255,0,255,0</span><span class="se">\n</span><span class="s">0,0,0,0,0</span><span class="se">\n</span><span class="s">255,0,0,0,255</span><span class="se">\n</span><span class="s">0,255,255,255,0</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">smiley</span><span class="p">);</span><span class="w"></span>
+<span class="n">MicroBitImage</span><span class="w"> </span><span class="n">smiley</span><span class="p">(</span><span class="s">&quot;0,255,0,255, 0</span><span class="se">\n</span><span class="s">0,255,0,255,0</span><span class="se">\n</span><span class="s">0,0,0,0,0</span><span class="se">\n</span><span class="s">255,0,0,0,255</span><span class="se">\n</span><span class="s">0,255,255,255,0</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">smiley</span><span class="p">);</span>
 </pre></div>
 </div>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// make your smiley peep up from the bottom of the screen...</span>
-<span class="n">MicroBitImage</span><span class="w"> </span><span class="n">smiley</span><span class="p">(</span><span class="s">&quot;0,255,0,255, 0</span><span class="se">\n</span><span class="s">0,255,0,255,0</span><span class="se">\n</span><span class="s">0,0,0,0,0</span><span class="se">\n</span><span class="s">255,0,0,0,255</span><span class="se">\n</span><span class="s">0,255,255,255,0</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="o">--</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">image</span><span class="p">.</span><span class="n">paste</span><span class="p">(</span><span class="n">smiley</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">y</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">uBit</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="n">MicroBitImage</span><span class="w"> </span><span class="n">smiley</span><span class="p">(</span><span class="s">&quot;0,255,0,255, 0</span><span class="se">\n</span><span class="s">0,255,0,255,0</span><span class="se">\n</span><span class="s">0,0,0,0,0</span><span class="se">\n</span><span class="s">255,0,0,0,255</span><span class="se">\n</span><span class="s">0,255,255,255,0</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="o">--</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">image</span><span class="p">.</span><span class="n">paste</span><span class="p">(</span><span class="n">smiley</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+<span class="w">    </span><span class="n">uBit</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// scroll your smiley across the screen...</span>
-<span class="n">MicroBitImage</span><span class="w"> </span><span class="n">smiley</span><span class="p">(</span><span class="s">&quot;0,255,0,255, 0</span><span class="se">\n</span><span class="s">0,255,0,255,0</span><span class="se">\n</span><span class="s">0,0,0,0,0</span><span class="se">\n</span><span class="s">255,0,0,0,255</span><span class="se">\n</span><span class="s">0,255,255,255,0</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">scroll</span><span class="p">(</span><span class="n">smiley</span><span class="p">);</span><span class="w"></span>
+<span class="n">MicroBitImage</span><span class="w"> </span><span class="n">smiley</span><span class="p">(</span><span class="s">&quot;0,255,0,255, 0</span><span class="se">\n</span><span class="s">0,255,0,255,0</span><span class="se">\n</span><span class="s">0,0,0,0,0</span><span class="se">\n</span><span class="s">255,0,0,0,255</span><span class="se">\n</span><span class="s">0,255,255,255,0</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">scroll</span><span class="p">(</span><span class="n">smiley</span><span class="p">);</span>
 </pre></div>
 </div>
 </section>
 <section id="running-in-the-background">
-<h3>Running in the Background…<a class="headerlink" href="#running-in-the-background" title="Permalink to this headline">#</a></h3>
+<h3>Running in the Background…<a class="headerlink" href="#running-in-the-background" title="Permalink to this heading">#</a></h3>
 <p>By now you have probably noticed that the scroll, print and animate functions all wait for the effect requested to finishes before returning. This is by design, to allow you to easily synchronise your programs.
 However, sometimes you want to launch an effect, and let it run in the background while your program does something else. For this, you can use the <em>Async</em> variations of the scroll, print and animate functions.
 These all have identical parameters and capabilities, but will return immediately. Try some of the examples above with their Async equivalents to understand this different behaviour.  For example:</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// scroll your smiley across the screen, without waiting for it to finish...</span>
-<span class="n">MicroBitImage</span><span class="w"> </span><span class="n">smiley</span><span class="p">(</span><span class="s">&quot;0,255,0,255, 0</span><span class="se">\n</span><span class="s">0,255,0,255,0</span><span class="se">\n</span><span class="s">0,0,0,0,0</span><span class="se">\n</span><span class="s">255,0,0,0,255</span><span class="se">\n</span><span class="s">0,255,255,255,0</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">scrollAsync</span><span class="p">(</span><span class="n">smiley</span><span class="p">);</span><span class="w"></span>
+<span class="n">MicroBitImage</span><span class="w"> </span><span class="n">smiley</span><span class="p">(</span><span class="s">&quot;0,255,0,255, 0</span><span class="se">\n</span><span class="s">0,255,0,255,0</span><span class="se">\n</span><span class="s">0,0,0,0,0</span><span class="se">\n</span><span class="s">255,0,0,0,255</span><span class="se">\n</span><span class="s">0,255,255,255,0</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">scrollAsync</span><span class="p">(</span><span class="n">smiley</span><span class="p">);</span>
 </pre></div>
 </div>
 </section>
 <section id="changing-display-mode">
-<h3>Changing Display Mode<a class="headerlink" href="#changing-display-mode" title="Permalink to this headline">#</a></h3>
+<h3>Changing Display Mode<a class="headerlink" href="#changing-display-mode" title="Permalink to this heading">#</a></h3>
 <p>The MicroBitDisplay class supports either on/off LED display, or displays where each pixel has an individual brightness value between 0 and 255. The former costs much less processor time and battery power to
 operate, so it is the default. The latter does provide more useful effects though, so you can change between these modes by using the  ‘setDiplayMode’ function. Valid values are:</p>
 <dl class="simple">
@@ -632,23 +431,23 @@ operate, so it is the default. The latter does provide more useful effects thoug
 </dl>
 <p>For example:</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// show a smiley with bright eyes!</span>
-<span class="n">MicroBitImage</span><span class="w"> </span><span class="n">smiley</span><span class="p">(</span><span class="s">&quot;0,255,0,255, 0</span><span class="se">\n</span><span class="s">0,255,0,255,0</span><span class="se">\n</span><span class="s">0,0,0,0,0</span><span class="se">\n</span><span class="s">32,0,0,0,32</span><span class="se">\n</span><span class="s">0,32,32,32,0</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">setDisplayMode</span><span class="p">(</span><span class="n">DISPLAY_MODE_GREYSCALE</span><span class="p">);</span><span class="w"></span>
-<span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">smiley</span><span class="p">);</span><span class="w"></span>
+<span class="n">MicroBitImage</span><span class="w"> </span><span class="n">smiley</span><span class="p">(</span><span class="s">&quot;0,255,0,255, 0</span><span class="se">\n</span><span class="s">0,255,0,255,0</span><span class="se">\n</span><span class="s">0,0,0,0,0</span><span class="se">\n</span><span class="s">32,0,0,0,32</span><span class="se">\n</span><span class="s">0,32,32,32,0</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">setDisplayMode</span><span class="p">(</span><span class="n">DISPLAY_MODE_GREYSCALE</span><span class="p">);</span>
+<span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">smiley</span><span class="p">);</span>
 </pre></div>
 </div>
 </section>
 <section id="accessing-the-display-buffer">
-<h3>Accessing the Display Buffer<a class="headerlink" href="#accessing-the-display-buffer" title="Permalink to this headline">#</a></h3>
+<h3>Accessing the Display Buffer<a class="headerlink" href="#accessing-the-display-buffer" title="Permalink to this heading">#</a></h3>
 <p>The memory buffer that is used to drive the LEDs is itself a [MicroBitImage](../data-types/image.md). This means that you can also access and call any of the functions listed in the [MicroBitImage API documentation](../data-types/image.md)
 directly on the display buffer. Examples here include setPixelValue, as illustrated below, but read the above documentation link for full details.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// set a single pixel by co-ordinate</span>
-<span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">image</span><span class="p">.</span><span class="n">setPixelValue</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">255</span><span class="p">);</span><span class="w"></span>
+<span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">image</span><span class="p">.</span><span class="n">setPixelValue</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">255</span><span class="p">);</span>
 </pre></div>
 </div>
 </section>
 <section id="other-useful-functions">
-<h3>Other Useful Functions<a class="headerlink" href="#other-useful-functions" title="Permalink to this headline">#</a></h3>
+<h3>Other Useful Functions<a class="headerlink" href="#other-useful-functions" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>‘clear’ will clear the screen immediately.</p></li>
 <li><p>‘stopAnimation’ will terminate any on-going print, scroll or animate functions.</p></li>
@@ -660,349 +459,191 @@ directly on the display buffer. Examples here include setPixelValue, as illustra
 </section>
 </section>
 <section id="useful-methods">
-<h2>Useful Methods<a class="headerlink" href="#useful-methods" title="Permalink to this headline">#</a></h2>
-<p>As the Display class includes quite a lot of functionality, the full API reference (as can be found here: <a class="reference internal" href="../api/classcodal_1_1Display.html#_CPPv4N5codal7DisplayE" title="codal::Display"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::Display</span></code></a>, and here: <a class="reference internal" href="../api/classcodal_1_1AnimatedDisplay.html#_CPPv4N5codal15AnimatedDisplayE" title="codal::AnimatedDisplay"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::AnimatedDisplay</span></code></a>) can be quite daunting,
+<h2>Useful Methods<a class="headerlink" href="#useful-methods" title="Permalink to this heading">#</a></h2>
+<p>As the Display class includes quite a lot of functionality, the full API reference (as can be found here: <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::Display</span></code>, and here: <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::AnimatedDisplay</span></code>) can be quite daunting,
 so here are a collection of hand-picked methods you might find as the most interesting.</p>
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N5codal7Display8getWidthEv">
-<span id="_CPPv3N5codal7Display8getWidthEv"></span><span id="_CPPv2N5codal7Display8getWidthEv"></span><span id="codal::Display::getWidth"></span><span class="target" id="classcodal_1_1Display_1add9ce52952184b5a83c80ab85e32c5f8"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api/classcodal_1_1Display.html#_CPPv4N5codal7DisplayE" title="codal::Display"><span class="n"><span class="pre">Display</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getWidth</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Returns the width of the display</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>display width </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N5codal7Display9getHeightEv">
-<span id="_CPPv3N5codal7Display9getHeightEv"></span><span id="_CPPv2N5codal7Display9getHeightEv"></span><span id="codal::Display::getHeight"></span><span class="target" id="classcodal_1_1Display_1a5d348eb4843e9ef3d290e340ecec5a02"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api/classcodal_1_1Display.html#_CPPv4N5codal7DisplayE" title="codal::Display"><span class="n"><span class="pre">Display</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getHeight</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Returns the height of the display</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>display height </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N5codal7Display13setBrightnessEi">
-<span id="_CPPv3N5codal7Display13setBrightnessEi"></span><span id="_CPPv2N5codal7Display13setBrightnessEi"></span><span id="codal::Display::setBrightness__i"></span><span class="target" id="classcodal_1_1Display_1ac3b48b6239301b3f0c46567665e2c1a6"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api/classcodal_1_1Display.html#_CPPv4N5codal7DisplayE" title="codal::Display"><span class="n"><span class="pre">Display</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">setBrightness</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">b</span></span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Configures the brightness of the display.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>b</strong> – The brightness to set the brightness to, in the range 0 - 255.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK, or DEVICE_INVALID_PARAMETER </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N5codal7Display13getBrightnessEv">
-<span id="_CPPv3N5codal7Display13getBrightnessEv"></span><span id="_CPPv2N5codal7Display13getBrightnessEv"></span><span id="codal::Display::getBrightness"></span><span class="target" id="classcodal_1_1Display_1aef0ff166b116491ecee4e2450eb40ffa"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api/classcodal_1_1Display.html#_CPPv4N5codal7DisplayE" title="codal::Display"><span class="n"><span class="pre">Display</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getBrightness</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Fetches the current brightness of this display.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the brightness of this display, in the range 0..255. </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N5codal7Display6enableEv">
-<span id="_CPPv3N5codal7Display6enableEv"></span><span id="_CPPv2N5codal7Display6enableEv"></span><span id="codal::Display::enable"></span><span class="target" id="classcodal_1_1Display_1a213cb39a8c9110602c096083f78596fc"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api/classcodal_1_1Display.html#_CPPv4N5codal7DisplayE" title="codal::Display"><span class="n"><span class="pre">Display</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">enable</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Enables the display, should only be called if the display is disabled. </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N5codal7Display10screenShotEv">
-<span id="_CPPv3N5codal7Display10screenShotEv"></span><span id="_CPPv2N5codal7Display10screenShotEv"></span><span id="codal::Display::screenShot"></span><span class="target" id="classcodal_1_1Display_1a4cfacfba496a0c6daac73d8aa442f09c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="../api/classcodal_1_1Image.html#_CPPv4N5codal5ImageE" title="codal::Image"><span class="n"><span class="pre">Image</span></span></a><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api/classcodal_1_1Display.html#_CPPv4N5codal7DisplayE" title="codal::Display"><span class="n"><span class="pre">Display</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">screenShot</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Captures the bitmap currently being rendered on the display.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>a <a class="reference internal" href="../api/classcodal_1_1Image.html#classcodal_1_1Image"><span class="std std-ref">Image</span></a> containing the captured data. </p>
-</dd>
-</dl>
-</dd></dl>
-
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “codal::Display::getWidth” in doxygen xml output for project “CODAL” from directory: ./_doxygen/xml</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “codal::Display::getHeight” in doxygen xml output for project “CODAL” from directory: ./_doxygen/xml</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “codal::Display::setBrightness” in doxygen xml output for project “CODAL” from directory: ./_doxygen/xml</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “codal::Display::getBrightness” in doxygen xml output for project “CODAL” from directory: ./_doxygen/xml</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “codal::Display::enable” in doxygen xml output for project “CODAL” from directory: ./_doxygen/xml</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “codal::Display::screenShot” in doxygen xml output for project “CODAL” from directory: ./_doxygen/xml</p>
+</div>
 <section id="synchronous-methods">
-<h3>Synchronous Methods<a class="headerlink" href="#synchronous-methods" title="Permalink to this headline">#</a></h3>
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay5printE5Imageiiii">
-<span id="_CPPv3N5codal15AnimatedDisplay5printE5Imageiiii"></span><span id="_CPPv2N5codal15AnimatedDisplay5printE5Imageiiii"></span><span id="codal::AnimatedDisplay::print__Image.i.i.i.i"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1ac119445e4086a50a217b9ef1fa153855"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api/classcodal_1_1AnimatedDisplay.html#_CPPv4N5codal15AnimatedDisplayE" title="codal::AnimatedDisplay"><span class="n"><span class="pre">AnimatedDisplay</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">print</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../api/classcodal_1_1Image.html#_CPPv4N5codal5ImageE" title="codal::Image"><span class="n"><span class="pre">Image</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">alpha</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Prints the given image to the display. Blocks the calling thread until all the image has been displayed.</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="w"> </span><span class="n">i</span><span class="p">(</span><span class="s">&quot;1,1,1,1,1</span><span class="se">\n</span><span class="s">1,1,1,1,1</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">400</span><span class="p">);</span><span class="w"></span>
-</pre></div>
+<h3>Synchronous Methods<a class="headerlink" href="#synchronous-methods" title="Permalink to this heading">#</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “codal::AnimatedDisplay::print” in doxygen xml output for project “CODAL” from directory: ./_doxygen/xml</p>
 </div>
- </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>i</strong> – The image to display.</p></li>
-<li><p><strong>x</strong> – The horizontal position on the screen to display the image. Defaults to 0.</p></li>
-<li><p><strong>y</strong> – The vertical position on the screen to display the image. Defaults to 0.</p></li>
-<li><p><strong>alpha</strong> – Treats the brightness level ‘0’ as transparent. Defaults to 0.</p></li>
-<li><p><strong>delay</strong> – The time to display the image for, or zero to show the image forever. Defaults to 0.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK, DEVICE_BUSY if the display is already in use, or DEVICE_INVALID_PARAMETER.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay5printE13ManagedStringi">
-<span id="_CPPv3N5codal15AnimatedDisplay5printE13ManagedStringi"></span><span id="_CPPv2N5codal15AnimatedDisplay5printE13ManagedStringi"></span><span id="codal::AnimatedDisplay::print__ManagedString.i"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1a427972218ebd22025644f626373c35ef"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api/classcodal_1_1AnimatedDisplay.html#_CPPv4N5codal15AnimatedDisplayE" title="codal::AnimatedDisplay"><span class="n"><span class="pre">AnimatedDisplay</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">print</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../api/classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">s</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">400</span></span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Prints the given string to the display, one character at a time.</p>
-<p>Blocks the calling thread until all the text has been displayed.</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;abc123&quot;</span><span class="p">,</span><span class="mi">400</span><span class="p">);</span><span class="w"></span>
-</pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “codal::AnimatedDisplay::print” in doxygen xml output for project “CODAL” from directory: ./_doxygen/xml</p>
 </div>
- </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>s</strong> – The string to display.</p></li>
-<li><p><strong>delay</strong> – The time to delay between characters, in milliseconds. Defaults to: DISPLAY_DEFAULT_PRINT_SPEED.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK, DEVICE_CANCELLED or DEVICE_INVALID_PARAMETER.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay9printCharEci">
-<span id="_CPPv3N5codal15AnimatedDisplay9printCharEci"></span><span id="_CPPv2N5codal15AnimatedDisplay9printCharEci"></span><span id="codal::AnimatedDisplay::printChar__c.i"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1a1570f1a1063a75c98e8bce17851d65cc"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api/classcodal_1_1AnimatedDisplay.html#_CPPv4N5codal15AnimatedDisplayE" title="codal::AnimatedDisplay"><span class="n"><span class="pre">AnimatedDisplay</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">printChar</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">c</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Prints the given character to the display.</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">.</span><span class="n">printAsync</span><span class="p">(</span><span class="sc">&#39;p&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="n">display</span><span class="p">.</span><span class="n">printAsync</span><span class="p">(</span><span class="sc">&#39;p&#39;</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
-</pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “codal::AnimatedDisplay::printChar” in doxygen xml output for project “CODAL” from directory: ./_doxygen/xml</p>
 </div>
- </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>c</strong> – The character to display.</p></li>
-<li><p><strong>delay</strong> – Optional parameter - the time for which to show the character. Zero displays the character forever, or until the Displays next use.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK, DEVICE_CANCELLED or DEVICE_INVALID_PARAMETER.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay6scrollE5Imageii">
-<span id="_CPPv3N5codal15AnimatedDisplay6scrollE5Imageii"></span><span id="_CPPv2N5codal15AnimatedDisplay6scrollE5Imageii"></span><span id="codal::AnimatedDisplay::scroll__Image.i.i"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1a030e959f4fe224d164f602700a51cba8"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api/classcodal_1_1AnimatedDisplay.html#_CPPv4N5codal15AnimatedDisplayE" title="codal::AnimatedDisplay"><span class="n"><span class="pre">AnimatedDisplay</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">scroll</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../api/classcodal_1_1Image.html#_CPPv4N5codal5ImageE" title="codal::Image"><span class="n"><span class="pre">Image</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">image</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">120</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">stride</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Scrolls the given image across the display, from right to left. Blocks the calling thread until all the text has been displayed.</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="w"> </span><span class="n">i</span><span class="p">(</span><span class="s">&quot;1,1,1,1,1</span><span class="se">\n</span><span class="s">1,1,1,1,1</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">display</span><span class="p">.</span><span class="n">scroll</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
-</pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “codal::AnimatedDisplay::scroll” in doxygen xml output for project “CODAL” from directory: ./_doxygen/xml</p>
 </div>
- </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>image</strong> – The image to display.</p></li>
-<li><p><strong>delay</strong> – The time between updates, in milliseconds. Defaults to: DISPLAY_DEFAULT_SCROLL_SPEED.</p></li>
-<li><p><strong>stride</strong> – The number of pixels to shift by in each update. Defaults to DISPLAY_DEFAULT_SCROLL_STRIDE.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK, DEVICE_CANCELLED or DEVICE_INVALID_PARAMETER.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay6scrollE13ManagedStringi">
-<span id="_CPPv3N5codal15AnimatedDisplay6scrollE13ManagedStringi"></span><span id="_CPPv2N5codal15AnimatedDisplay6scrollE13ManagedStringi"></span><span id="codal::AnimatedDisplay::scroll__ManagedString.i"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1ac2850fbdc153cbf7fc975e78c0f264b9"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api/classcodal_1_1AnimatedDisplay.html#_CPPv4N5codal15AnimatedDisplayE" title="codal::AnimatedDisplay"><span class="n"><span class="pre">AnimatedDisplay</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">scroll</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../api/classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">s</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">120</span></span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Scrolls the given string across the display, from right to left. Blocks the calling thread until all text has been displayed.</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">.</span><span class="n">scroll</span><span class="p">(</span><span class="s">&quot;abc123&quot;</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
-</pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “codal::AnimatedDisplay::scroll” in doxygen xml output for project “CODAL” from directory: ./_doxygen/xml</p>
 </div>
- </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>s</strong> – The string to display.</p></li>
-<li><p><strong>delay</strong> – The time to delay between characters, in milliseconds. Defaults to: DISPLAY_DEFAULT_SCROLL_SPEED.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK, DEVICE_CANCELLED or DEVICE_INVALID_PARAMETER.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </section>
 <section id="asynchronous-methods">
-<h3>Asynchronous Methods<a class="headerlink" href="#asynchronous-methods" title="Permalink to this headline">#</a></h3>
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay10printAsyncE5Imageiiii">
-<span id="_CPPv3N5codal15AnimatedDisplay10printAsyncE5Imageiiii"></span><span id="_CPPv2N5codal15AnimatedDisplay10printAsyncE5Imageiiii"></span><span id="codal::AnimatedDisplay::printAsync__Image.i.i.i.i"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1ae984a32d0e2203e40595d2154ea01719"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api/classcodal_1_1AnimatedDisplay.html#_CPPv4N5codal15AnimatedDisplayE" title="codal::AnimatedDisplay"><span class="n"><span class="pre">AnimatedDisplay</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">printAsync</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../api/classcodal_1_1Image.html#_CPPv4N5codal5ImageE" title="codal::Image"><span class="n"><span class="pre">Image</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">alpha</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Prints the given image to the display, if the display is not in use. Returns immediately, and executes the animation asynchronously.</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="w"> </span><span class="n">i</span><span class="p">(</span><span class="s">&quot;1,1,1,1,1</span><span class="se">\n</span><span class="s">1,1,1,1,1</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">display</span><span class="p">.</span><span class="n">printAsync</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">400</span><span class="p">);</span><span class="w"></span>
-</pre></div>
+<h3>Asynchronous Methods<a class="headerlink" href="#asynchronous-methods" title="Permalink to this heading">#</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “codal::AnimatedDisplay::printAsync” in doxygen xml output for project “CODAL” from directory: ./_doxygen/xml</p>
 </div>
- </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>i</strong> – The image to display.</p></li>
-<li><p><strong>x</strong> – The horizontal position on the screen to display the image. Defaults to 0.</p></li>
-<li><p><strong>y</strong> – The vertical position on the screen to display the image. Defaults to 0.</p></li>
-<li><p><strong>alpha</strong> – Treats the brightness level ‘0’ as transparent. Defaults to 0.</p></li>
-<li><p><strong>delay</strong> – The time to delay between characters, in milliseconds. Defaults to 0.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay10printAsyncE13ManagedStringi">
-<span id="_CPPv3N5codal15AnimatedDisplay10printAsyncE13ManagedStringi"></span><span id="_CPPv2N5codal15AnimatedDisplay10printAsyncE13ManagedStringi"></span><span id="codal::AnimatedDisplay::printAsync__ManagedString.i"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1ab7fa01cc29fe24d0dace9e6faa76ac4a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api/classcodal_1_1AnimatedDisplay.html#_CPPv4N5codal15AnimatedDisplayE" title="codal::AnimatedDisplay"><span class="n"><span class="pre">AnimatedDisplay</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">printAsync</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../api/classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">s</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">400</span></span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Prints the given <a class="reference internal" href="../api/classcodal_1_1ManagedString.html#classcodal_1_1ManagedString"><span class="std std-ref">ManagedString</span></a> to the display, one character at a time. Returns immediately, and executes the animation asynchronously.</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">.</span><span class="n">printAsync</span><span class="p">(</span><span class="s">&quot;abc123&quot;</span><span class="p">,</span><span class="mi">400</span><span class="p">);</span><span class="w"></span>
-</pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “codal::AnimatedDisplay::printAsync” in doxygen xml output for project “CODAL” from directory: ./_doxygen/xml</p>
 </div>
- </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>s</strong> – The string to display.</p></li>
-<li><p><strong>delay</strong> – The time to delay between characters, in milliseconds. Must be &gt; 0. Defaults to: DISPLAY_DEFAULT_PRINT_SPEED.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK, or DEVICE_INVALID_PARAMETER.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay14printCharAsyncEci">
-<span id="_CPPv3N5codal15AnimatedDisplay14printCharAsyncEci"></span><span id="_CPPv2N5codal15AnimatedDisplay14printCharAsyncEci"></span><span id="codal::AnimatedDisplay::printCharAsync__c.i"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1a2cb44c0ef35d2b401b00235ff9fa80f1"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api/classcodal_1_1AnimatedDisplay.html#_CPPv4N5codal15AnimatedDisplayE" title="codal::AnimatedDisplay"><span class="n"><span class="pre">AnimatedDisplay</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">printCharAsync</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">c</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Prints the given character to the display, if it is not in use.</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">.</span><span class="n">printCharAsync</span><span class="p">(</span><span class="sc">&#39;p&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="n">display</span><span class="p">.</span><span class="n">printCharAsync</span><span class="p">(</span><span class="sc">&#39;p&#39;</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
-</pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “codal::AnimatedDisplay::printCharAsync” in doxygen xml output for project “CODAL” from directory: ./_doxygen/xml</p>
 </div>
- </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>c</strong> – The character to display.</p></li>
-<li><p><strong>delay</strong> – Optional parameter - the time for which to show the character. Zero displays the character forever, or until the Displays next use.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK, DEVICE_BUSY is the screen is in use, or DEVICE_INVALID_PARAMETER.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay11scrollAsyncE5Imageii">
-<span id="_CPPv3N5codal15AnimatedDisplay11scrollAsyncE5Imageii"></span><span id="_CPPv2N5codal15AnimatedDisplay11scrollAsyncE5Imageii"></span><span id="codal::AnimatedDisplay::scrollAsync__Image.i.i"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1aa478d6828ecab3909fa2d1d616e84986"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api/classcodal_1_1AnimatedDisplay.html#_CPPv4N5codal15AnimatedDisplayE" title="codal::AnimatedDisplay"><span class="n"><span class="pre">AnimatedDisplay</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">scrollAsync</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../api/classcodal_1_1Image.html#_CPPv4N5codal5ImageE" title="codal::Image"><span class="n"><span class="pre">Image</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">image</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">120</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">stride</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Scrolls the given image across the display, from right to left. Returns immediately, and executes the animation asynchronously.</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="w"> </span><span class="n">i</span><span class="p">(</span><span class="s">&quot;1,1,1,1,1</span><span class="se">\n</span><span class="s">1,1,1,1,1</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">display</span><span class="p">.</span><span class="n">scrollAsync</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
-</pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “codal::AnimatedDisplay::scrollAsync” in doxygen xml output for project “CODAL” from directory: ./_doxygen/xml</p>
 </div>
- </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>image</strong> – The image to display.</p></li>
-<li><p><strong>delay</strong> – The time between updates, in milliseconds. Defaults to: DISPLAY_DEFAULT_SCROLL_SPEED.</p></li>
-<li><p><strong>stride</strong> – The number of pixels to shift by in each update. Defaults to DISPLAY_DEFAULT_SCROLL_STRIDE.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK, DEVICE_BUSY if the display is already in use, or DEVICE_INVALID_PARAMETER.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N5codal15AnimatedDisplay11scrollAsyncE13ManagedStringi">
-<span id="_CPPv3N5codal15AnimatedDisplay11scrollAsyncE13ManagedStringi"></span><span id="_CPPv2N5codal15AnimatedDisplay11scrollAsyncE13ManagedStringi"></span><span id="codal::AnimatedDisplay::scrollAsync__ManagedString.i"></span><span class="target" id="classcodal_1_1AnimatedDisplay_1a05ca470cd1d010ad8e916bb0bd7b00a7"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">codal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api/classcodal_1_1AnimatedDisplay.html#_CPPv4N5codal15AnimatedDisplayE" title="codal::AnimatedDisplay"><span class="n"><span class="pre">AnimatedDisplay</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">scrollAsync</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../api/classcodal_1_1ManagedString.html#_CPPv4N5codal13ManagedStringE" title="codal::ManagedString"><span class="n"><span class="pre">ManagedString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">s</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">delay</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">120</span></span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Scrolls the given string to the display, from right to left. Returns immediately, and executes the animation asynchronously.</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">.</span><span class="n">scrollAsync</span><span class="p">(</span><span class="s">&quot;abc123&quot;</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
-</pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenfunction: Cannot find function “codal::AnimatedDisplay::scrollAsync” in doxygen xml output for project “CODAL” from directory: ./_doxygen/xml</p>
 </div>
- </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>s</strong> – The string to display.</p></li>
-<li><p><strong>delay</strong> – The time to delay between characters, in milliseconds. Defaults to: DISPLAY_DEFAULT_SCROLL_SPEED.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DEVICE_OK, DEVICE_BUSY if the display is already in use, or DEVICE_INVALID_PARAMETER.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </section>
 </section>
 </section>
 
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="compass.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">uBit.compass</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="compass.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">uBit.compass</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="serial.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="serial.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">uBit.serial</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capabilities">Capabilities</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-display">Using the Display</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scrolling-text">Scrolling Text</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#printing-text">Printing Text</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#showing-images">Showing Images</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-in-the-background">Running in the Background…</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-display-mode">Changing Display Mode</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-the-display-buffer">Accessing the Display Buffer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-useful-functions">Other Useful Functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-methods">Useful Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#synchronous-methods">Synchronous Methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asynchronous-methods">Asynchronous Methods</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
   
-    By Microbit Foundation, Lancaster University<br/>
-  
-      &copy; Copyright 2022, Microbit Foundation, Lancaster University.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
-</div>
+<p class="component-author">
+By John Vidler
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, John Vidler.
+      <br/>
+    
+  </p>
 
-      </div>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

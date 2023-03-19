@@ -1,0 +1,13 @@
+.. _exhale_function_RefCounted_8cpp_1ad48348232972a5840883c91559c19ce3:
+
+Function isReadOnlyInline
+=========================
+
+- Defined in :ref:`file_libraries_codal-core_source_types_RefCounted.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: isReadOnlyInline(RefCounted *)
