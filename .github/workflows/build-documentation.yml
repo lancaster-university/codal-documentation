@@ -36,6 +36,9 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y doxygen make
+          apt-get install -y tzdata
+          ln -fs /usr/share/zoneinfo/Europe/London /etc/localtime
+          dpkg-reconfigure -f noninteractive tzdata
       - name: Build Documentation
         working-directory: docs
         run: ./make-env.sh
@@ -43,6 +46,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
           branch: gh-pages
-          folder: docs/build/html
+          folder: docs/_build/html
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
