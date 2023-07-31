@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: codal::microbit_LEDMap_pinOutput(uint8_t)
+   :project: CODAL

@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: userNotifyId
+   :project: CODAL

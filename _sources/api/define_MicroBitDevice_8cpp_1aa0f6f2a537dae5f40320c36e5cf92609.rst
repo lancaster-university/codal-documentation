@@ -11,3 +11,4 @@ Define Documentation
 
 
 .. doxygendefine:: microbit_LEDMap_PINROW4
+   :project: CODAL

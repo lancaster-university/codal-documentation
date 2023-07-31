@@ -11,6 +11,7 @@ Struct Documentation
 
 
 .. doxygenstruct:: codal::microbit_LEDMapStr
+   :project: CODAL
    :members:
    :protected-members:
    :undoc-members:

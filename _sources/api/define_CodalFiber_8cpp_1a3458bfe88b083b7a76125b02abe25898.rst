@@ -11,3 +11,4 @@ Define Documentation
 
 
 .. doxygendefine:: HAS_THREAD_USER_DATA
+   :project: CODAL

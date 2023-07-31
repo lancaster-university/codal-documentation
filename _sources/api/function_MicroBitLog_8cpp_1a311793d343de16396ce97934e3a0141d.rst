@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: padString(ManagedString, int)
+   :project: CODAL

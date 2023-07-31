@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: friendly_name
+   :project: CODAL

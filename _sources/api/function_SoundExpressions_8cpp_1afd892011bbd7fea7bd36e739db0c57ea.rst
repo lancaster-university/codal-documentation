@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: spring("spring")
+   :project: CODAL

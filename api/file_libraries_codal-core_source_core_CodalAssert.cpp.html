@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; CODAL Documentation v0.2.49-4-g300bcb4</title>
+    <title>File CodalAssert.cpp &#8212; CODAL Documentation v0.2.57-1-g3fa546f</title>
   
   
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -34,19 +34,20 @@
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'api/page_view_hierarchy';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/file_libraries_codal-core_source_core_CodalAssert.cpp';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -122,7 +123,7 @@
   
   
   
-    <p class="title logo__title">CODAL Documentation v0.2.49-4-g300bcb4</p>
+    <p class="title logo__title">CODAL Documentation v0.2.57-1-g3fa546f</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -271,7 +272,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>File CodalAssert.cpp</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -280,9 +281,12 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-libraries-codal-core-source-core-codalassert-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">libraries/codal-core/source/core/CodalAssert.cpp</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#includes">Includes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -293,7 +297,51 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  
+  <section id="file-codalassert-cpp">
+<span id="file-libraries-codal-core-source-core-codalassert-cpp"></span><h1>File CodalAssert.cpp<a class="headerlink" href="#file-codalassert-cpp" title="Permalink to this headline">#</a></h1>
+<p>↰ <a class="reference internal" href="dir_libraries_codal-core_source_core.html#dir-libraries-codal-core-source-core"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">libraries/codal-core/source/core</span></code>)</p>
+<div class="contents local topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#definition-libraries-codal-core-source-core-codalassert-cpp" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">libraries/codal-core/source/core/CodalAssert.cpp</span></code>)</a></p></li>
+<li><p><a class="reference internal" href="#includes" id="id2">Includes</a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id3">Functions</a></p></li>
+<li><p><a class="reference internal" href="#variables" id="id4">Variables</a></p></li>
+</ul>
+</div>
+<section id="definition-libraries-codal-core-source-core-codalassert-cpp">
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">libraries/codal-core/source/core/CodalAssert.cpp</span></code>)<a class="headerlink" href="#definition-libraries-codal-core-source-core-codalassert-cpp" title="Permalink to this headline">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="program_listing_file_libraries_codal-core_source_core_CodalAssert.cpp.html">Program Listing for File CodalAssert.cpp</a></li>
+</ul>
+</div>
+</section>
+<section id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CodalAssert.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CodalDmesg.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codal_target_hal.h</span></code></p></li>
+</ul>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="function_CodalAssert_8cpp_1a0ab432a04065b51d7289de3526001d07.html#exhale-function-codalassert-8cpp-1a0ab432a04065b51d7289de3526001d07"><span class="std std-ref">Function __codal_assert__</span></a></p></li>
+<li><p><a class="reference internal" href="function_CodalAssert_8cpp_1a31f7bd47498bc9772c2212a44bc59419.html#exhale-function-codalassert-8cpp-1a31f7bd47498bc9772c2212a44bc59419"><span class="std std-ref">Function __codal_assert_fail__</span></a></p></li>
+<li><p><a class="reference internal" href="function_CodalAssert_8cpp_1ae5a135151e871b7da584065f82b41695.html#exhale-function-codalassert-8cpp-1ae5a135151e871b7da584065f82b41695"><span class="std std-ref">Function __codal_assert_pass__</span></a></p></li>
+</ul>
+</section>
+<section id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="variable_CodalAssert_8cpp_1ab28ffe523af6649529039bf4670106f6.html#exhale-variable-codalassert-8cpp-1ab28ffe523af6649529039bf4670106f6"><span class="std std-ref">Variable test_failures</span></a></p></li>
+<li><p><a class="reference internal" href="variable_CodalAssert_8cpp_1a9443decd29736f477898f0f8c4212c78.html#exhale-variable-codalassert-8cpp-1a9443decd29736f477898f0f8c4212c78"><span class="std std-ref">Variable test_successes</span></a></p></li>
+</ul>
+</section>
+</section>
+
 
                 </article>
               
@@ -301,9 +349,15 @@ document.write(`
               
               
                 <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -317,9 +371,12 @@ document.write(`
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-libraries-codal-core-source-core-codalassert-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">libraries/codal-core/source/core/CodalAssert.cpp</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#includes">Includes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
@@ -327,7 +384,7 @@ document.write(`
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -357,7 +414,7 @@ By John Vidler
     
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -366,8 +423,8 @@ By John Vidler
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

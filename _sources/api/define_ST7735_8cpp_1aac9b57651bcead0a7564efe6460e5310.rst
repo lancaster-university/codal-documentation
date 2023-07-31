@@ -11,3 +11,4 @@ Define Documentation
 
 
 .. doxygendefine:: SWAP
+   :project: CODAL

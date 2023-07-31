@@ -1,0 +1,556 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Make Your Programs Run Faster &#8212; CODAL Documentation v0.2.57-1-g3fa546f</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'projects/make-your-programs-run-faster';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">We're currently porting the DAL documentation over to CODAL. The information on here may be outdated or incorrect!</div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">CODAL Documentation v0.2.57-1-g3fa546f</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    CODAL Documentation
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started with CODAL</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ubit/index.html">The uBit Object</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/buttons.html">Buttons and Touch Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/edge-connector.html">Edge Connector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/accelerometer.html">uBit.accelerometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/audio.html">uBit.audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/compass.html">uBit.compass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/display.html">uBit.display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/serial.html">uBit.serial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/storage.html">uBit.storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubit/thermometer.html">uBit.thermometer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../memory-and-storage/index.html">Memory and Storage</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/managedstring.html">ManagedString</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/packetbuffer.html">PacketBuffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../memory-and-storage/microbitimage.html">MicroBitImage</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../guides/index.html">Guides</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../guides/prerequisites.html">Installation - Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guides/codal-projects.html">CODAL Projects</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="index.html">Projects</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="disco-lights.html">Disco Lights</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../codal-api.html">The Complete CODAL API</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary of Terms</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/lancaster-university/codal-documentation" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Make Your Programs Run Faster</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Make Your Programs Run Faster</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-expect-large-speed-up-from-using-c">When To Expect Large Speed-Up From Using C++</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#can-i-run-my-software-even-faster">Can I Run My Software Even Faster?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#can-i-run-my-software-even-faster-than-possible-in-c">Can I Run My Software Even Faster Than Possible In C++?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#can-i-run-my-software-even-faster-than-possible-in-assembler">Can I Run My Software Even Faster Than Possible In Assembler?</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="make-your-programs-run-faster">
+<h1>Make Your Programs Run Faster<a class="headerlink" href="#make-your-programs-run-faster" title="Permalink to this headline">#</a></h1>
+<p>Maybe you tried running some Python scripts on your microcontroller
+board before, and wondered if they could be made to run any faster?</p>
+<p>That is very well possible, and not only by a little - but often by a
+large factor!</p>
+<p>Consider the following minimalistic task: We want to make our display
+LEDs blink, the first LED as fast as we can count to 4096, the second
+LED only half as fast as the first LED, the third LED only half as fast
+as the second LED and so on. If the user presses the “A”-button, the
+counting should stop, until the “B”-button is pressed.</p>
+<p>The following little Python program would do that for us:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">imgbuf</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="mi">25</span><span class="p">))</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">c</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">c</span> <span class="o">&amp;</span> <span class="mh">0xfff</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">continue</span>
+
+    <span class="k">if</span> <span class="n">button_a</span><span class="o">.</span><span class="n">is_pressed</span><span class="p">():</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">button_b</span><span class="o">.</span><span class="n">is_pressed</span><span class="p">():</span>
+                <span class="k">break</span>
+            <span class="n">sleep</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+
+    <span class="n">i</span> <span class="o">=</span> <span class="n">c</span> <span class="o">&gt;&gt;</span> <span class="mi">12</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">25</span><span class="p">):</span>
+        <span class="n">imgbuf</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">i</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">&gt;&gt;=</span> <span class="mi">1</span>
+    <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">imgbuf</span><span class="p">),</span> <span class="n">delay</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Notice how this little Python program is mostly busy with just
+incrementing variable “c”, and only every 4096 counts, it will check for
+button presses and update the display.</p>
+<p>If you run this program on a Micro:Bit v2, the first LED will blink
+about every second or so, and the following LEDs with ever halving
+frequency.</p>
+<p>Now try running the following C++ program, which does the same, and is
+very similar to above Python program, on the same microcontroller board:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MicroBit.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Image.h&quot;</span>
+
+<span class="n">MicroBit</span><span class="w"> </span><span class="n">uBit</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">uBit</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>
+<span class="w">    </span><span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">setDisplayMode</span><span class="p">(</span><span class="n">DISPLAY_MODE_BLACK_AND_WHITE</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="nb">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">c</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">c</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xfff</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">continue</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">uBit</span><span class="p">.</span><span class="n">buttonA</span><span class="p">.</span><span class="n">isPressed</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">while</span><span class="p">(</span><span class="nb">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">uBit</span><span class="p">.</span><span class="n">buttonB</span><span class="p">.</span><span class="n">isPressed</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="k">break</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="n">uBit</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">img_buf_p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uBit</span><span class="p">.</span><span class="n">display</span><span class="p">.</span><span class="n">image</span><span class="p">.</span><span class="n">getBitmap</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">img_buf_end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">img_buf_p</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">img_buf_p</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">img_buf_end</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="o">*</span><span class="n">img_buf_p</span><span class="o">++</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">            </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>If you run this, you will notice how several LEDs will blink so fast
+that your eye can hardly see them going on or off. And if you count
+how many LEDs after the first LED the blinking frequency has been halved
+so many times that this LED now blinks with about the same speed as the
+first LED with above Python example, you can easily determine an
+approximate speed-up: For example, if the blink frequency of the 8th LED
+is now about as fast as the 1st LED before, then the speed-up is around
+a factor of 2^7 = 128.</p>
+<p>The reason for this is simply that Python is an interpreted language,
+where even a simple operation like incrementing a variable requires many
+“machine instructions” on the microcontroller to execute.</p>
+<p>The C++ version, in contrast, is compiled first into a CPU instruction
+set specific Assembler language, which is then translated into binary
+“machine code”, which the microcontroller can execute directly - and
+incrementing an integer variable there is a single instruction.</p>
+</section>
+<section id="when-to-expect-large-speed-up-from-using-c">
+<h1>When To Expect Large Speed-Up From Using C++<a class="headerlink" href="#when-to-expect-large-speed-up-from-using-c" title="Permalink to this headline">#</a></h1>
+<p>Generally speaking, if your software spends a lot of time outside of
+calling “system” or “library” functions that were implemented in
+efficient programming languages, then you can expect large speed-up
+factors from using such languages instead of interpreted ones.</p>
+<p>Also, sometimes an existing run-time environment, library or operating
+system you have to use while running a certain programming language,
+will simply not allow you to implement a more efficient way to solve a
+given task. Looking once more at the above example, see how the Python
+program need to create a new instance of class “Image” every time it
+wants to update the display. That within the language interpreter
+requires allocating memory for the new instance, initializing it with
+values, then copying those values into the frame buffer, only to then
+discard the “Image” instance again. The C++ version, on the other hand,
+can just obtain a pointer to the anyway existing frame buffer of the
+display driver, and directly write values there - no memory allocation
+required, also no second copy and deallocation.</p>
+</section>
+<section id="can-i-run-my-software-even-faster">
+<h1>Can I Run My Software Even Faster?<a class="headerlink" href="#can-i-run-my-software-even-faster" title="Permalink to this headline">#</a></h1>
+<p>If you directed a high-speed camera on the LEDs while above C++ example
+runs, you would notice that the display actually does not change as fast
+as the new values are written to the frame buffer. This is because the
+MicroBitDisplay implemented as part of the Codal layer only updates the
+actual I/O pins driving the LEDs about 60 times per second - not every
+time the frame buffer content changes! Usually, that is a very
+reasonable approach - after all, humans would not notice faster updates
+with their eyes, anyway.</p>
+<p>But let’s assume you wanted to switch the LEDs as quickly as possible,
+for whatever reason. Then you could circumvent the Codal software layer,
+and implement your own display driver. You can do that in C++, as well,
+but it involves learning about the I/O registers and how to use them.</p>
+</section>
+<section id="can-i-run-my-software-even-faster-than-possible-in-c">
+<h1>Can I Run My Software Even Faster Than Possible In C++?<a class="headerlink" href="#can-i-run-my-software-even-faster-than-possible-in-c" title="Permalink to this headline">#</a></h1>
+<p>Compilers are very good these days in creating highly optimized
+Assembler code, so “going more low level” by writing Assembler directly
+will not often gain you a further speed-up.</p>
+<p>But there are exceptions to this: For example, many CPUs support special
+machine instructions to speed-up certain algorithms. Like AES
+encryption. A compiler will not likely automatically use such
+instructions if you needed to implement such an algorithm, so you would
+have to write Assembler directly to gain the possible speed-up from
+using them. Which can be very high - again a factor of 10 or more can
+often be achieved by using specialized machine instructions tailored to
+a certain algorithm.</p>
+</section>
+<section id="can-i-run-my-software-even-faster-than-possible-in-assembler">
+<h1>Can I Run My Software Even Faster Than Possible In Assembler?<a class="headerlink" href="#can-i-run-my-software-even-faster-than-possible-in-assembler" title="Permalink to this headline">#</a></h1>
+<p>If even writing Assembler is not sufficient to run your task fast enough,
+then you run out of “software” options.</p>
+<p>But you can still look for additional hardware support! One approach
+would be to use specialized, non-general-purpose processing units, such
+as for example GPUs, which excel at running one sequence of instructions
+on many many data at the same time.</p>
+<p>Or you can use a “Field Programmable Gate Array” (FPGA), which
+essentially allows you to arrange basic building blocks of processors,
+down to the level of single NAND-gates, into specialized processing
+units for your task.</p>
+<p>If even FPGAs cannot do fast enough what you need to do, then you run
+out of hardware options that are easy to buy, but you theoretically can
+design “Application Specific Integrated Circuits” (ASICS), which when
+manufactured as hardware, can again be a lot faster (and more efficient)
+than FGPAs for the same task.</p>
+<p>And yes, there are languages dedicated to the desciption of hardware,
+for example “VHDL” or “Verilog”, and using those you can simulate what
+your hardware would do. But maybe that is for you to try another time?</p>
+</section>
+
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Make Your Programs Run Faster</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-expect-large-speed-up-from-using-c">When To Expect Large Speed-Up From Using C++</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#can-i-run-my-software-even-faster">Can I Run My Software Even Faster?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#can-i-run-my-software-even-faster-than-possible-in-c">Can I Run My Software Even Faster Than Possible In C++?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#can-i-run-my-software-even-faster-than-possible-in-assembler">Can I Run My Software Even Faster Than Possible In Assembler?</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By John Vidler
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, John Vidler.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

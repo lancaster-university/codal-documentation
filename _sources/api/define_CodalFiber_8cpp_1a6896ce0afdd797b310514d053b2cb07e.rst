@@ -11,3 +11,4 @@ Define Documentation
 
 
 .. doxygendefine:: INITIAL_STACK_DEPTH
+   :project: CODAL

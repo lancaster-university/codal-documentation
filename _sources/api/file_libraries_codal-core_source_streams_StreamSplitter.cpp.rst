@@ -8,6 +8,7 @@ File StreamSplitter.cpp
 
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
+
 .. contents:: Contents
    :local:
    :backlinks: none
@@ -30,8 +31,6 @@ Includes
 
 
 - ``CodalConfig.h``
-
-- ``CodalDmesg.h``
 
 - ``ErrorNo.h``
 

@@ -11,3 +11,4 @@ Define Documentation
 
 
 .. doxygendefine:: CALIBRATED_SAMPLE
+   :project: CODAL

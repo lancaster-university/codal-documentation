@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: seq_x
+   :project: CODAL

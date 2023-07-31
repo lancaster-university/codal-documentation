@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: RADIO_IRQHandler(void)
+   :project: CODAL

@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: btle_set_user_evt_handler(void(*)(uint32_t))
+   :project: CODAL

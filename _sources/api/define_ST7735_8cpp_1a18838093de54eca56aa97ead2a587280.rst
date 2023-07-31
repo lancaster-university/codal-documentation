@@ -11,3 +11,4 @@ Define Documentation
 
 
 .. doxygendefine:: ENC16
+   :project: CODAL

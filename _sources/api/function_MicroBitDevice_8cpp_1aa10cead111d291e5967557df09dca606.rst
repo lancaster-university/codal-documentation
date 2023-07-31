@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: codal::microbit_LEDMap_columnOn(int, bool)
+   :project: CODAL

@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: codal::microbit_random(int)
+   :project: CODAL

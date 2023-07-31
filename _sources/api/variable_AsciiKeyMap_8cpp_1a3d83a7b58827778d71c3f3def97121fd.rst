@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: seq_angle_right
+   :project: CODAL

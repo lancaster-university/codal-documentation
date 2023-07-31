@@ -42,11 +42,11 @@ Program Listing for File LevelDetectorSPL.cpp
    #include "LevelDetectorSPL.h"
    #include "ErrorNo.h"
    #include "StreamNormalizer.h"
-   #include "CodalDmesg.h"
+   #include "CodalAssert.h"
    
    using namespace codal;
    
-   LevelDetectorSPL::LevelDetectorSPL(DataSource &source, float highThreshold, float lowThreshold, float gain, float minValue, uint16_t id, bool connectImmediately) : upstream(source)
+   LevelDetectorSPL::LevelDetectorSPL(DataSource &source, float highThreshold, float lowThreshold, float gain, float minValue, uint16_t id, bool activateImmediately) : upstream(source), resourceLock(0)
    {
        this->id = id;
        this->level = 0;
@@ -58,19 +58,32 @@ Program Listing for File LevelDetectorSPL.cpp
        this->status |= LEVEL_DETECTOR_SPL_INITIALISED;
        this->unit = LEVEL_DETECTOR_SPL_DB;
        enabled = true;
-       if(connectImmediately){
+       if(activateImmediately){
            upstream.connect(*this);
            this->activated = true;
        }
        else{
            this->activated = false;
        }
+   
+       this->quietBlockCount = 0;
+       this->noisyBlockCount = 0;
+       this->inNoisyBlock = false;
+       this->maxRms = 0;
+   
+       this->bufferCount = 0;
+       this->timeout = 0;
    }
    
    int LevelDetectorSPL::pullRequest()
    {
-       ManagedBuffer b = upstream.pull();
+       // If we're not manually activated, not held active by a timeout, and we have no-one waiting on our data, bail.
+       if( !activated && !(system_timer_current_time() - this->timeout < CODAL_STREAM_IDLE_TIMEOUT_MS) && resourceLock.getWaitCount() == 0 ) {
+           this->bufferCount = 0;
+           return DEVICE_BUSY;
+       }
    
+       ManagedBuffer b = upstream.pull();
        uint8_t *data = &b[0];
        
        int format = upstream.getFormat();
@@ -92,10 +105,9 @@ Program Listing for File LevelDetectorSPL.cpp
        int samples = b.length() / skip;
    
        while(samples){
-   
-           //ensure we use at least windowSize number of samples (128)
+           // ensure we use at least windowSize number of samples (128)
            if(samples < windowSize)
-           break;
+               break;
    
            uint8_t *ptr, *end;
    
@@ -111,26 +123,56 @@ Program Listing for File LevelDetectorSPL.cpp
            int16_t minVal = 32766;
            int32_t v;
            ptr = data;
-           while(ptr < end){
+           while (ptr < end) {
                v = (int32_t) StreamNormalizer::readSample[format](ptr);
-               if(v > maxVal) maxVal = v;
-               if(v < minVal) minVal = v;
+               if (v > maxVal) maxVal = v;
+               if (v < minVal) minVal = v;
                ptr += skip;
            }
-   
            maxVal = (maxVal - minVal) / 2;
+   
+           /*******************************
+           *   GET RMS AMPLITUDE FOR CLAP DETECTION
+           ******************************/
+           int sumSquares = 0;
+           int count = 0;
+           ptr = data;
+           while (ptr < end) {
+               count++;
+               v = (int32_t) StreamNormalizer::readSample[format](ptr) - minVal;   // need to sub minVal to avoid overflow
+               sumSquares += v * v;
+               ptr += skip;
+           }
+           float rms = sqrt(sumSquares / count);
    
            /*******************************
            *   CALCULATE SPL
            ******************************/
-           float conv = ((float)maxVal * multiplier)/((1 << 15)-1) * gain;
-           conv = 20 * log10(conv/pref);
+           float conv = ((float) maxVal * multiplier) / ((1 << 15) - 1) * gain;
+           conv = 20 * log10(conv / pref);
    
-           if(conv < minValue) level = minValue;
-           else if(isfinite(conv)) level = conv;
-           else level = minValue;
+           if (conv < minValue)
+               level = minValue;
+           else if (isfinite(conv))
+               level = conv;
+           else
+               level = minValue;
    
            samples -= windowSize;
+           data += windowSize;
+   
+           /*******************************
+           *   EMIT EVENTS
+           ******************************/
+   
+           if( this->bufferCount < LEVEL_DETECTOR_SPL_MIN_BUFFERS ) {
+               this->bufferCount++; // Here to prevent this endlessly increasing
+               return DEVICE_OK;
+           }
+           if( this->resourceLock.getWaitCount() > 0 )
+               this->resourceLock.notifyAll();
+   
+           // HIGH THRESHOLD
            if ((!(status & LEVEL_DETECTOR_SPL_HIGH_THRESHOLD_PASSED)) && level > highThreshold)
            {
                Event(id, LEVEL_THRESHOLD_HIGH);
@@ -138,37 +180,75 @@ Program Listing for File LevelDetectorSPL.cpp
                status &= ~LEVEL_DETECTOR_SPL_LOW_THRESHOLD_PASSED;
            }
    
-           if ((!(status & LEVEL_DETECTOR_SPL_LOW_THRESHOLD_PASSED)) && level < lowThreshold)
+           // LOW THRESHOLD
+           else if ((!(status & LEVEL_DETECTOR_SPL_LOW_THRESHOLD_PASSED)) && level < lowThreshold)
            {
                Event(id, LEVEL_THRESHOLD_LOW);
                status |=  LEVEL_DETECTOR_SPL_LOW_THRESHOLD_PASSED;
                status &= ~LEVEL_DETECTOR_SPL_HIGH_THRESHOLD_PASSED;
            }
-      }
    
-      return DEVICE_OK;
-   }
+           // CLAP DETECTION HANDLING
+           if (this->inNoisyBlock && rms > this->maxRms) this->maxRms = rms;
    
-   /*
-    * Determines the instantaneous value of the sensor, in SI units, and returns it.
-    *
-    * @return The current value of the sensor.
-    */
-   float LevelDetectorSPL::getValue()
-   {
-       if(!activated){
-           // Register with our upstream component: on demand activated
-           upstream.connect(*this);
-           activated = true;
+           if (
+               (       // if start of clap
+                       !this->inNoisyBlock &&
+                       rms > LEVEL_DETECTOR_SPL_BEGIN_POSS_CLAP_RMS &&
+                       this->quietBlockCount >= LEVEL_DETECTOR_SPL_CLAP_MIN_QUIET_BLOCKS
+               ) ||
+               (       // or if continuing a clap
+                       this->inNoisyBlock &&
+                       rms > LEVEL_DETECTOR_SPL_CLAP_OVER_RMS
+               )) {
+               // noisy block
+               if (!this->inNoisyBlock)
+                   this->maxRms = rms;
+               this->quietBlockCount = 0;
+               this->noisyBlockCount += 1;
+               this->inNoisyBlock = true;
+   
+           } else {
+               // quiet block
+               if (    // if not too long, not too short, and loud enough
+                       this->noisyBlockCount <= LEVEL_DETECTOR_SPL_CLAP_MAX_LOUD_BLOCKS &&
+                       this->noisyBlockCount >= LEVEL_DETECTOR_SPL_CLAP_MIN_LOUD_BLOCKS &&
+                       this->maxRms >= LEVEL_DETECTOR_SPL_MIN_IN_CLAP_RMS
+                       ) {
+                   Event(id, LEVEL_DETECTOR_SPL_CLAP);
+               }
+               this->inNoisyBlock = false;
+               this->noisyBlockCount = 0;
+               this->quietBlockCount += 1;
+               this->maxRms = 0;
+           }
        }
    
-       return splToUnit(level);
+       return DEVICE_OK;
    }
    
-   /*
-    * Disable / turn off this level detector
-    *
-    */
+   float LevelDetectorSPL::getValue( int scale )
+   {
+       if( !this->upstream.isConnected() )
+           this->upstream.connect( *this );
+   
+       // Lock the resource, THEN bump the timout, so we get consistent on-time
+       if( this->bufferCount < LEVEL_DETECTOR_SPL_MIN_BUFFERS )
+           resourceLock.wait();
+   
+       this->timeout = system_timer_current_time();
+   
+       return splToUnit( this->level, scale );
+   }
+   
+   void LevelDetectorSPL::activateForEvents( bool state )
+   {
+       this->activated = state;
+       if( this->activated && !this->upstream.isConnected() ) {
+           this->upstream.connect( *this );
+       }
+   }
+   
    void LevelDetectorSPL::disable(){
        enabled = false;
    }
@@ -255,9 +335,11 @@ Program Listing for File LevelDetectorSPL.cpp
    }
    
    
-   float LevelDetectorSPL::splToUnit(float level)
+   float LevelDetectorSPL::splToUnit(float level, int queryUnit)
    {
-       if (unit == LEVEL_DETECTOR_SPL_8BIT)
+       queryUnit = queryUnit == -1 ? unit : queryUnit;
+   
+       if (queryUnit == LEVEL_DETECTOR_SPL_8BIT)
        {
            level = (level - LEVEL_DETECTOR_SPL_8BIT_000_POINT) * LEVEL_DETECTOR_SPL_8BIT_CONVERSION;
    
@@ -273,8 +355,10 @@ Program Listing for File LevelDetectorSPL.cpp
    }
    
    
-   float LevelDetectorSPL::unitToSpl(float level)
+   float LevelDetectorSPL::unitToSpl(float level, int queryUnit)
    {
+       queryUnit = queryUnit == -1 ? unit : queryUnit;
+   
        if (unit == LEVEL_DETECTOR_SPL_8BIT)
            level = LEVEL_DETECTOR_SPL_8BIT_000_POINT + level / LEVEL_DETECTOR_SPL_8BIT_CONVERSION;
    

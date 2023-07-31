@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: calculateFrequencyFromProgression(float, const Progression *, int)
+   :project: CODAL

@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Program Listing for File LevelDetectorSPL.cpp &#8212; CODAL Documentation v0.2.49-4-g300bcb4</title>
+    <title>Program Listing for File LevelDetectorSPL.cpp &#8212; CODAL Documentation v0.2.57-1-g3fa546f</title>
   
   
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -34,19 +34,20 @@
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'api/program_listing_file_libraries_codal-core_source_streams_LevelDetectorSPL.cpp';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -122,7 +123,7 @@
   
   
   
-    <p class="title logo__title">CODAL Documentation v0.2.49-4-g300bcb4</p>
+    <p class="title logo__title">CODAL Documentation v0.2.57-1-g3fa546f</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -284,7 +285,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="program-listing-for-file-leveldetectorspl-cpp">
-<span id="program-listing-file-libraries-codal-core-source-streams-leveldetectorspl-cpp"></span><h1>Program Listing for File LevelDetectorSPL.cpp<a class="headerlink" href="#program-listing-for-file-leveldetectorspl-cpp" title="Permalink to this heading">#</a></h1>
+<span id="program-listing-file-libraries-codal-core-source-streams-leveldetectorspl-cpp"></span><h1>Program Listing for File LevelDetectorSPL.cpp<a class="headerlink" href="#program-listing-for-file-leveldetectorspl-cpp" title="Permalink to this headline">#</a></h1>
 <p>↰ <a class="reference internal" href="file_libraries_codal-core_source_streams_LevelDetectorSPL.cpp.html#file-libraries-codal-core-source-streams-leveldetectorspl-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">libraries/codal-core/source/streams/LevelDetectorSPL.cpp</span></code>)</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
 <span class="cm">The MIT License (MIT)</span>
@@ -318,11 +319,11 @@ document.write(`
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;LevelDetectorSPL.h&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ErrorNo.h&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;StreamNormalizer.h&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CodalDmesg.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CodalAssert.h&quot;</span>
 
 <span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">codal</span><span class="p">;</span>
 
-<span class="n">LevelDetectorSPL</span><span class="o">::</span><span class="n">LevelDetectorSPL</span><span class="p">(</span><span class="n">DataSource</span><span class="w"> </span><span class="o">&amp;</span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">highThreshold</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">lowThreshold</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">gain</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">minValue</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">connectImmediately</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">upstream</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+<span class="n">LevelDetectorSPL</span><span class="o">::</span><span class="n">LevelDetectorSPL</span><span class="p">(</span><span class="n">DataSource</span><span class="w"> </span><span class="o">&amp;</span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">highThreshold</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">lowThreshold</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">gain</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">minValue</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">activateImmediately</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">upstream</span><span class="p">(</span><span class="n">source</span><span class="p">),</span><span class="w"> </span><span class="n">resourceLock</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
 <span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
@@ -334,19 +335,32 @@ document.write(`
 <span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">status</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">LEVEL_DETECTOR_SPL_INITIALISED</span><span class="p">;</span>
 <span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">unit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LEVEL_DETECTOR_SPL_DB</span><span class="p">;</span>
 <span class="w">    </span><span class="n">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">connectImmediately</span><span class="p">){</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">activateImmediately</span><span class="p">){</span>
 <span class="w">        </span><span class="n">upstream</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">);</span>
 <span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">activated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="k">else</span><span class="p">{</span>
 <span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">activated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">quietBlockCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">noisyBlockCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">inNoisyBlock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">maxRms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">bufferCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">int</span><span class="w"> </span><span class="n">LevelDetectorSPL</span><span class="o">::</span><span class="n">pullRequest</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">upstream</span><span class="p">.</span><span class="n">pull</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">// If we&#39;re not manually activated, not held active by a timeout, and we have no-one waiting on our data, bail.</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">activated</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="n">system_timer_current_time</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">timeout</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">CODAL_STREAM_IDLE_TIMEOUT_MS</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">resourceLock</span><span class="p">.</span><span class="n">getWaitCount</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">bufferCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_BUSY</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">upstream</span><span class="p">.</span><span class="n">pull</span><span class="p">();</span>
 <span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
 
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">upstream</span><span class="p">.</span><span class="n">getFormat</span><span class="p">();</span>
@@ -368,10 +382,9 @@ document.write(`
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">samples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">skip</span><span class="p">;</span>
 
 <span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">samples</span><span class="p">){</span>
-
-<span class="w">        </span><span class="c1">//ensure we use at least windowSize number of samples (128)</span>
+<span class="w">        </span><span class="c1">// ensure we use at least windowSize number of samples (128)</span>
 <span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">samples</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">windowSize</span><span class="p">)</span>
-<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
 
 <span class="w">        </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">end</span><span class="p">;</span>
 
@@ -387,26 +400,56 @@ document.write(`
 <span class="w">        </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">minVal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">32766</span><span class="p">;</span>
 <span class="w">        </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
 <span class="w">        </span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
-<span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">ptr</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">end</span><span class="p">){</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">ptr</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">end</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int32_t</span><span class="p">)</span><span class="w"> </span><span class="n">StreamNormalizer</span><span class="o">::</span><span class="n">readSample</span><span class="p">[</span><span class="n">format</span><span class="p">](</span><span class="n">ptr</span><span class="p">);</span>
-<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">maxVal</span><span class="p">)</span><span class="w"> </span><span class="n">maxVal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
-<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">minVal</span><span class="p">)</span><span class="w"> </span><span class="n">minVal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">maxVal</span><span class="p">)</span><span class="w"> </span><span class="n">maxVal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">minVal</span><span class="p">)</span><span class="w"> </span><span class="n">minVal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
 <span class="w">            </span><span class="n">ptr</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">skip</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
-
 <span class="w">        </span><span class="n">maxVal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">maxVal</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">minVal</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+
+<span class="w">        </span><span class="cm">/*******************************</span>
+<span class="cm">        *   GET RMS AMPLITUDE FOR CLAP DETECTION</span>
+<span class="cm">        ******************************/</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sumSquares</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">ptr</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">end</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">count</span><span class="o">++</span><span class="p">;</span>
+<span class="w">            </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int32_t</span><span class="p">)</span><span class="w"> </span><span class="n">StreamNormalizer</span><span class="o">::</span><span class="n">readSample</span><span class="p">[</span><span class="n">format</span><span class="p">](</span><span class="n">ptr</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">minVal</span><span class="p">;</span><span class="w">   </span><span class="c1">// need to sub minVal to avoid overflow</span>
+<span class="w">            </span><span class="n">sumSquares</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ptr</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">skip</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">rms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">sumSquares</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">count</span><span class="p">);</span>
 
 <span class="w">        </span><span class="cm">/*******************************</span>
 <span class="cm">        *   CALCULATE SPL</span>
 <span class="cm">        ******************************/</span>
-<span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">conv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="kt">float</span><span class="p">)</span><span class="n">maxVal</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">multiplier</span><span class="p">)</span><span class="o">/</span><span class="p">((</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">15</span><span class="p">)</span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">gain</span><span class="p">;</span>
-<span class="w">        </span><span class="n">conv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">log10</span><span class="p">(</span><span class="n">conv</span><span class="o">/</span><span class="n">pref</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">conv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="kt">float</span><span class="p">)</span><span class="w"> </span><span class="n">maxVal</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">multiplier</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">((</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">15</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">gain</span><span class="p">;</span>
+<span class="w">        </span><span class="n">conv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">log10</span><span class="p">(</span><span class="n">conv</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">pref</span><span class="p">);</span>
 
-<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">conv</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">minValue</span><span class="p">)</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">minValue</span><span class="p">;</span>
-<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">isfinite</span><span class="p">(</span><span class="n">conv</span><span class="p">))</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conv</span><span class="p">;</span>
-<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">minValue</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">conv</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">minValue</span><span class="p">)</span>
+<span class="w">            </span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">minValue</span><span class="p">;</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isfinite</span><span class="p">(</span><span class="n">conv</span><span class="p">))</span>
+<span class="w">            </span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conv</span><span class="p">;</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">            </span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">minValue</span><span class="p">;</span>
 
 <span class="w">        </span><span class="n">samples</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">windowSize</span><span class="p">;</span>
+<span class="w">        </span><span class="n">data</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">windowSize</span><span class="p">;</span>
+
+<span class="w">        </span><span class="cm">/*******************************</span>
+<span class="cm">        *   EMIT EVENTS</span>
+<span class="cm">        ******************************/</span>
+
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">bufferCount</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">LEVEL_DETECTOR_SPL_MIN_BUFFERS</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">bufferCount</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// Here to prevent this endlessly increasing</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">resourceLock</span><span class="p">.</span><span class="n">getWaitCount</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span>
+<span class="w">            </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">resourceLock</span><span class="p">.</span><span class="n">notifyAll</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// HIGH THRESHOLD</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="o">!</span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">LEVEL_DETECTOR_SPL_HIGH_THRESHOLD_PASSED</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">highThreshold</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="n">Event</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">LEVEL_THRESHOLD_HIGH</span><span class="p">);</span>
@@ -414,37 +457,75 @@ document.write(`
 <span class="w">            </span><span class="n">status</span><span class="w"> </span><span class="o">&amp;=</span><span class="w"> </span><span class="o">~</span><span class="n">LEVEL_DETECTOR_SPL_LOW_THRESHOLD_PASSED</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
 
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="o">!</span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">LEVEL_DETECTOR_SPL_LOW_THRESHOLD_PASSED</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">lowThreshold</span><span class="p">)</span>
+<span class="w">        </span><span class="c1">// LOW THRESHOLD</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="o">!</span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">LEVEL_DETECTOR_SPL_LOW_THRESHOLD_PASSED</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">lowThreshold</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="n">Event</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">LEVEL_THRESHOLD_LOW</span><span class="p">);</span>
 <span class="w">            </span><span class="n">status</span><span class="w"> </span><span class="o">|=</span><span class="w">  </span><span class="n">LEVEL_DETECTOR_SPL_LOW_THRESHOLD_PASSED</span><span class="p">;</span>
 <span class="w">            </span><span class="n">status</span><span class="w"> </span><span class="o">&amp;=</span><span class="w"> </span><span class="o">~</span><span class="n">LEVEL_DETECTOR_SPL_HIGH_THRESHOLD_PASSED</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
-<span class="w">   </span><span class="p">}</span>
 
-<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="w">        </span><span class="c1">// CLAP DETECTION HANDLING</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">inNoisyBlock</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">rms</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">maxRms</span><span class="p">)</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">maxRms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rms</span><span class="p">;</span>
 
-<span class="cm">/*</span>
-<span class="cm"> * Determines the instantaneous value of the sensor, in SI units, and returns it.</span>
-<span class="cm"> *</span>
-<span class="cm"> * @return The current value of the sensor.</span>
-<span class="cm"> */</span>
-<span class="kt">float</span><span class="w"> </span><span class="n">LevelDetectorSPL</span><span class="o">::</span><span class="n">getValue</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">activated</span><span class="p">){</span>
-<span class="w">        </span><span class="c1">// Register with our upstream component: on demand activated</span>
-<span class="w">        </span><span class="n">upstream</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">);</span>
-<span class="w">        </span><span class="n">activated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span>
+<span class="w">            </span><span class="p">(</span><span class="w">       </span><span class="c1">// if start of clap</span>
+<span class="w">                    </span><span class="o">!</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">inNoisyBlock</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">                    </span><span class="n">rms</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">LEVEL_DETECTOR_SPL_BEGIN_POSS_CLAP_RMS</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">                    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">quietBlockCount</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">LEVEL_DETECTOR_SPL_CLAP_MIN_QUIET_BLOCKS</span>
+<span class="w">            </span><span class="p">)</span><span class="w"> </span><span class="o">||</span>
+<span class="w">            </span><span class="p">(</span><span class="w">       </span><span class="c1">// or if continuing a clap</span>
+<span class="w">                    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">inNoisyBlock</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">                    </span><span class="n">rms</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">LEVEL_DETECTOR_SPL_CLAP_OVER_RMS</span>
+<span class="w">            </span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// noisy block</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">inNoisyBlock</span><span class="p">)</span>
+<span class="w">                </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">maxRms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rms</span><span class="p">;</span>
+<span class="w">            </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">quietBlockCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">            </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">noisyBlockCount</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">            </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">inNoisyBlock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// quiet block</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w">    </span><span class="c1">// if not too long, not too short, and loud enough</span>
+<span class="w">                    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">noisyBlockCount</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">LEVEL_DETECTOR_SPL_CLAP_MAX_LOUD_BLOCKS</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">                    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">noisyBlockCount</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">LEVEL_DETECTOR_SPL_CLAP_MIN_LOUD_BLOCKS</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">                    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">maxRms</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">LEVEL_DETECTOR_SPL_MIN_IN_CLAP_RMS</span>
+<span class="w">                    </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">Event</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">LEVEL_DETECTOR_SPL_CLAP</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">inNoisyBlock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">            </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">noisyBlockCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">            </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">quietBlockCount</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">            </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">maxRms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">splToUnit</span><span class="p">(</span><span class="n">level</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="cm">/*</span>
-<span class="cm"> * Disable / turn off this level detector</span>
-<span class="cm"> *</span>
-<span class="cm"> */</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">LevelDetectorSPL</span><span class="o">::</span><span class="n">getValue</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">scale</span><span class="w"> </span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">upstream</span><span class="p">.</span><span class="n">isConnected</span><span class="p">()</span><span class="w"> </span><span class="p">)</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">upstream</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="w"> </span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Lock the resource, THEN bump the timout, so we get consistent on-time</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">bufferCount</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">LEVEL_DETECTOR_SPL_MIN_BUFFERS</span><span class="w"> </span><span class="p">)</span>
+<span class="w">        </span><span class="n">resourceLock</span><span class="p">.</span><span class="n">wait</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">system_timer_current_time</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">splToUnit</span><span class="p">(</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">level</span><span class="p">,</span><span class="w"> </span><span class="n">scale</span><span class="w"> </span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">LevelDetectorSPL</span><span class="o">::</span><span class="n">activateForEvents</span><span class="p">(</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">activated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">state</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">activated</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">upstream</span><span class="p">.</span><span class="n">isConnected</span><span class="p">()</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">upstream</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="w"> </span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
 <span class="kt">void</span><span class="w"> </span><span class="n">LevelDetectorSPL</span><span class="o">::</span><span class="n">disable</span><span class="p">(){</span>
 <span class="w">    </span><span class="n">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
 <span class="p">}</span>
@@ -531,9 +612,11 @@ document.write(`
 <span class="p">}</span>
 
 
-<span class="kt">float</span><span class="w"> </span><span class="n">LevelDetectorSPL</span><span class="o">::</span><span class="n">splToUnit</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">level</span><span class="p">)</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">LevelDetectorSPL</span><span class="o">::</span><span class="n">splToUnit</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">level</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">queryUnit</span><span class="p">)</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">unit</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LEVEL_DETECTOR_SPL_8BIT</span><span class="p">)</span>
+<span class="w">    </span><span class="n">queryUnit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">queryUnit</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">unit</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">queryUnit</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">queryUnit</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LEVEL_DETECTOR_SPL_8BIT</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">level</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">LEVEL_DETECTOR_SPL_8BIT_000_POINT</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">LEVEL_DETECTOR_SPL_8BIT_CONVERSION</span><span class="p">;</span>
 
@@ -549,8 +632,10 @@ document.write(`
 <span class="p">}</span>
 
 
-<span class="kt">float</span><span class="w"> </span><span class="n">LevelDetectorSPL</span><span class="o">::</span><span class="n">unitToSpl</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">level</span><span class="p">)</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">LevelDetectorSPL</span><span class="o">::</span><span class="n">unitToSpl</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">level</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">queryUnit</span><span class="p">)</span>
 <span class="p">{</span>
+<span class="w">    </span><span class="n">queryUnit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">queryUnit</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">unit</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">queryUnit</span><span class="p">;</span>
+
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">unit</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LEVEL_DETECTOR_SPL_8BIT</span><span class="p">)</span>
 <span class="w">        </span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LEVEL_DETECTOR_SPL_8BIT_000_POINT</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">LEVEL_DETECTOR_SPL_8BIT_CONVERSION</span><span class="p">;</span>
 
@@ -571,9 +656,15 @@ document.write(`
               
               
                 <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -583,7 +674,7 @@ document.write(`
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -613,7 +704,7 @@ By John Vidler
     
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -622,8 +713,8 @@ By John Vidler
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

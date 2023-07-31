@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: _wholeTone
+   :project: CODAL

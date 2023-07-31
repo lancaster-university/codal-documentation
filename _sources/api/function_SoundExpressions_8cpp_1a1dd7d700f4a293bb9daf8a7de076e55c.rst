@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: giggle("giggle")
+   :project: CODAL

@@ -11,3 +11,4 @@ Define Documentation
 
 
 .. doxygendefine:: microbit_panic_DIVBASE
+   :project: CODAL

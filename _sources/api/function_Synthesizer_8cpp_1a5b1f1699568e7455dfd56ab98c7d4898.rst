@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: begin_playback(void *)
+   :project: CODAL

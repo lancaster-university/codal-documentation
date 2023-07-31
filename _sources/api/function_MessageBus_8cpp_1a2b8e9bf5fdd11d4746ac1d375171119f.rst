@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: codal::allocateNotifyEvent()
+   :project: CODAL

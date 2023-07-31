@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: _pentatonicScale
+   :project: CODAL

@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: codal::sleepQueue
+   :project: CODAL

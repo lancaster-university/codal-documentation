@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: rhs
+   :project: CODAL

@@ -11,3 +11,4 @@ Define Documentation
 
 
 .. doxygendefine:: ST7735_VMCTR1
+   :project: CODAL

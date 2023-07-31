@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: codal::microbit_LEDMap_rowPins
+   :project: CODAL

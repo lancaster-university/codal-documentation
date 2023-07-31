@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: codal::fiber_flags
+   :project: CODAL

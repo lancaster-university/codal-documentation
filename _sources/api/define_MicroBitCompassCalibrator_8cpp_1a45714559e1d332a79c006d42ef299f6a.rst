@@ -11,3 +11,4 @@ Define Documentation
 
 
 .. doxygendefine:: CALIBRATION_INCREMENT
+   :project: CODAL

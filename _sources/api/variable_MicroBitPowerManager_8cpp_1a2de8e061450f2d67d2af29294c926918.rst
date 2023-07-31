@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: UIPM_I2C_NOP
+   :project: CODAL

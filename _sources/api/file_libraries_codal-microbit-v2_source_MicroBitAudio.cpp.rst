@@ -8,6 +8,7 @@ File MicroBitAudio.cpp
 
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
+
 .. contents:: Contents
    :local:
    :backlinks: none
@@ -28,8 +29,6 @@ Definition (``libraries/codal-microbit-v2/source/MicroBitAudio.cpp``)
 Includes
 --------
 
-
-- ``CodalDmesg.h``
 
 - ``MicroBit.h``
 

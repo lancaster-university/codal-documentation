@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: codal::currentFiber
+   :project: CODAL

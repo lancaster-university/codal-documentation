@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: getPullModeFronPinMode(PinMode)
+   :project: CODAL

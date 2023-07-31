@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: MICROBIT_RADIO_POWER_LEVEL
+   :project: CODAL

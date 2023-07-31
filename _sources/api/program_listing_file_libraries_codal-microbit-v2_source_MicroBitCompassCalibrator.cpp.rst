@@ -130,7 +130,8 @@ Program Listing for File MicroBitCompassCalibrator.cpp
            // will place this point on the surface of the sphere.
            float s = (radius / d) - 1;
    
-           scale = max(scale, s);
+           if (scale < s)
+               scale = s;
    
            // next, determine the scale effect this has on each of our components.
            float dx = (data[i].x - centre.x); 

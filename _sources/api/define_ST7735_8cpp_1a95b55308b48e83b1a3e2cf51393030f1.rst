@@ -11,3 +11,4 @@ Define Documentation
 
 
 .. doxygendefine:: ST7735_PWCTR4
+   :project: CODAL

@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: codal::messageBus
+   :project: CODAL

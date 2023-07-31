@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: display_irq(uint16_t)
+   :project: CODAL

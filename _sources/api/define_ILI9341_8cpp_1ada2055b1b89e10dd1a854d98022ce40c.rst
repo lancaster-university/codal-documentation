@@ -11,3 +11,4 @@ Define Documentation
 
 
 .. doxygendefine:: ILI9341_RDSELFDIAG
+   :project: CODAL

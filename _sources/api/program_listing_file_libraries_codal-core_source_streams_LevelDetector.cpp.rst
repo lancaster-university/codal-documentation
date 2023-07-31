@@ -57,12 +57,15 @@ Program Listing for File LevelDetector.cpp
        this->activated = false;
        if(connectImmediately){
            upstream.connect(*this);
-           activated = true;
        }
    }
    
    int LevelDetector::pullRequest()
    {
+       if( this->timeout - system_timer_current_time() > CODAL_STREAM_IDLE_TIMEOUT_MS && !activated ) {
+           return DEVICE_BUSY;
+       }
+   
        ManagedBuffer b = upstream.pull();
    
        int16_t *data = (int16_t *) &b[0];
@@ -109,7 +112,7 @@ Program Listing for File LevelDetector.cpp
            data++;
        }
    
-       return DEVICE_OK;
+       return DEVICE_BUSY;
    }
    
    /*
@@ -119,13 +122,18 @@ Program Listing for File LevelDetector.cpp
     */
    int LevelDetector::getValue()
    {
-       if(!activated){
-           // Register with our upstream component: on demand activated
-           DMESG("activating LD");
-           upstream.connect(*this);
-           activated = true;
-       }
+       if( !this->upstream.isConnected() )
+           this->upstream.connect( *this );
+       this->timeout = system_timer_current_time() + CODAL_STREAM_IDLE_TIMEOUT_MS;
+       target_wait( 100 );
        return level;
+   }
+   
+   void LevelDetector::activateForEvents( bool state )
+   {
+       this->activated = state;
+       if( this->activated && !upstream.isConnected() )
+           upstream.connect(*this);
    }
    
    int LevelDetector::setLowThreshold(int value)

@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: _majorTriad
+   :project: CODAL

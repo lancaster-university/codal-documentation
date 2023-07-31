@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: happy("happy")
+   :project: CODAL

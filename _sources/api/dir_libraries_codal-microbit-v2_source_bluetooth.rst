@@ -9,6 +9,7 @@ Directory bluetooth
 
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
+
 *Directory path:* ``libraries/codal-microbit-v2/source/bluetooth``
 
 
@@ -30,5 +31,6 @@ Files
 - :ref:`file_libraries_codal-microbit-v2_source_bluetooth_MicroBitPartialFlashingService.cpp`
 - :ref:`file_libraries_codal-microbit-v2_source_bluetooth_MicroBitTemperatureService.cpp`
 - :ref:`file_libraries_codal-microbit-v2_source_bluetooth_MicroBitUARTService.cpp`
+- :ref:`file_libraries_codal-microbit-v2_source_bluetooth_MicroBitUtilityService.cpp`
 
 

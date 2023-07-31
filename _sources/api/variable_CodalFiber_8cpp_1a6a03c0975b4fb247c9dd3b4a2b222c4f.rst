@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: codal::idleFiber
+   :project: CODAL

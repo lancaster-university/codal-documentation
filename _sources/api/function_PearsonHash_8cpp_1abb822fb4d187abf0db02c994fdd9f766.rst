@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: eightBitHash(const char *)
+   :project: CODAL

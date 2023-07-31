@@ -145,7 +145,7 @@ Program Listing for File MessageBus.cpp
        if (queueLength >= MESSAGE_BUS_LISTENER_MAX_QUEUE_DEPTH)
        {
            // Note that this can lead to strange lockups, where we await an event that never arrives.
-           DMESG("evt %d/%d: overflow!", evt.source, evt.value);
+           //DMESG("evt %d/%d: overflow!", evt.source, evt.value);
            return;
        }
    

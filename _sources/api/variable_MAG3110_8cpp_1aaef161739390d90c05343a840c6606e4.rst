@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: MAG3110SampleRate
+   :project: CODAL

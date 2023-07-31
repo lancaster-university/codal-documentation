@@ -97,6 +97,7 @@ Program Listing for File Timer.cpp
    {
        // Register ourselves as the defualt timer - most recent timer wins.
        system_timer = this;
+       
    
        this->ccPeriodChannel = ccPeriodChannel;
        this->ccEventChannel = ccEventChannel;

@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: greyScaleTimings
+   :project: CODAL

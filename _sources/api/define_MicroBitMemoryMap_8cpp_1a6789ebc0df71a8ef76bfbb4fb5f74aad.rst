@@ -11,3 +11,4 @@ Define Documentation
 
 
 .. doxygendefine:: MAX_STRING_LENGTH
+   :project: CODAL

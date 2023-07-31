@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: hello("hello")
+   :project: CODAL

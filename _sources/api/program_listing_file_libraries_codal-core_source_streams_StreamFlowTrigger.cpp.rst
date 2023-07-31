@@ -44,14 +44,19 @@ Program Listing for File StreamFlowTrigger.cpp
    {
        (*this->eventHandler)( TRIGGER_REQUEST );
        if( this->downStream != NULL )
-           this->downStream->pullRequest();
+           return this->downStream->pullRequest();
        
-       return 0;
+       return DEVICE_BUSY;
    }
    
    void StreamFlowTrigger::connect( DataSink &sink )
    {
        this->downStream = &sink;
+   }
+   
+   bool StreamFlowTrigger::isConnected()
+   {
+       return this->downStream != NULL;
    }
    
    void StreamFlowTrigger::disconnect()

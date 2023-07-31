@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: asciiKeyMap(ascii_keymap, 128)
+   :project: CODAL

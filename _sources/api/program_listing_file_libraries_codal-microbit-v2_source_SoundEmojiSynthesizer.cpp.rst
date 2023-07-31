@@ -70,6 +70,11 @@ Program Listing for File SoundEmojiSynthesizer.cpp
        this->downStream = &sink;
    }
    
+   bool SoundEmojiSynthesizer::isConnected()
+   {
+       return this->downStream != NULL;
+   }
+   
    int SoundEmojiSynthesizer::getFormat()
    {
        return DATASTREAM_FORMAT_16BIT_UNSIGNED;

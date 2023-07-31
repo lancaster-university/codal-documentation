@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: microbit_device_instance
+   :project: CODAL

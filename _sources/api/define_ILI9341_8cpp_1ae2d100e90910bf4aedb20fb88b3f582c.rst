@@ -11,3 +11,4 @@ Define Documentation
 
 
 .. doxygendefine:: ILI9341_VMCTR2
+   :project: CODAL

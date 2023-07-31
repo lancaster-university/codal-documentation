@@ -122,3 +122,8 @@ Program Listing for File Mixer.cpp
    {
        this->downStream = &sink;
    }
+   
+   bool Mixer::isConnected()
+   {
+       return this->downStream != NULL;
+   }

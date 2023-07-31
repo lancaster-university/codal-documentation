@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: MMA8653SampleRate
+   :project: CODAL

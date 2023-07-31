@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Getting Started with CODAL &#8212; CODAL Documentation v0.2.49-4-g300bcb4</title>
+    <title>Getting Started with CODAL &#8212; CODAL Documentation v0.2.57-1-g3fa546f</title>
   
   
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -34,12 +34,13 @@
     <link rel="stylesheet" type="text/css" href="_static/bootstrap-treeview/bootstrap-treeview.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script src="_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'getting-started';</script>
@@ -48,7 +49,7 @@
     <link rel="next" title="The uBit Object" href="ubit/index.html" />
     <link rel="prev" title="CODAL Documentation" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -124,7 +125,7 @@
   
   
   
-    <p class="title logo__title">CODAL Documentation v0.2.49-4-g300bcb4</p>
+    <p class="title logo__title">CODAL Documentation v0.2.57-1-g3fa546f</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -312,8 +313,8 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="getting-started-with-codal">
-<h1><a class="toc-backref" href="#id7" role="doc-backlink">Getting Started with CODAL</a><a class="headerlink" href="#getting-started-with-codal" title="Permalink to this heading">#</a></h1>
-<nav class="contents" id="contents">
+<h1><a class="toc-backref" href="#id7">Getting Started with CODAL</a><a class="headerlink" href="#getting-started-with-codal" title="Permalink to this headline">#</a></h1>
+<div class="contents topic" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#getting-started-with-codal" id="id7">Getting Started with CODAL</a></p>
@@ -341,11 +342,11 @@ document.write(`
 </ul>
 </li>
 </ul>
-</nav>
+</div>
 <p>To start developing in C++ with CODAL and the Micro:bit you’ll first need to ensure that you have followed the steps in <a class="reference internal" href="guides/prerequisites.html"><span class="doc">Installation - Tools</span></a> for
 your operating system, and that you have a new project set up by following the steps in <a class="reference internal" href="guides/codal-projects.html"><span class="doc">CODAL Projects</span></a></p>
 <section id="what-is-codal">
-<h2><a class="toc-backref" href="#id8" role="doc-backlink">What is CODAL?</a><a class="headerlink" href="#what-is-codal" title="Permalink to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id8">What is CODAL?</a><a class="headerlink" href="#what-is-codal" title="Permalink to this headline">#</a></h2>
 <p>CODAL is the <cite>Component Oriented Device Abstraction Layer</cite> and is the set of controls through which you drive the micro:bit v2 devices (and friends!).
 It sits in the slightly fuzzy zone between an Application Programming Interface (API) and an Operating System (OS) and shares some functions with both.</p>
 <p>Traditional operating systems, such as those you would find on your compter, tablet, phone, and other devices run the show and present a nicely isolated
@@ -356,7 +357,7 @@ hiding everything from them (except through special methods).</p>
 time.
 Often these would then use OS methods to actually perform any useful task (although purely application-level APIs do exist in abundance!)</p>
 <section id="what-is-a-device-abstraction">
-<h3><a class="toc-backref" href="#id9" role="doc-backlink">What is a device abstraction?</a><a class="headerlink" href="#what-is-a-device-abstraction" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id9">What is a device abstraction?</a><a class="headerlink" href="#what-is-a-device-abstraction" title="Permalink to this headline">#</a></h3>
 <p>Rather than having to write code for each and every specific device, it is often useful to hide the complexity of the actual device specifics
 by wrapping or ‘layering’ it under a much more simple interface.
 CODAL does this for most (if not all) of its devices, allowing programs written for one target, such as the micro:bit v2, also execute on other
@@ -385,7 +386,7 @@ as the one we use for communication with a computer through the KL27 (See <span 
 line-based serial link in the Field Testing library for NMEA uBlox GPS devices (See <span class="xref std std-doc">/libraries/codal-field-testing.rst</span>).</p>
 </section>
 <section id="what-is-a-component">
-<h3><a class="toc-backref" href="#id10" role="doc-backlink">What is a “Component”?</a><a class="headerlink" href="#what-is-a-component" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id10">What is a “Component”?</a><a class="headerlink" href="#what-is-a-component" title="Permalink to this headline">#</a></h3>
 <p>Components in CODAL devide up specific blocks of functionality, and these informally take on one or more of the following three aspects:</p>
 <dl class="simple">
 <dt>Device Drivers</dt><dd><p>Whereby the function is that of configuring, running and responding to events for a specific piece of hardware.</p>
@@ -410,7 +411,7 @@ as splitting or mixing audio.</p>
 </ul>
 </section>
 <section id="c-for-the-micro-bit">
-<h3><a class="toc-backref" href="#id11" role="doc-backlink">C++ for the micro:bit</a><a class="headerlink" href="#c-for-the-micro-bit" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id11">C++ for the micro:bit</a><a class="headerlink" href="#c-for-the-micro-bit" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><dl class="simple">
 <dt>The ubit Object as an API</dt><dd><ul>
@@ -430,7 +431,7 @@ as splitting or mixing audio.</p>
 </li>
 </ul>
 <section id="concurrency">
-<h4><a class="toc-backref" href="#id12" role="doc-backlink">Concurrency</a><a class="headerlink" href="#concurrency" title="Permalink to this heading">#</a></h4>
+<h4><a class="toc-backref" href="#id12">Concurrency</a><a class="headerlink" href="#concurrency" title="Permalink to this headline">#</a></h4>
 <p>It is not uncommon to want to write programs that can do more than one thing at a time. For example, it takes quite a long time to scroll a message over the LED
 matrix, so what if you want your program to do something else while this is happening?</p>
 <p>Programs that do more than one thing at a time are called concurrent programs.</p>
@@ -450,12 +451,12 @@ All the functions that are blocking are listed as such in their documentation. Y
 </ul>
 </section>
 <section id="events">
-<h4><a class="toc-backref" href="#id13" role="doc-backlink">Events</a><a class="headerlink" href="#events" title="Permalink to this heading">#</a></h4>
+<h4><a class="toc-backref" href="#id13">Events</a><a class="headerlink" href="#events" title="Permalink to this headline">#</a></h4>
 <p>Computer programs execute sequentially - one line after another, following the logic of the program you have written. Sometimes though, we want to be able to determine
 when something has happened, and write some code to decide what should happen in that case. For example, maybe you want to know when a button has been pressed, when
 your micro:bit has been shaken, or when some data has been sent to you over the micro:bit radio. For these sorts of cases, we create a MicroBitEvent.</p>
 <section id="creating-events">
-<h5><a class="toc-backref" href="#id14" role="doc-backlink">Creating Events</a><a class="headerlink" href="#creating-events" title="Permalink to this heading">#</a></h5>
+<h5><a class="toc-backref" href="#id14">Creating Events</a><a class="headerlink" href="#creating-events" title="Permalink to this headline">#</a></h5>
 <p>Many components will raise events when interesting things occur. For example, ‘MicroBitAccelerometer’ will raise events to indicate that the micro:bit has be been shaken,
 or is in freefall and ‘MicroBitButton’ will send events on a range of button up, down, click and hold events. Programmers are also free to send their own events whenever
 they feel it would be useful. MicroBitEvents are very simple, and consist of only two numbers:</p>
@@ -474,7 +475,7 @@ button is clicked.</p>
 table of the reserved source IDs.</p>
 </section>
 <section id="detecting-events">
-<h5><a class="toc-backref" href="#id15" role="doc-backlink">Detecting Events</a><a class="headerlink" href="#detecting-events" title="Permalink to this heading">#</a></h5>
+<h5><a class="toc-backref" href="#id15">Detecting Events</a><a class="headerlink" href="#detecting-events" title="Permalink to this headline">#</a></h5>
 <p>The micro:bit runtime has a component called the MicroBitMessageBus, and its job is remember which events your program is interested in, and to deliver MicroBitEvents to
 your program as they occur.</p>
 <p>To find out when an event happens, you need to create a function in your program, then tell the message bus which event you want to attach this function to. This is known
@@ -523,7 +524,7 @@ as writing an event handler.</p>
 </section>
 </section>
 <section id="build-tools">
-<h3><a class="toc-backref" href="#id16" role="doc-backlink">Build Tools</a><a class="headerlink" href="#build-tools" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id16">Build Tools</a><a class="headerlink" href="#build-tools" title="Permalink to this headline">#</a></h3>
 <p>Under ‘the hood’, CODAL uses <a class="reference external" href="https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/downloads">arm-gcc</a> to compile source code into the binary we write to the board, and this compiler suite is driven by <cite>GNU make_</cite> from makefiles
 created by <a class="reference external" href="https://cmake.org/">CMake</a>.
 However, the developer interface to this (and many other functions) is <cite>build.py</cite>, which is a <a class="reference external" href="https://www.python.org/">Python</a> script designed to launch CMake and other tools for you, greatly
@@ -623,7 +624,7 @@ available currently in <cite>build.py</cite>, and will just require some slight 
 </ul>
 </section>
 <section id="projects-and-guides">
-<h3><a class="toc-backref" href="#id17" role="doc-backlink">Projects and Guides</a><a class="headerlink" href="#projects-and-guides" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id17">Projects and Guides</a><a class="headerlink" href="#projects-and-guides" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>“Disco Lights” -&gt; audio pipeline and display</p></li>
 <li><p>“Hot Potato” -&gt; accelerometer, timers and audio</p></li>
@@ -632,7 +633,7 @@ available currently in <cite>build.py</cite>, and will just require some slight 
 </section>
 </section>
 <section id="holding-zone-temp">
-<h2><a class="toc-backref" href="#id18" role="doc-backlink">Holding Zone (Temp)</a><a class="headerlink" href="#holding-zone-temp" title="Permalink to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id18">Holding Zone (Temp)</a><a class="headerlink" href="#holding-zone-temp" title="Permalink to this headline">#</a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MicroBit.h&quot;</span>
 
 <span class="c1">// The Micro:bit control object</span>
@@ -661,7 +662,10 @@ available currently in <cite>build.py</cite>, and will just require some slight 
               
               
                 <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="index.html"
@@ -681,7 +685,10 @@ available currently in <cite>build.py</cite>, and will just require some slight 
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -721,7 +728,7 @@ available currently in <cite>build.py</cite>, and will just require some slight 
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -751,7 +758,7 @@ By John Vidler
     
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -760,8 +767,8 @@ By John Vidler
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

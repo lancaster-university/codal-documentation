@@ -36,9 +36,10 @@ Program Listing for File DataStream.cpp
    
    #include "DataStream.h"
    #include "CodalComponent.h"
+   #include "ManagedBuffer.h"
+   #include "Event.h"
    #include "CodalFiber.h"
    #include "ErrorNo.h"
-   #include "CodalDmesg.h"
    
    using namespace codal;
    
@@ -79,75 +80,54 @@ Program Listing for File DataStream.cpp
        return DEVICE_NOT_SUPPORTED;
    }
    
-   
    DataStream::DataStream(DataSource &upstream)
    {
-       this->bufferCount = 0;
-       this->bufferLength = 0;
-       this->preferredBufferSize = 0;
        this->pullRequestEventCode = 0;
-       this->spaceAvailableEventCode = allocateNotifyEvent();
        this->isBlocking = true;
-       this->writers = 0;
+       this->missedBuffers = CODAL_DATASTREAM_HIGH_WATER_MARK;
+       this->downstreamReturn = DEVICE_OK;
+       this->flowEventCode = 0;
    
        this->downStream = NULL;
        this->upStream = &upstream;
-   
    }
    
    DataStream::~DataStream()
    {
    }
    
-   int DataStream::get(int position)
+   uint16_t DataStream::emitFlowEvents( uint16_t id )
    {
-       for (int i = 0; i < bufferCount; i++)
-       {
-           if (position < stream[i].length())
-               return stream[i].getByte(position);
-   
-           position = position - stream[i].length();
+       if( this->flowEventCode == 0 ) {
+           if( id == 0 )
+               this->flowEventCode = allocateNotifyEvent();
+           else
+               this->flowEventCode = id;
        }
-   
-       return DEVICE_INVALID_PARAMETER;
-   }
-   
-   int DataStream::set(int position, uint8_t value)
-   {
-       for (int i = 0; i < bufferCount; i++)
-       {
-           if (position < stream[i].length())
-           {
-               stream[i].setByte(position, value);
-               return DEVICE_OK;
-           }
-   
-           position = position - stream[i].length();
-       }
-   
-       return DEVICE_INVALID_PARAMETER;
-   }
-   
-   int DataStream::length()
-   {
-       return this->bufferLength;
+       return this->flowEventCode;
    }
    
    bool DataStream::isReadOnly()
    {
-       bool r = true;
+       if( this->nextBuffer.length() != 0 )
+           return this->nextBuffer.isReadOnly();
+       return true;
+   }
    
-       for (int i=0; i<bufferCount;i++)
-           if (stream[i].isReadOnly() == false)
-               r = false;
-   
-       return r;
+   bool DataStream::isFlowing()
+   {
+       return this->missedBuffers < CODAL_DATASTREAM_HIGH_WATER_MARK;
    }
    
    void DataStream::connect(DataSink &sink)
    {
        this->downStream = &sink;
        this->upStream->connect(*this);
+   }
+   
+   bool DataStream::isConnected()
+   {
+       return this->downStream != NULL;
    }
    
    int DataStream::getFormat()
@@ -160,114 +140,75 @@ Program Listing for File DataStream.cpp
        this->downStream = NULL;
    }
    
-   int DataStream::getPreferredBufferSize()
-   {
-       return preferredBufferSize;
-   }
-   
-   void DataStream::setPreferredBufferSize(int size)
-   {
-       this->preferredBufferSize = size;
-   }
-   
    void DataStream::setBlocking(bool isBlocking)
    {
        this->isBlocking = isBlocking;
    
        // If this is the first time async mode has been used on this stream, allocate the necessary resources.
-       if (!isBlocking && this->pullRequestEventCode == 0)
+       if (!this->isBlocking && this->pullRequestEventCode == 0)
        {
            this->pullRequestEventCode = allocateNotifyEvent();
    
            if(EventModel::defaultEventBus)
-               EventModel::defaultEventBus->listen(DEVICE_ID_NOTIFY, pullRequestEventCode, this, &DataStream::onDeferredPullRequest);
+               EventModel::defaultEventBus->listen(DEVICE_ID_NOTIFY, this->pullRequestEventCode, this, &DataStream::onDeferredPullRequest);
        }
    }
    
    ManagedBuffer DataStream::pull()
    {
-       ManagedBuffer out = stream[0];
-   
-       //
-       // A simplistic FIFO for now. Copy cost is actually pretty low because ManagedBuffer is a managed type,
-       // so we're just moving a few references here.
-       //
-       if (bufferCount > 0)
-       {
-           for (int i = 0; i < bufferCount-1; i++)
-               stream[i] = stream[i + 1];
-   
-           stream[bufferCount-1] = ManagedBuffer();
-   
-           bufferCount--;
-           bufferLength = bufferLength - out.length();
-       }
-   
-       Event(DEVICE_ID_NOTIFY_ONE, spaceAvailableEventCode);
-   
-       return out;
+       // 1, as we will normally be at '1' waiting buffer here if we're in-sync with the source
+       if( this->missedBuffers > 1 )
+           Event evt( DEVICE_ID_NOTIFY, this->flowEventCode );
+       
+       this->missedBuffers = 0;
+       // Are we running in sync (blocking) mode?
+       if( this->isBlocking )
+           return this->upStream->pull();
+       
+       ManagedBuffer tmp = this->nextBuffer; // Deep copy!
+       this->nextBuffer = ManagedBuffer();
+       return tmp;
    }
    
    void DataStream::onDeferredPullRequest(Event)
    {
+       this->downstreamReturn = DEVICE_OK; // The default state
+   
        if (downStream != NULL)
-           downStream->pullRequest();
+           this->downstreamReturn = downStream->pullRequest();
    }
    
    bool DataStream::canPull(int size)
    {
-       if(bufferCount + writers >= DATASTREAM_MAXIMUM_BUFFERS)
-           return false;
-   
-       if(preferredBufferSize > 0 && (bufferLength + size > preferredBufferSize))
-           return false;
-   
-       return true;
-   }
-   
-   bool DataStream::full()
-   {
-       return !canPull();
+       // We only buffer '1' ahead at most, so if we have one already, refuse more
+       return this->nextBuffer.length() != 0;
    }
    
    int DataStream::pullRequest()
    {
-       // If we're defined as non-blocking and no space is available, then there's nothing we can do.
-       if (full() && this->isBlocking == false)
-           return DEVICE_NO_RESOURCES;
+       // _Technically_ not a missed buffer... yet. But we can only check later.
+       if( this->missedBuffers < CODAL_DATASTREAM_HIGH_WATER_MARK )
+           if( ++this->missedBuffers == CODAL_DATASTREAM_HIGH_WATER_MARK )
+               if( this->flowEventCode != 0 )
+                   Event evt( DEVICE_ID_NOTIFY, this->flowEventCode );
    
-       // As there is either space available in the buffer or we want to block, pull the upstream buffer to release resources there.
-       ManagedBuffer buffer = upStream->pull();
-   
-       // If pull is called multiple times in a row (yielding nothing after the first time)
-       // several streams might be woken up, despite the fact that there is no space for them.
-       do {
-           // If the buffer is full or we're behind another fiber, then wait for space to become available.
-           if (full() || writers)
-               fiber_wake_on_event(DEVICE_ID_NOTIFY, spaceAvailableEventCode);
-   
-           if (full() || writers)
-           {
-               writers++;
-               schedule();
-               writers--;
+       // Are we running in async (non-blocking) mode?
+       if( !this->isBlocking ) {
+           if( this->nextBuffer.length() != 0 && this->downstreamReturn != DEVICE_OK ) {
+               Event evt( DEVICE_ID_NOTIFY, this->pullRequestEventCode );
+               return this->downstreamReturn;
            }
-       } while (bufferCount >= DATASTREAM_MAXIMUM_BUFFERS);
    
-       stream[bufferCount] = buffer;
-       bufferLength = bufferLength + buffer.length();
-       bufferCount++;
+           this->nextBuffer = this->upStream->pull();
    
-       if (downStream != NULL)
-       {
-           if (this->isBlocking)
-               downStream->pullRequest();
-           else
-               Event(DEVICE_ID_NOTIFY, pullRequestEventCode);
-           
+           Event evt( DEVICE_ID_NOTIFY, this->pullRequestEventCode );
+           return this->downstreamReturn;
        }
    
-       return DEVICE_OK;
+       if( this->downStream != NULL )
+           return this->downStream->pullRequest();
+   
+       return DEVICE_BUSY;
    }
    
    float DataStream::getSampleRate() {

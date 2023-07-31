@@ -11,3 +11,4 @@ Define Documentation
 
 
 .. doxygendefine:: microbit_panic_CLEARSCANS
+   :project: CODAL

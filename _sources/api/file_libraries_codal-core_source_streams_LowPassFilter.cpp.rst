@@ -8,6 +8,7 @@ File LowPassFilter.cpp
 
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
+
 .. contents:: Contents
    :local:
    :backlinks: none
@@ -28,6 +29,8 @@ Definition (``libraries/codal-core/source/streams/LowPassFilter.cpp``)
 Includes
 --------
 
+
+- ``CodalDmesg.h``
 
 - ``LowPassFilter.h``
 

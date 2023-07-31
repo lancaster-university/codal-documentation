@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: _majorScale
+   :project: CODAL

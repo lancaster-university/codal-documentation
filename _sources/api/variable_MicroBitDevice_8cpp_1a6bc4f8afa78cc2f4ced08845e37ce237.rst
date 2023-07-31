@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: codal::panic_face
+   :project: CODAL

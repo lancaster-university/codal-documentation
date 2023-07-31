@@ -11,3 +11,4 @@ Define Documentation
 
 
 .. doxygendefine:: CLAMP
+   :project: CODAL

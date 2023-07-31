@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: old
+   :project: CODAL

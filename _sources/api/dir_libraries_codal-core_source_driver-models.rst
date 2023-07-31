@@ -9,6 +9,7 @@ Directory driver-models
 
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
+
 *Directory path:* ``libraries/codal-core/source/driver-models``
 
 

@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: ascii_keymap
+   :project: CODAL

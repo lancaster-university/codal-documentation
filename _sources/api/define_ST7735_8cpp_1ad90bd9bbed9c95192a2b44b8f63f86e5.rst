@@ -11,3 +11,4 @@ Define Documentation
 
 
 .. doxygendefine:: ST7735_GMCTRP1
+   :project: CODAL

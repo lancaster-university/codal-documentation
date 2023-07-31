@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: slide("slide")
+   :project: CODAL

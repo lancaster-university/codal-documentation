@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: cycleScale
+   :project: CODAL

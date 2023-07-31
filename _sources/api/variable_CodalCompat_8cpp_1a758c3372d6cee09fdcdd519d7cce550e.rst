@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: random_value
+   :project: CODAL

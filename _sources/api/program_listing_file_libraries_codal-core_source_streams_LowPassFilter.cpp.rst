@@ -11,11 +11,13 @@ Program Listing for File LowPassFilter.cpp
 .. code-block:: cpp
 
    #include "LowPassFilter.h"
+   #include "CodalDmesg.h"
    
    using namespace codal;
    
    LowPassFilter::LowPassFilter( DataSource &source, float beta, bool deepCopy) : EffectFilter( source, deepCopy )
    {
+       this->lpf_value = 1.0;
        setBeta(beta);
    }
    
@@ -25,6 +27,9 @@ Program Listing for File LowPassFilter.cpp
    
    void LowPassFilter::applyEffect(ManagedBuffer inputBuffer, ManagedBuffer outputBuffer, int format)
    {
+       if( inputBuffer.length() < 1 )
+           return;
+       
        int bytesPerSample = DATASTREAM_FORMAT_BYTES_PER_SAMPLE(format);
        int sampleCount = inputBuffer.length() / bytesPerSample;
        uint8_t *in = inputBuffer.getBytes();
@@ -32,8 +37,9 @@ Program Listing for File LowPassFilter.cpp
    
        for( int i=0; i<sampleCount; i++)
        {
-           float value = StreamNormalizer::readSample[format]( in );
+           int value = StreamNormalizer::readSample[format]( in );
            lpf_value = lpf_value - (lpf_beta * (lpf_value - (float)value));
+           //lpf_value = value & 0xFE; // Strips the last few bits...
            StreamNormalizer::writeSample[format]( out, (int)lpf_value );
    
            in += bytesPerSample; 

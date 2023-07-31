@@ -11,3 +11,4 @@ Define Documentation
 
 
 .. doxygendefine:: ARRAY_LEN
+   :project: CODAL

@@ -11,3 +11,4 @@ Typedef Documentation
 
 
 .. doxygentypedef:: codal::microbit_LEDMapFnRCtoXY
+   :project: CODAL

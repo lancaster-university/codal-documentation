@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: seq_apostrophe
+   :project: CODAL

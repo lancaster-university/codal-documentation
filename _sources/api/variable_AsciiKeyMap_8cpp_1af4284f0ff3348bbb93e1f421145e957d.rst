@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: seq_curly_right
+   :project: CODAL

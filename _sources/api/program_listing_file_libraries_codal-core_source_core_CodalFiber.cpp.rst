@@ -38,6 +38,7 @@ Program Listing for File CodalFiber.cpp
    #include "CodalFiber.h"
    #include "Timer.h"
    #include "codal_target_hal.h"
+   #include "CodalDmesg.h"
    
    #define INITIAL_STACK_DEPTH (fiber_initial_stack_base() - 0x04)
    
@@ -828,13 +829,14 @@ Program Listing for File CodalFiber.cpp
            fiber_flags &= ~DEVICE_SCHEDULER_DEEPSLEEP;
    }
    
-   FiberLock::FiberLock( int initial )
+   FiberLock::FiberLock( int initial, FiberLockMode mode )
    {
-       queue = NULL;
-       locked = 0-initial;
+       this->queue = NULL;
+       this->locked = initial;
+       this->resetTo = initial;
+       this->mode = mode;
    }
    
-   FiberLock::FiberLock() : FiberLock( 0 ) {}
    
    REAL_TIME_FUNC
    void FiberLock::wait()
@@ -844,10 +846,12 @@ Program Listing for File CodalFiber.cpp
            return;
    
        target_disable_irq();
-       int l = ++locked;
+       int l = --locked;
        target_enable_irq();
    
-       if (l > 1)
+       //DMESGF( "%d, wait(%d)", (uint32_t)this & 0xFFFF, locked );
+   
+       if (l < 0)
        {
            // wait() is a blocking call, so if we're in a fork on block context,
            // it's time to spawn a new fiber...
@@ -881,43 +885,35 @@ Program Listing for File CodalFiber.cpp
    
    void FiberLock::notify()
    {
+       int l = locked++;
+       //DMESGF( "%d, notify(%d)", (uint32_t)this & 0xFFFF, locked );
        Fiber *f = queue;
-   
        if (f)
        {
            dequeue_fiber(f);
            queue_fiber(f, &runQueue);
        }
-   
-       // This allows the lock to reach into the negative, to allow limited access to an
-       // access constrained resource
-       locked--;
    }
    
-   void FiberLock::notifyAll( int reset )
+   void FiberLock::notifyAll()
    {
+       //DMESGF( "%d, notifyAll(%d)", (uint32_t)this & 0xFFFF, locked );
        Fiber *f = queue;
-   
        while (f)
        {
-           dequeue_fiber(f);
-           queue_fiber(f, &runQueue);
+           this->notify();
            f = queue;
        }
    
-       locked = reset;
+       if( this->mode == FiberLockMode::MUTEX )
+           this->locked = this->resetTo;
+   
+       //DMESGF( "%d, { notifyAll(%d) }", (uint32_t)this & 0xFFFF, locked );
    }
    
    int FiberLock::getWaitCount()
    {
-       Fiber *f = queue;
-       int count = 0;
-   
-       while (f)
-       {
-           count++;
-           f = f->qnext;
-       }
-   
-       return count;
+       if( locked > -1 )
+           return 0;
+       return 0 - locked;
    }

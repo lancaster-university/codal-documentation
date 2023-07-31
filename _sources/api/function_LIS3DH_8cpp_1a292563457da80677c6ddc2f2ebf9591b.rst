@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: CREATE_KEY_VALUE_TABLE(accelerometerPeriod, accelerometerPeriodData)
+   :project: CODAL

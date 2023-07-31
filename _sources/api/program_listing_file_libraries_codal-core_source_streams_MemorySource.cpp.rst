@@ -55,6 +55,10 @@ Program Listing for File MemorySource.cpp
        this->downstream = &sink;
    }
    
+   bool MemorySource::isConnected()
+   {
+       return this->downstream != NULL;
+   }
    
    int
    MemorySource::getFormat()

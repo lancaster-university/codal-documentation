@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: soaring("soaring")
+   :project: CODAL

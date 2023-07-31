@@ -8,6 +8,7 @@ File LevelDetectorSPL.cpp
 
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
+
 .. contents:: Contents
    :local:
    :backlinks: none
@@ -29,11 +30,11 @@ Includes
 --------
 
 
+- ``CodalAssert.h``
+
 - ``CodalCompat.h``
 
 - ``CodalConfig.h``
-
-- ``CodalDmesg.h``
 
 - ``ErrorNo.h``
 

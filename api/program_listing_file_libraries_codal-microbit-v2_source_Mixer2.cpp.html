@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Program Listing for File Mixer2.cpp &#8212; CODAL Documentation v0.2.49-4-g300bcb4</title>
+    <title>Program Listing for File Mixer2.cpp &#8212; CODAL Documentation v0.2.57-1-g3fa546f</title>
   
   
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -34,19 +34,20 @@
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'api/program_listing_file_libraries_codal-microbit-v2_source_Mixer2.cpp';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -122,7 +123,7 @@
   
   
   
-    <p class="title logo__title">CODAL Documentation v0.2.49-4-g300bcb4</p>
+    <p class="title logo__title">CODAL Documentation v0.2.57-1-g3fa546f</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -284,7 +285,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="program-listing-for-file-mixer2-cpp">
-<span id="program-listing-file-libraries-codal-microbit-v2-source-mixer2-cpp"></span><h1>Program Listing for File Mixer2.cpp<a class="headerlink" href="#program-listing-for-file-mixer2-cpp" title="Permalink to this heading">#</a></h1>
+<span id="program-listing-file-libraries-codal-microbit-v2-source-mixer2-cpp"></span><h1>Program Listing for File Mixer2.cpp<a class="headerlink" href="#program-listing-for-file-mixer2-cpp" title="Permalink to this headline">#</a></h1>
 <p>↰ <a class="reference internal" href="file_libraries_codal-microbit-v2_source_Mixer2.cpp.html#file-libraries-codal-microbit-v2-source-mixer2-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">libraries/codal-microbit-v2/source/Mixer2.cpp</span></code>)</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
 <span class="cm">The MIT License (MIT)</span>
@@ -427,6 +428,10 @@ document.write(`
 <span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mix</span><span class="p">[</span><span class="n">CONFIG_MIXER_BUFFER_SIZE</span><span class="o">/</span><span class="n">bytesPerSampleOut</span><span class="p">];</span>
 <span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">inputFormat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ch</span><span class="o">-&gt;</span><span class="n">format</span><span class="p">;</span>
 
+<span class="w">        </span><span class="c1">// Check if we need to recalculate skip after a channel rate change</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">ch</span><span class="o">-&gt;</span><span class="n">skip</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0.0f</span><span class="w"> </span><span class="p">)</span>
+<span class="w">            </span><span class="n">ch</span><span class="o">-&gt;</span><span class="n">skip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ch</span><span class="o">-&gt;</span><span class="n">rate</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">outputRate</span><span class="p">;</span>
+
 <span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">out</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">end</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="c1">// precalculate the maximum number of samples the we can process with the current buffer allocations.</span>
@@ -440,8 +445,10 @@ document.write(`
 
 <span class="w">            </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ch</span><span class="o">-&gt;</span><span class="n">in</span><span class="p">;</span>
 
-<span class="w">            </span><span class="k">while</span><span class="p">(</span><span class="n">len</span><span class="o">--</span><span class="p">)</span>
+<span class="w">            </span><span class="k">while</span><span class="p">(</span><span class="n">len</span><span class="p">)</span>
 <span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ch</span><span class="o">-&gt;</span><span class="n">in</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="n">ch</span><span class="o">-&gt;</span><span class="n">position</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ch</span><span class="o">-&gt;</span><span class="n">bytesPerSample</span><span class="p">);</span>
+
 <span class="w">                </span><span class="kt">float</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamNormalizer</span><span class="o">::</span><span class="n">readSample</span><span class="p">[</span><span class="n">inputFormat</span><span class="p">](</span><span class="n">d</span><span class="p">);</span>
 <span class="w">                </span><span class="n">v</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">ch</span><span class="o">-&gt;</span><span class="n">offset</span><span class="p">;</span>
 <span class="w">                </span><span class="n">v</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">ch</span><span class="o">-&gt;</span><span class="n">gain</span><span class="p">;</span>
@@ -449,14 +456,14 @@ document.write(`
 <span class="w">                </span><span class="o">*</span><span class="n">out</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
 
 <span class="w">                </span><span class="n">ch</span><span class="o">-&gt;</span><span class="n">position</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">ch</span><span class="o">-&gt;</span><span class="n">skip</span><span class="p">;</span>
-<span class="w">                </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ch</span><span class="o">-&gt;</span><span class="n">in</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="n">ch</span><span class="o">-&gt;</span><span class="n">position</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ch</span><span class="o">-&gt;</span><span class="n">bytesPerSample</span><span class="p">);</span>
 
 <span class="w">                </span><span class="n">out</span><span class="o">++</span><span class="p">;</span>
+<span class="w">                </span><span class="n">len</span><span class="o">--</span><span class="p">;</span>
 <span class="w">            </span><span class="p">}</span>
 
 <span class="w">            </span><span class="c1">// Check if we&#39;ve completed an input buffer. If so, pull down another if available.</span>
 <span class="w">            </span><span class="c1">// if no buffer is available, then move on to the next channel.</span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">inLen</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">outLen</span><span class="p">)</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">inLen</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">outLen</span><span class="p">)</span>
 <span class="w">            </span><span class="p">{</span>
 <span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ch</span><span class="o">-&gt;</span><span class="n">pullRequests</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
 <span class="w">                    </span><span class="k">break</span><span class="p">;</span>
@@ -547,6 +554,11 @@ document.write(`
 <span class="p">{</span>
 <span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">downStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">sink</span><span class="p">;</span>
 <span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">downStream</span><span class="o">-&gt;</span><span class="n">pullRequest</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span><span class="w"> </span><span class="n">Mixer2</span><span class="o">::</span><span class="n">isConnected</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">downStream</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">int</span><span class="w"> </span><span class="n">Mixer2</span><span class="o">::</span><span class="n">getFormat</span><span class="p">()</span>
@@ -650,9 +662,15 @@ document.write(`
               
               
                 <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -662,7 +680,7 @@ document.write(`
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -692,7 +710,7 @@ By John Vidler
     
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -701,8 +719,8 @@ By John Vidler
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

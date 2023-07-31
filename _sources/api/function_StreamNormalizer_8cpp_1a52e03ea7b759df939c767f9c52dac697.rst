@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: read_sample_6(uint8_t *)
+   :project: CODAL

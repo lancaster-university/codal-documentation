@@ -11,3 +11,4 @@ Define Documentation
 
 
 .. doxygendefine:: ST7735_FRMCTR2
+   :project: CODAL

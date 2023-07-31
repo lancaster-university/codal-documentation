@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Disco Lights &#8212; CODAL Documentation v0.2.49-4-g300bcb4</title>
+    <title>Disco Lights &#8212; CODAL Documentation v0.2.57-1-g3fa546f</title>
   
   
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -34,12 +34,13 @@
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'projects/disco-lights';</script>
@@ -48,7 +49,7 @@
     <link rel="next" title="The Complete CODAL API" href="../codal-api.html" />
     <link rel="prev" title="Projects" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -124,7 +125,7 @@
   
   
   
-    <p class="title logo__title">CODAL Documentation v0.2.49-4-g300bcb4</p>
+    <p class="title logo__title">CODAL Documentation v0.2.57-1-g3fa546f</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -299,7 +300,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="disco-lights">
-<h1>Disco Lights<a class="headerlink" href="#disco-lights" title="Permalink to this heading">#</a></h1>
+<h1>Disco Lights<a class="headerlink" href="#disco-lights" title="Permalink to this headline">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This project is suitable for beginners to both CODAL and C++ development</p>
@@ -309,7 +310,7 @@ document.write(`
 does mean that the effect can flicker for short sounds.
 Instead of simply reproducing this directly, here we will include a <code class="docutils literal notranslate"><span class="pre">sustain</span></code> parameter which we can gently decrease to give us a smooth fade away effect.</p>
 <section id="step-1-initial-setup">
-<h2>Step 1. Initial Setup<a class="headerlink" href="#step-1-initial-setup" title="Permalink to this heading">#</a></h2>
+<h2>Step 1. Initial Setup<a class="headerlink" href="#step-1-initial-setup" title="Permalink to this headline">#</a></h2>
 <p>Create a new project as described in <a class="reference internal" href="../guides/codal-projects.html"><span class="doc">CODAL Projects</span></a> and ensure that you can build a <code class="docutils literal notranslate"><span class="pre">MICROBIT.hex</span></code> file without changing any code.
 If you can build a <code class="docutils literal notranslate"><span class="pre">MICROBIT.hex</span></code>, we should be left with a project structure all set up, and if we open <code class="docutils literal notranslate"><span class="pre">source/main.cpp</span></code> in <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a>,
 we should have the bare-bones of our new program.:</p>
@@ -334,7 +335,7 @@ we should have the bare-bones of our new program.:</p>
 </div>
 </section>
 <section id="step-2-turning-on-the-screen">
-<h2>Step 2. Turning on the screen<a class="headerlink" href="#step-2-turning-on-the-screen" title="Permalink to this heading">#</a></h2>
+<h2>Step 2. Turning on the screen<a class="headerlink" href="#step-2-turning-on-the-screen" title="Permalink to this headline">#</a></h2>
 <p>The main way we talk to the Micro:bit hardware is through the <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">codal::MicroBit</span></code> object.
 This object automatically configures and creates interfaces to individual devices and systems on the board (generally on-demand,
 so only features we actually use are set up).</p>
@@ -352,10 +353,10 @@ for the object you’re working with.</p>
 </div>
 </section>
 <section id="step-3-reading-from-the-microphone">
-<h2>Step 3. Reading from the Microphone<a class="headerlink" href="#step-3-reading-from-the-microphone" title="Permalink to this heading">#</a></h2>
+<h2>Step 3. Reading from the Microphone<a class="headerlink" href="#step-3-reading-from-the-microphone" title="Permalink to this headline">#</a></h2>
 </section>
 <section id="step-4-adding-the-fade-effect">
-<h2>Step 4. Adding the Fade Effect<a class="headerlink" href="#step-4-adding-the-fade-effect" title="Permalink to this heading">#</a></h2>
+<h2>Step 4. Adding the Fade Effect<a class="headerlink" href="#step-4-adding-the-fade-effect" title="Permalink to this headline">#</a></h2>
 <p>The full application code:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MicroBit.h&quot;</span>
 
@@ -421,7 +422,10 @@ for the object you’re working with.</p>
               
               
                 <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="index.html"
@@ -441,7 +445,10 @@ for the object you’re working with.</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -468,7 +475,7 @@ for the object you’re working with.</p>
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -498,7 +505,7 @@ By John Vidler
     
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -507,8 +514,8 @@ By John Vidler
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -14,19 +14,21 @@ Program Listing for File StreamRecording.cpp
    #include "ErrorNo.h"
    #include "DataStream.h"
    #include "ManagedBuffer.h"
-   #include "CodalDmesg.h"
    #include "MessageBus.h"
    
    using namespace codal;
    
-   StreamRecording::StreamRecording( DataSource &source ) : upStream( source )
+   StreamRecording::StreamRecording( DataSource &source, uint32_t maxLength ) : upStream( source )
    {   
-       this->bufferLength = 0;
-       this->lastBuffer = 0;
-       this->readWriteHead = 0;
+       this->state = REC_STATE_STOPPED;
+       this->bufferChain = NULL;
+       this->lastBuffer = NULL;
+       this->readHead = NULL;
+       this->maxBufferLenth = maxLength;
+       this->totalBufferLength = 0;
    
        this->downStream = NULL;
-       source.connect( *this );
+       upStream.connect( *this );
    }
    
    StreamRecording::~StreamRecording()
@@ -36,7 +38,7 @@ Program Listing for File StreamRecording.cpp
    
    bool StreamRecording::canPull()
    {
-       return this->lastBuffer > this->readWriteHead;
+       return this->totalBufferLength < this->maxBufferLenth;
    }
    
    ManagedBuffer StreamRecording::pull()
@@ -46,16 +48,16 @@ Program Listing for File StreamRecording.cpp
            return ManagedBuffer();
        
        // Do we have data to send?
-       if( this->readWriteHead >= this->lastBuffer ) {
+       if( this->readHead == NULL ) {
            stop();
            return ManagedBuffer();
        }
        
-       // Grab the next block
-       ManagedBuffer out = this->buffer[this->readWriteHead++];
-       this->bufferLength -= out.length();
+       // Grab the next block and move the r/w head
+       ManagedBuffer out = this->readHead->buffer;
+       this->readHead = this->readHead->next;
    
-       // Ping the downstream that we're good to go
+       // Prod the downstream that we're good to go
        if( downStream != NULL )
            downStream->pullRequest();
    
@@ -65,7 +67,7 @@ Program Listing for File StreamRecording.cpp
    
    int StreamRecording::length()
    {
-       return this->bufferLength;
+       return this->totalBufferLength;
    }
    
    float StreamRecording::duration( unsigned int sampleRate )
@@ -74,38 +76,41 @@ Program Listing for File StreamRecording.cpp
    }
    
    bool StreamRecording::isFull() {
-       return this->lastBuffer < REC_MAX_BUFFERS;
-   }
-   
-   void StreamRecording::dumpState()
-   {
-       DMESG(
-           "TapeDeck { bufferCount = %d/%d, RWHead = %d }",
-           this->lastBuffer,
-           REC_MAX_BUFFERS,
-           this->readWriteHead
-       );
+       return this->totalBufferLength >= this->maxBufferLenth;
    }
    
    int StreamRecording::pullRequest()
    {
-       ManagedBuffer data = this->upStream.pull();
-   
        // Are we recording?
        if( this->state != REC_STATE_RECORDING )
-           return DEVICE_OK;
-       
+           return DEVICE_BUSY;
+   
+       ManagedBuffer data = this->upStream.pull();
+   
        // Are we getting empty buffers (probably because we're out of RAM!)
-       if( data.length() == 0 )
-           return DEVICE_NO_RESOURCES;
+       if( data == ManagedBuffer() || data.length() <= 1 ) {
+           return DEVICE_OK;
+       }
    
        // Can we record any more?
-       if( this->readWriteHead < REC_MAX_BUFFERS )
+       if( !isFull() )
        {
-           // Ok, so pull and retain, updating counts
-           this->buffer[this->readWriteHead++] = data;
-           this->lastBuffer = this->readWriteHead - 1;
-           this->bufferLength += data.length();
+           StreamRecording_Buffer * block = new StreamRecording_Buffer();
+           if( block == NULL )
+               return DEVICE_NO_RESOURCES;
+           block->buffer = data;
+           block->next = NULL;
+   
+           // Are we initialising stuff? If so, hook the front of the chain up too...
+           if( this->lastBuffer == NULL ) {
+               this->bufferChain = block;
+           } else
+               this->lastBuffer->next = block;
+           
+           this->lastBuffer = block;
+           
+           this->totalBufferLength += this->lastBuffer->buffer.length();
+           
            return DEVICE_OK;
        }
        
@@ -116,6 +121,11 @@ Program Listing for File StreamRecording.cpp
    void StreamRecording::connect( DataSink &sink )
    {
        this->downStream = &sink;
+   }
+   
+   bool StreamRecording::isConnected()
+   {
+       return this->downStream != NULL;
    }
    
    void StreamRecording::disconnect()
@@ -133,7 +143,7 @@ Program Listing for File StreamRecording.cpp
        return this->upStream.setFormat( format );
    }
    
-   bool StreamRecording::record()
+   bool StreamRecording::recordAsync()
    {
        // Duplicate check from within erase(), but here for safety in case of later code edits...
        if( this->state != REC_STATE_STOPPED )
@@ -144,9 +154,15 @@ Program Listing for File StreamRecording.cpp
        bool changed = this->state != REC_STATE_RECORDING;
    
        this->state = REC_STATE_RECORDING;
-       this->upStream.pull(); // Kickstart the upstream??
    
        return changed;
+   }
+   
+   void StreamRecording::record()
+   {
+       recordAsync();
+       while( isRecording() )
+           fiber_sleep(5);
    }
    
    void StreamRecording::erase()
@@ -154,41 +170,68 @@ Program Listing for File StreamRecording.cpp
        if( this->state != REC_STATE_STOPPED )
            this->stop();
        
-       for( int i=0; i<REC_MAX_BUFFERS; i++ )
-           this->buffer[i] = ManagedBuffer();
-       this->lastBuffer = 0;
-       this->readWriteHead = 0;
+       // Run down the chain, freeing as we go
+       StreamRecording_Buffer * node = this->bufferChain;
+       while( node != NULL ) {
+           StreamRecording_Buffer * next = node->next;
+           delete node;
+           node = next;
+       }
+       this->totalBufferLength = 0;
+       this->lastBuffer = NULL;
+       this->readHead = NULL;
+       this->bufferChain = NULL;
    }
    
-   bool StreamRecording::play()
+   bool StreamRecording::playAsync()
    {
        if( this->state != REC_STATE_STOPPED )
            this->stop();
        bool changed = this->state != REC_STATE_PLAYING;
        
        this->state = REC_STATE_PLAYING;
-       this->downStream->pullRequest();
+       if( this->downStream != NULL )
+           this->downStream->pullRequest();
    
        return changed;
    }
    
-   void StreamRecording::stop()
+   void StreamRecording::play()
    {
+       playAsync();
+       while( isPlaying() )
+           fiber_sleep(5);
+   }
+   
+   bool StreamRecording::stop()
+   {
+       bool changed = this->state != REC_STATE_STOPPED;
+   
        this->state = REC_STATE_STOPPED;
-       this->readWriteHead = 0; // Snap to the start
+       this->readHead = this->bufferChain; // Snap to the start
+   
+       return changed;
    }
    
    bool StreamRecording::isPlaying()
    {
+       fiber_sleep(0);
        return this->state == REC_STATE_PLAYING;
    }
    
    bool StreamRecording::isRecording()
    {
+       fiber_sleep(0);
        return this->state == REC_STATE_RECORDING;
    }
    
    bool StreamRecording::isStopped()
    {
+       fiber_sleep(0);
        return this->state == REC_STATE_STOPPED;
+   }
+   
+   float StreamRecording::getSampleRate()
+   {
+       return this->upStream.getSampleRate();
    }

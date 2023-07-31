@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: yawn("yawn")
+   :project: CODAL

@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: pendolino3
+   :project: CODAL

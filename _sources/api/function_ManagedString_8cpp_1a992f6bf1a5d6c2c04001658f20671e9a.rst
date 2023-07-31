@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: ManagedString(lhs, rhs)
+   :project: CODAL

@@ -11,3 +11,4 @@ Define Documentation
 
 
 .. doxygendefine:: EMPTY_DATA
+   :project: CODAL

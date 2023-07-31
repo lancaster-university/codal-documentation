@@ -11,3 +11,4 @@ Define Documentation
 
 
 .. doxygendefine:: ST7735_RAMRD
+   :project: CODAL

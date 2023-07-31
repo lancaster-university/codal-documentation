@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: codal::microbit_LEDMap_RCtoX(int, int)
+   :project: CODAL

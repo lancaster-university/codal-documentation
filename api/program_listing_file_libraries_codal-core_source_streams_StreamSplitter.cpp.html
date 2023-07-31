@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Program Listing for File StreamSplitter.cpp &#8212; CODAL Documentation v0.2.49-4-g300bcb4</title>
+    <title>Program Listing for File StreamSplitter.cpp &#8212; CODAL Documentation v0.2.57-1-g3fa546f</title>
   
   
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -34,19 +34,20 @@
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'api/program_listing_file_libraries_codal-core_source_streams_StreamSplitter.cpp';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -122,7 +123,7 @@
   
   
   
-    <p class="title logo__title">CODAL Documentation v0.2.49-4-g300bcb4</p>
+    <p class="title logo__title">CODAL Documentation v0.2.57-1-g3fa546f</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -284,7 +285,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="program-listing-for-file-streamsplitter-cpp">
-<span id="program-listing-file-libraries-codal-core-source-streams-streamsplitter-cpp"></span><h1>Program Listing for File StreamSplitter.cpp<a class="headerlink" href="#program-listing-for-file-streamsplitter-cpp" title="Permalink to this heading">#</a></h1>
+<span id="program-listing-file-libraries-codal-core-source-streams-streamsplitter-cpp"></span><h1>Program Listing for File StreamSplitter.cpp<a class="headerlink" href="#program-listing-for-file-streamsplitter-cpp" title="Permalink to this headline">#</a></h1>
 <p>↰ <a class="reference internal" href="file_libraries_codal-core_source_streams_StreamSplitter.cpp.html#file-libraries-codal-core-source-streams-streamsplitter-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">libraries/codal-core/source/streams/StreamSplitter.cpp</span></code>)</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
 <span class="cm">The MIT License (MIT)</span>
@@ -314,10 +315,7 @@ document.write(`
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;StreamSplitter.h&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;StreamNormalizer.h&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ErrorNo.h&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CodalDmesg.h&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Event.h&quot;</span>
-
-
 
 <span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">codal</span><span class="p">;</span>
 
@@ -326,6 +324,8 @@ document.write(`
 <span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">sampleRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DATASTREAM_SAMPLE_RATE_UNKNOWN</span><span class="p">;</span>
 <span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">parent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parent</span><span class="p">;</span>
 <span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">output</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">pullAttempts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">sentBuffers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="n">SplitterChannel</span><span class="o">::~</span><span class="n">SplitterChannel</span><span class="p">()</span>
@@ -334,22 +334,24 @@ document.write(`
 <span class="p">}</span>
 
 <span class="kt">int</span><span class="w"> </span><span class="n">SplitterChannel</span><span class="o">::</span><span class="n">pullRequest</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">pullAttempts</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">pullAttempts</span><span class="o">++</span><span class="p">;</span>
 <span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">output</span><span class="o">-&gt;</span><span class="n">pullRequest</span><span class="p">();</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_BUSY</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">SplitterChannel</span><span class="o">::</span><span class="n">pull</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="n">pullAttempts</span><span class="o">--</span><span class="p">;</span>
-<span class="w">    </span><span class="c1">// Shortcut!</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">sampleRate</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DATASTREAM_SAMPLE_RATE_UNKNOWN</span><span class="w"> </span><span class="p">)</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">parent</span><span class="o">-&gt;</span><span class="n">getBuffer</span><span class="p">();</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">pullAttempts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">sentBuffers</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">inData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parent</span><span class="o">-&gt;</span><span class="n">getBuffer</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Shortcuts - we can&#39;t fabricate samples, so just pass on what we can if we don&#39;t know or can&#39;t keep up.</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">sampleRate</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DATASTREAM_SAMPLE_RATE_UNKNOWN</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">sampleRate</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">parent</span><span class="o">-&gt;</span><span class="n">upstream</span><span class="p">.</span><span class="n">getSampleRate</span><span class="p">()</span><span class="w"> </span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">inData</span><span class="p">;</span>
 
 <span class="w">    </span><span class="c1">// Going the long way around - drop any extra samples...</span>
 <span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">inRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parent</span><span class="o">-&gt;</span><span class="n">upstream</span><span class="p">.</span><span class="n">getSampleRate</span><span class="p">();</span>
-<span class="w">    </span><span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">inData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parent</span><span class="o">-&gt;</span><span class="n">getBuffer</span><span class="p">();</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">inFmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parent</span><span class="o">-&gt;</span><span class="n">upstream</span><span class="p">.</span><span class="n">getFormat</span><span class="p">();</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">bytesPerSample</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DATASTREAM_FORMAT_BYTES_PER_SAMPLE</span><span class="p">(</span><span class="w"> </span><span class="n">inFmt</span><span class="w"> </span><span class="p">);</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">inSamples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inData</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">bytesPerSample</span><span class="p">;</span>
@@ -359,7 +361,8 @@ document.write(`
 
 <span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">inPtr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">inData</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
 <span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="n">outPtr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">outData</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">inSamples</span><span class="o">/</span><span class="n">step</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="w"> </span><span class="n">outPtr</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="o">&amp;</span><span class="n">outData</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">outData</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamNormalizer</span><span class="o">::</span><span class="n">readSample</span><span class="p">[</span><span class="n">inFmt</span><span class="p">](</span><span class="n">inPtr</span><span class="p">);</span>
 <span class="w">        </span><span class="n">inPtr</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">bytesPerSample</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">step</span><span class="p">;</span>
 
@@ -373,14 +376,17 @@ document.write(`
 <span class="kt">void</span><span class="w"> </span><span class="n">SplitterChannel</span><span class="o">::</span><span class="n">connect</span><span class="p">(</span><span class="n">DataSink</span><span class="w"> </span><span class="o">&amp;</span><span class="n">sink</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">sink</span><span class="p">;</span>
-<span class="w">    </span><span class="n">parent</span><span class="o">-&gt;</span><span class="n">numberActiveChannels</span><span class="o">++</span><span class="p">;</span>
 <span class="w">    </span><span class="n">Event</span><span class="w"> </span><span class="nf">e</span><span class="p">(</span><span class="w"> </span><span class="n">parent</span><span class="o">-&gt;</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">SPLITTER_CHANNEL_CONNECT</span><span class="w"> </span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span><span class="w"> </span><span class="n">SplitterChannel</span><span class="o">::</span><span class="n">isConnected</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">output</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">void</span><span class="w"> </span><span class="n">SplitterChannel</span><span class="o">::</span><span class="n">disconnect</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
-<span class="w">    </span><span class="n">parent</span><span class="o">-&gt;</span><span class="n">numberActiveChannels</span><span class="o">--</span><span class="p">;</span>
 <span class="w">    </span><span class="n">Event</span><span class="w"> </span><span class="nf">e</span><span class="p">(</span><span class="w"> </span><span class="n">parent</span><span class="o">-&gt;</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">SPLITTER_CHANNEL_DISCONNECT</span><span class="w"> </span><span class="p">);</span>
 <span class="p">}</span>
 
@@ -403,7 +409,7 @@ document.write(`
 
 <span class="kt">float</span><span class="w"> </span><span class="n">SplitterChannel</span><span class="o">::</span><span class="n">requestSampleRate</span><span class="p">(</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">sampleRate</span><span class="w"> </span><span class="p">)</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="n">sampleRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sampleRate</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">sampleRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sampleRate</span><span class="p">;</span>
 
 <span class="w">    </span><span class="c1">// Do we need to request a higher rate upstream?</span>
 <span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">parent</span><span class="o">-&gt;</span><span class="n">upstream</span><span class="p">.</span><span class="n">getSampleRate</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">sampleRate</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -424,12 +430,18 @@ document.write(`
 <span class="n">StreamSplitter</span><span class="o">::</span><span class="n">StreamSplitter</span><span class="p">(</span><span class="n">DataSource</span><span class="w"> </span><span class="o">&amp;</span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">upstream</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
-<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">numberChannels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">channels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">activeChannels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">isActive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+
 <span class="w">    </span><span class="c1">// init array to NULL.</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">CONFIG_MAX_CHANNELS</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <span class="w">        </span><span class="n">outputChannels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
 
-<span class="w">    </span><span class="n">source</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">);</span>
+<span class="w">    </span><span class="n">upstream</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">__cycle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">//this-&gt;status |= DEVICE_COMPONENT_STATUS_SYSTEM_TICK;</span>
 <span class="p">}</span>
 
 <span class="n">StreamSplitter</span><span class="o">::~</span><span class="n">StreamSplitter</span><span class="p">()</span>
@@ -439,29 +451,38 @@ document.write(`
 
 <span class="n">ManagedBuffer</span><span class="w"> </span><span class="n">StreamSplitter</span><span class="o">::</span><span class="n">getBuffer</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="n">processed</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">lastBuffer</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ManagedBuffer</span><span class="p">()</span><span class="w"> </span><span class="p">)</span>
+<span class="w">        </span><span class="n">lastBuffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">upstream</span><span class="p">.</span><span class="n">pull</span><span class="p">();</span>
+
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">lastBuffer</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">int</span><span class="w"> </span><span class="n">StreamSplitter</span><span class="o">::</span><span class="n">pullRequest</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">processed</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">numberChannels</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">    </span><span class="n">activeChannels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// For each downstream channel that exists in array outputChannels - make a pullRequest</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">CONFIG_MAX_CHANNELS</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">processed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">        </span><span class="n">lastBuffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">upstream</span><span class="p">.</span><span class="n">pull</span><span class="p">();</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">outputChannels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">outputChannels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">pullRequest</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">activeChannels</span><span class="o">++</span><span class="p">;</span>
 
-<span class="w">        </span><span class="c1">// For each downstream channel that exists in array outputChannels - make a pullRequest</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">CONFIG_MAX_CHANNELS</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">outputChannels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
-<span class="w">                </span><span class="n">outputChannels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">pullRequest</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Unfortunately we have to drop a buffer, otherwise we might stall the pipeline!</span>
-<span class="w">        </span><span class="n">upstream</span><span class="p">.</span><span class="n">pull</span><span class="p">();</span>
-<span class="w">        </span><span class="n">processed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CONFIG_MAX_CHANNELS</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">isActive</span><span class="w"> </span><span class="p">)</span>
+<span class="w">                    </span><span class="n">Event</span><span class="w"> </span><span class="n">e</span><span class="p">(</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">SPLITTER_ACTIVATE</span><span class="w"> </span><span class="p">);</span>
+<span class="w">                </span><span class="n">isActive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_OK</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">activeChannels</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">isActive</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Event</span><span class="w"> </span><span class="nf">e</span><span class="p">(</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">SPLITTER_DEACTIVATE</span><span class="w"> </span><span class="p">);</span>
+<span class="w">        </span><span class="n">isActive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">lastBuffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ManagedBuffer</span><span class="p">();</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DEVICE_BUSY</span><span class="p">;</span>
 <span class="p">}</span>
 
 
@@ -477,14 +498,10 @@ document.write(`
 <span class="w">            </span><span class="k">break</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">placed</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span>
-<span class="w">        </span><span class="n">numberChannels</span><span class="o">++</span><span class="p">;</span>
-
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">numberChannels</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-<span class="w">        </span><span class="n">Event</span><span class="w"> </span><span class="n">e</span><span class="p">(</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">SPLITTER_ACTIVATE_CHANNEL</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c1">//Activate ADC</span>
-
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">placed</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">placed</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">channels</span><span class="o">++</span><span class="p">;</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">outputChannels</span><span class="p">[</span><span class="n">placed</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
 <span class="p">}</span>
@@ -493,14 +510,12 @@ document.write(`
 <span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">CONFIG_MAX_CHANNELS</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">outputChannels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">channel</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">outputChannels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
-<span class="w">            </span><span class="n">numberChannels</span><span class="o">--</span><span class="p">;</span>
+<span class="w">            </span><span class="n">channels</span><span class="o">--</span><span class="p">;</span>
 <span class="w">            </span><span class="k">delete</span><span class="w"> </span><span class="n">channel</span><span class="p">;</span>
-<span class="w">            </span><span class="n">Event</span><span class="w"> </span><span class="nf">e</span><span class="p">(</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">SPLITTER_DEACTIVATE_CHANNEL</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c1">// Signal the change</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="n">DMESG</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;StreamSplitter::destroyChannel -&gt; The SplitterChannel supplied did not exist on this splitter, refusing to destroy it.&quot;</span><span class="w"> </span><span class="p">);</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
 <span class="p">}</span>
 
@@ -528,9 +543,15 @@ document.write(`
               
               
                 <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -540,7 +561,7 @@ document.write(`
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -570,7 +591,7 @@ By John Vidler
     
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -579,8 +600,8 @@ By John Vidler
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

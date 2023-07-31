@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: initcmd
+   :project: CODAL

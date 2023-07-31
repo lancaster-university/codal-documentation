@@ -11,6 +11,7 @@ Struct Documentation
 
 
 .. doxygenstruct:: codal::ST7735WorkBuffer
+   :project: CODAL
    :members:
    :protected-members:
    :undoc-members:

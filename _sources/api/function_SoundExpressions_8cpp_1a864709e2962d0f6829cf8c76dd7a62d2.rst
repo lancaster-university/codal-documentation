@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: mysterious("mysterious")
+   :project: CODAL

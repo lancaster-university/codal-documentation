@@ -9,6 +9,7 @@ Directory core
 
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
+
 *Directory path:* ``libraries/codal-core/source/core``
 
 
@@ -16,6 +17,7 @@ Files
 -----
 
 - :ref:`file_libraries_codal-core_source_core_codal_default_target_hal.cpp`
+- :ref:`file_libraries_codal-core_source_core_CodalAssert.cpp`
 - :ref:`file_libraries_codal-core_source_core_CodalCompat.cpp`
 - :ref:`file_libraries_codal-core_source_core_CodalComponent.cpp`
 - :ref:`file_libraries_codal-core_source_core_CodalDevice.cpp`

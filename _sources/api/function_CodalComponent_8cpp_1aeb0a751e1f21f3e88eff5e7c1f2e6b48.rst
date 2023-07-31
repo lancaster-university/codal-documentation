@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: component_callback(Event)
+   :project: CODAL

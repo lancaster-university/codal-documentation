@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: codal::microbit_seed_random(uint32_t)
+   :project: CODAL

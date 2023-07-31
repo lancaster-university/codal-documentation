@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: _chromatic
+   :project: CODAL

@@ -149,6 +149,7 @@ Program Listing for File Compass.cpp
    
    void Compass::clearCalibration()
    {
+       calibration = CompassCalibration();
        status &= ~COMPASS_STATUS_CALIBRATED;
    }
    

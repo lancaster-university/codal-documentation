@@ -151,6 +151,10 @@ Program Listing for File Mixer2.cpp
            float *end = &mix[CONFIG_MIXER_BUFFER_SIZE/bytesPerSampleOut];
            int inputFormat = ch->format;
    
+           // Check if we need to recalculate skip after a channel rate change
+           if( ch->skip == 0.0f )
+               ch->skip = ch->rate / outputRate;
+   
            while (out < end)
            {
                // precalculate the maximum number of samples the we can process with the current buffer allocations.
@@ -164,8 +168,10 @@ Program Listing for File Mixer2.cpp
    
                uint8_t *d = ch->in;
    
-               while(len--)
+               while(len)
                {
+                   d = ch->in + (int)(ch->position * ch->bytesPerSample);
+   
                    float v = StreamNormalizer::readSample[inputFormat](d);
                    v += ch->offset;
                    v *= ch->gain;    
@@ -173,14 +179,14 @@ Program Listing for File Mixer2.cpp
                    *out += v;
     
                    ch->position += ch->skip;
-                   d = ch->in + (int)(ch->position * ch->bytesPerSample);
    
                    out++;
+                   len--;
                }
    
                // Check if we've completed an input buffer. If so, pull down another if available.
                // if no buffer is available, then move on to the next channel.
-               if (inLen <= outLen)
+               if (inLen < outLen)
                {
                    if (ch->pullRequests == 0)
                        break;
@@ -271,6 +277,11 @@ Program Listing for File Mixer2.cpp
    {
        this->downStream = &sink;
        this->downStream->pullRequest();
+   }
+   
+   bool Mixer2::isConnected()
+   {
+       return this->downStream != NULL;
    }
    
    int Mixer2::getFormat()

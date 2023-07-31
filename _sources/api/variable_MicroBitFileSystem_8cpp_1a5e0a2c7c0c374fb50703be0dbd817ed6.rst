@@ -11,3 +11,4 @@ Variable Documentation
 
 
 .. doxygenvariable:: defaultScratchPage
+   :project: CODAL

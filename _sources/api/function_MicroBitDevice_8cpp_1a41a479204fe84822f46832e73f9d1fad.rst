@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: codal::ble_running()
+   :project: CODAL

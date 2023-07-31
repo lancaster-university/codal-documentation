@@ -115,6 +115,11 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_libraries_codal-core_source_core_CodalAssert.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_libraries_codal-core_source_core_CodalCompat.cpp.rst
 
 .. toctree::
@@ -511,6 +516,11 @@ Files
    :maxdepth: 5
 
    file_libraries_codal-microbit-v2_source_MicroBitUSBFlashManager.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_libraries_codal-microbit-v2_source_bluetooth_MicroBitUtilityService.cpp.rst
 
 .. toctree::
    :maxdepth: 5
