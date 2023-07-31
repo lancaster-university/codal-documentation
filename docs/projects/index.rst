@@ -8,5 +8,6 @@ Some of the projects listed here have their sources stored as part of the codal-
    :caption: Contents:
 
    disco-lights
+   make-your-programs-run-faster.rst
 
 .. _codal-apps: https://github.com/JohnVidler/codal-apps
