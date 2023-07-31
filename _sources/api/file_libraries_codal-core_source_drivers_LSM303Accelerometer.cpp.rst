@@ -53,9 +53,9 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_LSM303Accelerometer_8cpp_1a36a971ec52ae8c2dbf51b944d8cefaa6`
-
 - :ref:`exhale_function_LSM303Accelerometer_8cpp_1a292563457da80677c6ddc2f2ebf9591b`
+
+- :ref:`exhale_function_LSM303Accelerometer_8cpp_1a36a971ec52ae8c2dbf51b944d8cefaa6`
 
 
 Variables

@@ -166,10 +166,6 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Projects</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="disco-lights.html">Disco Lights</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Make Your Programs Run Faster</a></li>
-
-
-
-
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../codal-api.html">The Complete CODAL API</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
@@ -288,14 +284,12 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Make Your Programs Run Faster</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-expect-large-speed-up-from-using-c">When To Expect Large Speed-Up From Using C++</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#can-i-run-my-software-even-faster">Can I Run My Software Even Faster?</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#can-i-run-my-software-even-faster-than-possible-in-c">Can I Run My Software Even Faster Than Possible In C++?</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#can-i-run-my-software-even-faster-than-possible-in-assembler">Can I Run My Software Even Faster Than Possible In Assembler?</a></li>
+                <ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-expect-large-speed-up-from-using-c">When To Expect Large Speed-Up From Using C++</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#can-i-run-my-software-even-faster">Can I Run My Software Even Faster?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#can-i-run-my-software-even-faster-than-possible-in-c">Can I Run My Software Even Faster Than Possible In C++?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#can-i-run-my-software-even-faster-than-possible-in-assembler">Can I Run My Software Even Faster Than Possible In Assembler?</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -400,9 +394,8 @@ where even a simple operation like incrementing a variable requires many
 set specific Assembler language, which is then translated into binary
 “machine code”, which the microcontroller can execute directly - and
 incrementing an integer variable there is a single instruction.</p>
-</section>
 <section id="when-to-expect-large-speed-up-from-using-c">
-<h1>When To Expect Large Speed-Up From Using C++<a class="headerlink" href="#when-to-expect-large-speed-up-from-using-c" title="Permalink to this headline">#</a></h1>
+<h2>When To Expect Large Speed-Up From Using C++<a class="headerlink" href="#when-to-expect-large-speed-up-from-using-c" title="Permalink to this headline">#</a></h2>
 <p>Generally speaking, if your software spends a lot of time outside of
 calling “system” or “library” functions that were implemented in
 efficient programming languages, then you can expect large speed-up
@@ -421,7 +414,7 @@ display driver, and directly write values there - no memory allocation
 required, also no second copy and deallocation.</p>
 </section>
 <section id="can-i-run-my-software-even-faster">
-<h1>Can I Run My Software Even Faster?<a class="headerlink" href="#can-i-run-my-software-even-faster" title="Permalink to this headline">#</a></h1>
+<h2>Can I Run My Software Even Faster?<a class="headerlink" href="#can-i-run-my-software-even-faster" title="Permalink to this headline">#</a></h2>
 <p>If you directed a high-speed camera on the LEDs while above C++ example
 runs, you would notice that the display actually does not change as fast
 as the new values are written to the frame buffer. This is because the
@@ -436,7 +429,7 @@ and implement your own display driver. You can do that in C++, as well,
 but it involves learning about the I/O registers and how to use them.</p>
 </section>
 <section id="can-i-run-my-software-even-faster-than-possible-in-c">
-<h1>Can I Run My Software Even Faster Than Possible In C++?<a class="headerlink" href="#can-i-run-my-software-even-faster-than-possible-in-c" title="Permalink to this headline">#</a></h1>
+<h2>Can I Run My Software Even Faster Than Possible In C++?<a class="headerlink" href="#can-i-run-my-software-even-faster-than-possible-in-c" title="Permalink to this headline">#</a></h2>
 <p>Compilers are very good these days in creating highly optimized
 Assembler code, so “going more low level” by writing Assembler directly
 will not often gain you a further speed-up.</p>
@@ -450,7 +443,7 @@ often be achieved by using specialized machine instructions tailored to
 a certain algorithm.</p>
 </section>
 <section id="can-i-run-my-software-even-faster-than-possible-in-assembler">
-<h1>Can I Run My Software Even Faster Than Possible In Assembler?<a class="headerlink" href="#can-i-run-my-software-even-faster-than-possible-in-assembler" title="Permalink to this headline">#</a></h1>
+<h2>Can I Run My Software Even Faster Than Possible In Assembler?<a class="headerlink" href="#can-i-run-my-software-even-faster-than-possible-in-assembler" title="Permalink to this headline">#</a></h2>
 <p>If even writing Assembler is not sufficient to run your task fast enough,
 then you run out of “software” options.</p>
 <p>But you can still look for additional hardware support! One approach
@@ -469,6 +462,7 @@ than FGPAs for the same task.</p>
 <p>And yes, there are languages dedicated to the desciption of hardware,
 for example “VHDL” or “Verilog”, and using those you can simulate what
 your hardware would do. But maybe that is for you to try another time?</p>
+</section>
 </section>
 
 
@@ -518,14 +512,12 @@ your hardware would do. But maybe that is for you to try another time?</p>
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Make Your Programs Run Faster</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-expect-large-speed-up-from-using-c">When To Expect Large Speed-Up From Using C++</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#can-i-run-my-software-even-faster">Can I Run My Software Even Faster?</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#can-i-run-my-software-even-faster-than-possible-in-c">Can I Run My Software Even Faster Than Possible In C++?</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#can-i-run-my-software-even-faster-than-possible-in-assembler">Can I Run My Software Even Faster Than Possible In Assembler?</a></li>
+    <ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-expect-large-speed-up-from-using-c">When To Expect Large Speed-Up From Using C++</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#can-i-run-my-software-even-faster">Can I Run My Software Even Faster?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#can-i-run-my-software-even-faster-than-possible-in-c">Can I Run My Software Even Faster Than Possible In C++?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#can-i-run-my-software-even-faster-than-possible-in-assembler">Can I Run My Software Even Faster Than Possible In Assembler?</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>

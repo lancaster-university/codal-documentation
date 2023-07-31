@@ -106,7 +106,7 @@ set specific Assembler language, which is then translated into binary
 incrementing an integer variable there is a single instruction.
 
 When To Expect Large Speed-Up From Using C++
-============================================
+--------------------------------------------
 
 Generally speaking, if your software spends a lot of time outside of
 calling "system" or "library" functions that were implemented in
@@ -127,7 +127,7 @@ display driver, and directly write values there - no memory allocation
 required, also no second copy and deallocation.
 
 Can I Run My Software Even Faster?
-==================================
+----------------------------------
 
 If you directed a high-speed camera on the LEDs while above C++ example
 runs, you would notice that the display actually does not change as fast
@@ -144,7 +144,7 @@ and implement your own display driver. You can do that in C++, as well,
 but it involves learning about the I/O registers and how to use them.
 
 Can I Run My Software Even Faster Than Possible In C++?
-=======================================================
+-------------------------------------------------------
 
 Compilers are very good these days in creating highly optimized
 Assembler code, so "going more low level" by writing Assembler directly
@@ -160,7 +160,7 @@ often be achieved by using specialized machine instructions tailored to
 a certain algorithm.
 
 Can I Run My Software Even Faster Than Possible In Assembler?
-=============================================================
+-------------------------------------------------------------
 
 If even writing Assembler is not sufficient to run your task fast enough,
 then you run out of "software" options.
